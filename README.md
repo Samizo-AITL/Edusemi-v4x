@@ -81,7 +81,7 @@
 
 ## 📬 連絡先
 
-技術監修・執筆：**三溝 真一（Shinichi Samizo）** 専門分野:半導体デバイス技術
+技術監修・執筆：**三溝 真一（Shinichi Samizo）**
 GitHub: [Samizo-AITL](https://github.com/Samizo-AITL)  
 お問い合わせは Issue または Discussions にて
 
