@@ -34,39 +34,41 @@
 
 ---
 
+---
+
 ## 🧩 応用編　章構成一覧
 
-| 章番号 | タイトル | ディレクトリ |
-|--------|----------|---------------|
-| 第1章 | メモリ技術（DRAM, SRAM, Flash） | [d_chapter1_memory_technologies](d_chapter1_memory_technologies/) |
-| 第2章 | 高耐圧デバイス（LDMOS等） | [d_chapter2_high_voltage_devices](d_chapter2_high_voltage_devices/) |
-| 第3章 | ESD設計（静電破壊保護） | [d_chapter3_esd_protection_design](d_chapter3_esd_protection_design/) |
-| 第4章 | レイアウト設計と最適化 | [d_chapter4_layout_optimization](d_chapter4_layout_optimization/) |
-| 第5章 | アナログ／ミックスドシグナル | [d_chapter5_analog_mixed_signal](d_chapter5_analog_mixed_signal/) |
-| 第6章 | PDKとEDA環境 | [d_chapter6_pdk_and_eda_environment](d_chapter6_pdk_and_eda_environment/) |
-| 第7章 | 自動化と実装検証技術 | [d_chapter7_automation_and_verification](d_chapter7_automation_and_verification/) |
-| 第8章 | FSM設計（有限状態機械） | [d_chapter8_fsm_design_basics](d_chapter8_fsm_design_basics/) |
-| 第9章 | PLLとクロック設計 | [d_chapter9_pll_and_clock_design](d_chapter9_pll_and_clock_design/) |
+| 章番号 | タイトル | 概要 |
+|--------|----------|------|
+| [第1章](d_chapter1_memory_technologies/README.md) | メモリ技術 | SRAM・DRAM・FeRAM・MRAMなどの構造・特性・用途とSoC設計との関係 |
+| [第2章](d_chapter2_high_voltage_devices/README.md) | 高耐圧デバイス | LDMOS等に代表される電界制御構造と、高電圧動作のためのデバイス設計 |
+| [第3章](d_chapter3_esd_protection_design/README.md) | ESD設計 | 静電破壊対策の基本、保護素子、レイアウト注意点、試験規格と破壊事例 |
+| [第4章](d_chapter4_layout_optimization/README.md) | レイアウト設計と最適化 | CMPダミー、IRドロップ、ラッチアップ防止など、物理実装とその工夫 |
+| [第5章](d_chapter5_analog_mixed_signal/README.md) | アナログ／ミックスドシグナル | アナログブロック設計とノイズ、レイアウト、混載設計における課題と対策 |
+| [第6章](d_chapter6_pdk_and_eda_environment/README.md) | PDKとEDA環境 | PDKの構成、EDAツールとの接続、DRC/LVS/ERCチェックフローの理解 |
+| [第7章](d_chapter7_automation_and_verification/README.md) | 自動化と実装検証技術 | Lint、OpenLaneによる論理・物理検証とログ解析、CI/CDの導入例 |
+| [第8章](d_chapter8_fsm_design_basics/README.md) | FSM設計（有限状態機械） | Moore/Mealy型、状態遷移図、Verilog記述までの構造的理解 |
+| [第9章](d_chapter9_pll_and_clock_design/README.md) | PLLとクロック設計 | PLLの構造、周波数合成、ジッタ/スキュー、STAにおける設計配慮点 |
 
 ---
 
 ## 🛠 実践編　章構成一覧
 
-| 章番号 | タイトル | ディレクトリ |
-|--------|----------|---------------|
-| 第1章 | Pythonによる自動化ツール群 | [e_chapter1_python_automation_tools](e_chapter1_python_automation_tools/) |
+| 章番号 | タイトル | 概要 |
+|--------|----------|------|
+| [第1章](e_chapter1_python_automation_tools/README.md) | Pythonによる自動化ツール群 | SPICEシミュレーション、特性プロット、OpenLaneログ解析など実務的自動化スクリプト群の実装例 |
 
 ---
 
 ## 📚 特別編　章構成一覧
 
-| 章番号 | タイトル | ディレクトリ |
-|--------|----------|---------------|
-| 第1章 | 先端ノード（FinFET、GAA等） | [f_chapter1_advanced_nodes](f_chapter1_advanced_nodes/) |
-| 第2章 | チップレットと先端パッケージ技術 | [f_chapter2_chiplet_and_packaging](f_chapter2_chiplet_and_packaging/) |
-| 第3章 | ダイオード応用技術 | [f_chapter3_diode_applications](f_chapter3_diode_applications/) |
-| 第4章 | LLM × 制御のハイブリッドASIC設計 | [f_chapter4_llm_control_hybrid](f_chapter4_llm_control_hybrid/) |
-| 第5章 | インクジェット技術と半導体設計の接点 | [f_chapter5_inkjet_and_semiconductor](f_chapter5_inkjet_and_semiconductor/) |
+| 章番号 | タイトル | 概要 |
+|--------|----------|------|
+| [第1章](f_chapter1_advanced_nodes/README.md) | 先端ノード（FinFET、GAA等） | 微細化対応の新構造トランジスタの物理・電気特性と設計影響 |
+| [第2章](f_chapter2_chiplet_and_packaging/README.md) | チップレットと先端パッケージ技術 | 異種集積における2.5D/3Dパッケージ技術、TSV・インターポーザ事例 |
+| [第3章](f_chapter3_diode_applications/README.md) | ダイオード応用技術 | 整流、ツェナー、LED、太陽電池など応用構造と設計上の観点整理 |
+| [第4章](f_chapter4_llm_control_hybrid/README.md) | LLM × 制御のハイブリッドASIC設計 | FSMとLLMの協調制御設計に向けたアーキテクチャとPoCの構想 |
+| [第5章](f_chapter5_inkjet_and_semiconductor/README.md) | インクジェット技術と半導体設計の接点 | マイクロアクチュエータ駆動と半導体構造制御の接点を探る応用編 |
 
 ---
 
@@ -79,7 +81,7 @@
 
 ## 📬 連絡先
 
-技術監修・執筆：**三溝 真一（Shinichi Samizo）**  
+技術監修・執筆：**三溝 真一（Shinichi Samizo）** 専門分野:半導体デバイス技術
 GitHub: [Samizo-AITL](https://github.com/Samizo-AITL)  
 お問い合わせは Issue または Discussions にて
 
