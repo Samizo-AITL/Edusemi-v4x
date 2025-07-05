@@ -35,9 +35,9 @@ FSMは、組込み回路・インタフェース制御・プロトコル制御�
 
 FSMは、次の基礎章と深く関連しています：
 
-- [第2章 デジタル論理と論理回路設計](../chapter2_comb_logic/README.md)  
+- [基礎編　第2章 デジタル論理と論理回路設計](../chapter2_comb_logic/README.md)  
   ↳ 組み合わせ論理と順序論理の接続点としてFSMを導入  
-- [第5章 SoC設計フロー](../chapter5_soc_design_flow/README.md)  
+- [基礎編　第5章 SoC設計フローとEDA](../chapter5_soc_design_flow/README.md)  
   ↳ FSMを含む制御ロジックをRTLで設計し、合成〜物理設計へ接続
 
 ---
