@@ -43,8 +43,8 @@ SRAMは論理プロセスに直接統合できる「組込みメモリ」とし�
 
 | 章 | 内容 |
 |----|------|
-| [基礎編 第1章](../../chapter1_materials/) | バンド構造とキャリアの理解（半導体物性） |
-| [基礎編 第4章](../../chapter4_mos_characteristics/) | MOSトランジスタの寸法・特性 |
+| [基礎編 第1章](../chapter1_materials/) | バンド構造とキャリアの理解（半導体物性） |
+| [基礎編 第4章](../chapter4_mos_characteristics/) | MOSトランジスタの寸法・特性 |
 | [応用編 第5章](../d_chapter5_analog_mixed_signal/) | アナログ混載時のメモリ技術（FeRAMなど）との接点 |
 
 ---
