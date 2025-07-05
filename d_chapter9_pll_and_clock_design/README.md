@@ -1,50 +1,38 @@
-# ⏱️ 応用編 第9章：PLLとクロック設計
+# ⏰ 応用編 第9章：PLLとクロック設計
 
 ---
 
 ## 📘 概要
 
-PLL（Phase-Locked Loop）は、外部クロックを基準として内部クロックを生成・制御する回路であり、SoC・ASIC設計において必須のタイミング要素です。
+クロックはすべての同期動作の基準であり、LSI設計において最も重要な信号のひとつです。  
+その中でも、**PLL（Phase-Locked Loop）** は高精度なクロックを生成・整形する中心的な構成要素です。
 
-本章では、PLLの基本構造・動作原理から、クロックツリー設計、ジッタ・スキュー、クロックゲーティングといった**クロック設計全般の要点**を解説します。
+本章では、PLLの動作原理から始まり、スキュー・ジッタといった実装上の課題と対策、さらに**クロックツリー設計**による遅延最適化まで、クロック設計の基礎から応用までを体系的に学びます。
 
 ---
 
-## 🧩 セクション構成
+## 📂 セクション構成
 
 | ファイル名 | 内容 |
 |------------|------|
-| [`pll_basics.md`](pll_basics.md) | PLLの構成要素（PFD, VCO, Divider）と動作原理 |
-| [`clock_tree_design.md`](clock_tree_design.md) | クロックツリー設計、CTS（Clock Tree Synthesis）の基礎 |
-| [`jitter_and_skew.md`](jitter_and_skew.md) | ジッタ・スキューの定義と対策技術 |
-| [`clock_gating_techniques.md`](clock_gating_techniques.md) | クロックゲーティングによる消費電力削減手法 |
-| [`real_chip_examples.md`](real_chip_examples.md) | 実際のSoC・ASICにおけるPLL/クロック設計事例 |
+| [`pll_basics.md`](pll_basics.md) | PLLの基本構造と動作原理。VCO、PFD、ループフィルタの役割 |
+| [`clock_tree_design.md`](clock_tree_design.md) | CTSによるクロック遅延最小化とスキュー均一化 |
+| [`jitter_and_skew.md`](jitter_and_skew.md) | ジッタ・スキューの理解と対策。STAやシールド設計にも言及 |
 
 ---
 
-## 🎯 到達目標
+## 🎯 対象読者
 
-- PLLの構成と動作原理を理解する
-- クロックツリーとその設計制約を把握する
-- ジッタ・スキューの発生要因と対策を説明できる
-- クロックゲーティングによる低消費電力化の基本を理解する
-
----
-
-## 📚 関連章リンク
-
-- [第5章 SoC設計フロー](../chapter5_soc_design_flow/README.md)  
-  ↳ タイミングクロージャ・CTS設計との接続
-- [第7章 デザインレビューと開発組織連携](../chapter7_design_review_and_org/README.md)  
-  ↳ PLL仕様や時系列設計の設計レビュー項目として重要
+- クロック設計やタイミング設計を初めて扱う学生・若手技術者
+- PLLやCTSに関する基礎的な知識を整理したい方
+- STAやPDKの観点からクロック信号の課題を理解したい教育者・設計者
 
 ---
 
-## 🔭 応用発展
+## 🔗 関連章
 
-- マルチPLLアーキテクチャとクロックドメイン分離
-- スプレッドスペクトラムPLL（EMI低減）
-- PLLレイアウト上のノイズ・干渉対策（Guard Ring, Substrate Isolation）
+- [基礎編　第5章 SoC設計フローとEDA](../chapter5_soc_design_flow/README.md)：配置・配線後のクロックツリー構築とタイミング設計の接続
+- [基礎編　第6章 テストとパッケージ](../chapter6_test_and_package/README.md)：ジッタによるタイミングエラーや波形品質の実測検証
 
 ---
 
