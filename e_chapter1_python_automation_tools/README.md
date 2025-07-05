@@ -48,8 +48,8 @@ SPICEシミュレーション制御、特性データの可視化、OpenLaneに�
 
 本章で開発したPythonツールは、以下の章と連携して使用されます：
 
-- [実践編 第2章：Sky130実験とSPICE特性評価](../e_chapter2_sky130_experiments/)
-- [実践編 第3章：OpenLaneによるデジタル設計実習](../e_chapter3_openlane_practice/)
+- [02_plot_vgid/](02_plot_vgid/README.md)：`Vg–Id` 特性の可視化（`matplotlib`）
+- [03_degradation_model/](03_degradation_model/README.md)：BTI・TDDBなどの信頼性劣化モデル評価
 - [応用編 第6章：PDKとEDA環境構築](../d_chapter6_pdk_and_eda_environment/)
 
 ---
