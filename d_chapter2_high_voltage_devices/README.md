@@ -41,8 +41,8 @@ LDMOSやHV-CMOSに代表されるこれらの素子は、通常のCMOSに比べ�
 
 ## 🔗 関連リンク・参照章
 
-- [第1章 メモリ技術](../d_chapter1_memory_technologies/README.md)：組込み用SRAMと高耐圧ドライバの連携設計
-- [第5章 アナログ／ミックスドシグナル](../d_chapter5_analog_mixed_signal/README.md)：高電圧アナログブロックとの接続視点
+- [応用編　第1章 メモリ技術](../d_chapter1_memory_technologies/README.md)：組込み用SRAMと高耐圧ドライバの連携設計
+- [応用編　第5章 アナログ／ミックスドシグナル](../d_chapter5_analog_mixed_signal/README.md)：高電圧アナログブロックとの接続視点
 - [基礎編 第4章：MOSトランジスタ特性](../chapter4_mos_characteristics/README.md)：MOSの基本構造と寄生素子理解
 
 ---
