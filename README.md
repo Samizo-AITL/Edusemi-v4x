@@ -81,10 +81,12 @@
 
 ## 📬 連絡先
 
-**技術監修・執筆：三溝 真一（Shinichi Samizo）**  
+**技術監修・執筆**：三溝 真一（Shinichi Samizo）  
 - 専門分野：半導体デバイス技術  
-- GitHub: [Samizo-AITL](https://github.com/Samizo-AITL)  
-- Email: shin3t72@gmail.com  
-- お問い合わせは GitHub の Issue または Discussions にてお気軽にどうぞ。
+- 経歴概要：0.35µm〜0.18µm世代のロジック・メモリ・高耐圧混載デバイスの開発・製造に従事。  
+               インクジェット向け薄膜ピエゾアクチュエータの開発にも携わる。  
+- GitHub：[Samizo-AITL](https://github.com/Samizo-AITL)  
+- Email：shin3t72@gmail.com  
+- お問い合わせは GitHub の [Issue](https://github.com/Samizo-AITL/Edusemi-v4x/issues) または [Discussions](https://github.com/Samizo-AITL/Edusemi-v4x/discussions) にてお気軽にどうぞ。
 
 ---
