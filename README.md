@@ -38,15 +38,15 @@
 
 | 章番号 | タイトル | ディレクトリ |
 |--------|----------|---------------|
-| 第2.1章 | メモリ技術（DRAM, SRAM, Flash） | [d_chapter1_memory_technologies](d_chapter1_memory_technologies/) |
-| 第2.2章 | 高耐圧デバイス（LDMOS等） | [d_chapter2_high_voltage_devices](d_chapter2_high_voltage_devices/) |
-| 第2.3章 | ESD設計（静電破壊保護） | [d_chapter3_esd_protection_design](d_chapter3_esd_protection_design/) |
-| 第2.4章 | レイアウト設計と最適化 | [d_chapter4_layout_optimization](d_chapter4_layout_optimization/) |
-| 第2.5章 | アナログ／ミックスドシグナル | [d_chapter5_analog_mixed_signal](d_chapter5_analog_mixed_signal/) |
-| 第2.6章 | PDKとEDA環境 | [d_chapter6_pdk_and_eda_environment](d_chapter6_pdk_and_eda_environment/) |
-| 第2.7章 | 自動化と実装検証技術 | [d_chapter7_automation_and_verification](d_chapter7_automation_and_verification/) |
-| 第2.8章 | FSM設計（有限状態機械） | [d_chapter8_fsm_design_basics](d_chapter8_fsm_design_basics/) |
-| 第2.9章 | PLLとクロック設計 | [d_chapter9_pll_and_clock_design](d_chapter9_pll_and_clock_design/) |
+| 第1章 | メモリ技術（DRAM, SRAM, Flash） | [d_chapter1_memory_technologies](d_chapter1_memory_technologies/) |
+| 第2章 | 高耐圧デバイス（LDMOS等） | [d_chapter2_high_voltage_devices](d_chapter2_high_voltage_devices/) |
+| 第3章 | ESD設計（静電破壊保護） | [d_chapter3_esd_protection_design](d_chapter3_esd_protection_design/) |
+| 第4章 | レイアウト設計と最適化 | [d_chapter4_layout_optimization](d_chapter4_layout_optimization/) |
+| 第5章 | アナログ／ミックスドシグナル | [d_chapter5_analog_mixed_signal](d_chapter5_analog_mixed_signal/) |
+| 第6章 | PDKとEDA環境 | [d_chapter6_pdk_and_eda_environment](d_chapter6_pdk_and_eda_environment/) |
+| 第7章 | 自動化と実装検証技術 | [d_chapter7_automation_and_verification](d_chapter7_automation_and_verification/) |
+| 第8章 | FSM設計（有限状態機械） | [d_chapter8_fsm_design_basics](d_chapter8_fsm_design_basics/) |
+| 第9章 | PLLとクロック設計 | [d_chapter9_pll_and_clock_design](d_chapter9_pll_and_clock_design/) |
 
 ---
 
@@ -54,7 +54,7 @@
 
 | 章番号 | タイトル | ディレクトリ |
 |--------|----------|---------------|
-| 第3.1章 | Pythonによる自動化ツール群 | [e_chapter1_python_automation_tools](e_chapter1_python_automation_tools/) |
+| 第1章 | Pythonによる自動化ツール群 | [e_chapter1_python_automation_tools](e_chapter1_python_automation_tools/) |
 
 ---
 
@@ -62,11 +62,11 @@
 
 | 章番号 | タイトル | ディレクトリ |
 |--------|----------|---------------|
-| 第4.1章 | 先端ノード（FinFET、GAA等） | [f_chapter1_advanced_nodes](f_chapter1_advanced_nodes/) |
-| 第4.2章 | チップレットと先端パッケージ技術 | [f_chapter2_chiplet_and_packaging](f_chapter2_chiplet_and_packaging/) |
-| 第4.3章 | ダイオード応用技術 | [f_chapter3_diode_applications](f_chapter3_diode_applications/) |
-| 第4.4章 | LLM × 制御のハイブリッドASIC設計 | [f_chapter4_llm_control_hybrid](f_chapter4_llm_control_hybrid/) |
-| 第4.5章 | インクジェット技術と半導体設計の接点 | [f_chapter5_inkjet_and_semiconductor](f_chapter5_inkjet_and_semiconductor/) |
+| 第1章 | 先端ノード（FinFET、GAA等） | [f_chapter1_advanced_nodes](f_chapter1_advanced_nodes/) |
+| 第2章 | チップレットと先端パッケージ技術 | [f_chapter2_chiplet_and_packaging](f_chapter2_chiplet_and_packaging/) |
+| 第3章 | ダイオード応用技術 | [f_chapter3_diode_applications](f_chapter3_diode_applications/) |
+| 第4章 | LLM × 制御のハイブリッドASIC設計 | [f_chapter4_llm_control_hybrid](f_chapter4_llm_control_hybrid/) |
+| 第5章 | インクジェット技術と半導体設計の接点 | [f_chapter5_inkjet_and_semiconductor](f_chapter5_inkjet_and_semiconductor/) |
 
 ---
 
