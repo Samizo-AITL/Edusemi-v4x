@@ -14,15 +14,15 @@ SPICEシミュレーション制御、特性データの可視化、OpenLaneに�
 
 ---
 
-## 📁 構成フォルダ（例）
+## 📁 フォルダ構成一覧（第1章：Pythonによる自動化ツール群）
 
 | フォルダ名 | 内容 |
 |-----------|------|
-| `01_spice_runner/` | ngspiceをPythonから自動実行し、パラメータスイープ・Vth変化などを制御 |
-| `02_plot_vgid/` | Vg–Id特性などSPICE出力ログの読み取りと可視化（matplotlib） |
-| `03_degradation_model/` | BTI・TDDBなど信頼性モデルの数式計算とグラフ化 |
-| `04_openlane_log_parser/` | OpenLaneフローの結果（遅延・面積・電力）を抽出しCSV化・可視化 |
-| `05_report_template/` | 自動レポート出力用テンプレート（Jupyter / Markdown） |
+| [`01_spice_runner/`](01_spice_runner/) | `ngspice` を `Python` から自動実行し、パラメータスイープ・`Vth` 変化などを制御 |
+| [`02_plot_vgid/`](02_plot_vgid/) | `Vg–Id` 特性など `SPICE` 出力ログの読み取りと可視化（`matplotlib`） |
+| [`03_degradation_model/`](03_degradation_model/) | `BTI`・`TDDB` など信頼性モデルの数式計算とグラフ化 |
+| [`04_openlane_log_parser/`](04_openlane_log_parser/) | `OpenLane` フローの結果（遅延・面積・電力）を抽出し `CSV` 化・可視化 |
+| [`05_report_template/`](05_report_template/) | 自動レポート出力用テンプレート（`Jupyter` / `Markdown` 対応） |
 
 ---
 
