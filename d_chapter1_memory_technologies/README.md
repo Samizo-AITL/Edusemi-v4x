@@ -46,9 +46,9 @@ SoC（System-on-Chip）設計において、演算処理や制御回路だけで
 
 | 章 | 内容 | 関連性 |
 |----|------|--------|
-| [第4章 MOSトランジスタ特性](../chapter4_mos_characteristics/) | トランジスタの動作原理とスイッチング動作 | セル構造理解に必須 |
-| [第5章 SoC設計フロー](../chapter5_soc_design_flow/) | 合成・配置・タイミング設計 | SRAMマクロ配置、eFlash/I/F考慮 |
-| [第6章 テスト・パッケージ](../chapter6_test_and_package/) | 信頼性評価・不良解析・試験方法 | メモリの耐久性・リテンション設計 |
+| [基礎編　第4章 MOSトランジスタ特性](../chapter4_mos_characteristics/) | トランジスタの動作原理とスイッチング動作 | セル構造理解に必須 |
+| [基礎編　第5章 SoC設計フローとEDAツール](../chapter5_soc_design_flow/) | 合成・配置・タイミング設計 | SRAMマクロ配置、eFlash/I/F考慮 |
+| [基礎編　第6章 テスト・パッケージ](../chapter6_test_and_package/) | 信頼性評価・不良解析・試験方法 | メモリの耐久性・リテンション設計 |
 
 ---
 
