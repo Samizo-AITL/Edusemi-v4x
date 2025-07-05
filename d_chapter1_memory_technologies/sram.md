@@ -70,8 +70,8 @@ DRAMのようにリフレッシュを必要とせず、6T構成セルで安定�
 
 ## 🔗 関連章（参照）
 
-- [基礎編 第2章](../../chapter2_comb_logic/)：レジスタや記憶素子の論理構造  
-- [基礎編 第4章](../../chapter4_mos_characteristics/)：トランジスタ特性とばらつき  
+- [基礎編 第2章](../chapter2_comb_logic/)：レジスタや記憶素子の論理構造  
+- [基礎編 第4章](../chapter4_mos_characteristics/)：トランジスタ特性とばらつき  
 - [応用編 第4章](../d_chapter4_layout_optimization/)：SRAMマクロ配置とDFM対応  
 
 ---
