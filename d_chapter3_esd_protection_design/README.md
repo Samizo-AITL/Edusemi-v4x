@@ -43,7 +43,7 @@ ESD（Electrostatic Discharge：静電気放電）は、**半導体ICに最も�
 ## 🔗 関連リンク・参照章
 
 - [第2章 高耐圧デバイス](../d_chapter2_high_voltage_devices/README.md)：dv/dt破壊や電界集中の対策と連携  
-- [第6章 テストとパッケージ](../../chapter6_test_and_package/README.md)：信頼性試験やESDスクリーニングとの関連  
+- [第6章 テストとパッケージ](../chapter6_test_and_package/README.md)：信頼性試験やESDスクリーニングとの関連  
 - [第5章 アナログ／ミックスドシグナル](../d_chapter5_analog_mixed_signal/README.md)：ESD感受性の高いアナログ端子の設計注意点
 
 ---
