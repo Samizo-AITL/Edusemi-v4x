@@ -79,11 +79,25 @@
 
 ---
 
-## 📬 連絡先
+## 🧑‍🔬 執筆者情報
 
-**技術監修・執筆**：三溝 真一（Shinichi Samizo）  
-- 専門分野：半導体デバイス技術  
-- 経歴概要：0.35µm〜0.18µm世代のロジック・メモリ・高耐圧混載デバイスの開発・製造に従事。インクジェット向け薄膜ピエゾアクチュエータの開発にも携わる。  
+- **氏名**：三溝 真一（Shinichi Samizo）
+
+- **学歴**：  
+　信州大学大学院 電気電子工学修士課程 修了
+
+- **職歴**：  
+　1997年 セイコーエプソン株式会社 入社  
+　以下の開発・製品化に従事：  
+　- 半導体デバイス技術（0.35µm〜0.18µmノード）  
+　- ロジックデバイス、メモリデバイス、高耐圧インテグレーション技術の開発・量産化  
+　- インクジェット薄膜ピエゾアクチュエータ開発  
+　- PrecisionCoreプリントヘッド製品展開にも参画
+
+- **設計思想**：  
+　デバイス・プロセスから制御理論、AI融合まで、構造的に貫く設計アーキテクチャの構築と教育展開に注力
+
+- **連絡先**：
 - GitHub：[Samizo-AITL](https://github.com/Samizo-AITL)  
 - Email：shin3t72@gmail.com  
 - お問い合わせは GitHub の [Issue](https://github.com/Samizo-AITL/Edusemi-v4x/issues) または [Discussions](https://github.com/Samizo-AITL/Edusemi-v4x/discussions) にてお気軽にどうぞ。
