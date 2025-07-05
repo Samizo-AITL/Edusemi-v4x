@@ -13,10 +13,10 @@
 
 ## 節構成
 
-- [**3.1** CMOSプロセス技術の世代変遷](3.1_node_trends.md)  
+- [**3.1** CMOSプロセス技術の世代変遷](3.1_node_scaling_history.md)  
   └ 0.5µmから90nmまでの代表技術とノードごとの特徴を概観します。
 
-- [**3.2** トランジスタ構造の変化：STI・浅接合・LDD・サリサイド](3.2_transistor_structure.md)  
+- [**3.2** トランジスタ構造の変化：STI・浅接合・LDD・サリサイド](3.2_cmos_structure_shift.md)  
   └ 微細化を可能にした構造的革新技術を解説します。
 
 - [**3.3** 配線技術とリソグラフィ補正の進化](3.3_interconnect_and_litho.md)  
