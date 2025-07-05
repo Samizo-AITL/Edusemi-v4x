@@ -15,11 +15,11 @@ SRAMは論理プロセスに直接統合できる「組込みメモリ」とし�
 
 | ファイル名 | 内容 |
 |------------|------|
-| `sram.md`  | SRAM（Static RAM）：高速・揮発性、キャッシュやレジスタファイル用途 |
-| `dram.md`  | DRAM（Dynamic RAM）：外部メモリ。リフレッシュ必要。LPDDR/DDRなど |
-| `feram.md` | FeRAM（強誘電体RAM）：高速・不揮発。アナログ混載LSI向け |
-| `mram.md`  | MRAM（磁気RAM）：不揮発性。STT/SOT型。将来の組込み候補 |
-| `3dnand.md`| 3D NANDフラッシュ：大容量・不揮発。ストレージ用だが階層設計が必要 |
+| [`sram.md`](./sram.md)       | SRAM（Static RAM）：高速・揮発性、キャッシュやレジスタファイル用途 |
+| [`dram.md`](./dram.md)       | DRAM（Dynamic RAM）：外部メモリ。リフレッシュ必要。LPDDR/DDRなど |
+| [`feram.md`](./feram.md)     | FeRAM（強誘電体RAM）：高速・不揮発。アナログ混載LSI向け |
+| [`mram.md`](./mram.md)       | MRAM（磁気RAM）：不揮発性。STT/SOT型。将来の組込み候補 |
+| [`3dnand.md`](./3dnand.md)   | 3D NANDフラッシュ：大容量・不揮発。ストレージ用だが階層設計が必要 |
 
 ---
 
