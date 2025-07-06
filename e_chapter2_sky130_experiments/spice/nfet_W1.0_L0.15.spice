@@ -1,0 +1,28 @@
+* nfet_W1.0_L0.15.spice
+* Sky130 PDK用 NFETのVg–Id特性測定スクリプト
+
+* ------- モデルライブラリ読み込み -------
+.include ~/pdks/sky130A/libs.tech/ngspice/sky130.lib.spice
+* モデルコーナー指定（tt: typical, ff: fast, ss: slow）
+.lib sky130_fd_pr__nfet_01v8 tt
+
+* ------- ノード定義 -------
+* M1: ドレイン D、ゲート G、ソース S、バルク B
+* W:1µm, L:0.15µm, モデル名: sky130_fd_pr__nfet_01v8
+M1 D G 0 0 sky130_fd_pr__nfet_01v8 w=1u l=0.15u
+
+* ------- バイアス電圧源 -------
+Vg G 0 0         ; ゲート電圧（スイープ対象）
+Vd D 0 0.8       ; ドレイン電圧（固定）
+Vs 0 0           ; ソース電圧（グラウンド）
+
+* ------- DC解析設定 -------
+.dc Vg 0 1.2 0.02   ; Vgを0〜1.2Vまで0.02Vステップで掃引
+.option savecurr    ; カレント情報を保存
+
+* ------- 電流プローブ -------
+.print dc V(G) I(Vd)
+
+* ------- 終了 -------
+.end
+
