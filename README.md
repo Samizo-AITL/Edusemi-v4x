@@ -60,15 +60,12 @@
 
 ---
 
-## 📚 特別編　章構成一覧
+## 📦 特別編：章構成一覧
 
 | 章番号 | タイトル | 概要 |
 |--------|----------|------|
 | [第1章](f_chapter1_advanced_nodes/README.md) | 先端ノード（FinFET、GAA等） | 微細化対応の新構造トランジスタの物理・電気特性と設計影響 |
 | [第2章](f_chapter2_chiplet_and_packaging/README.md) | チップレットと先端パッケージ技術 | 異種集積における2.5D/3Dパッケージ技術、TSV・インターポーザ事例 |
-| [第3章](f_chapter3_diode_applications/README.md) | ダイオード応用技術 | 整流、ツェナー、LED、太陽電池など応用構造と設計上の観点整理 |
-| [第4章](f_chapter4_llm_control_hybrid/README.md) | LLM × 制御のハイブリッドASIC設計 | FSMとLLMの協調制御設計に向けたアーキテクチャとPoCの構想 |
-| [第5章](f_chapter5_inkjet_and_semiconductor/README.md) | インクジェット技術と半導体設計の接点 | マイクロアクチュエータ駆動と半導体構造制御の接点を探る応用編 |
 
 ---
 
