@@ -60,17 +60,3 @@
 図のパスはすべて `../images/` 以下に保存された `.png` ファイルとして管理されています。章ディレクトリからの相対パスで挿入されています。
 
 
-\documentclass{standalone}
-\usepackage{tikz}
-\usetikzlibrary{shapes.gates.logic.US, circuits.logic.US, positioning}
-
-\begin{document}
-
-\begin{tikzpicture}[circuit logic US, logic gate inputs=nn]
-  \node [and gate, draw, rotate=0, inputs={normal, normal}, scale=1.5] (mygate) {};
-  \draw (mygate.input 1) node[left] {A} -- (mygate.input 1);
-  \draw (mygate.input 2) node[left] {B} -- (mygate.input 2);
-  \draw (mygate.output) -- ++(0.5,0) node[right] {Y};
-\end{tikzpicture}
-
-\end{document}
