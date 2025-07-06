@@ -24,13 +24,13 @@
 
 | 章番号 | タイトル | 概要 |
 |--------|----------|------|
-| [第1章](chapter1_materials/README.md) | 半導体物性と材料基礎 | バンド構造、PN接合、MOS電界効果などの基礎物性 |
-| [第2章](chapter2_comb_logic/README.md) | デジタル論理と論理回路設計 | 組み合わせ回路、順序回路、FSMとHDL記述の導入 |
-| [第3章](chapter3_process_variation/README.md) | プロセス技術と微細化の制約 | ノード変遷、配線、リソグラフィ、信頼性と変動要因 |
-| [第4章](chapter4_mos_characteristics/README.md) | MOSトランジスタ特性と設計基盤 | 寸法・特性・信頼性、PDKとの関係、デザインルール |
-| [第5章](chapter5_soc_design_flow/README.md) | SoC設計フローとEDAツール | RTL設計、合成、配置配線、DRC/LVS、タイミング検証 |
-| [第6章](chapter6_test_and_package/README.md) | テスト・パッケージ・製品化 | ETEST・ウエハテスト・不良解析・信頼性試験・出荷管理 |
-| [第7章](chapter7_design_review_and_org/README.md) | デザインレビューと開発組織連携 | DR構造、ケース比較、SRAM不良事例、組織的合意形成 |
+| [1](chapter1_materials/README.md) | 半導体物性と材料基礎 | バンド構造、PN接合、MOS電界効果などの基礎物性 |
+| [2](chapter2_comb_logic/README.md) | デジタル論理と論理回路設計 | 組み合わせ回路、順序回路、FSMとHDL記述の導入 |
+| [3](chapter3_process_variation/README.md) | プロセス技術と微細化の制約 | ノード変遷、配線、リソグラフィ、信頼性と変動要因 |
+| [4](chapter4_mos_characteristics/README.md) | MOSトランジスタ特性と設計基盤 | 寸法・特性・信頼性、PDKとの関係、デザインルール |
+| [5](chapter5_soc_design_flow/README.md) | SoC設計フローとEDAツール | RTL設計、合成、配置配線、DRC/LVS、タイミング検証 |
+| [6](chapter6_test_and_package/README.md) | テスト・パッケージ・製品化 | ETEST・ウエハテスト・不良解析・信頼性試験・出荷管理 |
+| [7](chapter7_design_review_and_org/README.md) | デザインレビューと開発組織連携 | DR構造、ケース比較、SRAM不良事例、組織的合意形成 |
 
 ---
 
@@ -40,15 +40,15 @@
 
 | 章番号 | タイトル | 概要 |
 |--------|----------|------|
-| [第1章](d_chapter1_memory_technologies/README.md) | メモリ技術 | SRAM・DRAM・FeRAM・MRAMなどの構造・特性・用途とSoC設計との関係 |
-| [第2章](d_chapter2_high_voltage_devices/README.md) | 高耐圧デバイス | LDMOS等に代表される電界制御構造と、高電圧動作のためのデバイス設計 |
-| [第3章](d_chapter3_esd_protection_design/README.md) | ESD設計 | 静電破壊対策の基本、保護素子、レイアウト注意点、試験規格と破壊事例 |
-| [第4章](d_chapter4_layout_optimization/README.md) | レイアウト設計と最適化 | CMPダミー、IRドロップ、ラッチアップ防止など、物理実装とその工夫 |
-| [第5章](d_chapter5_analog_mixed_signal/README.md) | アナログ／ミックスドシグナル | アナログブロック設計とノイズ、レイアウト、混載設計における課題と対策 |
-| [第6章](d_chapter6_pdk_and_eda_environment/README.md) | PDKとEDA環境 | PDKの構成、EDAツールとの接続、DRC/LVS/ERCチェックフローの理解 |
-| [第7章](d_chapter7_automation_and_verification/README.md) | 自動化と実装検証技術 | Lint、OpenLaneによる論理・物理検証とログ解析、CI/CDの導入例 |
-| [第8章](d_chapter8_fsm_design_basics/README.md) | FSM設計（有限状態機械） | Moore/Mealy型、状態遷移図、Verilog記述までの構造的理解 |
-| [第9章](d_chapter9_pll_and_clock_design/README.md) | PLLとクロック設計 | PLLの構造、周波数合成、ジッタ/スキュー、STAにおける設計配慮点 |
+| [1](d_chapter1_memory_technologies/README.md) | メモリ技術 | SRAM・DRAM・FeRAM・MRAMなどの構造・特性・用途とSoC設計との関係 |
+| [2](d_chapter2_high_voltage_devices/README.md) | 高耐圧デバイス | LDMOS等に代表される電界制御構造と、高電圧動作のためのデバイス設計 |
+| [3](d_chapter3_esd_protection_design/README.md) | ESD設計 | 静電破壊対策の基本、保護素子、レイアウト注意点、試験規格と破壊事例 |
+| [4](d_chapter4_layout_optimization/README.md) | レイアウト設計と最適化 | CMPダミー、IRドロップ、ラッチアップ防止など、物理実装とその工夫 |
+| [5](d_chapter5_analog_mixed_signal/README.md) | アナログ／ミックスドシグナル | アナログブロック設計とノイズ、レイアウト、混載設計における課題と対策 |
+| [６](d_chapter6_pdk_and_eda_environment/README.md) | PDKとEDA環境 | PDKの構成、EDAツールとの接続、DRC/LVS/ERCチェックフローの理解 |
+| [７](d_chapter7_automation_and_verification/README.md) | 自動化と実装検証技術 | Lint、OpenLaneによる論理・物理検証とログ解析、CI/CDの導入例 |
+| [８](d_chapter8_fsm_design_basics/README.md) | FSM設計（有限状態機械） | Moore/Mealy型、状態遷移図、Verilog記述までの構造的理解 |
+| [９](d_chapter9_pll_and_clock_design/README.md) | PLLとクロック設計 | PLLの構造、周波数合成、ジッタ/スキュー、STAにおける設計配慮点 |
 
 ---
 
@@ -56,7 +56,7 @@
 
 | 章番号 | タイトル | 概要 |
 |--------|----------|------|
-| [第1章](e_chapter1_python_automation_tools/README.md) | Pythonによる自動化ツール群 | SPICEシミュレーション、特性プロット、OpenLaneログ解析など実務的自動化スクリプト群の実装例 |
+| [1](e_chapter1_python_automation_tools/README.md) | Pythonによる自動化ツール群 | SPICEシミュレーション、特性プロット、OpenLaneログ解析など実務的自動化スクリプト群の実装例 |
 
 ---
 
@@ -64,8 +64,8 @@
 
 | 章番号 | タイトル | 概要 |
 |--------|----------|------|
-| [第1章](f_chapter1_finfet_gaa/README.md) | 先端ノード（FinFET、GAA等） | 微細化対応の新構造トランジスタの物理・電気特性と設計影響 |
-| [第2章](f_chapter2_chiplet_pkg/README.md) | チップレットと先端パッケージ技術 | 異種集積における2.5D/3Dパッケージ技術、TSV・インターポーザ事例 |
+| [1](f_chapter1_finfet_gaa/README.md) | 先端ノード（FinFET、GAA等） | 微細化対応の新構造トランジスタの物理・電気特性と設計影響 |
+| [2](f_chapter2_chiplet_pkg/README.md) | チップレットと先端パッケージ技術 | 異種集積における2.5D/3Dパッケージ技術、TSV・インターポーザ事例 |
 
 ---
 
