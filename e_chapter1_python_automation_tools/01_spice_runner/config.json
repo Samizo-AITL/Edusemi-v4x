@@ -1,0 +1,11 @@
+{
+  "device": "sky130_fd_pr__nfet_01v8",
+  "vds": 0.8,
+  "w": [1.0, 2.0],
+  "l": [0.15, 0.3],
+  "vg_start": 0.0,
+  "vg_stop": 1.2,
+  "vg_step": 0.01,
+  "spice_template": "vgid_template.spice",
+  "output_dir": "output/"
+}
