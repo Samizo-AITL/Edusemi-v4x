@@ -30,6 +30,23 @@
 - `![図2.3-3 XORゲート波形](../images/chapter2_xor_waveform.png)`
 - `![図2.3-4 AND–XOR複合回路波形](../images/chapter2_and_xor_waveform.png)`
 
+以下に変更
+
+- `![図2.3-1 ANDゲートの真理値表](../images/chapter2_and_tt.png)`
+  Markdownで作成してるので廃止
+  
+図2.3-2：ANDゲートの構成と波形
+![図2.3-2a AND回路図](../images/chapter2_and_logic.png)  
+![図2.3-2b AND波形図](../images/chapter2_and_waveform.png)
+
+図2.3-3：XORゲートの構成と波形
+![図2.3-3a XOR回路図](../images/chapter2_xor_logic.png)  
+![図2.3-3b XOR波形図](../images/chapter2_xor_waveform.png)
+
+図2.3-4：AND–XOR複合回路の構成と動作波形
+![図2.3-4a AND–XOR論理回路](../images/chapter2_and_xor_logic.png)  
+![図2.3-4b AND–XORタイミング波形](../images/chapter2_and_xor_waveform.png)
+
 ---
 
 ## 2.4 論理機能ブロック（MUX・デコーダ）
