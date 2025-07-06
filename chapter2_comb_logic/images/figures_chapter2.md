@@ -36,16 +36,16 @@
   Markdownで作成してるので廃止
   
 図2.3-2：ANDゲートの構成と波形
-![図2.3-2a AND回路図](../images/chapter2_and_logic.png)  
-![図2.3-2b AND波形図](../images/chapter2_and_waveform.png)
+- `![図2.3-2a AND回路図](../images/chapter2_and_logic.png)` 
+- `![図2.3-2b AND波形図](../images/chapter2_and_waveform.png)`
 
 図2.3-3：XORゲートの構成と波形
-![図2.3-3a XOR回路図](../images/chapter2_xor_logic.png)  
-![図2.3-3b XOR波形図](../images/chapter2_xor_waveform.png)
+- `![図2.3-3a XOR回路図](../images/chapter2_xor_logic.png)`  
+- `![図2.3-3b XOR波形図](../images/chapter2_xor_waveform.png)`
 
 図2.3-4：AND–XOR複合回路の構成と動作波形
-![図2.3-4a AND–XOR論理回路](../images/chapter2_and_xor_logic.png)  
-![図2.3-4b AND–XORタイミング波形](../images/chapter2_and_xor_waveform.png)
+- `![図2.3-4a AND–XOR論理回路](../images/chapter2_and_xor_logic.png)` 
+- `![図2.3-4b AND–XORタイミング波形](../images/chapter2_and_xor_waveform.png)`
 
 ---
 
