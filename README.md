@@ -52,9 +52,11 @@ Edusemi は、このような「基礎同士のつながり」に焦点を当て
 
 ## 🛠 実践編　章構成一覧
 
-| 章 | タイトル | 概要 |
+| 章番号 | タイトル | 概要 |
 |--------|----------|------|
-| [1](e_chapter1_python_automation_tools/README.md) | Pythonによる自動化ツール群 | SPICEシミュレーション、特性プロット、OpenLaneログ解析など実務的自動化スクリプト群の実装例 |
+| [第1章](e_chapter1_python_automation_tools/README.md) | Pythonによる自動化ツール群 | SPICEシミュレーション、特性プロット、OpenLaneログ解析など実務的自動化スクリプト群の実装例 |
+| [第2章](e_chapter2_sky130_experiments/README.md) | Sky130実験とSPICE特性評価 | Sky130 MOSモデルを用いたVg–Id特性、Vth抽出、BTI/TDDB劣化予測のSPICE実験フロー |
+| [第3章](e_chapter3_openlane_practice/README.md) | OpenLaneによるデジタル設計実習 | RTL記述からGDS出力まで、OpenLaneによる論理合成・配置配線・設計結果レポート解析の実践フロー |
 
 ---
 
