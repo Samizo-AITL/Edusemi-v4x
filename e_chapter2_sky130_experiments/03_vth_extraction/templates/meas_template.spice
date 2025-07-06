@@ -1,0 +1,17 @@
+* Vg–Id sweep with Vth extraction
+.include ~/pdks/sky130A/libs.tech/ngspice/sky130.lib.spice tt
+
+.param W = {{W}}
+.param L = {{L}}
+
+M1 D G 0 0 sky130_fd_pr__nfet_01v8 w='W' l='L'
+
+Vds D 0 0.8
+Vgs G 0 0
+
+.dc Vgs 0 1.2 0.01
+.print DC I(D)
+
+.meas vth find Vgs when I(D) = 1e-6
+
+.end
