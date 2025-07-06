@@ -1,21 +1,20 @@
-# 📦 特別編 第2章：チップレットと先端パッケージ技術
+# 📘 特別編 第2章：チップレットと先端パッケージ技術
 
-## 🧭 概要
+## 📌 概要
 
-本章では、モノリシックSoCの微細化限界やコスト上昇を背景に注目される「チップレット」技術と、それを支える先端パッケージング（2.5D/3D実装）について解説します。  
-TSVやインターポーザを活用した実装手法、実際の商用事例、設計課題、そして技術選定のポイントを体系的にまとめます。
+本章では、2.5D/3D実装技術やチップレットアーキテクチャに関連する **パッケージ設計・実装・信頼性** の要素を体系的に解説します。SoCのモノリシック統合から脱却し、異種集積による柔軟な設計とスケーラビリティを可能にする技術群です。
 
 ---
 
-## 📚 章構成と対応ファイル
+## 📚 節構成（本編）
 
-| 節番号 | ファイル名 | タイトル |
-|--------|------------|----------|
-| 2.1 | [f2_1_overview.md](./f2_1_overview.md) | チップレット化の背景と技術潮流 |
-| 2.2 | [f2_2_25d_pkg.md](./f2_2_25d_pkg.md) | 2.5D実装技術（CoWoS, インターポーザ） |
-| 2.3 | [f2_3_3d_pkg.md](./f2_3_3d_pkg.md) | 3D積層技術（TSV, hybrid bonding） |
-| 2.4 | [f2_4_pkg_case_study.md](./f2_4_pkg_case_study.md) | 実例紹介：AMD、Intel、Appleなど |
-| 2.5 | [f2_5_design_challenges.md](./f2_5_design_challenges.md) | 熱・テスト・歩留まり設計課題 |
+| 節番号 | ファイル名              | 内容概要 |
+|--------|--------------------------|----------|
+| 2.1    | [f2_1_overview.md](./f2_1_overview.md) | チップレット化の背景と技術潮流 |
+| 2.2    | [f2_2_25d_pkg.md](./f2_2_25d_pkg.md) | 2.5D実装技術（CoWoS, インターポーザ） |
+| 2.3    | [f2_3_3d_pkg.md](./f2_3_3d_pkg.md) | 3D積層技術（TSV, hybrid bonding） |
+| 2.4    | [f2_4_pkg_case_study.md](./f2_4_pkg_case_study.md) | 商用事例（AMD, Intel, Appleなど） |
+| 2.5    | [f2_5_design_challenges.md](./f2_5_design_challenges.md) | 熱設計・テスト・タイミング課題 |
 
 ---
 
@@ -23,15 +22,16 @@ TSVやインターポーザを活用した実装手法、実際の商用事例�
 
 | 番号 | ファイル名 | 内容概要 |
 |------|------------|----------|
-| A-1 | [appendixf2_01_tsv_flow.md](./appendixf2_01_tsv_flow.md) | TSV形成プロセスフローの詳細 |
-| A-2 | [appendixf2_02_pkg_table.md](./appendixf2_02_pkg_table.md) | 各パッケージ技術の比較表（FC-BGA, WLP, FOWLP, 2.5D, 3D等） |
+| A2.1 | [appendixf2_01_pkg_summary.md](./appendixf2_01_pkg_summary.md) | 実装構造と分類一覧 |
+| A2.2 | [appendixf2_02_pkg_materials.md](./appendixf2_02_pkg_materials.md) | パッケージ材料と用途分類 |
+| A2.3 | [appendixf2_03_pkg_stackup.md](./appendixf2_03_pkg_stackup.md) | インターポーザやRDLの積層構造 |
+| A2.4 | [appendixf2_04_pkg_ifstandard.md](./appendixf2_04_pkg_ifstandard.md) | 標準インタフェース（UCIe等）と技術動向 |
+| A2.5 | [appendixf2_05_pkg_reliability.md](./appendixf2_05_pkg_reliability.md) | 信頼性・実装上の課題と対策 |
 
 ---
 
-## 🏷️ 著者・ライセンス
+## 🎯 本章の位置づけと教材意義
 
-- **著者**：Shinichi Samizo  
-- **ライセンス**：MIT License  
-- **連絡先**：shin3t72@gmail.com｜[GitHub](https://github.com/Samizo-AITL)
-
----
+- **実装制約と設計の接点** を学ぶことで、回路設計とパッケージ設計の連携を理解
+- 異種チップの **分割設計・分業・再利用性** の観点からSoC戦略を考察
+- 材料・構造・熱・信頼性などの複合要素を含む **実践的設計力** の養成
