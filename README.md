@@ -64,7 +64,7 @@
 
 | 章番号 | タイトル | 概要 |
 |--------|----------|------|
-| [第1章](f_chapter1_advanced_nodes/README.md) | 先端ノード（FinFET、GAA等） | 微細化対応の新構造トランジスタの物理・電気特性と設計影響 |
+| [第1章](f_chapter1_finfet_gaa/README.md) | 先端ノード（FinFET、GAA等） | 微細化対応の新構造トランジスタの物理・電気特性と設計影響 |
 | [第2章](f_chapter2_chiplet_and_packaging/README.md) | チップレットと先端パッケージ技術 | 異種集積における2.5D/3Dパッケージ技術、TSV・インターポーザ事例 |
 
 ---
