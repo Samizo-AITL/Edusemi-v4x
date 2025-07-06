@@ -1,0 +1,17 @@
+* Vg–Id simulation template for Sky130 NMOS
+.include sky130_fd_pr__nfet_01v8.spice
+
+.options TEMP=25
+
+* Voltage sources
+Vds D 0 {{VDS}}
+Vgs G 0 0
+
+* MOSFET instance
+M1 D G 0 0 sky130_fd_pr__nfet_01v8 w={{W}}u l={{L}}u
+
+* DC sweep
+.dc Vgs 0 1.2 0.01
+.print DC I(Vds)
+
+.end
