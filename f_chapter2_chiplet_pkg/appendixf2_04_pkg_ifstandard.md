@@ -29,7 +29,7 @@
 - 2022年、Intel主導で発表、現在は**業界コンソーシアム**で管理
 - **Protocol Stack構造**により、PCIeやCXLとも親和性あり
 - PHY/Die-to-Die層、Link層、Protocol層の3階層
-
+```
   UCIe Stack:
 +———————+
 | Protocol Layer      | ← PCIe, CXL, etc.
@@ -37,6 +37,7 @@
 | Link Layer          |
 +———————+
 | Die-to-Die PHY      | ← 配線距離 < 2mm
+```
 
 ---
 
