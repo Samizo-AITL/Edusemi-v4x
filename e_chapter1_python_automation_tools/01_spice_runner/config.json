@@ -1,14 +1,14 @@
 {
   "device": "sky130_fd_pr__nfet_01v8",
-  "sweep_type": "vg",  // Sweep gate voltage
+  "sweep_type": "vg",
   "vg_start": 0.0,
   "vg_stop": 1.8,
   "vg_step": 0.05,
   "vd": 0.8,
-  "w": [0.84e-6, 1.68e-6],  // width: 2λ, 4λ (λ = 0.21um)
-  "l": [0.15e-6],           // length: 0.15um (minimum L)
+  "w": [0.84e-6, 1.68e-6],
+  "l": [0.15e-6],
   "temperature": 25,
-  "model_corner": "tt",     // tt: typical-typical
+  "model_corner": "tt",
   "output_dir": "output",
   "spice_template": "vgid_template.spice",
   "output_csv_prefix": "idvg"
