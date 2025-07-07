@@ -46,10 +46,10 @@
 | [3](d_chapter3_esd_protection_design/README.md) | ESD設計 | 静電破壊対策の基本、保護素子、レイアウト注意点、試験規格と破壊事例 |
 | [4](d_chapter4_layout_optimization/README.md) | レイアウト設計と最適化 | CMPダミー、IRドロップ、ラッチアップ防止など、物理実装とその工夫 |
 | [5](d_chapter5_analog_mixed_signal/README.md) | アナログ／ミックスドシグナル | アナログブロック設計とノイズ、レイアウト、混載設計における課題と対策 |
-| [６](d_chapter6_pdk_and_eda_environment/README.md) | PDKとEDA環境 | PDKの構成、EDAツールとの接続、DRC/LVS/ERCチェックフローの理解 |
-| [７](d_chapter7_automation_and_verification/README.md) | 自動化と実装検証技術 | Lint、OpenLaneによる論理・物理検証とログ解析、CI/CDの導入例 |
-| [８](d_chapter8_fsm_design_basics/README.md) | FSM設計（有限状態機械） | Moore/Mealy型、状態遷移図、Verilog記述までの構造的理解 |
-| [９](d_chapter9_pll_and_clock_design/README.md) | PLLとクロック設計 | PLLの構造、周波数合成、ジッタ/スキュー、STAにおける設計配慮点 |
+| [6](d_chapter6_pdk_and_eda_environment/README.md) | PDKとEDA環境 | PDKの構成、EDAツールとの接続、DRC/LVS/ERCチェックフローの理解 |
+| [7](d_chapter7_automation_and_verification/README.md) | 自動化と実装検証技術 | Lint、OpenLaneによる論理・物理検証とログ解析、CI/CDの導入例 |
+| [8](d_chapter8_fsm_design_basics/README.md) | FSM設計（有限状態機械） | Moore/Mealy型、状態遷移図、Verilog記述までの構造的理解 |
+| [9](d_chapter9_pll_and_clock_design/README.md) | PLLとクロック設計 | PLLの構造、周波数合成、ジッタ/スキュー、STAにおける設計配慮点 |
 
 ---
 
