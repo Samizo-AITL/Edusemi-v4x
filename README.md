@@ -61,7 +61,7 @@
 | [2](e_chapter2_sky130_experiments/README.md) | Sky130実験とSPICE特性評価 | Sky130 MOSモデルを用いた Vg–Id 特性抽出、しきい値電圧 (Vth) 推定、BTI/TDDB 劣化予測などのSPICE実験フロー |
 | [3](e_chapter3_openlane_practice/README.md) | OpenLaneによるデジタル設計実習 | RTL記述からGDS出力まで、OpenLaneツールによる論理合成・配置配線・レポート解析を通じて、物理設計の流れを体験的に学ぶ |
 | [4](e_chapter4_poc_spec_and_design/README.md) | PoC仕様書と設計展開 | FSM・MUX・Adder の最小構成PoC仕様を策定し、Verilog設計とテストベンチを通じてRTL設計の基本構造と意図を明確化 |
-| [5](e_chapter5_evaluation_and_report/README.md) | 設計結果の評価とレポート | 波形解析、面積・タイミング・DRC/LVSの設計評価を行い、比較・改善提案まで含めた設計フィードバック力を実践的に育成 
+| [5](e_chapter5_evaluation_and_report/README.md) | 設計結果の評価とレポート | 波形解析、面積・タイミング・DRC/LVSの設計評価を行い、比較・改善提案まで含めた設計フィードバック力を実践的に育成 |
 
 ---
 
