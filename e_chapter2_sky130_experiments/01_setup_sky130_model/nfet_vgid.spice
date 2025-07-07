@@ -1,0 +1,23 @@
+* nfet_vgid.spice - Vg-Id sweep for sky130_fd_pr__nfet_01v8
+
+.include "sky130_model_paths.inc"
+.lib "~/pdks/sky130A/libs.tech/ngspice/sky130.lib.spice" tt
+
+.options TEMP = 25
+.options METHOD=trap
+
+* ノード定義
+* M1: Drain, Gate, Source, Bulk
+VDS D 0 0.8
+VGS G 0 0
+
+* トランジスタ定義 (W=1µm, L=0.15µm)
+M1 D G 0 0 sky130_fd_pr__nfet_01v8 w=1u l=0.15u
+
+* DC スイープ設定: VGS 0V → 0.8V（0.01Vステップ）
+.dc VGS 0 0.8 0.01
+
+* 結果出力（端子電流など）
+.print DC i(VDS) V(G) V(D)
+
+.end
