@@ -27,7 +27,7 @@ SoCのモノリシック統合から脱却し、異種集積による柔軟な�
 
 | 番号 | ファイル名 | 内容概要 |
 |------|------------|----------|
-| A2.1 | [appendixf2_01_pkg_summary.md](./appendixf2_01_pkg_summary.md) | 実装構造と分類一覧 |
+| A2.1 | [appendixf2_01_pkg_term.md](./appendixf2_01_pkg_term.md) | 実装構造と分類一覧 |
 | A2.2 | [appendixf2_02_pkg_materials.md](./appendixf2_02_pkg_materials.md) | パッケージ材料と用途分類 |
 | A2.3 | [appendixf2_03_pkg_stackup.md](./appendixf2_03_pkg_stackup.md) | インターポーザやRDLの積層構造 |
 | A2.4 | [appendixf2_04_pkg_ifstandard.md](./appendixf2_04_pkg_ifstandard.md) | 標準インタフェース（UCIe等）と技術動向 |
