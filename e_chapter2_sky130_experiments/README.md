@@ -17,7 +17,7 @@
 | フォルダ名 | 内容 |
 |------------|------|
 | [`01_setup_sky130_model/`](01_setup_sky130_model/) | `ngspice`・Sky130環境の構築とモデル確認 |
-| [`02_vgid_simulation/`](02_vgid_simulation/) | Vg–Id特性のSweepシミュレーション（`.spice`自動生成含む） |
+| [`02_idvg_experiment/`](02_idvg_experiment/) | Vg–Id特性のSweepシミュレーション（`.spice`自動生成含む） |
 | [`03_vth_extraction/`](03_vth_extraction/) | `.meas` によるVth抽出と可視化 |
 | [`04_bti_tddb_estimation/`](04_bti_tddb_estimation/) | 劣化モデル（BTI, TDDB）との連携による寿命推定 |
 | [`05_data_summary/`](05_data_summary/) | 実験ログ・特性グラフの集約とレポート出力準備 |
