@@ -1,0 +1,22 @@
+* nfet_W1.0_L0.15.spice
+* Sky130 nfet_01v8 W=1.0um L=0.15um Vg–Id sweep
+
+.include "../../01_setup_sky130_model/sky130_model_paths.inc"
+
+.options TEMP = 25
+.options METHOD=trap
+
+* バイアス源設定
+VDS D 0 0.8
+VGS G 0 0
+
+* MOSFET定義（Drain, Gate, Source, Bulk）
+M1 D G 0 0 sky130_fd_pr__nfet_01v8 w=1u l=0.15u
+
+* DC スイープ：VGS を 0.0 → 1.2V（0.02V刻み）
+.dc VGS 0 1.2 0.02
+
+* 出力設定（Id = -i(VDS)）
+.print DC V(G) V(D) i(VDS)
+
+.end
