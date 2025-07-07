@@ -1,0 +1,25 @@
+* pfet_W2.0_L0.3.spice
+* Sky130 pfet_01v8 W=2.0um L=0.3um Vg–Id sweep
+
+.include "../../01_setup_sky130_model/sky130_model_paths.inc"
+
+.options TEMP = 25
+.options METHOD=trap
+
+* 電源・バイアス設定
+VDD VDD 0 0.8        ; ソース・バルクに接続
+VGS G 0 0            ; ゲート電圧掃引用
+
+* MOSFET定義（Drain, Gate, Source=VDD, Bulk=VDD）
+M1 D G VDD VDD sky130_fd_pr__pfet_01v8 w=2u l=0.3u
+
+* ドレイン負バイアス（pMOSなので Source 高、Drain 低）
+VDS D 0 0.8
+
+* DC スイープ：VGS を 0V → -1.2V（負方向に掃引）
+.dc VGS 0 -1.2 -0.02
+
+* 出力設定（Id = -i(VDS)）
+.print DC V(G) V(D) i(VDS)
+
+.end
