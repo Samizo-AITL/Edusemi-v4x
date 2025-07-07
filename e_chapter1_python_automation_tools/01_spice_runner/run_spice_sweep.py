@@ -12,9 +12,9 @@ def generate_spice_file(template_path, w, l, vds, out_path):
     with open(out_path, "w") as f:
         f.write(spice)
 
-def run_ngspice(spice_file, output_csv):
+def run_ngspice(spice_file, output_log):
     result = subprocess.run(
-        ["ngspice", "-b", "-o", output_csv, spice_file],
+        ["ngspice", "-b", "-o", output_log, spice_file],
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE,
         text=True
@@ -30,13 +30,15 @@ def main():
     out_dir = Path(cfg["output_dir"])
     out_dir.mkdir(exist_ok=True)
 
+    prefix = cfg.get("output_csv_prefix", "vgid")
+
     for w in cfg["w"]:
         for l in cfg["l"]:
-            fname = f"vgid_W{w}_L{l}.spice"
+            fname = f"{prefix}_W{w}_L{l}.spice"
             fpath = out_dir / fname
-            generate_spice_file(cfg["spice_template"], w, l, cfg["vds"], fpath)
+            generate_spice_file(cfg["spice_template"], w, l, cfg["vd"], fpath)
 
-            logname = f"vgid_W{w}_L{l}.log"
+            logname = f"{prefix}_W{w}_L{l}.log"
             logpath = out_dir / logname
             run_ngspice(str(fpath), str(logpath))
 
