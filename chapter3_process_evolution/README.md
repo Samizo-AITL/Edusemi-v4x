@@ -12,11 +12,11 @@
 
 | 節番号 | ファイル名 | 内容概要 |
 |--------|------------|----------|
-| 3.1 | [`3.1_process_scaling.md`](./3.1_process_scaling.md) | CMOSプロセスの世代変遷（0.5µm〜90nmの技術展開） |
-| 3.2 | [`3.2_device_structure.md`](./3.2_device_structure.md) | トランジスタ構造：STI、浅接合、LDD、サリサイド |
-| 3.3 | [`3.3_wiring_and_litho.md`](./3.3_wiring_and_litho.md) | 配線と描画技術：Cu、多層配線、CMP、OPCなど |
+| 3.1 | [`3.1_node_scaling_history.md`](./3.1_node_scaling_history.md) | CMOSプロセスの世代変遷（0.5µm〜90nmの技術展開） |
+| 3.2 | [`3.2_cmos_structure_shift.md`](./3.2_cmos_structure_shift.md) | トランジスタ構造：STI、浅接合、LDD、サリサイド |
+| 3.3 | [`3.3_interconnect_and_litho.md`](./3.3_interconnect_and_litho.md) | 配線と描画技術：Cu、多層配線、CMP、OPCなど |
 | 3.4 | [`3.4_variation_and_reliability.md`](./3.4_variation_and_reliability.md) | 微細化による設計限界：SCE、DIBL、Vthばらつき、HCIなど |
-| 3.5 | [`3.5_sky130_and_018.md`](./3.5_sky130_and_018.md) | 教育向きプロセス：sky130や0.18µmの意義と活用 |
+| 3.5 | [`3.5_summary_and_scope.md`](./3.5_summary_and_scope.md) | 教育向きプロセス：sky130や0.18µmの意義と活用 |
 
 ---
 
@@ -36,11 +36,11 @@
 Edusemi-v4x/
 └── chapter3_process_evolution/
     ├── README.md
-    ├── 3.1_process_scaling.md
-    ├── 3.2_device_structure.md
-    ├── 3.3_wiring_and_litho.md
+    ├── 3.1_node_scaling_history.md
+    ├── 3.2_cmos_structure_shift.md
+    ├── 3.3_interconnect_and_litho.md
     ├── 3.4_variation_and_reliability.md
-    └── 3.5_sky130_and_018.md
+    └── 3.5_summary_and_scope.md
 ```
 
 ---
