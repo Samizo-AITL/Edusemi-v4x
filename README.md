@@ -106,3 +106,10 @@ Edusemi は、ChatGPT との連携を前提に設計されています。
 - お問い合わせは GitHub の [Issue](https://github.com/Samizo-AITL/Edusemi-v4x/issues) または [Discussions](https://github.com/Samizo-AITL/Edusemi-v4x/discussions) にてお気軽にどうぞ。
 
 ---
+
+## 📘 関連ドキュメント
+
+- [はじめに（教材の構想と目的）](introduction.md)
+- [改訂履歴（ChangeLog）](revision_history.md)
+
+---
