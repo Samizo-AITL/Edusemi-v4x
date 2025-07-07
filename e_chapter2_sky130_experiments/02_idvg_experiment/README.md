@@ -1,71 +1,61 @@
-# 📘 02_idvg_experiment
+# 📘 02_plot_vgid - Vg–Id 特性の可視化
 
-本フォルダでは、Sky130 PDK の `nfet_01v8` / `pfet_01v8` モデルを用いて、MOSトランジスタの `Vg–Id` 特性を評価します。  
-複数の W/L 条件や電源電圧 Vds に対して、ゲート電圧 Vg をスイープし、しきい値電圧（Vth）や線形/飽和領域の特性を可視化します。
-
----
-
-## 🎯 教材のねらい
-
-- MOSトランジスタのバイアス特性（Vg–Id）を定量的に観察
-- デバイス寸法（W/L）や電源条件の影響を比較
-- Pythonによるプロット自動化と可視化を体験
+このフォルダでは、前章で取得した SPICE ログ (`.log`) を読み取り、nMOS / pMOS の Vg–Id 特性を Python で可視化します。  
+教材目的で `matplotlib` の基本機能を使い、MOSFET の電気的挙動を視覚的に理解できるように設計されています。
 
 ---
 
-## 📁 フォルダ構成（予定）
+## 📁 フォルダ構成
 
-```text
-02_idvg_experiment/
-├── spice/
-│   ├── nfet_W1.0_L0.15.spice
-│   ├── pfet_W2.0_L0.3.spice
-│   └── ...
-├── output/
-│   ├── nfet_W1.0_L0.15.log
-│   └── ...
-├── plot/
-│   └── plot_vgid.py
-└── README.md
-```
+| ファイル名 | 内容 |
+|------------|------|
+| [`plot_vgid.py`](./plot_vgid.py) | `.log` ファイルから Vg–Id 特性を描画する Python スクリプト |
+| `output/` | `.log` ファイルが保存されるディレクトリ（`01_setup_sky130_model/` で生成） |
 
 ---
 
-## 🔧 実験条件の例
+## 🔧 前提条件
 
-```text
-| デバイスタイプ | W [µm] | L [µm] | Vds [V] | Vg sweep  |
-|----------------|--------|--------|---------|-----------|
-| nfet_01v8      | 1.0    | 0.15   | 0.8     | 0 → 1.2 V |
-| pfet_01v8      | 2.0    | 0.3    | -0.8    | 0 → -1.2 V |
-```
+- Python 3.x がインストール済みであること
+- 以下の Python ライブラリが使用可能であること：
+  - `matplotlib`
 
----
-
-## 🚀 実行方法（手動）
+インストール例：
 
 ```bash
-ngspice spice/nfet_W1.0_L0.15.spice
+pip install matplotlib
 ```
-出力ファイルは output/ 以下に保存されます：
+
+---
+
+## 🚀 実行方法
+
+```bash
+python plot_vgid.py
 ```
-output/
-├── nfet_W1.0_L0.15.log
-└── ...
-```
-## 📈 可視化スクリプトの実行
-```
-python3 plot/plot_vgid.py output/nfet_W1.0_L0.15.log
-```
-複数ログを重ねて比較することも可能です。
+
+正常に実行されると、以下の2曲線が表示されます：
+
+- `sky130_fd_pr__nfet_01v8`（nMOS）
+- `sky130_fd_pr__pfet_01v8`（pMOS）
+
+---
+
+## 📈 出力例
+
+プロットされるグラフは以下のような形式です：
+
+- X軸：Gate電圧 Vg [V]
+- Y軸：Drain電流 Id [μA]
+- 両特性を同一グラフ上に表示
+- 0μAラインの補助線付き
+
+---
 
 ## 🔗 関連リンク
-- ../01_setup_sky130_model/README.md
-- ../../e_chapter1_python_automation_tools/02_plot_vgid/README.md
 
-## 📝 備考
-- `ngspice` の `.dc` 指令を活用し、Vg を固定ステップで掃引
-- `.meas` を併用することで Vth の抽出も可能（後続教材で扱います）
-- 教材として定番のMOS特性を、自作SPICE回路で得られる実感を重視
+- 📁 [01_setup_sky130_model/](../01_setup_sky130_model/) — SPICE モデルとログ生成
+- 📘 [Sky130 PDK GitHub](https://github.com/google/skywater-pdk)
+- 🐍 [matplotlib 公式](https://matplotlib.org/)
 
 ---
