@@ -100,10 +100,9 @@ Edusemi は、ChatGPT との連携を前提に設計されています。
 　- ロジックデバイス、メモリデバイス、高耐圧インテグレーション技術の開発・量産化  
 　- インクジェット薄膜ピエゾアクチュエータ開発  
 　- PrecisionCoreプリントヘッド製品展開にも参画
-- **連絡先**：
-- GitHub：[Samizo-AITL](https://github.com/Samizo-AITL)  
-- Email：shin3t72@gmail.com  
-- お問い合わせは GitHub の [Issue](https://github.com/Samizo-AITL/Edusemi-v4x/issues) または [Discussions](https://github.com/Samizo-AITL/Edusemi-v4x/discussions) にてお気軽にどうぞ。
+ - **連絡先**：  
+　GitHub：[Samizo-AITL](https://github.com/Samizo-AITL)  
+　Email：shin3t72@gmail.com  
 
 ---
 
