@@ -19,7 +19,7 @@
 
 - 対象：工学系の学生、若手技術者、教育者
 - 特徴：**基礎のつながり重視**、**回路設計から量産検査までの一貫理解**
-- 実習対応：**sky130, OpenLane, Python, GitHub, ChatGPT活用** を組み込んだ現代的学習# 🎓 Edusemi-v4x：半導体設計・製造 教育教材
+- 実習対応：**sky130, OpenLane, Python, GitHub, ChatGPT活用** を組み込んだ現代的学習
 
 ---
 
