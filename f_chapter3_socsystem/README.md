@@ -56,7 +56,7 @@ f_chapter3_socsystem/
 
 - [AITL-H構想（theory/）](https://github.com/Samizo-AITL/AITL-H/tree/main/theory)
 - [PoC設計マニュアル](https://github.com/Samizo-AITL/AITL-H/tree/main/docs)
-- [FSMエンジン実装例](https://github.com/Samizo-AITL/AITL-H/blob/main/implementary/fsm_engine.py)
+- [FSMエンジン実装例](https://github.com/Samizo-AITL/AITL-H/blob/main/implementary/fsm_engine/fsm_engine.py)
 - [LLM連携ソフト実装例](https://github.com/Samizo-AITL/AITL-H/blob/main/implementary/llm_interface.py)
 
 > ※本章は Edusemi 特別編として、AITL-H実装との連携を前提としています。
