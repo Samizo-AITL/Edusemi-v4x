@@ -55,7 +55,7 @@ f_chapter3_socsystem/
 ## 📘 参照リンク（AITL-H連携）
 
 - [AITL-H構想（theory/）](https://github.com/Samizo-AITL/AITL-H/tree/main/theory)
-- [PoC設計マニュアル](https://github.com/Samizo-AITL/AITL-H/tree/main/PoC)
+- [PoC設計マニュアル](https://github.com/Samizo-AITL/AITL-H/tree/main/docs)
 - [FSMエンジン実装例](https://github.com/Samizo-AITL/AITL-H/blob/main/implementary/fsm_engine.py)
 - [LLM連携ソフト実装例](https://github.com/Samizo-AITL/AITL-H/blob/main/implementary/llm_interface.py)
 
