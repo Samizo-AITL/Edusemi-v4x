@@ -1,0 +1,42 @@
+# 📚 特別編 第4章ドキュメント集（docs/）
+
+このディレクトリ `f_chapter4_openlane/docs/` には、  
+**特別編 第4章：FSM×PID×LLM制御系のOpenLaneによるRTL-to-GDSII実装** に関連する  
+**節別Markdown教材ファイル**が格納されています。
+
+---
+
+## 📖 節別ファイル一覧
+
+| ファイル名 | 節タイトル |
+|------------|------------|
+| `4_1_openlane_intro.md` | 4.1 OpenLane導入とプロジェクト構成 |
+| `4_2_fsm_layout.md`     | 4.2 FSMモジュールの配置配線        |
+| `4_3_pid_layout.md`     | 4.3 PIDモジュールの配置配線        |
+| `4_4_soc_layout.md`     | 4.4 SoC統合モジュールの実装        |
+| `4_5_evaluation.md`     | 4.5 設計評価レポートと比較          |
+| `4_6_gds_view.md`       | 4.6 GDSレイアウトの可視化と考察     |
+
+---
+
+## 🔗 本章全体の概要
+
+本章は、Edusemi特別編 第3章のRTL実装を踏まえ、  
+**Sky130 PDK + OpenLane** による物理実装（配置配線→GDSII生成）プロセスを学習・実践します。
+
+それぞれの節で個別モジュールのflow.tcl実行、レイアウト評価、GDS可視化を段階的に行います。
+
+---
+
+## 📦 関連ディレクトリ
+
+- `../openlane/`：FSM / PID / SoC モジュールごとの OpenLane プロジェクト一式
+- `../README.md`：本章の統合README
+- `../toc_f_chapter4_openlane.md`：目次（章全体リンク集）
+
+---
+
+## ✍️ 補足
+
+- 本ディレクトリは GitHub Pages のルート配信にも適しています
+- `.md` ファイルを章別ナビゲーションで表示可能な構成に整理しています
