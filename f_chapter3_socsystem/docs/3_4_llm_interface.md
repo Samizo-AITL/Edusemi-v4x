@@ -39,10 +39,12 @@ LLM（Large Language Model）やその他ソフト制御層は、AITL-H構成に
 
 LLM（GPT）判断：「旋回すべき」
 
+```
 → RISC-V: sw 0x0002, 0x0000_0000   // llm_action = TURN
 → FSM: action_out ← llm_action
 → PID: ref ← pre-defined for TURN
 → Actuator ← PID(u_out)
+```
 
 ---
 
