@@ -41,13 +41,28 @@
 
 ## 🛠 実装ディレクトリ構成（例）
 ```
+
 f_chapter3_socsystem/
-├── docs/                 # 解説Markdown
-├── verilog/              # FSM, PID RTLコード
-├── sw_riscv/             # LLM連携制御コード
-├── integration/          # SoC統合設計（通信バス、トップ設計）
-├── testbench/            # 検証用環境
-└── README.md             # ← 本ファイル
+├── README.md                      ← 章全体の概要
+├── toc.md                         ← 章内目次
+├── docs/                          ← 各節の解説
+│   ├── 3_1_aitl_architecture.md
+│   ├── 3_2_fsm_design.md
+│   ├── 3_3_pid_design.md
+│   ├── 3_4_llm_interface.md
+│   ├── 3_5_soc_integration.md
+│   └── 3_6_case_study.md
+├── verilog/                       ← RTLコード
+│   ├── fsm_engine.v
+│   ├── pid_controller.v
+│   └── soc_top.v
+├── sw_riscv/                      ← LLM制御用ソフト
+│   └── llm_interface.c
+├── testbench/                     ← テストベンチ
+│   └── test_soc_top.v
+└── images/                        ← 任意：構成図（英語版）
+    └── aitl_three_layer_architecture.png
+
 ```
 
 ---
