@@ -52,12 +52,16 @@ f_chapter3_socsystem/
 
 ---
 
-## 📘 参照リンク
+---
 
-- [AITL-H構想（theory/）](../../AITL-H/theory/README.md)
-- [PoC設計マニュアル](../../AITL-H/PoC/README.md)
-- [FSMエンジン実装例](../../AITL-H/implementary/fsm_engine.py)
-- [LLM連携ソフト実装例](../../AITL-H/implementary/llm_interface.py)
+## 📘 参照リンク（AITL-H連携）
+
+- [AITL-H構想（theory/）](../../../AITL-H/theory/README.md)
+- [PoC設計マニュアル](../../../AITL-H/PoC/README.md)
+- [FSMエンジン実装例](../../../AITL-H/implementary/fsm_engine.py)
+- [LLM連携ソフト実装例](../../../AITL-H/implementary/llm_interface.py)
+
+> ※本章は Edusemi 特別編として、AITL-H実装との連携を前提としています。
 
 ---
 
