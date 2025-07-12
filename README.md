@@ -74,7 +74,7 @@
 | [3](f_chapter3_socsystem/README.md) | FSM×PID×LLMによる統合制御システムのSoC実装手法 | AITLアーキテクチャのSoC実装への適用と統合制御手法の展開 |
 | [4](f_chapter4_openlane/README.md) | FSM×PID×LLM制御系のOpenLaneによるRTL-to-GDSII実装 | OpenLaneを用いた統合制御ロジックの配置配線・DRC対応 |
 | [5](f_chapter5_dfm/README.md) | PDKとレイアウト検証による物理整合とDFM設計指針 | Sky130 PDKを用いたDRC・LVS・DFM設計手法の実践的習得 |
-| [6](f_chapter6_piezo_driver/README.md) | ピエゾアクチュエータと高電圧駆動制御IC | FSM制御・ヒステリシス・分極・COF実装を含む一貫制御システムの教材化 |
+| [6](f_chapter6_actuator_system/README.md) | ピエゾアクチュエータ制御システムの構成と実装 | 分極処理、ヒステリシス補償、FSM制御、COF実装などを統合した実践教材 |
 
 ---
 
