@@ -13,6 +13,11 @@
 
 ---
 
+- 🇺🇸 [English README](./README_en.md)  
+　→ Foundational Educational Materials for Semiconductor Product Development
+
+---
+
 📘 **プロジェクト概要**
 
 **Edusemi-v4x** は、**半導体の設計・製造・検査・品質保証に関する一貫した基礎知識**を、体系的かつ実践的に学ぶためのオープン教材プロジェクトです。
