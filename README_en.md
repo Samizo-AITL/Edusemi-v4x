@@ -13,6 +13,11 @@ While maintaining awareness of advanced applications, the emphasis remains on cu
 
 ---
 
+- 🇯🇵 [日本語版 README](./README.md)  
+　→ 半導体プロダクト開発のための基礎教育教材（構成・章一覧・実習対応）
+
+---
+
 ## 📘 Project Overview
 
 **Edusemi-v4x** is an open-source educational project designed to teach the **fundamentals of semiconductor design, fabrication, testing, and quality assurance** in an integrated and practical manner.
