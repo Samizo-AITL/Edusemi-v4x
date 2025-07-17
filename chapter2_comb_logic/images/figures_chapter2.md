@@ -17,7 +17,7 @@
 - `![図2.1-4 ANDゲートCMOS構成例](../images/chapter2_and_gate_cmos.png)`
 
 - `![図2.1-5 ORゲート記号](../images/chapter2_or_gate_symbol.png)`
-<img src="./images/chapter2_or_gate_symbol.png" alt="図2.1-5 ORゲート記号" width="120px">
+<img src="./chapter2_or_gate_symbol.png" alt="図2.1-5 ORゲート記号" width="120px">
 
 - `![図2.1-6 ORゲートCMOS構成例](../images/chapter2_or_gate_cmos.png)`
 
