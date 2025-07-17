@@ -64,7 +64,9 @@
 <img src="./chapter2_mux_2to1_fixed.png" alt="図2.4-1 2-to-1 MUX構成図（修正版）" width="30%">
 
 - `![図2.4-2 4:1 MUX構成図](../images/chapter2_mux_4to1.png)`
+- 
 - `![図2.4-3 デコーダ構成](../images/chapter2_decoder_2to4.png)`
+<img src="./chapter2_decoder_2to4.png" alt="図2.4-3 2-to-4 デコーダ構成図" width="30%">
 
 ---
 
