@@ -60,7 +60,9 @@
 
 ## 2.4 論理機能ブロック（MUX・デコーダ）
 
-- `![図2.4-1 2:1 MUX構成図](../images/chapter2_mux_2to1.png)`
+- `![図2.4-1 2:1 MUX構成図](./images/chapter2_mux_2to1.png)`
+<img src="./chapter2_mux_2to1_fixed.png" alt="図2.4-1 2-to-1 MUX構成図（修正版）" width="30%">
+
 - `![図2.4-2 4:1 MUX構成図](../images/chapter2_mux_4to1.png)`
 - `![図2.4-3 デコーダ構成](../images/chapter2_decoder_2to4.png)`
 
