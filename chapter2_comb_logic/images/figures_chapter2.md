@@ -6,7 +6,9 @@
 
 ## 2.1 基本ゲートの構成とCMOS実装
 
-- `![図2.1-1 NOTゲート記号](../images/chapter2_not_gate_symbol.png)`
+- `![図2.1-1 NOTゲート記号](./images/chapter2_not_gate_symbol.png)`
+<img src="./chapter2_not_gate_symbol.png" alt="図2.1-1 NOTゲート記号" width="120px">
+- 
 - `![図2.1-2 NOTゲートCMOS構成](../images/chapter2_not_gate_cmos.png)`
 - `![図2.1-3 ANDゲート記号](../images/chapter2_and_gate_symbol.png)`
 - `![図2.1-4 ANDゲートCMOS構成例](../images/chapter2_and_gate_cmos.png)`
