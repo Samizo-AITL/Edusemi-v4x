@@ -68,7 +68,7 @@
 ## 2.6 有限状態機械（FSM）の基礎
 
 - `![図2.6-1 FSM構成図](../images/chapter2_fsm_structure.png)`
-<img src="./images/chapter2_fsm_structure_en_final.png" alt="図2.6-1 FSM構成図（英語版）" width="40%">
+<img src="./chapter2_fsm_structure_en_final.png" alt="図2.6-1 FSM構成図（英語版）" width="40%">
 
 - `![図2.6-2 FSM状態遷移図](../images/chapter2_fsm_diagram.png)`
 - `![図2.6-3 FSMタイプ比較](../images/chapter2_fsm_moore_mealy.png)`
