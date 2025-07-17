@@ -73,7 +73,9 @@
 - `![図2.6-2 FSM状態遷移図](./images/chapter2_fsm_diagram.png)`
 <img src="./chapter2_fsm_diagram.png" alt="図2.6-2 FSM状態遷移図" width="25%">
 
-- `![図2.6-3 FSMタイプ比較](../images/chapter2_fsm_moore_mealy.png)`
+- `![図2.6-3 FSMタイプ比較](./images/chapter2_fsm_moore_mealy.png)`
+<img src="./chapter2_fsm_moore_mealy.png" alt="図2.6-3 Moore型とMealy型のFSM比較" width="60%">
+
 
 ---
 
