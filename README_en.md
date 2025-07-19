@@ -111,10 +111,14 @@ A hybrid intelligent control framework combining FSM (instinct), PID (reason), a
 
 ### 🌐 [Edusemi-Plus](https://github.com/Samizo-AITL/edusemi-plus)
 
-An applied extension of Edusemi focused on **geopolitics, market trends, corporate strategies, and emerging technologies**.  
-- Includes topics like US-China tensions, TSMC strategy, AI/quantum chips, Apple Silicon  
-- Emphasizes the societal and strategic context of semiconductor technology  
-- Designed for engineers, educators, and decision-makers
+An advanced companion to **Edusemi-v4x**, this series explores semiconductors through the lenses of  
+**geopolitics, corporate strategy, market dynamics, AI, and quantum technologies**.
+
+- Covers key topics such as US-China tech rivalry, TSMC's strategic role, CHIPS Act, Apple Silicon, and AI accelerators  
+- Focuses on understanding **why technologies emerge and how they shape industries and society**  
+- Designed for engineers, educators, policy analysts, and decision-makers seeking a multidisciplinary perspective
+
+> 📘 Ideal for connecting technical foundations with real-world industry, strategy, and global structure.
 
 ---
 
