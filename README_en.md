@@ -129,20 +129,21 @@ An advanced companion to **Edusemi-v4x**, this series explores semiconductors th
 
 ---
 
-## 🧑‍🔬 Author Profile
+## 👤 Author Profile
 
-- **Name**: Shinichi Samizo  
-- **Education**: M.E. in Electrical and Electronic Engineering, Shinshu University Graduate School  
-- **Career**:
-  - Joined Seiko Epson Corporation in 1997  
-  - Worked on:
-    - Semiconductor device technologies (0.35μm–0.18μm nodes)  
-    - Logic/memory devices, high-voltage integration  
-    - Inkjet thin-film piezo actuators  
-    - Productization of PrecisionCore printhead technology  
-- **Contact**:  
-  - GitHub: [Samizo-AITL](https://github.com/Samizo-AITL)  
-  - Email: [shin3t72@gmail.com](mailto:shin3t72@gmail.com)
+**Shinichi Samizo**  
+- M.S. in Electrical and Electronic Engineering, Shinshu University  
+- Former R&D Engineer at Seiko Epson Corporation (1997–)
+
+📌 **Expertise**:  
+- Semiconductor devices (logic, memory, high-voltage mixed process)  
+- Thin-film piezoelectric actuators  
+- PrecisionCore printhead commercialization, configuration management, and technical education
+
+📬 **Contact**  
+- ✉️ Email: [shin3t72@gmail.com](mailto:shin3t72@gmail.com)  
+- 🐦 X (Twitter): [https://x.com/shin3t72](https://x.com/shin3t72)  
+- 💻 GitHub: [https://samizo-aitl.github.io/](https://samizo-aitl.github.io/)
 
 ---
 
