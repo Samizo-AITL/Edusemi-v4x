@@ -13,7 +13,7 @@
 
 ---
 
-🇺🇸 [English README](./README_en.md)  
+🇺🇸 **[English README](./README_en.md)**  
 　 Foundational Educational Materials for Semiconductor Product Development
 
 ---
