@@ -79,8 +79,6 @@ While maintaining awareness of advanced applications, the emphasis remains on cu
 | [3](f_chapter3_socsystem/README.md) | SoC Implementation of FSM × PID × LLM Control System | Application of AITL architecture in integrated control SoCs |
 | [4](f_chapter4_openlane/README.md) | OpenLane-Based RTL-to-GDSII Implementation of Control Systems | Layout and DRC of integrated control logic |
 | [5](f_chapter5_dfm/README.md) | Physical Verification and DFM Strategies | DRC/LVS/DFM techniques using Sky130 PDK |
-| [6](f_chapter6_actuator_system/README.md) | Piezo Actuator Control System Design | Polarization, hysteresis compensation, FSM control, COF implementation |
-| [7](f_chapter7_product_docs/README.md) | Product Documentation and Workflow in Final Products | BOM management, prototyping, evaluation, DR & mass production gates |
 
 ---
 
