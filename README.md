@@ -74,7 +74,7 @@
 
 | 章 | タイトル | 概要 |
 |--------|----------|------|
-| [1](f_chapter1_finfet_gaa/README.md) | 先端ノード（FinFET、GAA等） | 微細化対応の新構造トランジスタの物理・電気特性と設計影響 |
+| [1](f_chapter1_finfet_gaa/README.md) | 先端ノード（FinFET、GAA） | 微細化対応の新構造トランジスタの物理・電気特性と設計影響 |
 | [2](f_chapter2_chiplet_pkg/README.md) | チップレットと先端パッケージ技術 | 異種集積における2.5D/3Dパッケージ技術、TSV・インターポーザ事例 |
 | [3](f_chapter3_socsystem/README.md) | FSM×PID×LLMによる統合制御システムのSoC実装手法 | AITLアーキテクチャのSoC実装への適用と統合制御手法の展開 |
 | [4](f_chapter4_openlane/README.md) | FSM×PID×LLM制御系のOpenLaneによるRTL-to-GDSII実装 | OpenLaneを用いた統合制御ロジックの配置配線・DRC対応 |
