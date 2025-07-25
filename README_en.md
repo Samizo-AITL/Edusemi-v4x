@@ -13,7 +13,7 @@ While maintaining awareness of advanced applications, the emphasis remains on cu
 
 ---
 
-🇯🇵 [日本語版 README](./README.md)  
+🇯🇵 **[日本語版 README](./README.md)**  
 　 半導体プロダクト開発のための基礎教育教材（構成・章一覧・実習対応）
 
 ---
