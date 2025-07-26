@@ -132,7 +132,7 @@ A companion series extending Edusemi with:
 - Former **Seiko Epson** Corporation Engineer (since 1997)
 
 📌 **Areas of Expertise**:  
-- **Semiconductor Devices (Logic, Memory, High-Voltage Mixed-Signal)**  
+- **Semiconductor Devices (Logic, Memory, High-Voltage Integrated with Logic)**  
 - **Inkjet Thin-Film Piezoelectric Actuators**  
 - **PrecisionCore Printhead Development, BOM Management, ISO Education**
 
