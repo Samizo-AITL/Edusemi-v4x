@@ -1,155 +1,155 @@
-# 🎓 Edusemi-v4x: Foundational Educational Materials for Semiconductor Product Development
+# 🎓 **Edusemi-v4x: Foundational Educational Materials for Semiconductor Product Development**
 
 ✍️ **Introduction**
 
-The evolution of semiconductor technology began with the invention of the transistor and rapidly accelerated with the advent of the MOS structure.  
-Driven by Moore's Law, miniaturization and integration have enabled the proliferation of LSI across all industries.
+The evolution of **semiconductor technology** began with the **invention of the transistor** and accelerated with the **advent of the MOS structure**.  
+Driven by **Moore's Law**, **miniaturization and integration** have enabled the proliferation of **LSI** across all industries.
 
-However, in the real world of engineering, disciplines such as **materials science, circuit design, process technology, and testing** are often taught in isolation.  
-In practice, these fields are **closely interconnected**—circuit behavior relies on device physics, and design feasibility depends on process capabilities and reliability.
+However, in practice, fields such as **materials science**, **circuit design**, **process technology**, and **testing** are often taught in isolation.  
+Yet these domains are **deeply interconnected**—**circuit behavior** depends on **device physics**, and **design feasibility** hinges on **process capabilities and reliability**.
 
-**Edusemi** addresses this gap by focusing on the **structural interconnections between foundational technologies**.  
-While maintaining awareness of advanced applications, the emphasis remains on cultivating a **deep, structural understanding** of core semiconductor technologies—making the knowledge immediately useful in real-world development.
+**Edusemi** addresses this by emphasizing the **structural interconnections** between foundational technologies.  
+While keeping an eye on application domains, the focus is on cultivating a **deep, practical understanding** of how these fundamentals work **together**.
 
 ---
 
 🇯🇵 **[日本語版 README](./README.md)**  
-　 半導体プロダクト開発のための基礎教育教材（構成・章一覧・実習対応）
+　 *Japanese version with full structure and chapter descriptions*
 
 ---
 
-## 📘 Project Overview
+## 📘 **Project Overview**
 
-**Edusemi-v4x** is an open-source educational project designed to teach the **fundamentals of semiconductor design, fabrication, testing, and quality assurance** in an integrated and practical manner.
+**Edusemi-v4x** is an **open-source curriculum project** designed to teach the **fundamentals of semiconductor design, fabrication, testing, and quality assurance** in a **systematic and hands-on way**.
 
-- **Target Audience**: Engineering students, junior engineers, and educators  
-- **Key Features**: Emphasis on interconnection of basics, full-stack understanding from circuit design to mass production  
-- **Hands-On Support**: Modern learning approach using **sky130, OpenLane, Python, GitHub**, and **interactive learning with ChatGPT**
-
----
-
-## 🧭 Foundations Track: Chapter Overview
-
-| Chapter | Title | Description |
-|---------|-------|-------------|
-| [1](chapter1_materials/README.md) | Fundamentals of Semiconductor Materials | Band structure, PN junctions, MOS field-effect principles |
-| [2](chapter2_comb_logic/README.md) | Digital Logic and Circuit Design | Combinational and sequential logic, FSMs, HDL basics |
-| [3](chapter3_process_evolution/README.md) | Process Technology and Scaling Limitations | Node evolution, interconnects, lithography, reliability |
-| [4](chapter4_mos_characteristics/README.md) | MOS Transistor Characteristics and Design Foundations | Device dimensions, PDKs, design rules, performance metrics |
-| [5](chapter5_soc_design_flow/README.md) | SoC Design Flow and EDA Tools | RTL design, synthesis, place & route, DRC/LVS, timing analysis |
-| [6](chapter6_test_and_package/README.md) | Testing, Packaging, and Productization | ETEST, wafer probing, failure analysis, reliability testing |
-| [7](chapter7_design_review_and_org/README.md) | Design Reviews and Organizational Collaboration | DR structure, case studies, defect examples, consensus building |
+- 🎯 **Target Audience**: Engineering students, junior engineers, educators  
+- ⭐ **Key Features**: Emphasis on **interconnected fundamentals**, full-stack understanding from **circuit design to mass production**  
+- 🧪 **Practical Tools**: Exercises using **sky130**, **OpenLane**, **Python**, **GitHub**, and **interactive ChatGPT learning**
 
 ---
 
-## 🧩 Advanced Track: Chapter Overview
+## 🧭 **Foundations Track: Chapter Overview**
 
-| Chapter | Title | Description |
-|---------|-------|-------------|
-| [1](d_chapter1_memory_technologies/README.md) | Memory Technologies | SRAM, DRAM, FeRAM, MRAM—structures, features, and SoC relevance |
-| [2](d_chapter2_high_voltage_devices/README.md) | High-Voltage Devices | LDMOS and field control structures for high-voltage operation |
-| [3](d_chapter3_esd_protection_design/README.md) | ESD Protection Design | Basics of ESD, protection devices, layout considerations |
-| [4](d_chapter4_layout_optimization/README.md) | Layout Design and Optimization | CMP dummy fill, IR drop, latch-up prevention, physical strategies |
-| [5](d_chapter5_analog_mixed_signal/README.md) | Analog / Mixed-Signal Design | Analog block design, noise, layout challenges in mixed-signal systems |
-| [6](d_chapter6_pdk_and_eda_environment/README.md) | PDK and EDA Environments | Structure of PDKs, EDA integration, DRC/LVS/ERC workflows |
-| [7](d_chapter7_automation_and_verification/README.md) | Automation and Verification Techniques | Linting, OpenLane verification, log analysis, CI/CD practices |
-| [8](d_chapter8_fsm_design_basics/README.md) | FSM Design (Finite State Machines) | Moore/Mealy models, state diagrams, Verilog implementation |
-| [9](d_chapter9_pll_and_clock_design/README.md) | PLL and Clock Design | PLL architecture, frequency synthesis, jitter/skew, STA considerations |
+| Chapter | **Title** | **Description** |
+|---------|-----------|-----------------|
+| [1](chapter1_materials/README.md) | **Fundamentals of Semiconductor Materials** | **Band structure**, **PN junctions**, **MOS field-effect principles** |
+| [2](chapter2_comb_logic/README.md) | **Digital Logic and Circuit Design** | **Combinational** / **sequential logic**, **FSMs**, **HDL basics** |
+| [3](chapter3_process_evolution/README.md) | **Process Technology and Scaling Limitations** | **Node evolution**, **interconnects**, **lithography**, **device variability** |
+| [4](chapter4_mos_characteristics/README.md) | **MOS Transistor Characteristics and Design Foundations** | **Dimensions**, **PDK**, **design rules**, **reliability** |
+| [5](chapter5_soc_design_flow/README.md) | **SoC Design Flow and EDA Tools** | **RTL**, **synthesis**, **place & route**, **DRC/LVS**, **timing analysis** |
+| [6](chapter6_test_and_package/README.md) | **Testing, Packaging, and Productization** | **ETEST**, **wafer test**, **failure analysis**, **reliability qualification** |
+| [7](chapter7_design_review_and_org/README.md) | **Design Reviews and Organizational Collaboration** | **DR processes**, **defect case studies**, **SRAM failures**, **team consensus** |
 
 ---
 
-## 🛠 Practice Track: Chapter Overview
+## 🧩 **Advanced Track: Chapter Overview**
 
-| Chapter | Title | Description |
-|---------|-------|-------------|
-| [1](e_chapter1_python_automation_tools/README.md) | Python Tools for Automation | SPICE simulation, characteristic plotting, OpenLane log analysis |
-| [2](e_chapter2_sky130_experiments/README.md) | Sky130 Experiments and SPICE Evaluation | Vg–Id curves, threshold voltage (Vth) estimation, BTI/TDDB analysis |
-| [3](e_chapter3_openlane_practice/README.md) | Digital Design Practice with OpenLane | RTL-to-GDS flow with synthesis, place & route, and report analysis |
-| [4](e_chapter4_poc_spec_and_design/README.md) | PoC Specifications and Design Expansion | FSM, MUX, Adder—PoC specs and Verilog implementation with testbenches |
-| [5](e_chapter5_evaluation_and_report/README.md) | Evaluation and Reporting of Design Results | Waveform, area/timing/DRC evaluation and improvement proposals |
-
----
-
-## 📦 Special Topics Track: Chapter Overview
-
-| Chapter | Title | Description |
-|---------|-------|-------------|
-| [1](f_chapter1_finfet_gaa/README.md) | Advanced Nodes (FinFET, GAA, etc.) | Physics and design impacts of next-gen transistors |
-| [2](f_chapter2_chiplet_pkg/README.md) | Chiplet and Advanced Packaging Technologies | 2.5D/3D integration, TSVs, interposers in heterogeneous systems |
-| [3](f_chapter3_socsystem/README.md) | SoC Implementation of FSM × PID × LLM Control System | Application of AITL architecture in integrated control SoCs |
-| [4](f_chapter4_openlane/README.md) | OpenLane-Based RTL-to-GDSII Implementation of Control Systems | Layout and DRC of integrated control logic |
-| [5](f_chapter5_dfm/README.md) | Physical Verification and DFM Strategies | DRC/LVS/DFM techniques using Sky130 PDK |
+| Chapter | **Title** | **Description** |
+|---------|-----------|-----------------|
+| [1](d_chapter1_memory_technologies/README.md) | **Memory Technologies** | **SRAM**, **DRAM**, **FeRAM**, **MRAM** — structures, characteristics, SoC relevance |
+| [2](d_chapter2_high_voltage_devices/README.md) | **High-Voltage Devices** | **LDMOS**, **field-controlled structures**, **device design** for HV |
+| [3](d_chapter3_esd_protection_design/README.md) | **ESD Protection Design** | **Protection devices**, **ESD test methods**, **layout guidelines** |
+| [4](d_chapter4_layout_optimization/README.md) | **Layout Design and Optimization** | **CMP dummy fill**, **IR drop**, **latch-up**, **physical design tuning** |
+| [5](d_chapter5_analog_mixed_signal/README.md) | **Analog / Mixed-Signal Design** | **Analog blocks**, **noise**, **mixed-signal layout challenges** |
+| [6](d_chapter6_pdk_and_eda_environment/README.md) | **PDK and EDA Environments** | **PDK components**, **EDA workflows**, **DRC/LVS/ERC** integration |
+| [7](d_chapter7_automation_and_verification/README.md) | **Automation and Verification Techniques** | **Linting**, **OpenLane validation**, **CI/CD**, **log analysis** |
+| [8](d_chapter8_fsm_design_basics/README.md) | **FSM Design (Finite State Machines)** | **Moore / Mealy models**, **state diagrams**, **Verilog code** |
+| [9](d_chapter9_pll_and_clock_design/README.md) | **PLL and Clock Design** | **PLL architecture**, **frequency synthesis**, **jitter/skew**, **STA** considerations |
 
 ---
 
-## 🤖 Integration with ChatGPT
+## 🛠 **Practice Track: Chapter Overview**
 
-Edusemi is designed with **ChatGPT integration** as a learning partner.  
-Learners can get support in code reviews, error diagnostics, tool usage, conceptual explanations, experiment reporting, and more.
-
-This **interactive and industry-aligned approach** bridges theory and practice—preparing learners for modern semiconductor development.
-
----
-
-## 🔗 Related Projects
-
-### 🎛️ [EduController](https://github.com/Samizo-AITL/EduController)
-
-A comprehensive control education platform covering classic PID, modern state-space, H∞, and AI control (NN, RL, LLM integration).  
-- Python-based design and verification practice  
-- Integrated with Edusemi’s PoC specs and SoC implementation topics  
-- End-to-end support from design to RTL-to-GDSII flows
-
-### 🤖 [AITL-H](https://github.com/Samizo-AITL/AITL-H)
-
-A hybrid intelligent control framework combining FSM (instinct), PID (reason), and LLM (intelligence).  
-- Designed for adaptive robots and intelligent systems  
-- Aligned with Edusemi Special Topics chapters on SoC and OpenLane design  
-- Supports cross-domain control and SoC development learning
-
-### 🌐 [Edusemi-Plus](https://github.com/Samizo-AITL/edusemi-plus)
-
-An advanced companion to **Edusemi-v4x**, this series explores semiconductors through the lenses of  
-**geopolitics, corporate strategy, market dynamics, AI, and quantum technologies**.
-
-- Covers key topics such as US-China tech rivalry, TSMC's strategic role, CHIPS Act, Apple Silicon, and AI accelerators  
-- Focuses on understanding **why technologies emerge and how they shape industries and society**  
-- Designed for engineers, educators, policy analysts, and decision-makers seeking a multidisciplinary perspective
-
-> 📘 Ideal for connecting technical foundations with real-world industry, strategy, and global structure.
+| Chapter | **Title** | **Description** |
+|---------|-----------|-----------------|
+| [1](e_chapter1_python_automation_tools/README.md) | **Python Tools for Automation** | **SPICE simulation**, **characteristic plotting**, **OpenLane log parsing** |
+| [2](e_chapter2_sky130_experiments/README.md) | **Sky130 Experiments and SPICE Evaluation** | **Vg–Id curves**, **Vth estimation**, **BTI/TDDB reliability** |
+| [3](e_chapter3_openlane_practice/README.md) | **Digital Design Practice with OpenLane** | **RTL-to-GDSII**, **synthesis**, **P&R**, **report interpretation** |
+| [4](e_chapter4_poc_spec_and_design/README.md) | **PoC Specifications and Design Expansion** | **FSM**, **MUX**, **Adder** — PoC specs and **testbench-based Verilog design** |
+| [5](e_chapter5_evaluation_and_report/README.md) | **Evaluation and Reporting of Design Results** | **Waveform**, **area**, **timing**, **DRC/LVS** review and proposals |
 
 ---
 
-## 📘 Related Documentation
+## 📦 **Special Topics Track: Chapter Overview**
 
-- [Introduction (Concept and Purpose)](introduction.md)  
-- [Revision History (ChangeLog)](revision_history.md)
+| Chapter | **Title** | **Description** |
+|---------|-----------|-----------------|
+| [1](f_chapter1_finfet_gaa/README.md) | **Advanced Nodes (FinFET, GAA, etc.)** | **Fin/GAA transistor structures**, **design impact**, **scaling trends** |
+| [2](f_chapter2_chiplet_pkg/README.md) | **Chiplet and Advanced Packaging Technologies** | **2.5D/3D integration**, **TSV**, **interposer**, **heterogeneous systems** |
+| [3](f_chapter3_socsystem/README.md) | **SoC Implementation of FSM × PID × LLM Control** | Applying **AITL architecture** to **integrated control SoCs** |
+| [4](f_chapter4_openlane/README.md) | **RTL-to-GDSII Implementation of AITL Control Logic** | **OpenLane layout**, **DRC**, **integration verification** |
+| [5](f_chapter5_dfm/README.md) | **DFM and Physical Verification Using PDK** | **Sky130 PDK**, **LVS**, **DFM best practices**, **manufacturing readiness** |
 
 ---
 
-## 👤 Author Profile
+## 🤖 **Integration with ChatGPT**
+
+**Edusemi** is designed for **collaborative learning** with **ChatGPT**.  
+Learners can ask for support in **code reviews**, **error diagnostics**, **concept clarification**, **tool usage**, and even **report writing**.
+
+This creates a **real-world-aligned**, **interactive learning experience**, preparing engineers for **modern semiconductor workflows**.
+
+---
+
+## 🔗 **Related Projects**
+
+### 🎛️ **[EduController](https://github.com/Samizo-AITL/EduController)**  
+A comprehensive control engineering curriculum covering:
+
+- **PID**, **state-space**, **H∞ control**, and **AI-based control** (NN, RL, LLM)  
+- Practical use of **Python**, **RTL**, and **OpenLane**
+- Aligned with Edusemi’s **PoC design** and **control SoC implementation**
+
+### 🤖 **[AITL-H](https://github.com/Samizo-AITL/AITL-H)**  
+A hybrid control framework combining:
+
+- **FSM (instinct)** + **PID (reason)** + **LLM (intelligence)**  
+- Targeting **intelligent robotics** and **adaptive systems**  
+- Linked to Edusemi’s **Special Topics 3–4** for SoC implementation
+
+### 🌐 **[Edusemi-Plus](https://github.com/Samizo-AITL/edusemi-plus)**  
+A companion series extending Edusemi with:
+
+- Insights into **geopolitics**, **corporate strategy**, **AI**, **quantum**, **investment**
+- Case studies: **US–China tech race**, **TSMC**, **Apple Silicon**, **CHIPS Act**  
+- Designed for **engineers**, **educators**, **analysts**, and **strategists**
+
+> 📘 Designed to connect **technical foundations** to **industry and global impact**.
+
+---
+
+## 📘 **Related Documentation**
+
+- 📄 [Introduction (Concept and Purpose)](introduction.md)  
+- 📄 [Revision History (ChangeLog)](revision_history.md)
+
+---
+
+## 👤 **Author Profile**
 
 **Shinichi Samizo**  
-- M.S. in Electrical and Electronic Engineering, Shinshu University  
-- Former R&D Engineer at Seiko Epson Corporation (1997–)
+- M.S. in **Electrical and Electronic Engineering**, Shinshu University  
+- Former **R&D Engineer at Seiko Epson Corporation** (1997–)
 
 📌 **Expertise**:  
-- Semiconductor devices (logic, memory, high-voltage mixed process)  
-- Thin-film piezoelectric actuators  
-- PrecisionCore printhead commercialization, configuration management, and technical education
+- **Logic, memory, high-voltage semiconductor devices**  
+- **Thin-film piezoelectric actuators**  
+- **PrecisionCore printhead**: development, configuration management, training
 
 📬 **Contact**  
-- ✉️ Email: [shin3t72@gmail.com](mailto:shin3t72@gmail.com)  
-- 🐦 X (Twitter): [https://x.com/shin3t72](https://x.com/shin3t72)  
-- 💻 GitHub: [https://samizo-aitl.github.io/](https://samizo-aitl.github.io/)
+- ✉️ [shin3t72@gmail.com](mailto:shin3t72@gmail.com)  
+- 🐦 [https://x.com/shin3t72](https://x.com/shin3t72)  
+- 💻 [https://samizo-aitl.github.io/](https://samizo-aitl.github.io/)
 
 ---
 
-## 📄 License
+## 📄 **License**
 
-This project is released under the **MIT License**.  
-Free to use, modify, and redistribute. Educational and corporate training use is welcome.
+This project is licensed under the **MIT License**.  
+You are free to **use**, **modify**, and **redistribute**—for **educational**, **research**, or **corporate training** purposes.
 
 ---
 
 💬 [Join the Discussion on Edusemi → GitHub Discussions](https://github.com/Samizo-AITL/Edusemi-v4x/discussions)
+
+---
