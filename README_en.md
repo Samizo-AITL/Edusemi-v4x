@@ -125,16 +125,16 @@ A companion series extending Edusemi with:
 
 ---
 
-## 👤 **Author Profile**
+## 👤 **Author Information**
 
 **Shinichi Samizo**  
-- M.S. in **Electrical and Electronic Engineering**, Shinshu University  
-- Former **R&D Engineer at Seiko Epson Corporation** (1997–)
+- **M.S. in Electrical and Electronic Engineering, Shinshu University**  
+- Former **Seiko Epson** Corporation Engineer (since 1997)
 
-📌 **Expertise**:  
-- **Logic, memory, high-voltage semiconductor devices**  
-- **Thin-film piezoelectric actuators**  
-- **PrecisionCore printhead**: development, configuration management, training
+📌 **Areas of Expertise**:  
+- **Semiconductor Devices (Logic, Memory, High-Voltage Mixed-Signal)**  
+- **Inkjet Thin-Film Piezoelectric Actuators**  
+- **PrecisionCore Printhead Development, BOM Management, ISO Education**
 
 📬 **Contact**  
 - ✉️ [shin3t72@gmail.com](mailto:shin3t72@gmail.com)  
