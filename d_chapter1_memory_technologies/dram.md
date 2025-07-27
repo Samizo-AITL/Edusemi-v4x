@@ -134,3 +134,7 @@ These documents complement this curriculum with real-world memory development re
 　→ External reference links on MoSys 1T-SRAM as alternative SRAM macro
 
 ---
+
+© 2025 Shinichi Samizo / MIT License
+
+---
