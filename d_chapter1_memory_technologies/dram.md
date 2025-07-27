@@ -1,4 +1,4 @@
-# 🧠 DRAM（Dynamic Random Access Memory）
+q# 🧠 DRAM（Dynamic Random Access Memory）
 
 ---
 
@@ -110,4 +110,32 @@ DRAM（Dynamic RAM）は、**1ビットあたり「1トランジスタ＋1キャ
 
 ---
 
+## 📦 技術アーカイブリンク / Technical Archive References
+
+以下は、実体験に基づくDRAMおよび疑似SRAM開発の記録です。  
+プロセス条件、リテンション不良、構造検討、代替技術の考察など、教材の補完資料として活用できます。
+
+These links point to archival records of DRAM and pseudo-SRAM development based on real-world engineering experience.  
+They include issues such as process tuning, retention failure, structural examination, and alternative memory technologies.
+
+---
+
+### 📘 DRAM開発記録（1998年）  
+- 📄 [`DRAM_Startup_64M_1998.md`](../../../Edusemi-Plus/archive/in1998/DRAM_Startup_64M_1998.md)  
+　→ 64M DRAM（第3世代 / 0.25μm）のプロセス立ち上げに関する記録  
+　→ Record of 64M DRAM (3rd Gen / 0.25μm) process ramp-up
+
+### 📘 モバイル用VSRAM技術（2001年）  
+- 📄 [`VSRAM_2001.md`](../../../Edusemi-Plus/archive/in2001/VSRAM_2001.md)  
+　→ 内部リフレッシュ制御を利用した疑似SRAM（カメラ付き携帯向け）  
+　→ Pseudo-SRAM based on DRAM process, used in early camera phones
+
+### 📘 Mosys 1T-SRAM補足資料  
+- 📄 [`MoSys_1T_SRAM_Links.md`](../../../Edusemi-Plus/archive/in2001/MoSys_1T_SRAM_Links.md)  
+　→ Mosys社の1T-SRAM技術に関する外部情報と概要整理  
+　→ External references and overview on MoSys 1T-SRAM technology
 © 2025 Shinichi Samizo / MIT License
+
+---
+
+
