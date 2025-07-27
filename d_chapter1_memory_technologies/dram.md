@@ -110,32 +110,27 @@ DRAM（Dynamic RAM）は、**1ビットあたり「1トランジスタ＋1キャ
 
 ---
 
-## 📦 技術アーカイブリンク / Technical Archive References
+## 📦 技術アーカイブ参照（Edusemi-Plusリポジトリ）  
+*Technical archive references from Edusemi-Plus repository*
 
-以下は、実体験に基づくDRAMおよび疑似SRAM開発の記録です。  
-プロセス条件、リテンション不良、構造検討、代替技術の考察など、教材の補完資料として活用できます。
-
-These links point to archival records of DRAM and pseudo-SRAM development based on real-world engineering experience.  
-They include issues such as process tuning, retention failure, structural examination, and alternative memory technologies.
+以下の資料は、半導体メモリ技術の現場記録として教材を補完するものです。  
+These documents complement this curriculum with real-world memory development records.
 
 ---
 
-### 📘 DRAM開発記録（1998年）  
-- 📄 [`DRAM_Startup_64M_1998.md`](../../../Edusemi-Plus/archive/in1998/DRAM_Startup_64M_1998.md)  
-　→ 64M DRAM（第3世代 / 0.25μm）のプロセス立ち上げに関する記録  
-　→ Record of 64M DRAM (3rd Gen / 0.25μm) process ramp-up
+### 📘 DRAM立ち上げ記録（1998年）  
+- 📄 [`DRAM_Startup_64M_1998.md`](https://github.com/Samizo-AITL/Edusemi-Plus/blob/main/archive/in1998/DRAM_Startup_64M_1998.md)  
+　→ 0.25μm世代の64M DRAMプロセス立ち上げ経験記録  
+　→ Record of 0.25μm 64M DRAM ramp-up and yield improvement
 
 ### 📘 モバイル用VSRAM技術（2001年）  
-- 📄 [`VSRAM_2001.md`](../../../Edusemi-Plus/archive/in2001/VSRAM_2001.md)  
-　→ 内部リフレッシュ制御を利用した疑似SRAM（カメラ付き携帯向け）  
-　→ Pseudo-SRAM based on DRAM process, used in early camera phones
+- 📄 [`VSRAM_2001.md`](https://github.com/Samizo-AITL/Edusemi-Plus/blob/main/archive/in2001/VSRAM_2001.md)  
+　→ DRAMプロセスを利用した擬似SRAMの開発と課題対応  
+　→ Development and issue resolution of pseudo-SRAM using DRAM process
 
-### 📘 Mosys 1T-SRAM補足資料  
-- 📄 [`MoSys_1T_SRAM_Links.md`](../../../Edusemi-Plus/archive/in2001/MoSys_1T_SRAM_Links.md)  
-　→ Mosys社の1T-SRAM技術に関する外部情報と概要整理  
-　→ External references and overview on MoSys 1T-SRAM technology
-© 2025 Shinichi Samizo / MIT License
+### 📘 Mosys 1T-SRAM技術参考リンク  
+- 📄 [`MoSys_1T_SRAM_Links.md`](https://github.com/Samizo-AITL/Edusemi-Plus/blob/main/archive/in2001/MoSys_1T_SRAM_Links.md)  
+　→ SRAM代替技術として検討されたMosys社 1T-SRAM の外部リンク集  
+　→ External reference links on MoSys 1T-SRAM as alternative SRAM macro
 
 ---
-
-
