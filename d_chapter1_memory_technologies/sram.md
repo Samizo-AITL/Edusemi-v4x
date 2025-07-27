@@ -95,4 +95,29 @@ DRAMのようにリフレッシュを必要とせず、6T構成セルで安定�
 
 ---
 
+## 📦 技術アーカイブ参照（Edusemi-Plusリポジトリ）  
+*Technical archive references from Edusemi-Plus repository*
+
+以下の資料は、半導体メモリ技術の現場記録として教材を補完するものです。  
+These documents complement this curriculum with real-world memory development records.
+
+---
+
+### 📘 DRAM立ち上げ記録（1998年）  
+- 📄 [`DRAM_Startup_64M_1998.md`](https://github.com/Samizo-AITL/Edusemi-Plus/blob/main/archive/in1998/DRAM_Startup_64M_1998.md)  
+　→ 0.25μm世代の64M DRAMプロセス立ち上げ経験記録  
+　→ Record of 0.25μm 64M DRAM ramp-up and yield improvement
+
+### 📘 モバイル用VSRAM技術（2001年）  
+- 📄 [`VSRAM_2001.md`](https://github.com/Samizo-AITL/Edusemi-Plus/blob/main/archive/in2001/VSRAM_2001.md)  
+　→ DRAMプロセスを利用した擬似SRAMの開発と課題対応  
+　→ Development and issue resolution of pseudo-SRAM using DRAM process
+
+### 📘 Mosys 1T-SRAM技術参考リンク  
+- 📄 [`MoSys_1T_SRAM_Links.md`](https://github.com/Samizo-AITL/Edusemi-Plus/blob/main/archive/in2001/MoSys_1T_SRAM_Links.md)  
+　→ SRAM代替技術として検討されたMosys社 1T-SRAM の外部リンク集  
+　→ External reference links on MoSys 1T-SRAM as alternative SRAM macro
+
+---
+
 © 2025 Shinichi Samizo / MIT License
