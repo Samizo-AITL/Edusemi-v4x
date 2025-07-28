@@ -84,3 +84,7 @@ SCE, HCI, DIBL, Vth Variability, sky130, 0.18µm
 > This content is released under the [MIT License](../LICENSE).
 
 ---
+
+🏠 [Edusemi トップに戻る｜Back to Edusemi-v4x Top](../README.md)
+
+---
