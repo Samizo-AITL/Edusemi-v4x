@@ -95,3 +95,7 @@ f_chapter3_socsystem/
 - GitHub: [Samizo-AITL](https://github.com/Samizo-AITL)
 
 ---
+
+🏠 [Edusemi トップに戻る｜Back to Edusemi-v4x Top](../README.md)
+
+---
