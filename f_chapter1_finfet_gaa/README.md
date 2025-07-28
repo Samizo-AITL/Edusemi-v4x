@@ -41,3 +41,10 @@
 - ライセンス：MIT License
 - GitHub: [Samizo-AITL](https://github.com/Samizo-AITL)
 - Email: shin3t72@gmail.com
+
+---
+
+🏠 [Edusemi トップに戻る｜Back to Edusemi-v4x Top](../README.md)
+
+---
+
