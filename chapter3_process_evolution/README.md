@@ -3,6 +3,18 @@
 
 ---
 
+## 🔁 前章との接続｜Connection to Previous Chapter
+
+| 🇯🇵 日本語 | 🇺🇸 English |
+|-----------|------------|
+| 第2章では、**論理ゲート・組み合わせ回路・FSM**など、CMOS論理設計の基礎を学習しました。 | Chapter 2 covered **logic gates, combinational logic, and FSMs** as fundamentals of CMOS design. |
+| 第3章では、それらの設計が実際に動作するための**物理的基盤（プロセス技術）**に踏み込みます。 | Chapter 3 now explores the **physical foundation (process technology)** that enables those designs. |
+
+📎 [← 第2章：デジタル論理と論理回路設計](../chapter2_comb_logic/README.md)  
+📎 [← Chapter 2: Digital Logic and Logic Circuit Design](../chapter2_comb_logic/README.md)
+
+---
+
 ## 🧭 概要｜Overview
 
 本章では、0.5µmから90nmノードに至るCMOS技術の変遷を通じて、  
