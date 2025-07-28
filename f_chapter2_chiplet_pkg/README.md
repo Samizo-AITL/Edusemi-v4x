@@ -44,3 +44,9 @@ SoCのモノリシック統合から脱却し、異種集積による柔軟な�
 ---
 
 © 2025 Shinichi Samizo / MIT License
+
+---
+
+🏠 [Edusemi トップに戻る｜Back to Edusemi-v4x Top](../README.md)
+
+---
