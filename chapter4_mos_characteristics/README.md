@@ -43,6 +43,9 @@
 | 次章（第5章）では、本章で扱った**PDKや設計ルールの知識**を活用し、**SoC設計フローとEDAツール**の実践に進みます。 | Chapter 5 builds on this by applying **PDK knowledge and design rules** to **SoC design flows and EDA tools**. |
 | PDKの読み解きや、信頼性モデルの物理的裏付けは、ツールを用いた設計と検証の前提になります。                        | Understanding **PDK structures and reliability modeling** is foundational for successful digital/analog design. |
 
+➡️ [📘 **第5章：SoC設計フローとEDAツール**](../chapter5_soc_design_flow/README.md) に進む  
+➡️ [📘 **Chapter 5: SoC Design Flows and EDA Tools**](../chapter5_soc_design_flow/README.md) (EN)
+
 ---
 
 ## 🧩 章のキーワード｜Keywords
