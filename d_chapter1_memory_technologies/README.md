@@ -80,3 +80,9 @@ SoC（System-on-Chip）設計において、演算処理や制御回路だけで
 ---
 
 © 2025 Shinichi Samizo / MIT License
+
+---
+
+🏠 [Edusemi トップに戻る｜Back to Edusemi-v4x Top](../README.md)
+
+---
