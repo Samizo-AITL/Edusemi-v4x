@@ -3,6 +3,18 @@
 
 ---
 
+## 🔄 前章との接続｜Connection to Previous Chapter
+
+| 🇯🇵 日本語                                                                                                     | 🇺🇸 English                                                                                                        |
+|--------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------|
+| 第4章では、MOSトランジスタの**動作・寸法ルール・PDK**を通して「製造可能な設計基盤」を構築しました。                      | Chapter 4 established a **manufacturable design base** via MOS characteristics, rules, and PDKs.                |
+| 本章では、それを活用して**SoCとして機能する回路設計・検証プロセス**へと進みます。                                 | In this chapter, we apply that foundation to the **design and verification flow of a functional SoC**.          |
+
+➡️ [📘 **第4章：MOSトランジスタ特性と設計基盤**](../chapter4_mos_characteristics/README.md) に戻る  
+➡️ [📘 **Chapter 4: MOS Characteristics and Design Infrastructure**](../chapter4_mos_characteristics/README.md) (EN)
+
+---
+
 ## 🎯 章のねらい｜Chapter Objectives
 
 | 🇯🇵 日本語                                                                                   | 🇺🇸 English                                                                                      |
@@ -22,18 +34,6 @@
 | 5.3 | クロックとタイミング設計（STA入門）<br>_Clock and Timing Design (Intro to STA)_     | Setup/hold, clock tree design, static timing analysis basics   | [📎](5.3_clock_and_sta.md) |
 | 5.4 | 電源・リセット・I/O設計の基礎<br>_Power, Reset, and I/O Design Basics_              | Power schemes, reset circuits, pad ring, I/O considerations    | [📎](5.4_power_io_design.md) |
 | 5.5 | テスト構造（スキャン、JTAG、BIST）<br>_Test Structures (Scan, JTAG, BIST)_          | DFT basics, scan chain, boundary scan, BIST introduction       | [📎](5.5_test_structures.md) |
-
----
-
-## 🔄 前章との接続｜Connection to Previous Chapter
-
-| 🇯🇵 日本語                                                                                                     | 🇺🇸 English                                                                                                        |
-|--------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------|
-| 第4章では、MOSトランジスタの**動作・寸法ルール・PDK**を通して「製造可能な設計基盤」を構築しました。                      | Chapter 4 established a **manufacturable design base** via MOS characteristics, rules, and PDKs.                |
-| 本章では、それを活用して**SoCとして機能する回路設計・検証プロセス**へと進みます。                                 | In this chapter, we apply that foundation to the **design and verification flow of a functional SoC**.          |
-
-➡️ [📘 **第4章：MOSトランジスタ特性と設計基盤**](../chapter4_mos_characteristics/README.md) に戻る  
-➡️ [📘 **Chapter 4: MOS Characteristics and Design Infrastructure**](../chapter4_mos_characteristics/README.md) (EN)
 
 ---
 
