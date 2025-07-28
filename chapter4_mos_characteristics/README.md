@@ -37,7 +37,7 @@
 | 4.4 | デザインルールと寸法規則の意味<br>_Meaning Behind Design Rules_                        | Why rules exist: process margin, lithography, yield limits               | [📎](4.4_design_rules.md) |
 | 4.5 | PDKと設計基盤の構築（sky130を中心に）<br>_PDK and Design Infrastructure (sky130)_     | Structure of PDK: models, rules, libraries, layout & DRC integration      | [📎](4.5_pdk_and_design_infra.md) |
 4.6 | LDD構造と短チャネル効果（SCE）<br>_LDD Structure and Short Channel Effects (SCE)_      | Electric field relaxation, hot carrier suppression, Vth roll-off          | [📎](4.6_LDD_and_SCE.md) |
-| 4.7 | パンチスルー対策技術<br>_Punch-Through Suppression Techniques_                          | Halo implant, well design, Vbs control, lateral barrier reinforcement     | [📎](4.7_punchthrough.md) |
+| 4.7 | パンチスルー対策技術<br>_Punch-Through Suppression Techniques_                          | Halo implant, well design, Vbs control, lateral barrier reinforcement     | [📎](4.7_Punchthrough.md) |
 | 4.8 | 短チャネルMOSの限界とFinFET構造<br>_Scaling Limits of Short-Channel MOS and FinFET Architecture_ | Physical limits of planar CMOS, basic FinFET structure, control improvement | [📎](4.8_scaling_limits_and_finfet.md) |
 
 ---
