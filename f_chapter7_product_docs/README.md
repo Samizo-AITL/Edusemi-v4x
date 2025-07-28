@@ -70,3 +70,7 @@ graph TD
 > 情報共有と連携強化を通じて、製品品質の向上と開発期間の短縮を実現することを目的としています。
 
 ---
+
+🏠 [Edusemi トップに戻る｜Back to Edusemi-v4x Top](../README.md)
+
+---
