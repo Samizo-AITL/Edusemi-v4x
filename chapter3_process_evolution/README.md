@@ -53,7 +53,8 @@ Edusemi-v4x/
 | 3.3 | [`3.3_interconnect_and_litho.md`](./3.3_interconnect_and_litho.md) | 多層配線・描画技術 / Interconnect & Lithography |
 | 3.4 | [`3.4_variation_and_reliability.md`](./3.4_variation_and_reliability.md) | 信頼性問題と設計限界 / Variability & Reliability |
 | 3.5 | [`3.5_summary_and_scope.md`](./3.5_summary_and_scope.md) | 教育用ノードの選定と活用 / Educational Node Selection |
-| 📄 | [`0.18um_Logic_ProcessFlow.md`](./0.18um_Logic_ProcessFlow.md) | 🔧0.18µm CMOSプロセス工程表（英日対応）<br>🧪 Full Logic Process Flow for 0.18µm CMOS |
+| 📄 | [`0.18um_Logic_ProcessFlow.md`](./0.18um_Logic_ProcessFlow.md) | 🔧0.18µm CMOSプロセス工程表（日本語）<br>🧪 Full Logic Process Flow (Japanese) |
+| 📄 | [`0.18um_Logic_ProcessFlow_en.md`](./0.18um_Logic_ProcessFlow_en.md) | 🔧0.18µm CMOS Process Flow (English version)<br>🧪 Full Logic Process Flow (English) |
 
 ---
 
