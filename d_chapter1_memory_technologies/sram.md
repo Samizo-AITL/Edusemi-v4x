@@ -116,3 +116,11 @@ Unlike DRAM, it does not require refresh and can stably retain data using a 6-tr
 | [`MoSys_1T_SRAM_Links.md`](https://github.com/Samizo-AITL/Edusemi-Plus/blob/main/archive/in2001/MoSys_1T_SRAM_Links.md) | 1T-SRAM技術の参考リンク集 | Reference links for MoSys 1T-SRAM |
 
 ---
+
+© 2025 Shinichi Samizo / MIT License
+
+---
+
+🏠 [Edusemi トップに戻る｜Back to Edusemi-v4x Top](../README.md)
+
+---
