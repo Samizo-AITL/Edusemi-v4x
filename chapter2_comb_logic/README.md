@@ -96,3 +96,7 @@ Edusemi-v4x/
 > This content is licensed under the [MIT License](../LICENSE).
 
 ---
+
+🏠 [Edusemi トップに戻る｜Back to Edusemi-v4x Top](../README.md)
+
+---
