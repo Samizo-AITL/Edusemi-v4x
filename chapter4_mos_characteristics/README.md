@@ -40,6 +40,9 @@
 | 第3章では、微細化によるプロセス限界と信頼性課題を整理しました。                                     | Chapter 3 examined **process limits and reliability challenges** under scaling.                     |
 | 本章では、それを受けて「設計者が実際に扱うMOSトランジスタ」の物理・寸法・設計ルール・PDKを体系的に整理します。 | Here, we focus on **the MOSFET as handled by designers**, and clarify its physical, dimensional, and PDK-based structure. |
 
+➡️ [📘 **第3章：プロセス技術と設計限界の理解**](../chapter3_process_evolution/README.md) に戻る  
+➡️ [📘 **Chapter 3: Process Evolution and Design Limits in CMOS**](../chapter3_process_evolution/README.md) (EN)
+
 ---
 
 ## 🔜 次章への導入｜Lead-in to Next Chapter
