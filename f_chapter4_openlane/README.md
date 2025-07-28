@@ -56,3 +56,10 @@ f_chapter4_openlane/
 ## 🚀 次ステップ
 
 次章では、生成されたGDSの評価やPDK特性、さらにはチップ実装に向けたDFM視点を扱います。
+
+---
+
+🏠 [Edusemi トップに戻る｜Back to Edusemi-v4x Top](../README.md)
+
+---
+
