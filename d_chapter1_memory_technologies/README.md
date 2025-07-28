@@ -3,18 +3,6 @@
 
 ---
 
-## 🔄 前章との接続｜Connection to Previous Chapter
-
-| 日本語 – Japanese                                                                                   | English – English                                                                                       |
-|------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|
-| 基礎編では、MOSトランジスタの構造や特性を学びました。                                                 | The foundational chapters covered **MOS structure and characteristics**.                                 |
-| 本章では、それらを応用し、SoC設計における**組込み／外部メモリの選定・統合**に必要な知識を習得します。 | This chapter builds upon that to understand **integration and selection of embedded/external memory** in SoC. |
-
-➡️ [📘 **基礎編 第4章：MOSトランジスタ特性**](../chapter4_mos_characteristics/README.md) に戻る  
-➡️ [📘 **Chapter 4: MOS Transistor Characteristics**](../chapter4_mos_characteristics/README.md) (EN)
-
----
-
 ## 🎯 章のねらい｜Chapter Objectives
 
 | 日本語 – Japanese                                                                                              | English – English                                                                                             |
@@ -61,18 +49,6 @@
 | [第6章：テスト・パッケージ技術](../chapter6_test_and_package/) | 書換耐久・リテンション・信頼性 | メモリ評価・不良解析との接続 |
 | [Edusemi-Plus/archive/in1998/DRAM_Startup_64M_1998.md](../../Edusemi-Plus/archive/in1998/DRAM_Startup_64M_1998.md) | **1998年 DRAM立ち上げ記録** | DRAMセル信頼性、酸化膜ダメージ対策など実録 |
 | [Edusemi-Plus/archive/in2001/VSRAM_2001.md](../../Edusemi-Plus/archive/in2001/VSRAM_2001.md) | **2001年 VSRAM開発記録** | DRAM応用SRAMの設計と歩留まり改善の教材化 |
-
----
-
-## 🔜 次章への導入｜Lead-in to Next Chapter
-
-| 日本語 – Japanese                                                                                   | English – English                                                                                       |
-|------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|
-| 次章では、ここで学んだ**メモリマクロの構造・選定**を踏まえ、**SoC設計フローとEDAツール**での活用方法を学びます。 | The next chapter builds on memory macro knowledge and applies it within the **SoC design flow and EDA tools**. |
-| SRAMやeMRAMの統合は、合成・配置・検証の前提条件となります。                                        | Integration of SRAM/eMRAM is fundamental to synthesis, placement, and verification.                     |
-
-➡️ [📘 **第2章：SoC設計フローとEDAツール**](../chapter5_soc_design_flow/README.md) に進む  
-➡️ [📘 **Chapter 5: SoC Design Flows and EDA Tools**](../chapter5_soc_design_flow/README.md) (EN)
 
 ---
 
