@@ -61,8 +61,8 @@ SCE, HCI, DIBL, Vth Variability, sky130, 0.18µm
 |--------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|
 | 第4章では、ここで扱ったCMOSノード（sky130 / 0.18µm）を基盤として、<br>**PDK・MOS特性・設計ルールの理解**へと進みます。 | In Chapter 4, we build on these CMOS nodes (sky130 / 0.18µm) to explore **PDKs, MOS characteristics, and design rules**. |
 
-➡️ [**第4章：MOSトランジスタ特性と設計基盤**](../chapter4_mos_basics/README.md) に進む  
-➡️ [**Chapter 4: MOS Characteristics and Design Fundamentals**](../chapter4_mos_basics/README.md) (EN)
+➡️ [**第4章：MOSトランジスタ特性と設計基盤**](../chapter4_mos_characteristics/README.md) に進む  
+➡️ [**Chapter 4: MOS Characteristics and Design Fundamentals**](../chapter4_mos_characteristics/README.md) (EN)
 
 ---
 
