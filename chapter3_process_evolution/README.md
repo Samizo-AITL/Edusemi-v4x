@@ -1,36 +1,34 @@
-# 基礎編 第3章：プロセス技術と設計限界の理解
+# 📘 基礎編 第3章：プロセス技術と設計限界の理解  
+**Chapter 3: Process Evolution and Design Limits in CMOS**
 
 本章では、0.5µmから90nmノードに至るCMOS技術の変遷を通して、  
-**設計可能性を左右するプロセス技術の進化と限界**を学びます。
+**設計可能性を左右するプロセス技術の進化と限界**を学びます。  
 
-寸法の微細化だけでなく、**STI・LDD・サリサイド・多層配線・CMP・OPC**といった構造・材料・描画技術がどのように相互連携して発展してきたかを体系的に整理します。  
-また、**Short Channel Effect（SCE）**や**Hot Carrier Injection（HCI）**といった信頼性限界にも触れ、教育に適したプロセス（sky130や0.18µm）を選定する視点も提示します。
-
----
-
-## 📘 節構成（`chapter3_process_evolution/`）
-
-| 節番号 | ファイル名 | 内容概要 |
-|--------|------------|----------|
-| 3.1 | [`3.1_node_scaling_history.md`](./3.1_node_scaling_history.md) | CMOSプロセスの世代変遷（0.5µm〜90nmの技術展開） |
-| 3.2 | [`3.2_cmos_structure_shift.md`](./3.2_cmos_structure_shift.md) | トランジスタ構造：STI、浅接合、LDD、サリサイド |
-| 3.3 | [`3.3_interconnect_and_litho.md`](./3.3_interconnect_and_litho.md) | 配線と描画技術：Cu、多層配線、CMP、OPCなど |
-| 3.4 | [`3.4_variation_and_reliability.md`](./3.4_variation_and_reliability.md) | 微細化による設計限界：SCE、DIBL、Vthばらつき、HCIなど |
-| 3.5 | [`3.5_summary_and_scope.md`](./3.5_summary_and_scope.md) | 教育向きプロセス：sky130や0.18µmの意義と活用 |
+This chapter explores the evolution of CMOS technologies from 0.5µm to 90nm,  
+focusing on how process advancements and limitations shape circuit design.
 
 ---
 
-## 🧠 学習のねらい
+## ✨ 主なキーワード / Key Concepts
 
-- プロセス技術を「**設計にどう効いてくるか**」の視点で体系的に理解する  
-- 構造革新・描画精度・信頼性問題が**設計制約として顕在化**することを学ぶ  
-- sky130や0.18µmのような**教材適用可能なプロセス技術を選べる判断力**を養う
-
-> ※ フォトリソグラフィ・エッチング・成膜・洗浄といった基本工程は、3.1や3.2の背景技術として随所に含まれています。
+- STI, LDD, Salicide, Multi-Layer Interconnect, CMP, OPC
+- SCE, HCI, DIBL, Vth Variability
+- sky130 & 0.18µm as educationally viable process nodes
 
 ---
 
-## 📂 ディレクトリ構成
+## 🧠 学習のねらい / Learning Objectives
+
+- プロセス技術が「**設計制約**」にどう影響するかを理解する  
+  Understand how process technologies affect design constraints.
+- 微細化による構造革新・信頼性課題を体系的に整理する  
+  Systematically learn about structural changes and reliability challenges.
+- 教材適用可能なノード（sky130, 0.18µm）を判断できる  
+  Develop criteria to choose educationally suitable process nodes.
+
+---
+
+## 📂 ディレクトリ構成 / Directory Structure
 
 ```
 Edusemi-v4x/
@@ -40,19 +38,37 @@ Edusemi-v4x/
     ├── 3.2_cmos_structure_shift.md
     ├── 3.3_interconnect_and_litho.md
     ├── 3.4_variation_and_reliability.md
-    └── 3.5_summary_and_scope.md
+    ├── 3.5_summary_and_scope.md
+    └── 0.18um_Logic_ProcessFlow.md   ←🆕 追加プロセスフロー
 ```
 
 ---
 
-## 🔄 次章への接続
+## 🔗 章構成とリンク / Chapter Contents and Links
 
-第4章では、sky130や0.18µmプロセスを具体的に取り上げ、  
-MOSトランジスタの電気特性、設計ルール、PDKの活用方法を深掘りしていきます。
+| 節番号 / Section | ファイル名 / Filename | 内容概要 / Summary |
+|------------------|------------------------|----------------------|
+| 3.1 | [`3.1_node_scaling_history.md`](./3.1_node_scaling_history.md) | ノード微細化の歴史 / History of Node Scaling |
+| 3.2 | [`3.2_cmos_structure_shift.md`](./3.2_cmos_structure_shift.md) | トランジスタ構造の進化（STI, LDD, etc.）/ CMOS Structure Shift |
+| 3.3 | [`3.3_interconnect_and_litho.md`](./3.3_interconnect_and_litho.md) | 多層配線・描画技術 / Interconnect & Lithography |
+| 3.4 | [`3.4_variation_and_reliability.md`](./3.4_variation_and_reliability.md) | 信頼性問題と設計限界 / Variability & Reliability |
+| 3.5 | [`3.5_summary_and_scope.md`](./3.5_summary_and_scope.md) | 教育用ノードの選定と活用 / Educational Node Selection |
+| 📄 | [`0.18um_Logic_ProcessFlow.md`](./0.18um_Logic_ProcessFlow.md) | 🔧0.18µm CMOSプロセス工程表（英日対応）<br>🧪 Full Logic Process Flow for 0.18µm CMOS |
 
 ---
 
-## © ライセンス
+## 🔄 次章への接続 / Transition to Chapter 4
 
-この教材は MIT ライセンスの下で公開されています。  
-詳細はプロジェクトルートの [`LICENSE`](../LICENSE) をご参照ください。
+第4章では、sky130や0.18µmプロセスを基盤として、  
+**PDK活用・トランジスタ特性・設計ルール**へと学習を展開します。
+
+In Chapter 4, you will delve into transistor characteristics, design rules, and PDK-based design using sky130 and 0.18µm processes.
+
+---
+
+## 📝 ライセンス / License
+
+この教材は [MIT License](../LICENSE) に基づき公開されています。  
+This content is released under the [MIT License](../LICENSE).
+
+---
