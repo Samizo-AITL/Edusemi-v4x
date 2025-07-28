@@ -38,6 +38,9 @@
 | 第4章では、MOSトランジスタの**動作・寸法ルール・PDK**を通して「製造可能な設計基盤」を構築しました。                      | Chapter 4 established a **manufacturable design base** via MOS characteristics, rules, and PDKs.                |
 | 本章では、それを活用して**SoCとして機能する回路設計・検証プロセス**へと進みます。                                 | In this chapter, we apply that foundation to the **design and verification flow of a functional SoC**.          |
 
+➡️ [📘 **第4章：MOSトランジスタ特性と設計基盤**](../chapter4_mos_basics/README.md) に戻る  
+➡️ [📘 **Chapter 4: MOS Characteristics and Design Infrastructure**](../chapter4_mos_basics/README.md) (EN)
+
 ---
 
 ## 🔜 次章への導入｜Lead-in to Next Chapter
