@@ -2,16 +2,20 @@
 
 ---
 
-## 📘 概要
+## 📘 概要 | Overview
 
 DRAM（Dynamic RAM）は、**1ビットあたり「1トランジスタ＋1キャパシタ（1T1C）」**で構成される揮発性メモリです。  
-高密度・低コストを実現できるため、PC・スマートフォン・組込み機器などの**外部メモリ（メインメモリ）**として広く採用されています。
+DRAM is a volatile memory composed of **one transistor and one capacitor (1T1C) per bit**.
 
-ただし、**キャパシタに蓄えた電荷は自然に失われる**ため、定期的に**リフレッシュ動作が必要**です。
+高密度・低コストを実現できるため、PC・スマートフォン・組込み機器などの**外部メモリ（メインメモリ）**として広く採用されています。  
+Its high density and low cost make it widely used as **external (main) memory** in PCs, smartphones, and embedded systems.
+
+ただし、**キャパシタに蓄えた電荷は自然に失われる**ため、定期的に**リフレッシュ動作が必要**です。  
+However, **the capacitor charge leaks over time**, so **refresh operations are required** periodically.
 
 ---
 
-## 🔧 セル構造：1T1C DRAMセル
+## 🔧 セル構造：1T1C DRAMセル | DRAM Cell Structure: 1T1C
 
 ```
 WL（ワード線）
@@ -28,115 +32,95 @@ WL（ワード線）
 ビット線（BL）
 ```
 
-### 🔍 要素の説明
+### 🔍 要素の説明 | Description of Components
 
-| 構成要素 | 説明 |
-|----------|------|
-| WL（Word Line） | アクセスFETのゲート制御（行選択） |
-| アクセスFET | 読み書きタイミングで開閉するスイッチ（1T） |
-| キャパシタ（C） | 電荷を蓄える記憶素子（論理1 or 0） |
-| BL（Bit Line） | 読み書きデータのやりとり（列選択） |
-
-- **読み出し時**：電荷の有無がBLに反映され、センスアンプで判定される  
-- **書き込み時**：BLに電圧をかけてキャパシタを充電 or 放電
+| 構成要素 | 説明 | Component | Description |
+|----------|------|-----------|-------------|
+| WL（Word Line） | アクセスFETのゲート制御（行選択） | Word Line (WL) | Gate control of access transistor (row select) |
+| アクセスFET | 読み書きタイミングで開閉するスイッチ（1T） | Access FET | Switch turned on/off during read/write |
+| キャパシタ | 電荷を蓄える記憶素子（論理1 or 0） | Capacitor | Stores charge representing 1 or 0 |
+| BL（Bit Line） | 読み書きデータのやりとり（列選択） | Bit Line (BL) | Transfers data during read/write (column select) |
 
 ---
 
-## ⏱ リフレッシュとアクセスタイミング
+## ⏱ リフレッシュとタイミング | Refresh and Timing
 
-| 項目 | 説明 |
-|------|------|
-| **リフレッシュ** | 通常64ms以内に全ビットを再読み出し・再書き込み |
-| **RAS/CAS** | 行選択（Row Address Strobe）と列選択（Column Address Strobe）のタイミング制御 |
-| **プリチャージ** | 読み出し後にBL電圧を中間電位に戻す処理 |
-| **バーストアクセス** | 隣接アドレスを一括読み出し（高速化） |
-
----
-
-## 📊 特性と比較（SRAMとの対比を含む）
-
-| 項目 | DRAM | SRAM |
-|------|------|------|
-| 集積度 | ◎（1T1Cで小面積） | △（6T構成で大きい） |
-| 面積効率 | ◎ | △ |
-| 消費電力 | △（リフレッシュあり） | ○（待機時は小） |
-| 速度 | △（外部バス遅延あり） | ◎（高速アクセス） |
-| 揮発性 | 揮発性（電源断で全消失） | 揮発性 |
-| 制御構造 | 必ず**メモリコントローラ**が必要 | 組込みマクロとして完結可能 |
+| 項目 | 説明 | Item | Description |
+|------|------|------|-------------|
+| リフレッシュ | 通常64ms以内に全ビットを再書き込み | Refresh | All bits must be refreshed within ~64ms |
+| RAS/CAS | 行/列アドレス制御信号 | RAS/CAS | Row/Column address strobe |
+| プリチャージ | ビット線を中間電位に戻す処理 | Precharge | Resets BL voltage after access |
+| バーストアクセス | 複数データ一括読み出し | Burst Access | Fast sequential reads |
 
 ---
 
-## 🧪 DRAMの種類と用途
+## 📊 SRAMとの比較 | Comparison with SRAM
 
-| 種類 | 特徴 | 主な用途 |
-|------|------|-----------|
-| SDRAM | クロック同期、レガシー構成 | 組込み用途、旧型PCなど |
-| DDR1/2/3/4/5 | 転送速度と帯域を段階的に向上 | 汎用メインメモリ |
-| LPDDR系 | 電力効率重視、モバイル向け | スマートフォン、タブレット |
-| eDRAM | SoC内蔵DRAM。SRAMより高密度 | キャッシュ、画像処理SoCなど |
-
----
-
-## 🏗 SoCとの接続と制約
-
-- DRAMは一般に**外部メモリとして搭載**され、**AXI / AHBバス**経由で接続される  
-- **メモリコントローラ（MCU / DMC）**が中心となり、以下を制御：
-  - リフレッシュ周期管理
-  - バーストアクセスの制御
-  - 優先度スケジューリング（マルチマスタ対応）
-- 高性能SoCでは、**キャッシュ階層設計（L1/L2）と連携**し、DRAMアクセスの待ち時間を隠蔽する設計が必須
+| 項目 | DRAM | SRAM | Item | DRAM | SRAM |
+|------|------|------|------|------|------|
+| 集積度 | ◎ | △ | Density | ◎ | △ |
+| 面積効率 | ◎ | △ | Area Efficiency | ◎ | △ |
+| 消費電力 | △（リフレッシュ） | ○（待機時小） | Power | △ (needs refresh) | ○ (low standby) |
+| 速度 | △ | ◎ | Speed | △ | ◎ |
+| 制御 | 外部コントローラ要 | マクロ内完結可 | Control | Needs controller | Embedded macro |
 
 ---
 
-## 🔁 SRAMとの比較ポイント（補足表現）
+## 🧪 DRAMの種類 | Types of DRAM
 
-| 比較項目 | SRAM | DRAM |
-|----------|------|------|
-| セル構造 | 6T構成 | 1T1C構成 |
-| 安定性 | 安定（非破壊読み出し） | 不安定（読み出しで破壊 → 再書込） |
-| リフレッシュ | 不要 | 必要 |
-| 動作原理 | ラッチ | 電荷保持 |
-| 実装位置 | 組込み（ロジック層） | 外付け or eDRAMとして統合 |
-
----
-
-## 📚 関連章・リンク
-
-- [sram.md](./sram.md)：SRAMとの構造比較と用途の違い  
-- [基礎編 第4章](../chapter4_mos_characteristics/)：トランジスタのスイッチ動作とばらつき  
-- [応用編 第6章](../d_chapter6_pdk_and_eda_environment/)：eDRAM設計の注意点とPDK制約  
+| 種類 | 特徴 | 用途 | Type | Feature | Usage |
+|------|------|------|------|---------|-------|
+| SDRAM | クロック同期 | 組込み用途など | SDRAM | Clock-synced | Embedded use |
+| DDR1-5 | 世代別高速化 | メインメモリ | DDR1–5 | Increasing speed | Main memory |
+| LPDDR | 低消費電力 | モバイル | LPDDR | Low power | Mobile devices |
+| eDRAM | SoC内蔵 | キャッシュ等 | eDRAM | Embedded in SoC | Cache, graphics |
 
 ---
 
-## 📦 技術アーカイブ参照（Edusemi-Plusリポジトリ）  
-*Technical archive references from Edusemi-Plus repository*
+## 🏗 SoCとの接続 | SoC Integration
 
-以下の資料は、半導体メモリ技術の現場記録として教材を補完するものです。  
-These documents complement this curriculum with real-world memory development records.
+- AXI/AHBバスで外部接続  
+- リフレッシュ制御・バースト制御・スケジューリング  
+- キャッシュ階層と連携し、待ち時間を隠蔽
 
----
-
-### 📘 DRAM立ち上げ記録（1998年）  
-- 📄 [`DRAM_Startup_64M_1998.md`](https://github.com/Samizo-AITL/Edusemi-Plus/blob/main/archive/in1998/DRAM_Startup_64M_1998.md)  
-　→ 0.25μm世代の64M DRAMプロセス立ち上げ経験記録  
-　→ Record of 0.25μm 64M DRAM ramp-up and yield improvement
-
-### 📘 モバイル用VSRAM技術（2001年）  
-- 📄 [`VSRAM_2001.md`](https://github.com/Samizo-AITL/Edusemi-Plus/blob/main/archive/in2001/VSRAM_2001.md)  
-　→ DRAMプロセスを利用した擬似SRAMの開発と課題対応  
-　→ Development and issue resolution of pseudo-SRAM using DRAM process
-
-### 📘 Mosys 1T-SRAM技術参考リンク  
-- 📄 [`MoSys_1T_SRAM_Links.md`](https://github.com/Samizo-AITL/Edusemi-Plus/blob/main/archive/in2001/MoSys_1T_SRAM_Links.md)  
-　→ SRAM代替技術として検討されたMosys社 1T-SRAM の外部リンク集  
-　→ External reference links on MoSys 1T-SRAM as alternative SRAM macro
+Connected externally via AXI/AHB bus.  
+Controlled by memory controller: refresh, burst, arbitration.  
+Integrated with cache hierarchy to hide latency.
 
 ---
 
-© 2025 Shinichi Samizo / MIT License
+## 🔁 補足比較 | Supplementary Comparison
+
+| 項目 | SRAM | DRAM | Item | SRAM | DRAM |
+|------|------|------|------|------|------|
+| セル構造 | 6T | 1T1C | Cell Structure | 6T | 1T1C |
+| 安定性 | 非破壊読み出し | 読み出しで破壊 | Stability | Non-destructive | Destructive read |
+| リフレッシュ | 不要 | 必要 | Refresh | Not required | Required |
+| 動作原理 | ラッチ | 電荷保持 | Principle | Latch | Charge-based |
+| 実装 | 組込み | 外付け or eDRAM | Integration | Embedded | External or embedded |
+
+---
+
+## 📚 関連リンク | Related Sections
+
+- [sram.md](./sram.md)：SRAMとの比較 | Comparison with SRAM  
+- [基礎編 第4章](../chapter4_mos_characteristics/)：MOSばらつき | MOS variation  
+- [応用編 第6章](../d_chapter6_pdk_and_eda_environment/)：eDRAM制約 | eDRAM design constraints
+
+---
+
+## 📦 技術アーカイブ（Edusemi-Plus） | Archive References
+
+- [`DRAM_Startup_64M_1998.md`](https://github.com/Samizo-AITL/Edusemi-Plus/blob/main/archive/in1998/DRAM_Startup_64M_1998.md)：1998年DRAM立ち上げ | 64M DRAM ramp-up  
+- [`VSRAM_2001.md`](https://github.com/Samizo-AITL/Edusemi-Plus/blob/main/archive/in2001/VSRAM_2001.md)：擬似SRAM開発 | pseudo-SRAM dev  
+- [`MoSys_1T_SRAM_Links.md`](https://github.com/Samizo-AITL/Edusemi-Plus/blob/main/archive/in2001/MoSys_1T_SRAM_Links.md)：1T-SRAM参考リンク | 1T-SRAM links
 
 ---
 
 🏘 [応用編 第1章：メモリ技術｜Applied Chapter 1: Memory Technologies](../d_chapter1_memory_technologies/README.md)
+
+---
+
+© 2025 Shinichi Samizo / MIT License
 
 ---
