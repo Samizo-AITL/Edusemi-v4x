@@ -61,6 +61,30 @@
 
 ---
 
+## 📘 章末ミニ用語集｜Mini Glossary for Chapter 5
+
+| 用語 / Term             | 概要 / Description | 節 / Section |
+|--------------------------|--------------------|--------------|
+| **RTL**                  | ハードウェア記述の上位抽象レベル | [5.1](5.1_soc_design_flow.md) |
+| **Netlist**              | 論理素子と配線の接続情報         | [5.1](5.1_soc_design_flow.md), [5.2](5.2_standard_cell_based_design.md) |
+| **Standard Cell**        | 事前設計されたロジックセル群     | [5.2](5.2_standard_cell_based_design.md) |
+| **Logic Synthesis**      | RTLをゲートへ変換する工程         | [5.2](5.2_standard_cell_based_design.md) |
+| **STA**                  | シミュレーションを使わないタイミング解析 | [5.3](5.3_clock_and_sta.md) |
+| **Setup/Hold Violation** | データの安定条件違反             | [5.3](5.3_clock_and_sta.md) |
+| **Slack**                | 許容遅延と実遅延の差              | [5.3](5.3_clock_and_sta.md) |
+| **Clock Tree Synthesis** | クロックスキューを抑える手法     | [5.3](5.3_clock_and_sta.md) |
+| **IR Drop**              | 配線抵抗による電圧低下            | [5.4](5.4_power_io_design.md) |
+| **Decap**                | 電源安定用コンデンサ              | [5.4](5.4_power_io_design.md) |
+| **Reset**                | 初期化を行う回路・信号            | [5.4](5.4_power_io_design.md) |
+| **Pad Cell**             | 外部接続・保護のためのセル        | [5.4](5.4_power_io_design.md) |
+| **ESD Protection**       | 静電気破壊を防ぐ保護回路          | [5.4](5.4_power_io_design.md) |
+| **DFT**                  | テスト容易化設計                 | [5.5](5.5_test_structures.md) |
+| **Scan Chain**           | FFを直列接続し観測可能にする構造  | [5.5](5.5_test_structures.md) |
+| **JTAG**                 | テストアクセス規格（IEEE 1149.1） | [5.5](5.5_test_structures.md) |
+| **BIST**                 | 自己検査機構（MBIST, LBIST）      | [5.5](5.5_test_structures.md) |
+
+---
+
 ## 📌 補足情報｜Supplement
 
 - **Open-source EDA Tools**:  
