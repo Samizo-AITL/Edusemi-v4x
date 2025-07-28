@@ -69,3 +69,7 @@ MOSFET, Vth, Id-Vg, gm, Subthreshold, BTI, HCI, TDDB, Qbd, Design Rule, PDK, sky
 - Reliability references: JEDEC JESD 61-A, TDDB models, Weibull analysis  
 
 ---
+
+🏠 [Edusemi トップに戻る｜Back to Edusemi-v4x Top](../README.md)
+
+---
