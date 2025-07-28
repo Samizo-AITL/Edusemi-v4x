@@ -80,7 +80,8 @@ SRAM, DRAM, FeRAM, MRAM, NAND, 1T1C, 6T, PDK, OpenLane, Non-volatile, Refresh, S
 
 © 2025 Shinichi Samizo / MIT License
 
-🏠 [Edusemi トップに戻る｜Back to Edusemi-v4x Top](../README.md)
+---
 
+🏘 [応用編 第1章：メモリ技術｜Applied Chapter 1: Memory Technologies](../d_chapter1_memory_technologies/README.md)
 
 ---
