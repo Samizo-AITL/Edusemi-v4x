@@ -102,4 +102,10 @@ MRAMは、**磁気トンネル接合（MTJ: Magnetic Tunnel Junction）**を利�
 
 ---
 
+🏘 [応用編 第1章：メモリ技術｜Applied Chapter 1: Memory Technologies](../d_chapter1_memory_technologies/README.md)
+
+---
+
 © 2025 Shinichi Samizo / MIT License
+
+---
