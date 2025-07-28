@@ -93,6 +93,21 @@ BL（ビット線） ──┘
 
 ---
 
+## 🔗 詳細プロセスフロー / Detailed Process Flow
+
+FeRAMのプロセス実装に関心がある方は、以下の教材をご参照ください：
+
+📘 **0.18μm FeRAM構想プロセスフロー（構造・条件・膜厚付き）**  
+**👉 [0.18um_FeRAM_ProcessFlow.md](./0.18um_FeRAM_ProcessFlow.md)**
+
+- Pt/PZT/Ti構造による強誘電体キャパシタ形成工程を含む
+- AlOx保護膜、Wプラグ、Coサリサイドなどを網羅
+- 教育目的の構想プロセスとして三溝真一により設計
+
+> 💡 CMOSロジックプロセスと統合されたFeRAM技術の理解に最適です。
+
+---
+
 ## 🔗 関連リンク｜Related Links
 
 - [mram.md](./mram.md)：他の不揮発メモリとの比較  
