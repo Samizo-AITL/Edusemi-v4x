@@ -5,11 +5,11 @@
 
 ## 🎯 章のねらい｜Chapter Objectives
 
-| 日本語 – Japanese                                                                                              | English – English                                                                                             |
+| 🇯🇵 日本語                                                                                                      | 🇺🇸 English                                                                                                   |
 |---------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| - 各種メモリ（SRAM / DRAM / FeRAM / MRAM / NAND）の**構造と動作原理**を理解する                                 | - Understand **structure and operation principles** of SRAM, DRAM, FeRAM, MRAM, and NAND                     |
-| - **速度・不揮発性・書換耐性・面積効率・消費電力**などの**評価軸を比較検討**できるようになる                    | - Be able to compare memory options using metrics such as **speed, non-volatility, endurance, area, power** |
-| - SoCにおける**メモリ統合・選定・接続方法**を習得し、設計判断の基盤を築く                                       | - Learn how to **integrate and choose memory** in SoC design with sound engineering judgment                |
+| - 各種メモリ（SRAM / DRAM / FeRAM / MRAM / NAND）の**構造と動作原理**を理解する                                 | - Understand the **structure and operation principles** of SRAM, DRAM, FeRAM, MRAM, and NAND                 |
+| - **速度・不揮発性・書換耐性・面積効率・消費電力**などの**評価軸を比較検討**できる                              | - Be able to evaluate memory types across axes such as **speed, non-volatility, endurance, area, power**     |
+| - SoCにおける**メモリ統合・選定・接続方法**を習得し、設計判断の基盤を築く                                       | - Learn how to **integrate, select, and interface memory** in SoC design with a solid engineering foundation |
 
 ---
 
@@ -27,16 +27,16 @@
 
 ## 🧠 設計観点のトピック｜Design-Oriented Topics
 
-- 組込み（SRAM/FeRAM/MRAM）と外部（DRAM/NAND）メモリの**構造的違い**  
-  Structural differences between embedded and external memories  
+- 組込み（SRAM / FeRAM / MRAM）と外部（DRAM / NAND）メモリの**構造的違い**  
+  ➤ Structural differences between **embedded** and **external** memories  
 - **速度・揮発性・耐久性・面積効率・電力**によるトレードオフ分析  
-  Trade-off analysis among speed, volatility, endurance, area, and power  
-- **OpenLane/Sky130でのSRAMマクロ呼出・統合例**  
-  SRAM macro instantiation via OpenLane (e.g., Sky130)  
-- **eMRAMによるeFlash代替検討／FeRAMの混載SoC適用例**  
-  eMRAM as eFlash alternative; FeRAM in sensor SoCs  
+  ➤ Trade-off analysis among **speed, volatility, endurance, area, and power**  
+- **OpenLane / Sky130でのSRAMマクロ呼出・統合例**  
+  ➤ SRAM macro instantiation via **OpenLane** (e.g., Sky130 PDK)  
+- **eMRAMによるeFlash代替検討 / FeRAMの混載SoC適用例**  
+  ➤ Use cases of **eMRAM as eFlash alternative** and **FeRAM in sensor SoCs**  
 - NAND向け**FTL, ECC, 読み出し干渉対策**などの制御回路設計  
-  NAND controller design: FTL, ECC, read disturbance mitigation  
+  ➤ NAND controller design including **FTL, ECC, and read disturbance mitigation**
 
 ---
 
@@ -49,20 +49,21 @@
 | [第6章：テスト・パッケージ技術](../chapter6_test_and_package/) | 書換耐久・リテンション・信頼性 | メモリ評価・不良解析との接続 |
 | [DRAM Startup Record (1998)](https://github.com/Samizo-AITL/Edusemi-Plus/blob/main/archive/in1998/DRAM_Startup_64M_1998.md) | **1998年 DRAM立ち上げ記録**<br>Startup record of 64M DRAM in 1998 | DRAMセル構造と信頼性の実務課題と改善策 |
 | [VSRAM Development Record (2001)](https://github.com/Samizo-AITL/Edusemi-Plus/blob/main/archive/in2001/VSRAM_2001.md) | **2001年 VSRAM開発記録**<br>Development of pseudo SRAM in 2001 | DRAM応用による擬似SRAMと歩留まり改善の教材化 |
+| [0.18µm FeRAM Process Flow](../chapter1_memory_technologies/0.18um_FeRAM_ProcessFlow.md) | **0.18µm強誘電体メモリ工程フロー**<br>Process flow of 0.18µm FeRAM | FeRAM構造・混載SoC応用の理解と設計教育に有用 |
 
 ---
 
 ## 🧩 章のキーワード｜Keywords
 
-SRAM, DRAM, FeRAM, MRAM, 3D NAND, PDK, Macro, Non-volatile, Endurance, FTL, ECC, Sky130
+`SRAM`, `DRAM`, `FeRAM`, `MRAM`, `3D NAND`, `PDK`, `Macro`, `Non-volatile`, `Endurance`, `FTL`, `ECC`, `Sky130`
 
 ---
 
 ## 📌 補足情報｜Supplement
 
-- Open PDK examples: [Sky130 PDK – Google/SkyWater](https://skywater-pdk.readthedocs.io)  
-- Memory taxonomy references: ISSCC papers, JEDEC standards  
-- NAND flash controller design: Error correction, FTL layering, wear leveling techniques  
+- 🔗 Open PDK examples: [Sky130 PDK – Google/SkyWater](https://skywater-pdk.readthedocs.io)  
+- 📄 Memory taxonomy references: **ISSCC論文**, **JEDEC標準**など  
+- 📘 NAND flash controller design: **Error correction**, **FTL layering**, **wear leveling techniques**
 
 ---
 
