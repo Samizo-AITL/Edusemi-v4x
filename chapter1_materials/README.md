@@ -1,45 +1,45 @@
-# 📘 基礎編 第2章：デジタル論理と論理回路設計  
-# 📘 Chapter 2: Digital Logic and Logic Circuit Design
+# 📘 基礎編 第1章：半導体物性とMOS構造の基礎  
+# 📘 Chapter 1: Fundamentals of Semiconductor Physics and MOS Structure
 
 ---
 
-## 🎯 本章の目的｜Objectives
+## 🧭 概要｜Overview
 
-| 🇯🇵 日本語                                                                                           | 🇺🇸 English                                                                                       |
-|----------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|
-| - AND, OR, NOT, NAND, XORなどの**基本論理ゲート**の構成と特性を理解する                              | - Understand the structure and characteristics of **basic logic gates** such as AND, OR, NOT.   |
-| - 真理値表・論理式・回路図の**相互変換**ができるようになる                                           | - Be able to **convert** between truth tables, logic expressions, and circuit diagrams.         |
-| - MUXや加算器などの**応用的な組み合わせ回路の設計**を学ぶ                                           | - Learn how to design **combinational logic** such as MUXes and adders.                         |
-| - FSM（有限状態機械）の構造と概念を理解し、**順序回路設計への橋渡し**を行う                          | - Understand FSMs and connect them to **sequential logic design**.                              |
+本章では、MOSトランジスタやCMOS回路設計の物理的基盤となる**半導体物性**を  
+段階的に学び、**バンド構造から論理回路の出発点**であるCMOSインバータまでを理解します。
+
+> This chapter explores the **physical foundation of MOS transistors**,  
+> providing a step-by-step understanding from **band structure to CMOS logic circuits**.
 
 ---
 
-## 🗂️ 章構成｜Chapter Structure (`chapter2_comb_logic/`)
+## 🎯 学習のねらい｜Learning Objectives
 
-| 節番号 | 日本語タイトル | 英語タイトル | ファイル名 |
-|--------|----------------|---------------|------------|
-| 2.1 | 基本ゲート構成 | Basic Gate Design | [`2.1_logic_gates.md`](./2.1_logic_gates.md) |
-| 2.2 | 複合ゲート論理 | Compound Gate Logic | [`2.2_nand_nor_xor.md`](./2.2_nand_nor_xor.md) |
-| 2.3 | 動作検証法 | Verification Methods | [`2.3_truth_table_waveform.md`](./2.3_truth_table_waveform.md) |
-| 2.4 | 選択回路設計 | Multiplexer and Selector Design | [`2.4_mux_and_selector.md`](./2.4_mux_and_selector.md) |
-| 2.5 | 加算器構成 | Adder Structures | [`2.5_half_full_adder.md`](./2.5_half_full_adder.md) |
-| 2.6 | FSM導入 | Introduction to FSM | [`2.6_fsm_intro.md`](./2.6_fsm_intro.md) |
-| 2.7 | 全体構成の俯瞰 | Overview of Logical Components | [`2.7_component_relationships.md`](./2.7_component_relationships.md) |
+| 🇯🇵 日本語                                                                                          | 🇺🇸 English                                                                                       |
+|---------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|
+| バンド構造、PN接合、MOS構造など、**物性物理の本質を段階的に理解**する                              | Understand the **core physical concepts** such as band structures, PN junctions, and MOS theory. |
+| MOSチャネル形成と**スイッチ動作の物理モデル**を明確に把握する                                      | Learn the **channel formation** and physical **switching model** of MOS transistors.             |
+| CMOSインバータにより、**論理回路設計の出発点**を実感として理解する                                 | Gain intuitive understanding of **logic circuit fundamentals** via the CMOS inverter.            |
+
+---
+
+## 📚 章構成｜Chapter Structure
+
+| 節番号 | ファイル名 / Filename                                | 内容概要 / Summary                                                                              |
+|--------|-------------------------------------------------------|-----------------------------------------------------------------------------------------------|
+| 1.1    | [`1.1_band_structure.md`](./1.1_band_structure.md)     | **バンド構造とキャリア移動**<br>🔋 *Band Structure and Carriers (Electrons & Holes)*          |
+| 1.2    | [`1.2_pn_junction.md`](./1.2_pn_junction.md)           | **PN接合と整流特性**<br>🔌 *PN Junction and Rectification*                                   |
+| 1.3    | [`1.3_mos_structure.md`](./1.3_mos_structure.md)       | **MOS構造・電界制御とチャネル形成**<br>⚙️ *MOS Structure and Channel Formation*              |
+| 1.4    | [`1.4_mos_switch.md`](./1.4_mos_switch.md)             | **MOSのスイッチ動作と回路モデル**<br>🔁 *MOS Switching and Circuit Abstraction*               |
+| 1.5    | [`1.5_cmos_inverter.md`](./1.5_cmos_inverter.md)       | **CMOSインバータの構造と波形解析**<br>🔀 *CMOS Inverter Structure and Logical Behavior*       |
 
 ---
 
 ## 🧠 学習のポイント｜Key Takeaways
 
-- **論理式 ↔ 回路図 ↔ 真理値表 ↔ 波形** の相互変換力を養成  
-  > Foster the ability to **translate between logic expressions, schematics, truth tables, and waveforms**.  
-- CMOS構成における**論理機能と物理実装の対応関係**を理解  
-  > Understand the **mapping between logic and CMOS physical implementation**.  
-- MUX・加算器・FSMなど**応用構成要素の設計手法**を体得  
-  > Learn design techniques for **applied building blocks** like MUX, adders, FSM.  
-- FSMによって、**時間的に変化する動作の記述法**が導入される  
-  > FSMs introduce design methods for **time-varying behaviors**.  
-- 最終節では**制御・選択・演算**の3分類で全体設計視野を整理  
-  > Final section classifies components into **control, selection, arithmetic** for system-level overview.  
+- 半導体の物性基礎（**バンド構造・PN接合・MOS構造**）を**階層的に理解**
+- **チャネル形成と電界制御**によるMOSのスイッチ性の原理を視覚的に把握
+- CMOSインバータの構造と動作波形から、**論理設計への出発点**へ導入
 
 ---
 
@@ -47,52 +47,45 @@
 
 ```
 Edusemi-v4x/
-└── chapter2_comb_logic/
-    ├── README.md
-    ├── 2.1_logic_gates.md
-    ├── 2.2_nand_nor_xor.md
-    ├── 2.3_truth_table_waveform.md
-    ├── 2.4_mux_and_selector.md
-    ├── 2.5_half_full_adder.md
-    ├── 2.6_fsm_intro.md
-    └── 2.7_component_relationships.md
+└── chapter1_materials/
+├── README.md
+├── 1.1_band_structure.md
+├── 1.2_pn_junction.md
+├── 1.3_mos_structure.md
+├── 1.4_mos_switch.md
+└── 1.5_cmos_inverter.md
 ```
 
 ---
 
-## 🖼️ 図版・補足予定｜Illustrations
+## 🖼️ 図版予定｜Planned Figures
 
-- ゲート回路記号、CMOS構成図、真理値表テンプレート  
-- タイミング波形、MUX構成、加算器構成、FSM状態遷移図  
-- All illustrations stored under `/images/` with `chapter2_` prefix
+各図は `/images/` に格納予定です：
 
----
-
-## 🔄 前章との接続｜Connection to Previous Chapter
-
-| 🇯🇵 日本語 | 🇺🇸 English |
-|-----------|------------|
-| 第1章では、**MOS構造とスイッチ動作の物理基盤**を解説しました。 | Chapter 1 covered **MOS structure and switching behavior fundamentals**. |
-| 本章では、その動作原理をもとに**論理回路の構成法を体系的に学習**します。 | This chapter systematically explores **logic circuit design** based on those principles. |
-
-📎 [← 第1章へ戻る](../chapter1_materials/README.md)
+- `band_diagram_intrinsic.png`：真性半導体のバンド図  
+- `pn_depletion_potential.png`：PN接合と整流モデル  
+- `mos_cross_section.png`：MOS断面構造  
+- `mos_depletion_inversion.png`：空乏層→反転チャネル  
+- `nmos_switch.png`, `pmos_switch.png`：スイッチ動作の回路記号  
+- `cmos_inverter_structure.png`：インバータ構造図  
+- `cmos_inverter_waveform.png`：出力波形（立ち上がり・立ち下がり）
 
 ---
 
-## 🔜 次章への接続｜Lead-in to Next Chapter
+## 🔄 次章への接続｜Transition to Chapter 2
 
-| 🇯🇵 日本語 | 🇺🇸 English |
-|-----------|------------|
-| 第3章では、論理回路の背景にある**CMOS構造・プロセス技術・設計限界**を扱います。 | Chapter 3 deals with **CMOS structure, process evolution, and design limits** behind logic circuits. |
-| FSMで触れた「状態・順序性」は、**設計とプロセスの接続点**として扱われます。 | The concepts of **state and sequencing** introduced via FSM will link to process-aware design. |
+| 🇯🇵 日本語                                                                                         | 🇺🇸 English                                                                                         |
+|--------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
+| 本章の理解を踏まえ、第2章では**組み合わせ論理回路**（AND, OR, NAND, XORなど）の設計・解析に進みます。 | Building on this foundation, Chapter 2 explores **combinational logic design** and circuit analysis. |
 
-📎 [→ 第3章へ進む](../chapter3_process_evolution/README.md)
+📎 [👉 第2章：組み合わせ論理回路の設計へ進む](../chapter2_comb_logic/README.md)
+
+---
+
+## 📝 ライセンス｜License
+
+この教材は [MIT License](../LICENSE) に基づき公開されています。  
+> This content is released under the [MIT License](../LICENSE).
 
 ---
 
-## 📄 ライセンス｜License
-
-この教材は [MIT License](../LICENSE) の下で公開されています。  
-> This content is licensed under the [MIT License](../LICENSE).
-
----
