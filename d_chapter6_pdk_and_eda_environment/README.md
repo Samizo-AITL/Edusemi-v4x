@@ -36,3 +36,9 @@ PDK（Process Design Kit）は、特定の半導体プロセスに最適化さ�
 ---
 
 © 2025 Shinichi Samizo / MIT License
+
+---
+
+🏠 [Edusemi トップに戻る｜Back to Edusemi-v4x Top](../README.md)
+
+---
