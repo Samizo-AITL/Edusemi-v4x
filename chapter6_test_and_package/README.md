@@ -1,6 +1,16 @@
 # 📘 基礎編 第6章：テスト・パッケージ・製品化  
 # 📘 Chapter 6: Test, Packaging, and Productization
 
+
+## 🔁 前章との接続｜Connection to Previous Chapter
+
+| 日本語                                                                                                      | English                                                                                                      |
+|-------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
+| 第5章では、PDKとEDAツールを用いた**SoCの論理〜物理設計フロー**を扱いました。                                 | In Chapter 5, we examined **SoC design flows using PDKs and EDA tools**.                                    |
+| 本章では、その成果物であるSoCを「**製品として成立させる工程（テスト・解析・出荷）**」へと接続します。         | This chapter extends that by focusing on **what it takes to finalize and ship SoC products** successfully.  |
+
+📎 [← 第5章：SoC設計フローとEDAツールへ戻る](../chapter5_soc_design_flow/README.md)
+
 ---
 
 ## 🧭 概要｜Overview
@@ -46,17 +56,6 @@
 
 > This chapter demonstrates the **final safeguards of production**,  
 > using D-metrics and structured inspections to guarantee product quality and reliability.
-
----
-
-## 🔁 前章との接続｜Connection to Previous Chapter
-
-| 日本語                                                                                                      | English                                                                                                      |
-|-------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
-| 第5章では、PDKとEDAツールを用いた**SoCの論理〜物理設計フロー**を扱いました。                                 | In Chapter 5, we examined **SoC design flows using PDKs and EDA tools**.                                    |
-| 本章では、その成果物であるSoCを「**製品として成立させる工程（テスト・解析・出荷）**」へと接続します。         | This chapter extends that by focusing on **what it takes to finalize and ship SoC products** successfully.  |
-
-📎 [← 第5章：SoC設計フローとEDAツールへ戻る](../chapter5_soc_design_flow/README.md)
 
 ---
 
