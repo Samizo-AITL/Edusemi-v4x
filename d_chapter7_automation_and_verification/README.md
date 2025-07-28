@@ -47,3 +47,11 @@
 ---
 
 © 2025 Shinichi Samizo / MIT License
+
+
+---
+
+🏠 [Edusemi トップに戻る｜Back to Edusemi-v4x Top](../README.md)
+
+---
+
