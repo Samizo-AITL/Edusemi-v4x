@@ -1,85 +1,92 @@
-# 💾 応用編 第1章：メモリ技術
+# 💾 応用編 第1章｜メモリ技術の構造と選定指針  
+# 💾 Applied Chapter 1 | Memory Technologies – Structure and Selection Guidelines
 
 ---
 
-## 📘 概要
+## 🔄 前章との接続｜Connection to Previous Chapter
 
-SoC（System-on-Chip）設計において、演算処理や制御回路だけでなく、  
-**適切なメモリ技術の選定と配置**は、製品の「性能」「コスト」「消費電力」に直結します。
+| 日本語 – Japanese                                                                                   | English – English                                                                                       |
+|------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|
+| 基礎編では、MOSトランジスタの構造や特性を学びました。                                                 | The foundational chapters covered **MOS structure and characteristics**.                                 |
+| 本章では、それらを応用し、SoC設計における**組込み／外部メモリの選定・統合**に必要な知識を習得します。 | This chapter builds upon that to understand **integration and selection of embedded/external memory** in SoC. |
 
-本章では、**高速なSRAMから大容量の3D NANDまで**の代表的なメモリ技術を取り上げ、  
-**構造・特性・用途・SoC統合方法**を比較しながら、  
-**設計上の判断力を育てる**ことを目的としています。
-
----
-
-## 🧭 学習の目的
-
-- 各種メモリ（SRAM/DRAM/FeRAM/MRAM/NAND）の**構造と動作原理**を理解する  
-- **性能・不揮発性・書換耐性・面積効率**などの**トレードオフを比較検討**できるようになる  
-- SoC設計における**組込みメモリ／外部メモリの選定・接続方法**を習得する
+➡️ [📘 **基礎編 第4章：MOSトランジスタ特性**](../chapter4_mos_characteristics/README.md) に戻る  
+➡️ [📘 **Chapter 4: MOS Transistor Characteristics**](../chapter4_mos_characteristics/README.md) (EN)
 
 ---
 
-## 📂 セクション構成
+## 🎯 章のねらい｜Chapter Objectives
 
-| ファイル名 | 内容概要 |
-|------------|----------|
-| [`sram.md`](./sram.md)       | **SRAM（Static RAM）**：高速・揮発性。キャッシュ・レジスタに最適 |
-| [`dram.md`](./dram.md)       | **DRAM（Dynamic RAM）**：外部メモリ。リフレッシュ必須。LPDDR/DDRなど |
-| [`feram.md`](./feram.md)     | **FeRAM（強誘電体RAM）**：高速・不揮発。アナログ混載LSI用途にも対応 |
-| [`mram.md`](./mram.md)       | **MRAM（磁気RAM）**：不揮発・高耐久。STT/SOT方式あり。eFlash代替候補 |
-| [`3dnand.md`](./3dnand.md)   | **3D NANDフラッシュ**：大容量・不揮発。SSDやeMMC/UFSなどに実装 |
+| 日本語 – Japanese                                                                                              | English – English                                                                                             |
+|---------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|
+| - 各種メモリ（SRAM / DRAM / FeRAM / MRAM / NAND）の**構造と動作原理**を理解する                                 | - Understand **structure and operation principles** of SRAM, DRAM, FeRAM, MRAM, and NAND                     |
+| - **速度・不揮発性・書換耐性・面積効率・消費電力**などの**評価軸を比較検討**できるようになる                    | - Be able to compare memory options using metrics such as **speed, non-volatility, endurance, area, power** |
+| - SoCにおける**メモリ統合・選定・接続方法**を習得し、設計判断の基盤を築く                                       | - Learn how to **integrate and choose memory** in SoC design with sound engineering judgment                |
 
 ---
 
-## 🎯 対象読者
+## 📚 節構成｜Chapter Structure
 
-本章は以下のような読者を想定しています：
-
-- MOS構造とメモリ基礎を学び終えた**初学者・学生**
-- SoC設計における**メモリ選定・統合の実務力を高めたい若手エンジニア**
-- 教育機関・企業で**技術研修・教材開発に関わる指導者**
-
----
-
-## 🛠️ 設計視点のトピック（章内で扱う観点）
-
-- 組込みメモリ（SRAM/FeRAM/MRAM）と外部メモリ（DRAM/NAND）の**構造的違い**
-- 不揮発性・リフレッシュ要否・書換回数・速度・面積といった**評価軸**
-- OpenLaneやPDKでの**SRAMマクロ呼び出し方法**（例：sky130）
-- **eFlash代替としてのeMRAM**、**センサSoCにおけるFeRAM統合例**
-- ストレージとしてのNAND制御（FTL, ECC, 読み出し干渉対策）と**制御回路の役割**
+| No. | セクション名（日本語）                             | Section Title (English)                                    | リンク |
+|-----|----------------------------------------------------|-------------------------------------------------------------|--------|
+| 1.1 | SRAM（Static RAM）：高速・揮発                      | High-speed volatile memory for cache/registers              | [📎](sram.md) |
+| 1.2 | DRAM（Dynamic RAM）：大容量・リフレッシュ必要       | High-density memory requiring refresh (e.g., DDR, LPDDR)    | [📎](dram.md) |
+| 1.3 | FeRAM：強誘電体RAM・不揮発                          | Non-volatile memory for low-power / analog-mixed LSI        | [📎](feram.md) |
+| 1.4 | MRAM：磁気RAM・不揮発・高耐久                        | Durable non-volatile memory (STT/SOT); eFlash replacement    | [📎](mram.md) |
+| 1.5 | 3D NAND：大容量・不揮発・ストレージ用途              | Large-capacity flash for storage (eMMC, SSD, UFS, etc.)     | [📎](3dnand.md) |
 
 ---
 
-## 📌 今後の展開（予定）
+## 🧠 設計観点のトピック｜Design-Oriented Topics
 
-- **次世代メモリ技術**（ReRAM, PCMなど）の追加解説  
-- キャッシュ階層構成や**メモリマップ設計**との関係補足  
-- 消費電力・応答速度・耐久性などによる**メモリ選定ワーク演習**の導入  
-
----
-
-## 🔗 他章との接続（教材内の関連性）
-
-| 章 | 内容 | 本章との関係 |
-|----|------|-------------|
-| [基礎編 第4章 MOSトランジスタ特性](../chapter4_mos_characteristics/) | MOSの動作原理・FET構造 | メモリセル（6T/1T1C/MTJ等）の理解に必須 |
-| [基礎編 第5章 SoC設計フローとEDAツール](../chapter5_soc_design_flow/) | 合成・配置配線・PDK活用 | SRAMマクロ配置・IP統合方法に対応 |
-| [基礎編 第6章 テスト・パッケージ技術](../chapter6_test_and_package/) | 不良解析・信頼性試験 | メモリのリテンション・書換寿命・温度耐性などの評価へつながる |
+- 組込み（SRAM/FeRAM/MRAM）と外部（DRAM/NAND）メモリの**構造的違い**  
+  Structural differences between embedded and external memories  
+- **速度・揮発性・耐久性・面積効率・電力**によるトレードオフ分析  
+  Trade-off analysis among speed, volatility, endurance, area, and power  
+- **OpenLane/Sky130でのSRAMマクロ呼出・統合例**  
+  SRAM macro instantiation via OpenLane (e.g., Sky130)  
+- **eMRAMによるeFlash代替検討／FeRAMの混載SoC適用例**  
+  eMRAM as eFlash alternative; FeRAM in sensor SoCs  
+- NAND向け**FTL, ECC, 読み出し干渉対策**などの制御回路設計  
+  NAND controller design: FTL, ECC, read disturbance mitigation  
 
 ---
 
-## 📚 推奨活用法（教育・設計支援）
+## 🔗 他章・技術記録との接続｜Cross-Chapter and Archive Links
 
-- 教材：**半導体回路演習の後続章**として使うことで、物理⇔設計の流れを体験可能  
-- 設計：**SRAMマクロ導入**や**eFlash代替評価**に向けた理解強化  
-- 比較：FeRAM / MRAM / NAND などを**アーキテクチャ横断で整理**する観点の習得に最適
+| 章・資料 | 内容 | 本章との関係 |
+|-----------|------|-------------|
+| [第4章：MOSトランジスタ特性](../chapter4_mos_characteristics/) | MOSの動作原理と構造 | メモリセル（6T, 1T1C, MTJ等）理解の前提 |
+| [第5章：SoC設計フローとEDAツール](../chapter5_soc_design_flow/) | 合成・PDK統合・配置配線 | SRAMマクロの設計・呼出に関与 |
+| [第6章：テスト・パッケージ技術](../chapter6_test_and_package/) | 書換耐久・リテンション・信頼性 | メモリ評価・不良解析との接続 |
+| [Edusemi-Plus/archive/in1998/DRAM_Startup_64M_1998.md](../../Edusemi-Plus/archive/in1998/DRAM_Startup_64M_1998.md) | **1998年 DRAM立ち上げ記録** | DRAMセル信頼性、酸化膜ダメージ対策など実録 |
+| [Edusemi-Plus/archive/in2001/VSRAM_2001.md](../../Edusemi-Plus/archive/in2001/VSRAM_2001.md) | **2001年 VSRAM開発記録** | DRAM応用SRAMの設計と歩留まり改善の教材化 |
 
 ---
 
-© 2025 Shinichi Samizo / MIT License
+## 🔜 次章への導入｜Lead-in to Next Chapter
+
+| 日本語 – Japanese                                                                                   | English – English                                                                                       |
+|------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|
+| 次章では、ここで学んだ**メモリマクロの構造・選定**を踏まえ、**SoC設計フローとEDAツール**での活用方法を学びます。 | The next chapter builds on memory macro knowledge and applies it within the **SoC design flow and EDA tools**. |
+| SRAMやeMRAMの統合は、合成・配置・検証の前提条件となります。                                        | Integration of SRAM/eMRAM is fundamental to synthesis, placement, and verification.                     |
+
+➡️ [📘 **第2章：SoC設計フローとEDAツール**](../chapter5_soc_design_flow/README.md) に進む  
+➡️ [📘 **Chapter 5: SoC Design Flows and EDA Tools**](../chapter5_soc_design_flow/README.md) (EN)
+
+---
+
+## 🧩 章のキーワード｜Keywords
+
+SRAM, DRAM, FeRAM, MRAM, 3D NAND, PDK, Macro, Non-volatile, Endurance, FTL, ECC, Sky130
+
+---
+
+## 📌 補足情報｜Supplement
+
+- Open PDK examples: [Sky130 PDK – Google/SkyWater](https://skywater-pdk.readthedocs.io)  
+- Memory taxonomy references: ISSCC papers, JEDEC standards  
+- NAND flash controller design: Error correction, FTL layering, wear leveling techniques  
 
 ---
 
