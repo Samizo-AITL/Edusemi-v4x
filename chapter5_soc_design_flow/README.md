@@ -1,5 +1,11 @@
 # 📘 第5章｜SoC設計フローとEDAツール  
-# 📘 Chapter 5 | SoC Design Flow and EDA Tools
+# 📘 Chapter 5 | SoC Design Flows and EDA Tools
+
+---
+
+### 📎 前章へのリンク｜Back to Previous Chapter  
+➡️ [📘 **第4章：MOSトランジスタ特性と設計基盤**](../chapter4_mos_basics/README.md) に戻る  
+➡️ [📘 **Chapter 4: MOS Characteristics and Design Infrastructure**](../chapter4_mos_basics/README.md) (EN)
 
 ---
 
