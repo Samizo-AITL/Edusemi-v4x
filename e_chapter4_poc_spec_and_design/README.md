@@ -82,3 +82,9 @@
 ---
 
 ご不明点があれば [Issue](https://github.com/Samizo-AITL/Edusemi-v4x/issues) または Discussions にてお問い合わせください。
+
+---
+
+🏠 [Edusemi トップに戻る｜Back to Edusemi-v4x Top](../README.md)
+
+---
