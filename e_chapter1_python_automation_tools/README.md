@@ -53,3 +53,10 @@
 - `.meas` による自動Vth抽出 → 劣化予測との接続
 - OpenLaneで得たセルデータを信頼性評価に連動
 - GitHub ActionsやCI/CDとの自動連携
+
+---
+
+🏠 [Edusemi トップに戻る｜Back to Edusemi-v4x Top](../README.md)
+
+---
+
