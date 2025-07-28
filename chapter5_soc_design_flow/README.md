@@ -68,3 +68,7 @@ RTL, GDSII, Standard Cell, Logic Synthesis, STA, Clock Tree, Power Grid, Reset, 
 
 ---
 
+🏠 [Edusemi トップに戻る｜Back to Edusemi-v4x Top](../README.md)
+
+---
+
