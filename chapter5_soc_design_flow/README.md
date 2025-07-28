@@ -3,12 +3,6 @@
 
 ---
 
-### 📎 前章へのリンク｜Back to Previous Chapter  
-➡️ [📘 **第4章：MOSトランジスタ特性と設計基盤**](../chapter4_mos_basics/README.md) に戻る  
-➡️ [📘 **Chapter 4: MOS Characteristics and Design Infrastructure**](../chapter4_mos_basics/README.md) (EN)
-
----
-
 ## 🎯 章のねらい｜Chapter Objectives
 
 | 🇯🇵 日本語                                                                                   | 🇺🇸 English                                                                                      |
