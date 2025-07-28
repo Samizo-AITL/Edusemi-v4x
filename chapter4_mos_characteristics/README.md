@@ -3,12 +3,6 @@
 
 ---
 
-### 📎 前章へのリンク｜Back to Previous Chapter  
-➡️ [📘 **第3章：プロセス技術と設計限界の理解**](../chapter3_process_evolution/README.md) に戻る  
-➡️ [📘 **Chapter 3: Process Evolution and Design Limits in CMOS**](../chapter3_process_evolution/README.md) (EN)
-
----
-
 ## 🎯 章のねらい｜Chapter Objectives
 
 | 日本語 – Japanese                                                                                         | English – English                                                                                   |
