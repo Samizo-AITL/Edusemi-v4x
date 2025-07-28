@@ -32,24 +32,7 @@ SCE, HCI, DIBL, Vth Variability, sky130, 0.18µm
 
 ---
 
-## 📂 ディレクトリ構成｜Directory Structure
-
-```
-Edusemi-v4x/
-└── chapter3_process_evolution/
-    ├── README.md
-    ├── 3.1_node_scaling_history.md
-    ├── 3.2_cmos_structure_shift.md
-    ├── 3.3_interconnect_and_litho.md
-    ├── 3.4_variation_and_reliability.md
-    ├── 3.5_summary_and_scope.md
-    ├── 0.18um_Logic_ProcessFlow.md        ←🆕 日本語版プロセスフロー
-    └── 0.18um_Logic_ProcessFlow_en.md     ←🆕 英語版プロセスフロー
-```
-
----
-
-## 🔗 章構成とリンク｜Chapter Contents and Links
+## 📚 章構成とリンク｜Chapter Contents and Links
 
 | 節番号 | ファイル名 / Filename                                               | 内容概要 / Summary                                                                 |
 |--------|----------------------------------------------------------------------|-------------------------------------------------------------------------------------|
@@ -58,8 +41,17 @@ Edusemi-v4x/
 | 3.3    | [`3.3_interconnect_and_litho.md`](./3.3_interconnect_and_litho.md)   | 多層配線・リソグラフィ技術<br>🧵 *Interconnect and Lithography Advancements*       |
 | 3.4    | [`3.4_variation_and_reliability.md`](./3.4_variation_and_reliability.md) | SCE / DIBL / 信頼性限界<br>⚠️ *Variability & Reliability Issues*             |
 | 3.5    | [`3.5_summary_and_scope.md`](./3.5_summary_and_scope.md)             | 教育用ノードの選定と適用範囲<br>🎓 *Selecting Nodes for Education*               |
-| 📄     | [`0.18um_Logic_ProcessFlow.md`](./0.18um_Logic_ProcessFlow.md)       | 🔧 **0.18µm CMOS工程表（日本語）**<br>🧪 *Full Logic Process Flow (Japanese)*     |
-| 📄     | [`0.18um_Logic_ProcessFlow_en.md`](./0.18um_Logic_ProcessFlow_en.md) | 🔧 **0.18µm CMOS Process Flow（English）**<br>🧪 *Full Logic Process Flow (EN)*   |
+
+---
+
+## 📎 付録：プロセス技術フローチャート（Appendix）
+
+| リファレンス | ファイル名 / Filename                                               | 内容概要 / Description |
+|--------------|----------------------------------------------------------------------|-------------------------|
+| A-1          | [`0.18um_Logic_ProcessFlow.md`](./0.18um_Logic_ProcessFlow.md)       | 🧪 **0.18µm CMOSプロセスフロー（日本語）**<br>Full logic process flow in Japanese |
+| A-2          | [`0.18um_Logic_ProcessFlow_en.md`](./0.18um_Logic_ProcessFlow_en.md) | 🧪 **0.18µm CMOS Process Flow（English）**<br>Full logic process flow in English  |
+
+> 📌 **本章の理解を深める補足資料**として、0.18µmプロセスの工程を詳細に解説しています。
 
 ---
 
