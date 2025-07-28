@@ -27,21 +27,21 @@
 
 ## 📚 節構成｜Chapter Structure
 
-| No. | セクション名（日本語）                                                             | Section Title (English)                                       | リンク |
-|-----|-------------------------------------------------------------------------------------|----------------------------------------------------------------|--------|
-| 5.1 | SoC設計全体フローと開発視点<br>_Overview of SoC Design Flow and Development Cycle_ | RTL to GDS: flow overview and project lifecycle               | [📎](5.1_soc_design_flow.md) |
-| 5.2 | 標準セルとセルベース設計<br>_Standard Cell and Cell-Based Design_                  | Standard cell libraries, logic synthesis, cell structure       | [📎](5.2_standard_cell_based_design.md) |
-| 5.3 | クロックとタイミング設計（STA入門）<br>_Clock and Timing Design (Intro to STA)_     | Setup/hold, clock tree design, static timing analysis basics   | [📎](5.3_clock_and_sta.md) |
-| 5.4 | 電源・リセット・I/O設計の基礎<br>_Power, Reset, and I/O Design Basics_              | Power schemes, reset circuits, pad ring, I/O considerations    | [📎](5.4_power_io_design.md) |
-| 5.5 | テスト構造（スキャン、JTAG、BIST）<br>_Test Structures (Scan, JTAG, BIST)_          | DFT basics, scan chain, boundary scan, BIST introduction       | [📎](5.5_test_structures.md) |
+| No. | セクション名（日本語）                                                         | Section Title (English)                                              | 設計段階                  | リンク |
+|-----|----------------------------------------------------------------------------------|-----------------------------------------------------------------------|---------------------------|--------|
+| 5.1 | SoC設計全体フローと開発視点（RTLからGDSIIまで）                                  | RTL to GDSII: Overall SoC Design Flow and Development Cycle          | 全体（上流〜下流）        | [📎](5.1_soc_design_flow.md) |
+| 5.2 | 標準セルと論理合成（フロントエンド設計の中核）                                    | Standard Cells and Logic Synthesis (Core of Front-End Design)        | 論理設計                  | [📎](5.2_standard_cell_based_design.md) |
+| 5.3 | クロック設計とタイミング解析（STA入門）                                           | Clock Design and Timing Analysis (Introduction to STA)              | タイミング検証            | [📎](5.3_clock_and_sta.md) |
+| 5.4 | 電源・リセット・I/O設計の基礎（物理設計の重要要素）                               | Power, Reset, and I/O Design (Key Elements in Physical Design)       | 物理設計（中盤）          | [📎](5.4_power_io_design.md) |
+| 5.5 | テスト構造（DFT技術の実践：Scan/JTAG/BIST）                                       | Test Structures (Practical DFT: Scan, JTAG, BIST)                    | 検証（設計全体に関与）    | [📎](5.5_test_structures.md) |
 
 ---
 
 ## 🔜 次章への導入｜Lead-in to Next Chapter
 
-| 🇯🇵 日本語                                                                                                   | 🇺🇸 English                                                                                              |
-|------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|
-| 第6章では、完成したSoCが**ウエハ上でのテスト、パッケージング、製品化**を経て市場に出るまでの工程を学びます。           | Chapter 6 will cover how a completed SoC is **tested, packaged, and finalized** for production on wafer. |
+| 🇯🇵 日本語                                                                                                         | 🇺🇸 English                                                                                              |
+|------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|
+| 第6章では、設計完了後のSoCが**実チップとして現実世界に出るまで**のプロセス──**ウエハテスト、パッケージ、出荷**──を学びます。 | Chapter 6 will cover how a completed SoC is **tested, packaged, and finalized** into a real-world product. |
 
 📎 [📘 **第6章：SoCテストとパッケージ工程の理解**](../chapter6_test_and_package/README.md) に進む  
 📎 [📘 **Chapter 6: SoC Test and Packaging Process**](../chapter6_test_and_package/README.md) (EN)
@@ -50,9 +50,14 @@
 
 ## 🧩 章のキーワード｜Keywords
 
-```
-RTL, GDSII, Standard Cell, Logic Synthesis, STA, Clock Tree, Power Grid, Reset, Pad Ring, Scan Chain, JTAG, BIST, DFT
-```
+- **設計フロー・成果物**:  
+  RTL, GDSII, Logic Synthesis, DFT
+
+- **ライブラリ・構成要素**:  
+  Standard Cell, Pad Ring, Power Grid
+
+- **検証・解析技術**:  
+  STA, Setup/Hold, Clock Tree, Scan Chain, JTAG, BIST
 
 ---
 
@@ -71,4 +76,3 @@ RTL, GDSII, Standard Cell, Logic Synthesis, STA, Clock Tree, Power Grid, Reset, 
 🏠 [Edusemi トップに戻る｜Back to Edusemi-v4x Top](../README.md)
 
 ---
-
