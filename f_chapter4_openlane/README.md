@@ -9,14 +9,14 @@ This chapter focuses on implementing **place-and-route (RTL-to-GDSII)** using Op
 
 ## 🧭 章構成と内容一覧｜Chapter Structure and Overview
 
-| 節番号｜Sec. | 📖 タイトル｜Title (JP) | 📘 Title (EN) | 概要｜Summary |
-|--------|------|-------------------------|-----------------------------|---------------------------------------------|
-| **4.1** | [OpenLane導入とプロジェクト構成](docs/4_1_openlane_intro.md) | Introduction to OpenLane and Project Setup | ディレクトリ構成とconfig準備の基本<br>Directory structure and config setup |
-| **4.2** | [FSMモジュールの配置配線](docs/4_2_fsm_layout.md) | Place-and-Route of FSM Module | FSM単体をOpenLaneで配置配線<br>RTL-to-GDSII of FSM module |
-| **4.3** | [PIDモジュールの配置配線](docs/4_3_pid_layout.md) | Place-and-Route of PID Module | PID制御モジュールの配置配線<br>Place-and-route of the PID controller |
-| **4.4** | [SoC統合モジュールの実装](docs/4_4_soc_layout.md) | Implementation of Integrated SoC | FSM+PIDの統合回路のGDSII化<br>Full integration of FSM and PID |
+| 🔢 **節番号**<br>**Sec.** | 📖 **タイトル（日本語）**<br>**Title (JP)** | 📘 **Title (EN)** | 📝 **概要**<br>**Summary** |
+|--------------------------|---------------------------------------------|-------------------|-----------------------------|
+| **4.1** | [OpenLane導入とプロジェクト構成](docs/4_1_openlane_intro.md) | Introduction to OpenLane and Project Setup | ディレクトリ構成と config 準備の基本<br>Directory structure and config setup |
+| **4.2** | [FSMモジュールの配置配線](docs/4_2_fsm_layout.md) | Place-and-Route of FSM Module | FSM単体の配置配線（RTL-to-GDSII）<br>RTL-to-GDSII of FSM module |
+| **4.3** | [PIDモジュールの配置配線](docs/4_3_pid_layout.md) | Place-and-Route of PID Module | PID制御モジュールのレイアウト実装<br>Place-and-route of the PID controller |
+| **4.4** | [SoC統合モジュールの実装](docs/4_4_soc_layout.md) | Implementation of Integrated SoC | FSM＋PID統合回路のGDSII化<br>Full integration of FSM and PID |
 | **4.5** | [設計評価レポートと比較](docs/4_5_evaluation.md) | Design Evaluation and Comparison | 面積・DRC・タイミング比較分析<br>Area, DRC, and timing comparison |
-| **4.6** | [GDSレイアウトの可視化と考察](docs/4_6_gds_view.md) | GDS Visualization and Analysis | KLayoutやMagicによるレイアウト確認<br>GDS layout visualization using KLayout/Magic |
+| **4.6** | [GDSレイアウトの可視化と考察](docs/4_6_gds_view.md) | GDS Visualization and Analysis | KLayoutやMagicによる視覚検証<br>GDS layout visualization using KLayout/Magic |
 
 ---
 
