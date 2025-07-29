@@ -89,7 +89,7 @@ It is a table that shows the relation between **current state, input, next state
 ---
 
 ### 🔁 応用編 第8章：FSM設計（有限状態機械）｜Applied Chapter 8: FSM Design  
-[➡️ 章の詳細へ進む｜Go to Chapter](./d_chapter8_fsm_design_basics/README.md)
+[➡️ 章の詳細へ進む｜Go to Chapter](./README.md)
 
 ---
 
