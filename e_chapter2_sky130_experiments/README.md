@@ -1,66 +1,78 @@
-# ⚗️ 実践編 第2章：Sky130実験とSPICE特性評価
-
-本章では、SkyWaterのSky130 PDKを用いて、MOSトランジスタの基本特性（Vg–Idカーブ、Vth）や劣化予測（BTI・TDDB）まで含む **SPICEベースの設計評価実験**を構成します。
-
----
-
-## 🎯 学習目的
-
-- Sky130のMOS素子モデルを用いたSPICE実験
-- Pythonと連携した特性抽出・可視化・寿命推定
-- `.meas` 文やスクリプト自動化による評価効率化
+# ⚗️ 実践編 第2章：Sky130実験とSPICE特性評価  
+**Practical Chapter 2: Sky130 Experiments and SPICE-Based Characterization**
 
 ---
 
-## 📁 章内構成
+## 📘 概要｜Overview
 
-| フォルダ名 | 内容 |
-|------------|------|
-| [`01_setup_sky130_model/`](01_setup_sky130_model/) | `ngspice`・Sky130環境の構築とモデル確認 |
-| [`02_idvg_experiment/`](02_idvg_experiment/) | Vg–Id特性のSweepシミュレーション（`.spice`自動生成含む） |
-| [`03_vth_extraction/`](03_vth_extraction/) | `.meas` によるVth抽出と可視化 |
-| [`04_bti_tddb_estimation/`](04_bti_tddb_estimation/) | 劣化モデル（BTI, TDDB）との連携による寿命推定 |
-| [`05_data_summary/`](05_data_summary/) | 実験ログ・特性グラフの集約とレポート出力準備 |
+本章では、SkyWaterのSky130 PDKを用いて、MOSトランジスタの基本特性（Vg–Idカーブ、Vth）や劣化予測（BTI・TDDB）まで含む  
+**SPICEベースの設計評価実験**を構成します。  
+
+This chapter uses the **Sky130 PDK** to evaluate MOSFET characteristics such as **Vg–Id curves**, **threshold voltage (Vth)**,  
+and **reliability predictions** using BTI and TDDB models through **SPICE simulations**.
 
 ---
 
-## 🔧 実行環境
+## 🎯 学習目的｜Learning Objectives
 
-- Sky130 PDK（`sky130_fd_pr__nfet_01v8` など）
-- `ngspice 35+`
-- Python 3.9 以上
-- 必要なパッケージ（`matplotlib`, `pandas`, `numpy` など）
-
----
-
-## 🔁 実験の流れ（概要）
-
-1. `.spice` テンプレートとパラメータSweepでVg–Id特性を生成
-2. `Python`でログ解析・グラフ化
-3. `.meas` によるVth自動抽出
-4. 劣化モデルと組み合わせて寿命予測
+- ✅ Sky130 MOS モデルによる SPICE 実験  
+ SPICE simulation using Sky130 device models  
+- ✅ Python による自動化・可視化・寿命推定  
+ Automation, visualization, and lifetime estimation via Python  
+- ✅ `.meas` による定量抽出とスクリプト連携  
+ Measurement extraction using `.meas` and scripting integration  
 
 ---
 
-## 📘 関連リンク
+## 📁 章内構成｜Chapter Contents
 
-- [実践編 第1章：Pythonによる自動化ツール群](../e_chapter1_python_automation_tools/README.md)
-- [実践編 第3章：OpenLaneによるデジタル設計実習](../e_chapter3_openlane_practice/README.md)
-
----
-
-## 📌 教材の意義
-
-- 実測に近いSPICE実験によって、**「特性＝現象」**を実感
-- `.meas`や解析スクリプトにより、評価作業を構造化
-- 信頼性評価や設計マージン設計へのつながりを体感
+| フォルダ名｜Folder | 内容｜Description |
+|--------------------|---------------------------------------------|
+| [`01_setup_sky130_model/`](01_setup_sky130_model/) | Sky130と`ngspice`のセットアップ｜Set up ngspice and Sky130 |
+| [`02_idvg_experiment/`](02_idvg_experiment/) | Vg–Id特性シミュレーションとパラメトリックSweep｜Vg–Id sweeping |
+| [`03_vth_extraction/`](03_vth_extraction/) | `.meas` を使った Vth 抽出｜Extracting Vth using `.meas` |
+| [`04_bti_tddb_estimation/`](04_bti_tddb_estimation/) | 劣化（BTI・TDDB）による寿命予測｜Lifetime prediction using BTI/TDDB |
+| [`05_data_summary/`](05_data_summary/) | 実験結果のまとめとレポート出力｜Result summary and reporting |
 
 ---
 
-## 🧭 次に進むべき章
+## 🔧 実行環境｜Required Environment
 
-- **第3章：OpenLaneでの物理設計と結合評価**
-- **応用編：高耐圧MOSやESD設計と組み合わせた特性評価**
+- ✅ Sky130 PDK（e.g., `sky130_fd_pr__nfet_01v8`）  
+- ✅ `ngspice` version 35+  
+- ✅ Python 3.9+  
+- ✅ 必要パッケージ｜Packages: `matplotlib`, `pandas`, `numpy`, など  
+
+---
+
+## 🔁 実験の流れ｜Experiment Flow
+
+1. `.spice` テンプレートと Sweep により特性取得  
+2. Python でログ解析とプロット  
+3. `.meas` による Vth 自動抽出  
+4. 劣化モデルを組み合わせて寿命予測  
+
+---
+
+## 📘 関連リンク｜Related Chapters
+
+- [実践編 第1章：Pythonによる自動化ツール群](../e_chapter1_python_automation_tools/README.md)  
+- [実践編 第3章：OpenLaneによるデジタル設計実習](../e_chapter3_openlane_practice/README.md)  
+
+---
+
+## 📌 教材の意義｜Educational Significance
+
+- 📈 **特性＝現象** の実感をSPICEで得る
+- 🧪 `.meas` やスクリプトによる構造化評価
+- 🔄 信頼性評価・設計マージン設計との接続を体感
+
+---
+
+## 🧭 次に進むべき章｜Next Chapters
+
+- ✅ **第3章：OpenLaneでの物理設計と評価**
+- ✅ **応用編：高耐圧やESD設計との組合せ**
 
 ---
 
