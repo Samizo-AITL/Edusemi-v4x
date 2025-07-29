@@ -1,74 +1,105 @@
-# 🧩 レイアウトにおけるESD設計の工夫
+# 🧩 レイアウトにおけるESD設計の工夫  
+# 🧩 Layout Techniques for ESD Protection Design
 
 ---
 
-## 📘 概要
+## 📘 概要 / Overview
 
 ESD保護素子の設計だけでは不十分であり、**物理レイアウト上で適切な配置・接続パスを確保する**ことがESD耐性を左右します。  
-高電流を逃がすには、「**広い配線パス」「短い距離」「確実な接地」」が必要です。
+高電流を逃がすには、「**広い配線パス」「短い距離」「確実な接地**」が必要です。
 
-このセクションでは、**ESD設計におけるレイアウト技術の要点**を解説します。
+Designing the ESD protection device alone is not sufficient —  
+**Proper physical layout, current discharge path, and grounding are critical** to ensure ESD robustness.  
+Wide metal paths, short distances, and solid connections to ground are essential.
+
+> 🎯 **本セクションでは、ESDレイアウト設計の重要技術を解説します。**  
+> 🎯 **This section explains key layout techniques for ESD-aware physical design.**
 
 ---
 
-## 🔀 基本ESDレイアウト構成
+## 🔀 基本ESDレイアウト構成 / Basic ESD Layout Structure
+
 ```
-[I/Oパッド]──[ESD素子]──[制限抵抗]──[本回路]
+[I/Oパッド]──[ESD素子]──[制限抵抗]──[本回路]  
+[I/O Pad]──[ESD Device]──[Resistor]──[Core Circuit]
 ```
-- **パッド→保護素子→回路** という順序を厳守
-- ESD電流は**回路に流すのではなく、素子で逃がす**
-- 制限抵抗（typ. 数百Ω）で回路素子を保護
+
+- ✅ **順序：パッド → 保護素子 → 本回路**  
+  Strictly follow the order: Pad → Protection Device → Core
+
+- ⚡ **放電電流は回路ではなくESD素子で逃がす**  
+  ESD current must bypass the core and be discharged via ESD devices
+
+- 🛠️ **制限抵抗（typ. 数百Ω）**で過電流緩和  
+  Series resistor (typically hundreds of ohms) helps reduce stress on the core
 
 ---
 
 ## 🔄 DPP距離（Discharge Path Proximity）
 
-- DPP = ESD素子とGND/VDD間の**最短接続距離**
-- 配線長が長いと、**インダクタンス・電圧上昇が増大**
-- **1〜2μm以内の最短配線**が望ましい（PDK指定あり）
+- **DPP = ESD素子とGND/VDD間の最短距離**  
+  DPP = Minimum distance between ESD device and GND/VDD pad
+
+- 📏 距離が長いと**寄生インダクタンスによる電圧上昇**が発生  
+  Longer paths cause voltage spikes due to parasitic inductance
+
+- ✅ **1〜2μm以内**が望ましく、PDKで制限されることも  
+  Target DPP ≤ 1–2 μm, often specified in PDK rules
 
 ---
 
-## 🛡️ ガードリングの配置
+## 🛡️ ガードリングの配置 / Guard Ring Structure
 
-- ESD素子や回路周辺に**P+ or N+ リングを配置**
-- 寄生ラッチアップや電界集中の回避
-- GNDガードリングは**複数リング構成**で効果アップ
+- 🧩 **P+ や N+ のリングを素子周囲に配置**  
+  Surround ESD devices with P+/N+ diffusion guard rings
 
-Top View（例）：
+- 🔰 **ラッチアップ防止や電界の集中を回避**  
+  Prevent latch-up and reduce electric field concentration
+
+- 🌐 GND側は**複数リング構成で効果向上**  
+  GND guard rings in multiple rings enhance robustness
+
+**Top View（例 / Example）**:
 ```
 ┌──────────────┐
-│  P+ GND Ring │ ← 接地
+│  P+ GND Ring │ ← 接地 / GND
 │              │
-│  ESD Device  │ ← 内部素子
+│  ESD Device  │ ← 内部素子 / ESD Core
 │              │
-│  N+ VDD Ring │ ← 保護電圧
+│  N+ VDD Ring │ ← 保護電圧 / VDD
 └──────────────┘
 ```
----
-
-## ⚠️ レイアウト時の注意点まとめ
-
-| 項目 | 内容 | 設計意図 |
-|------|------|----------|
-| 配線幅 | ESD電流に耐える太さ（数μm以上） | 熱損傷防止 |
-| 接地経路 | GND/VSSへの短距離接続 | 電位上昇防止 |
-| シールド | ESD電界が隣接回路に及ばないようにメタルシールド | ノイズ抑制 |
-| 対称性 | 双方向I/Oでは左右対称な構成 | 保護性能の均等化 |
 
 ---
 
-## 📚 教材的意義
+## ⚠️ レイアウト時の注意点まとめ / Layout Design Checklist
 
-- 回路図だけでは把握できない**物理配置の設計力**を養う  
-- ガードリングやDPPなど、**製造ルールに基づく判断力**を育てる  
-- 実装と設計が連携する現場感覚を身につける教材要素
+| 項目 / Item | 内容 / Description | 設計意図 / Purpose |
+|-------------|---------------------|---------------------|
+| **配線幅**<br>Metal Width | 数μm以上の太配線を使用<br>Use wide metal (≥ few μm) | 高電流耐性、熱損傷防止<br>Prevent thermal damage |
+| **接地経路**<br>Grounding | GND/VSSへの最短接続<br>Shortest path to GND | 電位上昇の防止<br>Suppress voltage rise |
+| **シールド**<br>Shielding | 金属層での隣接回路シールド<br>Use metal shielding | 隣接回路への干渉防止<br>Reduce crosstalk |
+| **対称性**<br>Symmetry | 双方向I/Oでは左右対称構成<br>Mirror layout for bidirectional I/O | 保護性能の均一化<br>Balanced protection |
 
 ---
 
-## 🔗 次のセクション
+## 📚 教材的意義 / Educational Significance
 
-- [`esd_spec.md`](./esd_spec.md)：ESD試験モデル（HBM, MM, CDMなど）と評価項目へ
+- 📐 回路図だけでは見えない**物理的設計力を養成**  
+  Enhances layout-level thinking beyond schematics
+
+- 🔍 ガードリングやDPPなど**PDKルールに基づく判断力**  
+  Trains students to follow and interpret PDK layout constraints
+
+- 🏭 **設計と製造現場の接点**を理解する教材に最適  
+  Bridges layout design with real-world ESD concerns in manufacturing
+
+---
+
+## 🔗 次のセクション / Next Section
+
+👉 [`esd_spec.md`](./esd_spec.md)：ESD試験モデル（HBM, MM, CDMなど）と評価項目へ  
+👉 [`esd_spec.md`](./esd_spec.md): ESD Models and Test Specifications
 
 ---
 
