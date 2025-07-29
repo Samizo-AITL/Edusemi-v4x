@@ -49,7 +49,7 @@
 | [第6章：テスト・パッケージ技術](../chapter6_test_and_package/) | 書換耐久・リテンション・信頼性 | メモリ評価・不良解析との接続 |
 | [DRAM Startup Record (1998)](https://github.com/Samizo-AITL/Edusemi-Plus/blob/main/archive/in1998/DRAM_Startup_64M_1998.md) | **1998年 DRAM立ち上げ記録**<br>Startup record of 64M DRAM in 1998 | DRAMセル構造と信頼性の実務課題と改善策 |
 | [VSRAM Development Record (2001)](https://github.com/Samizo-AITL/Edusemi-Plus/blob/main/archive/in2001/VSRAM_2001.md) | **2001年 VSRAM開発記録**<br>Development of pseudo SRAM in 2001 | DRAM応用による擬似SRAMと歩留まり改善の教材化 |
-| [0.18µm FeRAM Process Flow](../chapter1_memory_technologies/0.18um_FeRAM_ProcessFlow.md) | **0.18µm強誘電体メモリ工程フロー**<br>Process flow of 0.18µm FeRAM | FeRAM構造・混載SoC応用の理解と設計教育に有用 |
+| [0.18µm FeRAM Process Flow](./0.18um_FeRAM_ProcessFlow.md) | **0.18µm強誘電体メモリ工程フロー**<br>Process flow of 0.18µm FeRAM | FeRAM構造・混載SoC応用の理解と設計教育に有用 |
 
 ---
 
