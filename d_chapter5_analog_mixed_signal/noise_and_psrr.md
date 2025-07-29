@@ -87,7 +87,7 @@ This section organizes countermeasures from both circuit and layout perspectives
 ---
 
 ### 📘 応用編 第5章：アナログ／ミックスドシグナル｜Analog / Mixed-Signal Design  
-[➡️ 章の詳細へ進む｜Go to Chapter](./d_chapter5_analog_mixed_signal/README.md)
+[➡️ 章の詳細へ進む｜Go to Chapter](./README.md)
 
 ---
 
