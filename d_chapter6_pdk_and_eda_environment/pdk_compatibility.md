@@ -1,82 +1,106 @@
-# 🔄 PDKの世代と互換性
+# 🔄 PDKの世代と互換性  
+# 🔄 PDK Generations and Compatibility
 
 ---
 
-## 📘 概要
+## 📘 概要｜Overview
 
 PDK（Process Design Kit）は、特定の半導体プロセスに合わせた設計支援ファイル群です。  
-世代をまたぐ互換性や移行性、設計資産の再利用性は、実務でも教育でも重要な観点です。
+世代をまたぐ互換性や移行性、設計資産の再利用性は、**実務でも教育でも極めて重要**な観点です。
 
-本節では、**PDKの世代構成・変更要素・互換性管理の実態**について整理し、  
-0.18µm ～ FinFET以降までを対象に、設計実務への影響と対応策を学びます。
+PDKs are design-support file packages tailored to specific semiconductor processes.  
+Compatibility across generations and reuse of design assets are critical in both **practical design and education**.
 
 ---
 
-## 🏗️ PDKの基本構成とバージョン管理
+## 🏗️ PDKの基本構成とバージョン管理｜PDK Structure and Versioning
 
-| 項目 | 内容 |
+| 📦 **項目｜Item** | 📘 **内容｜Description** |
+|------------------|--------------------------|
+| デザインルール<br>Design Rules (DRC) | 層間距離・配線幅・リソ制限など<br>Spacing, width, lithographic rules |
+| デバイスモデル<br>Device Models | SPICE用のMOS/BJT等の振る舞い<br>Behavioral models for SPICE simulations |
+| レイアウト構成<br>Layout Elements | GDS層・マクロセル・ダミー定義<br>GDS layers, macros, dummy rules |
+| 抽出ルール<br>Extraction Rules (LPE) | RC抽出用のパラメータセット<br>Parasitic extraction models |
+| シンボル／回路図<br>Symbols/Schematics | Schematic entry対応ライブラリ<br>Libraries for schematic tools |
+| スクリプト群<br>Scripts | DRC/LVS実行・Makefile・設定等<br>Verification scripts and flows |
+
+- **PDKは通常プロセスごとに個別設計され、EDAツールごとに最適化**される  
+  *Each PDK is tailored to a specific process and optimized for the EDA toolchain.*
+- Sky130では、`sky130A`, `sky130B` など**Gitベースでバージョン管理**される例がある  
+  *Sky130 demonstrates Git-based versioning with multiple variants.*
+
+---
+
+## 📈 プロセス世代ごとの差異｜PDK Differences Across Generations
+
+| 🧭 **世代｜Generation** | 🧪 **主な違い｜Key Differences** | ⚠️ **設計注意点｜Design Considerations** |
+|------------------------|------------------------------|------------------------------------------|
+| 0.35–0.18µm | 単純構造・長チャネル設計<br>Simple, long-channel design | 手動設計中心、PDKも簡易<br>Manual layout, simplified PDKs |
+| 0.13–90nm | 配線RC支配・寄生考慮<br>Interconnect-dominated delay | RC抽出が性能に直結<br>Accuracy of extraction is critical |
+| 65–28nm | 方位・DFM制限強化<br>Orientation rules, DFM limits | レイアウト依存効果が増大<br>Layout-dependent effects dominate |
+| FinFET世代 | 非平面構造・ゲート3D化<br>Non-planar, 3D gate structures | モデル精度・寄生再評価必須<br>Modeling and parasitic precision required |
+
+---
+
+## 🔄 互換性と設計資産の再利用｜Compatibility & Reusability of Design Assets
+
+### ❌ **PDK間の完全互換は困難**  
+**Complete compatibility is difficult between PDKs**
+
+- レイアウトや回路図は**層構成・ピン配置・命名規則**に依存  
+  *Layouts and schematics depend heavily on PDK-specific conventions*
+- 寄生抽出モデルやスケーリングルールも異なる  
+  *Parasitic models and scaling behavior vary across generations*
+
+### ✅ **再利用可能な設計資産**  
+**Reusable assets across PDKs**
+
+| 再利用対象 | 内容 |
+|------------|------|
+| RTL / Verilog / SystemC | プロセス非依存な機能設計コード |
+| テストベンチ / シミュレーション環境 | SPICEモデルを入れ替えることで再利用可能 |
+| フロアプラン案 / ネーミングルール | 柔軟性が高い設計資産として流用可能 |
+
+---
+
+## 🧪 教育・研究での応用：Sky130の例｜Educational Use Case: Sky130
+
+- `sky130A` はOSSベースPDKの代表例  
+  *sky130A is a representative open-source PDK*
+
+| 特徴 | 内容 |
 |------|------|
-| デザインルール（DRC） | 層間距離、配線幅、高さ制限などの寸法規則 |
-| デバイスモデル | SPICE等で使われるMOS, BJT, Diode等の動作モデル |
-| レイアウト構成 | GDS層情報、マクロセル、ダミーパターン規定など |
-| 抽出ルール（LPE） | パラメータ抽出用の寄生容量・抵抗の定義 |
-| シンボル・回路図 | 回路エディタとの接続用シンボルと回路ブロック群 |
-| スクリプト | DRC/LVS用ルールスクリプトやMakefileなど |
-
-- PDKは通常、**プロセス世代ごとに個別提供**され、**ツール依存の最適化**も含まれる
-- バージョン管理には Git が使われる例もあり、Sky130系では `sky130A`, `sky130B` などが並存
+| ツール連携 | Magic, Xschem, ngspice, OpenROAD などに対応 |
+| 学習用途 | 半導体教育・研究に最適。プロセス理解を深める教材構成 |
+| 拡張性 | Sky90, Sky65 などの世代追加が期待されている |
 
 ---
 
-## 📈 プロセス世代とPDK差異の具体例
+## 🎯 教材的意義｜Educational Significance
 
-| 世代 | 主な違い | 設計上の注意点 |
-|------|----------|----------------|
-| 0.35µm〜0.18µm | デバイス構造が単純。長チャネル動作前提 | 手動設計が主体、PDKも簡素 |
-| 0.13µm〜90nm | 配線遅延が支配的に。RC抽出が必須 | 抽出モデルの精度が設計に直結 |
-| 65nm〜28nm | 方位依存、DFM制約、デバイス寄生増加 | レイアウト依存性の制御が重要 |
-| FinFET（16nm以下） | トランジスタ構造が非平面化 | モデルの精度・電界効果の再評価が必要 |
-
----
-
-## 🔄 互換性と設計資産の再利用
-
-### ✔️ 完全互換は難しい
-
-- 回路図・レイアウトはPDK依存性が高く、**PDK間移植には修正が必須**
-- 特に **ピン定義・層構成・寄生モデル** が世代間で異なる
-
-### ✔️ 再利用可能な資産
-
-- `RTLコード` や `機能レベルの設計（Verilog, SystemCなど）` はPDK非依存
-- **シミュレーションベースの設計資産**や `テストベンチ` も流用可能性あり
+- **PDK互換性と設計依存性**を理解することで、設計資産の限界と活用可能性を判断できる  
+  *Understanding PDK compatibility clarifies the limits and potential of design reuse.*
+- **プロセス進化と物理制約**の関係を可視化できる  
+  *Clarifies the correlation between process scaling and physical constraints.*
+- **Sky130などのOSS PDK**を活用することで、教育実験における柔軟性を確保できる  
+  *Open PDKs like Sky130 offer flexibility in hands-on learning environments.*
 
 ---
 
-## 🧪 教育・研究用途での実例：Sky130
+## 🔗 関連資料｜Related Materials
 
-- SkyWaterの `sky130A` は、**Sky130 PDKの教育向け標準版**  
-  - Magic, Xschem, OpenROAD などと連携可能  
-  - OSSツールと組み合わせることで、**プロセス世代非依存の教育実験が可能**
-
-- 将来的に `Sky90`, `Sky65` のようなPDK追加も期待される
-
----
-
-## 🎯 教材的意義
-
-- PDKの互換性を理解することで、**設計資産の再利用と移植の限界を把握できる**
-- プロセス技術の進化に伴う**物理設計制約の変化**を意識できる
-- 教育現場では、**Sky130のようなオープンPDKが最適解**となり得る
+- [`pdk_structure.md`](./pdk_structure.md)：PDKの基本構成とファイル群  
+  *Structure and components of a PDK*
+- [`eda_toolchain.md`](./eda_toolchain.md)：EDAツールとの接続構成  
+  *EDA tool integration with PDKs*
+- [`rule_check_flow.md`](./rule_check_flow.md)：設計検証フロー（DRC/LVS/ERC）  
+  *Design verification flow*
 
 ---
 
-## 🔗 関連資料
-
-- [`pdk_structure.md`](./pdk_structure.md)：PDKの基本構造とファイル群
-- [`eda_toolchain.md`](./eda_toolchain.md)：ツールチェーンとの接続
-- [`rule_check_flow.md`](./rule_check_flow.md)：DRC/LVS等の検証フロー
+### 🛠️ 応用編 第6章：PDKとEDA環境｜PDK and EDA Environment  
+[➡️ 章の詳細へ進む｜Go to Chapter](./README.md)
 
 ---
 
-© 2025 Shinichi Samizo / MIT License
+© 2025 **Shinichi Samizo** / MIT License
