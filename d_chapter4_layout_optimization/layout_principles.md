@@ -1,75 +1,102 @@
-# 📐 レイアウトの基本原則と設計ルールの意図
+# 📐 レイアウトの基本原則と設計ルールの意図  
+# 📐 Layout Principles and Design Rule Intentions
 
 ---
 
-## 📘 概要
+## 📘 概要 | Overview
 
-レイアウト設計は、論理回路を物理的な構造として**シリコン上に配置・配線する工程**です。  
-PDK（Process Design Kit）に従い、設計ルールを満たしながら、**性能・信頼性・歩留まりを両立**する必要があります。
+レイアウト設計とは、論理回路を**物理的構造としてシリコン上に実装する工程**です。  
+Layout design is the process of **implementing logic circuits as physical structures on silicon**.
 
-このセクションでは、**レイアウト設計の基本構造と考え方**を学びます。
+PDK（Process Design Kit）に従って設計ルールを遵守しながら、  
+**性能・信頼性・歩留まり**のトレードオフを最適化することが求められます。  
+Following the PDK rules, designers must balance **performance, reliability, and yield**.
 
----
-
-## 🧱 幅（Width）と間隔（Spacing）
-
-| 項目 | 説明 | 教育的意義 |
-|------|------|------------|
-| 最小幅 | 各層（Poly、Metal等）に定義される | プロセス限界の反映 |
-| 最小間隔 | 同一層または異層での距離制約 | ショート・リーク防止 |
-| Width/Spacing Rule | 「W/Sルール」としてPDKに記載 | 歩留まり・耐電圧・CMP対応 |
-
-※ 例：Metal1 の最小幅 0.14 μm、最小間隔 0.14 μm（0.28μm pitch）
+このセクションでは、**基本的なレイアウト構造と設計意図の理解**を目的とします。  
+This section focuses on understanding the **basic layout structures and the intent behind design rules**.
 
 ---
 
-## 🛤️ 配線層と層構成
+## 🧱 幅（Width）と間隔（Spacing） | Line Width and Spacing
 
-| 層名 | 方向 | 主用途 |
-|------|------|--------|
-| Poly | 任意 | ゲート構造 |
-| Metal1 | 横方向 | ローカル信号配線 |
-| Metal2 | 縦方向 | GND/VDD配線（中間層） |
-| Metal3〜n | 交互 | グローバル配線、パワーグリッド、クロック |
+| 項目 / Item | 説明 / Description | 教育的意義 / Educational Significance |
+|-------------|--------------------|----------------------------------------|
+| **最小幅<br>Minimum Width** | 各層（Poly、Metal等）に定義される最小線幅<br>Minimum line width defined for each layer (Poly, Metal, etc.) | プロセス限界や露光限界の反映<br>Reflects process and lithography limits |
+| **最小間隔<br>Minimum Spacing** | 同一層・異層間の必要な距離制約<br>Required spacing between same or different layers | ショート・リーク・干渉の防止<br>Prevents shorts, leakage, and interference |
+| **W/Sルール（Width/Spacing Rule）** | PDKで定義される層ごとの幅と間隔の組み合わせ<br>Combined rules for width and spacing per layer in PDK | 歩留まり・耐電圧・CMP対応設計の基礎<br>Basis for yield, breakdown voltage, and CMP |
 
-- **層を交互に使うことで、クロストークとIRドロップを抑制**
-- **電源層は太く短く、論理層は高密度に**
-
----
-
-## 🔌 パワーグリッドとウェルタップ
-
-- **パワーグリッド**：Metal層で構成されるGND/VDDの網状配線  
-  - ノイズ低減、IRドロップ緩和
-- **ウェルタップ**：P/NウェルをGND/VDDに接続する構造
-  - 寄生バイポーラの防止（ラッチアップ回避）
+> 例：Metal1 の最小幅 0.14 μm、最小間隔 0.14 μm（ピッチ = 0.28 μm）  
+> Example: Metal1 minimum width = 0.14 μm, spacing = 0.14 μm (pitch = 0.28 μm)
 
 ---
 
-## ⚠️ 設計時のDRC（Design Rule Check）項目
+## 🛤️ 配線層と層構成 | Routing Layers and Stack Structure
 
-| 項目 | 意図 |
-|------|------|
-| Min Width | フォトリソ限界／露光バラツキ |
-| Min Spacing | ショート／配線歩留まり |
-| Enclosure | Viaやコンタクトの被覆確保 |
-| Density | CMP均一性（例：Metal fill挿入） |
-| Notch | 不要な隙間・鋭角パターン防止 |
+| 層 / Layer | 方向 / Direction | 主用途 / Primary Use |
+|------------|------------------|-----------------------|
+| **Poly** | 任意 / Arbitrary | ゲート構造 / Gate structure |
+| **Metal1** | 横方向 / Horizontal | ローカル信号配線 / Local signal routing |
+| **Metal2** | 縦方向 / Vertical | 電源/GND配線（中間層）<br>Power/GND routing (mid-level) |
+| **Metal3〜n** | 交互 / Alternating | グローバル配線、パワーグリッド、クロック等<br>Global routing, power grids, clocks |
 
----
-
-## 🎯 教材的意義
-
-- 「レイアウトルールの数字」ではなく**背景となる物理現象**を理解
-- 手動レイアウトと自動配置配線（P&R）双方の理解に活用
-- **DRC違反がなぜNGか**を構造とプロセスから考察できるように
+- 🔄 **層を交互に使うことでクロストークとIRドロップを抑制**  
+  Alternating layers suppress crosstalk and IR drop.
+- 🔌 **電源層は太く短く、信号層は高密度に配置**  
+  Power layers should be wide and short; signal layers dense and compact.
 
 ---
 
-## 🔗 次のセクション
+## 🔌 パワーグリッドとウェルタップ | Power Grids and Well Taps
 
-- [`cmp_dummy_pattern.md`](./cmp_dummy_pattern.md)：CMP均一性のためのパターン工夫へ
+- **パワーグリッド（Power Grid）**：Metal層で構成されたGND/VDDの網状配線  
+  A mesh structure of GND/VDD using metal layers.  
+  - 🎯 **IRドロップの抑制、ノイズの低減**  
+    Reduces IR drop and suppresses noise.
+
+- **ウェルタップ（Well Tap）**：P/NウェルをGND/VDDに接続する構造  
+  Connects P-well or N-well to GND or VDD.  
+  - 🛡 **ラッチアップ防止と寄生バイポーラの抑制**  
+    Prevents latch-up and suppresses parasitic bipolar action.
+
+---
+
+## 🧩 レイアウト基本ルールと意図 | Layout Design Rules and Their Intent
+
+| 項目 / Item | 意図 / Intent |
+|-------------|----------------|
+| **Min Width** | フォトリソ精度・プロセス下限の確保<br>Ensures lithographic accuracy and process limitations |
+| **Min Spacing** | 金属間ショートやリークの防止<br>Prevents shorts and leakage between lines |
+| **Enclosure** | コンタクトやViaの**完全被覆**を確保し接続信頼性向上<br>Ensures full coverage of contacts/Vias for reliable connections |
+| **Notch** | 鋭角・隙間によるストレス集中を防ぐ<br>Prevents stress concentration from narrow gaps or corners |
+| **Density** | CMP均一性を保つため**Metal Fill**を適用<br>Maintains CMP uniformity using metal fill |
+| **Overlap / Overlap Margin** | 層間の**意図的な重なり**を定義（例：コンタクトとMetal）<br>Defines intentional overlaps between layers (e.g., contact-to-metal) |
+| **Overlay（オーバーレイ）** | マスク合わせずれの許容範囲<br>Allowed misalignment tolerance between masks |
+
+---
+
+## 🎯 教材的意義 | Educational Perspective
+
+- ✨ 数値ルールではなく**物理的背景と目的**を理解  
+  Understand not just numbers, but the **physical rationale behind rules**
+- 🤝 手動レイアウトと自動P&R双方に対応する知識基盤  
+  Knowledge applicable to both manual layout and automated P&R
+- 🧠 **DRC違反の背景を“構造×プロセス”視点で考察**  
+  Analyze DRC violations from **structural and process perspectives**
+
+---
+
+## 🔗 次のセクション | Next Section
+
+➡ [`cmp_dummy_pattern.md`](./cmp_dummy_pattern.md)：CMP均一性のためのパターン工夫  
+➡ *CMP Dummy Patterns: Layout techniques for planarization control*
+
+---
+
+🧱 応用編 第4章：レイアウト設計と最適化 /  
+🧱 *Applied Chapter 4: Layout Design and Optimization*  
+[📘 セクション一覧 / Section Index](../d_chapter4_layout_optimization/README.md)
 
 ---
 
 © 2025 Shinichi Samizo / MIT License
+
