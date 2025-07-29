@@ -588,4 +588,173 @@ Form NiV/Cu/Au multilayer UBM for flip-chip bonding
 - Must balance **wetting**, **reliability**, and **oxidation resistance**
 
 ---
+
+## 🔹 Step 31：上層ビア形成 / Via Formation for Upper Metal
+
+**目的 / Purpose**：  
+最上層配線層間の垂直ビアを形成（TSVや上位配線との接続）  
+Form vertical vias for top-level metal interconnection or TSV
+
+**条件 / Conditions**：  
+- フルオロカーボン系RIE、CD：20〜30 nm、アスペクト比 > 2  
+- Fluorocarbon-based RIE, CD: 20–30 nm, Aspect ratio > 2
+
+**技術ポイント / Technical Notes**：  
+- **高アスペクト比**かつ**エッチストップ層への正確な制御**が必要  
+- Requires **high aspect ratio** and **precise etch-stop targeting**
+
+---
+
+## 🔹 Step 32：バリア・シード堆積（Via） / Barrier & Seed Deposition (Via)
+
+**目的 / Purpose**：  
+ビア内面を金属でコーティングし、電解めっきの導入準備  
+Deposit barrier and seed layers inside vias for ECP
+
+**条件 / Conditions**：  
+- バリア：Ta/TaN（ALD）、シード：Cu（PVD）  
+- Barrier: Ta/TaN (ALD), Seed: Cu (PVD)  
+- 膜厚：バリア5–10 nm、シード約50 nm  
+- Thickness: 5–10 nm (barrier), ~50 nm (seed)
+
+**技術ポイント / Technical Notes**：  
+- **コンフォーマル性**（特にVia底部への被覆性）が信頼性に直結  
+- **Conformal coverage** at via bottom is essential for reliability
+
+---
+
+## 🔹 Step 33：ビア銅埋込 / Cu Electroplating (Via)
+
+**目的 / Purpose**：  
+Via空間をCuで充填し、低抵抗な縦方向接続を構築  
+Fill via structures with Cu to enable low-resistance vertical connection
+
+**条件 / Conditions**：  
+- 酸性CuSO₄浴、電流密度制御付きECP  
+- Acidic CuSO₄ bath, ECP with current control  
+- 厚さ：200〜400 nm程度のオーバーフィル  
+- Overfill: 200–400 nm
+
+**技術ポイント / Technical Notes**：  
+- **空隙（ボイド）防止**と**結晶制御**（柱状結晶抑制）が重要  
+- Prevent **voiding** and control **grain structure** (avoid columnar crystals)
+
+---
+
+## 🔹 Step 34：ビア部CMP / CMP of Cu Via/Wiring
+
+**目的 / Purpose**：  
+ビア上部および配線部のCu過剰堆積を除去し平坦化  
+Planarize Cu overfill in via and wiring regions for next steps
+
+**条件 / Conditions**：  
+- 銅選択CMP、スラリー：SiO₂またはAl₂O₃系、残膜<5 nm  
+- Selective CMP for Cu, slurry: SiO₂ or Al₂O₃ based, Residue < 5 nm
+
+**技術ポイント / Technical Notes**：  
+- **ディッシング・エロージョン**の抑制と**上面均一性**が重要  
+- Suppress **dishing/erosion** and ensure **uniform topography**
+
+---
+
+## 🔹 Step 35：上層ILD堆積 / Upper ILD Deposition
+
+**目的 / Purpose**：  
+3D構造の上部保護・絶縁膜を形成  
+Deposit upper ILD for protection and insulation in 3D structure
+
+**条件 / Conditions**：  
+- SiCOHまたはSiO₂、PECVD、厚さ：300–500 nm  
+- SiCOH or SiO₂, PECVD, Thickness: 300–500 nm
+
+**技術ポイント / Technical Notes**：  
+- **低誘電率**と**吸湿抑制**の両立設計  
+- Balance **low-k property** and **moisture resistance**
+
+---
+
+## 🔹 Step 36：上層配線リソグラフィ / Lithography for Upper Metal
+
+**目的 / Purpose**：  
+上層配線（Mx+1）形成のためのパターン定義  
+Define pattern for top-level interconnect (e.g., Mx+1)
+
+**条件 / Conditions**：  
+- ArF immersionまたはEUV露光、CD：~20–30 nm  
+- ArF immersion or EUV lithography, CD: ~20–30 nm
+
+**技術ポイント / Technical Notes**：  
+- **LWR（Line Width Roughness）とOverlay誤差**の最小化が必須  
+- Minimize **LWR and overlay errors** for high-density routing
+
+---
+
+## 🔹 Step 37：デュアルダマシンエッチ / Dual Damascene Etch
+
+**目的 / Purpose**：  
+上層ビアと配線溝を同時に形成  
+Etch vias and trenches simultaneously (dual damascene)
+
+**条件 / Conditions**：  
+- フッ素系RIE、プロファイル：垂直、選択比制御  
+- Fluorocarbon-based RIE, vertical profile, controlled selectivity
+
+**技術ポイント / Technical Notes**：  
+- **アスペクト比制御**と**過エッチ抑制**が重要  
+- Control **aspect ratio** and avoid **over-etching**
+
+---
+
+## 🔹 Step 38：バリア・シード堆積（上層） / Barrier & Seed Deposition (Upper Metal)
+
+**目的 / Purpose**：  
+Cu ECP用の導電・拡散防止層形成  
+Form conductive and barrier layers prior to Cu electroplating
+
+**条件 / Conditions**：  
+- Ta/TaN（ALD）、Cuシード（PVD）  
+- Ta/TaN (ALD), Cu seed (PVD)  
+- バリア膜厚：5–10 nm、シード：~50 nm  
+- Barrier: 5–10 nm, Seed: ~50 nm
+
+**技術ポイント / Technical Notes**：  
+- **高密度パターン**に対しても**被覆均一性**を確保  
+- Ensure **uniform coverage** even for **dense patterns**
+
+---
+
+## 🔹 Step 39：銅電解めっき（上層） / Cu Electroplating (Upper Metal)
+
+**目的 / Purpose**：  
+上層配線とビアを銅で埋込（低抵抗配線）  
+Fill trenches and vias with Cu for low-resistance interconnect
+
+**条件 / Conditions**：  
+- 酸性CuSO₄浴、添加剤制御付きECP  
+- Acidic CuSO₄ bath with additive-controlled ECP  
+- オーバーフィル：~300–400 nm  
+- Overfill: ~300–400 nm
+
+**技術ポイント / Technical Notes**：  
+- **空隙防止（ボイドレス）**と**柱状結晶の抑制**  
+- Prevent **voids** and suppress **columnar crystal growth**
+
+---
+
+## 🔹 Step 40：上層Cu CMP / CMP of Upper Metal
+
+**目的 / Purpose**：  
+過剰堆積Cuの除去と表面平坦化  
+Remove overfill Cu and planarize the top layer
+
+**条件 / Conditions**：  
+- CMP：アルミナまたはシリカ系スラリー、選択CMP  
+- CMP: Alumina or silica slurry, selective CMP  
+- 平坦度：< 0.5 nm RMS  
+- Planarity: < 0.5 nm RMS
+
+**技術ポイント / Technical Notes**：  
+- **トップビュー均一性**と**次工程への影響最小化**  
+- Ensure **uniform topography** and minimize impact on next steps
+
 ---
