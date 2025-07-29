@@ -115,6 +115,9 @@ GATE
 
 ## 🔗 関連リンク｜Related Topics
 
+- [📘 応用編 第2章｜高耐圧デバイス 全体README](../d_chapter2_high_voltage_devices/README.md)：章全体の構成と関連技術の導入  
+  *Chapter 2 Top: Overview of high-voltage devices and structure of this section*
+  
 - [`hvcmos.md`](./hvcmos.md)：CMOSプロセス互換での高耐圧化技術  
 - [`layout_rules.md`](./layout_rules.md)：LDMOSレイアウト制約と最適化  
 - [基礎編 第4章](../chapter4_mos_characteristics/)：MOS構造と寄生素子の理解  
