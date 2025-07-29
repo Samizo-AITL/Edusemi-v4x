@@ -39,16 +39,16 @@ using reusable educational blocks like FSM, MUX, and Adder on the Sky130 PDK.
 ---
 
 ## 📚 章構成｜Section List
-```
-| 節番号｜Section | ファイル名｜Filename | 内容｜Content |
-|--------|---------|------------------------|----------------------------|
-| 4.1 | [`4.1_poc_spec_overview.md`](4.1_poc_spec_overview.md) | PoC仕様概要と設計目的 |
-| 4.2 | [`4.2_poc_block_definition.md`](4.2_poc_block_definition.md) | FSM, MUX, Adderの機能仕様 |
-| 4.3 | [`4.3_sky130_design_constraints.md`](4.3_sky130_design_constraints.md) | Sky130設計制約とPDK依存項目 |
-| 4.4 | [`4.4_verilog_and_testbench.md`](4.4_verilog_and_testbench.md) | VerilogとTestbench構成 |
-| 4.5 | [`4.5_physical_design_flow.md`](4.5_physical_design_flow.md) | OpenLaneを用いた物理設計フロー |
-| 4.6 | [`4.6_layout_result_and_discussion.md`](4.6_layout_result_and_discussion.md) | 結果検証とまとめ |
-```
+
+| **節番号<br>Section** | **ファイル名<br>Filename** | **内容<br>Content** |
+|-----------------------|-----------------------------|----------------------|
+| 4.1 | [`4.1_poc_spec_overview.md`](4.1_poc_spec_overview.md) | **PoC仕様概要と設計目的**<br>Overview of PoC Spec and Design Goals |
+| 4.2 | [`4.2_poc_block_definition.md`](4.2_poc_block_definition.md) | **FSM, MUX, Adderの機能仕様**<br>Functional Spec of FSM, MUX, Adder |
+| 4.3 | [`4.3_sky130_design_constraints.md`](4.3_sky130_design_constraints.md) | **Sky130設計制約とPDK依存項目**<br>Design Constraints and PDK Dependencies |
+| 4.4 | [`4.4_verilog_and_testbench.md`](4.4_verilog_and_testbench.md) | **VerilogとTestbench構成**<br>Verilog and Testbench Setup |
+| 4.5 | [`4.5_physical_design_flow.md`](4.5_physical_design_flow.md) | **OpenLaneを用いた物理設計フロー**<br>Physical Design Flow with OpenLane |
+| 4.6 | [`4.6_layout_result_and_discussion.md`](4.6_layout_result_and_discussion.md) | **結果検証とまとめ**<br>Result Evaluation and Summary |
+
 ---
 
 ## 🧱 最小PoCブロック例｜PoC Block Examples
