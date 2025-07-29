@@ -75,6 +75,10 @@ This section covers optimization from the following viewpoints:
 
 ## 🔗 関連リンク｜Related Topics
 
+- [📘 応用編 第2章｜高耐圧デバイス 全体README](../d_chapter2_high_voltage_devices/README.md)  
+  **章全体の構成と関連技術の導入**  
+  *Chapter 2 Top: Overview of high-voltage devices and structure of this section*
+  
 - [`dvdt.md`](./dvdt.md)  
   **dv/dt破壊と連動するレイアウト的配慮**  
   *Layout design for dv/dt protection*
