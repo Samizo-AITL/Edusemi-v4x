@@ -77,6 +77,10 @@ Key destructive effects include:
 
 ## 🔗 関連リンク｜Related Topics
 
+- [📘 応用編 第2章｜高耐圧デバイス 全体README](../d_chapter2_high_voltage_devices/README.md)  
+  **章全体の構成と関連技術の導入**  
+  *Chapter 2 Top: Overview of high-voltage devices and structure of this section*
+  
 - [`ldmos.md`](./ldmos.md)  
   **高電圧印加による構造ストレスとdv/dt感度**  
   *Structural stress and dv/dt sensitivity in LDMOS*
