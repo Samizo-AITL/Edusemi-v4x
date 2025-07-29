@@ -1,97 +1,95 @@
-# 🧠 FSM×PID×LLMによる統合制御システムのSoC実装手法
+# 🧠 FSM×PID×LLMによる統合制御システムのSoC実装手法  
+# 🧠 SoC Implementation of Integrated Control System with FSM×PID×LLM
 
 本章では、**AITL-H構想（FSM・PID・LLMによる三層制御）**をベースに、  
-その統合制御システムを**SoCとして設計・実装**する手法を解説します。
+その統合制御システムを**SoCとして設計・実装**する手法を解説します。  
+This chapter explains how to design and implement the **AITL-H three-layer control system (FSM, PID, LLM)** as a **System-on-Chip (SoC)**.
 
 ---
 
-## 🎯 目的と概要
+## 🎯 目的と概要｜Purpose and Overview
 
-- **FSM（状態制御）**
-- **PID（安定化制御）**
-- **LLM（知的判断・外部連携）**
+| 構成要素｜Layer | 機能｜Function | 実装対象｜Target Implementation |
+|-------------|-------------------|------------------------------|
+| **FSM**     | 状態遷移による本能的制御<br>Instinctive control via state transitions | Verilog RTL（`fsm_engine.v`） |
+| **PID**     | 安定化・物理制御<br>Stabilization and physical control | VerilogまたはMixed-Signal（`pid_controller.v`） |
+| **LLM**     | 知的判断・外部応答<br>Intelligent decision making and external interaction | RISC-Vソフト連携（`llm_interface.c`） |
 
-という三層制御構造を、ASIC/SoC上で物理的に接続・実装する際の、
-**モジュール設計・接続手法・インターフェース戦略**を体系的に学びます。
-
----
-
-## 📚 章構成
-
-| 節 | 内容 |
-|----|------|
-| 3.1 | AITL-Hアーキテクチャと層分離設計 |
-| 3.2 | FSM設計とRTLモジュール構成 |
-| 3.3 | PID制御のASIC実装（デジタル／アナログ） |
-| 3.4 | LLMとの接続設計（RISC-V・I/O連携） |
-| 3.5 | SoC統合とバス構造・通信設計 |
-| 3.6 | ケーススタディ：三層制御によるPoC実装例 |
+三層構造をSoC上に実装し、**責務分離・接続戦略・ハイブリッド設計**を体系的に学びます。  
+You will learn the **responsibility separation, connection strategy, and hybrid design** methodology for integrating this architecture into an SoC.
 
 ---
 
-## 🧬 各層の役割と実装
+## 📚 章構成｜Chapter Structure
 
-| 層 | 役割 | 実装対象 |
-|----|------|----------|
-| FSM | 本能的制御・行動遷移 | Verilog RTL（`fsm_engine.v`） |
-| PID | 安定化・物理制御 | Verilog or Mixed-Signal（`pid_controller.v`） |
-| LLM | 知的判断・外部応答 | RISC-Vソフト連携（`llm_interface.c`） |
+| 節番号｜Section | 内容｜Content |
+|--------|--------|--------|
+| **3.1** | AITL-Hアーキテクチャと層分離設計<br>AITL-H Architecture and Layered Design |
+| **3.2** | FSM設計とRTLモジュール構成<br>FSM Design and RTL Module Structure |
+| **3.3** | PID制御のASIC実装（デジタル／アナログ）<br>PID Controller Implementation (Digital/Analog) |
+| **3.4** | LLMとの接続設計（RISC-V・I/O連携）<br>LLM Interface Design (RISC-V / I/O Integration) |
+| **3.5** | SoC統合とバス構造・通信設計<br>SoC Integration and Communication Design |
+| **3.6** | ケーススタディ：三層制御によるPoC実装例<br>Case Study: PoC with Three-Layer Control |
 
 ---
 
-## 🛠 実装ディレクトリ構成（例）
-```
+## 🛠 実装ディレクトリ構成（例）｜Example Directory Structure
 
+```plaintext
 f_chapter3_socsystem/
-├── README.md                      ← 章全体の概要
-├── toc.md                         ← 章内目次
-├── docs/                          ← 各節の解説
+├── README.md                      ← 章全体の概要 / Chapter Overview
+├── toc.md                         ← 章内目次 / Table of Contents
+├── docs/                          ← 各節の解説 / Section Documents
 │   ├── 3_1_aitl_architecture.md
 │   ├── 3_2_fsm_design.md
 │   ├── 3_3_pid_design.md
 │   ├── 3_4_llm_interface.md
 │   ├── 3_5_soc_integration.md
 │   └── 3_6_case_study.md
-├── verilog/                       ← RTLコード
+├── verilog/                       ← RTLコード / RTL Code
 │   ├── fsm_engine.v
 │   ├── pid_controller.v
 │   └── soc_top.v
-├── sw_riscv/                      ← LLM制御用ソフト
+├── sw_riscv/                      ← LLM制御ソフト / LLM Software
 │   └── llm_interface.c
-├── testbench/                     ← テストベンチ
+├── testbench/                     ← テストベンチ / Testbench
 │   └── test_soc_top.v
-└── images/                        ← 任意：構成図（英語版）
+└── images/                        ← 構成図など / Diagrams
     └── aitl_three_layer_architecture.png
-
 ```
 
 ---
 
-## 📘 参照リンク（AITL-H連携）
+## 🔗 参照リンク｜Reference Links
 
-- [AITL-H構想（theory/）](https://github.com/Samizo-AITL/AITL-H/tree/main/theory)
-- [PoC設計マニュアル](https://github.com/Samizo-AITL/AITL-H/tree/main/docs)
-- [FSMエンジン実装例](https://github.com/Samizo-AITL/AITL-H/blob/main/implementary/fsm_engine/fsm_engine.py)
-- [LLM連携ソフト実装例](https://github.com/Samizo-AITL/AITL-H/blob/main/implementary/llm_interface.py)
+| 項目｜Item | リンク｜Link |
+|------|------|
+| **AITL-H理論**<br>AITL-H Theory | [theory/](https://github.com/Samizo-AITL/AITL-H/tree/main/theory) |
+| **PoC設計マニュアル**<br>PoC Design Guide | [docs/](https://github.com/Samizo-AITL/AITL-H/tree/main/docs) |
+| **FSMエンジン実装例**<br>FSM Engine Example | [`fsm_engine.py`](https://github.com/Samizo-AITL/AITL-H/blob/main/implementary/fsm_engine/fsm_engine.py) |
+| **LLM連携ソフト例**<br>LLM Interface Example | [`llm_interface.py`](https://github.com/Samizo-AITL/AITL-H/blob/main/implementary/llm_interface.py) |
 
-> ※本章は Edusemi 特別編として、AITL-H実装との連携を前提としています。
-
----
-
-## 🎓 学習目標
-
-- 三層制御（FSM×PID×LLM）の責務分離と再利用設計
-- FSMの状態モデルからVerilog化への手順
-- PID制御器のSoC統合とアナログ/デジタル選択
-- LLM接続におけるソフト制御連携設計（RISC-V連動）
-- 統合制御システムのSoC実装における設計パターン
+> 💡 **注記｜Note**：本章は **Edusemi特別編** として、AITL-H実装との連携を前提としています。  
+> This chapter is a **special edition** of Edusemi, assuming integration with the AITL-H implementation.
 
 ---
 
-### 👤 著者・ライセンス｜Author & License
+## 🎓 学習目標｜Learning Objectives
 
 | 項目｜Item | 内容｜Details |
-|------------|----------------------------|
+|------|------|
+| **三層制御の責務分離と再利用設計**<br>Layered responsibility and reusable design | 各層の役割を明確化し、モジュール間の独立性を高める<br>Clarify each layer's role and enhance module independence |
+| **FSMモデルからVerilog化への手順**<br>FSM Modeling to Verilog Flow | 状態遷移図 → ステートマシン → Verilog構造化<br>State transition → FSM diagram → Verilog implementation |
+| **PID制御器のSoC統合設計**<br>SoC Integration of PID Controller | デジタル/アナログ選択とインターフェース設計<br>Digital/Analog choice and interface integration |
+| **LLMとのソフト連携設計**<br>Software Integration with LLM | RISC-Vベースでのデータ受渡・I/O制御<br>Data exchange and I/O via RISC-V |
+| **統合制御SoCの設計パターン理解**<br>Understanding SoC Design Patterns | 三層連携時の設計テンプレート習得<br>Mastering templates for integrated layered control |
+
+---
+
+## 👤 著者・ライセンス｜Author & License
+
+| 項目｜Item | 内容｜Details |
+|------|------|
 | **著者｜Author** | 三溝 真一（Shinichi Samizo）<br>信州大学大学院 修了／元 セイコーエプソン |
 | **GitHub** | [Samizo-AITL](https://github.com/Samizo-AITL) |
 | **Email** | [shin3t72@gmail.com](mailto:shin3t72@gmail.com) |
@@ -99,6 +97,4 @@ f_chapter3_socsystem/
 
 ---
 
-#### 🏠 [Edusemi-v4x トップへ戻る｜Back to Edusemi-v4x Top](../README.md)
-
----
+🏠 [Edusemi-v4x トップへ戻る｜Back to Edusemi-v4x Top](../README.md)
