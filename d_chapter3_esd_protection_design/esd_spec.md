@@ -26,43 +26,57 @@ Designers must understand the **meanings and limitations of ESD test models (HBM
 
 ---
 
+## 🧠 CDMが顕在化した背景 / Why CDM Became More Critical
+
+- **微細化によりゲート酸化膜が極端に薄くなったことで、CDM放電による内部破壊が発生しやすくなった。**  
+  → Gate oxide thinning in advanced nodes makes circuits highly vulnerable to fast CDM pulses.
+
+- **組立工程の自動化により、帯電した装置やチャックによる放電が増加。**  
+  → Automation equipment (e.g. pick-and-place handlers) lacks sufficient ESD mitigation compared to human operators.
+
+> ✅ **HBMでは防げるが、CDMで破壊される**という製品が増えている。  
+> ✅ Many modern failures pass HBM but fail CDM due to internal charging and ultra-fast discharges.
+
+---
+
 ## 🧪 各試験モデルの条件と代表的規格 / Test Conditions and Standards
 
 ### ✅ **HBM（人体モデル / Human Body Model）**
 
-- 📐 **モデル構成**：100 pF + 1.5 kΩ  
-- 🌊 **波形**：指数減衰型、~150 ns  
-- 🔋 **電圧範囲**：500 V〜2000 V  
-- 📘 **規格**：JEDEC JESD22-A114
+- 📐 モデル構成：100 pF + 1.5 kΩ  
+- 🌊 波形：指数減衰型、~150 ns  
+- 🔋 電圧範囲：500 V〜2000 V  
+- 📘 規格：JEDEC JESD22-A114
 
 ### ✅ **MM（機器モデル / Machine Model）**
 
-- 📐 **モデル構成**：200 pF + 0 Ω（ほぼ短絡）  
-- 🌊 **波形**：非常に急峻で短時間  
-- 🔋 **電圧範囲**：200 V〜400 V（現在は非推奨）  
-- 📘 **規格**：JEDEC JESD22-A115（Obsolete / Not Recommended）
+- 📐 モデル構成：200 pF + 0 Ω（短絡）  
+- 🌊 波形：非常に急峻  
+- 🔋 電圧範囲：200 V〜400 V（現在は非推奨）  
+- 📘 規格：JEDEC JESD22-A115（Obsolete / Not Recommended）
 
 ### ✅ **CDM（帯電デバイスモデル / Charged Device Model）**
 
-- 📐 **モデル構成**：実チップが自己帯電  
-- 🌊 **放電時間**：数百 ps で完了（非常に高速）  
-- 🔋 **電圧範囲**：250 V〜1000 V  
-- 📘 **規格**：JEDEC JESD22-C101 / ANSI/ESDA/JEDEC JS-002
+- 📐 モデル構成：デバイスが自己帯電  
+- 🌊 放電時間：数百 ps で完了（超高速）  
+- 🔋 電圧範囲：250 V〜1000 V  
+- 📘 規格：JEDEC JESD22-C101 / ANSI/ESDA/JEDEC JS-002
 
 ---
 
 ## 🧩 実務設計との接続点 / Practical Design Considerations
 
-- ⚠️ **設計ではCDMが最も厳しい試験条件となる**  
-  → CDM is the most stringent model in actual circuit design  
-  → 対策例：**短距離GND経路、低インダクタンス配線、左右対称レイアウト**  
-  → Countermeasures: short GND paths, low-L layout, symmetry
+- ⚠️ **CDMは設計上最も厳しい試験条件とされる**  
+  → CDM is the most stringent condition in modern design
 
-- ✅ **HBM 250Vは最低限の耐性要件（JEDEC Class 1）**  
-  → HBM 250V is the baseline requirement in JEDEC Class 1
+  ✅ 対策例：**短距離GND経路、低インダクタンス配線、左右対称レイアウト**  
+  → Short GND paths, low-inductance routing, and symmetric layout
 
-- 🔧 **高信頼性製品では HBM 2kV, CDM 500V 以上が望ましい**  
-  → High-reliability ICs may require HBM ≥ 2kV, CDM ≥ 500V
+- ✅ **HBM 250V（JEDEC Class 1）は最低条件**  
+  → HBM 250V is the minimum accepted level for JEDEC Class 1
+
+- 🔧 **高信頼性製品では HBM ≥ 2kV、CDM ≥ 500V が求められる**  
+  → HBM ≥ 2kV and CDM ≥ 500V are targets for high-reliability applications
 
 ---
 
@@ -70,21 +84,21 @@ Designers must understand the **meanings and limitations of ESD test models (HBM
 
 | 観点 / Factor | 試験条件 / Test Conditions | 実環境 / Real-World Scenarios |
 |---------------|-----------------------------|-------------------------------|
-| **試験対象**<br>Target | 単一ピン放電<br>Single pin discharge | 多ピン同時放電の可能性<br>Multiple-pin simultaneous |
-| **温度条件**<br>Temperature | 常温で試験<br>Room temperature | 実装中は高温/高湿もあり<br>High temp/humidity in real process |
-| **再現性**<br>Reproducibility | 安定した波形<br>Controlled waveform | ランダムな放電イベント<br>Random and uncontrolled events |
+| **試験対象**<br>Target | 単一ピン放電<br>Single pin | 多ピン同時放電ありうる<br>Multi-pin simultaneous events |
+| **温度条件**<br>Temperature | 常温<br>Room temp | 実装中は高温高湿もあり<br>High temp/humidity possible |
+| **再現性**<br>Reproducibility | 安定した波形<br>Controlled waveform | 放電はランダム<br>Random, uncontrolled events |
 
-> 🔍 **“試験で合格”は安全の保証ではない。現場を意識した設計が重要。**  
-> 🔍 **Passing tests does not guarantee robustness — real-world awareness is essential.**
+> 🔍 **“試験で合格”＝安全ではない。実装現場を意識した設計が必要。**  
+> 🔍 **Passing tests ≠ guaranteed safety. Real-world awareness is critical.**
 
 ---
 
 ## 📚 教材的意義 / Educational Significance
 
-- ✅ **設計段階における数値目標の明確化**  
-- ✅ 各モデルの**物理的イメージの理解**  
-- ✅ 信頼性試験と**設計仕様の橋渡し教材**  
-- ✅ **品質・信頼性エンジニアとの共通言語を形成**
+- ✅ 試験値と**設計限界の数値の意味**を明確にする  
+- ✅ **ESDモデルの構造的・物理的な違い**を理解できる  
+- ✅ 信頼性試験と**設計仕様の橋渡し教材**として活用可能  
+- ✅ 品質・解析・設計の**共通言語を形成**
 
 ---
 
