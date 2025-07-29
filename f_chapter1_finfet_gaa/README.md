@@ -46,17 +46,17 @@ Structure diagrams, gate coverage illustrations, and scaling roadmaps will be in
 
 ---
 
-## 🧑‍💼 著者・ライセンス / Author & License
+### 👤 著者・ライセンス｜Author & License
 
-| 項目 / Item | 内容 / Details |
-|-------------|----------------|
-| **著者 / Author** | 三溝 真一（Shinichi Samizo）<br>信州大学大学院 修了・元セイコーエプソン |
+| 項目｜Item | 内容｜Details |
+|------------|----------------------------|
+| **著者｜Author** | 三溝 真一（Shinichi Samizo）<br>信州大学大学院 修了／元 セイコーエプソン |
 | **GitHub** | [Samizo-AITL](https://github.com/Samizo-AITL) |
 | **Email** | [shin3t72@gmail.com](mailto:shin3t72@gmail.com) |
-| **ライセンス / License** | MIT License（再配布・改変可） |
+| **ライセンス｜License** | MIT License（再配布・改変自由）<br>Redistribution and modification allowed |
 
 ---
 
-## 🏠 [Edusemi トップに戻る｜Back to Edusemi-v4x Top](../README.md)
+### 🏠 [Edusemi-v4x トップへ戻る｜Back to Edusemi-v4x Top](../README.md)
 
 ---
