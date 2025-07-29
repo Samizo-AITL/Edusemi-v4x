@@ -53,6 +53,24 @@ This section introduces **common ESD failure modes**, analysis techniques, and d
 - 💥 **症状 / Symptom**：高温高湿で不良再現  
 - 🔍 **解析 / Analysis**：CDMによりゲート酸化膜が破壊、EMMIにて発光観察  
 - 🔧 **対応 / Action**：クランプダイオード追加、入力パスに制限抵抗挿入
+  
+---
+
+### 🧭 ケース③：自動組立ラインでのCDM破壊と対策  
+**Case 3: CDM-Induced Failure During Automated Assembly**
+
+- 💥 **症状 / Symptom**：特定チップが自動実装後に高い不良率を示す（手組みでは正常）  
+- 🔍 **解析 / Analysis**：CDMによるゲート酸化膜破壊が推定され、TEMにて絶縁膜の破損を確認  
+- 📉 **背景 / Context**：プロセス微細化（0.35μm → 0.18μm）に伴い、CDM耐性が低下  
+- 🤖 **原因 / Cause**：自動化装置の帯電対策が不十分で、ピックアップ中に内部放電が発生
+
+- 🔧 **対応 / Action**：
+  - 装置の帯電対策（チャックや搬送部に導電処理と接地）
+  - ESD保護レイアウトの強化（GNDパス短縮、ガードリング2重化）
+  - 保護素子のサイズ見直し（CDM向けにGGNMOS強化）
+
+> ✅ この事例は、**「手組みでは再現しないESD破壊」**の典型例であり、  
+> **装置設計とチップ保護レイアウトの連携不足が招くESDリスク**を示している。
 
 ---
 
