@@ -79,4 +79,11 @@ ESD耐性は、製品出荷前に **国際規格に基づいた試験** によ�
 
 ---
 
+## 🧭 章全体への導線 / Link to Chapter Overview
+
+📂 [ESD保護設計の章トップへ](../d_chapter3_esd_protection_design/README.md)  
+📂 [Back to Chapter Overview: ESD Protection Design](../d_chapter3_esd_protection_design/README.md)
+
+---
+
 © 2025 Shinichi Samizo / MIT License
