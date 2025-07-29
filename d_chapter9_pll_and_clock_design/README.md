@@ -1,46 +1,57 @@
-# ⏰ 応用編 第9章：PLLとクロック設計
+# ⏰ 応用編 第9章：PLLとクロック設計｜Applied Chapter 9: PLL and Clock Design
 
 ---
 
-## 📘 概要
+## 📘 概要｜Overview
 
 クロックはすべての同期動作の基準であり、LSI設計において最も重要な信号のひとつです。  
-その中でも、**PLL（Phase-Locked Loop）** は高精度なクロックを生成・整形する中心的な構成要素です。
+Clock is the foundation of all synchronous operations and one of the most critical signals in LSI design.
 
-本章では、PLLの動作原理から始まり、スキュー・ジッタといった実装上の課題と対策、さらに**クロックツリー設計**による遅延最適化まで、クロック設計の基礎から応用までを体系的に学びます。
+その中でも、**PLL（Phase-Locked Loop）** は高精度なクロックを生成・整形する中心的な構成要素です。  
+Among them, **PLL (Phase-Locked Loop)** plays a central role in generating and refining high-precision clocks.
 
----
-
-## 📂 セクション構成
-
-| ファイル名 | 内容 |
-|------------|------|
-| [`pll_basics.md`](pll_basics.md) | PLLの基本構造と動作原理。VCO、PFD、ループフィルタの役割 |
-| [`clock_tree_design.md`](clock_tree_design.md) | CTSによるクロック遅延最小化とスキュー均一化 |
-| [`jitter_and_skew.md`](jitter_and_skew.md) | ジッタ・スキューの理解と対策。STAやシールド設計にも言及 |
+本章では、PLLの動作原理からスキュー・ジッタ対策、クロックツリー設計までを網羅します。  
+This chapter covers everything from the basic principles of PLLs to skew/jitter handling and clock tree design.
 
 ---
 
-## 🎯 対象読者
+## 📂 セクション構成｜Section Structure
 
-- クロック設計やタイミング設計を初めて扱う学生・若手技術者  
-- PLLやCTSに関する基礎的な知識を整理したい方  
-- STAやPDKの観点からクロック信号の課題を理解したい教育者・設計者  
-
----
-
-## 🔗 関連章
-
-- [基礎編　第5章 SoC設計フローとEDA](../chapter5_soc_design_flow/README.md)：配置・配線後のクロックツリー構築とタイミング設計の接続  
-- [基礎編　第6章 テストとパッケージ](../chapter6_test_and_package/README.md)：ジッタによるタイミングエラーや波形品質の実測検証  
+| ファイル名｜File | 内容｜Description |
+|------------------|--------------------------|
+| [`pll_basics.md`](pll_basics.md) | **PLLの基本構造と動作原理**<br>Structure and operation of PLL, including VCO, PFD, loop filter |
+| [`clock_tree_design.md`](clock_tree_design.md) | **クロックツリー設計と遅延最小化**<br>CTS techniques to minimize skew and delay |
+| [`jitter_and_skew.md`](jitter_and_skew.md) | **ジッタとスキューの理解と対策**<br>Definition, causes, and mitigation of jitter and skew |
 
 ---
 
-### 👤 著者・ライセンス｜Author & License
+## 🎯 対象読者｜Target Audience
+
+- 初めてクロック設計やタイミング設計を学ぶ学生・若手技術者  
+  Students and junior engineers new to clock/timing design  
+- PLLやCTSの基礎知識を整理したい設計者  
+  Designers looking to review PLL and CTS basics  
+- ジッタ・スキューの物理的意味を学びたい教育者  
+  Educators exploring physical implications of jitter and skew  
+
+---
+
+## 🔗 関連章｜Related Chapters
+
+- [基礎編 第5章 SoC設計フローとEDA](../chapter5_soc_design_flow/README.md)  
+  ↳ クロックツリー構築とSTAとの接続  
+  ↳ Clock tree construction and STA integration  
+- [基礎編 第6章 テストとパッケージ](../chapter6_test_and_package/README.md)  
+  ↳ 波形品質、タイミング検証との関連  
+  ↳ Signal integrity and timing test connections  
+
+---
+
+## 👤 著者・ライセンス｜Author & License
 
 | 項目｜Item | 内容｜Details |
-|------------|----------------------------|
-| **著者｜Author** | 三溝 真一（Shinichi Samizo）<br>信州大学大学院 修了／元 セイコーエプソン |
+|------------|-----------------------------|
+| **著者｜Author** | 三溝 真一（Shinichi Samizo）<br>Shinshu Univ. Graduate / Ex-SEIKO Epson |
 | **GitHub** | [Samizo-AITL](https://github.com/Samizo-AITL) |
 | **Email** | [shin3t72@gmail.com](mailto:shin3t72@gmail.com) |
 | **ライセンス｜License** | MIT License（再配布・改変自由）<br>Redistribution and modification allowed |
