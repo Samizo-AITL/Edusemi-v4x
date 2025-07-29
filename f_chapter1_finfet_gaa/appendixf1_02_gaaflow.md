@@ -1,410 +1,504 @@
-# 補足資料：GAA Multi-Nanosheet FET 製造プロセスフロー（全48ステップ）
+# 📘 GAA Multi-Nanosheet FET 製造プロセスフロー  
+# 📘 GAA Multi-Nanosheet FET Process Flow
 
-本資料では、先端ノードにおける GAA（Gate-All-Around）Multi-Nanosheet FET の製造プロセスを全48ステップで分解し、各工程の目的・プロセス条件・技術的な要点を体系的に記述します。
-
----
-
-## 🔹 前提情報
-
-- **対象構造**：GAA Multi-Nanosheet FET（5nm～2nm世代）
-- **基板仕様**：300 mm Si（⟨100⟩）、p型、TTV < 1 µm、Bow < 40 µm
-- **チャネル構成**：Si/SiGe積層（例：Si 5 nm / SiGe 8 nm ×3）
-- **目的**：短チャネル制御を最大化するフルサラウンドゲート構造の実現
+本ドキュメントでは、**先端ノード（5nm〜2nm世代）で採用されるGAA（Gate-All-Around）Multi-Nanosheet FET**の製造プロセスを、**日本語・英語併記形式**で段階的に解説します。各ステップは**目的・条件・技術要点**の3点に整理され、**表形式＋太字メリハリ**で視覚的に理解しやすい構成となっています。
 
 ---
 
-## 🔸 プロセスフロー一覧（概要）
+## 🔹 前提情報 / Basic Assumptions
 
-| ステップ範囲 | 工程群                             | 主な内容                                                  |
-|--------------|------------------------------------|-----------------------------------------------------------|
-| Step 1–3     | 基板準備・ウェル形成               | SOIまたはエピ基板、STI、ウェル形成                       |
-| Step 4–6     | チャネルスタック形成               | Si/SiGe多層堆積、初期酸化膜整形                          |
-| Step 7–9     | ナノシート形成・チャネル露出        | パターン形成、選択エッチによるSiGe除去                   |
-| Step 10–15   | ゲート堆積と定義                    | High-k/メタルゲート形成、GAA構造包囲                     |
-| Step 16–26   | S/D形成とコンタクト                 | Epitaxy, Anneal, Silicide, ILD, CMP                       |
-| Step 27–48   | 配線形成、UBM、テスト・パッケージング | FinFETとほぼ同一のフロー構成（適宜差異を記述）          |
-
----
-
-## ① 基板準備・チャネル多層形成（Step 1〜6）
-
-### Step 1: Substrate Preparation (SOI or Bulk)
-- **目的**：GAA用高品質SOI基板または薄エピ層Si基板の準備
-- **条件**：300 mm、(100) Si、BOX厚 ~145 nm（SOI）、または薄エピ ~20 nm（bulk）
-- **技術ポイント**：ボディ効果抑制とアンダーカット性を両立させる選択が必要
+| 項目 / Item | 内容（日本語） | Description (English) |
+|-------------|----------------|------------------------|
+| **構造 / Structure** | GAA Multi-Nanosheet FET（Si/SiGeスタック構造） | GAA Multi-Nanosheet FET with Si/SiGe stacking |
+| **適用ノード / Target Node** | 5nm〜2nm CMOSロジック | 5nm–2nm CMOS logic |
+| **基板 / Substrate** | 300 mm Si (100), p型, TTV < 1 µm | 300 mm Si (100), p-type, TTV < 1 µm |
+| **チャネル / Channel Stack** | Si 5nm / SiGe 10nm × 3〜5層 | Si 5nm / SiGe 10nm × 3–5 layers |
+| **主目的 / Main Goal** | ゲートによる完全包囲制御を通じたSCE抑制 | Suppression of SCE via full gate control |
 
 ---
 
-### Step 2: Shallow Trench Isolation (STI)
-- **目的**：デバイス間絶縁の形成
-- **条件**：通常と同様、ArF露光 + RIE、TEOS埋込 + CMP
-- **技術ポイント**：ナノシート整形後に形状崩れしないSTI平坦性が求められる
+## 🔸 Step 1：基板準備 / Substrate Preparation
+
+| 項目 | 内容（日本語） | Description (English) |
+|------|----------------|------------------------|
+| **目的 / Purpose** | 高品質SOIまたはエピタキシャルSi基板を準備する | Prepare high-quality SOI or epitaxial Si substrate |
+| **条件 / Conditions** | 300mm Si (100), BOX厚 145nm（SOI）またはエピ厚 ~20nm | 300mm Si (100), BOX thickness ~145nm (SOI) or epi-layer ~20nm |
+| **技術要点 / Key Points** | アンダーカット性と電気特性の最適バランスを取る | Optimize trade-off between undercut profile and electrical performance |
 
 ---
 
-### Step 3: Well and Channel Implantation
-- **目的**：チャネル領域のn-well/p-well形成
-- **条件**：B, As, P注入、~10¹³ cm⁻²、RTA ~1000°C
-- **技術ポイント**：ナノシート層へ不要な拡散を避ける低温プロファイルが望ましい
+## 🔸 Step 2：STI形成 / Shallow Trench Isolation (STI)
+
+| 項目 | 内容（日本語） | Description (English) |
+|------|----------------|------------------------|
+| **目的 / Purpose** | トランジスタ間の電気絶縁を確保する | Ensure electrical isolation between devices |
+| **条件 / Conditions** | ArF露光 + RIE + TEOS埋込 → CMP | ArF lithography + RIE + TEOS fill → CMP |
+| **技術要点 / Key Points** | STI平坦性が後工程のチャネル構造形成に影響する | STI planarity critically affects channel stack patterning |
 
 ---
 
-### Step 4: Channel Stack Deposition (Si/SiGe Multi-Layer)
-- **目的**：交互のSi/SiGe層スタック（3~5層）で後のナノシート構造を形成
-- **条件**：超高真空CVD（UHVCVD）またはRP-CVD、Si ~5–8 nm、SiGe ~10 nm
-- **技術ポイント**：厚さ均一性と界面鮮明性がナノワイヤ品質に直結
+## 🔸 Step 3：ウェル注入 / Well Implantation
+
+| 項目 | 内容（日本語） | Description (English) |
+|------|----------------|------------------------|
+| **目的 / Purpose** | p-well / n-well を形成してチャネル領域を定義する | Define p-well/n-well regions for the channel |
+| **条件 / Conditions** | B, As, P注入（~10¹³ cm⁻²）、RTA ~1000℃ | Implant B, As, P (~10¹³ cm⁻²), RTA at ~1000°C |
+| **技術要点 / Key Points** | ナノシートスタックへの熱拡散を抑えることが重要 | Suppressing thermal diffusion into nanosheet stack is critical |
 
 ---
 
-### Step 5: Channel Stack Oxidation and Capping
-- **目的**：初期酸化膜（インターフェース品質確保）、保護膜形成
-- **条件**：ドライ酸化またはALD酸化、SiO₂ ~1–2 nm、Si₃N₄キャップ ~5 nm
-- **技術ポイント**：ナノシート界面の欠陥密度を極小化
+## 🔸 Step 4：チャネル積層堆積 / Channel Stack Deposition
+
+| 項目 | 内容（日本語） | Description (English) |
+|------|----------------|------------------------|
+| **目的 / Purpose** | Si/SiGeの多層構造を堆積し、後のナノシート構造を形成する | Deposit multilayer Si/SiGe stack to form future nanosheet |
+| **条件 / Conditions** | RP-CVDまたはUHV-CVD、Si 5–8nm / SiGe 10nm ×3 | RP-CVD or UHV-CVD, Si 5–8nm / SiGe 10nm ×3 |
+| **技術要点 / Key Points** | 界面のシャープネスと厚さ均一性が性能に直結 | Interface sharpness and thickness uniformity are essential |
 
 ---
 
-### Step 6: Hardmask Deposition & Lithography
-- **目的**：チャネルスタックパターン形成のためのハードマスク堆積と露光
-- **条件**：SiNまたはTiNハードマスク、ArFまたはEUVリソ、CD ~20–30 nm
-- **技術ポイント**：エッチング耐性とCD均一性の両立
+## 🔸 Step 5：初期酸化とキャップ形成 / Initial Oxidation & Capping
+
+| 項目 | 内容（日本語） | Description (English) |
+|------|----------------|------------------------|
+| **目的 / Purpose** | チャネル表面を酸化し、後のゲート絶縁膜の品質を高める | Oxidize channel surface to improve gate dielectric quality |
+| **条件 / Conditions** | ドライ酸化またはALD酸化、SiO₂ ~1–2nm + SiNキャップ ~5nm | Dry or ALD oxidation, SiO₂ ~1–2nm + SiN cap ~5nm |
+| **技術要点 / Key Points** | 酸化によるチャネル界面欠陥の低減がカギ | Interface defect suppression is critical for reliability |
 
 ---
 
-## ② ナノシート構造形成・ゲート形成（Step 7〜15）
+## 🔸 Step 6：ハードマスク堆積とリソグラフィ / Hardmask Deposition & Lithography
 
-### Step 7: Stack Etch (Channel Fin Patterning)
-- **目的**：チャネルスタックをFin状にパターニング
-- **条件**：垂直プロファイルのRIE、SiN/TiNハードマスク使用
-- **技術ポイント**：側壁荒れを抑えるエッチ制御が重要
-
----
-
-### Step 8: Selective SiGe Etch (Nanogap Formation)
-- **目的**：SiGe層の除去によるナノシート間隙形成（GAA空間）
-- **条件**：HClベースの選択エッチ、Si保持率 > 100:1
-- **技術ポイント**：Siゲート支持構造の崩壊防止が最重要
+| 項目 | 内容（日本語） | Description (English) |
+|------|----------------|------------------------|
+| **目的 / Purpose** | パターン形成用のハードマスク層を形成し、ナノシートパターンを描画 | Form hardmask layer and define nanosheet pattern |
+| **条件 / Conditions** | TiN/SiN堆積、ArFまたはEUV露光、CD ~20–30nm | TiN/SiN deposition, ArF or EUV lithography, CD ~20–30nm |
+| **技術要点 / Key Points** | 高アスペクト比の忠実な転写と後工程耐性が要求される | High aspect-ratio pattern fidelity and etch resistance required |
 
 ---
 
-### Step 9: Inner Spacer Deposition
-- **目的**：ナノシート下部・側部の空隙に絶縁膜（SiN）形成
-- **条件**：ALDまたはLPCVDによるSiN、アニールによる膜均一化
-- **技術ポイント**：後のゲート包囲の形状を決める重要工程
+## 🔸 Step 7：チャネルパターンエッチ / Stack Etch (Channel Fin Patterning)
+
+| 項目 | 内容（日本語） | Description (English) |
+|------|----------------|------------------------|
+| **目的 / Purpose** | チャネルスタックをFin状にエッチングし、ナノシート構造の外形を定義する | Etch the channel stack into fin shape to define nanosheet outline |
+| **条件 / Conditions** | 垂直プロファイルのRIE、TiN/SiNハードマスク使用 | Vertical-profile RIE with TiN/SiN hardmask |
+| **技術要点 / Key Points** | 側壁の粗さ・下部アンダーカットを最小化するエッチ条件が重要 | Critical to minimize sidewall roughness and undercut at base |
 
 ---
 
-### Step 10: Dummy Gate Fill
-- **目的**：プレゲート形成（後のHigh-k/Metal Gateプロセスを分離）
-- **条件**：Poly-Si堆積、CMP平坦化、パターン露出
-- **技術ポイント**：ゲートリプレースに向けた厚み管理
+## 🔸 Step 8：選択的SiGe除去 / Selective SiGe Etch (Nanogap Formation)
+
+| 項目 | 内容（日本語） | Description (English) |
+|------|----------------|------------------------|
+| **目的 / Purpose** | SiGe犠牲層を除去し、ナノシート間の空間（GAAゲート用空洞）を形成する | Remove SiGe sacrificial layers to form gaps for GAA gate |
+| **条件 / Conditions** | HClベースの選択エッチ、Si/SiGe選択比 > 100:1 | HCl-based selective etch, Si/SiGe selectivity > 100:1 |
+| **技術要点 / Key Points** | Si層（ナノシート）を損傷せずにSiGeのみを確実に除去する必要がある | Must fully remove SiGe while preserving Si nanosheet integrity |
 
 ---
 
-### Step 11: Source/Drain Extension Implant
-- **目的**：軽いS/D拡張注入で短チャネル効果抑制
-- **条件**：BまたはAs低エネルギー注入、~10¹³–10¹⁴ cm⁻²
-- **技術ポイント**：チャネル近傍での拡がり抑制が重要
+## 🔸 Step 9：内側スペーサ堆積 / Inner Spacer Deposition
+
+| 項目 | 内容（日本語） | Description (English) |
+|------|----------------|------------------------|
+| **目的 / Purpose** | ナノシート周囲に絶縁スペーサ（SiN等）を形成して、S/D隔離とゲート包囲準備を行う | Form insulating inner spacers (e.g., SiN) around nanosheets for S/D isolation and gate encapsulation |
+| **条件 / Conditions** | ALDまたはLPCVDによるSiN堆積、アニールで密着強化 | SiN deposition via ALD or LPCVD, followed by annealing |
+| **技術要点 / Key Points** | ナノギャップへの均一充填と後工程でのスペーサエッチ制御性がカギ | Key to achieve uniform gap fill and precise etch control in later steps |
 
 ---
 
-### Step 12: Inner Spacer Etch Back
-- **目的**：内側スペーサのリセス（部分除去）
-- **条件**：RIE + CMP制御
-- **技術ポイント**：S/Dエピ成長領域の確保
+## 🔸 Step 10：ダミーゲート形成 / Dummy Gate Fill
+
+| 項目 | 日本語 / Japanese | 英語 / English |
+|------|------------------|----------------|
+| **目的 / Purpose** | High-k/Metalゲートプロセス前のポリシリコンによる仮ゲート形成 | Form a temporary gate using poly-Si before High-k/Metal gate process |
+| **条件 / Conditions** | Poly-Si堆積 → CMP平坦化 | Poly-Si deposition followed by CMP planarization |
+| **技術要点 / Key Points** | 厚み均一性と後工程（除去時）の処理性を両立 | Balance thickness uniformity and removability in later steps |
 
 ---
 
-### Step 13: Raised Source/Drain Epitaxy
-- **目的**：シリコン or SiGeによるS/D隆起層成長（抵抗低減）
-- **条件**：Selective Epi、B/Asドープ、高さ ~20–30 nm
-- **技術ポイント**：段差／ファセット形成抑制
+## 🔸 Step 11：S/D拡張注入 / Source/Drain Extension Implant
+
+| 項目 | 日本語 / Japanese | 英語 / English |
+|------|------------------|----------------|
+| **目的 / Purpose** | 短チャネル効果（SCE）抑制のための浅い注入 | Shallow implant to suppress short channel effects (SCE) |
+| **条件 / Conditions** | B⁺ / As⁺、10¹³–10¹⁴ cm⁻²、2–10 keV | B⁺ / As⁺, 10¹³–10¹⁴ cm⁻², 2–10 keV |
+| **技術要点 / Key Points** | 低エネルギー制御でナノシート損傷を抑制 | Use low energy to minimize nanosheet damage |
 
 ---
 
-### Step 14: Dummy Gate Removal
-- **目的**：Poly-Siゲート除去によりHigh-kゲート形成準備
-- **条件**：選択的エッチ（TMAH等）、シート保持
-- **技術ポイント**：ナノシート破壊防止のプロセス管理
+## 🔸 Step 12：内側スペーサリセス / Inner Spacer Etch Back
+
+| 項目 | 日本語 / Japanese | 英語 / English |
+|------|------------------|----------------|
+| **目的 / Purpose** | S/Dエピ領域を露出させるためのスペーサ除去 | Etch back inner spacer to expose S/D epi regions |
+| **条件 / Conditions** | RIEエッチ + CMP調整 | RIE etch + optional CMP tuning |
+| **技術要点 / Key Points** | 精密なリセス制御と支持構造保持が必要 | Requires precise recess control and support retention |
 
 ---
 
-### Step 15: High-k / Metal Gate Stack Deposition
-- **目的**：GAA構造を包囲するHigh-k絶縁膜＋メタルゲート堆積
-- **条件**：ALDによるHfO₂、TiN/TiAlNなどのメタルゲート、CMP整形
-- **技術ポイント**：全面包囲性と界面準備、しきい値調整膜選定
+## 🔸 Step 13：S/Dエピタキシャル成長 / Raised Source/Drain Epitaxy
+
+| 項目 | 日本語 / Japanese | 英語 / English |
+|------|------------------|----------------|
+| **目的 / Purpose** | ソース／ドレインの隆起構造による低抵抗化 | Grow raised S/D regions for reduced resistance |
+| **条件 / Conditions** | Selective Si/SiGe Epi, 高さ 20–30 nm | Selective Si/SiGe Epi, height 20–30 nm |
+| **技術要点 / Key Points** | 結晶欠陥・ファセット形成の抑制が鍵 | Suppress crystal defects and facet formation |
 
 ---
 
-## ③ S/D仕上げとコンタクト形成（Step 16〜26）
+## 🔸 Step 14：ダミーゲート除去 / Dummy Gate Removal
 
-### Step 16: S/D Implantation
-- **目的**：ソース・ドレインの本注入で低抵抗化
-- **条件**：As（nMOS）、B（pMOS）、~10¹⁵ cm⁻²、30–80 keV
-- **技術ポイント**：ナノシート側壁への不要拡散を防ぐアングル注入が有効
-
----
-
-### Step 17: Dopant Activation Anneal
-- **目的**：注入不純物の活性化と欠陥修復
-- **条件**：Spike RTA ~1050°C、短時間で結晶性維持
-- **技術ポイント**：チャネルダメージ回避と活性化率バランスが課題
+| 項目 | 日本語 / Japanese | 英語 / English |
+|------|------------------|----------------|
+| **目的 / Purpose** | Polyゲート除去によるHigh-kゲートの準備 | Remove dummy gate to prepare for High-k/Metal gate |
+| **条件 / Conditions** | TMAH等の選択エッチング | Selective etch using TMAH or similar |
+| **技術要点 / Key Points** | ナノシート損傷を防ぐ穏やかな除去プロセス | Gentle etch to avoid nanosheet damage |
 
 ---
 
-### Step 18: Silicide Formation
-- **目的**：S/Dおよびゲート部への低抵抗シリサイド形成
-- **条件**：NiまたはCoスパッタ + アニール（400–600°C）、未反応金属除去
-- **技術ポイント**：ナノシート上部の金属拡散防止が重要
+## 🔸 Step 15：High-k/Metalゲート形成 / High-k / Metal Gate Stack Deposition
+
+| 項目 | 日本語 / Japanese | 英語 / English |
+|------|------------------|----------------|
+| **目的 / Purpose** | ゲート全周を包囲する高誘電体＋メタル形成 | Form fully surrounding High-k dielectric and metal gate |
+| **条件 / Conditions** | ALDによるHfO₂、TiN/TiAlN等 | HfO₂ via ALD, TiN/TiAlN stack |
+| **技術要点 / Key Points** | 全面包囲性としきい値制御の両立 | Achieve full gate wrap and threshold tuning |
 
 ---
 
-### Step 19: Interlayer Dielectric (ILD) Deposition
-- **目的**：金属層とチャネル構造の絶縁
-- **条件**：SiO₂または低k（SiCOH）膜、PECVD、~400 nm
-- **技術ポイント**：シート包囲構造を埋めるための流動性とストレス制御
+## 🔸 Step 16：S/D本注入 / S/D Implantation
+
+| 項目 | 日本語 / Japanese | 英語 / English |
+|------|------------------|----------------|
+| **目的 / Purpose** | ソース・ドレイン領域の本注入による低抵抗化 | Main implant to reduce S/D resistance |
+| **条件 / Conditions** | B⁺ / As⁺、~10¹⁵ cm⁻²、30–80 keV | B⁺ / As⁺, ~10¹⁵ cm⁻², 30–80 keV |
+| **技術要点 / Key Points** | 拡散抑制とアングル注入による損傷防止 | Use angled implantation and diffusion suppression |
 
 ---
 
-### Step 20: Chemical Mechanical Planarization (CMP)
-- **目的**：ILD表面の平坦化と後工程の露出
-- **条件**：CMPスラリー制御、SiNストップ層を利用
-- **技術ポイント**：過研磨による構造崩壊を防止
+## 🔸 Step 17：活性化アニール / Dopant Activation Anneal
+
+| 項目 | 日本語 / Japanese | 英語 / English |
+|------|------------------|----------------|
+| **目的 / Purpose** | 注入不純物の活性化と結晶修復 | Activate dopants and repair crystal defects |
+| **条件 / Conditions** | Spike RTA ~1050°C, 数秒 | Spike RTA at ~1050°C, several seconds |
+| **技術要点 / Key Points** | 活性化とチャネル保持のトレードオフ | Balance between activation and channel preservation |
 
 ---
 
-### Step 21: Contact Hole Lithography
-- **目的**：S/D・ゲートに接続するコンタクトホール定義
-- **条件**：ArFまたはEUV露光、CD ~30–50 nm
-- **技術ポイント**：選択性の高いエッチとCD精度
+## 🔸 Step 18：シリサイド形成 / Silicide Formation
+
+| 項目 | 日本語 / Japanese | 英語 / English |
+|------|------------------|----------------|
+| **目的 / Purpose** | S/Dとゲートに低抵抗シリサイドを形成 | Form low-resistance silicide on S/D and gate |
+| **条件 / Conditions** | Ni/Coスパッタ＋アニール | Ni or Co sputtering + annealing |
+| **技術要点 / Key Points** | 過剰拡散やナノシート損傷の回避 | Prevent over-diffusion and nanosheet damage |
 
 ---
 
-### Step 22: Contact Etch
-- **目的**：コンタクトホールのエッチング
-- **条件**：フルオロカーボン系RIE、エッチストップ層検出
-- **技術ポイント**：ナノシートゲート下部のリーク防止構造の保護
+## 🔸 Step 19：層間絶縁膜形成 / ILD Deposition
+
+| 項目 | 日本語 / Japanese | 英語 / English |
+|------|------------------|----------------|
+| **目的 / Purpose** | 配線層との絶縁形成 | Electrically isolate from interconnect layers |
+| **条件 / Conditions** | SiO₂またはSiCOH膜、PECVD、~400 nm | SiO₂ or SiCOH by PECVD, ~400 nm thick |
+| **技術要点 / Key Points** | ストレスと充填性のバランス | Balance stress and fill capability |
 
 ---
 
-### Step 23: Barrier and Seed Deposition (Contact)
-- **目的**：コンタクト内壁にバリア・銅シードを形成
-- **条件**：ALDでTiN/TaN、PVDでCuシード、バリア5–10 nm、シード ~50 nm
-- **技術ポイント**：高アスペクト比への均一性が要求される
+## 🔸 Step 20：CMP平坦化 / ILD CMP
+
+| 項目 | 日本語 / Japanese | 英語 / English |
+|------|------------------|----------------|
+| **目的 / Purpose** | ILD表面の平坦化処理 | Planarize the ILD surface |
+| **条件 / Conditions** | CMPスラリー + SiNストップ層 | CMP slurry with SiN stop layer |
+| **技術要点 / Key Points** | 過研磨と欠陥抑制 | Avoid over-polishing and defects |
 
 ---
 
-### Step 24: Copper Electrochemical Plating (ECP)
-- **目的**：コンタクトホール内部の銅埋込
-- **条件**：酸性Cu硫酸浴、添加剤制御、厚さ ~200–400 nm（オーバーフィル）
-- **技術ポイント**：ボイドレス充填と後CMPとの整合性
+## 🔸 Step 21：コンタクトホールリソグラフィ / Contact Hole Lithography
+
+| 項目 | 日本語 / Japanese | 英語 / English |
+|------|------------------|----------------|
+| **目的 / Purpose** | S/D・ゲートとの接続孔を定義 | Define vias for connection to S/D and gate |
+| **条件 / Conditions** | ArFまたはEUV露光、CD ~30–50 nm | ArF or EUV lithography, CD ~30–50 nm |
+| **技術要点 / Key Points** | 選択性とCD精度の高いプロセスが必要 | Requires high selectivity and CD precision |
 
 ---
 
-### Step 25: CMP of Contact Copper
-- **目的**：銅オーバーフィルの除去と平坦化
-- **条件**：Cu選択CMPスラリー、エンドポイント制御
-- **技術ポイント**：ILD露出後の残膜管理（<5 nm）
+## 🔸 Step 22：コンタクトエッチ / Contact Etch
+
+| 項目 | 日本語 / Japanese | 英語 / English |
+|------|------------------|----------------|
+| **目的 / Purpose** | 定義されたコンタクトホールをエッチングしS/Dやゲートを露出 | Etch defined contact holes to expose S/D or gate |
+| **条件 / Conditions** | フルオロカーボン系RIE、エッチストップ層活用 | Fluorocarbon-based RIE with etch-stop layer |
+| **技術要点 / Key Points** | オーバーエッチによるリーク経路生成を回避 | Avoid leakage path formation due to over-etching |
 
 ---
 
-### Step 26: ILD Deposition over Contact
-- **目的**：第1層配線（M1）への絶縁層形成
-- **条件**：低k膜（SiCOHなど）、PECVD、厚さ ~300–500 nm
-- **技術ポイント**：キャッピング機能と低ストレス両立
+## 🔸 Step 23：バリア・シード層形成（コンタクト）  
+**Barrier and Seed Deposition (Contact)**
+
+| 項目 | 日本語 / Japanese | 英語 / English |
+|------|------------------|----------------|
+| **目的 / Purpose** | コンフォーマルなバリア/シード層を形成し銅埋込に備える | Form conformal barrier/seed layers for Cu plating |
+| **条件 / Conditions** | TiN/TaN（ALD）＋ Cuシード（PVD）、膜厚 ~5–50 nm | TiN/TaN by ALD + Cu seed via PVD, thickness ~5–50 nm |
+| **技術要点 / Key Points** | 高アスペクト比での被覆性と界面密着が重要 | Crucial for high aspect-ratio step coverage and adhesion |
 
 ---
 
-## ④ 配線層（M1〜Mx）、上層構造形成（Step 27〜34）
+## 🔸 Step 24：銅電解メッキ（ECP） / Copper Electrochemical Plating
 
-※以下の工程（Step 27〜34）は FinFETと同様のプロセスだが、**構造的な要求精度**がGAAでより厳しくなる。
-
----
-
-### Step 27: M1 Lithography and Etch
-- **目的**：第1層メタル配線定義（デュアルダマシン）
-- **条件**：ArFまたはEUV露光、CD ~20–30 nm、RIE加工
-- **技術ポイント**：配線歪みによるRC遅延への影響を最小化
+| 項目 | 日本語 / Japanese | 英語 / English |
+|------|------------------|----------------|
+| **目的 / Purpose** | コンタクトホール内を銅でボイドなく充填 | Void-free fill of contact holes with copper |
+| **条件 / Conditions** | 酸性Cu硫酸浴、電流密度制御、オーバーフィル ~200–400 nm | Acidic Cu sulfate bath, controlled current density, overfill ~200–400 nm |
+| **技術要点 / Key Points** | 添加剤（レベラー、サプレッサー）の選定が充填品質を左右 | Additive tuning (leveler/suppressor) critical for void control |
 
 ---
 
-### Step 28: Barrier/Seed Deposition for M1
-- **目的**：ビア＋配線の銅めっき前処理
-- **条件**：Ta/TaNバリア（ALD）、Cuシード（PVD）、バリア ~5–10 nm、シード ~50 nm
-- **技術ポイント**：ナノスケール溝への均一膜形成
+## 🔸 Step 25：CMP（コンタクト銅） / CMP of Contact Copper
+
+| 項目 | 日本語 / Japanese | 英語 / English |
+|------|------------------|----------------|
+| **目的 / Purpose** | 銅オーバーフィルの除去とILDの平坦化 | Remove Cu overfill and planarize ILD |
+| **条件 / Conditions** | Cu用CMPスラリー、エンドポイント制御 | Cu-selective CMP slurry, endpoint control |
+| **技術要点 / Key Points** | 過研磨によるILD凹みやCu残膜を防止 | Prevent ILD erosion and residual Cu after polishing |
 
 ---
 
-### Step 29: Copper ECP for M1
-- **目的**：M1ビア・トレンチのCu充填
-- **条件**：通常の酸性浴、電流密度制御、オーバーフィルあり
-- **技術ポイント**：ビアボイド／クラック抑制とスムーズなCMP対応
+## 🔸 Step 26：ILD堆積（配線層直前） / ILD Deposition over Contact
+
+| 項目 | 日本語 / Japanese | 英語 / English |
+|------|------------------|----------------|
+| **目的 / Purpose** | 第1層配線（M1）に向けた絶縁膜の形成 | Form interlayer dielectric above contacts before M1 |
+| **条件 / Conditions** | SiCOHやSiOCなどの低k膜、PECVD、~300–500 nm | Low-k film (e.g., SiCOH), PECVD, thickness ~300–500 nm |
+| **技術要点 / Key Points** | 低寄生容量と良好なキャッピング特性が求められる | Requires low parasitic capacitance and good capping properties |
 
 ---
 
-### Step 30: CMP of M1 Copper
-- **目的**：M1配線の平坦化
-- **条件**：Cu選択CMPスラリー、エンドポイント光学検出
-- **技術ポイント**：面内均一性とラインエッジ整合性
+## 🔸 Step 27：M1リソグラフィ・エッチ / M1 Lithography and Etch
+
+| 項目 | 日本語 / Japanese | 英語 / English |
+|------|------------------|----------------|
+| **目的 / Purpose** | 第1層メタル配線の形状定義 | Define metal-1 wiring patterns |
+| **条件 / Conditions** | ArFまたはEUV露光、CD ~20–30 nm、RIE加工 | ArF/EUV lithography, CD ~20–30 nm, RIE |
+| **技術要点 / Key Points** | 微細ラインの形状保持とCD制御が重要 | Critical for line profile integrity and CD control |
 
 ---
 
-### Step 31: ILD Deposition (M1–M2)
-- **目的**：M1とM2間の絶縁層
-- **条件**：SiCOH系低k膜、厚さ ~400 nm、PECVD
-- **技術ポイント**：層間寄生容量を最小化
+## 🔸 Step 28：M1バリア／シード形成 / Barrier and Seed Deposition for M1
+
+| 項目 | 日本語 / Japanese | 英語 / English |
+|------|------------------|----------------|
+| **目的 / Purpose** | Cu電解めっきに先立つバリアとCuシード層形成 | Prepare for Cu ECP by depositing barrier and seed layers |
+| **条件 / Conditions** | Ta/TaN（ALD）、Cuシード（PVD）、バリア5–10 nm、シード ~50 nm | Ta/TaN (ALD), Cu seed (PVD), barrier 5–10 nm, seed ~50 nm |
+| **技術要点 / Key Points** | トレンチ／ビア内部への均一堆積が不可欠 | Uniform deposition into trenches and vias is essential |
 
 ---
 
-### Step 32: Lithography and Etch for Higher Metal (M2〜Mx)
-- **目的**：上位メタル配線・ビア形成
-- **条件**：EUV/ArF露光、RIE、CD ~20–30 nm
-- **技術ポイント**：深いスタックでのアライメント精度
+## 🔸 Step 29：銅ECP（M1） / Copper ECP for M1
+
+| 項目 | 日本語 / Japanese | 英語 / English |
+|------|------------------|----------------|
+| **目的 / Purpose** | ビア・トレンチ内を銅で埋める | Fill vias/trenches with copper |
+| **条件 / Conditions** | 酸性Cu浴、添加剤制御、オーバーフィル | Acidic Cu bath, additive control, overfill |
+| **技術要点 / Key Points** | ボイドフリーと後工程CMPへの整合が必要 | Void-free fill and CMP compatibility are critical |
 
 ---
 
-### Step 33: Barrier/Seed & Cu Plating (M2〜Mx)
-- **目的**：バリア・シード堆積 → Cu充填（M2〜Mx）
-- **条件**：TaN + Cu（ALD + PVD）、ECPによりオーバーフィル
-- **技術ポイント**：多層堆積におけるストレス／ボイド制御
+## 🔸 Step 30：CMP（M1銅） / CMP of M1 Copper
+
+| 項目 | 日本語 / Japanese | 英語 / English |
+|------|------------------|----------------|
+| **目的 / Purpose** | 銅のオーバーフィル除去と平坦化 | Remove Cu overfill and planarize the surface |
+| **条件 / Conditions** | CMPスラリー、Cu選択性高、エンドポイント制御 | CMP slurry with Cu selectivity, endpoint detection |
+| **技術要点 / Key Points** | 面内均一性とディッシュ/エロージョン抑制 | Intra-wafer uniformity, suppression of dishing/erosion |
 
 ---
 
-### Step 34: CMP of Higher Metal
-- **目的**：配線層表面の平坦化
-- **条件**：同様のCMPスラリーとプロセス
-- **技術ポイント**：ビアリングエッジのエロージョン防止
+## 🔸 Step 31：層間絶縁膜堆積（M1–M2）  
+**ILD Deposition Between M1 and M2**
+
+| 項目 | 日本語 / Japanese | 英語 / English |
+|------|------------------|----------------|
+| **目的 / Purpose** | M1とM2間の絶縁層形成（低k） | Form low-k ILD between M1 and M2 |
+| **条件 / Conditions** | PECVDによりSiCOH系低k膜、厚さ ~400 nm | SiCOH low-k film by PECVD, ~400 nm |
+| **技術要点 / Key Points** | RC遅延低減のためのk値最適化 | Optimize dielectric constant to reduce RC delay |
 
 ---
 
-## ⑤ 上層メタル・キャップ層・パッド・パッケージ工程（Step 35〜48）
+## 🔸 Step 32：上位メタルリソ・エッチ（M2〜Mx）  
+**Higher Metal Lithography and Etch (M2–Mx)**
 
-### Step 35: Cap Layer Deposition
-- **目的**：Cu配線を保護するキャッピング層（SiN/SiCN）形成
-- **条件**：PECVD、膜厚 ~20–50 nm
-- **技術ポイント**：応力とMoistureバリア性能の両立
-
----
-
-### Step 36: Passivation Layer Deposition
-- **目的**：最終保護層（SiN/SiO₂）を形成し外部環境から保護
-- **条件**：PECVD、膜厚 ~0.5–1.0 µm、密着性と無欠陥性重視
-- **技術ポイント**：はんだバンプとの密着不良防止
+| 項目 | 日本語 / Japanese | 英語 / English |
+|------|------------------|----------------|
+| **目的 / Purpose** | M2〜最上層メタルのビア／ラインパターン定義 | Define vias/lines for M2 to top metal layers |
+| **条件 / Conditions** | EUV/ArF露光、RIEエッチ、CD ~20–30 nm | EUV/ArF lithography, RIE etch, CD ~20–30 nm |
+| **技術要点 / Key Points** | 多層配線でのアライメント誤差最小化 | Minimize alignment error across multiple layers |
 
 ---
 
-### Step 37: Pad Opening Lithography and Etch
-- **目的**：最終パッド（UBM）接続用の開口形成
-- **条件**：ArF露光、RIEによるSiN/SiO₂開口
-- **技術ポイント**：UBMパッドのダメージ防止が必須
+## 🔸 Step 33：バリア・シード／銅ECP（M2〜Mx）  
+**Barrier, Seed & Cu Plating for M2–Mx**
+
+| 項目 | 日本語 / Japanese | 英語 / English |
+|------|------------------|----------------|
+| **目的 / Purpose** | 各配線層の銅埋込準備と充填 | Prepare and fill each metal layer with Cu |
+| **条件 / Conditions** | TaNバリア（ALD）、Cuシード（PVD）、ECP | TaN (ALD), Cu seed (PVD), electroplating |
+| **技術要点 / Key Points** | 多層積層による残留応力とボイド制御 | Stress and void control in multilayer stacks |
 
 ---
 
-### Step 38: Under Bump Metallization (UBM)
-- **目的**：NiV/Cu/Au等で構成されるメタル積層でバンプ接続を確保
-- **条件**：PVD + 電解メッキ、総厚 ~10 µm
-- **技術ポイント**：接着・拡散・はんだ濡れ性の最適化
+## 🔸 Step 34：上位配線CMP / CMP of Higher Metal Layers
+
+| 項目 | 日本語 / Japanese | 英語 / English |
+|------|------------------|----------------|
+| **目的 / Purpose** | 各メタル層の表面平坦化と構造確立 | Planarize and define each upper metal layer |
+| **条件 / Conditions** | CMPスラリー、ターゲットエンドポイント制御 | CMP slurry with endpoint monitoring |
+| **技術要点 / Key Points** | RC特性・リソ精度維持のためのCMPプロセス最適化 | Optimize CMP to maintain RC integrity and litho accuracy |
 
 ---
 
-### Step 39: Wafer Thinning (Back Grinding)
-- **目的**：パッケージ厚制御や3D統合のためのウエハ薄化
-- **条件**：バックグラインド + CMP、最終厚 ~100 µm以下
-- **技術ポイント**：チップ曲がり／応力緩和と破損防止
+## 🔸 Step 35：キャップ層堆積 / Cap Layer Deposition
+
+| 項目 | 日本語 / Japanese | 英語 / English |
+|------|------------------|----------------|
+| **目的 / Purpose** | Cu配線の酸化・拡散防止 | Prevent oxidation and diffusion of Cu |
+| **条件 / Conditions** | SiN/SiCN、PECVD、20–50 nm | SiN/SiCN by PECVD, 20–50 nm thick |
+| **技術要点 / Key Points** | バリア性能と機械応力の両立 | Balance between barrier and stress characteristics |
 
 ---
 
-### Step 40: Through-Silicon Via (TSV) & Microbump Formation
-- **目的**：3D実装に向けた縦配線構造とマイクロバンプ形成
-- **条件**：
-  - TSV：DRIEエッチ + Cu埋込 + バリア層形成
-  - Bump：SnAg/Pb-Free ~20–30 µm
-- **技術ポイント**：TSVボイドレス形成とCuクラック防止
+## 🔸 Step 36：パッシベーション層形成 / Passivation Layer Deposition
+
+| 項目 | 日本語 / Japanese | 英語 / English |
+|------|------------------|----------------|
+| **目的 / Purpose** | 外部環境からの保護層形成 | Protect device from external contamination |
+| **条件 / Conditions** | SiN or SiO₂、PECVD、0.5–1.0 µm | SiN/SiO₂ by PECVD, 0.5–1.0 µm thick |
+| **技術要点 / Key Points** | クラック防止と密着性確保 | Crack prevention and adhesion reliability |
 
 ---
 
-### Step 41: Final Passivation
-- **目的**：最終保護膜としてのパッシベーション
-- **条件**：SiNまたはSiO₂、PECVD、厚さ0.5–1.0 µm
-- **技術ポイント**：密着性・熱ストレス・パッケージとの整合
+## 🔸 Step 37：パッド開口 / Pad Opening Lithography & Etch
+
+| 項目 | 日本語 / Japanese | 英語 / English |
+|------|------------------|----------------|
+| **目的 / Purpose** | UBMメタル接続部の開口形成 | Form openings to access UBM pads |
+| **条件 / Conditions** | ArF露光、RIEでパッシベーション開口 | ArF lithography + RIE |
+| **技術要点 / Key Points** | Cuダメージ最小化 | Minimize Cu damage during etch |
 
 ---
 
-### Step 42: Final Wafer Test
-- **目的**：ダイシング前の機能・電気特性試験
-- **条件**：ATEにてリーク電流、しきい値、遅延、歩留まり確認
-- **技術ポイント**：GAA構造由来のしきい値分布制御
+## 🔸 Step 38：UBM形成 / Under Bump Metallization (UBM)
+
+| 項目 | 日本語 / Japanese | 英語 / English |
+|------|------------------|----------------|
+| **目的 / Purpose** | バンプ形成のための多層金属形成 | Form multilayer metals for bump attachment |
+| **条件 / Conditions** | NiV/Cu/Au等、PVD＋電解メッキ、~10 µm | NiV/Cu/Au via PVD + electroplating, ~10 µm |
+| **技術要点 / Key Points** | はんだ濡れ性・密着性の最適化 | Optimize solder wettability and adhesion |
 
 ---
 
-### Step 43: Wafer Dicing
-- **目的**：個別チップへ分離（シンギュレーション）
-- **条件**：レーザースクライビングまたはソーイング、低ダメージ処理
-- **技術ポイント**：薄型ウエハの割れ抑制と高精度
+## 🔸 Step 39：ウエハ薄化 / Wafer Thinning
+
+| 項目 | 日本語 / Japanese | 英語 / English |
+|------|------------------|----------------|
+| **目的 / Purpose** | チップの薄型化・3D実装対応 | Enable thin package and 3D integration |
+| **条件 / Conditions** | バックグラインド + CMP、厚さ ~100 µm以下 | Back grinding + CMP to ~100 µm or less |
+| **技術要点 / Key Points** | チップ割れ・歪み防止 | Prevent cracking and warping |
 
 ---
 
-### Step 44: Die Attach
-- **目的**：基板へのダイ実装
-- **条件**：銀ペースト接着または接着剤、熱圧着
-- **技術ポイント**：接着厚・熱伝導と平坦性制御
+## 🔸 Step 40：TSV & マイクロバンプ形成 / TSV and Microbump Formation
+
+| 項目 | 日本語 / Japanese | 英語 / English |
+|------|------------------|----------------|
+| **目的 / Purpose** | 3D IC接続のための垂直配線形成 | Create vertical interconnects for 3D IC |
+| **条件 / Conditions** | DRIE + Cu埋込、SnAgバンプ形成 | DRIE, Cu fill, SnAg bump plating |
+| **技術要点 / Key Points** | TSV内のボイド・亀裂防止 | Prevent voids and cracks in TSVs |
 
 ---
 
-### Step 45: Flip-Chip Bonding or Wire Bonding
-- **目的**：パッケージ基板との電気接続
-- **条件**：
-  - Flip Chip：バンプ + リフロー接合
-  - ワイヤ：金・銅線による超音波接合
-- **技術ポイント**：信号整合と熱ストレス分散
+## 🔸 Step 41：最終パッシベーション / Final Passivation
+
+| 項目 | 日本語 / Japanese | 英語 / English |
+|------|------------------|----------------|
+| **目的 / Purpose** | パッケージ信頼性の最終保護 | Final environmental protection |
+| **条件 / Conditions** | SiN/SiO₂、PECVD、~1.0 µm | SiN/SiO₂ by PECVD, ~1.0 µm thick |
+| **技術要点 / Key Points** | 応力緩和とチップ保護の両立 | Balance between stress relief and protection |
 
 ---
 
-### Step 46: Underfill Application
-- **目的**：バンプ接合部を封止し信頼性確保
-- **条件**：エポキシ系材料、ディスペンス + キュア（硬化）
-- **技術ポイント**：ボイドフリー塗布とC.T.E.整合
+## 🔸 Step 42：ウエハテスト（最終）/ Final Wafer Test
+
+| 項目 | 日本語 / Japanese | 英語 / English |
+|------|------------------|----------------|
+| **目的 / Purpose** | チップ電気特性の最終検査 | Final electrical test of chips |
+| **条件 / Conditions** | ATE、Iₗₑₐₖ, Vₜₕ, 遅延など評価 | ATE, leakage, threshold, delay test |
+| **技術要点 / Key Points** | GAA構造のばらつき把握が重要 | Must monitor Vt variation due to GAA |
 
 ---
 
-### Step 47: Final Test and Marking
-- **目的**：完成品の最終品質保証試験とロットマーキング
-- **条件**：電気特性、機能、速度試験；レーザー刻印
-- **技術ポイント**：3σ管理とトレーサビリティ
+## 🔸 Step 43：ダイシング / Wafer Dicing
+
+| 項目 | 日本語 / Japanese | 英語 / English |
+|------|------------------|----------------|
+| **目的 / Purpose** | 個別チップへ分割 | Separate dies for packaging |
+| **条件 / Conditions** | レーザーまたはソーイング | Laser scribing or mechanical saw |
+| **技術要点 / Key Points** | ウエハ破損・バリ最小化 | Minimize cracks and chipping |
 
 ---
 
-### Step 48: Packaging (FC-CSP, WLP, FOWLPなど)
-- **目的**：量産パッケージへの封止
-- **条件**：FC-CSP, WLP, FOWLP, SiPなどアプリケーションに応じた選択
-- **技術ポイント**：熱設計、実装性、コストのバランス最適化
+## 🔸 Step 44：ダイアタッチ / Die Attach
+
+| 項目 | 日本語 / Japanese | 英語 / English |
+|------|------------------|----------------|
+| **目的 / Purpose** | チップをパッケージ基板へ実装 | Attach chip to substrate |
+| **条件 / Conditions** | 接着剤、熱圧着など | Adhesive or thermal compression |
+| **技術要点 / Key Points** | 熱伝導と平坦性の確保 | Ensure good thermal path and flatness |
 
 ---
 
-## 📘 補足
+## 🔸 Step 45：フリップチップ or ワイヤボンディング  
+**Flip-Chip Bonding or Wire Bonding**
 
-- 📷 図版（構造断面や工程模式図）は `/images/gaa_*.png` に格納予定
-- 📚 参考文献は別途 appendixf1_ref.md に整理
-- 🏷️ 著者：Shinichi Samizo / MIT License（再利用可）
-
----
-
-## 🔸 図版（予定）
-
-- `images/gaa_stack_structure.png`：Si/SiGeナノシート構造
-- `images/gaa_process_flowchart.png`：GAAプロセスフロー図
-- `images/gaa_release_step.png`：犠牲層除去によるナノシート形成断面
+| 項目 | 日本語 / Japanese | 英語 / English |
+|------|------------------|----------------|
+| **目的 / Purpose** | 基板とチップを電気的に接続 | Electrically connect chip and substrate |
+| **条件 / Conditions** | SnAgリフロー or Au/Cuワイヤ | SnAg reflow or Au/Cu wire |
+| **技術要点 / Key Points** | 接合信頼性と熱歪み制御 | Joint reliability and stress control |
 
 ---
 
-## 🔸 補足
+## 🔸 Step 46：アンダーフィル / Underfill Application
 
-- 本資料は FinFET版の [`appendixf1_01_finfetflow.md`](./appendixf1_01_finfetflow.md) と対応します。
-- 各ステップの工程時間・装置・統計制御指標（例：AFM Rq, OES signal）も随時追記予定。
+| 項目 | 日本語 / Japanese | 英語 / English |
+|------|------------------|----------------|
+| **目的 / Purpose** | 接合部の機械的保護 | Protect joints against mechanical stress |
+| **条件 / Conditions** | エポキシ系材料、加熱硬化 | Epoxy material, thermal cure |
+| **技術要点 / Key Points** | ボイドレス充填、C.T.E整合 | Void-free fill, CTE matching |
 
 ---
 
-## ライセンスと著者
+## 🔸 Step 47：最終試験とマーキング / Final Test and Marking
 
-MITライセンスにて公開。  
-著者：三溝 真一（Shinichi Samizo）  
-連絡先：[shin3t72@gmail.com](mailto:shin3t72@gmail.com)
+| 項目 | 日本語 / Japanese | 英語 / English |
+|------|------------------|----------------|
+| **目的 / Purpose** | 最終品質検査と製品マーキング | Final quality check and device marking |
+| **条件 / Conditions** | 自動試験機（ATE）、レーザー印字 | ATE testing and laser marking |
+| **技術要点 / Key Points** | トレーサビリティと統計管理 | Maintain traceability and statistical control |
+
+---
+
+## 🔸 Step 48：パッケージング / Final Packaging
+
+| 項目 | 日本語 / Japanese | 英語 / English |
+|------|------------------|----------------|
+| **目的 / Purpose** | 顧客向け最終パッケージ封止 | Final sealing and delivery-ready package |
+| **条件 / Conditions** | WLP / FC-CSP / FOWLP / SiPなど | WLP, FC-CSP, FOWLP, SiP, etc. |
+| **技術要点 / Key Points** | 熱設計・歩留まり・コストの最適化 | Balance between thermal design, yield, and cost |
+
+---
+
