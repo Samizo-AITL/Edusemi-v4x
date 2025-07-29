@@ -10,13 +10,13 @@
 
 ## 📚 章構成｜Section Overview
 
-| 節番号｜Section | 内容｜Content |
-|--------|---------|-----------------------------|
-| 5.1 | シミュレーション結果と波形評価｜Waveform Evaluation |
-| 5.2 | 面積・タイミングとレポート解釈｜Area & Timing Report |
-| 5.3 | DRC・LVSチェックとエラー解析｜DRC/LVS & Error Analysis |
-| 5.4 | ブロック間比較と特性考察｜Block Comparison |
-| 5.5 | 改善提案と設計フィードバック｜Feedback and Redesign |
+| 節番号 | 📘 日本語タイトル | 📙 English Title |
+|--------|------------------|------------------|
+| **5.1** | **シミュレーション結果と波形評価** | **Waveform Evaluation** |
+| **5.2** | **面積・タイミングとレポート解釈** | **Area & Timing Report** |
+| **5.3** | **DRC・LVSチェックとエラー解析** | **DRC/LVS & Error Analysis** |
+| **5.4** | **ブロック間比較と特性考察** | **Block Comparison** |
+| **5.5** | **改善提案と設計フィードバック** | **Feedback and Redesign** |
 
 ---
 
