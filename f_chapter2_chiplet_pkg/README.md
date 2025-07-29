@@ -17,25 +17,25 @@ moving away from monolithic SoC integration.
 
 ## 📚 節構成｜Main Sections
 
-| 節番号｜No. | ファイル名｜Filename                         | 内容概要｜Description                                       |
-|--------|-----|---------------------------------------------|-----------------------------------------------------------|
-| 2.1    |     | [f2_1_overview.md](./f2_1_overview.md)       | チップレット化の背景と技術潮流｜Background and Technology Trends |
-| 2.2    |     | [f2_2_25d_pkg.md](./f2_2_25d_pkg.md)         | 2.5D実装技術（CoWoS, インターポーザ）｜2.5D Integration Technologies (CoWoS, Interposer) |
-| 2.3    |     | [f2_3_3d_pkg.md](./f2_3_3d_pkg.md)           | 3D積層技術（TSV, ハイブリッドボンディング）｜3D Stacking (TSV, Hybrid Bonding) |
-| 2.4    |     | [f2_4_pkg_case_study.md](./f2_4_pkg_case_study.md) | 商用事例（AMD, Intel, Appleなど）｜Commercial Case Studies (AMD, Intel, Apple, etc.) |
-| 2.5    |     | [f2_5_design_challenges.md](./f2_5_design_challenges.md) | 熱設計・テスト・タイミング課題｜Thermal, Test, and Timing Challenges |
+| 節番号 | No. | ファイル名 | Filename | 内容概要 | Description |
+|--------|-----|--------------------------|---------------------------|------------------------------|---------------------------------------------------|
+| 2.1    |     | [f2_1_overview.md](./f2_1_overview.md) | Overview | チップレット化の背景と技術潮流 | Background and technology trends |
+| 2.2    |     | [f2_2_25d_pkg.md](./f2_2_25d_pkg.md) | 2.5D技術 | 2.5D実装技術（CoWoS, インターポーザ） | 2.5D integration technologies (CoWoS, interposer) |
+| 2.3    |     | [f2_3_3d_pkg.md](./f2_3_3d_pkg.md) | 3D積層 | 3D積層技術（TSV, hybrid bonding） | 3D stacking (TSV, hybrid bonding) |
+| 2.4    |     | [f2_4_pkg_case_study.md](./f2_4_pkg_case_study.md) | 商用事例 | 商用事例（AMD, Intel, Appleなど） | Commercial cases (AMD, Intel, Apple, etc.) |
+| 2.5    |     | [f2_5_design_challenges.md](./f2_5_design_challenges.md) | 設計課題 | 熱設計・テスト・タイミング課題 | Thermal, test, and timing challenges |
 
 ---
 
 ## 🧾 補足資料｜Appendices
 
-| 番号｜No. | ファイル名｜Filename                                | 内容概要｜Description                                  |
-|--------|-----|--------------------------------------------------|--------------------------------------------------------|
-| A2.1   |     | [appendixf2_01_pkg_term.md](./appendixf2_01_pkg_term.md)       | 実装構造と分類一覧｜Packaging Structure and Classification |
-| A2.2   |     | [appendixf2_02_pkg_materials.md](./appendixf2_02_pkg_materials.md) | パッケージ材料と用途分類｜Packaging Materials and Applications |
-| A2.3   |     | [appendixf2_03_pkg_stackup.md](./appendixf2_03_pkg_stackup.md)     | インターポーザやRDLの積層構造｜Stackup of Interposers and RDL |
-| A2.4   |     | [appendixf2_04_pkg_ifstandard.md](./appendixf2_04_pkg_ifstandard.md) | 標準インタフェース（UCIe等）と技術動向｜Interface Standards (UCIe etc.) and Trends |
-| A2.5   |     | [appendixf2_05_pkg_reliability.md](./appendixf2_05_pkg_reliability.md) | 信頼性・実装課題と対策｜Reliability and Implementation Challenges |
+| 番号 | No. | ファイル名 | Filename | 内容概要 | Description |
+|------|-----|-------------------------------|------------------------------|-------------------------------|-----------------------------------------------|
+| A2.1 |     | [appendixf2_01_pkg_term.md](./appendixf2_01_pkg_term.md) | 用語集 | 実装構造と分類一覧 | Packaging structure and classification |
+| A2.2 |     | [appendixf2_02_pkg_materials.md](./appendixf2_02_pkg_materials.md) | 材料分類 | パッケージ材料と用途分類 | Packaging materials and applications |
+| A2.3 |     | [appendixf2_03_pkg_stackup.md](./appendixf2_03_pkg_stackup.md) | 積層構造 | インターポーザやRDLの積層構造 | Stackup of interposers and RDL |
+| A2.4 |     | [appendixf2_04_pkg_ifstandard.md](./appendixf2_04_pkg_ifstandard.md) | IF標準 | 標準インタフェース（UCIe等）と技術動向 | Interface standards (UCIe etc.) and trends |
+| A2.5 |     | [appendixf2_05_pkg_reliability.md](./appendixf2_05_pkg_reliability.md) | 信頼性 | 信頼性・実装課題と対策 | Reliability and implementation challenges |
 
 ---
 
