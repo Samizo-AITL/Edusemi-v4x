@@ -72,4 +72,11 @@ Top View（例）：
 
 ---
 
+## 🧭 章全体への導線 / Link to Chapter Overview
+
+📂 [ESD保護設計の章トップへ](../d_chapter3_esd_protection_design/README.md)  
+📂 [Back to Chapter Overview: ESD Protection Design](../d_chapter3_esd_protection_design/README.md)
+
+---
+
 © 2025 Shinichi Samizo / MIT License
