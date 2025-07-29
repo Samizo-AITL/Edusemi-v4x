@@ -20,16 +20,16 @@ You will learn the **responsibility separation, connection strategy, and hybrid 
 
 ---
 
-## 📚 章構成｜Chapter Structure
+### 📚 章構成｜Chapter Structure
 
-| 節番号｜Section | 内容｜Content |
-|--------|--------|--------|
-| **3.1** | AITL-Hアーキテクチャと層分離設計<br>AITL-H Architecture and Layered Design |
-| **3.2** | FSM設計とRTLモジュール構成<br>FSM Design and RTL Module Structure |
-| **3.3** | PID制御のASIC実装（デジタル／アナログ）<br>PID Controller Implementation (Digital/Analog) |
-| **3.4** | LLMとの接続設計（RISC-V・I/O連携）<br>LLM Interface Design (RISC-V / I/O Integration) |
-| **3.5** | SoC統合とバス構造・通信設計<br>SoC Integration and Communication Design |
-| **3.6** | ケーススタディ：三層制御によるPoC実装例<br>Case Study: PoC with Three-Layer Control |
+| 🚩 | 📖 日本語タイトル｜Japanese Title | 📘 英語タイトル｜English Title |
+|----|-------------------------------|------------------------------|
+| **3.1** | AITL-Hアーキテクチャと層分離設計 | AITL-H Architecture and Layered Design |
+| **3.2** | FSM設計とRTLモジュール構成 | FSM Design and RTL Module Structure |
+| **3.3** | PID制御のASIC実装（デジタル／アナログ） | PID Controller Implementation (Digital/Analog) |
+| **3.4** | LLMとの接続設計（RISC-V・I/O連携） | LLM Interface Design (RISC-V / I/O Integration) |
+| **3.5** | SoC統合とバス構造・通信設計 | SoC Integration and Communication Design |
+| **3.6** | ケーススタディ：三層制御によるPoC実装例 | Case Study: PoC with Three-Layer Control |
 
 ---
 
