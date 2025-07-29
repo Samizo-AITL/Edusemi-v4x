@@ -62,8 +62,10 @@ SCE, HCI, DIBL, Vth Variability, sky130, 0.18µm
 |--------------|----------------------------------------------------------------------|-------------------------|
 | A-1          | [`0.18um_Logic_ProcessFlow.md`](./0.18um_Logic_ProcessFlow.md)       | 🧪 **0.18µm CMOSプロセスフロー（日本語）**<br>Full logic process flow in Japanese |
 | A-2          | [`0.18um_Logic_ProcessFlow_en.md`](./0.18um_Logic_ProcessFlow_en.md) | 🧪 **0.18µm CMOS Process Flow（English）**<br>Full logic process flow in English  |
+| A-3          | [`0.13um_Logic_ProcessFlow.md`](./0.13um_Logic_ProcessFlow.md)       | 🧪 **0.13µm CMOSプロセスフロー（日本語）**<br>Includes Cu wiring, Low-k dielectric |
+| A-4          | [`0.09um_Logic_ProcessFlow.md`](./0.09um_Logic_ProcessFlow.md)       | 🧪 **90nm CMOSプロセスフロー（日本語）**<br>Includes NiSi salicide, strained-Si, ULK |
 
-> 📌 **本章の理解を深める補足資料**として、0.18µmプロセスの工程を詳細に解説しています。
+> 📌 **本章の理解を深める補足資料**として、各プロセス世代の工程を詳細に解説しています。設計・製造・信頼性の観点から、プロセス技術の進化を比較理解する教材として活用してください。
 
 ---
 
