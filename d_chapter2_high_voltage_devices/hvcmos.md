@@ -145,9 +145,17 @@ N+  N−   P-Sub
 
 ## 🔗 関連リンク｜Related Topics
 
+- [📘 応用編 第2章｜高耐圧デバイス 全体README](../d_chapter2_high_voltage_devices/README.md)：章全体の構成と関連技術の導入  
+  *Chapter 2 Top: Overview of high-voltage devices and structure of this section*
+
 - [`ldmos.md`](./ldmos.md)：LDMOSによる高電流対応技術  
+  *High-current structure using LDMOS*
+
 - [`junction_isolation.md`](./junction_isolation.md)：寄生素子を防ぐ絶縁設計  
-- [chapter5_soc_design_flow](../chapter5_soc_design_flow/)：アナログブロックとSoC設計統合
+  *Isolation techniques to suppress parasitics*
+
+- [chapter5_soc_design_flow](../chapter5_soc_design_flow/)：アナログブロックとSoC設計統合  
+  *Integration of analog blocks into SoC design*
 
 ---
 
