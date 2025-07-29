@@ -1,48 +1,62 @@
-# 🏗️ 第3章：OpenLaneによるデジタル設計実習
-
-本章では、オープンソースEDAフロー「OpenLane」を用いて、RTL記述（Verilog）からGDS生成までの一連のデジタルLSI設計プロセスを体験します。
-
-Sky130 PDKとの接続、実行フローの理解、制約設定、最適化パラメータの調整までを含みます。
+# 🏗️ 第3章：OpenLaneによるデジタル設計実習  
+**Practical Chapter 3: Digital Design Practice Using OpenLane**
 
 ---
 
-## 🎯 学習目標
+## 📘 概要｜Overview
 
-- Verilog RTLからGDSまでのフロー全体を理解する
-- 各ステップ（合成・配置・配線・DRC等）の役割とツールを知る
-- 面積・タイミング・消費電力といった設計結果を評価・解析できる
-- 制約ファイル（`sdc`, `floorplan`）の基本操作を理解する
+本章では、オープンソースEDAフロー「**OpenLane**」を用いて、RTL記述（Verilog）からGDS生成までの  
+一連のデジタルLSI設計プロセスを体験します。  
 
----
+This chapter provides hands-on practice of a **digital design flow** from Verilog RTL to GDS layout  
+using the open-source EDA framework **OpenLane**.
 
-## 📚 フォルダ構成
-
-| フォルダ名 | 内容 |
-|-----------|------|
-| [`01_intro_openlane/`](01_intro_openlane/README.md) | OpenLaneの概要、必要ツール、Sky130との関係 |
-| [`02_rtl_to_gds_flow/`](02_rtl_to_gds_flow/README.md) | Verilog RTLからGDSまでの設計フロー実習 |
-| [`03_power_timing_report/`](03_power_timing_report/README.md) | 面積・タイミング・電力のレポート抽出と分析 |
-| [`04_custom_constraint/`](04_custom_constraint/README.md) | 制約ファイル（floorplan, clock等）のカスタマイズ |
+Sky130 PDKとの接続、各工程の役割理解、制約設定、最適化なども含みます。  
+Topics include integration with **Sky130 PDK**, constraint customization, optimization, and analysis.
 
 ---
 
-## 🛠️ 使用ツール
+## 🎯 学習目標｜Learning Objectives
 
-- OpenLane 2.x 以降（推奨）
-- Sky130 PDK（`sky130A`）
-- Docker（またはローカルビルド環境）
-- Python 3.x（補助スクリプト用）
+- ✅ RTL記述からGDS出力までの設計ステップを体験  
+ Understand the complete flow from RTL to GDS  
+- ✅ 合成、配置、配線、DRC等の役割とツールを理解  
+ Recognize each tool’s role in the digital backend process  
+- ✅ 面積・タイミング・電力などの設計指標を分析  
+ Analyze area, timing, and power metrics  
+- ✅ `SDC`, `floorplan`などの制約記述に習熟  
+ Learn how to configure basic design constraints
 
 ---
 
-## 🔗 関連章へのリンク
+## 📚 フォルダ構成｜Folder Structure
 
-- [第1章：Pythonによる自動化ツール群](../e_chapter1_python_automation_tools/README.md)
+| フォルダ名｜Folder | 内容｜Description |
+|---------------------|-----------------------------------------------|
+| [`01_intro_openlane/`](01_intro_openlane/README.md) | OpenLaneとSky130の概要｜Introduction to OpenLane & Sky130 |
+| [`02_rtl_to_gds_flow/`](02_rtl_to_gds_flow/README.md) | VerilogからGDSまでの設計フロー｜RTL-to-GDS implementation |
+| [`03_power_timing_report/`](03_power_timing_report/README.md) | レポート解析｜Power, timing, area analysis |
+| [`04_custom_constraint/`](04_custom_constraint/README.md) | 制約ファイルのカスタマイズ｜Constraint customization |
+
+---
+
+## 🛠️ 使用ツール｜Required Tools
+
+- 🧩 OpenLane v2.x+（推奨）  
+- 🧩 Sky130 PDK (`sky130A`)  
+- 🐳 Docker またはローカル開発環境  
+- 🐍 Python 3.x（補助スクリプト用）
+
+---
+
+## 🔗 関連章｜Related Chapters
+
+- [第1章：Pythonによる自動化ツール群](../e_chapter1_python_automation_tools/README.md)  
 - [第2章：Sky130実験とSPICE特性評価](../e_chapter2_sky130_experiments/README.md)
 
 ---
 
-## 📦 事前準備
+## 📦 OpenLane / Sky130 の準備手順｜Setup
 
 ```bash
 git clone https://github.com/The-OpenROAD-Project/OpenLane.git
@@ -51,13 +65,14 @@ make pull-openlane
 make pull-sky130-pdk
 ```
 
-•	詳細は 01_intro_openlane/ を参照
+🔎 詳細は [`01_intro_openlane/`](01_intro_openlane/README.md) を参照。
 
 ---
 
-## 📝 備考
-	•	教材上は Sky130 PDK を用いた最小例で構成
-	•	SoC/マクロ設計向けに拡張することも可能
+## 📝 備考｜Notes
+
+- ✅ 教材内では Sky130 PDK を使った最小構成例を採用  
+- 🔁 実務応用では SoC や IP マクロ設計への拡張が可能  
 
 ---
 
