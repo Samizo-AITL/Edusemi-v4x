@@ -93,6 +93,21 @@ Wide metal paths, short distances, and solid connections to ground are essential
 
 - 🏭 **設計と製造現場の接点**を理解する教材に最適  
   Bridges layout design with real-world ESD concerns in manufacturing
+  
+---
+
+## 🧠 補足：ESDレイアウトは“理屈”だけでは決まらない  
+## 🧠 Supplement: ESD Layout Often Defies Pure Theory
+
+ESDレイアウト設計は、教科書的なルールに従っても、**実際のチップでは想定通りに機能しないことが多々あります**。  
+寄生インダクタンス、電流パスのばらつき、GND密度、DRC制約などが複雑に絡むため、**単一の理論最適解が存在しない**のが実情です。
+
+Even if layout guidelines are followed correctly, **real-world ESD robustness often depends on factors that defy simple theory** — such as parasitic inductance, current path distribution, GND mesh density, and DRC constraints.
+
+> ✅ 最適なESDレイアウトは、**複数の配置案を試作して評価しながら決定する**のが一般的です。  
+> ✅ The best ESD layout is often found by **evaluating multiple layout samples on silicon**.
+
+このように、ESD設計は**理論・設計ルール・実評価の三位一体**で成立する実践的領域です。
 
 ---
 
