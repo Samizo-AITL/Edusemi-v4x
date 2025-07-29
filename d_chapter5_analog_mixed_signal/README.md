@@ -22,6 +22,7 @@ This chapter provides a structured understanding of AMS design, from **basic cir
 | [`layout_considerations.md`](./layout_considerations.md) | AMS回路における対称性・マッチング・ウェル配置の注意点<br>Layout considerations: symmetry, matching, well placement |
 | [`noise_and_psrr.md`](./noise_and_psrr.md) | ノイズ源の分類とPSRRによる電源変動耐性評価<br>Noise sources classification and PSRR-based noise tolerance |
 | [`mixed_signal_interface.md`](./mixed_signal_interface.md) | ADC/DACの構成と混載インタフェース設計課題<br>ADC/DAC architecture and mixed-signal interface design issues |
+| [`ams_node_selection.md`](./ams_node_selection.md) | AMS設計におけるノード選定とプロセス技術の特徴<br>Node selection strategies and process characteristics for AMS |
 
 ---
 
