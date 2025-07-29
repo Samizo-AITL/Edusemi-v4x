@@ -61,4 +61,9 @@ PDK（Process Design Kit）は、ある半導体プロセスに対して回路�
 
 ---
 
+### 🛠️ 応用編 第6章：PDKとEDA環境｜PDK and EDA Environment  
+[➡️ 章の詳細へ進む｜Go to Chapter](./d_chapter6_pdk_and_eda_environment/README.md)
+
+---
+
 © 2025 Shinichi Samizo / MIT License
