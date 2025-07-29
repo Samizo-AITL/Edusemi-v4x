@@ -1,73 +1,94 @@
-# 📐 高耐圧デバイスのレイアウト設計と最適化
+# 📐 高耐圧デバイスのレイアウト設計と最適化｜Layout Design and Optimization for High-Voltage Devices
 
 ---
 
-## 📘 概要
+## 📘 概要｜Overview
 
-高耐圧デバイス（LDMOS、HV-CMOS等）の信頼性を確保するには、**物理レイアウトにおける工夫**が不可欠です。  
-電界分布・熱拡散・製造ばらつきに影響する要素を理解し、**量産設計レベルの最適化**を行う必要があります。
+**高耐圧デバイス（LDMOS、HV-CMOS等）の信頼性には、物理レイアウト上の工夫が不可欠です。**  
+**Physical layout optimization is essential for the reliability of high-voltage devices such as LDMOS and HV-CMOS.**
 
-この章では、以下の観点から設計ルールと実践的な最適化手法を解説します：
+本章では以下の観点から最適化手法を紹介します：  
+This section covers optimization from the following viewpoints:
 
-- ガードリング設計
-- セル間距離の確保
-- CMPダミーパターン配置
-- 絶縁境界・熱経路の工夫
-
----
-
-## 🏗️ レイアウト設計項目と目的
-
-| 設計項目 | 目的 | 実装上の工夫 |
-|----------|------|--------------|
-| ガードリング | 寄生ラッチアップ・電界集中の緩和 | N+/P+リング＋接地／ウェル接続 |
-| セル間スペース | 空乏層の拡張／絶縁保持 | 3〜5μm以上の空白領域 |
-| CMPダミーパターン | 平坦化工程のばらつき低減 | 規則的なdummy配列（配線密度維持） |
-| 熱経路設計 | 熱集中防止／放熱制御 | 熱拡散層追加・配線幅拡大など |
+- **ガードリング設計**｜Guard ring implementation  
+- **セル間距離の確保**｜Spacing between devices  
+- **CMPダミーパターン配置**｜CMP dummy fill strategy  
+- **絶縁境界と熱設計**｜Isolation and thermal planning
 
 ---
 
-## 🧪 CMPダミーパターンとは
+## 🏗️ 設計項目と目的｜Design Items and Objectives
 
-CMP（Chemical Mechanical Polishing）工程では、パターン密度に差があると**研磨ムラ（dishing・erosion）**が生じ、デバイス性能にばらつきが出ます。
+| 設計項目｜Item | 目的｜Purpose | 実装工夫｜Implementation |
+|-------------|------------------|----------------------------|
+| **ガードリング**<br>Guard Ring | 寄生トランジスタ抑制、電界集中緩和<br>Suppress latch-up and field stress | N+/P+接地リング、深ウェル併用<br>N+/P+ guard ring with deep well |
+| **セル間スペース**<br>Spacing | 空乏層拡張、デバイス間絶縁<br>Depletion zone spacing, isolation | 3〜5μm以上の空白確保<br>≥ 3–5μm spacing |
+| **CMPダミー**<br>CMP Dummy | 研磨ムラ抑制（dishing/erosion）<br>Reduce CMP dishing | Dummy metal配置による密度調整<br>Dummy metal for density balance |
+| **熱設計**<br>Thermal Design | 熱集中回避、放熱促進<br>Prevent thermal hotspots | 拡張パッド、幅広配線など<br>Wide traces and thermal pads |
+
+---
+
+## 🧪 CMPダミーパターン｜CMP Dummy Fill
+
+**CMP（Chemical Mechanical Polishing）工程ではパターン密度差が問題となります。**  
+**Pattern density variations can cause dishing or erosion during CMP.**
+
 ```
-配線層（例）
+配線層例｜Interconnect Example
 
 ┌─────┐      ┌─────┐
 │配線A│      │配線B│      ← 密度差あり
 └─────┘      └─────┘
-```
-↓ CMPダミーを挿入
-```
+
+↓ Dummy挿入（非機能）
 ░░░░░░░      ░░░░░░░
 ```
-- ダミー金属は電気的機能を持たず、**研磨密度の調整**目的
-- **ツール制限（dummy密度10〜70%など）**をPDKで確認
+
+- **電気的には機能しないが、機械加工での均一性を確保**  
+  *Dummy metal does not carry current but improves polish uniformity*
+- **PDKでの密度制限（例：10〜70%）に従う必要あり**  
+  *Follow dummy density rules in PDK (e.g., 10–70%)*
 
 ---
 
-## 🧯 ガードリングとESD/ラッチアップ対策
+## 🧯 ガードリングとラッチアップ対策｜Guard Rings & Latch-up Protection
 
-- 高電圧端子周囲に**N+/P+リング構造**
-- **接地／ウェルバイアス強化**により寄生トランジスタの起動を抑制
-- 高耐圧LDMOSでは**複数重ねリングや深ウェル接続**が使われる
-
----
-
-## 📚 教材的意義
-
-- プロセス実装との関係を踏まえた**設計実務感覚**を養成  
-- 見落とされがちな**微細な物理制約**への感度を高める  
-- テープアウト／量産に向けた**最終チェック視点**として活用可能
+- **N+/P+リングを高電圧端子周囲に配置**  
+  *Place N+/P+ guard rings around HV nodes*
+- **GNDまたはウェルへ接続し、寄生npn/pnpを封じ込め**  
+  *Tie to GND or well to block parasitic paths*
+- **LDMOSではリング多重化やDeep N-Wellの利用**  
+  *In LDMOS, use multiple rings and deep wells*
 
 ---
 
-## 🔗 関連項目・章
+## 📚 教材的意義｜Educational Relevance
 
-- [`dvdt.md`](./dvdt.md)：物理破壊を防ぐためのレイアウト視点との連動  
-- [chapter5_soc_design_flow](../chapter5_soc_design_flow/)：配置配線、DRC制約との関係  
-- [chapter6_test_and_package](../chapter6_test_and_package/)：CMPばらつきがETESTに与える影響
+- **量産レベルの物理設計感覚**を身につける  
+  *Develop layout awareness for mass production*
+- **微細な製造制約**（ばらつき、ノイズ、ラッチアップ）を実感  
+  *Understand real-world limits like variation and latch-up*
+- **テープアウト設計段階での必須視点**を学ぶ  
+  *Acquire critical knowledge for tape-out phase*
+
+---
+
+## 🔗 関連リンク｜Related Topics
+
+- [`dvdt.md`](./dvdt.md)  
+  **dv/dt破壊と連動するレイアウト的配慮**  
+  *Layout design for dv/dt protection*
+
+- [chapter5_soc_design_flow](../chapter5_soc_design_flow/)  
+  **配置配線設計とDRCルール**  
+  *Place-and-route and DRC considerations*
+
+- [chapter6_test_and_package](../chapter6_test_and_package/)  
+  **CMPばらつきと電気テスト品質の関係**  
+  *CMP variation and its test impact*
 
 ---
 
 © 2025 Shinichi Samizo / MIT License
+
+---
