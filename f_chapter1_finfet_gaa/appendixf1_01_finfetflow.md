@@ -246,3 +246,196 @@ Form low-resistance silicide at gate and S/D
 - Prevent **excess silicide recession** and **shorts**
 
 ---
+
+## 🔹 Step 11：層間絶縁膜（ILD）形成 / Interlayer Dielectric (ILD) Deposition
+
+**目的 / Purpose**：  
+配線層とトランジスタを絶縁する層間膜を形成  
+Form interlayer dielectric to insulate interconnects from the transistor layer
+
+**条件 / Conditions**：  
+- SiO₂ または SiCOH（k ≈ 2.7–3.0）、PECVDまたはSACVD  
+- 膜厚：300–500 nm  
+- SiO₂ or SiCOH (k ≈ 2.7–3.0), deposited via PECVD or SACVD  
+- Thickness: 300–500 nm
+
+**技術ポイント / Technical Notes**：  
+- 平坦性・低応力・欠陥フリーが必要  
+- **Planarity**, **low mechanical stress**, and **zero defects** are critical
+
+---
+
+## 🔹 Step 12：コンタクトホールエッチング / Contact Hole Etch
+
+**目的 / Purpose**：  
+S/Dまたはゲート電極への接続のためにコンタクト孔を形成  
+Form contact holes to connect S/D or gate to upper metal layers
+
+**条件 / Conditions**：  
+- 193nm ArF露光、CH₄/O₂ またはフルオロカーボン系RIE  
+- CD（線幅）：30–50 nm  
+- 193nm ArF lithography, CH₄/O₂ or FC-based plasma RIE  
+- CD: 30–50 nm
+
+**技術ポイント / Technical Notes**：  
+- **シリサイド露出の完全性**が接続抵抗に直結  
+- Full **silicide exposure** is crucial for low contact resistance
+
+---
+
+## 🔹 Step 13：バリア/シード層堆積（コンタクト） / Barrier & Seed Deposition (Contact)
+
+**目的 / Purpose**：  
+Cu電解めっきに備えてバリア層と導電シード層を形成  
+Form barrier and conductive seed layers for Cu electroplating
+
+**条件 / Conditions**：  
+- TaN または TiN（ALD）、Cuシード（PVD）  
+- バリア厚：5–10 nm、シード厚：~50 nm  
+- TaN or TiN (ALD), Cu seed (PVD)  
+- Barrier: 5–10 nm, Seed: ~50 nm
+
+**技術ポイント / Technical Notes**：  
+- 被覆不良やボイドは**オープン不良の主要因**  
+- Poor coverage or voids lead to **open failures**
+
+---
+
+## 🔹 Step 14：銅電解めっき（コンタクト） / Cu Electroplating for Contact
+
+**目的 / Purpose**：  
+コンタクト孔を銅で充填（Cu Fill）  
+Fill contact vias with copper by electroplating
+
+**条件 / Conditions**：  
+- 酸性CuSO₄浴、電流密度：10–30 mA/cm²  
+- 充填厚：200–400 nm（オーバーフィル）  
+- Acidic CuSO₄ bath, 10–30 mA/cm²  
+- Thickness: 200–400 nm (overfill)
+
+**技術ポイント / Technical Notes**：  
+- **添加剤制御**により均一・ボイドレス埋込が可能  
+- Use of additives enables **uniform, void-free fill**
+
+---
+
+## 🔹 Step 15：コンタクトCMP / CMP of Contacts
+
+**目的 / Purpose**：  
+過剰銅を研磨除去し、平坦な接続面を形成  
+Remove excess Cu and planarize the surface for interconnect
+
+**条件 / Conditions**：  
+- Al₂O₃ または SiO₂ スラリー  
+- モーター電流 or 光学モニタによるエンドポイント制御  
+- Alumina or SiO₂ slurry, endpoint detected by motor current or optical methods
+
+**技術ポイント / Technical Notes**：  
+- **ILDダメージの最小化**と**残膜制御（<5 nm）**が重要  
+- Minimize **ILD damage** and control **residual film <5 nm**
+
+---
+
+## 🔹 Step 16：第1層配線堆積・パターニング（M1） / First Metal (M1) Deposition & Patterning
+
+**目的 / Purpose**：  
+M1配線とビア構造を形成（配線インフラの基礎）  
+Form first metal layer (M1) interconnects and vias
+
+**条件 / Conditions**：  
+- ArF immersionまたはEUVリソグラフィ  
+- Dual Damascene構造、CD：20–30 nm  
+- ArF immersion or EUV lithography  
+- Dual Damascene, CD: 20–30 nm
+
+**技術ポイント / Technical Notes**：  
+- **RC最小化設計**と寄生抑制が必須  
+- Requires **RC minimization** and **parasitic suppression**
+
+---
+
+## 🔹 Step 17：M1–M2層間絶縁膜堆積 / ILD Deposition (M1–M2)
+
+**目的 / Purpose**：  
+M1とM2間の絶縁層を形成  
+Form ILD between M1 and M2 layers
+
+**条件 / Conditions**：  
+- Low-k SiCOH（k ≈ 2.5–3.0）、PECVD  
+- 膜厚：300–500 nm  
+- Low-k SiCOH (k ≈ 2.5–3.0), PECVD, Thickness: 300–500 nm
+
+**技術ポイント / Technical Notes**：  
+- **低誘電率**と**機械的強度**のバランスが重要  
+- Balance between **low-k** and **mechanical robustness**
+
+---
+
+## 🔹 Step 18：M2配線/ビアパターニング / Lithography & Etch for M2
+
+**目的 / Purpose**：  
+M2の配線パターンとビアを形成  
+Define M2 wiring and via structures
+
+**条件 / Conditions**：  
+- ArF immersionまたはEUV  
+- フルオロカーボン系RIE、CD ≈ 20–30 nm  
+- ArF immersion or EUV, FC-based RIE, CD: 20–30 nm
+
+**技術ポイント / Technical Notes**：  
+- **オーバーレイ精度**と寸法均一性の確保が重要  
+- Ensure **overlay accuracy** and **CD uniformity**
+
+---
+
+## 🔹 Step 19：M2 バリア・シード堆積 / Barrier & Seed Deposition for M2
+
+**目的 / Purpose**：  
+電解めっき用のバリア層＋シード層形成  
+Form barrier and seed layers for Cu ECP
+
+**条件 / Conditions**：  
+- Ta/TaN（ALD）、Cuシード（PVD）  
+- 膜厚：同上（バリア 5–10 nm、シード ~50 nm）  
+- Ta/TaN (ALD), Cu seed (PVD), same thickness as previous steps
+
+**技術ポイント / Technical Notes**：  
+- ビア底部への**コンフォーマル堆積性**が鍵  
+- Critical to achieve **conformal deposition** at via bottom
+
+---
+
+## 🔹 Step 20：M2銅電解めっき / Cu Electroplating for M2
+
+**目的 / Purpose**：  
+M2配線層への銅充填  
+Fill M2 wiring and vias with copper
+
+**条件 / Conditions**：  
+- CuSO₄浴、添加剤制御  
+- 厚さ：200–400 nm（オーバーフィル）  
+- CuSO₄ bath with additive control  
+- Thickness: 200–400 nm (overfill)
+
+**技術ポイント / Technical Notes**：  
+- パターン密度による**局所電流制御**が重要  
+- Requires **localized current control** based on pattern density
+
+---
+
+## 🔹 Step 21：M2 CMP（平坦化） / CMP of M2 Cu Layer
+
+**目的 / Purpose**：  
+M2の表面を平坦化し、次工程のリソ精度を確保  
+Planarize M2 top surface for next lithography
+
+**条件 / Conditions**：  
+- 同様のCMP条件（スラリー、圧力、速度）  
+- 表面粗さ < 0.5 nm RMS  
+- Similar CMP process, surface roughness < 0.5 nm RMS
+
+**技術ポイント / Technical Notes**：  
+- 次工程との**整合性（overlay）**確保に直結  
+- Direct impact on **overlay precision** for next litho steps
+
+---
