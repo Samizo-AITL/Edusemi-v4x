@@ -1,23 +1,29 @@
-# 📘 特別編 第4章：FSM×PID×LLM制御系のOpenLaneによるRTL-to-GDSII実装
+# 📘 特別編 第4章：FSM×PID×LLM制御系のOpenLaneによるRTL-to-GDSII実装  
+# 📘 Appendix Chapter 4: RTL-to-GDSII Implementation of FSM×PID×LLM Control System with OpenLane
 
-本章では、FSM・PID・統合SoCモジュールを対象に、Sky130 PDKを用いた**OpenLaneによる配置配線フロー（RTL-to-GDSII）**を学びます。
-
-## 🧭 章構成と内容一覧
-
-| 節 | タイトル | 概要 |
-|----|----------|------|
-| 4.1 | [OpenLane導入とプロジェクト構成](docs/4_1_openlane_intro.md) | ディレクトリ構成とconfig準備の基本 |
-| 4.2 | [FSMモジュールの配置配線](docs/4_2_fsm_layout.md) | FSM単体をOpenLaneで配置配線 |
-| 4.3 | [PIDモジュールの配置配線](docs/4_3_pid_layout.md) | PID制御モジュールの配置配線 |
-| 4.4 | [SoC統合モジュールの実装](docs/4_4_soc_layout.md) | FSM+PIDの統合回路のGDSII化 |
-| 4.5 | [設計評価レポートと比較](docs/4_5_evaluation.md) | 面積・DRC・タイミング比較分析 |
-| 4.6 | [GDSレイアウトの可視化と考察](docs/4_6_gds_view.md) | KLayout/Magicでのレイアウト可視化 |
+本章では、FSM・PID・統合SoCモジュールを対象に、Sky130 PDKを用いた  
+**OpenLaneによる配置配線フロー（RTL-to-GDSII）**を学習します。  
+This chapter focuses on implementing **place-and-route (RTL-to-GDSII)** using OpenLane and Sky130 PDK for FSM, PID, and integrated SoC modules.
 
 ---
 
-## 🧱 OpenLane プロジェクト構造（教材用）
+## 🧭 章構成と内容一覧｜Chapter Structure and Overview
 
-```
+| 節番号｜Sec. | 📖 タイトル｜Title (JP) | 📘 Title (EN) | 概要｜Summary |
+|--------|------|-------------------------|-----------------------------|---------------------------------------------|
+| **4.1** | [OpenLane導入とプロジェクト構成](docs/4_1_openlane_intro.md) | Introduction to OpenLane and Project Setup | ディレクトリ構成とconfig準備の基本<br>Directory structure and config setup |
+| **4.2** | [FSMモジュールの配置配線](docs/4_2_fsm_layout.md) | Place-and-Route of FSM Module | FSM単体をOpenLaneで配置配線<br>RTL-to-GDSII of FSM module |
+| **4.3** | [PIDモジュールの配置配線](docs/4_3_pid_layout.md) | Place-and-Route of PID Module | PID制御モジュールの配置配線<br>Place-and-route of the PID controller |
+| **4.4** | [SoC統合モジュールの実装](docs/4_4_soc_layout.md) | Implementation of Integrated SoC | FSM+PIDの統合回路のGDSII化<br>Full integration of FSM and PID |
+| **4.5** | [設計評価レポートと比較](docs/4_5_evaluation.md) | Design Evaluation and Comparison | 面積・DRC・タイミング比較分析<br>Area, DRC, and timing comparison |
+| **4.6** | [GDSレイアウトの可視化と考察](docs/4_6_gds_view.md) | GDS Visualization and Analysis | KLayoutやMagicによるレイアウト確認<br>GDS layout visualization using KLayout/Magic |
+
+---
+
+## 🧱 OpenLane プロジェクト構造（教材用）  
+## 🧱 Project Structure for OpenLane (Educational Version)
+
+```plaintext
 f_chapter4_openlane/
 ├── README.md
 ├── docs/
@@ -33,27 +39,44 @@ f_chapter4_openlane/
     └── soc_top/
 ```
 
-> `openlane/` 以下に各モジュールのプロジェクトを独立構成しています。
+> 📂 `openlane/`以下に、各モジュールのOpenLaneプロジェクトを個別構成しています。  
+> Each module under `openlane/` is configured as an independent OpenLane project.
 
 ---
 
-## 🛠️ 使用ツール・バージョン例
+## 🛠️ 使用ツール・バージョン｜Tools and Versions Used
 
-- OpenLane v2.0+
-- Sky130A PDK
-- KLayout / Magic (レイアウト可視化)
-
----
-
-## 📌 補足
-
-- 本章の実習は、Edusemi特別編 第3章のRTL設計結果を前提とします。
-- 実行にはOpenLaneのDocker環境またはマニュアルインストールが必要です。
-- `flow.tcl` により各モジュールを個別に実行します。
+| ツール｜Tool | バージョン例｜Example Version |
+|-------------|----------------------|
+| **OpenLane** | v2.0+ |
+| **PDK** | Sky130A |
+| **レイアウト可視化**<br>Layout Viewer | KLayout / Magic |
 
 ---
 
-### 👤 著者・ライセンス｜Author & License
+## 📌 補足｜Notes
+
+- 本章は、**特別編 第3章のRTL設計結果**を前提としています。  
+  This chapter assumes RTL modules developed in **Appendix Chapter 3**.
+- 実行には **OpenLaneのDocker環境** または **手動インストール**が必要です。  
+  Execution requires either the **Dockerized OpenLane environment** or manual installation.
+- 各モジュールは `flow.tcl` により個別にフローを起動します。  
+  Each module is run individually using `flow.tcl`.
+
+---
+
+## 🎓 学習目標｜Learning Objectives
+
+| 項目｜Item | 内容｜Description |
+|------|------|
+| **OpenLaneの基礎操作**<br>Basic Use of OpenLane | ディレクトリ構成・設定ファイルの理解 |
+| **FSM / PID / SoCの実装**<br>FSM / PID / SoC Layout Flow | RTLからGDSIIまでの手順を習得 |
+| **レイアウト比較評価**<br>Layout Evaluation & Analysis | 面積・DRC・タイミングなどの指標比較 |
+| **KLayout/Magicの可視化操作**<br>Visualization via KLayout/Magic | 実レイアウトを視覚的に理解する技術 |
+
+---
+
+## 👤 著者・ライセンス｜Author & License
 
 | 項目｜Item | 内容｜Details |
 |------------|----------------------------|
@@ -64,6 +87,4 @@ f_chapter4_openlane/
 
 ---
 
-#### 🏠 [Edusemi-v4x トップへ戻る｜Back to Edusemi-v4x Top](../README.md)
-
----
+🏠 [Edusemi-v4x トップへ戻る｜Back to Edusemi-v4x Top](../README.md)
