@@ -1,78 +1,95 @@
-# 1.4 FinFETとGAAの比較：構造・性能・設計影響の視点から
-
-## 概要
-
-本節では、**FinFET**と**GAA（Gate-All-Around）Multi-Nanosheet FET**の間にある構造的・電気的・設計上の違いを体系的に比較し、それぞれの**技術的優位性と限界**を明らかにする。
-
-FinFETは22nm世代以降の主流構造として確立されたが、GAAはその後継として2nm世代以降のスケーリングを支える鍵技術である。両者の比較を通じて、設計者・エンジニアがそれぞれのデバイス選定に必要な基礎理解を深めることを目的とする。
+# 🧬 1.4 FinFETとGAAの比較：構造・性能・設計影響の視点から  
+## 1.4 Comparison of FinFET and GAA: Structure, Performance, and Design Impacts
 
 ---
 
-## 1.4.1 ゲート構造とチャネル制御性
+## 📘 概要 / Overview
 
-| 項目 | FinFET | GAA |
-|------|--------|-----|
-| ゲート包囲面 | 3面（両側面＋上面） | 4面（全面） |
-| チャネル制御性 | 良好（SS ~70 mV/dec） | 優秀（SS ~60 mV/dec以下） |
-| DIBL特性 | ~70 mV/V | ~50 mV/V以下 |
-| オフリーク電流 | 数nA/µm | 数百pA/µmまで低下可能 |
+本節では、**FinFET**と**GAA（Gate-All-Around）Multi-Nanosheet FET**の間にある構造的・電気的・設計上の違いを体系的に比較し、それぞれの**技術的優位性と限界**を明らかにします。
+
+This section provides a systematic comparison between **FinFET** and **GAA** devices, focusing on structural, electrical, and design aspects. Understanding these differences is essential for technology selection in advanced nodes.
 
 ---
 
-## 1.4.2 構造形成と製造難易度
+## 🔹 1.4.1 ゲート構造とチャネル制御性  
+### Gate Structure and Channel Control
 
-| 項目 | FinFET | GAA |
-|------|--------|-----|
-| Fin形成 | Si基板上に立てる（STI上） | Si/SiGe積層 → ナノシート選択エッチ |
-| ゲート形成 | 包囲性は高いが空洞なし | 空洞部へのゲート堆積が必須（ALD重要） |
-| 歪み導入 | SiGe S/D, Stress linerなど | ナノシート自体にストレス制御可能 |
-| 成膜均一性 | 比較的容易 | 難しい（3D空間へのConformal性必要） |
-
----
-
-## 1.4.3 性能とスケーリング適性
-
-| 項目 | FinFET | GAA |
-|------|--------|-----|
-| ドライブ能力 | 高（複数Finで拡張） | 高（複数シートで拡張） |
-| 電源電圧依存性 | 中程度 | 低く安定（Variability耐性も高） |
-| スケーリング限界 | ≒ 5nm程度 | 2nm以降に最適化可能 |
-| 次世代対応 | CFETへの橋渡しに限界あり | CFETとの統合が視野に入る（N/P重ね可能） |
+| **項目 / Item** | **FinFET** | **GAA FET** |
+|------------------|------------|--------------|
+| ゲート包囲面 / Gate Coverage | 3面（Top + Sides） | 4面（All-Around） |
+| チャネル制御性 / Control | 良好（SS ~70 mV/dec） | 優秀（SS ~60 mV/dec以下） |
+| DIBL特性 / DIBL | ~70 mV/V | ~50 mV/V以下 |
+| オフリーク電流 / I<sub>off</sub> | 数nA/µm | 数百pA/µmまで低下可能 |
 
 ---
 
-## 1.4.4 設計上の違い
+## 🏗 1.4.2 構造形成と製造難易度  
+### Fabrication and Process Complexity
 
-| 項目 | FinFET | GAA |
-|------|--------|-----|
-| Wの定義 | Fin数による離散化 | シート数による離散化 |
-| 標準セル設計 | 2-Fin, 3-Fin構成など | 3-sheet, 5-sheet構成など |
-| PDK制約 | Finピッチ、Fin高さなど | シート間隔、リリース制限など |
-| 配線影響 | Fin高さによる層間容量影響 | シート層とBEOLのRC結合に注意 |
-
----
-
-## 1.4.5 将来展望と技術選定指針
-
-| 観点 | FinFET | GAA |
-|------|--------|-----|
-| 現行ノード実績 | 22nm〜5nm主力 | 3nm試作・2nm量産で進行中 |
-| 技術成熟度 | 製造・設計ノウハウ豊富 | PDK・量産ノウハウは発展途上 |
-| 今後の発展性 | 漸進的改善 | GAA→CFET→VTFETなど飛躍的発展性あり |
-| 設計戦略 | Finベースのセル活用継続可 | GAA特化セル構築が必要（置換不可） |
+| **項目 / Item** | **FinFET** | **GAA FET** |
+|------------------|------------|--------------|
+| Fin形成 / Fin Formation | STI上に立てる | Si/SiGe積層 → 選択エッチでシート解放 |
+| ゲート形成 / Gate Formation | 包囲性は高いが空洞なし | 空洞内へのConformal成膜（ALD）必須 |
+| 歪み導入 / Stress | SiGe S/DやStress Liner | シート構造そのものにストレス適用可 |
+| 成膜均一性 / Film Uniformity | 容易 | 困難（3D形状への制御要） |
 
 ---
 
-## 図版リンク（予定）
+## ⚙️ 1.4.3 性能とスケーリング適性  
+### Performance and Scaling Suitability
 
-- `images/finfet_vs_gaa_structure.png`：構造比較断面図
-- `images/finfet_vs_gaa_gatewrap.png`：ゲート包囲の違い
-- `images/finfet_vs_gaa_scaling.png`：スケーリングロードマップ比較
+| **項目 / Item** | **FinFET** | **GAA FET** |
+|------------------|------------|--------------|
+| 駆動能力 / Drive Current | 高（Fin数で拡張） | 高（シート数で拡張） |
+| 電圧依存性 / V<sub>dd</sub> Sensitivity | 中程度 | 低い（変動耐性も高） |
+| スケーリング限界 / Scaling Limit | 約5nm前後 | 2nm以下に最適化可能 |
+| 次世代適応性 / Future Integration | CFETに制約あり | CFET統合に適応（N/P積層） |
 
 ---
 
-## まとめ
+## 🧠 1.4.4 設計上の違い  
+### Design Perspective
 
-FinFETとGAAは、トランジスタのゲート構造を進化させる二大アプローチであり、**設計・製造・信頼性・スケーリング**すべての面において異なる特徴を有する。特にGAAは今後のノード展開での中核技術であり、設計思想やPDKとの向き合い方も再定義されることになる。
+| **項目 / Item** | **FinFET** | **GAA FET** |
+|------------------|------------|--------------|
+| チャネル幅定義 / Width Definition | Fin数（離散） | シート数（離散） |
+| セル構成 / Cell Units | 2-Fin, 3-Fin など | 3-sheet, 5-sheet など |
+| PDK制約 / PDK Rules | Finピッチ・高さ制約あり | シート配置・リリース工程制約あり |
+| 配線影響 / Routing Impact | Fin高さによる層間容量影響 | シート層とBEOLのRC結合に注意 |
 
-本節を通じて、技術選定・設計アプローチ・スケーリング戦略に対する体系的理解を深めることができる。
+---
+
+## 🔭 1.4.5 将来展望と技術選定指針  
+### Future Outlook and Selection Criteria
+
+| **観点 / Aspect** | **FinFET** | **GAA FET** |
+|--------------------|-------------|--------------|
+| 実用ノード / Current Nodes | 22nm〜5nm主流 | 3nm試作〜2nm量産期 |
+| 技術成熟度 / Maturity | 高（製造・設計確立） | 発展途上（PDK・量産未成熟） |
+| 今後の発展性 / Evolution | 改良止まり | CFET, VTFET等へ進化可能 |
+| 設計戦略 / Design Approach | 既存Finセル継続 | GAA特化セル構築が必要（非置換型） |
+
+---
+
+## 🖼 図版リンク（予定 / Planned Diagrams）
+
+- `images/finfet_vs_gaa_structure.png`  
+  → FinFETとGAAの構造断面比較図  
+- `images/finfet_vs_gaa_gatewrap.png`  
+  → ゲート包囲構造の比較模式図  
+- `images/finfet_vs_gaa_scaling.png`  
+  → スケーリングロードマップ（ノード世代 vs チャネル構造）
+
+---
+
+## ✅ まとめ / Summary
+
+FinFETとGAAは、いずれも**微細化時代のゲート制御を支える3D構造**であり、**構造・性能・製造・設計の全側面で明確な違い**を持ちます。  
+特にGAAは、**次世代スケーリングやCFET・3D-IC技術との親和性が高く、2nm以降の戦略的選択肢**となる存在です。
+
+FinFET and GAA represent two key approaches to 3D gate control in advanced CMOS nodes. GAA, with its full gate wrap and nanosheet scalability, is poised to lead post-2nm integration, despite manufacturing complexity.
+
+---
+
+📘 本章はここまでです。補足資料は以下をご参照ください：  
+- [`appendixf1_03_finfet_vs_gaa.md`](./appendixf1_03_finfet_vs_gaa.md)：比較まとめ＋図解  
