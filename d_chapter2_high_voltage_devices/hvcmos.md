@@ -66,12 +66,13 @@ N+  N−   P-Sub
 
 ## 🧪 応用例｜Applications
 
+```
 | 用途｜Application | 説明｜Description |
 |------|-------------|-----------------|
 | ゲートドライバ｜Gate Driver | 高電圧スイッチングFETの制御 |
 | 電源モニタ｜Power Monitor | 高耐圧入力で電圧を監視・検出 |
 | フルブリッジ制御｜H-Bridge Control | 上下のHVトランジスタを対で駆動可能 |
-
+```
 ---
 
 ## 🔁 プロセスフロー順序｜Process Flow Order
