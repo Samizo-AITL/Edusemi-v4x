@@ -52,19 +52,19 @@
 
 ---
 
-## 🔗 関連リンク・参照章｜Related Chapters
+## 🔗 関連リンク｜Related Topics
 
-- 📘 [応用編 第1章｜メモリ技術｜Memory Technologies](../d_chapter1_memory_technologies/README.md)  
-  組込みSRAMと高耐圧I/Oドライバ設計の接続  
-  *Embedded SRAM with HV I/O driver integration*
+- [📘 応用編 第2章｜高耐圧デバイス 全体README](../d_chapter2_high_voltage_devices/README.md)：章全体の構成と関連技術の導入  
+  *Chapter 2 Top: Overview of high-voltage devices and structure of this section*
 
-- 📘 [応用編 第5章｜アナログ・ミックスドシグナル設計](../d_chapter5_analog_mixed_signal/README.md)  
-  高電圧ブロックとの回路接続と設計視点  
-  *Connectivity to HV analog blocks and design insights*
+- [`ldmos.md`](./ldmos.md)：LDMOSによる高電流対応技術  
+  *High-current structure using LDMOS*
 
-- 📘 [基礎編 第4章｜MOSトランジスタ特性](../chapter4_mos_characteristics/README.md)  
-  MOS構造と短チャネル効果、寄生素子理解の基礎  
-  *MOS fundamentals including short-channel effects and parasitics*
+- [`junction_isolation.md`](./junction_isolation.md)：寄生素子を防ぐ絶縁設計  
+  *Isolation techniques to suppress parasitics*
+
+- [chapter5_soc_design_flow](../chapter5_soc_design_flow/)：アナログブロックとSoC設計統合  
+  *Integration of analog blocks into SoC design*
 
 ---
 
