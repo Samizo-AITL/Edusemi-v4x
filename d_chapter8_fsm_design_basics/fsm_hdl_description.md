@@ -95,7 +95,7 @@ You are now ready to apply FSMs to control logic, protocols, and sequencers.
 ---
 
 ### 🔁 応用編 第8章：FSM設計（有限状態機械）｜Applied Chapter 8: FSM Design  
-[➡️ 章の詳細へ進む｜Go to Chapter](./d_chapter8_fsm_design_basics/README.md)
+[➡️ 章の詳細へ進む｜Go to Chapter](./README.md)
 
 ---
 
