@@ -88,13 +88,13 @@ N+  N−   P-Sub
 ---
 
 ## ⚠️ 信頼性と環境耐性｜Reliability & Environmental Vulnerability
-
+```
 | 項目｜Concern | 説明｜Description | 対策｜Countermeasures |
 |------|--------|------------------|-----------------------|
 | COP影響<br>COP Defect | シリコン結晶起因の局所欠陥が、HV領域でリークや絶縁破壊を誘発 | ウエハテストで**HVスクリーニング**実施 |
 | 熱ストレス<br>Thermal Stress | 厚膜酸化・ドレイン拡張が熱により劣化しやすい | **HTOL試験**、放熱レイアウト、SOA管理 |
 | 光感受性<br>Photo Sensitivity | 光による光起電流で誤動作・リークが発生 | **ALメタルガードリング**、遮光樹脂使用 |
-
+```
 ---
 
 ## 🛡️ 耐圧設計の実装技術｜Breakdown Voltage Enhancement Techniques
