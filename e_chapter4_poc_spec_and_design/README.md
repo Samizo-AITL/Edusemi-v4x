@@ -39,7 +39,7 @@ using reusable educational blocks like FSM, MUX, and Adder on the Sky130 PDK.
 ---
 
 ## 📚 章構成｜Section List
-
+```
 | 節番号｜Section | ファイル名｜Filename | 内容｜Content |
 |--------|---------|------------------------|----------------------------|
 | 4.1 | [`4.1_poc_spec_overview.md`](4.1_poc_spec_overview.md) | PoC仕様概要と設計目的 |
@@ -48,7 +48,7 @@ using reusable educational blocks like FSM, MUX, and Adder on the Sky130 PDK.
 | 4.4 | [`4.4_verilog_and_testbench.md`](4.4_verilog_and_testbench.md) | VerilogとTestbench構成 |
 | 4.5 | [`4.5_physical_design_flow.md`](4.5_physical_design_flow.md) | OpenLaneを用いた物理設計フロー |
 | 4.6 | [`4.6_layout_result_and_discussion.md`](4.6_layout_result_and_discussion.md) | 結果検証とまとめ |
-
+```
 ---
 
 ## 🧱 最小PoCブロック例｜PoC Block Examples
