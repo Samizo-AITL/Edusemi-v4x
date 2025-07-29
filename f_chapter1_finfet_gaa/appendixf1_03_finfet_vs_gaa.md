@@ -1,87 +1,93 @@
-# 補足資料：FinFETとGAAの構造・特性・設計影響の比較まとめ
+# 🧩 補足資料 / Appendix：FinFETとGAAの構造・特性・設計影響の比較まとめ  
+**Comparison Summary of FinFET and GAA (Gate-All-Around) Devices**
 
-本資料では、先端ノードにおける2つの主流トランジスタ構造――**FinFET（Fin型トランジスタ）**と**GAA（Gate-All-Around）Multi-Nanosheet FET**――について、以下の観点から比較を行う。
+本資料では、先端ノードCMOS技術における2大トランジスタ構造 ――  
+**FinFET（Fin型トランジスタ）** と **GAA（Multi-Nanosheet型トランジスタ）** について、以下の観点から体系的に比較します。  
+This appendix compares two advanced CMOS transistor structures — FinFET and GAA Multi-Nanosheet FET — from the following perspectives:
 
-- 物理構造と製造プロセス
-- 電気特性（ゲート制御性・短チャネル効果など）
-- 設計への影響（ライブラリ・レイアウト制約・寄生要素）
-
----
-
-## 🔸 比較1：物理構造
-
-| 項目 | FinFET | GAA Multi-Nanosheet FET |
-|------|--------|---------------------------|
-| チャネル形状 | 垂直Fin構造 | 水平方向ナノシート構造 |
-| ゲート包囲率 | 3面（両側＋上面） | 4面（完全包囲） |
-| チャネル数制御 | Finの本数 | シート数（3〜5枚） |
-| 対象ノード | 22nm〜5nm | 5nm〜2nm（GAA世代） |
+- **構造と製造プロセス / Physical structure & manufacturing**
+- **電気特性 / Electrical characteristics**
+- **設計影響 / Design impacts**
 
 ---
 
-## 🔸 比較2：製造プロセスの特徴
+## 🔸 比較1：物理構造 / Physical Structure
 
-| 項目 | FinFET | GAA |
-|------|--------|-----|
-| チャネル形成 | Finエッチ＋STI埋込 | Si/SiGeエピ＋犠牲層除去 |
-| 困難工程 | Fin寸法制御・RIE異方性 | スーパーラティス堆積・SiGe選択エッチ |
-| メタルゲート形成 | リセス＋コンフォーマル成膜 | 空洞構造内への完全包囲形成 |
-| CMP・平坦化 | STI/Polyなど複数回 | エピ堆積面＋Dummy Gateの多段CMP |
-
----
-
-## 🔸 比較3：電気特性（代表値）
-
-| 特性項目 | FinFET | GAA | 備考 |
-|----------|--------|-----|------|
-| SS（Subthreshold Slope） | ~70 mV/dec | ~65 mV/dec | GAAの方が優秀 |
-| DIBL | 60–80 mV/V | <50 mV/V | 短チャネル耐性あり |
-| オン電流（Ion） | 高 | 同等または高 | 設計条件に依存 |
-| オフ電流（Ioff） | 数nA/μm | より低い | より強いゲート制御性 |
+| 🧱 項目 / Item | 🌀 FinFET | 🌐 GAA Multi-Nanosheet FET |
+|----------------|-----------|-----------------------------|
+| **チャネル形状 / Channel geometry** | 垂直Fin構造 / Vertical fin | 水平ナノシート構造 / Horizontal nanosheet |
+| **ゲート包囲率 / Gate coverage** | 3面（上面＋側面）/ 3 sides | 4面（全面）/ 4 sides (all-around) |
+| **チャネル数制御 / Drive width control** | Fin本数による / By # of fins | シート数による / By # of sheets |
+| **対応ノード / Applicable nodes** | 22nm〜5nm | 5nm〜2nm |
 
 ---
 
-## 🔸 比較4：設計影響
+## 🔸 比較2：製造プロセスの特徴 / Process Characteristics
 
-| 項目 | FinFET | GAA |
-|------|--------|-----|
-| PDK特性 | Fin数＝離散化設計 | Sheet数も基本的に離散 |
-| ライブラリ構成 | 多Finサイズ展開 | シート数＋幅で構成 |
-| レイアウト自由度 | 高め（長年の成熟） | 現状制限多め（配線層、DPT対応など） |
-| RC抽出 | Fin寸法精度が支配 | 空洞構造と3D寄生が重要 |
-
----
-
-## 🔸 今後の展望と位置づけ
-
-| 項目 | FinFET | GAA |
-|------|--------|-----|
-| 技術成熟度 | 量産済（Intel 22nm以降） | 5nm〜2nmで本格導入中 |
-| 将来性 | 高密度対応限界あり | CFET・3D統合への橋渡し構造 |
-| 設計対応 | ライブラリ/EDA成熟 | 過渡期（対応中） |
+| 🏭 項目 / Item | 🌀 FinFET | 🌐 GAA |
+|----------------|-----------|--------|
+| **チャネル形成 / Channel formation** | Finエッチ＋STI埋込 / Etch + STI | Si/SiGeエピ＋犠牲層除去 / Si/SiGe Epi + sacrificial layer |
+| **難所工程 / Critical steps** | Fin寸法制御 / Fin CD control | シート選択エッチ / Sheet-selective etch |
+| **メタルゲート形成 / Gate stack** | リセス＋成膜 / Recess + deposition | 空洞包囲 / Cavity conformal deposition |
+| **CMP工程 / CMP process** | STI/Poly複数CMP / Multiple CMPs | 多層CMP（Dummy含む）/ Multilayer CMP incl. dummy gate |
 
 ---
 
-## 🔸 図版リンク（予定）
+## 🔸 比較3：電気特性（代表値） / Electrical Characteristics (Typical)
 
-- `images/finfet_vs_gaa_structure.png`：両構造の比較断面
-- `images/finfet_vs_gaa_table.png`：本比較表の図示版
-- `images/rc_model_finfet_gaa.png`：RCモデルの違い
+| ⚡ 特性項目 / Parameter | 🌀 FinFET | 🌐 GAA | 📝 備考 / Notes |
+|------------------------|-----------|--------|------------------|
+| **SS（Subthreshold Slope）** | ~70 mV/dec | ~65 mV/dec | GAAがより良好 / GAA superior |
+| **DIBL** | 60–80 mV/V | <50 mV/V | 短チャネル耐性 / Better short-channel |
+| **オン電流 / Ion** | 高 / High | 同等〜高 / Comparable or better | Depends on W, Nsheet |
+| **オフ電流 / Ioff** | 数nA/µm / Few nA/µm | 数百pA/µm / Sub-nA | Excellent gate control |
 
 ---
 
-## 備考
+## 🔸 比較4：設計影響 / Design Implications
 
-この比較は `f1_4_comparison.md`（第1章 第4節）と連携し、講義・教材の補強資料として使用することを想定しています。  
-より詳細な工程差異は以下を参照：
+| 🧩 項目 / Item | 🌀 FinFET | 🌐 GAA |
+|----------------|-----------|--------|
+| **PDK設計単位 / PDK unit** | Fin数 / # of fins | シート数 / # of sheets |
+| **ライブラリ構成 / Library types** | 2〜4 Finセル / 2–4 fin cells | 3–5シート構成 / 3–5 sheet configs |
+| **レイアウト自由度 / Layout flexibility** | 高 / Matured | 制限あり / More constrained |
+| **RC抽出 / RC extraction** | Fin寸法支配 / Fin CD dominated | 3D寄生顕著 / More 3D parasitics |
 
-- [`appendixf1_01_finfetflow.md`](./appendixf1_01_finfetflow.md)
+---
+
+## 🔸 今後の展望と位置づけ / Future Outlook
+
+| 🚀 観点 / Viewpoint | 🌀 FinFET | 🌐 GAA |
+|---------------------|-----------|--------|
+| **技術成熟度 / Maturity** | 量産済（Intel 22nm〜）/ Mass-production | 量産中（2nm〜）/ In progress |
+| **今後の限界 / Scaling limit** | ≧5nm程度 / ~5nm | 2nm以下可 / <2nm capable |
+| **次構造との接続 / Path to next** | GAA導入前段階 / Pre-GAA | CFETや3D-ICへ / Path to CFET, 3D-IC |
+
+---
+
+## 📷 図版リンク / Diagram References (予定)
+
+- `images/finfet_vs_gaa_structure.png`：構造断面図 / Structural Cross-section  
+- `images/finfet_vs_gaa_table.png`：比較表まとめ図 / Summary Table  
+- `images/rc_model_finfet_gaa.png`：RCモデル差異 / RC Extraction Models
+
+---
+
+## 📝 備考 / Notes
+
+本資料は [`f1_4_comparison.md`](./f1_4_comparison.md) の補強資料として設計され、FinFETとGAAの技術理解と設計比較を支援します。  
+詳細プロセス差は以下参照：
+
+- [`appendixf1_01_finfetflow.md`](./appendixf1_01_finfetflow.md)  
 - [`appendixf1_02_gaaflow.md`](./appendixf1_02_gaaflow.md)
 
 ---
 
-## ライセンスと著者
+## ©️ 著者・ライセンス / Author & License
 
-MITライセンスにて公開。  
-著者：三溝 真一（Shinichi Samizo）  
-連絡先：[shin3t72@gmail.com](mailto:shin3t72@gmail.com)
+- **著者 / Author**：三溝 真一（Shinichi Samizo）  
+- **Email**：[shin3t72@gmail.com](mailto:shin3t72@gmail.com)  
+- **ライセンス / License**：MIT License  
+- **GitHub**：[Samizo-AITL](https://github.com/Samizo-AITL)
+
+---
