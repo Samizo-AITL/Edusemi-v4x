@@ -57,6 +57,6 @@ Structure diagrams, gate coverage illustrations, and scaling roadmaps will be in
 
 ---
 
-### 🏠 [Edusemi-v4x トップへ戻る｜Back to Edusemi-v4x Top](../README.md)
+#### 🏠 [Edusemi-v4x トップへ戻る｜Back to Edusemi-v4x Top](../README.md)
 
 ---
