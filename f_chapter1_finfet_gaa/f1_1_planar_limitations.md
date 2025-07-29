@@ -1,96 +1,102 @@
-# 1.1 プレーナMOSの限界と微細化の壁  
-## 1.1 Planar MOS Scaling Limits
+# 🧬 1.1 プレーナMOSの限界と微細化の壁  
+## 1.1 Scaling Limits of Planar MOSFET
 
 ---
 
 ## 📘 概要 / Overview
 
-従来のCMOSロジックで主流だった**プレーナ型MOSFET（Planar MOS）**は、90nm世代以前において高性能かつ製造効率の高い構造として広く採用されてきました。  
-しかし、40nmを下回る微細化が進む中で、以下のような**スケーリングの限界**が顕在化します：
+プレーナ型MOSFET（Planar MOS）は、90nm以前のCMOS世代において**性能・面積効率・製造性**に優れた構造でした。  
+しかし40nmを下回るノードでは、以下のような**スケーリング限界（Scaling Limits）**が顕在化し、FinFETやGAAなど**構造的な転換**が求められるようになります。
 
-- 短チャネル効果（Short Channel Effects, SCE）
-- DIBL（Drain-Induced Barrier Lowering）
-- オフリーク電流の増加
-- サブスレッショルド特性の劣化（SSの悪化）
-- しきい値電圧ばらつき（V<sub>th</sub> Variability）
-
-本節では、これらの課題を整理し、次章の**FinFET/GAA構造**へと至る技術的背景を解説します。
+Planar MOSFETs were dominant in CMOS technologies prior to the 90nm node, offering excellent performance and manufacturability. However, as feature sizes dropped below 40nm, fundamental **scaling limits** emerged, leading to structural innovations such as **FinFETs and GAA FETs**.
 
 ---
 
 ## 🔹 1.1.1 プレーナMOS構造の基本  
 ### Basic Structure of Planar MOSFET
 
-- チャネルは**シリコン基板の表面**に形成され、**ゲート電極は上面からの1方向制御**。
-- シンプルな構造で、**製造成熟度・面積効率・設計自由度**に優れる。
-- 例：90nm, 65nm世代では最適構造とされていた。
+- **チャネル領域**は基板表面に形成され、**ゲートは上面から1方向制御**  
+- 構造が単純で、**高い歩留まりと量産性**を持つ  
+- 90nm〜65nm世代では主流構造
 
-> 🧠 しかし、ゲート長が30nmを下回ると、**電界的なチャネル制御が困難**になり、根本的な構造限界が現れる。
+> 🧠 **However:** 電界制御が単一方向であり、**ゲート長が30nm未満になると制御が不完全に**
 
 ---
 
 ## 🔸 1.1.2 微細化とともに発生する問題  
-### Scaling-Induced Issues
+### Scaling-Induced Issues in Planar Devices
 
-| 課題 / Issue | 内容 / Description |
-|--------------|---------------------|
-| 短チャネル効果（SCE） | ゲートがチャネル全体を制御できず、リーク電流やV<sub>th</sub>低下が発生 |
-| DIBL | ドレイン電圧がバリアを下げ、オン/オフ切り替えが不安定に |
-| サブスレッショルド特性の悪化 | SS値（Subthreshold Swing）が80–100 mV/decに劣化 |
-| オフリーク電流 | ゲート制御不足により、待機時でも電流が流れる |
-| バルク効果・寄生容量 | 高速動作時にノイズ・遅延・消費電力が増加 |
+| **課題 / Issue** | **内容 / Description** |
+|------------------|-------------------------|
+| **短チャネル効果（SCE）** | チャネルが短くなると、ゲートが電位を制御できず、リーク増加・しきい値低下へ |
+| **DIBL** | ドレイン電圧がソース側のバリアを下げてしまい、誤動作リスク増加 |
+| **サブスレッショルド特性の劣化** | SS（Subthreshold Slope）が 60mV/dec → 80〜100mV/dec に悪化 |
+| **オフリーク電流の増加** | 電源OFF時でも電流が流れ、静的消費電力の増加に直結 |
+| **バルク効果・寄生容量** | 接地面積の増大により、高速動作時に遅延・ノイズ要因となる |
 
 ---
 
-## 🔧 1.1.3 プロセス技術による一時的な対策  
-### Temporary Remedies in Process Technology
+## 🔧 1.1.3 プロセス技術による一時的対処  
+### Temporary Remedies via Process Enhancements
 
-- **ハロウエル構造／スーパーソース・ドレインの導入**
-- **高濃度チャネルドーピングによるV<sub>th</sub>制御**
-- **応力チャネル（SiGe S/D, CESL）の導入**
-- **ハイkゲート絶縁膜 + メタルゲート（45nm以降）**
+- **Halo Well / スーパーソース・ドレイン構造**  
+  → 短チャネル下での電界制御を改善
 
-> ⚠️ これらは**限界点の引き延ばし**には有効だが、根本的な構造問題は解決できない。
+- **チャネルドーピング増加**  
+  → しきい値電圧V<sub>th</sub>の制御強化（ばらつき問題あり）
+
+- **応力エンジニアリング（Strain Engineering）**  
+  → SiGeソース・ドレイン / CESL により移動度改善
+
+- **ハイk／メタルゲートの導入（45nm〜）**  
+  → ゲートリーク電流の抑制と特性安定化
+
+> ⚠️ これらの技術は**“場当たり的な緩和策”**にすぎず、根本解決にはならない。
 
 ---
 
 ## 🧠 1.1.4 設計上の限界とスケーリングの終焉  
-### Design Limitations and End of Dennard Scaling
+### Design Constraints and End of Dennard Scaling
 
-- **V<sub>th</sub>のばらつき（Variability）**：ドーピングの統計変動・界面粗さによってデバイス間差が増大  
-- **駆動電流の頭打ち**：チャネル長短縮だけではI<sub>on</sub>が向上しない  
-- **RC遅延**：ゲートは速くなっても**配線が律速**となる
-
----
-
-## 🔁 1.1.5 構造転換の必然性：FinFETとBeyond  
-### Structural Breakthrough: FinFET and Beyond
-
-| 技術 | 特徴 |
-|------|------|
-| **FinFET** | 3面ゲート包囲によりSCEを強力に抑制、22nm以降の主流構造 |
-| **GAA（Gate-All-Around）FET** | 4面全包囲、さらなるゲート制御性とサイズ縮小に対応（2nm世代〜） |
-| **CFET / VTFET** | 垂直方向にトランジスタを積層し、究極の集積密度と省電力を追求 |
-
-> 📌 構造そのものを変革することで、物理限界を超えたスケーリングが実現されている。
+| **設計限界 / Limitation** | **具体内容 / Details** |
+|----------------------------|--------------------------|
+| **V<sub>th</sub>ばらつき** | ドーピング揺らぎ・界面粗さなどでチップ間／トランジスタ間の差が拡大 |
+| **駆動電流の限界** | ゲート長の短縮ではI<sub>on</sub>が頭打ちになる |
+| **RC遅延の支配** | ゲートのスピードは上がっても、**配線遅延が律速に** |
 
 ---
 
-## 🖼 図版リンク（予定）
+## 🚧 1.1.5 構造的ブレイクスルーの必要性  
+### Structural Breakthroughs Needed
 
-- `images/planar_scaling_limit.png`：プレーナMOSのスケーリング限界を示す概念図  
-- `images/sce_effect.png`：SCEによるバリア低下の模式図  
-- `images/gate_control_comparison.png`：ゲート包囲面の構造比較（Planar / FinFET / GAA）
+| **次世代技術 / Technology** | **特徴 / Key Features** |
+|------------------------------|---------------------------|
+| **FinFET** | ゲートが3面からチャネルを包囲（Tri-Gate）→ SCE抑制、22nm以降に主流化 |
+| **GAA FET（Gate-All-Around）** | ゲートがナノシートを4面から完全包囲 → 制御性・スケーリングに優れる（2nm以降） |
+| **CFET / VTFET** | 垂直方向にn/p型FETを積層 → 究極の集積密度・短距離・低電力化に寄与 |
+
+> ✅ **FinFETやGAA構造は、プレーナ型では克服困難な電界制御の限界を突破するための技術革新である。**
+
+---
+
+## 🖼 図版リンク（予定 / Planned Images）
+
+- `images/planar_scaling_limit.png`  
+  → プレーナ構造におけるスケーリング限界の概念図  
+- `images/sce_effect.png`  
+  → SCEによるしきい値低下とバリア変形の模式図  
+- `images/gate_control_comparison.png`  
+  → Planar / FinFET / GAA のゲート包囲面の比較図
 
 ---
 
 ## ✅ まとめ / Summary
 
-プレーナMOSは、半導体の黄金時代を築いた構造である一方、**20nm以下では電気的・物理的制御が限界**に達しました。  
-この限界を超えるために、**3次元的ゲート制御を持つFinFETやGAA構造が必然的に登場**しました。
+プレーナMOSは、長年にわたりCMOS技術を支えてきた**実績ある構造**でしたが、20nmを下回るノードでは**電気的・物理的制御の限界**が顕在化しました。  
+この限界を乗り越えるため、**FinFET（22nm〜）やGAA FET（2nm〜）といった3D構造への転換**が必然となりました。
 
-本節は、以降の【1.2 FinFET構造】および【1.3 GAA構造】の理解に向けた基礎となる章です。
+本節の内容は、次節以降の「FinFET構造（1.2）」および「GAA構造（1.3）」の背景理解として重要な基盤となります。
 
 ---
 
-🏁 次節：📘 [1.2 FinFET構造の原理とプロセス概要](f1_2_finfet.md)
+📘 次節：[1.2 FinFET構造の原理とプロセス概要](f1_2_finfet.md)
