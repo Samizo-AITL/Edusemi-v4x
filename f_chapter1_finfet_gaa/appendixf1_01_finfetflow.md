@@ -439,3 +439,153 @@ Planarize M2 top surface for next lithography
 - Direct impact on **overlay precision** for next litho steps
 
 ---
+
+## 🔹 Step 22：上位層間絶縁膜（ILD）堆積 / ILD Deposition (M2–Mx)
+
+**目的 / Purpose**：  
+M2以降の上層配線層を絶縁するための層間膜を形成  
+Form ILD layers between upper metal layers from M2 to Mx
+
+**条件 / Conditions**：  
+- Low-k SiCOH（k ≈ 2.5–3.0）、PECVD法  
+- 厚さ：300–500 nm  
+- Low-k SiCOH (k ≈ 2.5–3.0), deposited via PECVD  
+- Thickness: 300–500 nm
+
+**技術ポイント / Technical Notes**：  
+- **低誘電率**と**機械的強度**の両立が必須  
+- Must balance **low dielectric constant** and **mechanical robustness**
+
+---
+
+## 🔹 Step 23：Mx配線・ビア形成 / Lithography & Etching for Mx
+
+**目的 / Purpose**：  
+Mx層の配線パターンおよびビアホールの形成  
+Define metal patterns and vias for Mx layer
+
+**条件 / Conditions**：  
+- ArF immersion または EUV  
+- フルオロカーボン系RIE、Dual Damascene構造  
+- ArF immersion or EUV, FC-based RIE, Dual Damascene
+
+**技術ポイント / Technical Notes**：  
+- **高アスペクト比Viaの形成**およびCD均一性が重要  
+- Ensure **high aspect ratio vias** and **critical dimension uniformity**
+
+---
+
+## 🔹 Step 24：Mxバリア・シード堆積 / Barrier & Seed Deposition (Mx)
+
+**目的 / Purpose**：  
+MxのCu埋込前にバリア層とシード層を形成  
+Form barrier and seed layers prior to Cu fill for Mx
+
+**条件 / Conditions**：  
+- Ta/TaN（ALD）、Cuシード（PVD）  
+- 膜厚：バリア5–10 nm、シード~50 nm  
+- Ta/TaN (ALD), Cu seed (PVD), Barrier: 5–10 nm, Seed: ~50 nm
+
+**技術ポイント / Technical Notes**：  
+- Via底部や配線壁面への**コンフォーマル堆積性**が鍵  
+- **Conformal coverage** on via bottom and trench walls is critical
+
+---
+
+## 🔹 Step 25：Mx銅電解めっき / Cu Electroplating (Mx)
+
+**目的 / Purpose**：  
+Mx層配線およびビアをCuで充填  
+Fill metal lines and vias of Mx layer with Cu
+
+**条件 / Conditions**：  
+- 添加剤制御付き酸性CuSO₄浴  
+- 厚さ：200–400 nm（オーバーフィル）  
+- Acidic CuSO₄ bath with additives, Thickness: 200–400 nm (overfill)
+
+**技術ポイント / Technical Notes**：  
+- パターン密度に応じた**電流制御**が必要  
+- Requires **current tuning** based on pattern density
+
+---
+
+## 🔹 Step 26：Mx層CMP / CMP of Mx Layers
+
+**目的 / Purpose**：  
+Mx層のCuオーバーフィルを除去し、平坦面を形成  
+Remove Cu overfill and planarize the surface for next layers
+
+**条件 / Conditions**：  
+- アルミナ/SiO₂スラリー、ディッシング/エロージョン抑制設計  
+- Alumina/SiO₂ slurry, Dishing/Erosion suppression techniques
+
+**技術ポイント / Technical Notes**：  
+- **ラインエッジ保護**および**微細構造保持**が重要  
+- Critical to **protect line edges** and **preserve fine structures**
+
+---
+
+## 🔹 Step 27：キャップ層堆積 / Cap Layer Deposition
+
+**目的 / Purpose**：  
+Cuの拡散防止と機械的保護層（SiN、SiCNなど）を形成  
+Form Cu diffusion barrier and mechanical cap layer (e.g., SiN, SiCN)
+
+**条件 / Conditions**：  
+- PECVDまたはLPCVD、厚さ：20–50 nm  
+- PECVD or LPCVD, Thickness: 20–50 nm
+
+**技術ポイント / Technical Notes**：  
+- **ストレス低減**によりウェーハ反りを抑制  
+- Low-stress films to suppress **wafer warpage**
+
+---
+
+## 🔹 Step 28：パッシベーション層形成 / Passivation Layer Deposition
+
+**目的 / Purpose**：  
+ウェーハ全体を保護する最終絶縁膜（SiN、SiO₂など）  
+Form final passivation layer for chip protection (e.g., SiN, SiO₂)
+
+**条件 / Conditions**：  
+- PECVD、厚さ：0.5–1.0 µm、ピンホール無し  
+- PECVD, Thickness: 0.5–1.0 µm, Pinhole-free
+
+**技術ポイント / Technical Notes**：  
+- **密着性と防湿性**が最重要パラメータ  
+- Key parameters: **adhesion** and **moisture barrier**
+
+---
+
+## 🔹 Step 29：パッド開口リソグラフィ＆エッチ / Pad Opening Lithography and Etch
+
+**目的 / Purpose**：  
+UBM形成のためパッド部分を露出  
+Open passivation above pad for UBM (Under Bump Metallization)
+
+**条件 / Conditions**：  
+- ArF露光 + F系RIE、UBM上層への影響最小化  
+- ArF lithography + F-based RIE, Minimize damage to UBM
+
+**技術ポイント / Technical Notes**：  
+- **エッチング過剰でUBM損傷**しないよう制御  
+- **Etch depth control** to prevent UBM damage
+
+---
+
+## 🔹 Step 30：UBM形成（バンプ下金属） / Under Bump Metallization (UBM)
+
+**目的 / Purpose**：  
+フリップチップ用のNiV/Cu/Au多層UBMを形成  
+Form NiV/Cu/Au multilayer UBM for flip-chip bonding
+
+**条件 / Conditions**：  
+- PVD + 電解Ni/Cu/Au、合計厚さ：約5〜10 µm  
+- PVD + Electroplating of Ni/Cu/Au, Total thickness: ~5–10 µm
+
+**技術ポイント / Technical Notes**：  
+- **濡れ性・信頼性・耐酸化性**のバランス設計が必須  
+- Must balance **wetting**, **reliability**, and **oxidation resistance**
+
+---
+---
