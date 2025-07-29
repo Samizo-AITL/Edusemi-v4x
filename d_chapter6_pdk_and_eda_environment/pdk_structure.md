@@ -1,63 +1,77 @@
-# 📦 PDKの構成とデバイスモデル
+# 📦 PDKの構成とデバイスモデル  
+# 📦 Structure of PDK and Device Models
 
 ---
 
-## 📘 概要
+## 📘 概要｜Overview
 
-PDK（Process Design Kit）は、ある半導体プロセスに対して回路設計を可能にするための「設計ルール・モデル・ライブラリ」の統合パッケージです。  
-本資料では、PDKの構成要素を分類し、その設計上の役割と実務上の重要性を解説します。
+**PDK（Process Design Kit）** は、ある半導体プロセスに対して回路設計を可能にするための、  
+**設計ルール・デバイスモデル・ライブラリの統合パッケージ**です。  
+本資料では、PDKの構成要素を分類し、その設計上の役割と**実務上の重要性**を解説します。
 
----
-
-## 🧱 PDKの主な構成要素
-
-| 構成要素 | 内容 | 使用フェーズ |
-|-----------|------|---------------|
-| デザインルール | 配線幅、間隔、層構成などの幾何制約 | レイアウト、DRC |
-| スパイスモデル | MOSやBJTなどのトランジスタ動作モデル | シミュレーション |
-| レイアウトビュー | GDSやLEFでの物理セル情報 | P&R、DRC/LVS |
-| シンボルライブラリ | 回路図エディタ上の部品記号 | スケマティック設計 |
-| 回路シミュレーションパラメータ | OP条件、温度依存性などの補助データ | SPICE解析 |
-| DRC/LVSルールファイル | 検証用のルール記述ファイル | 物理検証 |
-| テクノロジーファイル | 層情報、ビア構成、色分けなどの視覚補助 | ビューワ、レイアウト |
+A **Process Design Kit (PDK)** is an integrated package consisting of **design rules, device models, and libraries**, enabling circuit design for a specific semiconductor process.  
+This document categorizes PDK components and explains their design roles and practical importance.
 
 ---
 
-## 🧪 デバイスモデルの位置づけ
+## 🧱 PDKの主な構成要素｜Key Components of a PDK
 
-### 🧩 モデルの種類
-- **レベル1〜7**：古典的MOSモデル（学習用途）
-- **BSIM3/4**：実用MOSFETモデル（0.35µm以降で主流）
-- **PSP, HiSIM**：最先端プロセス向け（65nm以下）
-
-### 📐 モデルに含まれる要素
-- 寸法依存性（L, Wスケーリング）
-- 温度依存性、コーナーモデル
-- ノイズ、寄生容量、リーク電流、短チャネル効果など
-
----
-
-## 🌐 PDKの入手例
-
-| PDK名 | 提供元 | 特徴 |
-|--------|--------|------|
-| Sky130 | Google + Efabless | OSS向けPDK、教育利用に適す |
-| TSMC 65nm | 商用 | NDAが必要、豊富なアナログ／ミックスド対応 |
-| GF 22FDX | GlobalFoundries | FDSOI向けPDK。低消費電力設計向き |
+| 🧩 **構成要素｜Component** | 📘 **内容｜Description** | 🔧 **使用フェーズ｜Design Phase** |
+|--------------------------|--------------------------|-------------------------------|
+| デザインルール<br>Design Rules | 配線幅、層構成、層間距離など<br>Geometry rules (width, spacing, layers) | レイアウト、DRC<br>Layout, DRC |
+| スパイスモデル<br>SPICE Models | トランジスタの動作記述（BSIM等）<br>Device behavior models | シミュレーション<br>Simulation |
+| レイアウトビュー<br>Layout Views | GDS、LEF等の物理情報<br>Physical cell representations | P&R、DRC/LVS |
+| シンボルライブラリ<br>Schematic Symbols | 回路図入力用の記号ライブラリ<br>Symbols for schematic editors | スケマティック設計<br>Schematic design |
+| シミュレーションパラメータ<br>Sim Params | 温度・OP条件など補助ファイル<br>Operating point, temperature effects | SPICE解析<br>SPICE analysis |
+| DRC/LVSルール<br>DRC/LVS Rules | 検証ルール（形式：Calibre, ICV等）<br>Physical verification rules | 物理検証<br>Verification |
+| テクノロジーファイル<br>Tech Files | 層構成・色分け・ビア情報など<br>Layer map, via structure, color map | ビューワ、レイアウト<br>Viewer, layout editing |
 
 ---
 
-## 🧰 教材的意義
+## 🧪 デバイスモデルの位置づけ｜Role of Device Models
 
-- 回路設計はPDKに依存するため、**構造を理解してこそ設計の自由度が得られる**
-- 「モデルファイル」や「ルールファイル」をブラックボックスにしないことで、**信頼性や不具合の追跡能力を高める**
-- OSS/商用に関わらず、PDKは**「プロセスの言語化された仕様書」**であると認識することが重要
+### 🧩 モデルの種類｜Model Types
+
+- **Level 1–7**：古典的MOSモデル（学習向け）  
+  *Classic MOS models used in education*
+- **BSIM3 / BSIM4**：実用的CMOSモデル（主に0.35μm以降）  
+  *Mainstream practical models for modern CMOS*
+- **PSP, HiSIM**：65nm以下の先端ノード向けモデル  
+  *Advanced models for sub-65nm nodes*
+
+### 📐 モデルに含まれる要素｜What Models Include
+
+- 寸法依存性（L, W）<br>*Length/width scaling*
+- 温度依存性、バラツキ（コーナー）<br>*Temperature and corner models*
+- ノイズ、寄生、短チャネル効果<br>*Noise, parasitics, short-channel effects*
 
 ---
 
-## 🔗 関連資料
+## 🌐 PDKの入手例｜Examples of PDKs
 
-- [`eda_toolchain.md`](./eda_toolchain.md)：EDAツールとの接続構成へ
+| 🏷️ **PDK名｜PDK Name** | 🏢 **提供元｜Provider** | 🔍 **特徴｜Features** |
+|------------------|------------------------|--------------------------|
+| **Sky130** | Google + Efabless | OSS対応、教育利用に適す<br>Open-source, ideal for education |
+| **TSMC 65nm** | 商用｜Commercial | NDA必須、豊富なAMSマクロ<br>NDA required, full AMS support |
+| **GF 22FDX** | GlobalFoundries | FDSOIプロセス、低消費電力向け<br>FDSOI-based, low-power optimized |
+
+---
+
+## 🧰 教材的意義｜Educational Significance
+
+- 回路設計はPDKに強く依存するため、**PDK構造の理解が設計自由度を決定**する  
+  *Understanding the PDK structure enables greater design flexibility*
+- モデル／ルールファイルの中身を知ることで、**不具合の根本原因に到達しやすくなる**  
+  *Interpreting models and rules helps in effective debugging*
+- PDKは**プロセス技術の言語化された設計仕様**と捉えるべき  
+  *A PDK is the "encoded design language" of a process*
+
+---
+
+## 🔗 関連資料｜Related Materials
+
+▶️ [`eda_toolchain.md`](./eda_toolchain.md)：EDAツールとの接続構成へ  
+*Connection between EDA tools and PDK*
 
 ---
 
@@ -66,4 +80,4 @@ PDK（Process Design Kit）は、ある半導体プロセスに対して回路�
 
 ---
 
-© 2025 Shinichi Samizo / MIT License
+© 2025 **Shinichi Samizo** / MIT License
