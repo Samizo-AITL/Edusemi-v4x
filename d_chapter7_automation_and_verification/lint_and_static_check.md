@@ -82,4 +82,9 @@
 
 ---
 
+### 🤖 応用編 第7章：自動化と実装検証技術｜Automation and Implementation Verification  
+[➡️ 章の詳細へ進む｜Go to Chapter](./README.md)
+
+---
+
 © 2025 Shinichi Samizo / MIT License
