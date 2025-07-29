@@ -2,72 +2,154 @@
 
 ---
 
-## 📘 概要
+## 📘 概要｜Overview
 
-HV-CMOS（高耐圧CMOS）は、**標準CMOSプロセスに準拠しながら高電圧動作を可能にしたMOSデバイス技術**です。  
-主に以下の用途で利用されます：
+**HV-CMOS（高耐圧CMOS）** は、**標準CMOSプロセスに準拠しながら高電圧動作を可能にしたMOSデバイス技術**です。  
+**HV-CMOS (High Voltage CMOS)** enables high-voltage operation while maintaining compatibility with standard CMOS processes.
 
-- ゲートドライバ（パワーFETの制御）
-- アナログ制御回路（電源ライン監視など）
-- 高耐圧I/Oセル（5V〜30V駆動のインタフェース）
+主に以下の用途で使用されます：  
+Main application areas include:
 
-**LDMOSが構造的に高耐圧化されるのに対し、HV-CMOSは標準CMOSの延長で制御性・集積性を重視**します。
+- ゲートドライバ（パワーFETの制御）  
+  *Gate drivers for power FETs*
+- アナログ制御回路（電源ライン監視など）  
+  *Analog control circuits such as power monitoring*
+- 高耐圧I/Oセル（5V〜30V駆動のインタフェース）  
+  *High-voltage I/O cells for interfaces (5V–30V)*
+
+👉 **LDMOSが構造的に高耐圧化されるのに対し、HV-CMOSは標準CMOSの延長として制御性・集積性を重視**  
+👉 *Unlike LDMOS, which is structurally enhanced for high voltage, HV-CMOS extends CMOS compatibility with better control and integration.*
 
 ---
 
-## 🏗️ 構造概要と特徴
+## 🏗️ 構造と特徴｜Structure and Features
+
+【HV-NMOS構造例｜Example HV-NMOS Structure】
+
 ```
-HV-NMOS構造（例）
-┌─────────────┐
-│  Gate       │
-├─────────────┤
-│   LDD領域（ドレイン拡張） │ ← 耐圧確保
-└─────────────┘
-│   │   │
-N+   N−   P-Sub
-
-多重ウェル構造で絶縁と耐圧を確保
+┌──────────────┐
+│    Gate (Poly)       │
+├──────────────┤
+│ LDD領域（拡張拡散） │  ← 電界緩和・耐圧向上
+└──────────────┘
+│   │    │
+N+  N−   P-Sub
 ```
 
-- **ドレイン拡張（LDD領域）**により電界集中を緩和  
-- **ゲート酸化膜の厚膜化**（5V以上対応）  
-- **多重ウェル絶縁（Deep N-Well + Shallow）**：Substrateカップリング抑制  
-- CMOS互換のため、**論理回路と同時設計が可能**
+→ 多重ウェル構造（Deep N-Well）でSub絶縁
+→ 厚膜酸化によるゲート耐圧向上
+
+| 特徴｜Features | 説明｜Description |
+|----------------|------------------|
+| **ドレイン拡張領域**<br>Drain Extended Region | 電界集中を緩和し、BVdss向上<br>*Reduces field crowding to increase breakdown voltage* |
+| **厚ゲート酸化膜**<br>Thick Gate Oxide | 5V以上の高電圧に対応可能<br>*Supports operation at 5V and above* |
+| **多重ウェル絶縁構造**<br>Deep Well Isolation | Substrateノイズや干渉を抑制<br>*Suppresses substrate noise and coupling* |
+| **CMOS互換性**<br>CMOS Compatible | ロジックと同時設計が可能<br>*Enables integration with logic design* |
 
 ---
 
-## 🧪 動作と応用例
+## 📏 動作電圧とデバイス寸法  
+### Operating Voltage vs Device Parameters
 
-| 用途 | 解説 |
-|------|------|
-| ゲートドライバ回路 | NMOS/PMOSを用いた高電圧FET制御（例えば12V出力） |
-| 電源ラインのモニタ | 高耐圧入力でADCや比較器に接続 |
-| フルブリッジ制御 | HV-CMOS構成で上下スイッチのペア制御を実装可能 |
+| 動作電圧｜Operating Voltage | Tox（nm）| L（μm） | 備考｜Remarks |
+|-----------------------------|----------|---------|-------------------------|
+| 1.8 V | 約 3.0〜4.0 | 約 0.18〜0.24 | 標準ロジック｜Standard Logic |
+| 3.3 V | 約 7.0〜8.0 | 約 0.35〜0.5  | IOセル｜I/O CMOS |
+| 5.0 V | 約 11〜13   | 約 0.6〜1.0  | 一般HV｜General HV |
+| 20 V  | 約 30〜35   | 約 2.0〜3.0  | 厚酸化膜＋ドレイン拡張あり |
+| 40 V  | 約 55〜65   | 約 4.0〜6.0  | NMOSのみ構成されることが多い |
 
----
-
-## 🔧 設計上の注意点
-
-- **オーバーシュート・静電放電（ESD）対策が重要**：PMOSのゲート酸化膜破壊に注意  
-- **サブストレートノイズの絶縁対策**：アナログ信号との干渉を防ぐための隔離が必要  
-- **HVセルライブラリ使用時のPDK制約の確認**
+> ⚠️ 上記数値はPDKやプロセス仕様により異なる場合があります。  
+> *Values vary depending on PDK and process.*
 
 ---
 
-## 📚 教材的意義
+## 🧪 応用例｜Applications
 
-- 標準CMOSとの違いを明確にしながら**実装レベルでの工夫**を理解できる  
-- **パワー制御とロジック統合の橋渡し技術**として重要  
-- センサや電源回路などの**アナログ混載SoC**設計教育に適する題材
+| 用途｜Application | 説明｜Description |
+|------|-------------|-----------------|
+| ゲートドライバ｜Gate Driver | 高電圧スイッチングFETの制御 |
+| 電源モニタ｜Power Monitor | 高耐圧入力で電圧を監視・検出 |
+| フルブリッジ制御｜H-Bridge Control | 上下のHVトランジスタを対で駆動可能 |
 
 ---
 
-## 🔗 関連項目・章
+## 🔁 プロセスフロー順序｜Process Flow Order
 
-- [`ldmos.md`](./ldmos.md)：より高耐圧・大電流対応の構造比較  
-- [`junction_isolation.md`](./junction_isolation.md)：絶縁構造の設計基盤  
-- [chapter5_soc_design_flow](../chapter5_soc_design_flow/)：SoC内のアナログ・混載マクロ設計との関連
+- ✅ **熱履歴の大きいHV工程を先行**  
+  *HV steps with high thermal budget (e.g., thick oxidation, drift implantation) are done first.*
+- ✅ **後段で標準CMOSロジック形成**  
+  *Standard logic with thin gate oxide is fabricated after HV steps to prevent degradation.*
+
+👉 **順序を誤ると、ロジックMOSの特性劣化（Vthシフト、リーク増加）が生じる**  
+👉 *Incorrect order may cause logic degradation due to thermal stress.*
+
+---
+
+## ⚠️ 信頼性と環境耐性｜Reliability & Environmental Vulnerability
+
+| 項目｜Concern | 説明｜Description | 対策｜Countermeasures |
+|------|--------|------------------|-----------------------|
+| COP影響<br>COP Defect | シリコン結晶起因の局所欠陥が、HV領域でリークや絶縁破壊を誘発 | ウエハテストで**HVスクリーニング**実施 |
+| 熱ストレス<br>Thermal Stress | 厚膜酸化・ドレイン拡張が熱により劣化しやすい | **HTOL試験**、放熱レイアウト、SOA管理 |
+| 光感受性<br>Photo Sensitivity | 光による光起電流で誤動作・リークが発生 | **ALメタルガードリング**、遮光樹脂使用 |
+
+---
+
+## 🛡️ 耐圧設計の実装技術｜Breakdown Voltage Enhancement Techniques
+
+### 🔸 ドレインオーバー構造とアニール  
+**Drain Extension and Long-Time Anneal**
+
+- 耐圧確保のために、**ドレイン側を広げてLDD領域を確保**し、  
+  **約24時間の高温アニール（例：1000℃）**を行うことで、拡散プロファイルを滑らかにする。
+
+> Smooth doping gradient in drift region reduces peak field and enhances BVdss.
+
+---
+
+### 🔸 GNDガードリングと遮光  
+**GND Guard Ring and Optical Shielding**
+
+- NMOSの周囲には、**GND接続されたP+ガードリング**を配置  
+- 光照射や基板電流を遮断する目的で、**上層にAlメタルを重ねた遮光構造**を施すこともある。
+
+【レイアウト例｜Guard Ring Layout】
+
+```
+┌────────────────────────┐
+│      Metal Shield (Al)       │ ← 光遮蔽
+├────────────────────────┤
+│  GND Guard Ring (P+)    │ ← 寄生防止
+│  ┌────────────────┐  │
+│  │     HV-NMOS Core     │  │
+│  └────────────────┘  │
+└────────────────────────┘
+```
+
+> GND-tied guard ring and metal shielding suppress light-induced and parasitic effects.
+
+---
+
+## 📚 教材的意義｜Educational Relevance
+
+- 高耐圧設計の実装構造と信頼性対策を理解できる  
+  *Understand both layout-level and process-level HV design techniques*
+- 標準CMOSとの**製造順序・構造の違い**を体系的に整理可能  
+  *Compare and integrate HV CMOS with baseline logic*
+- センサ／PMIC／混載SoCの**アナログ高電圧設計**に必須の知識  
+  *Essential knowledge for analog and mixed-signal SoC design*
+
+---
+
+## 🔗 関連リンク｜Related Topics
+
+- [`ldmos.md`](./ldmos.md)：LDMOSによる高電流対応技術  
+- [`junction_isolation.md`](./junction_isolation.md)：寄生素子を防ぐ絶縁設計  
+- [chapter5_soc_design_flow](../chapter5_soc_design_flow/)：アナログブロックとSoC設計統合
 
 ---
 
 © 2025 Shinichi Samizo / MIT License
+
+---
