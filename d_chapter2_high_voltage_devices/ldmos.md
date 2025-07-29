@@ -2,21 +2,27 @@
 
 ---
 
-## 📘 概要
+## 📘 概要｜Overview
 
-LDMOS（Laterally Diffused MOS）は、**高電圧に対応するための特殊なMOSトランジスタ構造**です。  
-ドレイン・ソース間の距離を横方向に拡張し、**電界分布を制御**することで、**100V〜数百Vクラスの動作**が可能となります。
+**LDMOS（Laterally Diffused MOS）** は、**高電圧に対応するための横方向拡散型のMOSトランジスタ構造**です。  
+**LDMOS** is a laterally diffused MOS transistor structure designed for high-voltage applications.
 
-主に以下の用途で活用されます：
+**主な用途｜Main applications:**
 
-- パワーマネジメントIC（PMIC）
-- モータ・LEDドライバ
-- 車載用SoC（高耐圧インタフェース含む）
+- **パワーマネジメントIC（PMIC）**  
+  *Power management ICs*
+- **モータ・LEDドライバ**  
+  *Motor and LED drivers*
+- **車載用SoC（高耐圧I/O含む）**  
+  *Automotive SoCs including high-voltage I/Os*
 
 ---
 
-## 🏗️ 構造と設計ポイント
-```
+## 🏗️ 構造と特徴｜Structure and Features
+
+```text
+【LDMOS構造（断面図）｜LDMOS Cross-Section】
+
 GATE
 │
 ┌────┬────────────┬────┐
@@ -26,40 +32,88 @@ GATE
  ← Lateral方向に拡散
 ```
 
- - **Drift領域**（低濃度n型）：高耐圧化に寄与。ただし抵抗増加のトレードオフあり  
-- **P型基板とN型ドレインの間の電界制御**が耐圧を決める  
-- **RESURF設計（Reduced Surface Field）**により耐圧とオン抵抗のバランスを最適化  
+```text
+【リングゲート型LDMOS（上面レイアウト概念図）｜Ring-Gate Layout】
+
+        ┌──────────────────────┐
+        │     GND Guard Ring     │ ← P+ガードリング（外周）
+        │  ┌────────────────┐  │
+        │  │      Drain (N+)       │  │ ← 高電圧端子（外周）
+        │  │  ┌────────────┐  │
+        │  │  │   Gate (Poly)     │  │ ← リング状ゲート
+        │  │  └────────────┘  │
+        │  │     Source (N+)     │  │ ← 中央ソース
+        │  └────────────────┘  │
+        └──────────────────────┘
+```
 
 ---
 
-## 📐 特性と設計パラメータ
+## 📐 特性と設計パラメータ｜Characteristics and Design Parameters
 
-| 項目 | 備考 |
-|------|------|
-| 耐圧範囲 | 30V〜700V（構造依存） |
-| オン抵抗 | Drift長に比例。低抵抗化にはセル配置工夫が必要 |
-| ゲート酸化膜 | 通常MOSより厚膜化（>10nm）で絶縁破壊防止 |
-| 寄生トランジスタ | 高電圧印加時のラッチアップ防止策が重要 |
-
----
-
-## 🧪 実装上の注意点
-
-- **空乏層拡張方向を考慮したレイアウト設計**（セル間空間・ガードリング）  
-- **寄生npn構造の抑制**：ラッチアップ・ゲート破壊の予防が重要  
-- **熱分布**：ドレイン周辺に集中しがち → 熱設計も併用  
+| 項目｜Item | 解説｜Description |
+|--------|--------|
+| **耐圧範囲**<br>Breakdown Voltage | 30V〜700V（構造・プロセスに依存）<br>30V–700V depending on structure/process |
+| **オン抵抗**<br>On-Resistance | Drift長に比例。低抵抗化にはセル配置やレイアウトの工夫が必要<br>Proportional to drift length; optimized via layout |
+| **ゲート酸化膜**<br>Gate Oxide | 厚膜酸化（>10nm）で高電圧動作をサポート<br>Thick oxide prevents breakdown |
+| **寄生素子**<br>Parasitic Effects | 高電圧印加時の寄生npnトランジスタ・ラッチアップ対策が重要<br>Suppression of latch-up is critical |
 
 ---
 
-## 📚 教材的意義
+## ⚙️ SOI基板構造による高耐圧化｜SOI-Based High Voltage Structure
 
-- 高電圧領域での**電界制御と拡散設計**の関係が明確  
-- **低耐圧CMOSとの統合設計**を行う際の構造的な視野を育てる  
-- デバイス単体ではなく**システムの電源ブロック設計**にも接続  
+```text
+【SOI LDMOS構造｜SOI LDMOS Cross-Section】
+
+    ┌──────────────┐
+    │   Metal / Passivation  │
+    ├──────────────┤
+    │       Gate (Poly)       │
+    ├──────────────┤
+    │   Drift / N− Region    │ ← 高耐圧ドレイン拡散
+    ├──────────────┤
+    │   P-Body / N+ Source   │
+    ├──────────────┤
+    │   SOI Layer (Si)       │ ← トランジスタ層
+    ├──────────────┤
+    │   BOX (SiO₂)           │ ← Buried Oxide 絶縁層
+    ├──────────────┤
+    │   Handle Wafer (Sub)   │ ← 基板バルク不要（浮遊）
+    └──────────────┘
+```
+
+| 特徴｜Feature | 解説｜Description |
+|--------|--------|
+| **寄生素子抑制**<br>Parasitic Suppression | 寄生npn構造をBOXで絶縁<br>BOX layer eliminates latch-up path |
+| **電界集中抑制**<br>Field Relaxation | BOXが基板方向の電界を抑制し高耐圧<br>Electric field diverted from bulk |
+| **高速応答**<br>Fast Switching | Junction容量が小さくスイッチング損失が少ない<br>Low parasitic capacitance |
+| **熱設計**<br>Thermal Consideration | 熱がBOXに閉じ込められるため放熱設計が必要<br>Requires thermal-aware layout |
 
 ---
 
-## 🔗 関連項目・章
+## 🧪 実装上の注意点｜Implementation Notes
+
+- **空乏層拡張方向の考慮**  
+  *Layout must account for lateral depletion extension*
+- **寄生バイポーラ抑制**  
+  *Use guard rings to prevent latch-up*
+- **セル密度と放熱のトレードオフ**  
+  *Balance between packing density and heat dissipation*
+
+---
+
+## 📚 教材的意義｜Educational Relevance
+
+- **横方向拡散と電界制御の理解**に最適  
+  *Ideal to understand lateral diffusion and field control*
+- **HV-CMOSとの構造比較**ができる  
+  *Supports structural comparison with HV-CMOS*
+- **パワーSoC設計への導入技術**として重要  
+  *Key knowledge for power SoC design*
+
+---
+
+## 🔗 関連リンク｜Related Topics
 
 - [`hvcmos.md`](./hvcmos.md)：CMOSプロセス互換での高耐圧化技術  
 - [`layout_rules.md`](./layout_rules.md)：LDMOSレイアウト制約と最適化  
@@ -68,3 +122,5 @@ GATE
 ---
 
 © 2025 Shinichi Samizo / MIT License
+
+---
