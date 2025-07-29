@@ -758,3 +758,133 @@ Remove overfill Cu and planarize the top layer
 - Ensure **uniform topography** and minimize impact on next steps
 
 ---
+
+## 🔹 Step 41：RC抽出と寄生評価 / RC Extraction and Parasitic Evaluation
+
+**目的 / Purpose**：  
+配線の**抵抗（R）**・**容量（C）**を抽出し、回路性能（遅延・ノイズ）を評価  
+Extract **resistance (R)** and **capacitance (C)** to evaluate delay and noise
+
+**条件 / Conditions**：  
+- レイアウト後EDAツールによるポストレイアウト解析  
+- Post-layout extraction using EDA tools
+
+**技術ポイント / Technical Notes**：  
+- **RC delay < 60 ps/mm** を目標  
+- Accurate extraction is critical for **timing sign-off**
+
+---
+
+## 🔹 Step 42：UBMパッド開口 / Pad Opening for UBM
+
+**目的 / Purpose**：  
+パッケージ接続用に**UBM（Under Bump Metallization）層**を露出  
+Expose **UBM layer** for external packaging (flip-chip, etc.)
+
+**条件 / Conditions**：  
+- ArFスキャナー + RIEによる開口、精密アライメント制御  
+- ArF scanner lithography + RIE, precise alignment control
+
+**技術ポイント / Technical Notes**：  
+- **UBM損傷を回避**するため、エッチング深さ制御が必須  
+- Avoid **over-etching** to prevent UBM damage
+
+---
+
+## 🔹 Step 43：UBM再形成（NiV / Cu / Au） / Final UBM Formation (NiV / Cu / Au)
+
+**目的 / Purpose**：  
+パッケージング強度・接続信頼性向上のため**UBM金属層を追加形成**  
+Enhance bump adhesion and reliability by adding UBM stack
+
+**条件 / Conditions**：  
+- PVD（NiV）＋電解Cu/Auめっき、合計厚み：~10 µm  
+- NiV by PVD + Cu/Au electroplating, total thickness ~10 µm
+
+**技術ポイント / Technical Notes**：  
+- **Snバンプとの濡れ性**や**界面拡散**への耐性を確保  
+- Ensure good **wetting with solder bump** and **diffusion barrier**
+
+---
+
+## 🔹 Step 44：ウェーハ薄化 / Wafer Thinning
+
+**目的 / Purpose**：  
+3D実装や放熱性向上のため、**ウェーハを薄化（~100 µm以下）**  
+Thin the wafer to **~100 µm or less** for better 3D stacking and thermal performance
+
+**条件 / Conditions**：  
+- バックグラインディング（BG）→ CMP  
+- Back grinding followed by CMP
+
+**技術ポイント / Technical Notes**：  
+- **反り・割れ防止**と厚み均一性が重要  
+- Maintain **uniformity** and avoid **warping/cracking**
+
+---
+
+## 🔹 Step 45：TSV / マイクロバンプ形成 / TSV & Micro-Bump Formation
+
+**目的 / Purpose**：  
+3D IC実装のため、**垂直TSV（Through-Silicon Via）と微細バンプ**を形成  
+Form **TSVs and micro-bumps** for 3D chip stacking and packaging
+
+**条件 / Conditions**：  
+- TSV：DRIEエッチ → 絶縁膜 → バリア/シード → Cu ECP  
+- Bump：SnAgまたはPbフリー電解めっき  
+- TSV: DRIE etch → dielectric → barrier/seed → Cu ECP  
+- Bump: SnAg or lead-free electroplating
+
+**技術ポイント / Technical Notes**：  
+- **ボイド・割れ**のない完全埋込と**接続信頼性**が鍵  
+- Ensure **void-free filling** and **reliable bump formation**
+
+---
+
+## 🔹 Step 46：最終パッシベーション / Final Passivation
+
+**目的 / Purpose**：  
+完成チップを**湿気・機械ダメージ**から保護  
+Protect die from **moisture and mechanical damage**
+
+**条件 / Conditions**：  
+- SiNまたはSiO₂を**PECVD**で成膜、厚さ0.5–1.0 µm  
+- Deposit SiN or SiO₂ by PECVD, thickness: 0.5–1.0 µm
+
+**技術ポイント / Technical Notes**：  
+- **ピンホールなし**・低ストレスが必須条件  
+- Must ensure **no pinholes** and **low film stress**
+
+---
+
+## 🔹 Step 47：ウェーハテスト・ダイシング / Wafer Test & Dicing
+
+**目的 / Purpose**：  
+チップ単位で**電気テスト**と**切断**を実施  
+Perform **electrical testing** and **dicing** per die
+
+**条件 / Conditions**：  
+- ATEによるリーク・速度・論理検査 → レーザーダイシングまたはソーイング  
+- ATE for leakage, speed, logic → laser or saw dicing
+
+**技術ポイント / Technical Notes**：  
+- **歩留まり分析**と**トレーサビリティ**保持が重要  
+- Ensure **yield analysis** and **traceability**
+
+---
+
+## 🔹 Step 48：パッケージング / Final Packaging
+
+**目的 / Purpose**：  
+**実装形態（FC-CSP, FOWLPなど）**で製品化  
+Package into product form: **FC-CSP, FOWLP, etc.**
+
+**条件 / Conditions**：  
+- ダイアタッチ → ワイヤボンディングまたはバンプ → モールド → アンダーフィル  
+- Die attach → wire bond or flip-chip bump → mold → underfill
+
+**技術ポイント / Technical Notes**：  
+- **熱管理・信頼性・量産性**の設計バランスが鍵  
+- Balance **thermal design**, **reliability**, and **manufacturability**
+
+---
