@@ -1,22 +1,24 @@
-# 🌳 `clock_tree_design.md` – クロックツリー設計と遅延最小化
+# 🌳 `clock_tree_design.md` – クロックツリー設計と遅延最小化  
+**Clock Tree Synthesis and Delay Optimization**
 
 ---
 
-## 📘 概要
+## 📘 概要｜Overview
 
-クロックツリー設計（Clock Tree Synthesis, CTS）は、チップ内の全てのクロック供給先に対して、**同じタイミングでクロックが届くように設計**する工程です。
+クロックツリー設計（Clock Tree Synthesis, CTS）は、チップ内の全てのクロック供給先に対して、  
+**同じタイミングでクロックが届くように設計**する工程です。  
 
-タイミング不整合（スキュー）を最小化し、セットアップ／ホールド時間を確保することが、機能と信頼性の両面で重要です。
+The goal of CTS is to **minimize skew and latency**, ensuring proper setup/hold timing and improving overall reliability.
 
 ---
 
-## 🛠️ クロックツリーの基本構成
+## 🛠️ クロックツリーの基本構成｜Clock Tree Structure
 
-- クロックツリーは、通常、`H型`や`バイナリツリー型`のトポロジーで構築されます。
-- 信号線だけでなく、`バッファ挿入`や`リピータ配置`によってクロックの到達タイミングを揃えます。
-- EDAツールでは、**自動でCTSを実行**し、最適化レポートを出力します。
+- クロックツリーは `H型` や `バイナリツリー型` のトポロジーがよく使われます。
+- `バッファ挿入`や`リピータ配置`で、クロック伝播のタイミングを揃えます。
+- 多くのEDAツールは `自動CTS機能` を提供し、レポートも自動出力されます。
 
-```text
+```
              ┌──────┐
              │ Root │ ← PLLからのクロック
              └──┬───┘
@@ -33,24 +35,34 @@
 
 ---
 
-## 🧮 最適化の観点
+## 🧮 最適化の観点｜Optimization Targets
 
-- **スキュー（Skew）**：異なるフロップ間でのクロック到達時間差。`< 100ps` が目安。
-- **インサートバッファ数**：バッファによる負荷分散とタイミング調整。
-- **レイテンシ（Latency）**：PLLから各FFまでの遅延。できるだけ均一に設計。
-
----
-
-## ⚠️ 実装時の注意点
-
-- クロックネットは、通常の信号線とは **別レイヤー（高層金属）** を使用する。
-- 長距離配線では **EM対策（Electromigration）** や **IRドロップ対策** が必要。
-- CTS後には、**ポストCTS STA（Static Timing Analysis）** による検証が必須。
+| 観点｜Aspect | 説明｜Description |
+|---------------|----------------------|
+| **スキュー（Skew）** | フロップ間のクロック到達時間差。通常 `< 100ps` が望ましい |
+| **バッファ数** | 線長調整・負荷分散のためにバッファを追加 |
+| **レイテンシ（Latency）** | PLLからフロップまでのクロック遅延。均一性が重要 |
 
 ---
 
-## 📚 関連
+## ⚠️ 実装時の注意点｜Implementation Notes
 
-- [第5章 SoC設計フロー](../chapter5_soc_design_flow/README.md) の配置配線・タイミング設計と直結。
-- 後述 [`jitter_and_skew.md`](./jitter_and_skew.md) にて、スキューの詳細とその対策を扱います。
-  
+- クロックネットは、**高層金属層**（Metal 5〜6など）を使用してIRとEM対策。
+- 長距離・高負荷経路では、**EM（エレクトロマイグレーション）対策**を考慮。
+- CTS後には、**ポストCTS STA**（Static Timing Analysis）を実施して検証。
+
+---
+
+## 📚 関連章｜Related Chapters
+
+- [第5章 SoC設計フロー｜Chapter 5: SoC Design Flow](../chapter5_soc_design_flow/README.md)
+- [`jitter_and_skew.md`](./jitter_and_skew.md)：スキューとジッタ対策の詳細
+
+---
+
+### ⏰ 応用編 第9章：PLLとクロック設計｜Applied Chapter 9: PLL and Clock Design  
+[➡️ 章の詳細へ進む｜Go to Chapter](./README.md)
+
+---
+
+© 2025 Shinichi Samizo / MIT License
