@@ -33,6 +33,7 @@ In this chapter, we explore **layout constraints and design strategies** from th
 | [`ir_drop_and_em.md`](ir_drop_and_em.md) | ⚡ IR Drop & EM | IRドロップ・エレクトロマイグレーション対策<br>IR drop and electromigration countermeasures |
 | [`latchup_prevention.md`](latchup_prevention.md) | 🛡 Latch-Up Prevention | 寄生素子・ラッチアップ対策：ガードリングとウェルタップ<br>Latch-up suppression using guard rings and well taps |
 | [`layout_case_study.md`](layout_case_study.md) | 🔍 Case Study | 実レイアウト例とDRC適用・設計ノウハウの紹介<br>Examples of real layouts and DRC-compliant design tips |
+| [`layer_overlay_reference.md`](layer_overlay_reference.md) | 📏 Layer Overlay Reference | 各レイヤーの基準・オーバーレイ関係の設計指針<br>Reference and overlay alignment between layout layers |
 
 ---
 
