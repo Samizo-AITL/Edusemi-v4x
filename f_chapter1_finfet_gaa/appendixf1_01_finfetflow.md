@@ -1,408 +1,248 @@
-# 補足資料：FinFET 製造プロセスフロー（全48ステップ）
+# 🧬 補足資料 / Appendix：FinFET 製造プロセスフロー（全48ステップ）  
+**FinFET Full Process Flow – 48-Step Breakdown for Advanced Nodes**
 
-本資料は、FinFET（Fin Field-Effect Transistor）の製造における主要工程を48ステップに分解し、各ステップの目的・プロセス条件・技術的ポイントを詳細に記述したものである。
-
----
-
-## 🔹 前提情報
-
-- **対象プロセスノード**：10〜5nm世代のFinFET
-- **基板仕様**：300 mm P型 Si（100）、抵抗率：10 Ω·cm前後
-- **目的**：プレーナMOSFETを超える短チャネル制御とゲート制御性の実現
+本資料では、FinFET（Fin型トランジスタ）の製造プロセスを48ステップに分解し、各ステップの**目的・条件・技術ポイント**を詳細に解説します。  
+This document describes the full FinFET manufacturing flow, broken into **48 steps** with detailed **purpose, conditions, and key technical notes** for each.
 
 ---
 
-## 🔸 プロセスフロー一覧（概要）
+## 📘 基本情報 / Basic Information
 
-| ステップ範囲 | 工程群                             | 主な内容                                                  |
-|--------------|------------------------------------|-----------------------------------------------------------|
-| Step 1–3     | 基板準備・ウェル形成               | ウェーハ処理、STI（絶縁）、n/pウェル、チャネル形成など   |
-| Step 4–6     | ゲート形成                         | ゲート酸化膜成長、ポリSi堆積、パターニング               |
-| Step 7–9     | S/D形成（拡散層含む）              | ソース・ドレイン拡張/本体注入、スパーサ形成、アニール   |
-| Step 10–15   | コンタクト形成                     | シリサイド、ILD、コンタクトビア形成、Cuめっき、CMP       |
-| Step 16–21   | 第1層メタル配線（M1）              | 配線・ビア定義、バリア/シード、Cu充填、CMP               |
-| Step 22–26   | 上位メタル層（M2〜Mx）形成         | 層間膜形成、配線・ビア形成、Cu埋込、CMP                  |
-| Step 27–30   | パッシベーション・UBM形成          | Cap層、最終保護膜、パッド開口、下部バンプ金属形成        |
-| Step 31–35   | ビア形成・3D実装対応               | 上層ビア、TSV準備、マイクロバンプ、上層ILD形成           |
-| Step 36–40   | 最終メタル層処理とCMP              | 上層配線パターニング、ダマシンエッチ、Cuめっき・CMP       |
-| Step 41–43   | 設計検証・最終UBM形成              | RC抽出、再UBM露出と形成、露出面整合                     |
-| Step 44–48   | ウェーハ仕上げ・テスト・実装       | ウェーハ薄化、最終パッシベーション、テスト、ダイシング、パッケージング |
+| 項目 / Item | 内容 / Details |
+|-------------|----------------|
+| **対象ノード / Target Node** | 10–5nm 世代 / 10–5nm generation |
+| **基板仕様 / Substrate** | 300mm P-type Si (100), ~10 Ω·cm |
+| **目的 / Objective** | プレーナMOSを超える短チャネル制御とゲート制御性の実現<br>Enhanced short-channel control beyond planar CMOS |
 
 ---
 
-## ① 初期工程（Step 1〜3）
+## 🧩 プロセスセグメント構成 / Process Segment Structure
 
-### Step 1: Substrate Preparation
-- **目的**：高純度Si基板を準備し、表面清浄度を確保
-- **条件**：p型Si (100)、~10 Ω·cm、RCA洗浄＋150°C脱水ベーク
-- **技術ポイント**：微細Fin形成に向けた表面平滑性・金属残渣除去が重要
-
----
-
-### Step 2: STI (Shallow Trench Isolation)
-- **目的**：デバイス間を電気的に分離する絶縁構造を形成
-- **条件**：ArF浸潤リソ→フッ素系RIE→TEOS CVD→CMPで平坦化
-- **技術ポイント**：トレンチ深さ200nm程度、STIストレスによるVthシフトに留意
-
----
-
-### Step 3: Well and Channel Implantation
-- **目的**：n/pウェル・チャネル形成、しきい値制御用のドーピング
-- **条件**：B (p-well), As/P (n-well), 10¹²〜10¹³ cm⁻², 30〜80 keV、RTAによる活性化
-- **技術ポイント**：ウェルばらつきはしきい値の分布を劣化させる
+| セグメント / Segment | ステップ範囲 / Step Range | 内容 / Description |
+|-----------------------|----------------------------|---------------------|
+| ① **初期工程 / Initial Process** | Step 1–3 | ウェル・STI形成 / Well & STI |
+| ② **ゲート前形成 / Pre-Gate Formation** | Step 4–6 | ゲート酸化膜、ポリSi、パターニング |
+| ③ **S/D構造 / Source/Drain Region** | Step 7–9 | 注入とスパーサ形成 / Implant & Spacer |
+| ④ **シリサイド / Silicide** | Step 10 | Ni/Co系低抵抗コンタクト |
+| ⑤ **ILD・コンタクト / Contact** | Step 11–15 | 絶縁膜、ビア、Cu配線形成 |
+| ⑥ **M1層 / Metal-1** | Step 16–21 | 第1層配線プロセス |
+| ⑦ **上位メタル / Upper Metals** | Step 22–26 | M2〜Mx多層形成 |
+| ⑧ **パッシベーション / Passivation** | Step 27–30 | Cap層・UBM形成 |
+| ⑨ **3D実装対応 / 3D Integration** | Step 31–35 | TSV、バンプ、上層ILD等 |
+| ⑩ **テスト・実装 / Final Steps** | Step 36–48 | RC抽出、UBM再形成、パッケージング等 |
 
 ---
 
-## ② ゲート前形成（Step 4〜6）
+## 🎯 ドキュメントの目的 / Document Objective
 
-### Step 4: Gate Oxide Growth
-- **目的**：ゲート絶縁膜として高品質なSiO₂を形成
-- **条件**：乾式酸化（800–900°C）、厚み1.5–2 nm
-- **技術ポイント**：界面準位密度低減がリーク低減・信頼性に直結
-
----
-
-### Step 5: Poly-Si Deposition and Doping
-- **目的**：ゲート電極となるポリシリコンの堆積とドーピング
-- **条件**：LPCVD（~100 nm）、in-situ P/Asまたは後工程でイオン注入
-- **技術ポイント**：粒界の導電性・ドーピング均一性が重要
+- **教育目的**でFinFETのプロセス全体像を把握する  
+  To provide **educational insight** into the full FinFET process.
+- 各工程の**装置・材料・プロセス設計上の論点**を整理  
+  Summarize **equipment, materials, and key process issues** at each step.
+- GAAプロセスとの比較・教材リンクに連携  
+  Link with GAA flow comparison and teaching materials.
 
 ---
 
-### Step 6: Gate Patterning
-- **目的**：微細ゲート形状の定義（CD制御）
-- **条件**：193 nm ArF immersion、HBr/Cl₂ RIEによるエッチング、CD ~30 nm
-- **技術ポイント**：CD変動によるVth・ドレイン電流ばらつき抑制
+## 📎 関連資料 / Related Files
+
+- [`appendixf1_02_gaaflow.md`](./appendixf1_02_gaaflow.md)：GAA版プロセスフロー  
+- [`f1_2_finfet.md`](./f1_2_finfet.md)：FinFET構造と動作解説  
+- [`appendixf1_03_finfet_vs_gaa.md`](./appendixf1_03_finfet_vs_gaa.md)：FinFETとGAAの比較
 
 ---
 
-## ③ S/D領域形成（Step 7〜9）
+## 🖼️ 図版予定 / Planned Figures
 
-### Step 7: S/D Extension Implantation
-- **目的**：チャネル端近傍への軽度ドーピングにより短チャネル効果を抑制
-- **条件**：B or As注入、10¹³〜10¹⁴ cm⁻²、~5–20 keV、スパイクRTA
-- **技術ポイント**：浅い接合でリークと抵抗のバランスを取る
-
----
-
-### Step 8: Spacer Formation
-- **目的**：S/D本注入範囲を定義するサイドウォールスペーサの形成
-- **条件**：LPCVD Si₃N₄ or SiO₂（10–20 nm）→異方性RIEで成形
-- **技術ポイント**：幅・厚みのばらつきがSDE長に影響
+- `images/finfet_process_overview.png`：全体フロー図  
+- `images/finfet_metallization_stack.png`：配線層構成断面図  
+- `images/finfet_final_test_packaging.png`：後工程とパッケージ構造
 
 ---
 
-### Step 9: S/D Main Implant
-- **目的**：ソース／ドレイン領域に高濃度注入し、低抵抗化
-- **条件**：As or B, ~10¹⁵ cm⁻², 30–80 keV、RTAで活性化
-- **技術ポイント**：深すぎると短チャネル効果増加、浅すぎるとRs増加
+## 👤 著者・ライセンス / Author & License
+
+| 項目 / Item | 内容 / Details |
+|-------------|----------------|
+| **著者 / Author** | 三溝 真一（Shinichi Samizo） |
+| **Email** | [shin3t72@gmail.com](mailto:shin3t72@gmail.com) |
+| **ライセンス / License** | MIT License |
+| **GitHub** | [Samizo-AITL](https://github.com/Samizo-AITL) |
 
 ---
 
-## ④ シリサイド形成（Step 10）
-
-### Step 10: Silicide Formation
-- **目的**：ゲート/S/Dに低抵抗コンタクト層を形成（NiSi or CoSi₂）
-- **条件**：PVDでNiまたはCo堆積→400–600°Cアニール→未反応金属除去
-- **技術ポイント**：過剰反応やラインエッジリセッションを防止
+⬇️ 以下、各ステップの詳細解説へ続きます。  
+⬇️ Proceed to detailed descriptions of each step below.
 
 ---
 
-## ⑤ ILD・コンタクト形成（Step 11〜15）
+## 🔹 Step 1：基板準備 / Substrate Preparation
 
-### Step 11: Interlayer Dielectric (ILD) Deposition
-- **目的**：メタル配線とトランジスタの絶縁
-- **条件**：SiO₂またはSiCOH（k ~2.7–3.0）、PECVDまたはSACVD、厚さ300–500 nm
-- **技術ポイント**：平坦性・低応力・欠陥ゼロが求められる
+**目的 / Purpose**：  
+高純度シリコン基板を準備し、微細加工に備えた表面清浄度を確保  
+Prepare high-purity Si wafers and ensure surface cleanliness for fine processing
 
----
+**条件 / Conditions**：  
+- P型 Si (100)、抵抗率 ~10 Ω·cm  
+- RCA洗浄 → 150°C 脱水ベーク  
+- P-type Si (100), ~10 Ω·cm  
+- RCA clean → 150°C dehydration bake
 
-### Step 12: Contact Hole Etch
-- **目的**：ILDをエッチングしてS/Dやゲートへの接続孔を形成
-- **条件**：193nm ArF露光、CH₄/O₂またはFC系プラズマRIE、CD ~30–50 nm
-- **技術ポイント**：シリサイド露出が完全であることが低抵抗に直結
-
----
-
-### Step 13: Barrier and Seed Deposition (Contact)
-- **目的**：Cu拡散防止と電解めっき導入層
-- **条件**：TiNまたはTaN（ALD）、Cuシード（PVD）、バリア5–10 nm、シード~50 nm
-- **技術ポイント**：被覆不良やボイドはオープン故障原因
+**技術ポイント / Technical Notes**：  
+- 微細Fin形成に向けた**表面平坦性と金属残渣除去**が極めて重要  
+- Critical to ensure **surface smoothness** and **removal of metal contaminants** for Fin formation
 
 ---
 
-### Step 14: Cu Electroplating (ECP) for Contact
-- **目的**：コンタクトビアを銅で充填
-- **条件**：酸性CuSO₄浴、10–30 mA/cm²、厚み200–400 nm（オーバーフィル）
-- **技術ポイント**：添加剤制御で均一・ボイドレスを実現
+## 🔹 Step 2：STI（浅溝絶縁）形成 / Shallow Trench Isolation (STI)
+
+**目的 / Purpose**：  
+隣接トランジスタ間を電気的に分離する絶縁溝を形成  
+Form isolation trenches to electrically separate adjacent devices
+
+**条件 / Conditions**：  
+- ArF浸潤リソグラフィ → フッ素系RIE → TEOS CVD → CMP  
+- ArF immersion lithography → Fluorine-based RIE → TEOS CVD → CMP
+
+**技術ポイント / Technical Notes**：  
+- トレンチ深さ ≒ 200 nm  
+- STIストレスによる**しきい値シフト（Vth Shift）**への影響に注意  
+- STI depth ≈ 200 nm  
+- Attention to **Vth shift due to STI-induced stress**
 
 ---
 
-### Step 15: CMP of Contacts
-- **目的**：ECPの過剰CuをCMPで除去し表面を平坦化
-- **条件**：Al₂O₃またはSiO₂系スラリー、モーター電流＋光モニタで終点検出
-- **技術ポイント**：残膜<5 nm、ILDダメージ最小化
+## 🔹 Step 3：ウェル・チャネル形成 / Well and Channel Implantation
+
+**目的 / Purpose**：  
+n/pウェルの定義としきい値調整チャネルドーピングの導入  
+Define n/p wells and implant channel dopants for Vth adjustment
+
+**条件 / Conditions**：  
+- B (p-well), As/P (n-well)：10¹²〜10¹³ cm⁻²、30〜80 keV  
+- Rapid Thermal Annealing (RTA) による活性化  
+- B (p-well), As/P (n-well): 10¹²–10¹³ cm⁻², 30–80 keV  
+- Activation by RTA
+
+**技術ポイント / Technical Notes**：  
+- ウェル分布のばらつきが**Vth均一性**に影響  
+- Variation in well doping affects **Vth uniformity**
 
 ---
 
-## ⑥ メタル配線（M1）（Step 16〜21）
+## 🔹 Step 4：ゲート酸化膜形成 / Gate Oxide Growth
 
-### Step 16: First Metal (M1) Deposition & Patterning
-- **目的**：第1層Cu配線の形成（配線＋ビア）
-- **条件**：193nm ArF or EUV、Dual Damascene、CD 20–30 nm
-- **技術ポイント**：配線RC・寄生容量最小化設計が必要
+**目的 / Purpose**：  
+ゲート絶縁膜として高品質な酸化膜を形成  
+Form high-quality oxide as gate insulator
 
----
+**条件 / Conditions**：  
+- 乾式酸化：800–900°C、厚さ 1.5–2.0 nm  
+- Dry oxidation at 800–900°C, thickness 1.5–2.0 nm
 
-### Step 17: ILD Deposition (M1–M2)
-- **目的**：メタル層間の絶縁層形成
-- **条件**：Low-k SiCOH、PECVD、厚み300–500 nm
-- **技術ポイント**：界面密着と誘電率制御
-
----
-
-### Step 18: Lithography & Etch for M2
-- **目的**：M2の配線パターンとビア形成
-- **条件**：ArF immersion or EUV、FC系RIE、CD 20–30 nm
-- **技術ポイント**：寸法制御とオーバーレイ精度
+**技術ポイント / Technical Notes**：  
+- **界面準位密度（Dit）**を抑えることがリーク・信頼性に重要  
+- Reducing **interface trap density (Dit)** is crucial for leakage and reliability
 
 ---
 
-### Step 19: Barrier/Seed Deposition for M2
-- **目的**：ECPのためのバリア・シード層形成
-- **条件**：Ta/TaN（ALD）、Cuシード（PVD）、厚み同上
-- **技術ポイント**：Via底部へのコンフォーマル性
+## 🔹 Step 5：ポリSi堆積・ドーピング / Poly-Si Deposition and Doping
+
+**目的 / Purpose**：  
+ゲート電極となるポリシリコンを形成し、導電性を確保  
+Deposit doped polysilicon for gate electrode to ensure conductivity
+
+**条件 / Conditions**：  
+- LPCVD（~100 nm）  
+- In-situ P/Asドープ または イオン注入後アニール  
+- LPCVD (~100 nm), In-situ P/As doping or post-implant annealing
+
+**技術ポイント / Technical Notes**：  
+- ポリSiの**粒界伝導**とドーピング均一性がスイッチング性能に影響  
+- **Grain boundary conduction** and doping uniformity are key for switching behavior
 
 ---
 
-### Step 20: Cu Electroplating for M2
-- **目的**：M2ビア・配線層へのCu充填
-- **条件**：添加剤付きCuSO₄浴、厚み200–400 nm
-- **技術ポイント**：スロットル電流制御で埋込均一性確保
+## 🔹 Step 6：ゲートパターニング / Gate Patterning
+
+**目的 / Purpose**：  
+微細ゲート寸法（CD）を定義  
+Define critical gate dimensions (CD) via lithography and etch
+
+**条件 / Conditions**：  
+- 193nm ArF immersion、HBr/Cl₂ベースのRIE  
+- CD ≒ 30 nm（ノードに依存）  
+- 193nm ArF immersion lithography, HBr/Cl₂-based RIE, CD ~30 nm
+
+**技術ポイント / Technical Notes**：  
+- CDのばらつきが**Vth・ドレイン電流**のばらつき要因となる  
+- CD variation causes fluctuation in **Vth and drain current**
 
 ---
 
-### Step 21: CMP of M2 Cu Layer
-- **目的**：M2上部の平坦化、次層への準備
-- **条件**：同様のCMP条件、表面粗さ<0.5 nm RMS
-- **技術ポイント**：次リソグラフィとの連携精度に影響
+## 🔹 Step 7：S/D拡張注入 / S/D Extension Implantation
+
+**目的 / Purpose**：  
+短チャネル効果抑制のためのチャネル端軽度ドーピング  
+Light doping at channel edge to suppress short-channel effects
+
+**条件 / Conditions**：  
+- BまたはAs、10¹³–10¹⁴ cm⁻²、5–20 keV  
+- スパイクRTAで活性化  
+- B or As: 10¹³–10¹⁴ cm⁻², 5–20 keV, activated by spike RTA
+
+**技術ポイント / Technical Notes**：  
+- 浅い接合で**リーク電流と抵抗のトレードオフ**を最適化  
+- Optimize **leakage vs resistance** via shallow junction depth
 
 ---
 
-## ⑦ 上位メタル層形成（Step 22〜26）
+## 🔹 Step 8：スペーサ形成 / Spacer Formation
 
-### Step 22: ILD Deposition (M2–Mx)
-- **目的**：上層メタルの絶縁形成
-- **条件**：Low-k材料（k=2.5–3.0）、厚み300–500 nm
-- **技術ポイント**：低誘電率と強度のバランス
+**目的 / Purpose**：  
+S/D本注入範囲を定義するスペーサ（サイドウォール）の形成  
+Form sidewall spacers to define main S/D implant region
 
----
+**条件 / Conditions**：  
+- LPCVD Si₃N₄またはSiO₂（10–20 nm）  
+- 異方性RIEによるエッチバック  
+- LPCVD Si₃N₄ or SiO₂ (10–20 nm), anisotropic RIE etchback
 
-### Step 23: Lithography & Etching for Mx
-- **目的**：上位メタルのパターン・ビア形成
-- **条件**：EUVまたはArF immersion、CD 20–30 nm、Dual Damascene
-- **技術ポイント**：高アスペクト比Via形成と寸法均一性
-
----
-
-### Step 24: Barrier & Seed Deposition (Mx)
-- **目的**：ECP前の準備（拡散防止＋導電種）
-- **条件**：Ta/TaN（ALD）、Cu（PVD）、同様の厚み
-- **技術ポイント**：Via底部の膜厚均一性
+**技術ポイント / Technical Notes**：  
+- スペーサ幅のばらつきが**SDE長とR_on**に影響  
+- Spacer width variation affects **SDE length and R_on**
 
 ---
 
-### Step 25: Cu Electroplating (Mx)
-- **目的**：上層メタルのCu埋込
-- **条件**：先述と同等、過剰堆積→CMP対象
-- **技術ポイント**：ライン長・ビアサイズに応じた電流制御
+## 🔹 Step 9：S/D本注入 / S/D Main Implant
+
+**目的 / Purpose**：  
+ソース・ドレイン領域に高濃度ドーピングを施し、低抵抗化  
+Heavily dope S/D regions to reduce series resistance
+
+**条件 / Conditions**：  
+- AsまたはB：~10¹⁵ cm⁻²、30–80 keV  
+- RTAで活性化  
+- As or B: ~10¹⁵ cm⁻², 30–80 keV, activated by RTA
+
+**技術ポイント / Technical Notes**：  
+- 深すぎると**短チャネル効果増加**、浅すぎると**抵抗上昇**  
+- Too deep increases **SCE**, too shallow increases **series resistance**
 
 ---
 
-### Step 26: CMP of Mx Layers
-- **目的**：上位層の平坦化
-- **条件**：Alumina/SiO₂スラリー、ディッシング／エロージョン対策
-- **技術ポイント**：ラインエッジ保持と微細構造の保護
+## 🔹 Step 10：シリサイド形成 / Silicide Formation
+
+**目的 / Purpose**：  
+ゲート・S/D領域に低抵抗金属シリサイドを形成  
+Form low-resistance silicide at gate and S/D
+
+**条件 / Conditions**：  
+- PVD NiまたはCo → Rapid Anneal（400–600°C）→ 未反応金属除去  
+- PVD Ni or Co → RTA (400–600°C) → remove unreacted metal
+
+**技術ポイント / Technical Notes**：  
+- **オーバーシリサイド（リーセッション）**や**短絡**を防止  
+- Prevent **excess silicide recession** and **shorts**
 
 ---
-
-## ⑧ パッシベーションとUBM形成（Step 27〜30）
-
-### Step 27: Cap Layer Deposition
-- **目的**：Cu配線の拡散防止・機械保護（SiN, SiCNなど）
-- **条件**：PECVDまたはLPCVD、厚さ20–50 nm、低ストレス
-- **技術ポイント**：ストレス低減によるウェーハ反り防止
-
----
-
-### Step 28: Passivation Layer Deposition
-- **目的**：全体保護用パッシベーション層（SiN, SiO₂など）
-- **条件**：PECVD、厚さ0.5–1.0 µm、ピンホールなし
-- **技術ポイント**：密着性・水分バリア性が要求される
-
----
-
-### Step 29: Pad Opening Lithography and Etch
-- **目的**：バンプ形成に向けたパッド部露出
-- **条件**：193nm ArF露光、F系RIE、UBM露出面を精密制御
-- **技術ポイント**：エッチング過剰でUBM損傷リスク
-
----
-
-### Step 30: Under Bump Metallization (UBM)
-- **目的**：バンプ接続用金属（NiV/Cu/Auなど）を形成
-- **条件**：PVD + 電解Ni/Cu/Au、厚さ合計~10 µm
-- **技術ポイント**：機械強度＋拡散防止＋濡れ性確保
-
----
-
-## ⑨ TSV・3D実装対応（Step 31〜35）
-
-### Step 31: Via Formation for Upper Metal
-- **目的**：メタル層間（Mx-Mx+1）のビア形成
-- **条件**：FC/ArプラズマによるRIE、CD ~20–30 nm
-- **技術ポイント**：エッチストップ層への制御精度
-
----
-
-### Step 32: Barrier & Seed Deposition (Via)
-- **目的**：Via内部へのTaN/Cu堆積
-- **条件**：バリア（ALD）、シード（PVD）、厚み5–10 nm/50 nm
-- **技術ポイント**：高アスペクト比Viaへの被覆性
-
----
-
-### Step 33: Cu Electroplating (Via)
-- **目的**：Via銅埋込
-- **条件**：酸性CuSO₄浴、ボイドレス充填
-- **技術ポイント**：柱状結晶抑制と完全埋込
-
----
-
-### Step 34: CMP of Cu Via/Wiring
-- **目的**：Via・配線部の平坦化
-- **条件**：Cu選択CMP、残膜<5 nm
-- **技術ポイント**：Dishing・トップビュー均一性
-
----
-
-### Step 35: Upper ILD Deposition
-- **目的**：上層絶縁膜（SiCOH等）形成
-- **条件**：PECVD、厚み300–500 nm
-- **技術ポイント**：誘電率低減と吸湿抑制
-
----
-
-## ⑩ テスト・出荷前工程（Step 36〜48）
-
-### Step 36: Lithography for Upper Metal
-- **目的**：上層配線パターン形成
-- **条件**：ArF immersion or EUV、CD ~20–30 nm
-- **技術ポイント**：Overlay精度とLWR制御が課題
-
----
-
-### Step 37: Dual Damascene Etch
-- **目的**：ビア＋配線溝の同時エッチ
-- **条件**：FC系RIE、垂直プロファイル制御
-- **技術ポイント**：過エッチ抑制と寸法均一性
-
----
-
-### Step 38: Barrier & Seed Deposition (Upper Metal)
-- **目的**：Cu ECP前のTa/TaN + Cu堆積
-- **条件**：ALD + PVD、膜厚：バリア5–10 nm、シード50 nm
-- **技術ポイント**：パターン密度による埋込均一性管理
-
----
-
-### Step 39: Cu Electroplating (Upper Metal)
-- **目的**：上層Cu埋込
-- **条件**：従来通り、ボイドレス充填・過剰堆積
-- **技術ポイント**：マクロ欠陥・樹状成長の回避
-
----
-
-### Step 40: CMP of Upper Metal
-- **目的**：最終層のCu CMP
-- **条件**：選択CMP、平坦度 < 0.5 nm RMS
-- **技術ポイント**：次工程（パッシベーション）への表面品質保証
-
----
-
-### Step 41: RC Extraction and Parasitics
-- **目的**：配線の抵抗・容量抽出による回路遅延評価
-- **条件**：EDAツールによるポストレイアウト抽出
-- **技術ポイント**：RC delay < 60 ps/mm を目標
-
----
-
-### Step 42: Pad Opening for UBM
-- **目的**：最終UBM露出（パッケージ接続用）
-- **条件**：ArFスキャナ＋RIE、UBM損傷なしが必須
-- **技術ポイント**：微細PAD位置制御精度
-
----
-
-### Step 43: UBM再形成（NiV/Cu/Au）
-- **目的**：最終パッドへのUBM追加形成（バンプ接続強化）
-- **条件**：PVD + ECP、厚み ~10 µm
-- **技術ポイント**：フリップチップ対応の信頼性担保
-
----
-
-### Step 44: Wafer Thinning
-- **目的**：ウェーハ厚を~100 µm以下に薄化し、熱・3D集積性向上
-- **条件**：バックグラインディング + CMP
-- **技術ポイント**：反り・割れ防止と均一性維持
-
----
-
-### Step 45: TSV/Micro Bump Formation
-- **目的**：3D IC対応の垂直接続（TSV）とマイクロバンプ形成
-- **条件**：DRIEによるTSV形成、Cu ECP、SnAgまたはPbフリーバンプ
-- **技術ポイント**：高信頼・高密度・低Voidingが要求される
-
----
-
-### Step 46: Final Passivation
-- **目的**：最終保護膜（SiNまたはSiO₂）でデバイスを保護
-- **条件**：PECVD、厚さ0.5–1.0 µm、低ストレス・高密着
-- **技術ポイント**：水分・異物遮断性能
-
----
-
-### Step 47: Wafer Test and Dicing
-- **目的**：電気的良否判定とダイシング
-- **条件**：ATEによる速度・リーク・機能検査 → レーザー or ソーイング
-- **技術ポイント**：マーキング・トレーサビリティと切断ダメージ抑制
-
----
-
-### Step 48: Packaging
-- **目的**：最終製品としての実装（FC-CSP、FOWLP等）
-- **条件**：ダイアタッチ、ワイヤ／バンプ接続、モールド、アンダーフィル
-- **技術ポイント**：機械強度、放熱、量産性のバランス設計
-
----
-
-## 🔸 補足図（図示予定）
-
-- `images/finfet_process_overview.png`
-- `images/finfet_metallization_stack.png`
-- `images/finfet_final_test_packaging.png`
-
----
-
-## 🔸 備考
-
-- 本補足資料は、特別編 第1章「先端ノード（FinFET、GAA等）」の理解を補完するための技術解説です。
-- 対応するGAA版プロセスフローは [`appendixf1_02_gaaflow.md`](./appendixf1_02_gaaflow.md) を参照してください。
-
----
-
-## ライセンスと著者
-
-MITライセンスにて公開。  
-著者：三溝 真一（Shinichi Samizo）  
-連絡先：[shin3t72@gmail.com](mailto:shin3t72@gmail.com)
