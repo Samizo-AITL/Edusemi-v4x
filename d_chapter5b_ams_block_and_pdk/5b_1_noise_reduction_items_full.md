@@ -40,4 +40,4 @@
 ## 🔗 次節・READMEへのリンク / Next Sections
 
 - ▶️ [5b.2：基板・ウェル・チャネル構造による低ノイズ化](5b_2_structure_and_well_engineering.md)
-- 📘 [README：5b章 全体構成](README_5b.md)
+- 📘 [README：5b章 全体構成](README.md)
