@@ -51,6 +51,7 @@
 | [3](d_chapter3_esd_protection_design/README.md) | **ESD設計** | **保護素子・破壊事例・試験規格・レイアウト注意点** |
 | [4](d_chapter4_layout_optimization/README.md) | **レイアウト設計と最適化** | **CMPダミー・IRドロップ・ラッチアップ防止**など |
 | [5](d_chapter5_analog_mixed_signal/README.md) | **アナログ／ミックスドシグナル** | **アナログ設計・ノイズ・混載設計の課題と対策** |
+| [5a](d_chapter5a_analog_mixed_signal/README.md) | **0.18μm AMS設計技法** | **ばらつき・マッチング・1/fノイズ・Q値改善**など設計的最適化 |
 | [6](d_chapter6_pdk_and_eda_environment/README.md) | **PDKとEDA環境** | **DRC/LVS/ERC・PDK構成・EDAフロー**の理解 |
 | [7](d_chapter7_automation_and_verification/README.md) | **自動化と実装検証技術** | **OpenLane・CI/CD・Lint・ログ解析**の導入例 |
 | [8](d_chapter8_fsm_design_basics/README.md) | **FSM設計（有限状態機械）** | **Moore/Mealy型・状態遷移図・Verilog記述** |
