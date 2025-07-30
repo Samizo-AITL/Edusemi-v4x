@@ -75,7 +75,7 @@
 
 | 章 | タイトル | 概要 |
 |----|----------|------|
-| [1](f_chapter1_finfet_gaa/README.md) | **先端ノード（FinFET、GAA）** | **Fin構造・GAA構造・設計影響・微細化技術** |
+| [1](f_chapter1_finfet_gaa/README.md) | **先端ノード（FinFET・GAA・CFET）** | **Fin構造・GAA・CFETの構造・設計影響・スケーリング技術** |
 | [2](f_chapter2_chiplet_pkg/README.md) | **チップレットと先端パッケージ技術** | **2.5D/3D・TSV・異種集積事例** |
 | [3](f_chapter3_socsystem/README.md) | **FSM×PID×LLMによる統合制御SoC実装** | **AITL制御のSoC適用と統合制御展開** |
 | [4](f_chapter4_openlane/README.md) | **FSM×PID×LLMのOpenLane実装** | **統合制御RTLの配置配線・DRC検証** |
