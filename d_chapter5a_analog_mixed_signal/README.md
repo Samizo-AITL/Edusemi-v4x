@@ -1,15 +1,15 @@
-# 🧩 応用編 第5a章：0.18μm AMS素子開発  
-# 🧩 Applied Chapter 5a: 0.18μm AMS Device Optimization
+# 🧩 応用編 第5a章：0.18μm AMS設計技法  
+# 🧩 Applied Chapter 5a: 0.18μm AMS Design Techniques
 
 ---
 
 ## 📘 概要｜Overview
 
-**0.18μm世代におけるアナログ／ミックスドシグナル（AMS）素子開発**は、マッチング、ノイズ、精度、寄生効果といった非理想要素への対策を通じて、回路の信頼性と性能を確保するための重要課題です。  
-本章では、実務経験を踏まえたAMS設計上の5つの主要トピックを取り上げ、**素子レベルからレイアウト・プロセス制御までの技術的要点**を明確に学びます。
+**0.18μm世代におけるアナログ／ミックスドシグナル（AMS）設計**では、ばらつき、ノイズ、精度、寄生効果などの非理想要因に対して高い信頼性と性能を確保することが求められます。  
+本章では、実務経験に基づき、**AMS設計における主要課題とその最適化技法**を5つの視点から体系的に整理します。
 
-**AMS device development at the 0.18μm node** involves addressing key non-idealities such as mismatch, noise, precision, and parasitics to ensure circuit reliability and performance.  
-This chapter focuses on five critical topics based on real-world experience, covering essential techniques from **device-level design to layout and process control**.
+In 0.18μm analog/mixed-signal (AMS) design, ensuring high reliability and performance requires addressing key non-idealities such as mismatch, noise, accuracy, and parasitics.  
+This chapter organizes **practical AMS design techniques** into five critical topics based on real-world engineering experience.
 
 ---
 
@@ -27,12 +27,12 @@ This chapter focuses on five critical topics based on real-world experience, cov
 
 ## 🎯 対象読者｜Target Audience
 
-- 実用的なAMS設計上の素子課題を深く理解したいアナログ技術者  
-  *Analog engineers seeking deeper understanding of practical AMS device issues*
-- PDKやプロセス物性と素子性能の関係に興味を持つ設計者  
-  *Designers interested in the correlation between PDK/process and device behavior*
-- アナログ回路の性能限界とプロセス改善に取り組む開発者  
-  *Developers working on circuit performance limits and process optimization*
+- 実用的なAMS設計課題を構造的に理解したいアナログ技術者  
+  *Analog engineers aiming to systematize practical AMS design challenges*
+- PDK仕様やプロセス特性と素子性能の関連を掴みたい設計者  
+  *Designers interested in the relationship between PDK/process and device behavior*
+- レイアウト・プロセス・動作特性を統合的に扱いたい開発者  
+  *Developers integrating layout, process, and performance perspectives*
 
 ---
 
@@ -58,5 +58,3 @@ This chapter focuses on five critical topics based on real-world experience, cov
 ---
 
 ### 🏠 [Edusemi-v4x トップへ戻る｜Back to Edusemi-v4x Top](../README.md)
-
----
