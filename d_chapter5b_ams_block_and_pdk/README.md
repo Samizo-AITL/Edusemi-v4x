@@ -1,68 +1,33 @@
-# 第5b章：製造技術から切り拓くアナログ差別化戦略  
-## Chapter 5b: Fabrication-Driven Strategies for Analog Module Differentiation
+# 第5b章：製造技術で切り拓くアナログ差別化 — 1/fノイズ半減の実現  
+*Chapter 5b: Differentiated Analog Modules via Manufacturing Technology — Realizing 50% Reduction in 1/f Noise*
 
 ---
 
-## 📘 章の目的 / Objective
+## 🎯 本章の目的 / Objective
 
-本章は、アナログ／ミックスドシグナル（AMS）回路の性能制約の中でも**最も本質的かつビジネス価値を左右する「1/fノイズ」**に焦点を当て、  
-これを**製造技術（プロセス）側から根本的に低減するための実装技術・構造・条件**を示すことを目的とする。
-
-従来のPDKパラメータ設計や回路的補償では到達し得ない、  
-**“低ノイズかつ安定性の高いMOSトランジスタ”**を創出し、差別化を達成するための体系的アプローチを記述する。
-
-> This chapter focuses on one of the most fundamental and value-critical constraints in analog design: **1/f noise**.  
-> Unlike conventional circuit-level or PDK-based compensation, we aim to reduce 1/f noise **at its physical origin**, through fabrication-oriented strategies and process-aware transistor structures.
+本章では、設計パラメータやPDKモデルでは対処できない「製造技術起点のアナログ性能差別化」に焦点を当てる。  
+特に、1/fノイズ（フリッカーノイズ）に的を絞り、**物理的・製造的に“低ノイズ”なMOS素子を構築する手法**を提示する。  
+**目標：業界標準に対して50%以上のノイズ低減を実現する**。
 
 ---
 
-## 📂 章構成 / Section Structure
+## 📚 節構成 / Structure
 
-| 節番号 | タイトル（日本語） | タイトル（英語） | 内容概要 |
-|--------|-------------------|-------------------|----------|
-| 5b.1 | 製造技術とアナログ性能の関係 | Process Parameters and Analog Performance | 製造プロセスと1/fノイズとの因果関係を明示し、設計限界を超えるための技術的接点を示す。 |
-| 5b.2 | Poly抵抗とばらつき・ノイズの抑制 | Poly Resistor: Variation and 1/f Noise Suppression | 抵抗ばらつきとノイズ生成機構、および膜厚・分布制御・レイアウト手法との関連を解説。 |
-| 5b.3 | 1/fノイズ低減PMOS構造と製造マニュアル | Low 1/f Noise PMOS: Process Manual and Structure | 中核章。Epi基板、酸化膜厚、NWell濃度制御などを踏まえた製造手順を定義し、定量的改善を提示。 |
-| 5b.4 | 温度ドリフトとノイズ密度の相関 | Temperature Drift vs. 1/f Noise Density | 温度変動によるノイズ挙動、ストレス起因の不安定性とその対策を記述。 |
-| 5b.5 | 製造ベースのAMSモジュール戦略と製品化展開 | Process-Originated AMS Module Strategies | 低ノイズ素子の知的財産化、製品化を前提とした展開、教育・政策提言との接続を明示する。 |
-
----
-
-## 🎯 本章の位置づけ / Educational Context
-
-- 第5章は「設計技術でノイズやばらつきに対応」する。
-- 第5a章は「PDK内での最適化によるAMS設計手法」。
-- 本章（5b）はそれらを補完し、**“製造技術によって本質的にノイズを抑える”**方向性でアプローチする。
-
-This chapter complements the design-centric strategies of Chapters 5 and 5a by focusing on how **process technology can proactively create low-noise and stable analog devices**.
+| 節番号 | タイトル | 内容要約 |
+|--------|----------|----------|
+| 5b.1 | **1/fノイズ低減の製造技術アイテムと効果一覧**<br>*Noise Reduction Items Overview* | Epi基板、NWell濃度、酸化膜、アニールなど、物理起源に立脚した対策項目を表形式で一覧化し、それぞれの低減率（目安）を明示。目標値との整合性を確認。 |
+| 5b.2 | **基板・ウェル・チャネル構造による低ノイズ化**<br>*Low Noise via Substrate and Well Design* | Epi基板、NWellの低濃度化、PMOS選択、L拡大といった構造的手段により、ノイズ源を物理的に抑制する手法を具体的に解説。 |
+| 5b.3 | **酸化膜・アニール・前処理による界面品質改善**<br>*Gate Oxide and Interface Engineering* | 高品質酸化膜形成、H₂/N₂アニール、前処理洗浄などによる界面トラップ低減技術。工程順と目的を製造マニュアル形式で示す。 |
+| 5b.4 | **製造対策の効果検証と安定性評価：1/fノイズの見える化**<br>*Experimental Verification and Stability* | 微小FET・温度センサ・RTN観測構造を用いたノイズ特性の定量化と、温度変動による特性劣化への耐性評価。製品保証性の視点で位置付ける。 |
+| 5b.5 | **製品化・展開戦略：低ノイズモジュールの社会実装**<br>*Commercialization and Deployment Strategy* | ノイズ低減構造をIP化・教育化・医療応用化する流れを示す。設計支援ツールでは実現できない「製造起点の価値創造」の道筋を明示。 |
 
 ---
 
-## 🔁 製造展開とビジネス視点からの整理
+## 🔁 本章のねらい / Intent
 
-| 観点 | 説明 |
-|------|------|
-| 量産性 | 製造のばらつきや安定性を考慮し、実際の製造ラインで高歩留まり・再現性のある素子構造に落とし込む。 |
-| ビジネス展開性 | 医療検査・センシング等の分野で**収益性のある製品化**を狙い、社会実装と教育・政策提言の両立を目指す。 |
-
----
-
-## 🔗 関連教材 / Related Modules
-
-- `chapter3_process_evolution/0.18umProcessFlow.md`（プロセス全体構成）
-- `chapter4_mos_characteristics/4.3_mos_reliability_effects.md`（酸化膜信頼性と1/fノイズ起因）
-- `d_chapter5_analog_mixed_signal/ams_node_selection.md`（アナログ設計におけるプロセス選定）
-
----
-
-## 📌 重点キーワード
-
-1/fノイズ / Epiウエハ / PMOS構造 / Gate酸化条件 / H₂アニール / ノイズ密度 / CDF分類 / 製造マニュアル / AMSモジュール差別化 / 製品化戦略 / 社会実装
-
----
-
-## ➕ 次節へ：5b.1 製造技術とアナログ性能の関係  
-→ `5b_1_process_and_analog_characteristics.md` にて
+- 設計では到達不可能な「**低ノイズ性能**」を製造工程から引き出す
+- PDK外の技術を“標準化”し、IP・教育・政策提言に活用可能な形へ
+- 教育用ではなく“製品化・収益化”を本気で目指すモジュール構築へ
 
 ---
 
