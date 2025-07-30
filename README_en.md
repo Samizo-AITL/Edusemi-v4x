@@ -90,6 +90,8 @@ Learners can ask for support in **code reviews**, **error diagnostics**, **conce
 
 This creates a **real-world-aligned**, **interactive learning experience**, preparing engineers for **modern semiconductor workflows**.
 
+---
+
 ## 🧾 Edusemi Summary
 
 The **Edusemi Project** was created to bridge the gap between semiconductor education and real-world implementation.  
