@@ -57,4 +57,4 @@
 ## 🔗 次節・READMEへのリンク
 
 - ▶️ [5b.3：酸化膜・アニール・前処理による界面品質改善](5b_3_oxide_interface_control.md)
-- 📘 [README：5b章 全体構成](README_5b.md)
+- 📘 [README：5b章 全体構成](README.md)
