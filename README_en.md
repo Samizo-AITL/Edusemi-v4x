@@ -90,6 +90,40 @@ Learners can ask for support in **code reviews**, **error diagnostics**, **conce
 
 This creates a **real-world-aligned**, **interactive learning experience**, preparing engineers for **modern semiconductor workflows**.
 
+## 🧾 Edusemi Summary
+
+The **Edusemi Project** was created to bridge the gap between semiconductor education and real-world implementation.  
+It provides an integrated curriculum covering **device design, process evolution, EDA workflows, and control system applications**, from fundamentals to advanced technologies like FinFET, GAA, and OpenLane-based SoC control.
+
+> Edusemi aims to become a **shared knowledge platform** for researchers, designers, and educators, enabling unified understanding and collaboration across disciplines.
+
+---
+
+### 🧭 Educational Significance
+
+- 🔬 **End-to-end coverage** from process to design and productization (Sky130, FinFET, GAA, SoC control)
+- 🧠 **Structured insights from real-world experience** (e.g., 0.18μm AMS device challenges)
+- 🌐 **International accessibility**: bilingual content (JP/EN), MIT license, GitHub publication
+- 🎓 **Balanced between education and research**: combining PDK exercises, PoC design, and historical context
+
+---
+
+### 🚀 Future Possibilities
+
+- 📘 **Packaging into exercises and teaching materials** (PDF/HTML/slide formats)
+- 🏫 **Collaboration with universities and technical colleges** (lectures, workshops)
+- 🧪 **Expansion of PoC content** (FSM exercises, OpenLane control integration, automated evaluation)
+- 🌍 **Multilingual and international outreach** (translation support and GitHub Pages deployment)
+
+---
+
+### 🏁 Final Remarks
+
+Edusemi is more than a collection of teaching materials—  
+it is a **platform for shared knowledge**, designed to connect semiconductor technology with society through education and practical design.
+
+> *This is not the end of Edusemi — it is a beginning for those who will use it, improve it, and carry it forward into new frontiers of semiconductor design and education.*
+
 ---
 
 ## 🔗 **Related Projects**
