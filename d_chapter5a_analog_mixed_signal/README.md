@@ -6,10 +6,10 @@
 ## 📘 概要｜Overview
 
 **0.18μm世代におけるアナログ／ミックスドシグナル（AMS）設計**では、ばらつき、ノイズ、精度、寄生効果などの非理想要因に対して高い信頼性と性能を確保することが求められます。  
-本章では、実務経験に基づき、**AMS設計における主要課題とその最適化技法**を5つの視点から体系的に整理します。
+特に0.18μmノードは、**素子バリエーションが豊富で、電源電圧や周波数帯も広く、AMS設計に最適なスケール**です。FinFETやGAAを前提とする先端ノードと比べて、**設計の自由度・直感性・教育的価値が高いことから、本章では0.18μm AMS設計に特化**したトピックを扱います。
 
 In 0.18μm analog/mixed-signal (AMS) design, ensuring high reliability and performance requires addressing key non-idealities such as mismatch, noise, accuracy, and parasitics.  
-This chapter organizes **practical AMS design techniques** into five critical topics based on real-world engineering experience.
+The 0.18μm node is especially suitable for AMS circuits due to **its wide device variety, voltage range, and intuitive layout structure**. Compared to advanced nodes like FinFET/GAA, it offers **greater flexibility and clarity**, making it highly effective for **practical design and educational use**. This chapter focuses on critical AMS techniques tailored to 0.18μm.
 
 ---
 
