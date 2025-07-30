@@ -1,71 +1,100 @@
-# 2.5 設計上の課題：熱、テスト、タイミング
-
-## 🔥 熱設計の課題と対策
-
-### ✦ チップレット特有の発熱課題
-
-- 小型チップが**局所的に発熱**
-- 下層チップ（3D構造）では**放熱経路が制限**
-- HBMスタックとの組み合わせで**熱密度が増大**
-
-### ✦ 熱対策のアプローチ
-
-| 対策手法 | 内容 |
-|----------|------|
-| サーマルビア | TSVを熱拡散目的で配置 |
-| 放熱板 | パッケージ上部に金属ヒートスプレッダ追加 |
-| ワークロード分散 | 高負荷演算を温度管理により制御 |
-| シミュレーション | 初期設計段階での3D熱解析が必須 |
+# 2.5 設計上の課題：熱、テスト、タイミング  
+# 2.5 Design Challenges: Thermal, Test, and Timing Issues
 
 ---
 
-## 🧪 テストと歩留まりの課題
+## 🔥 熱設計の課題と対策  
+## 🔥 Thermal Design Issues and Countermeasures
 
-### ✦ テストの困難性
+### ✦ チップレット特有の発熱課題  
+### ✦ Thermal Challenges in Chiplet-Based Systems
 
-- 3D積層では**中間層チップへのアクセス困難**
-- μ-bump / hybrid bonding 接続の**欠陥検出が困難**
-- 再利用チップの組み合わせにより**テストパターン最適化が複雑**
+- 小型チップが**局所的に高温化**しやすい  
+  Small dies often result in **localized heating**
+- 3D構造では**下層チップの放熱経路が制限**される  
+  Lower dies in 3D stacks have **limited thermal escape paths**
+- HBMとの積層により**熱密度が増加**  
+  HBM stacking leads to **increased thermal density**
 
-### ✦ 対策例
+### ✦ 熱対策のアプローチ  
+### ✦ Approaches to Thermal Management
 
-| 項目 | 内容 |
-|------|------|
-| BIST導入 | 各チップ内にセルフテスト機能を持たせる |
-| Known-Good-Die | 事前に単体で良品確認したチップのみ使用 |
-| TSVモニタリング | TSV貫通抵抗・断線確認用テストパッドの活用 |
-| デバッグピン | パッケージ外部へ一部信号を出力（開発専用） |
-
----
-
-## ⏱️ タイミングと配線遅延の課題
-
-### ✦ 配線レベルのバリエーション
-
-- チップ間接続における**レイテンシのばらつき**
-- 複数ダイで構成されるため**リファレンスクロックの同期が難化**
-- チップ間伝送による**スキュー・ジッタの管理が重要**
-
-### ✦ 解決アプローチ
-
-| 対策 | 内容 |
-|------|------|
-| クロックドメイン分離 | 各チップごとに独立したクロック管理 |
-| 高速I/F設計 | PLL補正やSERDESを含めたチューニング設計 |
-| タイミングクロージャ | パッケージレベルでのSTA（静的タイミング解析）対応 |
-| UCIeなどの標準I/F活用 | Timing/Protocol一体型のインターフェース設計が加速 |
+| 対策手法 / Method | 内容 / Description |
+|-------------------|---------------------|
+| **サーマルビア**<br>Thermal Vias | 熱伝導用TSVを追加配置<br>TSVs placed for thermal dissipation |
+| **放熱板**<br>Heat Spreader | パッケージ上部に金属板追加<br>Metal plate added to top of package |
+| **ワークロード分散**<br>Workload Distribution | 演算負荷を温度分散考慮して制御<br>Task allocation based on thermal profile |
+| **熱シミュレーション**<br>Thermal Simulation | 初期設計段階での3D解析が重要<br>Early-stage 3D thermal simulation is essential |
 
 ---
 
-## 📌 まとめ
+## 🧪 テストと歩留まりの課題  
+## 🧪 Testability and Yield Challenges
 
-チップレット・2.5D・3Dの実装はパフォーマンスやスケーラビリティの面で大きな利点を持つ一方で、設計上の課題も多く存在します。これらの課題に対応するには、**物理設計とパッケージ設計の統合的アプローチ**が不可欠です。
+### ✦ テストの困難性  
+### ✦ Testing Difficulties
+
+- **3D積層中の中間チップ**へのアクセスが困難  
+  Accessing mid-layer dies in 3D stacks is difficult
+- μ-bump や hybrid bonding の**接合欠陥検出が困難**  
+  Detecting faults in μ-bumps or hybrid bonding is challenging
+- **チップ再利用時のテスト最適化**が複雑化  
+  Test pattern optimization becomes complex when reusing dies
+
+### ✦ 対策例  
+### ✦ Countermeasures
+
+| 項目 / Item | 内容 / Description |
+|-------------|---------------------|
+| **BIST導入**<br>Built-In Self-Test | 各チップ内にセルフチェック機能<br>On-die self-test for each component |
+| **Known-Good-Die活用** | 良品確認済みのダイのみ採用<br>Use only pre-tested dies |
+| **TSVモニタリング**<br>TSV Monitoring | 抵抗・断線確認用のテスト構造<br>Dedicated pads to check TSV resistance/open |
+| **デバッグピン**<br>Debug Pins | 開発中に信号を外部出力<br>Expose internal signals for debugging during development |
 
 ---
 
-## 🏁 特別編 第2章 まとめへ
+## ⏱️ タイミングと配線遅延の課題  
+## ⏱️ Timing and Interconnect Delay Challenges
 
-以上で特別編 第2章「チップレットと先端パッケージ技術」は完了です。  
-今後は、応用事例を活かした演習や教材への展開が期待されます。
+### ✦ 配線バリエーションの影響  
+### ✦ Variation in Interconnect Delays
+
+- チップ間の配線遅延に**ばらつき（スキュー）**が発生  
+  Delay variation (skew) across inter-chip links
+- **リファレンスクロックの同期**が困難  
+  Reference clock synchronization is challenging
+- 高速化に伴う**ジッタ・タイミングマージン不足**  
+  Jitter and tight timing margins at high speeds
+
+### ✦ 解決アプローチ  
+### ✦ Solutions and Design Techniques
+
+| 対策 / Countermeasure | 内容 / Description |
+|------------------------|---------------------|
+| **クロックドメイン分離**<br>Clock Domain Isolation | 各チップが独立クロックを持つ構成<br>Separate clock domains per die |
+| **高速I/F設計**<br>High-Speed I/F Design | PLL補正・SERDESの利用<br>Use of PLL correction and SERDES tuning |
+| **タイミングクロージャ**<br>Timing Closure | パッケージ全体でのSTA（静的解析）<br>Full-package static timing analysis (STA) |
+| **UCIe等の標準I/F活用**<br>Use of Standard Interfaces | Timing一体型I/Fにより設計負荷を軽減<br>Timing-aware standards like UCIe reduce design complexity |
+
+---
+
+## 📌 まとめ / Summary
+
+**チップレット／2.5D／3D実装は性能・柔軟性に優れる一方で**、熱、テスト、タイミングに関する**物理的・設計的課題**が存在します。  
+Chiplet, 2.5D, and 3D technologies offer performance and flexibility, but come with **thermal, testing, and timing challenges**.
+
+➡ 対応には**パッケージと物理設計の統合的アプローチ**が不可欠。  
+➡ A **co-optimized approach between packaging and physical design** is essential.
+
+---
+
+## 🏁 特別編 第2章のまとめ  
+## 🏁 End of Special Chapter 2
+
+以上で、特別編 第2章「**チップレットと先端パッケージ技術**」は完了です。  
+This concludes Special Chapter 2: **Chiplet and Advanced Packaging Technologies**.
+
+今後はこれらの知識を活用し、**設計演習やPoC構築**への展開が期待されます。  
+Future directions include applying these insights to **design exercises and PoC implementations**.
 
 ---
