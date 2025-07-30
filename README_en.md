@@ -75,7 +75,7 @@ While keeping an eye on application domains, the focus is on cultivating a **dee
 
 | Chapter | **Title** | **Description** |
 |---------|-----------|-----------------|
-| [1](f_chapter1_finfet_gaa/README.md) | **Advanced Nodes (FinFET, GAA, etc.)** | **Fin/GAA transistor structures**, **design impact**, **scaling trends** |
+| [1](f_chapter1_finfet_gaa/README.md) | **Advanced Node Technologies (FinFET, GAA, CFET)** | **Transistor structures**, **scaling strategies**, and **design implications** |
 | [2](f_chapter2_chiplet_pkg/README.md) | **Chiplet and Advanced Packaging Technologies** | **2.5D/3D integration**, **TSV**, **interposer**, **heterogeneous systems** |
 | [3](f_chapter3_socsystem/README.md) | **SoC Implementation of FSM × PID × LLM Control** | Applying **AITL architecture** to **integrated control SoCs** |
 | [4](f_chapter4_openlane/README.md) | **RTL-to-GDSII Implementation of AITL Control Logic** | **OpenLane layout**, **DRC**, **integration verification** |
