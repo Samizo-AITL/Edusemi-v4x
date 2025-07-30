@@ -52,7 +52,7 @@ While keeping an eye on application domains, the focus is on cultivating a **dee
 | [4](d_chapter4_layout_optimization/README.md) | **Layout Design and Optimization** | **CMP dummy fill**, **IR drop**, **latch-up**, **physical design tuning** |
 | [5](d_chapter5_analog_mixed_signal/README.md) | **Analog / Mixed-Signal Design** | **Analog blocks**, **noise**, **mixed-signal layout challenges** |
 | [5a](d_chapter5a_analog_mixed_signal/README_en.md) | **0.18μm AMS Design Techniques** | Design-level optimizations: **mismatch, flicker noise, Q-factor improvement**, etc. |
-| [5b](d_chapter5b_analog_diff_by_process/README.md) | **Analog Differentiation via Process** | Creating **low 1/f noise AMS modules** through manufacturing innovation |
+| [5b](d_chapter5b_ams_block_and_pdk/README.md) | **Analog Differentiation via Process** | Creating **low 1/f noise AMS modules** through manufacturing innovation |
 | [6](d_chapter6_pdk_and_eda_environment/README.md) | **PDK and EDA Environments** | **PDK components**, **EDA workflows**, **DRC/LVS/ERC** integration |
 | [7](d_chapter7_automation_and_verification/README.md) | **Automation and Verification Techniques** | **Linting**, **OpenLane validation**, **CI/CD**, **log analysis** |
 | [8](d_chapter8_fsm_design_basics/README.md) | **FSM Design (Finite State Machines)** | **Moore / Mealy models**, **state diagrams**, **Verilog code** |
