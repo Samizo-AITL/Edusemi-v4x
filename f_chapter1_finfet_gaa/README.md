@@ -1,15 +1,15 @@
-# 🧬 特別編 第1章：先端ノード技術（FinFET、GAA）  
-## 📘 Chapter 1 Special Edition: Advanced Node Technologies – FinFET & GAA
+# 🧬 特別編 第1章：先端ノード技術（FinFET、GAA、CFET）  
+## 📘 Chapter 1 Special Edition: Advanced Node Technologies – FinFET, GAA & CFET
 
 ---
 
 ## 🔰 概要 / Overview
 
-**本章では、FinFETおよびGAA（Gate-All-Around）に代表される微細化対応の新トランジスタ構造について、物理特性・電気特性・設計影響の観点から体系的に解説します。**  
-この構造は、従来のプレーナMOSの限界を超え、先端CMOSのスケーリングを実現するキーテクノロジーです。
+**本章では、FinFET・GAA（Gate-All-Around）・CFET（Complementary FET）に代表される微細化対応の新トランジスタ構造について、物理特性・電気特性・設計影響の観点から体系的に解説します。**  
+これらの構造は、プレーナMOSのスケーリング限界を超え、先端CMOSの道を拓くキーテクノロジーです。
 
-> **In this chapter**, we provide a systematic explanation of **FinFET and Gate-All-Around (GAA)** transistor structures, focusing on their **physical structure**, **electrical characteristics**, and **design impacts**.  
-These 3D transistor technologies are essential for overcoming the scaling limits of traditional planar MOSFETs.
+> **In this chapter**, we provide a systematic explanation of **FinFET, Gate-All-Around (GAA), and Complementary FET (CFET)** transistor structures, focusing on their **physical structure**, **electrical characteristics**, and **design impacts**.  
+These 3D transistor technologies are essential for pushing beyond the limits of traditional planar CMOS scaling.
 
 **📌 対象読者 / Intended Audience**  
 - プロセスエンジニア / Process Engineers  
@@ -18,7 +18,7 @@ These 3D transistor technologies are essential for overcoming the scaling limits
 
 ---
 
-## 📚 節構成 / Chapter Structure（v1.0）
+## 📚 節構成 / Chapter Structure（v1.1）
 
 | 節番号 / Section | ファイル名 / Filename                              | 内容概要 / Description |
 |------------------|-----------------------------------------------------|-------------------------|
@@ -26,6 +26,7 @@ These 3D transistor technologies are essential for overcoming the scaling limits
 | 1.2              | [`f1_2_finfet.md`](f1_2_finfet.md)                   | FinFET構造の原理とプロセス概要<br>FinFET Structure & Process |
 | 1.3              | [`f1_3_gaa.md`](f1_3_gaa.md)                         | GAA構造とMulti-Nanosheet技術<br>GAA and Nanosheet Technology |
 | 1.4              | [`f1_4_comparison.md`](f1_4_comparison.md)           | プレーナ vs FinFET vs GAAの特性比較<br>Comparison of Planar / FinFET / GAA |
+| 1.5              | [`f1_5_cfet.md`](f1_5_cfet.md)                       | CFET構造とスタック型MOSの展望<br>CFET Structure and Outlook for Stacked MOS |
 
 ---
 
@@ -36,6 +37,7 @@ These 3D transistor technologies are essential for overcoming the scaling limits
 | [`appendixf1_01_finfetflow.md`](appendixf1_01_finfetflow.md)     | FinFETプロセスフロー詳細（48ステップ）<br>Detailed FinFET Process (48 Steps) |
 | [`appendixf1_02_gaaflow.md`](appendixf1_02_gaaflow.md)           | GAA Multi-Nanosheet FETプロセス<br>GAA Multi-Nanosheet Process |
 | [`appendixf1_03_finfet_vs_gaa.md`](appendixf1_03_finfet_vs_gaa.md) | FinFETとGAAの工程・特性・設計比較<br>Comparison of FinFET vs GAA |
+| [`appendixf1_04_cfet.md`](appendixf1_04_cfet.md)                 | CFETの構造進化と技術的課題<br>CFET Structure Evolution and Technical Challenges |
 
 ---
 
@@ -58,5 +60,3 @@ Structure diagrams, gate coverage illustrations, and scaling roadmaps will be in
 ---
 
 #### 🏠 [Edusemi-v4x トップへ戻る｜Back to Edusemi-v4x Top](../README.md)
-
----
