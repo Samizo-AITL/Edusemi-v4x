@@ -62,7 +62,7 @@ Perovskite-type PZT exhibits sharp peaks at specific angles, while amorphous fil
 
 ## 6. 装置構成 / Instrumentation
 
-- X線源（例：Cu K $\alpha$：1.5406 Å）  
+- X線源（例：Cu K$\alpha$：1.5406 Å）  
 - モノクロメータ / Monochromator  
 - ゴニオメータ / Goniometer  
 - 検出器 / Detector (1D or 2D)  
@@ -82,8 +82,49 @@ Perovskite-type PZT exhibits sharp peaks at specific angles, while amorphous fil
 
 ## 8. 演習問題 / Exercises (Optional)
 
-1. ブラッグの法則に基づいて、 $d$ = 3.14 Å の面が Cu K $\alpha$ X線で回折する角度 $\theta$ を求めよ。  
+1. ブラッグの法則に基づいて、 $d = 3.14$ Å の面が Cu K$\alpha$ X線で回折する角度 $\theta$ を求めよ。  
 2. FeRAMにおける配向性評価で、(111)ピークが強い場合の利点を述べよ。
+
+---
+
+## 9. 配向率と半値幅 / Orientation Ratio and FWHM
+
+### 📐 配向率（Preferred Orientation）
+
+XRDにおける「配向率」とは、特定の結晶面（例：(111)）がどれだけ優先的に成長しているかを示す指標です。FeRAM用途のPZT薄膜では、(111)面の配向率が高いと、良好な強誘電特性が得られる傾向があります。
+
+Preferred orientation represents how strongly a specific crystal plane (e.g., (111)) is aligned. In FeRAM PZT films, strong (111) orientation often correlates with better ferroelectric performance.
+
+**例 / Example**:
+
+$$
+\text{配向率} = \frac{I_{(111)}}{I_{(100)} + I_{(110)} + I_{(111)}}
+$$
+
+ここで $I_{(hkl)}$ は各ピークの強度を示します。  
+$\text{This ratio}$ compares the intensity of (111) to the total sum of characteristic peaks.
+
+---
+
+### 🎯 半値幅（FWHM: Full Width at Half Maximum）
+
+XRDピークの幅（$2\theta$方向）を半値幅（FWHM）と呼び、結晶の粒径や結晶性を示します。FWHMが小さいほど、結晶性が高いことを示します。
+
+FWHM (in $2\theta$) reflects crystallinity and grain size. Narrower peaks indicate higher crystallinity.
+
+**シュラーの式 / Scherrer Equation**:
+
+$$
+D = \frac{K \lambda}{\beta \cos \theta}
+$$
+
+- $D$：結晶粒サイズ (nm)  
+- $K$：形状因子（0.9 が一般的）  
+- $\lambda$：X線波長（例：1.5406 Å）  
+- $\beta$：半値幅（radian）  
+- $\theta$：ブラッグ角  
+
+This equation estimates crystallite size based on peak broadening.
 
 ---
 
