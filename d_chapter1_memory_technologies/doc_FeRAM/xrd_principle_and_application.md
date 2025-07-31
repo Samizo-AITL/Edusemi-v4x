@@ -62,7 +62,7 @@ Perovskite-type PZT exhibits sharp peaks at specific angles, while amorphous fil
 
 ## 6. 装置構成 / Instrumentation
 
-- X線源（例：Cu K$\alpha$：1.5406 Å）  
+- X線源（例：Cu K $\alpha$：1.5406 Å）  
 - モノクロメータ / Monochromator  
 - ゴニオメータ / Goniometer  
 - 検出器 / Detector (1D or 2D)  
@@ -82,7 +82,7 @@ Perovskite-type PZT exhibits sharp peaks at specific angles, while amorphous fil
 
 ## 8. 演習問題 / Exercises (Optional)
 
-1. ブラッグの法則に基づいて、 $d = 3.14$ Å の面が Cu K$\alpha$ X線で回折する角度 $\theta$ を求めよ。  
+1. ブラッグの法則に基づいて、 $d = 3.14$ Å の面が Cu K $\alpha$ X線で回折する角度 $\theta$ を求めよ。  
 2. FeRAMにおける配向性評価で、(111)ピークが強い場合の利点を述べよ。
 
 ---
@@ -108,9 +108,9 @@ $\text{This ratio}$ compares the intensity of (111) to the total sum of characte
 
 ### 🎯 半値幅（FWHM: Full Width at Half Maximum）
 
-XRDピークの幅（$2\theta$方向）を半値幅（FWHM）と呼び、結晶の粒径や結晶性を示します。FWHMが小さいほど、結晶性が高いことを示します。
+XRDピークの幅（ $2\theta$ 方向）を半値幅（FWHM）と呼び、結晶の粒径や結晶性を示します。FWHMが小さいほど、結晶性が高いことを示します。
 
-FWHM (in $2\theta$) reflects crystallinity and grain size. Narrower peaks indicate higher crystallinity.
+FWHM (in $2\theta$ ) reflects crystallinity and grain size. Narrower peaks indicate higher crystallinity.
 
 **シュラーの式 / Scherrer Equation**:
 
