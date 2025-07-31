@@ -17,7 +17,7 @@
 
 | 節番号 | タイトル | 内容要約 |
 |--------|----------|----------|
-| 🔹 [5b.1](5b_1_noise_reduction_items.md) | **1/fノイズ低減の製造技術アイテムと効果一覧**<br>*Noise Reduction Items Overview* | Epi基板、ウェル濃度、酸化膜、アニール処理など、ノイズ源に直接関係する製造工程上の工夫を一覧にまとめ、見込まれる低減率を示す。 |
+| 🔹 [5b.1](5b_1_noise_reduction_items_full.md) | **1/fノイズ低減の製造技術アイテムと効果一覧**<br>*Noise Reduction Items Overview* | Epi基板、ウェル濃度、酸化膜、アニール処理など、ノイズ源に直接関係する製造工程上の工夫を一覧にまとめ、見込まれる低減率を示す。 |
 | 🔹 [5b.2](5b_2_structure_and_well_engineering.md) | **基板・ウェル・チャネル構造による低ノイズ化**<br>*Low Noise via Substrate and Well Design* | 基板の種類やNウェル濃度の調整、PMOS選択、トランジスタ寸法の最適化など、構造上の工夫によりノイズの発生を抑える技術を解説。 |
 | 🔹 [5b.3](5b_3_oxide_interface_control.md) | **酸化膜・アニール・前処理による界面品質改善**<br>*Gate Oxide and Interface Engineering* | ゲート酸化膜の厚さや処理条件、前洗浄やアニールによる界面品質の改善により、ノイズ源となるトラップの発生を減らす手法を整理。 |
 | 🔹 [5b.4](5b_4_effect_verification.md) | **製造対策の効果確認と安定性の評価**<br>*Verification of Effects and Stability* | 微小なMOSトランジスタ構造を使って、時間変化を伴うノイズや温度による変動を観測し、製造対策の実効性と長期安定性を検証する。 |
