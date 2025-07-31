@@ -102,7 +102,10 @@ FeRAMのプロセス実装に関心がある方は、以下の教材をご参照
 
 - Pt/PZT/Ti構造による強誘電体キャパシタ形成工程を含む  
 - AlOx保護膜、Wプラグ、Coサリサイドなどを網羅  
-- 教育目的の構想プロセスとして三溝真一により設計  
+- 教育目的の構想プロセスとして三溝真一により設計
+
+- [📘 X線回折の原理とFeRAM/PZT応用（XRD教材）](./doc_FeRAM/xrd_principle_and_application.md)  
+　結晶構造、配向性、FWHM、シュラーの式、測定モード、装置構成などを網羅した基礎解説
 
 📘 **FeRAM / 薄膜ピエゾ特性評価原理（ヒステリシス・変位・DBLI測定）**  
 **👉 [feram_piezo_evaluation_principles.md](./doc_FeRAM/feram_piezo_evaluation_principles.md)**
