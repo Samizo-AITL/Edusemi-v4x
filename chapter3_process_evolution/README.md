@@ -61,6 +61,8 @@ SCE, HCI, DIBL, Vth Variability, sky130, 0.18µm
 | リファレンス | ファイル名 / Filename                                               | 内容概要 / Description |
 |--------------|----------------------------------------------------------------------|-------------------------|
 | A-1          | [`0.18um_Logic_ProcessFlow.md`](./0.18um_Logic_ProcessFlow.md)       | 🧪 **0.18µm CMOSプロセスフロー（日本語）**<br>Full logic process flow in Japanese |
+[📄 0.18um 3電源CMOSプロセス（1.8V / 3.3V / 5V）](./chapter3_process_evolution/0.18um_1.8_3.3_5V.md)
+[📄 0.18μm E-Test特性まとめ（電圧別・構造別）](./chapter3_process_evolution/0.18um_etests_summary_unified.md)
 | A-2          | [`0.18um_Logic_ProcessFlow_en.md`](./0.18um_Logic_ProcessFlow_en.md) | 🧪 **0.18µm CMOS Process Flow（English）**<br>Full logic process flow in English  |
 | A-3          | [`0.13um_Logic_ProcessFlow.md`](./0.13um_Logic_ProcessFlow.md)       | 🧪 **0.13µm CMOSプロセスフロー（日本語）**<br>Includes Cu wiring, Low-k dielectric |
 | A-4          | [`0.09um_Logic_ProcessFlow.md`](./0.09um_Logic_ProcessFlow.md)       | 🧪 **90nm CMOSプロセスフロー（日本語）**<br>Includes NiSi salicide, strained-Si, ULK |
