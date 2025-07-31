@@ -32,7 +32,7 @@ This relationship determines the condition for constructive interference from cr
 
 | モード | 内容 / Description |
 |-------|---------------------|
-| $\theta$–2$\theta$ スキャン | 粉末試料の一般的な測定 / General scan for powders |
+| $\theta$ –2 $\theta$ スキャン | 粉末試料の一般的な測定 / General scan for powders |
 | $\omega$ スキャン（ロッキングカーブ） | 配向性・結晶性評価 / Rocking curve for crystal orientation |
 | $\phi$ スキャン | 面内配向性の解析 / In-plane orientation |
 | HRXRD | 高分解能評価（半導体薄膜）/ High-resolution for strained films |
