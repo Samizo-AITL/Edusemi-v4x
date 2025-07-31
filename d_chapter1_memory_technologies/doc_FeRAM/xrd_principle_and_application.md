@@ -19,7 +19,7 @@ $$
 n\lambda = 2d\sin\theta
 $$
 
-- $ \lambda $：X線の波長 / X-ray wavelength  
+- $\lambda$：X線の波長 / X-ray wavelength  
 - $ d $：結晶面間隔 / Interplanar spacing  
 - $ \theta $：回折角 / Diffraction angle  
 - $ n $：回折次数 / Order of diffraction  
