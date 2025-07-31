@@ -20,9 +20,9 @@ n\lambda = 2d\sin\theta
 $$
 
 - $\lambda$：X線の波長 / X-ray wavelength  
-- $ d $：結晶面間隔 / Interplanar spacing  
-- $ \theta $：回折角 / Diffraction angle  
-- $ n $：回折次数 / Order of diffraction  
+- $d$：結晶面間隔 / Interplanar spacing  
+- $\theta$：回折角 / Diffraction angle  
+- $n$：回折次数 / Order of diffraction  
 
 This relationship determines the condition for constructive interference from crystal planes.
 
@@ -32,9 +32,9 @@ This relationship determines the condition for constructive interference from cr
 
 | モード | 内容 / Description |
 |-------|---------------------|
-| $ \theta$–$2\theta $ スキャン | 粉末試料の一般的な測定 / General scan for powders |
-| $ \omega $ スキャン（ロッキングカーブ） | 配向性・結晶性評価 / Rocking curve for crystal orientation |
-| $ \phi $ スキャン | 面内配向性の解析 / In-plane orientation |
+| $\theta$–$2\theta$ スキャン | 粉末試料の一般的な測定 / General scan for powders |
+| $\omega$ スキャン（ロッキングカーブ） | 配向性・結晶性評価 / Rocking curve for crystal orientation |
+| $\phi$ スキャン | 面内配向性の解析 / In-plane orientation |
 | HRXRD | 高分解能評価（半導体薄膜）/ High-resolution for strained films |
 
 ---
