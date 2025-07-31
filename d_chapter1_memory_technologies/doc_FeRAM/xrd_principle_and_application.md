@@ -82,7 +82,7 @@ Perovskite-type PZT exhibits sharp peaks at specific angles, while amorphous fil
 
 ## 8. 演習問題 / Exercises (Optional)
 
-1. ブラッグの法則に基づいて、$d = 3.14$ Å の面が Cu K$\alpha$ X線で回折する角度 $ \theta $ を求めよ。  
+1. ブラッグの法則に基づいて、$d = 3.14$ Å の面が Cu K$\alpha$ X線で回折する角度 $\theta$ を求めよ。  
 2. FeRAMにおける配向性評価で、(111)ピークが強い場合の利点を述べよ。
 
 ---
