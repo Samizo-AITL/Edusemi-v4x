@@ -56,19 +56,21 @@ SCE, HCI, DIBL, Vth Variability, sky130, 0.18µm
 
 ---
 
-## 📎 付録：プロセス技術フローチャート（Appendix）
+## 📎 付録：プロセス技術フローチャート（Appendix）  
+### Appendix: Process Technology Flow Charts
 
-| リファレンス | ファイル名 / Filename                                               | 内容概要 / Description |
-|--------------|----------------------------------------------------------------------|-------------------------|
-| A-1          | [`0.18um_Logic_ProcessFlow.md`](./0.18um_Logic_ProcessFlow.md)       | 🧪 **0.18µm CMOSプロセスフロー（日本語）**<br>Full logic process flow in Japanese |
-[📄 0.18um 3電源CMOSプロセス（1.8V / 3.3V / 5V）](./0.18um_1.8_3.3_5V.md)
-[📄 0.18μm E-Test特性まとめ（電圧別・構造別）](./0.18um_etests_summary_unified.md)
-| A-2          | [`0.18um_Logic_ProcessFlow_en.md`](./0.18um_Logic_ProcessFlow_en.md) | 🧪 **0.18µm CMOS Process Flow（English）**<br>Full logic process flow in English  |
-| A-3          | [`0.13um_Logic_ProcessFlow.md`](./0.13um_Logic_ProcessFlow.md)       | 🧪 **0.13µm CMOSプロセスフロー（日本語）**<br>Includes Cu wiring, Low-k dielectric |
-| A-4          | [`0.09um_Logic_ProcessFlow.md`](./0.09um_Logic_ProcessFlow.md)       | 🧪 **90nm CMOSプロセスフロー（日本語）**<br>Includes NiSi salicide, strained-Si, ULK |
-| A-5          | [`process_node_comparison.md`](./process_node_comparison.md)         | 📊 **180nm〜90nm世代の比較表（日本語）**<br>Gate oxide, interconnect, scaling limits |
+| リファレンス | ファイル名 / Filename                                                                 | 内容概要 / Description |
+|--------------|------------------------------------------------------------------------------------------|-------------------------|
+| A-1          | [`0.18um_Logic_ProcessFlow.md`](./0.18um_Logic_ProcessFlow.md)                           | 🧪 **0.18µm CMOSプロセスフロー（日本語）**<br>Standard logic process flow in Japanese |
+| A-1b         | [`0.18um_1.8_3.3_5V.md`](./0.18um_1.8_3.3_5V.md)                                         | ⚡ **3電源対応プロセス（1.8V / 3.3V / 5V）**<br>Multi-V CMOS integration flow |
+| A-1c         | [`0.18um_etests_summary_unified.md`](./0.18um_etests_summary_unified.md)                 | 📐 **E-Test特性まとめ（電圧別・構造別）**<br>Unified E-test result overview |
+| A-2          | [`0.18um_Logic_ProcessFlow_en.md`](./0.18um_Logic_ProcessFlow_en.md)                     | 🧪 **0.18µm CMOS Process Flow（English）**<br>Standard logic process flow in English |
+| A-3          | [`0.13um_Logic_ProcessFlow.md`](./0.13um_Logic_ProcessFlow.md)                           | 🧪 **0.13µm CMOSプロセス（日本語）**<br>Includes Cu interconnect, Low-k dielectric |
+| A-4          | [`0.09um_Logic_ProcessFlow.md`](./0.09um_Logic_ProcessFlow.md)                           | 🧪 **90nm CMOSプロセス（日本語）**<br>NiSi salicide, strained-Si, ULK integration |
+| A-5          | [`process_node_comparison.md`](./process_node_comparison.md)                             | 📊 **180nm〜90nm ノード比較表（日本語）**<br>Comparison of oxide, interconnect, scaling trends 
 
-> 📌 **本章の理解を深める補足資料**として、各プロセス世代の工程を詳細に解説しています。設計・製造・信頼性の観点から、プロセス技術の進化を比較理解する教材として活用してください。
+> 📌 **本章の理解を補強する補足資料**です。プロセス技術の進化や、設計・製造・信頼性の観点から各世代の特徴を比較する教材として活用してください。  
+> These reference files support your understanding of process evolution across technology nodes.
 
 ---
 
