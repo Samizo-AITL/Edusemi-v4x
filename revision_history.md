@@ -63,6 +63,17 @@ Added comparison materials to Special Chapter 1
   - CFET overview and roadmap  
   - Linked to Sections 1.1–1.4
 
+🔹 特別編 第2a章「SystemDKにおける物理制約管理」を新設  
+  - SI/PI、熱、応力、EMI/EMCなど複合物理制約の統合設計  
+  - Chiplet時代における System Design Kit（SystemDK）の概念整理  
+  - PoC設計演習を含む階層的教材を構成  
+  - 対応：`f_chapter2a_systemdk/`  
+Established Special Chapter 2a: Physical Constraint Management in SystemDK  
+  - Covers SI/PI, thermal, mechanical, and EMI/EMC constraints  
+  - Introduces System Design Kit (SystemDK) in the chiplet era  
+  - Includes PoC-based hierarchical learning materials  
+  - Directory: `f_chapter2a_systemdk/`
+
 ---
 
 ## 🆕 v4.2（2025年7月13日 / July 13, 2025）  
