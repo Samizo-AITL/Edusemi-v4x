@@ -15,6 +15,19 @@ This document focuses on **PLY / CNT / ALA / HL** layers, explaining their **phy
 
 ---
 
+## 🔤 用語補足：Overlay と Overlap の違い  
+## 🔤 Terminology Note: Overlay vs. Overlap
+
+| 用語 / Term | 意味 / Meaning | 設計における使われ方 / In Design Context |
+|-------------|----------------|-------------------------------------------|
+| **Overlay（オーバーレイ）** | マスク間の**位置ずれ・整合性**<br>*Mask misalignment or registration* | 製造誤差を考慮した**中心合わせ・マージン設計**に関わる<br>*Affects centering and margin in lithography* |
+| **Overlap（オーバーラップ）** | 図形同士の**重なり・包含関係**<br>*Geometric overlap or enclosure* | CNT ⊆ ALA や PLY ⊇ F のような**被覆・接続設計**に関わる<br>*Used for enclosures like CNT within ALA* |
+
+> 💡 *In this document, we focus on “Overlay” as the manufacturing alignment between masks, while “Overlap” refers to intentional geometric enclosures between layers.*  
+> 💡 本資料では「Overlay（整合誤差）」を主に扱いますが、「Overlap（幾何的重なり）」も設計意図として重要です。
+
+---
+
 ## 📐 各レイヤーの基準層とオーバーレイ関係  
 ## 📐 Reference Layers and Overlay Relationships
 
