@@ -1,63 +1,98 @@
-# 📘 改訂履歴（ChangeLog）
+# 📘 改訂履歴 / ChangeLog
 
 このファイルは、Edusemi プロジェクトのバージョン別改訂内容を記録するものです。  
-v4.0 以降は、新リポジトリ `Edusemi-v4x` にて管理されています。
+v4.0 以降は、新リポジトリ `Edusemi-v4x` にて管理されています。  
+This file records version-based updates of the Edusemi project.  
+From version 4.0 onward, updates are maintained in the new repository `Edusemi-v4x`.
 
 ---
 
-## 🆕 v4.3（2025年8月1日）  
-**アナログ設計・製造差別化・先端ノード・メモリ評価を強化し、応用編と特別編を拡充**
+## 🆕 v4.3（2025年8月1日 / August 1, 2025）  
+**アナログ設計・製造差別化・先端ノード・メモリ評価を強化し、応用編と特別編を拡充**  
+**Expanded analog design, process-driven optimization, advanced nodes, and memory evaluation – strengthening the Applied and Special Editions**
 
 🔹 応用編 第5章「アナログ／ミックスドシグナル設計」章構成を刷新  
   - 5.0：アナログ設計の課題と対策（ノイズ・クロストーク等）  
   - 5a：0.18μm AMS設計技法（ばらつき・1/fノイズ・マッチング）  
   - 5b：製造技術によるアナログ差別化（ノイズ低減）  
-  - 各章に README・教材ファイル・章リンクを整備
+  - 各章に README・教材ファイル・章リンクを整備  
+Refactored structure of Applied Chapter 5  
+  - 5.0: Analog design challenges and countermeasures  
+  - 5a: 0.18μm AMS techniques (mismatch, 1/f noise)  
+  - 5b: Analog differentiation via process technology  
+  - Added README, learning materials, and links
 
 🔹 応用編 第5a章に AMS設計構想教材を追加  
-  - Poly抵抗ばらつきに関する実務経験と対策を教育的に整理  
-  - AMSノード選定、設計上の工夫、ばらつき抑制技法を記述  
-  - 対応：`d_chapter5a_analog_mixed_signal/`
+  - Poly抵抗ばらつきと設計工夫を教材化  
+  - ノード選定・レイアウト戦略・ばらつき抑制技術  
+  - 対応：`d_chapter5a_analog_mixed_signal/`  
+Added conceptual materials to Chapter 5a  
+  - Focused on poly resistor variation and design solutions  
+  - Topics: node selection, layout techniques  
+  - Directory: `d_chapter5a_analog_mixed_signal/`
 
 🔹 応用編 第5b章「製造技術によるアナログ差別化」を新設  
-  - 1/fノイズ低減、PZT応力制御、SOI基板採用など、プロセス起点の設計差別化を構想  
-  - 対応：`d_chapter5b_process_driven_design/`
+  - 1/fノイズ低減、PZT応力、SOI採用による製造起点の改善  
+  - 対応：`d_chapter5b_process_driven_design/`  
+Established Chapter 5b: Analog Differentiation via Process  
+  - Topics include 1/f noise reduction, PZT stress, SOI substrate  
+  - Directory: `d_chapter5b_process_driven_design/`
 
-🔹 応用編 第1章「メモリ技術」に FeRAMプロセス教材を追加  
-  - `0.18μm FeRAM` の全48工程を日本語・英語併記で教材化  
-  - Pt/PZT/Ti構造、Wプラグ、Coサリサイド、AlOx保護層などを網羅  
-  - 対応：`chapter1_memory/feram_0.18um_process.md` 他
+🔹 応用編 第1章「メモリ技術」に FeRAM プロセス教材を追加  
+  - `0.18μm FeRAM` の48工程を日英併記で教材化  
+  - Pt/PZT/Ti構造、Wプラグ、Coサリサイドなどを網羅  
+  - 対応：`chapter1_memory/feram_0.18um_process.md`  
+Added FeRAM process to Chapter 1  
+  - Full 0.18μm FeRAM flow (48 steps), bilingual  
+  - Includes Pt/PZT/Ti, W plug, Co salicide  
+  - File: `chapter1_memory/feram_0.18um_process.md`
 
-🔹 応用編 第4章に「レイヤー整合・オーバーレイ」補足資料を追加  
-  - `layer_overlay_reference.md`：レイヤー名と整合・Mask関係を表形式で整理  
-  - DFM設計・PDK学習・マスク整合教育に活用
+🔹 応用編 第4章に「レイヤー整合・オーバーレイ」資料を追加  
+  - `layer_overlay_reference.md` に主要レイヤーとMask整合性を一覧化  
+  - DFM設計・PDK学習に有用  
+Added layer overlay reference to Chapter 4  
+  - Tabulated key layers and overlay relations  
+  - Supports DFM and PDK education
 
-🔹 特別編 第1章「先端ノード技術」に FinFET / GAA / CFET 比較教材を追加  
-  - `appendixf1_03_finfet_vs_gaa.md`：FinFETとGAAの構造・電気特性・設計影響を比較  
-  - `appendixf1_04_cfet.md`：GAAの次世代構造「CFET」の概要・積層構造・設計展望を整理  
-  - 特別編 第1.1〜1.4節との章間接続と将来技術展望を強化
+🔹 特別編 第1章に FinFET / GAA / CFET 比較教材を追加  
+  - `appendixf1_03_finfet_vs_gaa.md`：構造・電気特性・設計影響を比較  
+  - `appendixf1_04_cfet.md`：GAA以降の次世代構造 CFET を教材化  
+  - 特別編 第1.1〜1.4節とのリンク整備  
+Added comparison materials to Special Chapter 1  
+  - FinFET vs GAA (structure, properties, implications)  
+  - CFET overview and roadmap  
+  - Linked to Sections 1.1–1.4
 
 ---
 
-## 🆕 v4.2（2025年7月13日）  
-**特別編に第6章・第7章を追加し、設計実装から製品化ドキュメントまでを網羅**
+## 🆕 v4.2（2025年7月13日 / July 13, 2025）  
+**特別編に第6章・第7章を追加し、設計実装から製品化ドキュメントまでを網羅**  
+**Added Chapters 6 and 7 to the Special Edition, covering implementation to productization**
 
 🔹 特別編 第6章「ピエゾアクチュエータ制御システム」教材を追加  
-  - FSM制御・分極処理・ヒステリシス補償・COF実装を統合  
-  - 実装対象：メカ駆動制御系、COF駆動基板、分極電源制御等  
-  - 対応ファイル：`f_chapter6_actuator_system/` 以下
+  - FSM制御・分極・ヒステリシス補償・COF実装を統合  
+  - 対応：`f_chapter6_actuator_system/`  
+Added Chapter 6: Piezo actuator control system  
+  - Includes FSM, polarization, hysteresis, COF  
+  - Directory: `f_chapter6_actuator_system/`
 
 🔹 特別編 第7章「完成体製品における開発ドキュメントとワークフロー」教材を追加  
-  - 構成管理、BOM設計、評価・レビュー、量産Gate管理までを一貫して教材化  
-  - テンプレート（DR、評価レポート、環境情報等）付き  
-  - 対応ファイル：`f_chapter7_product_docs/` 以下  
-  - 第6章との構造的接続（設計→製品化）も明記
+  - BOM、DR、Gate管理、構成管理までを体系化  
+  - 対応：`f_chapter7_product_docs/`  
+Added Chapter 7: Product development documentation  
+  - Includes BOM, design reviews, mass production control  
+  - Directory: `f_chapter7_product_docs/`
 
-🔹 特別編 READMEの章構成表を更新  
-🔹 PDM/PLM連携図、RACI表、Mermaidワークフローを教材に実装
+🔹 特別編 READMEの章構成を更新  
+🔹 PDM/PLM図、RACI表、Mermaid ワークフローを教材に実装  
+Updated README chapter list  
+Added PDM/PLM diagrams, RACI chart, Mermaid workflow
 
-> 💬 ※補足：本バージョンで追加された教材（第6・第7章）は主に**アクチュエータ制御・製品設計管理**を対象とし、  
-> **半導体プロセス・設計技術とは直接関係しないため、v4.3 以降の半導体教材の範囲からは除外しています。**
+> 💬 補足：第6・第7章は主にアクチュエータ制御・製品開発管理が対象であり、  
+> 半導体プロセスや設計技術とは直接関係しないため、v4.3 以降の半導体教材の範囲からは除外。  
+>  
+> **Note:** Chapters 6 and 7 focus on actuator control and product workflow.  
+> They are **not directly related to semiconductor technology**, and are thus **excluded from semiconductor-focused updates in v4.3 and beyond**.
 
 ---
 
