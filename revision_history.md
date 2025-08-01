@@ -32,10 +32,10 @@ Added conceptual materials to Chapter 5a
   - Directory: `d_chapter5a_analog_mixed_signal/`
 
 🔹 応用編 第5b章「製造技術によるアナログ差別化」を新設  
-  - 1/fノイズ低減、PZT応力、SOI採用による製造起点の改善  
+  - 1/fノイズ低減による製造起点の改善  
   - 対応：`d_chapter5b_process_driven_design/`  
 Established Chapter 5b: Analog Differentiation via Process  
-  - Topics include 1/f noise reduction, PZT stress, SOI substrate  
+  - Topics include 1/f noise reduction 
   - Directory: `d_chapter5b_process_driven_design/`
 
 🔹 応用編 第1章「メモリ技術」に FeRAM プロセス教材を追加  
