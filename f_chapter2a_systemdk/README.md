@@ -44,7 +44,9 @@ This chapter introduces the concept of the **System Design Kit (SystemDK)** and 
 
 - [`f_chapter2_chiplet_pkg/`](../f_chapter2_chiplet_pkg/)：Chipletとパッケージ技術の基礎  
 - [`d_chapter5_analog_mixed_signal/`](../d_chapter5_analog_mixed_signal/)：AMS設計とレイアウト物理制約  
-- [`f_chapter4_fsm_pid_llm/`](../f_chapter4_fsm_pid_llm/)：制御SoCの統合PoCとの接続
+- [`f_chapter4_fsm_pid_llm/`](../f_chapter4_fsm_pid_llm/)：制御SoCの統合PoCとの接続  
+- [`PoC/README.md`](./PoC/README.md)：**SystemDKに基づくPoCマニュアル（GAA / AMS / MRAM統合設計）**  
+  → PoC manual for SystemDK-based integration (GAA / AMS / MRAM)
 
 ---
 
@@ -54,7 +56,7 @@ This chapter introduces the concept of the **System Design Kit (SystemDK)** and 
 |-------------|----------------|
 | 著者 / Author | 三溝 真一（Shinichi Samizo）<br>Shinshu University / Ex-Epson |
 | GitHub | [Samizo-AITL](https://github.com/Samizo-AITL) |
-| Email | shin3t72@gmail.com |
+| Email | [shin3t72@gmail.com](mailto:shin3t72@gmail.com) |
 | ライセンス / License | MIT License（再配布・改変自由）<br>Redistribution and modification allowed |
 
 ---
