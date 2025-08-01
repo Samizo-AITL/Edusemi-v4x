@@ -1,42 +1,56 @@
-# 📦 SystemDK PoC教材フォルダ  
-**SystemDK-Based Proof of Concept Case Studies**
+# 📦 SystemDK PoCマニュアル  
+**Physical Constraint Co-Design with SystemDK for GAA / AMS / MRAM Integration**
 
 ---
 
 ## 📘 概要｜Overview
 
-このフォルダは、SystemDKに基づいた**異種統合型のPoC（概念実証）教材**を収録するディレクトリです。  
-物理制約（SI/PI、熱、応力、EMI/EMC）を横断的に考慮し、**先端ノード（GAA / AMS / MRAM）を組み合わせた構造設計例**を扱います。
+本マニュアルでは、System Design Kit（SystemDK）に基づく物理制約の統合設計と、  
+**GAA（Gate-All-Around） / AMS（Analog-Mixed Signal） / MRAM（Magnetoresistive RAM）** を統合する  
+チップレットPoC（概念実証）構成を体系的に解説します。
 
-This directory contains Proof-of-Concept (PoC) design examples based on the **System Design Kit (SystemDK)**.  
-It integrates heterogeneous technologies (GAA, AMS, MRAM) under comprehensive physical design constraints.
+This manual presents a PoC-based design process integrating physical constraints  
+using **SystemDK**, applied to chiplet-based architectures with **GAA**, **AMS**, and **MRAM** blocks.
 
 ---
 
-## 📂 収録教材一覧｜Included PoC Materials
+## 📊 構造図｜Block Diagram
 
-| ファイル名 | 内容 / Description |
-|------------|--------------------|
-| [`systemdk_poc_gaa_ams_mram.md`](./systemdk_poc_gaa_ams_mram.md) | GAA・AMS・MRAM を統合した異種ノードPoC教材<br>PoC case study for heterogeneous chiplet design |
-| [`images/`](./images/) | ブロック構成図、PDNマップ、熱分布などの図版 |
-| [`data/`](./data/) | Sパラ、FEM出力、熱マップなどの評価データ例 |
+<div align="center">
+  <img src="./images/Physical_Design_PoC_Manual_Flowchart.png" alt="Physical Design PoC Manual Diagram" width="80%">
+</div>
+
+---
+
+## 📚 セクション構成｜Section Structure
+
+| 節 | ファイル | 内容 |
+|----|----------|------|
+| 1 | [`poc_1_motivation.md`](./poc_1_motivation.md) | なぜSystemDKによるPoCが必要か？設計動機と狙い |
+| 2 | [`poc_2_systemdk_platform.md`](./poc_2_systemdk_platform.md) | SystemDKによる制約管理プラットフォーム概要 |
+| 3 | [`poc_3_block_spec.md`](./poc_3_block_spec.md) | GAA / AMS / MRAMブロックの仕様とノード構成 |
+| 4 | [`poc_4_constraint_profiles.md`](./poc_4_constraint_profiles.md) | SI/PI・熱・応力・EMI/EMCの設計要件まとめ |
+| 5 | [`poc_5_integration.md`](./poc_5_integration.md) | チップレット統合における物理整合と配置評価 |
+| 6 | [`poc_6_fem_analysis.md`](./poc_6_fem_analysis.md) | FEM・熱・電磁界・応力解析シナリオ例 |
+| 7 | [`poc_7_summary.md`](./poc_7_summary.md) | 学習ポイントとPoC結果のまとめ |
+
+---
+
+## 🧩 位置づけ｜Relation to Edusemi
+
+このPoCマニュアルは、**Edusemi-v4x 特別編 第2a章 SystemDK教材** の一部として位置づけられています：
+
+- [f2a_8_chiplet_example_gaa_ams_mram.md](../f2a_8_chiplet_example_gaa_ams_mram.md)：設計事例の解説本体  
+- 本ディレクトリ（PoC/）は、**構造設計と演習支援の詳細教材**を担当
 
 ---
 
 ## 🎯 教育的意義｜Educational Value
 
-- GAA・AMS・MRAMといったノードを **設計的に選定・配置する視点** の習得
-- 物理制約（SI/PI・熱・応力・EMI/EMC）を **統合して扱う力の育成**
-- SystemDKの **PoC展開モデル** を実感として学習可能
-- **Edusemi-v4x × 制約管理 × PoC設計** の橋渡し教材
-
----
-
-## 🔗 関連リンク｜Related References
-
-- [SystemDK章トップへ](../README.md)  
-- [評価手法まとめ（f2a_9）](../f2a_9_evaluation_methods.md)  
-- [Edusemi-v4x トップページ](../../README.md)
+- **SystemDKを用いたPoC設計の具体的手順**を再現
+- **物理制約（SI/PI, 熱, 応力, EMI/EMC）の相互連成を実感的に理解**
+- **異種ノード統合の現実的制約と設計トレードオフ**を学ぶ
+- 将来的な**Chiplet設計支援AIとの連携**も見据えた教材基盤
 
 ---
 
@@ -44,9 +58,13 @@ It integrates heterogeneous technologies (GAA, AMS, MRAM) under comprehensive ph
 
 | 項目 / Item | 内容 / Details |
 |-------------|----------------|
-| 著者 / Author | 三溝 真一（Shinichi Samizo） |
+| 著者 / Author | 三溝 真一（Shinichi Samizo）<br>Shinshu University / Ex-Epson |
 | GitHub | [Samizo-AITL](https://github.com/Samizo-AITL) |
-| Email | shin3t72@gmail.com |
-| ライセンス / License | MIT License（再配布・改変自由） |
+| Email | [shin3t72@gmail.com](mailto:shin3t72@gmail.com) |
+| ライセンス / License | MIT License（再配布・改変自由）<br>Redistribution and modification allowed |
 
 ---
+
+## 🔙 戻る｜Back
+
+[SystemDK教材トップに戻る](../README.md)
