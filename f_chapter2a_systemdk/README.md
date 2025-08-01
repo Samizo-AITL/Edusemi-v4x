@@ -19,13 +19,13 @@ This chapter introduces the concept of the **System Design Kit (SystemDK)** and 
 
 | 番号｜No | ファイル名｜Filename | タイトル｜Title |
 |--------|------------------------|------------------------------------|
-| 2a.1 | `f2a_1_systemdk_overview.md` | SystemDKの全体像と設計階層<br>Overview and Hierarchy of SystemDK |
-| 2a.2 | `f2a_2_sipi.md` | SI/PIとPDN構造<br>Signal/Power Integrity and PDN Design |
-| 2a.3 | `f2a_3_thermal.md` | 熱拡散と材料分布<br>Thermal Behavior and Material Distribution |
-| 2a.4 | `f2a_4_mechanical.md` | 実装応力と界面信頼性<br>Mechanical Stress and Interface Reliability |
-| 2a.5 | `f2a_5_emi_emc.md` | EMI/EMC設計原則<br>Principles of EMI/EMC Design |
-| 2a.6 | `f2a_6_constraint_tradeoff.md` | 制約の連成とトレードオフ設計<br>Constraint Interdependency and Trade-offs |
-| 2a.7 | `f2a_7_systemdk_poc.md` | 統合PoC演習課題<br>SystemDK-Based PoC Exercise |
+| 2a.1 | [`f2a_1_systemdk_overview.md`](./f2a_1_systemdk_overview.md) | SystemDKの全体像と設計階層<br>Overview and Hierarchy of SystemDK |
+| 2a.2 | [`f2a_2_sipi.md`](./f2a_2_sipi.md) | SI/PIとPDN構造<br>Signal/Power Integrity and PDN Design |
+| 2a.3 | [`f2a_3_thermal.md`](./f2a_3_thermal.md) | 熱拡散と材料分布<br>Thermal Behavior and Material Distribution |
+| 2a.4 | [`f2a_4_mechanical.md`](./f2a_4_mechanical.md) | 実装応力と界面信頼性<br>Mechanical Stress and Interface Reliability |
+| 2a.5 | [`f2a_5_emi_emc.md`](./f2a_5_emi_emc.md) | EMI/EMC設計原則<br>Principles of EMI/EMC Design |
+| 2a.6 | [`f2a_6_constraint_tradeoff.md`](./f2a_6_constraint_tradeoff.md) | 制約の連成とトレードオフ設計<br>Constraint Interdependency and Trade-offs |
+| 2a.7 | [`f2a_7_systemdk_poc.md`](./f2a_7_systemdk_poc.md) | 統合PoC演習課題<br>SystemDK-Based PoC Exercise |
 
 ---
 
@@ -40,8 +40,8 @@ This chapter introduces the concept of the **System Design Kit (SystemDK)** and 
 
 ## 🔗 関連章との接続｜Linked Chapters
 
-- [`f_chapter2_chiplet_pkg/`](../f_chapter2_chiplet_pkg/)：Chipletとパッケージ技術の基礎
-- [`d_chapter5_analog_mixed_signal/`](../d_chapter5_analog_mixed_signal/)：AMS設計とレイアウト物理制約
+- [`f_chapter2_chiplet_pkg/`](../f_chapter2_chiplet_pkg/)：Chipletとパッケージ技術の基礎  
+- [`d_chapter5_analog_mixed_signal/`](../d_chapter5_analog_mixed_signal/)：AMS設計とレイアウト物理制約  
 - [`f_chapter4_fsm_pid_llm/`](../f_chapter4_fsm_pid_llm/)：制御SoCの統合PoCとの接続
 
 ---
@@ -60,5 +60,3 @@ This chapter introduces the concept of the **System Design Kit (SystemDK)** and 
 ## 🔙 戻る｜Back to Top
 
 [Edusemi-v4x トップへ戻る](../README.md)
-
----
