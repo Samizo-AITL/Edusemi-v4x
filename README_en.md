@@ -78,6 +78,7 @@ While keeping an eye on application domains, the focus is on cultivating a **dee
 |---------|-----------|-----------------|
 | [1](f_chapter1_finfet_gaa/README.md) | **Advanced Node Technologies (FinFET, GAA, CFET)** | **Transistor structures**, **scaling strategies**, and **design implications** |
 | [2](f_chapter2_chiplet_pkg/README.md) | **Chiplet and Advanced Packaging Technologies** | **2.5D/3D integration**, **TSV**, **interposer**, **heterogeneous systems** |
+| [2a](f_chapter2a_systemdk/README.md) | **SystemDK and Physical Constraint Management** | **Signal/power integrity**, **thermal**, **mechanical**, and **EMI/EMC-aware design integration** |
 | [3](f_chapter3_socsystem/README.md) | **SoC Implementation of FSM × PID × LLM Control** | Applying **AITL architecture** to **integrated control SoCs** |
 | [4](f_chapter4_openlane/README.md) | **RTL-to-GDSII Implementation of AITL Control Logic** | **OpenLane layout**, **DRC**, **integration verification** |
 | [5](f_chapter5_dfm/README.md) | **DFM and Physical Verification Using PDK** | **Sky130 PDK**, **LVS**, **DFM best practices**, **manufacturing readiness** |
