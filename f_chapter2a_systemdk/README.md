@@ -26,6 +26,7 @@ This chapter introduces the concept of the **System Design Kit (SystemDK)** and 
 | 2a.5 | [`f2a_5_emi_emc.md`](./f2a_5_emi_emc.md) | EMI/EMC設計原則<br>Principles of EMI/EMC Design |
 | 2a.6 | [`f2a_6_constraint_tradeoff.md`](./f2a_6_constraint_tradeoff.md) | 制約の連成とトレードオフ設計<br>Constraint Interdependency and Trade-offs |
 | 2a.7 | [`f2a_7_systemdk_poc.md`](./f2a_7_systemdk_poc.md) | 統合PoC演習課題<br>SystemDK-Based PoC Exercise |
+| 2a.8 | [`f2a_8_chiplet_example_gaa_ams_mram.md`](./f2a_8_chiplet_example_gaa_ams_mram.md) | チップレット統合事例（GAA / AMS / MRAM）<br>Chiplet Integration Example: GAA / AMS / MRAM |
 
 ---
 
