@@ -37,6 +37,18 @@ with **GAA**, **AMS**, and **MRAM** functional blocks.
 
 ---
 
+## 🔍 FEM制約ノート｜FEM Constraint Notes
+
+📄 **SystemDK × FEM制約情報（熱・応力・EMI連携）**  
+🔗 [➡️ `PoC/notes/fem_constraints.md` を開く（Open Notes）](./PoC/notes/fem_constraints.md)
+
+> 本ノートでは、PoC評価段階で得られる **FEM解析結果（熱分布・応力集中・EMI経路など）** を  
+> SystemDK設計へ統合するための基礎情報を整理しています。
+
+> This note summarizes how to integrate **FEM analysis results** — such as thermal profiles, mechanical stress, and EMI pathways — into SystemDK design during the PoC phase.
+
+---
+
 ### 🔁 PoCDKによる実評価と制約抽出｜PoCDK Evaluation Flow
 
 PoC設計の最終フェーズでは、**実際のPoC評価ボードを用いた混載構成の動作検証**と、  
