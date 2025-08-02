@@ -28,6 +28,39 @@ thermal distribution in GAA structures, stress concentration in MRAM stacks, and
 
 ---
 
+![Figure 1: Simulated thermal distribution in a GAA nanowire structure using FEM](../images/fem_gaa_thermal_en.png)
+
+*Figure 1: Simulated thermal distribution in a GAA nanowire structure using FEM.*
+
+---
+
+## 2.5 局所FEM結果のスケール統合  
+*2.5 Multi-Scale Integration of Local FEM Results*
+
+FEMによるトランジスタやナノワイヤ構造（例：GAA）の解析では、ナノメートルスケールでの局所的な熱分布・温度ピークを精密に捉えることができる。しかし、これらの結果をそのままモジュールやチップレット全体の熱分布と結びつけるには、**スケールをまたぐ物理モデルの階層連携**が必要である。
+
+FEM analysis at the device level (e.g., GAA nanowires) captures fine-grained thermal behavior such as localized heating or interface resistances. However, to relate these to module- or chiplet-scale thermal distributions, a **hierarchical multi-scale modeling approach** is required.
+
+---
+
+### 🔗 スケール統合の一般的手法 / Common Integration Techniques
+
+| スケール | 対象 | 手法 | 備考 |
+|----------|------|------|------|
+| **デバイスFEM** | GAA, MRAM, Cell | 熱抵抗 $begin:math:text$ R_{th} = \\Delta T / P $end:math:text$ 抽出 | 電力あたり温度上昇を取得 |
+| **モジュールCTM** | SRAM, ALU, AMS | 発熱密度マップ（W/μm²）化 | レイアウト上に敷き詰める |
+| **チップレットCTM/BEM** | SoCタイル全体 | 熱源マップ＋材料境界条件 | チップ内熱干渉をモデル化 |
+| **PKG/システムTLM/CFD** | ヒートシンク、冷却路 | 上位伝熱経路と接続 | 冷却能力の評価 |
+
+---
+
+### 🖼️ 概念図（階層熱伝搬） / Conceptual Flow
+
+![Figure 2: Multi-scale thermal modeling flow from device FEM to package-level cooling](../images/multiscale_thermal_flow_diagram.png)  
+*Figure 2: Multi-scale thermal modeling flow from device FEM to package-level cooling.*
+
+---
+
 ## 3. BRDK / PKGDK / IPDKへの制約伝搬モデル  
 *Constraint Propagation Models to BRDK, PKGDK, and IPDK*
 
@@ -36,6 +69,22 @@ thermal distribution in GAA structures, stress concentration in MRAM stacks, and
 - 🛰️ **EMI制約**：高調波ノイズ域 → PKGDKのGND/VSSプレーン強化へ
 
 > FEM-derived constraints are propagated into various DK layers, enabling adaptive layout, thermal optimization, and noise reduction strategies.
+
+---
+
+### 🔧 JSONデータ例（FEM出力 → BRDK形式）
+
+```json
+{
+  "component": "GAA_cell_3",
+  "max_temperature_C": 102.3,
+  "thermal_margin_C": 15,
+  "cooling_required": true,
+  "preferred_sink_location": [ "bottom_left", "center" ]
+}
+```
+
+*Figure 3: Example of thermal_map.json derived from FEM output.*
 
 ---
 
