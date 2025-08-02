@@ -37,6 +37,17 @@ with **GAA**, **AMS**, and **MRAM** functional blocks.
 
 ---
 
+## 🧾 DesignKitとは｜What Are DesignKits?
+
+| DesignKit | 正式名称 | 対象階層 | 説明 |
+|-----------|----------|----------|------|
+| **BRDK** | Board-Level Design Kit | 評価ボード | PoC評価用PCB設計と実装制約（熱、電源、IR Dropなど） |
+| **IPDK** | Interposer Design Kit | インターポーザ層 | チップレット間接続層。TSV、RDL、応力吸収、EMI制御が中心 |
+| **PKGDK** | Package-Level Design Kit | PKG全体 | PoP、マルチチップ、放熱構造、スタッキングなどの制約 |
+| **SystemDK** | System-Level Design Kit | システム統合階層 | 上記を統括し設計制約・FEM情報を一元管理・再利用可能にする |
+
+---
+
 ## 🔍 FEM関連ノート｜FEM-Related Notes
 
 PoC評価における熱・応力・EMIなどの**FEM解析結果**をSystemDK設計に反映させるための技術ノート群です。  
