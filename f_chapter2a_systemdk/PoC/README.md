@@ -37,15 +37,31 @@ with **GAA**, **AMS**, and **MRAM** functional blocks.
 
 ---
 
-## 🔍 FEM制約ノート｜FEM Constraint Notes
+## 🔍 FEM関連ノート｜FEM-Related Notes
 
-📄 **SystemDK × FEM制約情報（熱・応力・EMI連携）**  
-🔗 [➡️ `PoC/notes/fem_constraints.md` を開く（Open Notes）](./notes/fem_constraints.md)
+PoC評価における熱・応力・EMIなどの**FEM解析結果**をSystemDK設計に反映させるための技術ノート群です。  
+*These technical notes summarize how FEM results (thermal, mechanical stress, EMI) are fed back into SystemDK design during PoC evaluation.*
 
-> 本ノートでは、PoC評価段階で得られる **FEM解析結果（熱分布・応力集中・EMI経路など）** を  
-> SystemDK設計へ統合するための基礎情報を整理しています。
+---
 
-> This note summarizes how to integrate **FEM analysis results** — such as thermal profiles, mechanical stress, and EMI pathways — into SystemDK design during the PoC phase.
+### 📄 fem_constraints.md  
+🔗 [➡️ 開く（Open fem_constraints.md）](./notes/fem_constraints.md)  
+- **SystemDK × FEM制約情報（熱・応力・EMI連携）**の全体方針  
+- *Overview of how FEM constraints are integrated into SystemDK (thermal, stress, EMI coherence).*
+
+---
+
+### 🧱 stress_map.md  
+🔗 [➡️ 開く（Open stress_map.md）](./notes/stress_map.md)  
+- **MRAMセルにおける熱-応力分布とSystemDK設計への反映**  
+- *Stress concentration in MRAM cells from FEM and feedback into SystemDK DesignKit.*
+
+---
+
+### 📡 emi_constraints.md  
+🔗 [➡️ 開く（Open emi_constraints.md）](./notes/emi_constraints.md)  
+- **EMI発生源とその抑制設計、PKGDK等への統合戦略**  
+- *Sources of EMI, mitigation design, and integration strategies for SystemDK/PKGDK.*
 
 ---
 
