@@ -1,74 +1,47 @@
-# 🧾 poc_7_summary.md  
-**SystemDK PoCマニュアルのまとめと教育的意義**  
-**Summary and Educational Reflections on the SystemDK-Based PoC Manual**
+# 📘 7. PoCのまとめと教育的意義  
+**7. Summary and Educational Reflections on the PoC**
 
 ---
 
-## 🧭 本PoCの意図と到達点｜Purpose and Outcomes
+## 🎯 本PoCのまとめ｜PoC Summary
 
-### 🎯 狙い｜Objectives
+本PoCは、SystemDK構想に基づき以下の要素を統合した演習である：
 
-- **SystemDK** による物理制約統合設計を、PoC形式で段階的に再現する。
-- GAA / AMS / MRAM を活用した **異種統合設計**における実装課題と解決策を示す。
-- PoCとして**教材的ステップ（構想→設計→評価→フィードバック）**を示し、教育展開可能な形式とする。
+- GAA / AMS / MRAM の異種ノード統合
+- 多物理場制約（SI/PI, 熱, 応力, EMI/EMC）の整理と設計反映
+- PoCボード上での実評価およびFEM解析による制約抽出
+- BRDK / IPDK / PKGDK への派生とSystemDKへの統合
 
-This PoC aimed to:
-- Reconstruct a step-by-step **physical constraint integration** using SystemDK.
-- Demonstrate challenges and approaches in **heterogeneous chiplet integration** (GAA / AMS / MRAM).
-- Provide a structured, educationally reusable format from concept to evaluation and feedback.
-
----
-
-## 🔄 設計プロセスのまとめ｜Design Process Recap
-
-```text
-1. 動機と構想整理（Why SystemDK?）
-2. プラットフォームと制約抽象（SystemDKの全体像）
-3. 機能ブロック定義（GAA, AMS, MRAM仕様）
-4. 物理制約の整理（SI/PI, 熱, 応力, EMI/EMC）
-5. 統合設計とレイアウト（PKG/Die間の整合）
-6. FEM・EM解析による評価と制約フィードバック
-7. 教育的意義・設計力育成の観点でのまとめ
-```
-
-This manual followed these 7 phases, emphasizing system-level design and analysis.
+> This PoC demonstrates practical integration of chiplets under physical constraints,  
+> validating design decisions via both FPGA prototyping and multi-physics analysis.
 
 ---
 
-## 🎓 教育的意義の整理｜Educational Significance
+## 🧭 学習成果と身につく視点｜Learning Outcomes
 
-| 項目 / Item | 内容 / Description |
-|-------------|---------------------|
-| 🧩 異種統合設計 | 複数ノード技術を適材適所に用いた構成検討 |
-| 📐 制約管理力の育成 | SI/PI, 熱, 応力, EMI/EMCといった制約を体系的に扱う設計力 |
-| 🔁 フィードバック設計 | 評価結果をSystemDKに戻して再設計につなげる発想の体得 |
-| 📚 教材性 | 実際の技術と連動した、教育現場向け教材テンプレートとして活用可能 |
-
----
-
-## 🛤️ 今後の展開｜Future Directions
-
-- **SystemDKの自動化連携**（LLMやEDAツールとの統合）
-- **AIによる制約学習モデル**の構築（FEM/EM結果→設計パターン学習）
-- **SoC DesignKitとの接続教材**としての展開（制御と物理制約の橋渡し）
-
-Future work includes:
-- Integration of **AI and automation in SystemDK** flows.
-- Using LLMs to **learn constraint patterns from FEM/EM analysis**.
-- Bridging to **control-side SoC kits**, connecting functional and physical design.
+| 視点 | 理解できること |
+|------|----------------|
+| 制約主導設計 | 最終GDSだけでなく、制約段階から設計が始まる重要性 |
+| 構造の可視化 | 電気・熱・機械的特性が設計図面にどう影響するか |
+| トレードオフ構造 | 熱 vs EMI、PI vs 機械応力などの実装衝突の調整方法 |
+| DesignKit思考 | 繰り返し使える制約テンプレートとしての知識整理 |
 
 ---
 
-## 🔚 おわりに｜Closing Note
+## 🧠 教材としての発展性｜Expandability as Educational Material
 
-SystemDKは、**構想力×制約力×教育応用力**を融合する設計思考の新しい基盤です。  
-本PoCマニュアルを通じて、現場設計と教育教材の両面に貢献する統合モデルを提示しました。
+- **Sky130 / Caravel**との接続：RTL-to-FPGA-to-FEMの拡張
+- **AI統合設計支援**との連携：制約ベース自動配線や最適化
+- **産業実装例との照合**：現場実装例との比較・検証
 
-SystemDK offers a new foundation that unites **conceptual thinking, constraint awareness, and educational applicability**.  
-This manual serves as a model that contributes to both industrial design and learning environments.
+> SystemDK-PoC serves as a gateway toward scalable, AI-integrated, and industry-informed SoC education.
 
 ---
 
-## 🔙 戻る｜Back
+## 🔚 本章の結び｜Conclusion
 
-[← PoCマニュアルトップへ戻る｜Back to PoC Manual Top](./README.md)
+SystemDKによるPoC演習は、SoC設計のブラックボックス性を開放し、  
+**設計判断の透明化・制約の可視化・知識の再利用性**を重視した次世代教育モデルである。
+
+> By shifting from black-box design to constraint-transparent architecture,  
+> SystemDK empowers learners with structural design literacy.
