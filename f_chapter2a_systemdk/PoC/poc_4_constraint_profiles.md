@@ -1,116 +1,78 @@
-# 📏 poc_4_constraint_profiles.md  
-**物理制約プロファイルの定義（SI/PI・熱・応力・EMI/EMC）**  
-**Definition of Physical Constraint Profiles (SI/PI, Thermal, Stress, EMI/EMC)**
+# 🎛️ 4. 物理制約プロファイル定義  
+**4. Constraint Profiles for SI/PI, Thermal, Stress, and EMI/EMC**
 
 ---
 
-## 📘 概要｜Overview
+## 🎯 目的｜Objective
 
-本節では、SystemDKにおける主要な物理制約カテゴリ（SI/PI、熱、応力、EMI/EMC）に関して、  
-設計上の考慮点・制約モデル・評価指標を整理します。
+この章では、SystemDKベースPoC設計における  
+**物理制約（SI/PI、熱、応力、EMI/EMC）** に関する設計項目をプロファイル形式で整理する。
 
-This section outlines the key physical constraint categories in SystemDK—**Signal/Power Integrity (SI/PI)**,  
-**Thermal**, **Mechanical Stress**, and **EMI/EMC**—along with their design considerations and evaluation models.
-
----
-
-## 🔌 SI/PI：Signal & Power Integrity
-
-### 📐 設計項目｜Design Items
-- Transmission line matching / impedance
-- Power Delivery Network (PDN) hierarchy
-- Decoupling capacitor layout
-
-### 📊 評価手法｜Evaluation Methods
-- Sパラメータ解析（TDR, VNA）
-- PDNインピーダンス解析
-- IBIS/SPIモデルによる波形検証
-
-### 📌 SystemDKでの実装例｜SystemDK Implementation
-```
-- 各ブロックのI/F仕様からインピーダンス要求を定義
-- PKG層でPDNテンプレートを適用
-- Lチップ⇔Hチップでのクロストーク分離解析
-```
+> This section outlines the key constraint profiles that guide multi-physics-aware design  
+> across Signal/Power Integrity, Thermal, Mechanical, and EMI/EMC domains.
 
 ---
 
-## 🌡️ Thermal（熱）
+## 🔌 Signal / Power Integrity（SI/PI）
 
-### 📐 設計項目｜Design Items
-- Power map / 熱密度分布
-- ヒートスプレッダ/ヒートシンク構造
-- Hotspot回避配置（floorplan）
-
-### 📊 評価手法｜Evaluation Methods
-- FEMによる熱拡散解析（steady/transient）
-- Junction温度シミュレーション（Tj）
-- Rth測定（熱抵抗モデル）
-
-### 📌 SystemDKでの実装例
-```
-- 各ダイのPmapをfloorplanにマッピング
-- 樹脂/配線層の材料スタックを熱モデルに変換
-- 熱境界条件（固定温度/自然放熱）指定
-```
+| 項目 | 内容 |
+|------|------|
+| PDN構成 | Power Tree設計、電源層スタッキング、デカップリング戦略 |
+| IR Drop | 各モジュールに対する最大許容 IR voltage drop（例：< 5%） |
+| インピーダンス整合 | 信号ラインの整合設計（例：Z0 = 50Ω） |
+| ピーク電流/過渡応答 | 高速メモリアクセスやRF制御時の突入電流設計 |
 
 ---
 
-## 🧱 Mechanical Stress（応力）
+## 🌡️ Thermal Constraint（熱）
 
-### 📐 設計項目｜Design Items
-- 材料のCTE差（熱膨張係数）
-- TSV / RDL配置によるストレス集中
-- チップ・パッケージ界面剥離リスク
-
-### 📊 評価手法｜Evaluation Methods
-- FEMによる応力場解析（Von Mises, Creep）
-- 変位・ひずみ量評価（Displacement/Strain）
-- 寿命モデル（疲労/剥離）
-
-### 📌 SystemDKでの実装例
-```
-- 材料DBにCTE/E-modulusを登録
-- 層構造テンプレートから応力マップ生成
-- GAAとMRAM間の界面応力を計算
-```
+| 項目 | 内容 |
+|------|------|
+| 熱源分布 | MRAM書込、AMSセンサ発熱、GAA演算負荷等の熱源 |
+| 拡散パス設計 | シリコン〜パッケージ〜基板へ向かう放熱設計 |
+| 温度上限 | AMSブロック < 85°C、MRAM周辺 < 125°C（例） |
+| 熱暴走防止 | 熱帰還を想定したレイアウトシミュレーション |
 
 ---
 
-## 📡 EMI / EMC（電磁妨害）
+## 🪵 Mechanical Stress（応力）
 
-### 📐 設計項目｜Design Items
-- クロック/高速信号の放射・ノイズ源
-- シールド・GND設計
-- RF-AMSブロックとの距離設計
-
-### 📊 評価手法｜Evaluation Methods
-- EM Field Solver（3D FEM / FDTD）
-- Sパラ/RFノイズ解析
-- EMCテストモデル（CISPR/Bode plot）
-
-### 📌 SystemDKでの実装例
-```
-- RFブロック周辺にGNDシールド配置
-- EMIホットスポット抽出しシールド再配置
-- BCD-AMS用のEMノイズプロファイル共有
-```
+| 項目 | 内容 |
+|------|------|
+| 応力集中部位 | バンプ、TSV、接合界面の熱膨張差起因部位 |
+| 材料選定 | CTE（熱膨張係数）・ヤング率の調整による緩和 |
+| 結合方法 | 接着/配線/はんだ接合のメカニカル安定性 |
+| 応力緩和設計 | リリーフホール、スリット、パッド分散技術など |
 
 ---
 
-## 🎯 教育的ポイント｜Educational Highlights
+## 📡 EMI / EMC（電磁干渉・整合性）
 
-- SI/PI・熱・応力・EMCの**分類・設計・評価**を体系的に整理
-- FEMやSパラ等の**評価手法と設計への反映方法**を学習
-- 制約プロファイルを**形式知としてモデル化し共有する意義**を実感
+| 項目 | 内容 |
+|------|------|
+| 高速信号処理 | クロックライン、PLL出力のEMノイズ制御 |
+| GND構造 | グランドプレーン分離とシールド構造 |
+| ノイズ帯域 | 放射/伝導ノイズの対象帯域と制限（例：CISPR準拠） |
+| フィルタリング設計 | LCフィルタ、シリアルフェライト等の導入 |
 
 ---
 
-## 🔗 関連リンク｜Related Links
+## 🧩 制約の重なりと相関管理｜Constraint Coupling
 
-- [poc_3_block_spec.md](./poc_3_block_spec.md)
-- [poc_5_integration.md](./poc_5_integration.md)
-- [f2a_2_sipi.md](../../f_chapter2a_systemdk/f2a_2_sipi.md)
-- [f2a_3_thermal.md](../../f_chapter2a_systemdk/f2a_3_thermal.md)
-- [f2a_4_stress.md](../../f_chapter2a_systemdk/f2a_4_stress.md)
-- [f2a_5_emi.md](../../f_chapter2a_systemdk/f2a_5_emi.md)
+- **熱×応力**：温度上昇 → 熱膨張 → 応力増加  
+- **SI×EMI**：インピーダンス不整合 → リフレクション → ノイズ拡散  
+- **電源×熱**：IR Drop増大 → 熱発生 → 動作不安定
+
+> These profiles often overlap and interact; SystemDK integrates them through  
+> a layered and traceable design methodology.
+
+---
+
+## 📘 本章のまとめ｜Summary
+
+PoC設計における物理制約は、**個別ではなく連成的に考慮すべき要素**である。  
+SystemDKはこれらを**明文化・視覚化・設計反映**することにより、  
+**再利用可能な制約テンプレート**として構成可能にする。
+
+> Physical design constraints are not isolated parameters  
+> — SystemDK organizes them into reusable and consistent design knowledge.
