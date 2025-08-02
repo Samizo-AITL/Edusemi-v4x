@@ -81,7 +81,7 @@ Qはあるピーク周波数で最大となり、それ以降は寄生容量や�
 以下は、薄膜磁性膜と導体層を組み合わせたインダクタ構造のFEM解析により、周波数帯別のQ値劣化要因と材料選定指針（Al vs Cu）を示した初期研究です。  
 今日のオンチップRFインダクタ設計にも通じる知見を提供しています。
 
-📄 [🧪 Thin-Film Inductor Development (1996–1997)](../../archive/in1996/thinfilm_microreactor.md)  
+📄 [🧪 Thin-Film Inductor Development (1996–1997)](/Edusemi-Plus/archive/in1996/thinfilm_microreactor.md)  
 （信州大学におけるFEMベースの薄膜リアクトル設計／磁性膜とスパイラルAl構造）
 
 ---
