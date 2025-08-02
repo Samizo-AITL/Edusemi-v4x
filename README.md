@@ -78,7 +78,7 @@
 |----|----------|------|
 | [1](f_chapter1_finfet_gaa/README.md) | **先端ノード（FinFET・GAA・CFET）** | **Fin構造・GAA・CFETの構造・設計影響・スケーリング技術** |
 | [2](f_chapter2_chiplet_pkg/README.md) | **チップレットと先端パッケージ技術** | **2.5D/3D・TSV・異種集積事例** |
-| [2a](f_chapter2a_systemdk/README.md) | **SystemDKにおける物理制約管理** | **SI/PI・熱・応力・EMI/EMCを跨ぐ統合制約設計** |
+| [2a](f_chapter2a_systemdk/README.md) | **SystemDKにおける熱・応力・ノイズ制約の設計対応** | **信号・電源（SI/PI）、熱、応力、電磁ノイズ（EMI/EMC）を統合的に扱う実装制約設計** |
 | [3](f_chapter3_socsystem/README.md) | **FSM×PID×LLMによる統合制御SoC実装** | **AITL制御のSoC適用と統合制御展開** |
 | [4](f_chapter4_openlane/README.md) | **FSM×PID×LLMのOpenLane実装** | **統合制御RTLの配置配線・DRC検証** |
 | [5](f_chapter5_dfm/README.md) | **PDKと物理整合・DFM設計** | **DRC・LVS・DFM設計指針とSky130活用** |
