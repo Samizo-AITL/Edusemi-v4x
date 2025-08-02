@@ -30,6 +30,16 @@ thermal distribution in GAA structures, stress concentration in MRAM stacks, and
 
 ![Figure 1: Simulated thermal distribution in a GAA nanowire structure using FEM](../images/fem_gaa_thermal_en_fixed.png)
 
+<p align="center">
+  <img src="../images/fem_gaa_thermal_en_fixed.png" alt="Figure 1: GAA Thermal FEM" width="500"/>
+</p>
+
+<p align="center">
+  <em>Figure 1: Simulated thermal distribution in a GAA nanowire structure using FEM.</em>
+</p>
+
+
+
 *Figure 1: Simulated thermal distribution in a GAA nanowire structure using FEM.*
 
 ---
