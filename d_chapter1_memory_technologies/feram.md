@@ -118,6 +118,13 @@ FeRAMのプロセス実装に関心がある方は、以下の教材をご参照
 
 > 💡 メモリ用途とアクチュエータ用途に共通するPZT特性の理解に役立ちます。
 
+📘 **HfZrO₂系強誘電体の水素工程適合性とFeFET動向**  
+👉 [hfo2_h2_compat.md](./doc_FeRAM/hfo2_h2_compat.md)
+
+- HfZrO₂の水素還元耐性と、CMOS準拠420 °C水素アニールへの対応性を解説  
+- PZTとの違い、FeFETとの比較、BEOLプロセス統合の実用性に言及  
+- FeRAMから次世代FeFETへの材料・構造進化の理解に有用
+  
 ---
 
 ## 🔗 関連リンク｜Related Links
