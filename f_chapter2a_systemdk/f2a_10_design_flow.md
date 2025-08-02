@@ -1,68 +1,77 @@
 # 2a.10 設計フローに基づくSystemDK構成  
-**2a.10 SystemDK Architecture Based on Design Flow**
+**2a.10 SystemDK Architecture Based on Structured Design Flow**
 
 ---
 
 ## 🧭 全体構成：SystemDKに至る3階層フロー  
 **Three-Tiered Flow Leading to SystemDK Integration**
 
-SystemDKは、設計初期のアーキテクチャ構想から物理実装、解析、制約統合に至るまで、すべての設計段階を貫く構造的フレームワークである。以下に、その流れを3階層構造で整理する。
+**SystemDK** は、設計初期のアーキテクチャ構想から物理実装、解析、制約統合に至るまで、すべての設計段階を貫く**構造的かつ再帰的な設計フレームワーク**である。  
+以下に、その流れを3階層構造で整理する。
+
+---
 
 ## 🧱【階層1】機能アーキ設計とモジュール分解  
 **Tier 1: Functional Architecture and Module Decomposition**
 
 1. **全体アーキテクチャ設計**  
 　*制御、演算、通信、記憶の機能ブロックを構成*  
-　- Use caseの明確化、データフロー設計、性能要求の設定
+　- Use Case明確化、データフロー構築、性能要件の定義
 
 2. **モジュール分解（U-Chiplet構想準拠）**  
-　*SoC Logic, AMS, MRAM, IFなどを独立設計単位に分割*  
-　- 機能・周波数・電源要件に応じた分離
+　*SoC Logic、AMS、MRAM、IFなどを独立設計単位として分割*  
+　- 機能密度、電源/周波数、レイアウトの観点でブロック分離
 
 3. **論理設計（RTL/IP開発）**  
-　*SystemVerilog等による各モジュールの記述*  
-　- クロックドメイン、タイミング制約の整理
+　*SystemVerilog等による記述と機能検証*  
+　- タイミング制約・インタフェース設計・論理合成
+
+---
 
 ## ⚙️【階層2】物理設計と制約導出  
 **Tier 2: Physical Design and Constraint Extraction**
 
-4. **物理設計（フロアプラン〜レイアウト）**  
-　*PDK適用、DRC/LVSに準拠した配置配線*  
-　- 論理ブロックを物理空間にマッピング
+4. **物理設計（フロアプラン〜配置配線）**  
+　*PDK準拠の物理設計を通じて各論理ブロックを実体化*  
+　- クロックツリー、ピン配置、DRC/LVS準拠レイアウト
 
 5. **多物理場解析の実行**  
-　*以下の観点で制約導出：*  
-　- **SI/PI**：IR drop, ノイズマージン  
-　- **熱解析**：放熱経路、温度分布  
-　- **応力解析**：バンプ、パッケージ応力  
-　- **EMI/EMC**：信号干渉、ノイズ拡散
+　*以下の観点から設計制約を導出：*  
+　- **SI/PI**：IR Drop、ノイズマージン、電源整合性  
+　- **熱解析**：局所温度上昇、伝導経路、パッケージ放熱性能  
+　- **応力解析**：バンプ・TSV・基板応力、パッケージ歪み  
+　- **EMI/EMC**：クロストーク、放射ノイズ、接地ループ
 
 6. **制約の分配とDesignKit化**  
-　*解析結果に基づき以下のDesignKitに反映：*  
-　- **BRDK**：ボード設計用の熱/電源制約  
-　- **IPDK**：再利用IPのピン/EMI/応力制約  
-　- **PKGDK**：パッケージ設計用の層・接続制約
+　*解析結果を以下の設計キットへ構造的に反映：*  
+　- **BRDK**：基板設計向け熱・電源・信号制約  
+　- **IPDK**：再利用IP向けピン配置・ノイズ・応力制約  
+　- **PKGDK**：パッケージ統合向けの層構造・熱/応力特性制約
+
+---
 
 ## 🧩【階層3】SystemDK統合と再構築  
 **Tier 3: Constraint Integration and SystemDK Reconstruction**
 
-7. **SystemDKによる設計制約の統合**  
-　*分散した制約を横断的に再統合・構造可視化*  
-　- 制約マップ構築、制約間の競合解消  
-　- GDS/DEF/LEFへのフィードバック機構
+7. **SystemDKによる制約統合と構造可視化**  
+　*BRDK/IPDK/PKGDKを横断的に再統合し、構造依存性を明確化*  
+　- 制約マップの構築、各レイヤのインタラクション把握  
+　- GDS/DEF/LEFへのフィードバックとデザインルール強化
 
-8. **整合性検証と設計思想のフィードバック**  
-　*構成要素間の整合性・再設計容易性の検証*  
-　- ブロック間干渉・熱共鳴・タイミング競合などを総合的に確認  
-　- 制約変更のトレーサビリティを維持
-
-## ✅ まとめ：SystemDKの意義  
-SystemDKは単なる設計ツール群ではなく、**設計思想・制約・評価の三位一体統合**を可能とする「設計アーキテクチャ」である。  
-この3階層フローは、従来のブラックボックス的SoC設計から脱却し、**制約主導・構造共有・知識継承型の設計体制**を実現する基盤となる。
+8. **整合性検証とトレーサビリティの確保**  
+　*設計思想レベルでの整合性確認と再設計ループの構築*  
+　- 熱・応力・信号干渉の交差評価  
+　- 制約変更に対する履歴管理と影響範囲の追跡性保持
 
 ---
 
-## 🔧 設計段階別要素と制約項目一覧  
+## ✅ まとめ：SystemDKの意義  
+**SystemDKは、思想・制約・構造を連携させる「再利用可能な設計知識の中核」**である。  
+本3階層フローにより、設計ブラックボックスを排除し、**制約主導・構造共有・知識継承型のSoC設計体制**を実現する。
+
+---
+
+## 📋 設計段階別要素と制約項目一覧  
 **Design Phase Breakdown and Constraint Mapping**
 
 | **設計フェーズ** | **主な対象領域** | **適用される制約要素** |
@@ -73,14 +82,6 @@ SystemDKは単なる設計ツール群ではなく、**設計思想・制約・�
 | **多物理場解析**<br>*Multi-Physics Analysis* | 熱 / SI/PI / EMI/応力 | IR drop, 熱伝導, 機械応力<br>*IR Drop, Thermal, Mechanical Stress* |
 | **BRDK / IPDK / PKGDK** | 基板 / IP / パッケージ | EMI, 電源整合、熱設計<br>*EMI, Power Integrity, Thermal* |
 | **SystemDK統合**<br>*SystemDK Integration* | 全レイヤ構造統合 | 制約相互依存の整理と可視化<br>*Constraint Coherence & Reusability* |
-
----
-
-## 🔄 統合設計としてのSystemDKの役割  
-**SystemDK as a Unified Constraint-Aware Design Framework**
-
-**SystemDK** は、各設計フェーズにおける **物理制約と設計意図** を統合し、**構造的・再利用可能**な形で整理するためのアーキテクチャです。  
-This framework enables constraint-driven consistency across SoC layers, improving visibility, reusability, and adaptability of designs.
 
 ---
 
