@@ -28,7 +28,9 @@
 
 ---
 
-（例図挿入）
+<p align="center">
+  <img src="../images/mram_stress_map_sample.png" alt="MRAM Stress Map" width="70%">
+</p>
 
-![stress_map](../images/mram_stress_map_sample.png)
+<p align="center"><b>図1：</b>MRAMセル断面構造における熱-応力分布（FEMシミュレーション例）。MTJ領域において応力集中が見られる。</p>
 
