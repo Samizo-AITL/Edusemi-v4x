@@ -41,13 +41,21 @@ This chapter introduces the concept of the **System Design Kit (SystemDK)** and 
 
 ---
 
+## 🚀 SystemDK PoCマニュアル｜SystemDK PoC Manual
+
+📦 **SystemDKに基づくPoCマニュアル（GAA / AMS / MRAM統合設計）**  
+🔗 [➡️ `PoC/README.md` を開く（Go to PoC Manual）](./PoC/README.md)
+
+> SystemDKの物理制約管理を実地で体験する演習教材です。  
+> 実装対象：GAAトランジスタ、AMS回路、MRAMモジュールを含む統合設計
+
+---
+
 ## 🔗 関連章との接続｜Linked Chapters
 
 - [`f_chapter2_chiplet_pkg/`](../f_chapter2_chiplet_pkg/)：Chipletとパッケージ技術の基礎  
 - [`d_chapter5_analog_mixed_signal/`](../d_chapter5_analog_mixed_signal/)：AMS設計とレイアウト物理制約  
 - [`f_chapter4_fsm_pid_llm/`](../f_chapter4_fsm_pid_llm/)：制御SoCの統合PoCとの接続  
-- [`PoC/README.md`](./PoC/README.md)：**SystemDKに基づくPoCマニュアル（GAA / AMS / MRAM統合設計）**  
-  → PoC manual for SystemDK-based integration (GAA / AMS / MRAM)
 
 ---
 
