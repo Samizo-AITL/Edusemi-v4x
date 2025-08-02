@@ -68,8 +68,26 @@ No special barrier or process deviation is required, enabling manufacturable CMO
 
 ---
 
-## 6. 関連資料 / References
+## 6. 最新トレンド：FeRAM vs FeFET / Latest Trend: FeRAM vs FeFET
+
+| 項目 / Item           | FeRAM（1T1C）                           | FeFET（1T）                                   |
+|------------------------|------------------------------------------|-----------------------------------------------|
+| 構造 / Structure       | 1T1C（FET + 強誘電キャパシタ）          | 1T（FET単体、キャパシタレス）                  |
+| 記録原理 / Principle   | 分極によるキャパシタ電荷記憶             | 分極によるFETのしきい値（Vth）シフト           |
+| 読み出し方式 / Readout | **破壊読み出し**（リフレッシュ必要）     | **非破壊読み出し**（通常のFET読み出し）        |
+| 面積効率 / Density     | 中程度（キャパシタ分必要）               | 高（SRAM並、1T構成）                          |
+| CMOS整合性 / CMOS Compatibility | 高（特にHfZrO₂使用時）          | **非常に高い**（HfZrO₂ゲート絶縁膜として使用）   |
+| 主な用途 / Applications | 組込みNVM、RTC、MCUなど                 | AI推論、キャッシュ、SoC NVM、インメモリ計算等   |
+| 実用化状況 / Status    | 富士通、Lapisなどで組込み量産実績あり    | GLOBALFOUNDRIES, imec などが開発中（初期量産） |
+
+FeFET is emerging as a next-generation ferroelectric memory with better scalability, simpler structure, and superior CMOS compatibility compared to conventional FeRAM.
+
+---
+
+## 7. 関連資料 / References
 
 - Fraunhofer IPMS, FeFET Technology Reports (2021–2024)
 - imec, IEDM Proceedings (2022)
 - GLOBALFOUNDRIES, eMRAM/eFeRAM Datasheets
+- T. Mikolajick et al., "The FeFET—A Promising Non-Volatile Memory," IEEE TED (2020)
+- L. Grigoriev et al., "HfO₂-Based Ferroelectric FETs for Scalable NVM," IEDM (2022)
