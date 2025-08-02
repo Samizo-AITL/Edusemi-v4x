@@ -28,8 +28,6 @@ thermal distribution in GAA structures, stress concentration in MRAM stacks, and
 
 ---
 
-![Figure 1: Simulated thermal distribution in a GAA nanowire structure using FEM](../images/fem_gaa_thermal_en_fixed.png)
-
 <p align="center">
   <img src="../images/fem_gaa_thermal_en_fixed.png" alt="Figure 1: GAA Thermal FEM" width="500"/>
 </p>
@@ -37,8 +35,6 @@ thermal distribution in GAA structures, stress concentration in MRAM stacks, and
 <p align="center">
   <em>Figure 1: Simulated thermal distribution in a GAA nanowire structure using FEM.</em>
 </p>
-
-
 
 *Figure 1: Simulated thermal distribution in a GAA nanowire structure using FEM.*
 
@@ -66,7 +62,14 @@ FEM analysis at the device level (e.g., GAA nanowires) captures fine-grained the
 
 ### 🖼️ 概念図（階層熱伝搬） / Conceptual Flow
 
-![Figure 2: Multi-scale thermal modeling flow from device FEM to package-level cooling](../images/multiscale_thermal_flow_diagram.png)  
+<p align="center">
+  <img src="../images/multiscale_thermal_flow_diagram.png" alt="Figure 2: Multiscale Flow" width="400"/>
+</p>
+
+<p align="center">
+  <em>Figure 2: Multi-scale thermal modeling flow from device FEM to package-level cooling.</em>
+</p>
+
 *Figure 2: Multi-scale thermal modeling flow from device FEM to package-level cooling.*
 
 ---
