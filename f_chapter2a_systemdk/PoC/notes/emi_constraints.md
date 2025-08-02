@@ -33,6 +33,8 @@
 
 ---
 
-（例図挿入）
+<p align="center">
+  <img src="../images/emi_interference_mram_ams.png" alt="EMI Interference Diagram" width="70%">
+</p>
 
-![emi_interference](../images/emi_interference_mram_ams.png)
+<p align="center"><b>図2：</b>PoC評価ボード上のFPGA、MRAM、AMSブロック間におけるEMI干渉経路の概念図。書き込みパルスやPLLノイズなどがAMS回路へ影響を与える経路を示す。</p>
