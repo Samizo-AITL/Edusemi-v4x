@@ -28,6 +28,7 @@ This chapter introduces the concept of the **System Design Kit (SystemDK)** and 
 | 2a.7 | [`f2a_7_systemdk_poc.md`](./f2a_7_systemdk_poc.md) | 統合PoC演習課題<br>SystemDK-Based PoC Exercise |
 | 2a.8 | [`f2a_8_chiplet_example_gaa_ams_mram.md`](./f2a_8_chiplet_example_gaa_ams_mram.md) | チップレット統合事例（GAA / AMS / MRAM）<br>Chiplet Integration Example: GAA / AMS / MRAM |
 | 2a.9 | [`f2a_9_evaluation_methods.md`](./f2a_9_evaluation_methods.md) | 物理制約の評価手法<br>Evaluation Methods for Physical Constraints |
+| 2a.10 | [`f2a_10_design_flow.md`](./f2a_10_design_flow.md) | SystemDKに至る設計フロー<br>Design Flow Leading to SystemDK |
 
 ---
 
