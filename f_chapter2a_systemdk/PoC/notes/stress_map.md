@@ -30,4 +30,4 @@
 
 （例図挿入）
 
-![stress_map](figures/mram_stress_map_sample.png)
+![stress_map](./images/mram_stress_map_sample.png)
