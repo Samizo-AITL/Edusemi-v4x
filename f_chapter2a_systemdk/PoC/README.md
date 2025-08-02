@@ -42,21 +42,15 @@ with **GAA**, **AMS**, and **MRAM** functional blocks.
 PoC評価における熱・応力・EMIなどの**FEM解析結果**をSystemDK設計に反映させるための技術ノート群です。  
 *These technical notes summarize how FEM results (thermal, mechanical stress, EMI) are fed back into SystemDK design during PoC evaluation.*
 
----
-
 ### 📄 fem_constraints.md  
 🔗 [➡️ 開く（Open fem_constraints.md）](./notes/fem_constraints.md)  
 - **SystemDK × FEM制約情報（熱・応力・EMI連携）**の全体方針  
 - *Overview of how FEM constraints are integrated into SystemDK (thermal, stress, EMI coherence).*
 
----
-
 ### 🧱 stress_map.md  
 🔗 [➡️ 開く（Open stress_map.md）](./notes/stress_map.md)  
 - **MRAMセルにおける熱-応力分布とSystemDK設計への反映**  
 - *Stress concentration in MRAM cells from FEM and feedback into SystemDK DesignKit.*
-
----
 
 ### 📡 emi_constraints.md  
 🔗 [➡️ 開く（Open emi_constraints.md）](./notes/emi_constraints.md)  
