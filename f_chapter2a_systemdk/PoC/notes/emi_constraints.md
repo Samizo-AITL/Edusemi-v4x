@@ -35,4 +35,4 @@
 
 （例図挿入）
 
-![emi_interference](figures/emi_interference_mram_ams.png)
+![emi_interference](../images/emi_interference_mram_ams.png)
