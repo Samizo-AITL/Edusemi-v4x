@@ -59,7 +59,7 @@ PoC評価における熱・応力・EMIなどの**FEM解析結果**をSystemDK�
 
 ---
 
-### 🔁 PoCDKによる実評価と制約抽出｜PoCDK Evaluation Flow
+## 🔁 PoCDKによる実評価と制約抽出｜PoCDK Evaluation Flow
 
 PoC設計の最終フェーズでは、**実際のPoC評価ボードを用いた混載構成の動作検証**と、  
 **FEM解析による多物理場制約の抽出**を行います。
@@ -74,6 +74,31 @@ PoC設計の最終フェーズでは、**実際のPoC評価ボードを用いた
 | FPGAでの動作検証 | MRAM / AMS / SoCモジュールを評価ボード上に混載し、通信/制御を実機検証 | Mixed integration on a PoC board with FPGA control, verifying actual interaction |
 | FEM解析 | 熱・応力・EMI・IR dropの解析を行い、各構造の弱点を抽出 | Conduct FEM analysis for thermal, mechanical, EMI, IR-drop to identify constraints |
 | 制約のDesignKit化 | 解析結果をBRDK/IPDK/PKGDKへ展開し、SystemDKに再統合 | Feed constraint results into respective kits and unify via SystemDK |
+
+---
+
+#### 🔄 SystemDK PoC 全体フロー｜SystemDK PoC Full Process
+
+```mermaid
+graph TD
+  A[① 全体アーキテクチャ設計<br>（PoC目的・ブロック接続定義）] --> B[② モジュール選定<br>（GAA / AMS / MRAM）]
+  B --> C[③ FPGAベースのRTL設計<br>（Verilog記述）]
+  C --> D[④ テストベンチ作成<br>（動作検証環境構築）]
+  D --> E[⑤ PoC評価ボード設計<br>（FEM考慮の回路設計）]
+  E --> F[⑥ 実装発注<br>（MRAM・AMS混載構成）]
+  F --> G[⑦ 実ボード評価 + FEM解析<br>（熱・応力・EMI）]
+  G --> H{⑧ SoC化の可否判断}
+  H -->|Yes| I[⑨ SoC RTL設計<br>（統合アーキ）]
+  I --> J[⑩ 物理設計フローへ移行<br>（P&R, DRC等）]
+  J --> K[⑪ SystemDK構築<br>（BRDK / IPDK / PKGDK統合）]
+
+  H -->|No| L[🔁 PoC段階で再評価・改善]
+```
+
+> ※この図は、PoCからSystemDK設計への段階的なフローを示しています。  
+> *This diagram illustrates the sequential flow from PoC to SystemDK integration.*
+
+---
 
 #### 📦 PoCDKからのDesignKit派生
 
