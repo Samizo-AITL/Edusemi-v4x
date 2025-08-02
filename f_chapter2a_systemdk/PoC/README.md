@@ -37,6 +37,33 @@ with **GAA**, **AMS**, and **MRAM** functional blocks.
 
 ---
 
+### 🔁 PoCDKによる実評価と制約抽出｜PoCDK Evaluation Flow
+
+PoC設計の最終フェーズでは、**実際のPoC評価ボードを用いた混載構成の動作検証**と、  
+**FEM解析による多物理場制約の抽出**を行います。
+
+> In the final stage of the PoC, real board-level testing is combined with FEM-based analysis  
+> to extract cross-domain physical constraints for SystemDK refinement.
+
+#### ✅ 実施内容（What to Perform）
+
+| 項目 | 内容（日本語） | 内容（英語） |
+|------|----------------|----------------|
+| FPGAでの動作検証 | MRAM / AMS / SoCモジュールを評価ボード上に混載し、通信/制御を実機検証 | Mixed integration on a PoC board with FPGA control, verifying actual interaction |
+| FEM解析 | 熱・応力・EMI・IR dropの解析を行い、各構造の弱点を抽出 | Conduct FEM analysis for thermal, mechanical, EMI, IR-drop to identify constraints |
+| 制約のDesignKit化 | 解析結果をBRDK/IPDK/PKGDKへ展開し、SystemDKに再統合 | Feed constraint results into respective kits and unify via SystemDK |
+
+#### 📦 PoCDKからのDesignKit派生
+
+| DesignKit | 抽出される主な情報（例） |
+|-----------|--------------------------|
+| **BRDK** | 熱分布マップ、電源経路IR Drop、実装材料による熱応答 |
+| **IPDK** | MRAM/AMSインタフェースのピン応力・EMI干渉範囲 |
+| **PKGDK** | 接続層間の応力、インタポーザ温度差、電源層カップリング |
+| **SystemDK** | 全構成の制約マップ、設計再利用性、トレードオフ履歴管理 |
+
+---
+
 ## 🧩 位置づけ｜Relation to Edusemi
 
 このPoCマニュアルは、**Edusemi-v4x 特別編 第2a章 SystemDK教材** の一部として設計されています。
