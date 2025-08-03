@@ -62,7 +62,7 @@ SCE, HCI, DIBL, Vth Variability, sky130, 0.18µm
 | リファレンス | ファイル名 / Filename                                                                 | 内容概要 / Description |
 |--------------|------------------------------------------------------------------------------------------|-------------------------|
 | A-1          | [`0.18um_Logic_ProcessFlow.md`](./docs/0.18um_Logic_ProcessFlow.md)                           | 🧪 **0.18µm CMOSプロセスフロー（日本語）**<br>Standard logic process flow in Japanese |
-| A-1b         | [`0.18um_1.8_3.3_5V.md`](./docs/0.18um_1.8V_3.3V_5V.md)                                         | ⚡ **3電源対応プロセス（1.8V / 3.3V / 5V）**<br>Multi-V CMOS integration flow |
+| A-1b         | [`0.18um_1.8V_3.3V_5V.md`](./docs/0.18um_1.8V_3.3V_5V.md)                                         | ⚡ **3電源対応プロセス（1.8V / 3.3V / 5V）**<br>Multi-V CMOS integration flow |
 | A-1c         | [`0.18um_etests_summary_unified.md`](./docs/0.18um_etests_summary_unified.md)                 | 📐 **E-Test特性まとめ（電圧別・構造別）**<br>Unified E-test result overview |
 | A-2          | [`0.18um_Logic_ProcessFlow_en.md`](./docs/0.18um_Logic_ProcessFlow_en.md)                     | 🧪 **0.18µm CMOS Process Flow（English）**<br>Standard logic process flow in English |
 | A-3          | [`0.13um_Logic_ProcessFlow.md`](./docs/0.13um_Logic_ProcessFlow.md)                           | 🧪 **0.13µm CMOSプロセス（日本語）**<br>Includes Cu interconnect, Low-k dielectric |
