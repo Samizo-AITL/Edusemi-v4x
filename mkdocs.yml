@@ -8,5 +8,6 @@ extra_javascript:
 
 markdown_extensions:
   - admonition
-  - pymdownx.arithmatex    # 数式表示を有効化
-  - pymdownx.superfences  
+  - pymdownx.superfences
+  - pymdownx.arithmatex:
+      generic: true   # ✅ ← これが必要！
