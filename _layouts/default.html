@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
+  
+  <!-- MathJax -->
+  <script src="{{ "/js/mathjax-config.js" | relative_url }}"></script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+  <header>
+    <h1><a href="{{ "/" | relative_url }}">Edusemi</a></h1>
+    <hr>
+  </header>
+
+  <main>
+    {{ content }}
+  </main>
+
+  <footer>
+    <hr>
+    <p>&copy; 2025 <a href="https://github.com/Samizo-AITL">Samizo Shinichi</a></p>
+  </footer>
+</body>
+</html>
