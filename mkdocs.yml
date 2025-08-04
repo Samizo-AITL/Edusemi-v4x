@@ -1,0 +1,9 @@
+site_name: Edusemi
+theme:
+  name: material
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+markdown_extensions:
+  - admonition
+  - pymdownx.arithmatex  # 数式対応を明示
+  - pymdownx.superfences
