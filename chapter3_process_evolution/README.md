@@ -67,10 +67,14 @@ SCE, HCI, DIBL, Vth Variability, sky130, 0.18µm
 | A-2          | [`0.18um_Logic_ProcessFlow_en.md`](./docs/0.18um_Logic_ProcessFlow_en.md)                     | 🧪 **0.18µm CMOS Process Flow（English）**<br>Standard logic process flow in English |
 | A-3          | [`0.13um_Logic_ProcessFlow.md`](./docs/0.13um_Logic_ProcessFlow.md)                           | 🧪 **0.13µm CMOSプロセス（日本語）**<br>Includes Cu interconnect, Low-k dielectric |
 | A-4          | [`0.09um_Logic_ProcessFlow.md`](./docs/0.09um_Logic_ProcessFlow.md)                           | 🧪 **90nm CMOSプロセス（日本語）**<br>NiSi salicide, strained-Si, ULK integration |
-| A-5          | [`process_node_comparison.md`](./docs/process_node_comparison.md)                             | 📊 **180nm〜90nm ノード比較表（日本語）**<br>Comparison of oxide, interconnect, scaling trends 
+| A-5          | [`process_node_comparison.md`](./docs/process_node_comparison.md)                             | 📊 **180nm〜90nm ノード比較表（日本語）**<br>Comparison of oxide, interconnect, scaling trends |
+| A-6          | [`equipment_list_by_node.md`](./docs/equipment_list_by_node.md)                               | 🛠️ **180nm〜90nm 装置一覧（工程・世代別）**<br>Equipment list by process node and step |
 
-> 📌 **本章の理解を補強する補足資料**です。プロセス技術の進化や、設計・製造・信頼性の観点から各世代の特徴を比較する教材として活用してください。  
-> These reference files support your understanding of process evolution across technology nodes.
+---
+
+🧷 **本章の理解を補強する補足資料です。**  
+プロセス技術の進化や、設計・製造・信頼性の観点から各世代の特徴を比較する教材としてご活用ください。  
+These reference files support your understanding of process evolution, including scaling, manufacturing, and design differences across technology nodes.
 
 ---
 
