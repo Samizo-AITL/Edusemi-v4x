@@ -34,7 +34,7 @@ These 3D transistor technologies are essential for pushing beyond the limits of 
 
 | 章タイトル / Title | リンク / Link |
 |--------------------|---------------|
-| 📘 **基礎編 第3章：プロセス技術と設計限界の理解**<br>📘 *Chapter 3: Process Technology and Design Limits* | [➡️ README（基礎編 第3章）](../chapter3_process_scaling/README.md) |
+| 📘 **基礎編 第3章：プロセス技術と設計限界の理解**<br>📘 *Chapter 3: Process Technology and Design Limits* | [➡️ README（基礎編 第3章）](../chapter3_process_evolution/README.md) |
 
 本章は、基礎編第3章における「プレーナMOS〜90nmノード」までのプロセス理解を前提に、**FinFET/GAA/CFETへの進化**を位置づける内容です。  
 This chapter builds upon the process knowledge from Chapter 3 and extends it to FinFET, GAA, and CFET structures.
