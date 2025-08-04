@@ -96,8 +96,8 @@ These reference files support your understanding of process evolution, including
 | 第4章で学んだ**MOS特性とPDKの基礎**を土台として、応用編では**FinFET・GAA・CFETなどの最新構造**における設計・実装へと発展します。 | Building on the **MOS characteristics and PDK fundamentals** from Chapter 4, the applied section explores **advanced structures** such as FinFET, GAA, and CFET. |
 | **ノード進化と設計制約のつながり**を意識しながら、次世代SoC設計へ接続していくステップとなります。                          | This transition emphasizes the **link between node scaling and design constraints**, paving the way for next-generation SoC design. |
 
-➡️ [**応用編 第1章：FinFET・GAA・CFETの設計と実装**](../../applied/chapter1_finfet_gaa/README.md)  
-➡️ [**Applied Chapter 1: FinFET, GAA, and CFET Design & Implementation**](../../applied/chapter1_finfet_gaa/README.md)
+➡️ [**応用編 第1章：FinFET・GAA・CFETの設計と実装**](../f_chapter1_finfet_gaa/README.md)  
+➡️ [**Applied Chapter 1: FinFET, GAA, and CFET Design & Implementation**](../f_chapter1_finfet_gaa/README.md)
 
 ---
 
