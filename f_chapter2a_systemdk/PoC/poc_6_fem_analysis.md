@@ -54,6 +54,55 @@
 
 ---
 
+### 6.3 PoC評価とFEM制約の統合構成図（SystemDK統合設計）
+
+PoC評価ボードとFEM解析の双方から得られる情報は、それぞれ異なる経路でSystemDKに統合されます。  
+以下の構成図では、**機能評価（RTL → PoC → 各DK）**と**物理制約評価（FEM → PKGDK → 他DK）**の2つの流れが交差しながら、最終的にSystemDKへ集約される構造を示しています。
+
+- **PoC評価系（緑の矢印）**：FPGA設計とPoCボードの動作確認を通じて、BRDK・IPDK・PKGDKへ機能的な評価データを提供。
+- **FEM解析系（青の矢印）**：熱・応力・EMIといった物理特性をPKGDKで解析し、その制約情報を他のDKにも展開。
+- **SystemDK**：各種DK（BRDK, IPDK, PKGDK）からの機能＋物理の両面データを統合して設計最適化を行う。
+
+```mermaid
+flowchart TD
+    RTL(RTL / FPGA設計)
+    PoC(PoC評価ボード<br>(AMS / MRAM / GAA))
+    FEM(FEM解析<br>(熱・応力・EMI))
+
+    BRDK(BRDK)
+    IPDK(IPDK)
+    PKGDK(PKGDK<br>構造解析担当)
+    SDK(SystemDK統合設計)
+
+    %% PoC評価パス
+    RTL --> PoC
+    PoC --> BRDK
+    PoC --> IPDK
+    PoC --> PKGDK
+
+    %% FEM経路
+    FEM --> PKGDK
+    PKGDK --> BRDK
+    PKGDK --> IPDK
+
+    %% 各DK統合先
+    BRDK --> SDK
+    IPDK --> SDK
+    PKGDK --> SDK
+```
+
+> **補足**  
+> - **PKGDK**：構造FEMの主担当。パッケージ層における熱分布・応力集中・EMI経路などを解析。
+> - **BRDK**：ボード設計における動作・熱影響・信号伝播の最適化に関与。
+> - **IPDK**：個別IP（MRAM/AMS）の機能性と物理限界を統合判断。
+
+---
+
+このように、**評価ボード（動作確認）と構造解析（FEM）を両輪**としてSystemDKは設計されます。  
+今後の実装拡張や物理制約連携（例：熱マップ、応力分布）との対応も、本構成図に基づいて整理されます。
+
+---
+
 ## 📘 本章のまとめ｜Summary
 
 FEM解析と多物理場評価は、PoC設計における制約導出と構造改善の要。  
