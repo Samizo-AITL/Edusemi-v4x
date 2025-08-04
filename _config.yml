@@ -1,12 +1,12 @@
 title: Edusemi
 description: 教育ポータル
-theme: minima
 
 markdown: kramdown
-kramdown:
-  math_engine: mathjax
-  input: GFM
+theme: null         # ← Jekyllテーマを無効化
+exclude:            # ← Jekyllが処理しないファイル・フォルダ
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
 
-plugins:
-  - jekyll-feed
-
+permalink: pretty   # ← .html拡張子をURLから省略
