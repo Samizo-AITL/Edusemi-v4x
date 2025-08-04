@@ -1,0 +1,11 @@
+title: Edusemi
+description: 教育ポータル
+theme: minima
+
+markdown: kramdown
+kramdown:
+  math_engine: mathjax
+  input: GFM
+
+plugins:
+  - jekyll-feed
