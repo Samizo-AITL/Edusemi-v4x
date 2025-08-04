@@ -11,3 +11,4 @@ V_{th} = V_{fb} + 2\phi_F + \frac{\sqrt{2 \varepsilon_s q N_A 2 \phi_F}}{C_{ox}}
 $$
 
 ---
+
