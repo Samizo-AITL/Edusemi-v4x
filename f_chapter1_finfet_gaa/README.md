@@ -34,6 +34,7 @@ These 3D transistor technologies are essential for pushing beyond the limits of 
 
 | ファイル名 / Filename                                     | 内容概要 / Description |
 |-----------------------------------------------------------|-------------------------|
+| [`appendix_f1_node_evolution.md`](appendix_f1_node_evolution.md) | 90nm以降のプロセス進化と物理パラメータ一覧<br>Evolution of Process Nodes (90nm–CFET) |
 | [`appendixf1_01_finfetflow.md`](appendixf1_01_finfetflow.md)     | FinFETプロセスフロー詳細（48ステップ）<br>Detailed FinFET Process (48 Steps) |
 | [`appendixf1_02_gaaflow.md`](appendixf1_02_gaaflow.md)           | GAA Multi-Nanosheet FETプロセス<br>GAA Multi-Nanosheet Process |
 | [`appendixf1_03_finfet_vs_gaa.md`](appendixf1_03_finfet_vs_gaa.md) | FinFETとGAAの工程・特性・設計比較<br>Comparison of FinFET vs GAA |
