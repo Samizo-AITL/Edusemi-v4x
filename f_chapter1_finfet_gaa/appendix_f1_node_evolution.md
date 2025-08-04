@@ -2,58 +2,65 @@
 ## プロセス技術の進化と物理パラメータ推移  
 ## Evolution of Process Nodes and Key Physical Parameters
 
-本資料では、**90nm以降のCMOSプロセス進化**を構造形式・物理パラメータ・技術課題の観点から整理します。  
-This appendix summarizes the evolution of CMOS technology from 90nm to GAA/CFET, including structure types, physical parameters, and key challenges.
+本資料では、**90nm以降のCMOSプロセス技術の進化**について、構造形式・物理パラメータ・主要課題の観点からまとめます。  
+This document summarizes the **evolution of CMOS process technology since the 90nm node**, focusing on structure types, physical parameters, and key challenges.
 
 ---
 
 ## 📊 プロセス進化表｜Process Evolution Table
 
-| ノード / Node | 構造 / Structure | 電源電圧 / VDD | Tox [nm] | 最小L [nm] | 主な特徴 / Features | 技術課題 / Challenges |
-|---------------|------------------|----------------|----------|------------|----------------------|------------------------|
-| 90nm          | プレーナMOS       | 1.2V           | ~2.0     | ~65        | NiSi, strained-Si, LDD最適化 | 寄生容量、リーク電流、リソ制約 |
-|               | 💬 NiSiサリサイドと応力導入によってトランジスタ性能向上が図られた初期段階。 |
-| 65nm          | プレーナMOS       | 1.1V           | ~1.7     | ~50        | Low-k導入、高濃度チャネル | 配線遅延、短チャネル効果 |
-|               | 💬 配線RC遅延が問題となり、Low-k材料の導入とチャネルドープ制御の最適化が重要課題に。 |
-| 45nm          | プレーナMOS       | 1.0V           | ~1.3     | ~35        | HKMG準備、ULK材料 | ゲート制御性限界、Variability |
-|               | 💬 High-k/Metal Gateの導入直前。リーク電流制御が限界に達しつつあった。 |
-| 32nm          | HKMGプレーナ      | 0.9V           | ~1.0     | ~28        | High-k/Metal Gate開始 | Vtばらつき、Tinv制御 |
-|               | 💬 Intelにより初めて本格導入。EOT低減とリーク制御を両立させた画期的技術。 |
-| 22nm          | FinFET（初代）    | 0.85V          | ~0.9     | ~20        | Tri-Gate構造、3D Channel | Fin形状ばらつき、設計複雑化 |
-|               | 💬 チャネルを立体化することで短チャネル効果を抑制。Fin寸法と密度の制御が鍵に。 |
-| 14/10nm       | FinFET（主流）    | 0.75–0.80V     | ~0.8     | ~16        | マルチパターニング、BEOL低誘電率化 | 面積効率、SRAMスケーリング |
-|               | 💬 FinFETが量産の主流となり、配線層の多層化とSRAMの微細化限界が焦点に。 |
-| 7nm           | FinFET + EUV     | 0.65–0.70V     | ~0.7     | ~12        | EUV初導入、複雑LELELE配線 | 遮光膜設計、熱管理 |
-|               | 💬 EUV露光の試験導入によりマルチパターニングの複雑さを緩和しつつ歩留まり維持を目指す。 |
-| 5nm           | GAA試験開始       | 0.6–0.65V      | ~0.6     | ~8         | Nanosheet構造登場 | シート制御、Routability低下 |
-|               | 💬 SamsungなどがNanosheet GAAの試作・開発に入り、Fin構造の限界を超える試み。 |
-| 3nm           | GAA主流           | 0.55–0.60V     | ~0.5     | ~5         | Samsung/TSMCで採用、多チャンネル積層 | 高密度寄生、バラツキ制御困難 |
-|               | 💬 多チャンネルのstacked構造が一般化し、チャンネル数による性能調整が設計課題に。 |
-| ＜2nm         | CFET開発中         | 0.5V以下        | ~0.4     | ~4         | PMOS/NMOS stacked構造 | 熱干渉、配線・電源分離、歩留まり課題 |
-|               | 💬 垂直方向の集積によりセル面積削減を狙うが、配線・放熱・製造歩留まりが大きな壁となる。 |
+| ノード / **Node** | 構造 / **Structure** | 電源電圧 / **V<sub>DD</sub>** | **T<sub>ox</sub> [nm]** | 最小L / **Min L [nm]** | 主な特徴 / **Key Features** | 技術課題 / **Challenges** |
+|------------------|----------------------|-------------------------------|--------------------------|-------------------------|------------------------------|----------------------------|
+| **90nm**         | プレーナMOS<br>Planar MOS | 1.2V | ~2.0 | ~65 | NiSi導入、Strained-Si、LDD最適化<br>NiSi, strained-Si, optimized LDD | リーク電流、寄生容量、リソグラフィ限界<br>Leakage, parasitics, lithography |
+| **65nm**         | プレーナMOS<br>Planar MOS | 1.1V | ~1.7 | ~50 | 高濃度チャネル、Low-k材料導入<br>Heavily doped channel, Low-k ILD | 短チャネル効果、配線遅延<br>SCE, interconnect delay |
+| **45nm**         | プレーナMOS<br>Planar MOS | 1.0V | ~1.3 | ~35 | HKMG導入準備、ULK試験導入<br>HKMG prep, ULK intro | ゲート制御限界、Variability拡大<br>Gate control limit, variability |
+| **32nm**         | HKMGプレーナ<br>HKMG Planar | 0.9V | ~1.0 | ~28 | High-k / Metal Gate正式採用<br>HK/MG full adoption | V<sub>t</sub>ばらつき、T<sub>inv</sub>制御困難<br>V<sub>t</sub> variation, T<sub>inv</sub> control |
+| **22nm**         | FinFET（初代）<br>1st Gen FinFET | 0.85V | ~0.9 | ~20 | Tri-Gate構造採用、3Dチャネル化<br>Tri-Gate, 3D channel | Finばらつき、設計難度増加<br>Fin variation, design complexity |
+| **14/10nm**      | 主流FinFET<br>Mainstream FinFET | 0.75–0.80V | ~0.8 | ~16 | マルチパターニング化、BEOL低誘電率化<br>Multi-patterning, low-k BEOL | SRAM縮小限界、配線混雑<br>SRAM scaling limit, routing congestion |
+| **7nm**          | FinFET＋EUV<br>FinFET + EUV | 0.65–0.70V | ~0.7 | ~12 | EUV導入開始、LELELEパターン形成<br>EUV intro, LELELE patterning | 遮光膜設計、熱分布管理<br>Mask design, thermal issues |
+| **5nm**          | GAA試験導入<br>GAA Pilot | 0.60–0.65V | ~0.6 | ~8 | Nanosheet構造試験導入<br>Nanosheet trials | シート幅制御、Routing困難<br>Sheet width control, poor routability |
+| **3nm**          | GAA主流化<br>GAA Mainstream | 0.55–0.60V | ~0.5 | ~5 | TSMC/Samsungで本格導入<br>Adopted by TSMC & Samsung | 高密度寄生、ばらつき管理<br>Parasitics, process variability |
+| **＜2nm**        | CFET構造開発中<br>CFET in R&D | ~0.5V以下 | ~0.4 | ~4 | NMOS・PMOS縦積層（stack）化<br>Complementary FET stacking | 熱干渉、電源/配線分離難<br>Thermal interference, power-routing split |
 
 ---
 
-## 🔍 用語補足｜Glossary
+## 🧠 用語補足｜Glossary
 
-- **HKMG**: High-k / Metal Gate（高誘電率材料とメタルゲート）
-- **ULK**: Ultra Low-k（極低誘電率絶縁膜）
-- **CFET**: Complementary FET（NMOS・PMOSの縦積層構造）
-
----
-
-## 🧩 今後の教材との連携予定
-
-- [`appendix_f1_02_gaaflow.md`](./appendix_f1_02_gaaflow.md)：GAAプロセス構造との整合化  
-- [`appendix_f1_04_cfet.md`](./appendix_f1_04_cfet.md)：CFET構造の進展との相関補足  
-- [`process_node_comparison.md`](./process_node_comparison.md)：0.18〜90nmとの比較統合表へ反映  
+| 用語 / Term | 意味 / Meaning |
+|-------------|----------------|
+| **HKMG** | High-k / Metal Gate：高誘電率材料とメタルゲート構造<br>High dielectric gate oxide and metal gate |
+| **ULK** | Ultra Low-k：極低誘電率の層間絶縁膜<br>Extremely low-k ILD |
+| **CFET** | Complementary FET：NMOS・PMOSの縦積層構造<br>Stacked NMOS and PMOS transistors |
 
 ---
 
-## 📄 ライセンス / License
+## 🔗 関連補足資料｜Linked Appendices
 
-MIT License に基づき、自由な教育・研究活用を歓迎します。
+| ファイル名 / Filename | 内容 / Description |
+|------------------------|---------------------|
+| [`appendixf1_01_finfetflow.md`](appendixf1_01_finfetflow.md) | FinFETプロセス詳細（48工程）<br>Detailed FinFET Process |
+| [`appendixf1_02_gaaflow.md`](appendixf1_02_gaaflow.md) | GAAプロセス構造解説<br>GAA Nanosheet Process |
+| [`appendixf1_03_finfet_vs_gaa.md`](appendixf1_03_finfet_vs_gaa.md) | FinFET vs GAA 比較<br>Structural & Process Comparison |
+| [`appendixf1_04_cfet.md`](appendixf1_04_cfet.md) | CFET構造と課題整理<br>CFET Architecture and Issues |
 
 ---
 
-📎 [トップに戻る / Back to Home](../README.md)
+## 🧩 今後の教材連携｜Planned Integration
+
+- `appendix_f1_02_gaaflow.md` と連動し、**GAA構造と工程**の教育資料を拡張  
+  Linked to `appendix_f1_02_gaaflow.md` for expanding GAA-related teaching
+- `appendix_f1_04_cfet.md` で、**CFET縦構造と課題**を深掘り  
+  Elaborated in `appendix_f1_04_cfet.md` on vertical stacking challenges
+- `process_node_comparison.md` の進化系統図と連携し、90nm以前とも対比  
+  Compared with pre-90nm data in `process_node_comparison.md`
+
+---
+
+## 📄 ライセンス｜License
+
+MIT License に基づき、**非営利・教育目的での再配布・改変を歓迎**します。  
+Released under the **MIT License**, permitting free use and modification for educational and non-commercial purposes.
+
+---
+
+📎 **[目次に戻る / Back to Appendix Index](./)**  
