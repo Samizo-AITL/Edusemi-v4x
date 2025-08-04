@@ -83,12 +83,12 @@ PoC評価ボードとFEM解析は、**異なる経路でSystemDKに制約情報�
 ```mermaid
 flowchart TD
     RTL(RTL / FPGA設計)
-    PoC(PoC評価ボード<br>(AMS / MRAM / GAA))
-    FEM(FEM解析<br>(熱・応力・EMI))
+    PoC(PoC評価ボード (AMS / MRAM / GAA))
+    FEM(FEM解析 (熱・応力・EMI))
 
     BRDK(BRDK)
     IPDK(IPDK)
-    PKGDK(PKGDK<br>構造解析担当)
+    PKGDK(PKGDK 構造解析担当)
     SDK(SystemDK統合設計)
 
     %% PoC評価パス
