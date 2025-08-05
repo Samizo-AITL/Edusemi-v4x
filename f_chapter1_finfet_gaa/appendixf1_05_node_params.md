@@ -47,6 +47,20 @@ $$
 
 ---
 
+## 🧩 FinFET vs GAA の構造比較  
+**Structural Comparison of FinFET vs GAA**
+
+| 比較項目 / Feature         | FinFET                            | GAA (Nanosheet)                     |
+|----------------------------|-----------------------------------|-------------------------------------|
+| ゲート接触面 / Gate Faces   | 3面 (top + sidewalls)            | 4面 (top, bottom, sidewalls)       |
+| チャネル形状 / Channel    | Fin構造 / Ridge                   | シート積層 / Stacked sheets        |
+| 有効幅式 / $W_\text{total}$ Formula | $n(2H + W)$                        | $2(H + W)n$                         |
+| 面積効率 / Area Efficiency | 中程度 / Moderate                | 高 / Excellent                      |
+| 静電制御 / Electrostatics  | 優 / Good                         | 非常に優 / Excellent               |
+| 微細化限界 / Scaling Limit | ～5nm                            | ～1.4nm またはそれ以下 / ~1.4nm or less |
+
+---
+
 ## 🧯 NMOS / PMOS 抵抗要素比較表（22nm〜1.4nm, 25℃代表）  
 ## 🧯 NMOS / PMOS Resistance Comparison Table (22nm–1.4nm, Typical @25℃)
 
@@ -88,20 +102,6 @@ $$
 
 > ✏️ **設計上は、Metal Rs を等しくするために Via 多重化、層選定、幅拡張が必要です。**  
 > In practice, **metal Rs is equalized via layout optimization: via redundancy, wider routing, and layer selection.**
-
----
-
-## 🧩 FinFET vs GAA の構造比較  
-**Structural Comparison of FinFET vs GAA**
-
-| 比較項目 / Feature         | FinFET                            | GAA (Nanosheet)                     |
-|----------------------------|-----------------------------------|-------------------------------------|
-| ゲート接触面 / Gate Faces   | 3面 (top + sidewalls)            | 4面 (top, bottom, sidewalls)       |
-| チャネル形状 / Channel    | Fin構造 / Ridge                   | シート積層 / Stacked sheets        |
-| 有効幅式 / $W_\text{total}$ Formula | $n(2H + W)$                        | $2(H + W)n$                         |
-| 面積効率 / Area Efficiency | 中程度 / Moderate                | 高 / Excellent                      |
-| 静電制御 / Electrostatics  | 優 / Good                         | 非常に優 / Excellent               |
-| 微細化限界 / Scaling Limit | ～5nm                            | ～1.4nm またはそれ以下 / ~1.4nm or less |
 
 ---
 
