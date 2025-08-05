@@ -19,10 +19,10 @@
 
 ## 📈 2. ノードトレンドグラフ
 
-![Node vs Idsat](./images/node_vs_idsat.png)
-![Node vs Rs](./images/node_vs_rs.png)
-![Node vs Tox](./images/node_vs_tox.png)
-![Node vs Vth](./images/node_vs_vth.png)
+<img src="./images/node_vs_idsat.png" width="50%">
+<img src="./images/node_vs_rs.png" width="50%">
+<img src="./images/node_vs_tox.png" width="50%">
+<img src="./images/node_vs_vth.png" width="50%">
 
 ---
 
