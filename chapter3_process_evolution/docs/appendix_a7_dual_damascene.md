@@ -73,7 +73,7 @@
 
 ## 📘 関連リンク｜Related Links
 
-- [3.3 配線技術とリソグラフィ補正の進化](../chapter3_process_limits/3.3_interconnect_and_litho.md)
+- [3.3 配線技術とリソグラフィ補正の進化](../chapter3_process_evolution/3.3_interconnect_and_litho.md)
 - [A-3：0.13µm プロセスフロー](./0.13um_Logic_ProcessFlow.md)
 - [A-4：90nm プロセスフロー（NiSi, Strained-Si等）](./0.09um_Logic_ProcessFlow.md)
 
