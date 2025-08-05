@@ -121,8 +121,7 @@ $$
 
 ---
 
-## 📗 出力根拠と生成方法  
-**Basis of Estimations**
+## 📗 出力根拠と生成方法 / Basis of Estimations
 
 1. **🧾 公開情報ベース / Based on Public Information**  
    - 各種公式ロードマップ（IEDM, ISSCC, VLSI等）やメーカー発表を再構成  
@@ -156,8 +155,7 @@ $$
 
 ---
 
-## 🧪 モデル情報：BSIM-CMG  
-**BSIM-CMG for Advanced Node Modeling**
+## 🧪 モデル情報：BSIM-CMG / BSIM-CMG for Advanced Node Modeling
 
 | モデル / Model | 対応構造 / Supported Structures | 特徴 / Features |
 |----------------|----------------------|-----------------|
