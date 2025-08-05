@@ -27,24 +27,47 @@
 
 ---
 
-## 🧠 計算式の補足  
+## 🧠 チャネル構造別の有効幅計算式  
 
-- **FinFET の有効チャネル幅**：
+- **FinFET**：
 
-$$
-W_{\mathrm{total}} = n \cdot (2H_{\mathrm{fin}} + W_{\mathrm{fin}})
-$$
+  $$
+  W_{\mathrm{total}} = n \cdot (2H_{\mathrm{fin}} + W_{\mathrm{fin}})
+  $$
 
-- **GAA の有効チャネル幅**：
+- **GAA**：
 
-$$
-W_{\mathrm{total}} = 2 \cdot (H + W) \cdot n
-$$
+  $$
+  W_{\mathrm{total}} = 2 \cdot (H + W) \cdot n
+  $$
+
+---
+
+## 🧩 FinFET vs GAA 構造の要点比較表
+
+| 比較項目 | FinFET | GAA (Nanosheet) |
+|----------|--------|------------------|
+| ゲート接触面 | 3面（両側＋上） | 4面（上下左右すべて） |
+| チャネル形状 | Fin（立体リッジ） | ナノシート（薄板積層） |
+| 有効幅の式 | $n \cdot (2H + W)$ | $2 \cdot (H + W) \cdot n$ |
+| 面積効率 | △（Fin配置制限） | ◎（層数で柔軟対応） |
+| 静電制御性 | ◎ | ★優（完全囲み） |
+| 微細化限界 | ～5nm | ～1.4nm以下も想定可 |
+
+---
+
+## 📈 オプション：$I_{\mathrm{dsat}}$ vs $W_{\mathrm{total}}$ グラフ案
+
+- X軸：$W_{\mathrm{total}}$ (nm)
+- Y軸：$I_{\mathrm{dsat}}$ (μA/μm)
+- 内容：FinFETおよびGAAの性能スケーリング傾向を可視化  
+※必要時に別途Python描画スクリプト対応可能
 
 ---
 
 ## 📘 関連資料への導線
 
-- FEM・熱/応力解析対応： [fem_constraints.md](fem_constraints.md)
-- GAA/FinFET設計演習テンプレート： [systemdk_poc.md](systemdk_poc.md)
-- パラメトリック設計用Pythonツール： [id_calc_tool.ipynb](id_calc_tool.ipynb)
+- FEM・熱/応力解析対応： [`fem_constraints.md`](fem_constraints.md)
+- GAA/FinFET設計演習テンプレート： [`systemdk_poc.md`](systemdk_poc.md)
+- パラメトリック設計用Pythonツール： [`id_calc_tool.ipynb`](id_calc_tool.ipynb)
+- ノード進化一覧： [`appendix_f1_node_evolution.md`](appendix_f1_node_evolution.md)
