@@ -96,19 +96,17 @@ $$
 
 ---
 
-## 🧩 8. SystemDK連携図（Mermaid）
+## 🧩 8. SystemDK連携図（GitHub最小構成対応）
 
 ```mermaid
 flowchart TD
-  A[ノード別パラメータ
-(Idsat, Rs, Vth)] --> B[.model生成]
-  B --> C[SPICEシミュレーション]
-  A --> D[FEM解析
-(熱・応力・EM)]
-  D --> E[BRDK/PKGDK制約マップ]
-  E --> F[SystemDK PoC設計]
-  F --> G[パルス整合 / 電源設計]
-  F --> H[AMS混載制約]
+  A[Node Params] --> B[Model Gen]
+  B --> C[SPICE Sim]
+  A --> D[FEM]
+  D --> E[BRDK Map]
+  E --> F[SystemDK PoC]
+  F --> G[Power Plan]
+  F --> H[AMS Const]
 ```
 
 ---
