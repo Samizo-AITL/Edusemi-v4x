@@ -48,11 +48,11 @@ SCE, HCI, DIBL, Vth Variability, sky130, 0.18µm
 
 | 節番号 | ファイル名 / Filename                                               | 内容概要 / Summary                                                                 |
 |--------|----------------------------------------------------------------------|-------------------------------------------------------------------------------------|
-| 3.1    | [`3.1_node_scaling_history.md`](./3.1_node_scaling_history.md)       | ノード微細化の歴史<br>📏 *History of Node Scaling*                                 |
-| 3.2    | [`3.2_cmos_structure_shift.md`](./3.2_cmos_structure_shift.md)       | トランジスタ構造の進化（STI, LDDなど）<br>🔬 *CMOS Structural Innovations*         |
-| 3.3    | [`3.3_interconnect_and_litho.md`](./3.3_interconnect_and_litho.md)   | 多層配線技術<br>🧵 *Interconnect and Lithography Advancements*       |
-| 3.4    | [`3.4_variation_and_reliability.md`](./3.4_variation_and_reliability.md) | SCE / DIBL / 信頼性限界<br>⚠️ *Variability & Reliability Issues*             |
-| 3.5    | [`3.5_summary_and_scope.md`](./3.5_summary_and_scope.md)             | 教育用ノードの選定と適用範囲<br>🎓 *Selecting Nodes for Education*               |
+| 3.1    | [`3.1_node_scaling_history.md`](./3.1_node_scaling_history.md)       | ノード微細化の歴史と寸法ルールの進化<br>📏 *Scaling History and Design Rules*       |
+| 3.2    | [`3.2_cmos_structure_shift.md`](./3.2_cmos_structure_shift.md)       | STI・LDDなど構造革新による寸法と特性の変化<br>🔬 *Structural Innovations in CMOS*    |
+| 3.3    | [`3.3_interconnect_and_litho.md`](./3.3_interconnect_and_litho.md)   | 配線・CMP・RC遅延の技術進化と設計影響<br>🧵 *Interconnect and Delay Constraints*     |
+| 3.4    | [`3.4_variation_and_reliability.md`](./3.4_variation_and_reliability.md) | DIBLやHCIなど信頼性とばらつきの物理限界<br>⚠️ *SCE and Reliability in Scaling*   |
+| 3.5    | [`3.5_summary_and_scope.md`](./3.5_summary_and_scope.md)             | 教育ノードの選定と実践的意義の整理<br>🎓 *Choosing and Using Educational Nodes*     |
 
 ---
 
@@ -61,47 +61,28 @@ SCE, HCI, DIBL, Vth Variability, sky130, 0.18µm
 
 | リファレンス | ファイル名 / Filename                                                                 | 内容概要 / Description |
 |--------------|------------------------------------------------------------------------------------------|-------------------------|
-| A-1          | [`0.18um_Logic_ProcessFlow.md`](./docs/0.18um_Logic_ProcessFlow.md)                           | 🧪 **0.18µm CMOSプロセスフロー（日本語）**<br>Standard logic process flow in Japanese |
-| A-1b         | [`0.18um_1.8V_3.3V_5V.md`](./docs/0.18um_1.8V_3.3V_5V.md)                                         | ⚡ **3電源対応プロセス（1.8V / 3.3V / 5V）**<br>Multi-V CMOS integration flow |
-| A-1c         | [`0.18um_etests_summary_unified.md`](./docs/0.18um_etests_summary_unified.md)                 | 📐 **E-Test特性まとめ（電圧別・構造別）**<br>Unified E-test result overview |
-| A-2          | [`0.18um_Logic_ProcessFlow_en.md`](./docs/0.18um_Logic_ProcessFlow_en.md)                     | 🧪 **0.18µm CMOS Process Flow（English）**<br>Standard logic process flow in English |
-| A-3          | [`0.13um_Logic_ProcessFlow.md`](./docs/0.13um_Logic_ProcessFlow.md)                           | 🧪 **0.13µm CMOSプロセス（日本語）**<br>Includes Cu interconnect, Low-k dielectric |
-| A-4          | [`0.09um_Logic_ProcessFlow.md`](./docs/0.09um_Logic_ProcessFlow.md)                           | 🧪 **90nm CMOSプロセス（日本語）**<br>NiSi salicide, strained-Si, ULK integration |
-| A-5          | [`process_node_comparison.md`](./docs/process_node_comparison.md)                             | 📊 **180nm〜90nm ノード比較表（日本語）**<br>Comparison of oxide, interconnect, scaling trends |
-| A-6          | [`equipment_list_by_node.md`](./docs/equipment_list_by_node.md)                               | 🛠️ **180nm〜90nm 装置一覧（工程・世代別）**<br>Equipment list by process node and step |
-
----
-
-🧷 **本章の理解を補強する補足資料です。**  
-プロセス技術の進化や、設計・製造・信頼性の観点から各世代の特徴を比較する教材としてご活用ください。  
-These reference files support your understanding of process evolution, including scaling, manufacturing, and design differences across technology nodes.
+| A-1          | [`0.18um_Logic_ProcessFlow.md`](./docs/0.18um_Logic_ProcessFlow.md)                           | 🧪 0.18µm CMOSプロセス（基本フロー） |
+| A-1b         | [`0.18um_1.8V_3.3V_5V.md`](./docs/0.18um_1.8V_3.3V_5V.md)                                         | ⚡ 1.8V〜5V対応多電圧プロセス |
+| A-1c         | [`0.18um_etests_summary_unified.md`](./docs/0.18um_etests_summary_unified.md)                 | 📐 E-Test特性まとめ（電圧・構造別） |
+| A-2          | [`0.18um_Logic_ProcessFlow_en.md`](./docs/0.18um_Logic_ProcessFlow_en.md)                     | 🧪 0.18µm CMOS Process Flow (EN) |
+| A-3          | [`0.13um_Logic_ProcessFlow.md`](./docs/0.13um_Logic_ProcessFlow.md)                           | 🧪 0.13µmプロセス（Cu配線・Low-k対応） |
+| A-4          | [`0.09um_Logic_ProcessFlow.md`](./docs/0.09um_Logic_ProcessFlow.md)                           | 🧪 90nm CMOS（NiSi, strained-Si等） |
+| A-5          | [`process_node_comparison.md`](./docs/process_node_comparison.md)                             | 📊 ノード比較：寸法・材料・構造 |
+| A-6          | [`equipment_list_by_node.md`](./docs/equipment_list_by_node.md)                               | 🛠️ ノード別装置一覧（製造工程ごと） |
 
 ---
 
 ## 🔄 次章への接続｜Transition to Chapter 4
 
-| 🇯🇵 日本語                                                                                             | 🇺🇸 English                                                                                          |
-|--------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|
-| 第4章では、ここで扱ったCMOSノード（sky130 / 0.18µm）を基盤として、<br>**PDK・MOS特性・設計ルールの理解**へと進みます。 | In Chapter 4, we build on these CMOS nodes (sky130 / 0.18µm) to explore **PDKs, MOS characteristics, and design rules**. |
+| 🇯🇵 日本語 | 🇺🇸 English |
+|----------|-----------|
+| 第4章では、ここで扱ったCMOSノード（sky130 / 0.18µm）を基盤として、**PDK・MOS特性・設計ルールの理解**へと進みます。 | In Chapter 4, we build on these CMOS nodes (sky130 / 0.18µm) to explore **PDKs, MOS characteristics, and design rules**. |
 
-➡️ [**第4章：MOSトランジスタ特性と設計基盤**](../chapter4_mos_characteristics/README.md) に進む  
-➡️ [**Chapter 4: MOS Characteristics and Design Fundamentals**](../chapter4_mos_characteristics/README.md) (EN)
-
----
-
-## 🚀 応用編 第1章への橋渡し｜Bridge to Applied Chapter 1
-
-| 🇯🇵 日本語                                                                                                           | 🇺🇸 English                                                                                                          |
-|--------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|
-| 第4章で学んだ**MOS特性とPDKの基礎**を土台として、応用編では**FinFET・GAA・CFETなどの最新構造**における設計・実装へと発展します。 | Building on the **MOS characteristics and PDK fundamentals** from Chapter 4, the applied section explores **advanced structures** such as FinFET, GAA, and CFET. |
-| **ノード進化と設計制約のつながり**を意識しながら、次世代SoC設計へ接続していくステップとなります。                          | This transition emphasizes the **link between node scaling and design constraints**, paving the way for next-generation SoC design. |
-
-➡️ [**特別編 第1章：FinFET・GAA・CFETの設計と実装**](../f_chapter1_finfet_gaa/README.md)  
-➡️ [**Special Chapter 1: FinFET, GAA, and CFET Design & Implementation**](../f_chapter1_finfet_gaa/README.md)
+➡️ [**第4章：MOSトランジスタ特性と設計基盤**](../chapter4_mos_characteristics/README.md)
 
 ---
 
-### 👤 著者・ライセンス｜Author & License
+## 👤 著者・ライセンス｜Author & License
 
 | 項目｜Item | 内容｜Details |
 |------------|----------------------------|
@@ -112,6 +93,4 @@ These reference files support your understanding of process evolution, including
 
 ---
 
-#### 🏠 [Edusemi-v4x トップへ戻る｜Back to Edusemi-v4x Top](../README.md)
-
----
+🏠 [Edusemi-v4x トップへ戻る｜Back to Edusemi-v4x Top](../README.md)
