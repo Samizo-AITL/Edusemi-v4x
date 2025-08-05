@@ -31,15 +31,15 @@
 
 - **FinFET の有効チャネル幅**：
 
-  $$
-  W_{\mathrm{total}} = n \cdot (2H_{\mathrm{fin}} + W_{\mathrm{fin}})
-  $$
+$$
+W_{\mathrm{total}} = n \cdot (2H_{\mathrm{fin}} + W_{\mathrm{fin}})
+$$
 
 - **GAA の有効チャネル幅**：
 
-  $$
-  W_{\mathrm{total}} = 2 \cdot (H + W) \cdot n
-  $$
+$$
+W_{\mathrm{total}} = 2 \cdot (H + W) \cdot n
+$$
 
 ---
 
