@@ -132,11 +132,11 @@ $$
 
 2. **🔬 BSIM-CMGベース構造モデル / Structure Model Based on BSIM-CMG**  
    - BSIM-CMG準拠のモデルで $W_{\mathrm{total}}$ を定義し、 $J_{\mathrm{dsat}}$ の経験値から $I_{\mathrm{dsat}}$ を計算  
-     *$W_{\mathrm{total}}$ is defined using BSIM-CMG compliant model, and $I_{\mathrm{dsat}}$ is derived from empirical $J_{\mathrm{dsat}}$ values*
+     $W_{\mathrm{total}}$ is defined using BSIM-CMG compliant model, and $I_{\mathrm{dsat}}$ is derived from empirical $J_{\mathrm{dsat}}$ values
 
 3. **⚙️ スケーリング則による補完 / Scaling Rule-Based Estimation**  
    - $T_{\mathrm{ox}}$ や $V_{\mathrm{th}}$ など未公表項目は、電気的整合性と物理制約を基に推定  
-     *Parameters like $T_{\mathrm{ox}}$ and $V_{\mathrm{th}}$, if not disclosed, are estimated based on electrical consistency and physical constraints*
+     Parameters like $T_{\mathrm{ox}}$ and $V_{\mathrm{th}}$, if not disclosed, are estimated based on electrical consistency and physical constraints
 
 > **Note / 注意：**  
 > 本表の数値は絶対的な仕様値ではなく、設計指針・教育目的での相対比較を主眼にしています。  
