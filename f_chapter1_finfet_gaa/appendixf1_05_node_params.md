@@ -84,9 +84,11 @@ $$
 
 2. **🔬 BSIM-CMG準拠の構造モデルによる推定**  
    - FinFET / GAAの構造から有効チャネル幅 $W_{\mathrm{total}}$ を定義し、以下の形式で電流推定を行いました：
+     
 $$
 I_{\mathrm{dsat}} = W_{\mathrm{total}} \cdot J_{\mathrm{dsat}}
 $$
+
      - $W_{\mathrm{total}}$：
        - FinFET: $n \cdot (2H + W)$  
        - GAA: $2 \cdot (H + W) \cdot n$  
