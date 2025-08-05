@@ -89,10 +89,10 @@ $$
 I_{\mathrm{dsat}} = W_{\mathrm{total}} \cdot J_{\mathrm{dsat}}
 $$
 
-     - $W_{\mathrm{total}}$：
+   - $W_{\mathrm{total}}$：
        - FinFET: $n \cdot (2H + W)$  
        - GAA: $2 \cdot (H + W) \cdot n$  
-     - $J_{\mathrm{dsat}}$ は世代別に経験値を設定（例：22nm → ~500nA/nm、5nm → ~1400nA/nm など）
+   - $J_{\mathrm{dsat}}$ は世代別に経験値を設定（例：22nm → ~500nA/nm、5nm → ~1400nA/nm など）
 
 3. **⚙️ 微細化則・物理整合性に基づく補完**  
    - 未公表の項目や不明瞭なパラメータ（例： $T_{\mathrm{ox}}$ , $V_{\mathrm{th}}$ ）については、以下のような物理法則・スケーリングトレンドに基づき補完：
