@@ -73,7 +73,7 @@
 
 ## 📘 関連リンク｜Related Links
 
-- [3.3 配線技術](./docs/3.3_interconnect_and_litho.md)
+- [3.3 配線・CMP・RC遅延の技術進化と設計影響](./docs/3.3_interconnect_and_litho.md)
 - [A-3：0.13µm プロセスフロー](./0.13um_Logic_ProcessFlow.md)
 - [A-4：90nm プロセスフロー（NiSi, Strained-Si等）](./0.09um_Logic_ProcessFlow.md)
 
