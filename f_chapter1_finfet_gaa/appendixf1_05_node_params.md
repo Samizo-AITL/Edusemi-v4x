@@ -65,9 +65,29 @@ $$
 
 ---
 
+## 🧯 ノード別 抵抗要素比較表  
+**Generation-wise Resistance Components**
+
+| ノード | $R_{\mathrm{active}}$ (Ω·μm) | $R_{\mathrm{gate}}$ (Ω·μm) | $R_{\mathrm{contact-chain}}$ (Ω) | $R_{\mathrm{via-chain}}$ (Ω) | $R_{\mathrm{metal}}$ (Ω/μm) |
+|--------|-----------------------------|----------------------------|----------------------------------|-------------------------------|-----------------------------|
+| 22nm   | ~80                         | ~2.5                       | ~100                             | ~120                          | ~0.12                       |
+| 14nm   | ~70                         | ~2.0                       | ~80                              | ~100                          | ~0.10                       |
+| 10nm   | ~60                         | ~1.8                       | ~70                              | ~90                           | ~0.09                       |
+| 7nm    | ~50                         | ~1.5                       | ~60                              | ~80                           | ~0.08                       |
+| 5nm    | ~40                         | ~1.3                       | ~50                              | ~70                           | ~0.07                       |
+| 3nm (GAA) | ~35                      | ~1.0                       | ~45                              | ~60                           | ~0.06                       |
+| 2nm (GAA) | ~30                      | ~0.9                       | ~40                              | ~55                           | ~0.055                      |
+| 1.4nm (予測) | ~25                   | ~0.8                       | ~35                              | ~50                           | ~0.05                       |
+
+---
+
 ## 📘 関連資料への導線
 
-- FEM・熱/応力解析対応： [`fem_constraints.md`](fem_constraints.md)
-- GAA/FinFET設計演習テンプレート： [`systemdk_poc.md`](systemdk_poc.md)
-- パラメトリック設計用Pythonツール： [`id_calc_tool.ipynb`](id_calc_tool.ipynb)
 - ノード進化一覧： [`appendix_f1_node_evolution.md`](appendix_f1_node_evolution.md)
+- FinFETフロー： [`appendixf1_01_finfetflow.md`](appendixf1_01_finfetflow.md)
+- GAAプロセス： [`appendixf1_02_gaaflow.md`](appendixf1_02_gaaflow.md)
+- FinFET vs GAA 比較： [`appendixf1_03_finfet_vs_gaa.md`](appendixf1_03_finfet_vs_gaa.md)
+- CFET構造： [`appendixf1_04_cfet.md`](appendixf1_04_cfet.md)
+- FEM評価： [`fem_constraints.md`](fem_constraints.md)
+
+---
