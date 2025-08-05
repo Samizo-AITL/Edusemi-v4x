@@ -120,5 +120,3 @@ flowchart TD
 - Intel IEDM Rs: https://ieeexplore.ieee.org/document/9632273
 
 ---
-
-*Last updated: 2025-08-05*
