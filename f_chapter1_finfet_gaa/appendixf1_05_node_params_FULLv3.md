@@ -29,16 +29,13 @@
 ## 📐 3. 有効チャネル幅の数式
 
 - FinFET:
-  
-$$
-W_{\mathrm{total}} = n \cdot (2H_{\mathrm{fin}} + W_{\mathrm{fin}})
-$$
-
+  $$
+  W_{\mathrm{total}} = n \cdot (2H_{\mathrm{fin}} + W_{\mathrm{fin}})
+  $$
 - GAA:
-  
-$$
-W_{\mathrm{total}} = 2 \cdot (H + W) \cdot n
-$$
+  $$
+  W_{\mathrm{total}} = 2 \cdot (H + W) \cdot n
+  $$
 
 ---
 
@@ -103,9 +100,11 @@ $$
 
 ```mermaid
 flowchart TD
-  A[ノード別パラメータ\n(Idsat, Rs, Vth)] --> B[.model生成]
+  A[ノード別パラメータ
+(Idsat, Rs, Vth)] --> B[.model生成]
   B --> C[SPICEシミュレーション]
-  A --> D[FEM解析\n(熱・応力・EM)]
+  A --> D[FEM解析
+(熱・応力・EM)]
   D --> E[BRDK/PKGDK制約マップ]
   E --> F[SystemDK PoC設計]
   F --> G[パルス整合 / 電源設計]
