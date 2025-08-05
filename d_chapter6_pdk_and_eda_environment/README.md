@@ -5,11 +5,11 @@
 
 ## 📘 概要｜Overview
 
-**PDK（Process Design Kit）** は、特定の半導体プロセスに最適化された**設計ルール・SPICEモデル・レイアウト情報・EDA統合ファイルの集合体**です。  
-本章では、PDKの構成要素、EDAツールとの関係、設計ルールチェックのフロー、プロセス互換性など、**実務に直結する設計基盤構築の視点**を整理します。
+**PDK（Process Design Kit）** は、特定の半導体プロセスに最適化された **設計ルール・SPICEモデル・レイアウト情報・EDA統合ファイルの集合体** です。  
+本章では、PDKの構成要素、EDAツールとの関係、設計ルールチェックのフロー、プロセス互換性、**BSIMモデルとの関係**など、**実務に直結する設計基盤構築の視点**を整理します。
 
 The **Process Design Kit (PDK)** is a collection of files optimized for a specific semiconductor process, including **design rules, SPICE models, layout data, and EDA tool integration files**.  
-This chapter organizes practical design foundation knowledge, such as the internal structure of PDKs, their relationship with EDA tools, rule check flows, and process portability.
+This chapter organizes practical knowledge of design foundations, including the internal structure of PDKs, their relationship with EDA tools, rule check flows, **and BSIM modeling standards**.
 
 ---
 
@@ -21,6 +21,23 @@ This chapter organizes practical design foundation knowledge, such as the intern
 | [`eda_toolchain.md`](./eda_toolchain.md) | 商用・オープンソースEDAツールとPDKの連携構成<br>EDA-PDK integration using commercial & open-source tools |
 | [`rule_check_flow.md`](./rule_check_flow.md) | DRC、LVS、ERCなどの設計ルールチェックと検証フロー<br>Design rule and verification flows: DRC, LVS, ERC |
 | [`pdk_compatibility.md`](./pdk_compatibility.md) | プロセス互換性、ノード間の移行、教育適用視点<br>Process portability, node migration, educational adaptation |
+| [`bsim_models.md`](./bsim_models.md) | BSIM4 / BSIM-CMG モデルとPDKとの関係<br>BSIM4 / BSIM-CMG and their role in PDKs |
+
+---
+
+## 🧮 BSIMモデルとPDKの関係  
+### BSIM Models and PDKs
+
+PDKは、各ノードの **MOSデバイス物性を忠実に反映したSPICEモデル** を含みます。その中心となるのが **BSIM（Berkeley Short-channel IGFET Model）** 系列であり、プロセスノードによって以下のようなモデルが用いられます：
+
+| モデル名｜Model | 対応ノード例｜Applicable Nodes | 構造｜Structure | コメント｜Notes |
+|-------------|--------------------------|------------------|--------------------------|
+| BSIM3       | ～0.25μm                 | Bulk MOSFET      | 教育用にも適し、Sky130等に採用されることもある |
+| BSIM4       | ～65nm〜28nm             | Bulk MOSFET      | SCE対応。FinFET前の主流 |
+| BSIM-CMG    | 22nm〜3nm FinFET/GAA     | FinFET, GAA      | 多ゲート対応（Level 54）、業界標準 |
+| BSIM6       | 研究段階（CFET等）       | GAA, CFET        | BSIM-CMGを発展させた次世代構造対応モデル |
+
+**BSIMモデルはPDKに含まれる `.model` 定義群や `.lib` ファイルに格納され、回路設計者がSPICEやSpectreなどで回路シミュレーションを行う際に不可欠な要素**となります。
 
 ---
 
@@ -32,6 +49,8 @@ This chapter organizes practical design foundation knowledge, such as the intern
   *Learners exploring open-source PDKs like Sky130 with OpenLane*
 - **商用PDKの制約や設計ルールを理解したい実務者**  
   *Professionals analyzing constraints and rule sets in commercial PDKs*
+- **BSIMモデルを理解し、物理設計に反映したい学生・研究者**  
+  *Students and researchers exploring BSIM models for accurate physical simulation*
 
 ---
 
@@ -41,6 +60,7 @@ This chapter organizes practical design foundation knowledge, such as the intern
 |------------------|------------------------|
 | [`chapter4_mos_characteristics/`](../chapter4_mos_characteristics/) | PDKが提供するMOS物性とSPICEパラメータの理解<br>Device physics and SPICE parameters within PDKs |
 | [`chapter5_soc_design_flow/`](../chapter5_soc_design_flow/) | EDAツールとPDKを用いたSoC設計フロー<br>SoC design flows integrating PDKs and EDA tools |
+| [`appendixf1_05_node_params.md`](../appendix/appendixf1_05_node_params.md) | FinFET/GAAのBSIM-CMG対応パラメータリスト<br>Node-specific parameters aligned with BSIM-CMG |
 
 ---
 
