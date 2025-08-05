@@ -38,7 +38,7 @@ Effective Width（ $W_{\mathrm{total}}$ ）は FinFET / GAA に応じて以下�
 > - Breakdown Voltage ($BV_{DS}$) は設計電圧より高い安全マージンを持つよう設計される傾向があり、ノード縮小により漸減傾向。  
 > - 全値は BSIM-CMG モデルおよび文献を基にした代表的推定値。
 
-## 🧠 Effective Channel Width Calculation  
+### 🧠 Effective Channel Width Calculation  
 **有効チャネル幅 $W_{\mathrm{total}}$ の計算式**
 
 - **FinFET**:
@@ -55,7 +55,7 @@ $$
 
 > where $n$ is the number of fins or sheets.
 
-## 📝 備考
+### 📝 備考
 - 各パラメータは代表的な文献値・モデル値・BSIM-CMGを基に推定。
 - $W_{\mathrm{total}}$ は幾何パラメータ $(n, H, W)$ に基づいて再計算済み。
 - GAA構造は **multi-nanosheet (Nanosheet FET)** を前提とする。
