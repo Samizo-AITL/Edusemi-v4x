@@ -1,3 +1,8 @@
+---
+title: FinFET / GAA ノードパラメータ比較表
+layout: default
+---
+
 # 📊 FinFET / GAA 各ノード世代のパラメータ比較表  
 **Parameter Comparison Table for FinFET and GAA Generations**
 
