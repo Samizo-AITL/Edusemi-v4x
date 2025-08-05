@@ -107,7 +107,7 @@ $$
 ---
 
 ### 📘 Metalシート抵抗がNMOSとPMOSで異なる設計的理由  
-### 📘 Why Metal Sheet Resistance Differs between NMOS and PMOS (Design Perspective)
+**Why Metal Sheet Resistance Differs between NMOS and PMOS (Design Perspective)**
 
 | 要因 / Factor | NMOS | PMOS | 説明 / Explanation |
 |---------------|------|------|--------------------|
@@ -124,42 +124,48 @@ $$
 ## 📗 出力根拠と生成方法  
 **Basis of Estimations**
 
-1. **🧾 公開情報ベース**  
+1. **🧾 公開情報ベース / Based on Public Information**  
    - 各種公式ロードマップ（IEDM, ISSCC, VLSI等）やメーカー発表を再構成  
-   - Samsung, TSMC, IMEC, Intelなどの発表資料に基づく
+     *Reconstructed from official roadmaps (IEDM, ISSCC, VLSI, etc.) and vendor disclosures*  
+   - Samsung, TSMC, IMEC, Intelなどの発表資料に基づく  
+     *Based on presentations by Samsung, TSMC, IMEC, Intel, and others*
 
-2. **🔬 BSIM-CMGベース構造モデル**  
-   - BSIM-CMG準拠のモデルで $W_{\mathrm{total}}$ を定義し、 $J_{\mathrm{dsat}}$ の経験値から $I_{\mathrm{dsat}}$ を計算
+2. **🔬 BSIM-CMGベース構造モデル / Structure Model Based on BSIM-CMG**  
+   - BSIM-CMG準拠のモデルで $W_{\mathrm{total}}$ を定義し、 $J_{\mathrm{dsat}}$ の経験値から $I_{\mathrm{dsat}}$ を計算  
+     *$W_{\mathrm{total}}$ is defined using BSIM-CMG compliant model, and $I_{\mathrm{dsat}}$ is derived from empirical $J_{\mathrm{dsat}}$ values*
 
-3. **⚙️ スケーリング則による補完**  
-   - $T_{\mathrm{ox}}$ や $V_{\mathrm{th}}$ など未公表項目は、電気的整合性と物理制約を基に推定
+3. **⚙️ スケーリング則による補完 / Scaling Rule-Based Estimation**  
+   - $T_{\mathrm{ox}}$ や $V_{\mathrm{th}}$ など未公表項目は、電気的整合性と物理制約を基に推定  
+     *Parameters like $T_{\mathrm{ox}}$ and $V_{\mathrm{th}}$, if not disclosed, are estimated based on electrical consistency and physical constraints*
 
-> **Note:** 本表の数値は絶対的な仕様値ではなく、設計指針・教育目的での相対比較を主眼にしています。
+> **Note / 注意：**  
+> 本表の数値は絶対的な仕様値ではなく、設計指針・教育目的での相対比較を主眼にしています。  
+> *These values are not absolute specifications, but rather intended as relative indicators for design guidance and educational use.*
 
 ---
 
 ## 📎 参考リンク / References
 
-- [`appendix_f1_node_evolution.md`](appendix_f1_node_evolution.md) – ノード進化一覧 / Node Evolution
-- [`appendixf1_01_finfetflow.md`](appendixf1_01_finfetflow.md) – FinFET工程詳細
-- [`appendixf1_02_gaaflow.md`](appendixf1_02_gaaflow.md) – GAAプロセス詳細
-- [`appendixf1_03_finfet_vs_gaa.md`](appendixf1_03_finfet_vs_gaa.md) – FinFET vs GAA 比較
-- [`appendixf1_04_cfet.md`](appendixf1_04_cfet.md) – CFET構造と課題
-- [`appendixf1_05a_cfet_params.md`](appendixf1_05a_cfet_params.md) – CFETパラメータ補足（FinFET/GAA拡張版）
-- [`fem_constraints.md`](fem_constraints.md) – FEM熱応力制約
+- [`appendix_f1_node_evolution.md`](appendix_f1_node_evolution.md) – ノード進化一覧 / Node Evolution Overview  
+- [`appendixf1_01_finfetflow.md`](appendixf1_01_finfetflow.md) – FinFET工程詳細 / FinFET Process Flow  
+- [`appendixf1_02_gaaflow.md`](appendixf1_02_gaaflow.md) – GAAプロセス詳細 / GAA Process Flow  
+- [`appendixf1_03_finfet_vs_gaa.md`](appendixf1_03_finfet_vs_gaa.md) – FinFET vs GAA 比較 / FinFET vs GAA Comparison  
+- [`appendixf1_04_cfet.md`](appendixf1_04_cfet.md) – CFET構造と課題 / CFET Structure and Challenges  
+- [`appendixf1_05a_cfet_params.md`](appendixf1_05a_cfet_params.md) – CFETパラメータ補足 / CFET Parameter Supplement  
+- [`fem_constraints.md`](fem_constraints.md) – FEM熱応力制約 / Thermal & Stress Constraints in FEM
 
 ---
 
 ## 🧪 モデル情報：BSIM-CMG  
 **BSIM-CMG for Advanced Node Modeling**
 
-| モデル / Model | 対応構造 / Supported | 特徴 / Features |
+| モデル / Model | 対応構造 / Supported Structures | 特徴 / Features |
 |----------------|----------------------|-----------------|
-| BSIM-CMG       | FinFET, GAA, NW      | 多ゲート, Level 54, Verilog-Aあり |
-| BSIM-BULK      | Planar CMOS          | 古典MOSFET, Level 52 |
-| BSIM6（参考）  | CFET, GAA 次世代     | 研究中モデル, 詳細物理パラメータ対応予定 |
+| BSIM-CMG       | FinFET, GAA, NW      | 多ゲート, Level 54, Verilog-Aあり / Multi-gate, Level 54, Verilog-A support |
+| BSIM-BULK      | Planar CMOS          | 古典MOSFET, Level 52 / Classical MOSFET, Level 52 |
+| BSIM6（参考）  | CFET, GAA 次世代     | 研究中モデル, 詳細物理パラメータ対応予定 / Under development, expected to support detailed physics for CFET and beyond |
 
-🔗 [BSIM-CMG 公式サイト](https://bsim.berkeley.edu/models/bsimcmg/)  
+🔗 [BSIM-CMG 公式サイト / Official Site](https://bsim.berkeley.edu/models/bsimcmg/)  
 🔗 [GitHub - UC Berkeley BSIM Group](https://github.com/ucbsimgroup)
 
 ---
