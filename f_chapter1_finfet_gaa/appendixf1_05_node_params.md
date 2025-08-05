@@ -3,8 +3,8 @@
 
 ---
 
-## 🔄 NMOS / PMOS パラメータ比較表（22nm〜1.4nm, 25℃代表値）  
-## 🔄 NMOS / PMOS Parameter Comparison Table (22nm–1.4nm, Typical @25℃)
+## 🔄 NMOS / PMOS パラメータ比較表（22nm〜1.4nm, 25℃代表値, BSIM-CMG）  
+## 🔄 NMOS / PMOS Parameter Comparison Table (22nm–1.4nm, Typical @25℃, BSIM-CMG)
 
 全項目は 25℃ / BSIM-CMG モデルに基づいて算出。  
 Effective Width（ $W_{\mathrm{total}}$ ）は FinFET / GAA に応じて以下の式で算出：
