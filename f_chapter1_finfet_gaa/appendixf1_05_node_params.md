@@ -15,7 +15,7 @@ Effective Width（ $W_{\mathrm{total}}$ ）は FinFET / GAA に応じて以下�
 - FinFET: $W_{\mathrm{total}} = n \cdot (2H + W)$  
 - GAA: $W_{\mathrm{total}} = 2 \cdot (H + W) \cdot n$
 
-| ノード<br>Node | 構造<br>Structure | タイプ<br>Type | $V_{\mathrm{DD}}$ (V)<br>Supply Voltage | $n$<br>数 | $H$ (nm)<br>Height | $W$ (nm)<br>Width | $W_{\mathrm{total}}$ (nm)<br>Effective Width | $L_g$ (nm)<br>Gate Length | $T_{\mathrm{ox}}$ (nm)<br>Oxide Thickness | $V_{\mathrm{th}}$ (V)<br>Threshold Voltage | $I_{\mathrm{dlin}}$ (nA/nm)<br>Linear Current | $I_{\mathrm{dsat}}$ (nA/nm)<br>Saturation Current | $I_{\mathrm{off}}$ (nA/nm)<br>Leakage | $I_{\mathrm{cutoff}}$ (nA)<br>Cutoff Current | $BV_{DS}$ (V)<br>Breakdown Voltage | 備考 / Note |
+| Node | Structure | Type | $V_{\mathrm{DD}}$ (V)<br>Supply Voltage | $n$<br>数 | $H$ (nm)<br>Height | $W$ (nm)<br>Width | $W_{\mathrm{total}}$ (nm)<br>Effective Width | $L_g$ (nm)<br>Gate Length | $T_{\mathrm{ox}}$ (nm)<br>Oxide Thickness | $V_{\mathrm{th}}$ (V)<br>Threshold Voltage | $I_{\mathrm{dlin}}$ (nA/nm)<br>Linear Current | $I_{\mathrm{dsat}}$ (nA/nm)<br>Saturation Current | $I_{\mathrm{off}}$ (nA/nm)<br>Leakage | $I_{\mathrm{cutoff}}$ (nA)<br>Cutoff Current | $BV_{DS}$ (V)<br>Breakdown Voltage | Note |
 |----------------|------------------|----------------|----------------------|-----|-----------|-----------|-------------------------|----------------|------------------------|-------------------------|----------------------------|-----------------------------|-----------------------------|----------------------------|-------------------------|------------------------|
 | 22nm | FinFET | **NMOS** | 0.8 | 2 | 40 | 10 | 180 | 25 | 1.2 | ~0.45 | ~500 | ~1000 | ~10 | ~100 | ~2.0 | 25℃ / BSIM-CMG |
 |      |        | **PMOS** | 0.8 | 2 | 40 | 10 | 180 | 25 | 1.2 | ~−0.45 | ~350 | ~750 | ~10 | ~100 | ~2.0 | 25℃ / BSIM-CMG |
@@ -82,7 +82,7 @@ $$
 > **これらの数値は、BSIM-CMGモデルに基づいて算出された代表値です。**  
 > **These values are estimated based on the BSIM-CMG model.**
 
-| ノード<br>Node | タイプ<br>Type | $R_{\mathrm{active}}$ (Ω/□)<br>Diffusion | $R_{\mathrm{gate}}$ (Ω/□)<br>Gate | $R_{\mathrm{contact}}$ (Ω)<br>Contact Chain | $R_{\mathrm{via}}$ (Ω)<br>Via Chain | $R_{\mathrm{metal}}$ (Ω/□)<br>Metal |
+| Node | Type | $R_{\mathrm{active}}$ (Ω/□)<br>Diffusion | $R_{\mathrm{gate}}$ (Ω/□)<br>Gate | $R_{\mathrm{contact}}$ (Ω)<br>Contact Chain | $R_{\mathrm{via}}$ (Ω)<br>Via Chain | $R_{\mathrm{metal}}$ (Ω/□)<br>Metal |
 |----------------|----------------|------------------------------|-------------------------|----------------------------------|-------------------------|--------------------------|
 | 22nm           | **NMOS**       | ~80                         | ~2.5                    | ~100                             | ~120                    | ~0.12                   |
 |                | **PMOS**       | ~90                         | ~2.6                    | ~110                             | ~130                    | ~0.13                   |
