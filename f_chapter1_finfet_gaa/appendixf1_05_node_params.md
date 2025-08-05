@@ -74,8 +74,6 @@ $$
 
 ---
 
----
-
 ## 📎 補足：BSIM-CMGモデルと先端ノード対応  
 **BSIM-CMG Model and Advanced Node Compatibility**
 
