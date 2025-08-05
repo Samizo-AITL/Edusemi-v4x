@@ -67,13 +67,15 @@ $$
 
 ---
 
-## 🧯 NMOS / PMOS 抵抗要素比較表（22nm〜1.4nm, 25℃代表）  
-## 🧯 NMOS / PMOS Resistance Comparison Table (22nm–1.4nm, Typical @25℃)
+## 🧯 NMOS / PMOS 抵抗要素比較表（22nm〜1.4nm, 25℃代表, BSIM-CMG）  
+## 🧯 NMOS / PMOS Resistance Comparison Table (22nm–1.4nm, Typical @25℃, BSIM-CMG)
 
 > ※すべて25℃での設計代表値であり、Metal層は共通材料（例：Cu）を前提としています。  
 > Typical resistance values at 25℃. Metal layers assume common materials (e.g., Cu).  
 > ただし、**NMOS / PMOS 間でMetalシート抵抗（Ω/□）が“実効的に異なる”**ことがあります。  
-> However, **effective metal sheet resistance (Ω/□) may differ between NMOS and PMOS** due to design/layout factors.
+> However, **effective metal sheet resistance (Ω/□) may differ between NMOS and PMOS** due to design/layout factors.  
+> **これらの数値は、BSIM-CMGモデルに基づいて算出された代表値です。**  
+> **These values are estimated based on the BSIM-CMG model.**
 
 | ノード<br>Node | タイプ<br>Type | $R_{\mathrm{active}}$ (Ω/□)<br>Diffusion | $R_{\mathrm{gate}}$ (Ω/□)<br>Gate | $R_{\mathrm{contact}}$ (Ω)<br>Contact Chain | $R_{\mathrm{via}}$ (Ω)<br>Via Chain | $R_{\mathrm{metal}}$ (Ω/□)<br>Metal |
 |----------------|----------------|------------------------------|-------------------------|----------------------------------|-------------------------|--------------------------|
