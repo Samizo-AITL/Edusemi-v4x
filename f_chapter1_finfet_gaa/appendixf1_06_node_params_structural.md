@@ -6,7 +6,7 @@
 
 ## 📘 概要 / Overview
 
-この資料は、各ノードにおけるFinFET / GAA / CFET構造の**物理的寸法パラメータ（$n$, $H$, $W$）**を整理したものです。  
+この資料は、各ノードにおけるFinFET / GAA / CFET構造の**物理的寸法パラメータ（ $n$, $H$ , $W$ ）**を整理したものです。  
 This appendix provides structural parameters across nodes including number of channels ($n$), height ($H$), and width ($W$).
 
 ---
