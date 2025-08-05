@@ -52,6 +52,7 @@ This chapter builds upon the process knowledge from Chapter 3 and extends it to 
 | [`appendixf1_04_cfet.md`](appendixf1_04_cfet.md)                 | CFETの構造進化と技術的課題<br>CFET Structure Evolution and Technical Challenges |
 | [`appendixf1_05_node_params.md`](appendixf1_05_node_params.md)   | FinFET / GAA 各ノード世代の構造・電気パラメータ一覧<br>Node-wise Parameters for FinFET and GAA |
 | [`appendixf1_05a_cfet_params.md`](appendixf1_05a_cfet_params.md) | CFETのパラメータと設計特性（05の拡張資料）<br>CFET Parameters and Design Characteristics (Extension of 05) |
+| [`appendixf1_06_node_params_structural.md`](appendixf1_06_node_params_structural.md) | ノード構造パラメータ比較（$n$, $H$, $W$）<br>Node Structural Parameters Comparison ( $n$ , $H$ , $W$ ) |
 
 ---
 
