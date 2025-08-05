@@ -137,6 +137,7 @@ $$
 - [`appendixf1_02_gaaflow.md`](appendixf1_02_gaaflow.md) – GAAプロセス詳細
 - [`appendixf1_03_finfet_vs_gaa.md`](appendixf1_03_finfet_vs_gaa.md) – FinFET vs GAA 比較
 - [`appendixf1_04_cfet.md`](appendixf1_04_cfet.md) – CFET構造と課題
+- [`appendixf1_05a_cfet_params.md`](appendixf1_05a_cfet_params.md) – CFETパラメータ補足（FinFET/GAA拡張版）
 - [`fem_constraints.md`](fem_constraints.md) – FEM熱応力制約
 
 ---
