@@ -21,6 +21,7 @@ This section explains the CFET concept in the context of FinFET and GAA evolutio
 
 > In GAA, multiple horizontal nanosheets are stacked, but both nFET and pFET are placed side-by-side.  
 > CFET vertically stacks nFET and pFET, enabling denser integration and better symmetry.
+
 ```
  p-FET   ← Upper layer
  ─────
@@ -30,7 +31,8 @@ This section explains the CFET concept in the context of FinFET and GAA evolutio
  ─────
  Substrate
 ```
- ---
+
+---
 
 ## ⚡ 電気的特徴と設計影響｜Electrical Characteristics & Design Impact
 
@@ -46,20 +48,31 @@ This section explains the CFET concept in the context of FinFET and GAA evolutio
 
 ## 🏭 製造課題｜Manufacturing Challenges
 
-- **チャネルごとのドーピング独立性**：nFETとpFETのドーピング分離が難しい
-- **熱処理のステップ分離**：下層が熱予算を超えやすい
-- **エピ成長と選択エッチング**：複数ステップの精度が極めて重要
-- **BEOLとの整合性**：金属層との高さ調整やIRドロップ対応が必須
+- **チャネルごとのドーピング独立性**：nFETとpFETのドーピング分離が難しい  
+- **熱処理のステップ分離**：下層が熱予算を超えやすい  
+- **エピ成長と選択エッチング**：複数ステップの精度が極めて重要  
+- **BEOLとの整合性**：金属層との高さ調整やIRドロップ対応が必須  
 
 > Key challenges include independent doping control, thermal budget balancing between layers, selective epitaxy, and integration with BEOL (Back-End of Line).
 
 ---
 
+## 🧩 モジュール統合効果｜Module-Level Integration Advantage
+
+- **CFETの最大の利点は、Inverterモジュールを1セル内で完結できる点**
+- n/p領域の物理的分離が不要になり、**セル面積を半減できる**
+- 標準セル設計では、**実質的に2倍のインバータ密度**を実現可能
+
+> CFET enables the tightest possible integration of inverter modules by vertically stacking nFET/pFET pairs, eliminating the need for lateral separation.  
+> This allows approximately **2× inverter density** in standard cell layouts.
+
+---
+
 ## 🔮 今後の展望｜Future Outlook
 
-- **2030年以降のCFET実装**がIntelやIMECロードマップに登場
-- **システム・オン・スタック（SoS）**時代に向けた準備段階
-- **EDA/PDKの仮想抽象設計**に対応した設計者教育が求められる
+- **2030年以降のCFET実装**がIntelやIMECロードマップに登場  
+- **システム・オン・スタック（SoS）**時代に向けた準備段階  
+- **EDA/PDKの仮想抽象設計**に対応した設計者教育が求められる  
 
 > CFET is positioned as a post-GAA solution, expected to emerge in the 2030s. Education and design must prepare for stack-aware abstractions.
 
@@ -68,7 +81,8 @@ This section explains the CFET concept in the context of FinFET and GAA evolutio
 ### 🔗 関連補足｜Related Appendices
 
 - [`appendixf1_04_cfet.md`](appendixf1_04_cfet.md)：CFETの構造変遷と技術的課題の詳細  
-  *Detailed discussion of CFET structure evolution and key technical issues*
+- [`appendixf1_05a_cfet_params.md`](appendixf1_05a_cfet_params.md)：CFETの設計・電気パラメータ補足  
+- [`appendixf1_05_node_params_structural.md`](appendixf1_05_node_params_structural.md)：ノード構造パラメータ比較（n, H, W）
 
 ---
 
