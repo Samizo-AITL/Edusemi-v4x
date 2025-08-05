@@ -9,22 +9,22 @@
 従来の**Al/Wプラグ配線**との比較を通じて、配線技術の進化と物理的優位性を明確化します。
 
 > This appendix outlines the **dual damascene process flow**, comparing it with **traditional Al/W plug schemes**,  
-> highlighting improvements in resistance, capacitance, EM lifetime, and integration efficiency.
+> highlighting improvements in resistance, capacitance, electromigration (EM) lifetime, and integration efficiency.
 
 ---
 
 ## 🛠️ デュアルダマシンプロセス詳細フロー｜Dual Damascene Process Flow
 
-| 工程No. | 工程名 / Step                  | 内容 / Description |
-|--------|-------------------------------|---------------------|
-| ①      | ULK層の堆積（SiOCなど）         | 層間絶縁膜（Low-k）をCVDで形成 |
-| ②      | ビアパターン形成（1次リソグラフィ） | VIA用レジストパターンを描画し、エッチング |
-| ③      | トレンチパターン形成（2次リソ）     | 上層の配線トレンチを描画し、ビアと連結 |
-| ④      | バリア層形成（Ta/TaNなど）         | Cu拡散防止用のバリア金属をスパッタ等で形成 |
-| ⑤      | Cuシード層の成膜                  | Cuめっき用の導電層をPVDで形成（スパッタ） |
-| ⑥      | Cu電解めっき（ECP）                | トレンチ＋ビアにCuを充填（全体に堆積） |
-| ⑦      | CMPによるCu除去と平坦化            | 上面のCu/バリアをCMPで除去し、層を整形 |
-| ⑧      | 次層ILD形成へ（M1→M2など）         | 多層化に向けて次の絶縁膜形成へ進む |
+| 工程No. | 工程名 / Step                      | 内容 / Description |
+|--------|-----------------------------------|---------------------|
+| ①      | ULK層の堆積 / ULK Deposition      | 層間絶縁膜（Low-k）をCVDで形成<br>Low-k dielectric (e.g., SiOC) is deposited by CVD |
+| ②      | ビアパターン形成 / Via Lithography | VIA用レジストパターンを描画・エッチング<br>First lithography to define via |
+| ③      | トレンチ形成 / Trench Lithography | 配線トレンチを上層に形成、ビアと連結<br>Second lithography to define trench over via |
+| ④      | バリア層形成 / Barrier Deposition | Cu拡散防止用のバリア層（Ta/TaNなど）<br>Sputtered Ta/TaN barrier for Cu diffusion block |
+| ⑤      | シード層堆積 / Seed Layer Deposition | Cuメッキ導電層を形成（PVD）<br>Cu seed layer by PVD |
+| ⑥      | Cu電解めっき / Cu Electroplating   | ビア＋トレンチをCuで充填（ECP）<br>Cu is electroplated into via and trench |
+| ⑦      | CMP研磨 / CMP Planarization        | 過剰Cu/バリアをCMPで除去・平坦化<br>CMP removes excess Cu/barrier and flattens the surface |
+| ⑧      | 次層工程へ / Next ILD Formation    | M1→M2など上層へ進む<br>Move to next interlayer dielectric |
 
 > 📌 Dual patterning of **via + trench**, followed by Cu electroplating and CMP,  
 > enables high-density, low-RC interconnects suitable for advanced SoCs.
@@ -33,27 +33,30 @@
 
 ## 🧪 配線特性比較表｜Comparison: Al/W Plug vs Cu/ULK
 
-| 特性 / Property                  | Al配線 + Wプラグ / Al + W Plug                              | Cu配線 + ULK / Cu + ULK (Dual Damascene)                        |
-|----------------------------------|--------------------------------------------------------------|------------------------------------------------------------------|
-| 配線抵抗率 / Resistivity        | 約 2.7 μΩ·cm（Al）                                           | 約 1.7 μΩ·cm（Cu）                                               |
-| プラグ抵抗 / Plug Resistance    | 高め（Wは抵抗が高く、ビア部分での抵抗寄与大）               | ビア・配線一体化により**低抵抗**                                |
-| 層間誘電率 / Interlayer Dielectric Constant | 約 **k = 4.0〜4.2**（SiO₂系）                              | 約 **k = 2.5〜3.0**（SiOC, SiLK, CDO など ULK系）              |
-| RC遅延 / RC Delay                | 高め（R↑, C↑）                                               | **低減（R↓, C↓）→ 高速動作向き**                               |
-| EM耐性 / Electromigration       | 中程度（AlはCuより劣る）                                    | **高耐性**（CuはEM寿命に優れる）                               |
-| ビア構造 / Via Structure        | WプラグとAl配線を**別工程で形成**                            | Cu viaと配線を**一括形成（デュアルダマシン）**                  |
-| 平坦化工程 / Planarization      | CMP不要な場合もあり（Alエッチバックなど）                    | **CMP必須**（Cu選択性のないエッチング不可）                     |
-| 実装プロセス / Process Scheme   | Al配線 + Wプラグ + 多工程                                     | **デュアルダマシン：ビア＋トレンチ同時形成 + CMP仕上げ**        |
-| 採用ノード / Applied Nodes      | 0.35µm〜0.18µm（主に国内ロジックプロセス）                   | 0.13µm〜45nm以降（先端ファブ中心）                              |
-| 備考 / Notes                     | **国内ファブで長期採用**（設備・コスト面の優位）              | **先端SoC・高密度LSI向け**。設備投資・CMP工程が複雑             |
+| 特性 / Property                  | Al配線 + Wプラグ / Al + W Plug                        | Cu配線 + ULK / Cu + ULK (Dual Damascene)                        |
+|----------------------------------|--------------------------------------------------------|------------------------------------------------------------------|
+| 配線抵抗率 / Line Resistivity   | 約 **2.7 μΩ·cm**（Al）                                 | 約 **1.7 μΩ·cm**（Cu）                                           |
+| プラグ抵抗 / Plug Resistance    | 高い（Wは抵抗大、接続部での寄与が顕著）<br>High due to high resistivity of W | 一体形成により**低減**<br>Unified structure reduces resistance |
+| 層間誘電率 / Dielectric Constant | 約 **k = 4.0〜4.2**（SiO₂系）                          | 約 **k = 2.5〜3.0**（ULK：SiOC, SiLK, CDO等）                    |
+| RC遅延 / RC Delay                | **大きい（R↑, C↑）**                                  | **小さい（R↓, C↓）→ 高速化**                                   |
+| EM耐性 / EM Lifetime             | 中程度（AlはCuより弱い）<br>Moderate                  | **優れる（長寿命）**<br>Excellent EM resistance                 |
+| ビア構造 / Via Formation         | WプラグとAl配線は**別工程**<br>Two-step               | **一括形成**（Via+Trench同時）<br>Single-step (dual patterning) |
+| 平坦化 / Planarization           | CMP不要な場合もあり<br>Sometimes etch-back only       | **CMP必須**<br>CMP is mandatory for Cu                          |
+| 実装プロセス / Process Scheme   | 多段プロセス（プラグ+配線）<br>Separate plug + metal  | **デュアルダマシン**<br>Dual Damascene integration             |
+| 採用ノード / Node Adoption       | 0.35µm〜0.18µm：**国内ロジック主流**<br>0.35–0.18µm mainstream in Japan | 0.13µm以降の**先端ファブ限定**<br>Advanced nodes (0.13µm–45nm+) |
+| 備考 / Notes                     | **設備・コストに優れる**（CMP不要）<br>Cost-effective | **設備・CMP条件が厳しい**<br>Needs CMP, high integration cost |
+
+> 🔍 国内ではCu/ULK導入は限定的で、多くはAl/Wプラグを継続採用。  
+> → 国内設計教育では**Al/Wでも十分な理解が可能**。
 
 ---
 
 ## 🧠 技術進化の意義｜Why Dual Damascene Matters
 
-- 📉 **RC遅延の低減** → クロック周波数のボトルネック解消
-- 🔋 **低消費電力化** → 配線容量（C）削減による充放電ロス低減
-- 🧱 **多層配線対応性** → 高集積回路（M6, M8, M10）への展開可能
-- 💪 **EM信頼性向上** → 長寿命・高信頼性LSIの実現
+- 📉 **RC遅延の低減** → クロック高速化（GHz世代）
+- 🔋 **低消費電力化** → Cの削減により充放電損失を低減
+- 🧱 **多層配線（M6, M8, M10）に対応**
+- 💪 **EM信頼性の向上** → 高信頼・長寿命LSI
 
 > Dual damascene is essential for **modern SoC performance**,  
 > enabling faster, denser, and more reliable interconnect schemes.
@@ -81,10 +84,11 @@
 
 ## 🧾 備考｜Notes
 
-- **本付録は、0.13µm以降に導入された配線革新の理解を支援**することを目的とします。  
-- 教育・試作ではAl/Wが依然有効であり、Cu/ULKは評価対象・先端設計の理解に活用します。
+- 本付録は、**0.13µm以降に導入されたCu/ULK技術の理解**を支援します。  
+- 教材用途としては、**Al/Wでも十分な構造理解とRC解析が可能**です。  
+- CMP工程の課題（例：Dishing、Erosion）も指導補足可能です。
 
-> This appendix is designed to help **understand the wiring transition from Al to Cu**,  
-> with emphasis on dual damascene's **technical value and integration complexity**.
+> While Cu/ULK and dual damascene are dominant in cutting-edge fabs,  
+> **Al/W interconnects remain pedagogically valuable** and accessible.
 
 ---
