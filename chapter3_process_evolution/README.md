@@ -50,7 +50,7 @@ SCE, HCI, DIBL, Vth Variability, sky130, 0.18µm
 |--------|----------------------------------------------------------------------|-------------------------------------------------------------------------------------|
 | 3.1    | [`3.1_node_scaling_history.md`](./3.1_node_scaling_history.md)       | ノード微細化の歴史<br>📏 *History of Node Scaling*                                 |
 | 3.2    | [`3.2_cmos_structure_shift.md`](./3.2_cmos_structure_shift.md)       | トランジスタ構造の進化（STI, LDDなど）<br>🔬 *CMOS Structural Innovations*         |
-| 3.3    | [`3.3_interconnect_and_litho.md`](./3.3_interconnect_and_litho.md)   | 多層配線・リソグラフィ技術<br>🧵 *Interconnect and Lithography Advancements*       |
+| 3.3    | [`3.3_interconnect_and_litho.md`](./3.3_interconnect_and_litho.md)   | 多層配線技術<br>🧵 *Interconnect and Lithography Advancements*       |
 | 3.4    | [`3.4_variation_and_reliability.md`](./3.4_variation_and_reliability.md) | SCE / DIBL / 信頼性限界<br>⚠️ *Variability & Reliability Issues*             |
 | 3.5    | [`3.5_summary_and_scope.md`](./3.5_summary_and_scope.md)             | 教育用ノードの選定と適用範囲<br>🎓 *Selecting Nodes for Education*               |
 
@@ -96,8 +96,8 @@ These reference files support your understanding of process evolution, including
 | 第4章で学んだ**MOS特性とPDKの基礎**を土台として、応用編では**FinFET・GAA・CFETなどの最新構造**における設計・実装へと発展します。 | Building on the **MOS characteristics and PDK fundamentals** from Chapter 4, the applied section explores **advanced structures** such as FinFET, GAA, and CFET. |
 | **ノード進化と設計制約のつながり**を意識しながら、次世代SoC設計へ接続していくステップとなります。                          | This transition emphasizes the **link between node scaling and design constraints**, paving the way for next-generation SoC design. |
 
-➡️ [**応用編 第1章：FinFET・GAA・CFETの設計と実装**](../f_chapter1_finfet_gaa/README.md)  
-➡️ [**Applied Chapter 1: FinFET, GAA, and CFET Design & Implementation**](../f_chapter1_finfet_gaa/README.md)
+➡️ [**特別編 第1章：FinFET・GAA・CFETの設計と実装**](../f_chapter1_finfet_gaa/README.md)  
+➡️ [**Special Chapter 1: FinFET, GAA, and CFET Design & Implementation**](../f_chapter1_finfet_gaa/README.md)
 
 ---
 
