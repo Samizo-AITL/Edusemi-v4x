@@ -62,8 +62,7 @@ $$
 
 ---
 
-## 🧩 FinFET vs GAA の構造比較  
-**Structural Comparison of FinFET vs GAA**
+## 🧩 FinFET vs GAA の構造比較 / Structural Comparison of FinFET vs GAA
 
 | 比較項目 / Feature         | FinFET                            | GAA (Nanosheet)                     |
 |----------------------------|-----------------------------------|-------------------------------------|
