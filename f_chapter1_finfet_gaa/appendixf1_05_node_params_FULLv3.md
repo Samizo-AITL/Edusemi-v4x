@@ -28,14 +28,14 @@
 
 ## 📐 3. 有効チャネル幅の数式
 
-- FinFET:
+- **FinFET**:
 
 $$
 W_{\mathrm{total}} = n \cdot (2H_{\mathrm{fin}} + W_{\mathrm{fin}})
 $$
 
-- GAA:
-  
+- **GAA**:
+
 $$
 W_{\mathrm{total}} = 2 \cdot (H + W) \cdot n
 $$
@@ -60,16 +60,16 @@ $$
 
 ## 🔧 5. 設計応用例：GAA + MRAM統合
 
-### 条件設定と電流計算
+### ✅ 条件設定と電流計算
 - Idsat = 1500 nA/nm, Rs = 30 Ω·μm, Wtotal = 248 nm
 - 書込み電流 = 200 μA, パルス幅 = 5 ns
 
-#### 熱発熱：
+#### 🔥 熱発熱：
 $$
 P = I^2 R = (200\mu A)^2 \times 30\Omega = 1.2\mu W
 $$
 
-#### 電流密度：
+#### ⚡ 電流密度：
 $$
 J = \frac{200e^{-6}}{248e^{-9} \cdot 5e^{-9}} \approx 1.6\times10^{13} \ A/m^2
 $$
@@ -119,5 +119,3 @@ flowchart TD
 - BSIM-CMG: https://bsim.berkeley.edu/models/bsimcmg/
 - Samsung GAA: https://ieeexplore.ieee.org/document/9744284
 - Intel IEDM Rs: https://ieeexplore.ieee.org/document/9632273
-
----
