@@ -60,7 +60,7 @@ PDKは、各ノードの **MOSデバイス物性を忠実に反映したSPICEモ
 |------------------|------------------------|
 | [`chapter4_mos_characteristics/`](../chapter4_mos_characteristics/) | PDKが提供するMOS物性とSPICEパラメータの理解<br>Device physics and SPICE parameters within PDKs |
 | [`chapter5_soc_design_flow/`](../chapter5_soc_design_flow/) | EDAツールとPDKを用いたSoC設計フロー<br>SoC design flows integrating PDKs and EDA tools |
-| [`appendixf1_05_node_params.md`](../appendix/appendixf1_05_node_params.md) | FinFET/GAAのBSIM-CMG対応パラメータリスト<br>Node-specific parameters aligned with BSIM-CMG |
+| [`appendixf1_05_node_params.md`](../f_chapter1_finfet_gaa/appendixf1_05_node_params.md) | FinFET/GAAのBSIM-CMG対応パラメータリスト<br>Node-specific parameters aligned with BSIM-CMG |
 
 ---
 
