@@ -7,10 +7,10 @@
 ## 🔄 NMOS / PMOS Parameter Comparison Table (22nm–1.4nm, Typical @25℃)
 
 全項目は 25℃ / BSIM-CMG モデルに基づいて算出。  
-Effective Width（$W_{\mathrm{total}}$）は FinFET / GAA に応じて以下の式で算出：
+Effective Width（ $W_{\mathrm{total}}$ ）は FinFET / GAA に応じて以下の式で算出：
 
-- FinFET: $W_{\mathrm{total}} = n \cdot (2H + W)$  
-- GAA:  $W_{\mathrm{total}} = 2 \cdot (H + W) \cdot n$
+- FinFET:  $W_{\mathrm{total}} = n \cdot (2H + W)$  
+- GAA:   $W_{\mathrm{total}} = 2 \cdot (H + W) \cdot n$
 
 | ノード<br>Node | 構造<br>Structure | タイプ<br>Type | $V_{\mathrm{DD}}$ (V)<br>Supply Voltage | $n$<br>数 | $H$ (nm)<br>Height | $W$ (nm)<br>Width | $W_{\mathrm{total}}$ (nm)<br>Effective Width | $L_g$ (nm)<br>Gate Length | $T_{\mathrm{ox}}$ (nm)<br>Oxide Thickness | $V_{\mathrm{th}}$ (V)<br>Threshold Voltage | $I_{\mathrm{dlin}}$ (nA/nm)<br>Linear Current | $I_{\mathrm{dsat}}$ (nA/nm)<br>Saturation Current | $I_{\mathrm{off}}$ (nA/nm)<br>Leakage | $I_{\mathrm{cutoff}}$ (nA)<br>Cutoff Current | 備考 / Note |
 |----------------|------------------|----------------|----------------------|-----|-----------|-----------|-------------------------|----------------|------------------------|-------------------------|----------------------------|-----------------------------|-----------------------------|----------------------------|-------------------------|
@@ -32,7 +32,7 @@ Effective Width（$W_{\mathrm{total}}$）は FinFET / GAA に応じて以下の�
 |        |             | **PMOS** | 0.45 | 5 | 28 | 16 | 440 | ~10 | 0.50 | ~−0.20 | ~600 | ~1200 | <0.3 | ~1 | 25℃ / BSIM-CMG |
 
 
-## 🧠 補足式：$W_{\mathrm{total}}$ の計算方法
+## 🧠 補足式： $W_{\mathrm{total}}$  の計算方法
 
 - **FinFET**：
   
