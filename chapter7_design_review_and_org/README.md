@@ -4,7 +4,7 @@ title: 基礎編 第7章：デザインレビューと開発組織連携
 ---
 
 # 📘 基礎編 第7章：デザインレビューと開発組織連携  
-**Chapter 7: Design Review and Cross-Functional Collaboration**
+**Fundamentals-Chapter 7: Design Review and Cross-Functional Collaboration**
 
 ---
 
