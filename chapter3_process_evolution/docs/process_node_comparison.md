@@ -92,5 +92,5 @@ This document compares CMOS logic processes across the 180nm, 130nm, and 90nm no
 
 ---
 
-[← 戻る / Back to Chapter 3: Process Evolution Top](../chapter3_process_evolution/README.md)
+[← 戻る / Back to Chapter 3: Process Evolution Top](../README.md)
 
