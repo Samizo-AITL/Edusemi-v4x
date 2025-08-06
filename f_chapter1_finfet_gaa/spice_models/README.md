@@ -100,12 +100,12 @@ M2 out in vdd vdd pgaa L=10n W=120n
 以下は、FinFETおよびGAA CMOSインバータの `.dc` 解析によって得られた伝達特性（Vin–Vout）の比較図です：
 
 ### 🔷 FinFET CMOS Inverter (15nm)
-![FinFET VTC](./images/vtc_finfet_cmos_inverter.png)
+![FinFET VTC](./Images/vtc_finfet_cmos_inverter.png)
 
 ---
 
 ### 🟢 GAA CMOS Inverter (5nm)
-![GAA VTC](./images/vtc_gaa_cmos_inverter.png)
+![GAA VTC](./Images/vtc_gaa_cmos_inverter.png)
 
 ---
 
