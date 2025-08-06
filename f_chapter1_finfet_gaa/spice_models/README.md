@@ -55,13 +55,14 @@ FinFET / GAA トランジスタ用 SPICE モデル
 
 ## ⚙️ CMOS Inverter Examples / CMOSインバータ回路例
 
-FinFETおよびGAA構造を使った CMOSインバータの `.spice` 回路例です。  
+FinFET、GAA、CFET構造を使ったCMOSインバータの `.spice` 回路例です。  
 `.dc` 解析により、入力電圧 Vin に対する出力 Vout（VTC: Voltage Transfer Characteristic）を確認できます。
 
-| File | Description |
-|------|-------------|
-| `cmos_inverter_finfet.spice` | FinFET CMOS インバータ回路（15nm） |
-| `cmos_inverter_gaa.spice`    | GAA CMOS インバータ回路（5nm）    |
+| File                         | Description                             |
+|------------------------------|-----------------------------------------|
+| `cmos_inverter_finfet.spice` | FinFET CMOS インバータ回路（15nm）      |
+| `cmos_inverter_gaa.spice`    | GAA CMOS インバータ回路（5nm）         |
+| `cmos_inverter_cfet.spice`   | CFET CMOS インバータ回路（仮想モデル） |
 
 ### 🧪 FinFET CMOS Inverter
 
@@ -95,7 +96,7 @@ M2 out in vdd vdd pgaa L=10n W=120n
 .end
 ```
 
-### 🧪 CFET CMOS Inverter
+### 🧪 CFET CMOS Inverter（仮想モデル）
 
 ```spice
 .include cfet_stack_model.spice
@@ -143,7 +144,7 @@ M2 out in 0 0 ncfet L=10n W=120n
   → NMOSだけでなくPMOSも含めたフルCMOSモデル化を完了
 - ✅ CMOSインバータ回路の追加（FinFET / GAA）  
   → VTC特性を通じた構造間比較の教育展開
-- 🔜 CFET仮想モデルの定義と検証（`cfet_stack_model.spice`）  
+- ✅ CFET仮想モデルの定義と検証（`cfet_stack_model.spice`）
   → 将来世代デバイスの予測モデル構築と教材応用
 - 📊 Pythonによる I-V / VTC プロット自動化の追加  
   → ngspice等と連携した教育用グラフ生成スクリプト
