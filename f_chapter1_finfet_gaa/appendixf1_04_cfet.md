@@ -1,5 +1,12 @@
+---
+layout: default
+title: Appendix F1-04: CFETの構造進化と技術的課題 
+---
+
+---
+
 # Appendix F1-04: CFETの構造進化と技術的課題  
-# Appendix F1-04: Structure Evolution and Technical Challenges of CFET
+**Appendix F1-04: Structure Evolution and Technical Challenges of CFET**
 
 ---
 
@@ -77,4 +84,4 @@ Planar MOS → FinFET → GAA (Nanosheet) → CFET (Stacked n/p)
 
 ---
 
-### 🏠 [先端ノード技術 トップへ戻る｜Back to Advanced Node Top](README.md)
+[← 戻る / Back to Special Chapter 1 Top](../f_chapter1_finfet_gaa/README.md)
