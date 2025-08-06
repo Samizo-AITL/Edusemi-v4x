@@ -91,3 +91,6 @@ This document compares CMOS logic processes across the 180nm, 130nm, and 90nm no
 - FinFET導入前のCMOSスケーリングの限界と設計工夫を議論
 
 ---
+
+[← 戻る / Back to Chapter 3: Process Evolution Top](../chapter3_process_evolution/README.md)
+
