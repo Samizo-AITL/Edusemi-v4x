@@ -124,12 +124,8 @@ M2 out in 0 0 ncfet L=10n W=120n
 ### 🔷 FinFET CMOS Inverter (15nm)
 ![FinFET VTC](./Images/vtc_finfet_cmos_inverter.png)
 
----
-
 ### 🟢 GAA CMOS Inverter (5nm)
 ![GAA VTC](./Images/vtc_gaa_cmos_inverter.png)
-
----
 
 📌 GAA構造はしきい値電圧がやや低く、スイッチング遷移がより鋭くなる傾向が観察されます。  
 このように、**構造の違いが電気特性にどのように現れるか**を、Spiceと図を通じて学べます。
