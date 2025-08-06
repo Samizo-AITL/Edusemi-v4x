@@ -1,3 +1,10 @@
+---
+layout: default
+title: f2a_8_chiplet_example_gaa_ams_mram.md
+---
+
+---
+
 # 🧪 f2a_8_chiplet_example_gaa_ams_mram.md  
 **GAA・AMS・MRAMを含むチップレット統合事例**  
 **Example of Chiplet Integration with GAA, AMS, and MRAM**
