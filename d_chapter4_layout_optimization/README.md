@@ -1,5 +1,10 @@
-# 🧱 応用編 第4章：レイアウト設計と最適化  
-# 🧱 Applied Chapter 4: Layout Design and Optimization
+---
+layout: default
+title: 応用編 第4章 レイアウト設計と最適化
+---
+
+# 🧱 応用編 第4章 レイアウト設計と最適化  
+**Applied Chapter 4: Layout Design and Optimization**
 
 ---
 
