@@ -53,15 +53,16 @@ title: 実践編 第5章　設計結果の評価とレポート
 
 ---
 
-### 👤 著者・ライセンス｜Author & License
+## 👤 著者・ライセンス｜Author & License
 
 | 項目｜Item | 内容｜Details |
 |------------|----------------------------|
-| **著者｜Author** | 三溝 真一（Shinichi Samizo）<br>Shinichi Samizo, M.Eng. |
+| **著者｜Author** | 三溝 真一（Shinichi Samizo） |
 | **GitHub** | [Samizo-AITL](https://github.com/Samizo-AITL) |
 | **Email** | [shin3t72@gmail.com](mailto:shin3t72@gmail.com) |
 | **ライセンス｜License** | MIT License（再配布・改変自由）<br>Redistribution and modification allowed |
 
 ---
 
-#### 🏠 [Edusemi-v4x トップへ戻る｜Back to Edusemi-v4x Top](../README.md)
+## 🔙 戻る｜Back to Top
+**🏠 [Edusemi-v4x トップへ戻る｜Back to Edusemi-v4x Top](../README.md)**
