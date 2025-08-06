@@ -1,4 +1,16 @@
+---
+layout: default
+title: Edusemi トップページ
+---
+
+---
+
 # 🎓 **Edusemi-v4x：半導体プロダクト開発のための基礎教育教材**
+
+🇺🇸 **[English README](./README_en.md)**  
+　*Foundational Educational Materials for Semiconductor Product Development*
+
+---
 
 ✍️ **はじめに | Introduction**
 
@@ -10,11 +22,6 @@
 
 **Edusemi** は、このような「**基礎技術同士の構造的つながり**」に焦点を当てた教育教材です。  
 **応用に向けた視野**を意識しつつも、「基礎技術同士の構造的つながり」に集中し、実務に活きる**構造的理解**を育てることを目指します。
-
----
-
-🇺🇸 **[English README](./README_en.md)**  
-　*Foundational Educational Materials for Semiconductor Product Development*
 
 ---
 
