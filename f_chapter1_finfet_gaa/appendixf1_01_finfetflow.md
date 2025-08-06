@@ -1,3 +1,10 @@
+---
+layout: default
+title: 補足資料 / Appendix：FinFET 製造プロセスフロー（全48ステップ
+---
+
+---
+
 # 🧬 補足資料 / Appendix：FinFET 製造プロセスフロー（全48ステップ）  
 **FinFET Full Process Flow – 48-Step Breakdown for Advanced Nodes**
 
@@ -888,3 +895,5 @@ Package into product form: **FC-CSP, FOWLP, etc.**
 - Balance **thermal design**, **reliability**, and **manufacturability**
 
 ---
+
+[← 戻る / Back to Special Chapter 1 Top](../f_chapter1_finfet_gaa/README.md)
