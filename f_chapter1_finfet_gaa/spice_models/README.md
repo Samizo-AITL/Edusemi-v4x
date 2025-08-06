@@ -16,6 +16,8 @@ FinFET / GAA トランジスタ用 SPICE モデル
 | `nmos_iv_test.spice`             | NMOSのI-V特性確認用ベンチマーク回路 |
 | `cmos_inverter_finfet.spice`     | FinFET CMOSインバータ回路 |
 | `cmos_inverter_gaa.spice`        | GAA CMOSインバータ回路 |
+| `cfet_stack_model.spice`        | 仮想CFET NMOS/PMOSスタックモデル |
+| `cmos_inverter_cfet.spice`      | CFET CMOSインバータ回路（仮想） |
 
 ---
 
@@ -89,6 +91,25 @@ M1 out in 0 0 ngaa L=10n W=120n
 M2 out in vdd vdd pgaa L=10n W=120n
 
 .dc Vin 0 0.8 0.05
+.print dc V(in) V(out)
+.end
+```
+
+### 🧪 CFET CMOS Inverter
+
+```spice
+.include cfet_stack_model.spice
+
+Vdd vdd 0 DC 0.8
+Vin in 0 DC 0.0
+
+* Stacked PMOS (Top)
+M1 out in vdd vdd pcfet L=10n W=120n
+
+* Stacked NMOS (Bottom)
+M2 out in 0 0 ncfet L=10n W=120n
+
+.dc Vin 0 0.8 0.01
 .print dc V(in) V(out)
 .end
 ```
