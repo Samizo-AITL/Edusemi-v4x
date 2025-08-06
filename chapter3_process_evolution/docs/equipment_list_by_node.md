@@ -57,4 +57,4 @@ This list is based on practical experience and may differ from actual foundry im
 
 ---
 
-📎 **[目次に戻る / Back to Appendix](./)**  
+[← 戻る / Back to Chapter 3: Process Evolution Top](../chapter3_process_evolution/README.md)
