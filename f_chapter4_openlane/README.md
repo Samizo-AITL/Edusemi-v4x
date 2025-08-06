@@ -1,5 +1,14 @@
+---
+layout: default
+title: 特別編 第4章：FSM×PID×LLM制御系のOpenLaneによるRTL-to-GDSII実装
+---
+
+---
+
 # 📘 特別編 第4章：FSM×PID×LLM制御系のOpenLaneによるRTL-to-GDSII実装  
-# 📘 Appendix Chapter 4: RTL-to-GDSII Implementation of FSM×PID×LLM Control System with OpenLane
+# 📘 Special Chapter 4: RTL-to-GDSII Implementation of FSM×PID×LLM Control System with OpenLane
+
+---
 
 本章では、FSM・PID・統合SoCモジュールを対象に、Sky130 PDKを用いた  
 **OpenLaneによる配置配線フロー（RTL-to-GDSII）**を学習します。  
