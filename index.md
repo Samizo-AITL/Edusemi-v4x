@@ -188,4 +188,4 @@ Edusemiは単なる「教材」ではなく、**半導体技術を社会に橋�
 
 ---
 
-💬 [Edusemi教材に関する議論はこちら → Discussions](https://github.com/Samizo-AITL/Edusemi-v4x/discussions)
+**💬 [Edusemi教材に関する議論はこちら → Discussions](https://github.com/Samizo-AITL/Edusemi-v4x/discussions)**
