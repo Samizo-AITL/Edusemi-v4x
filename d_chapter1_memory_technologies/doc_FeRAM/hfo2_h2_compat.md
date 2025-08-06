@@ -1,3 +1,10 @@
+---
+layout: default
+title: 
+---
+
+---
+
 # ✅ HfZrO₂系強誘電体の水素工程適合性  
 # ✅ Hydrogen Compatibility of HfZrO₂-based Ferroelectrics
 
