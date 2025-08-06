@@ -1,5 +1,10 @@
-# 📘 第4章｜MOSトランジスタ特性と設計基盤  
-# 📘 Chapter 4 | MOS Transistor Characteristics and Design Infrastructure
+---
+layout: default
+title: 基礎編　第4章｜MOSトランジスタ特性と設計基盤
+---
+
+# 📘 基礎編　第4章｜MOSトランジスタ特性と設計基盤  
+**Chapter 4 | MOS Transistor Characteristics and Design Infrastructure**
 
 ---
 
