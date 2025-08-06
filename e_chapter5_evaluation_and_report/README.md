@@ -4,7 +4,7 @@ title: 実践編 第5章　設計結果の評価とレポート
 ---
 
 # 🧪 実践編 第5章：設計結果の評価とレポート
-**Chapter 5: Evaluation and Reporting of Design Results**
+**Practical Chapter 5: Evaluation and Reporting of Design Results**
 
 この章では、実際に設計・実装されたPoCブロック（FSM, MUX, Adder）に対して、  
 **シミュレーション結果・面積・タイミング・DRC/LVS** などの評価指標を用いて解析を行います。
