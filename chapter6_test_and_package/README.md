@@ -1,5 +1,10 @@
+---
+layout: default
+title: 基礎編 第6章：テスト・パッケージ・製品化
+---
+
 # 📘 基礎編 第6章：テスト・パッケージ・製品化  
-# 📘 Chapter 6: Test, Packaging, and Productization
+**Chapter 6: Test, Packaging, and Productization**
 
 
 ## 🔁 前章との接続｜Connection to Previous Chapter
