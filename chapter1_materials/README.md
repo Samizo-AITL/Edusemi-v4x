@@ -101,5 +101,5 @@ Edusemi-v4x/
 ---
 
 ### 🔙 戻る｜Back to Top
-#### 🏠 [Edusemi-v4x トップへ戻る｜Back to Edusemi-v4x Top](../README.md)
+**🏠 [Edusemi-v4x トップへ戻る｜Back to Edusemi-v4x Top](../README.md)**
 
