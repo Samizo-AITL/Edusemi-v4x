@@ -3,6 +3,8 @@ layout: default
 title: 実践編 第2章　Sky130実験とSPICE特性評価
 ---
 
+---
+
 # ⚗️ 実践編 第2章：Sky130実験とSPICE特性評価  
 **Practical Chapter 2: Sky130 Experiments and SPICE-Based Characterization**
 
