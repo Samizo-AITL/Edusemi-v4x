@@ -1,4 +1,10 @@
-# ⏰ 応用編 第9章：PLLとクロック設計｜Applied Chapter 9: PLL and Clock Design
+---
+layout: default
+title: 応用編 第9章　PLLとクロック設計 
+---
+
+# ⏰ 応用編 第9章：PLLとクロック設計
+**Applied Chapter 9: PLL and Clock Design**
 
 ---
 
