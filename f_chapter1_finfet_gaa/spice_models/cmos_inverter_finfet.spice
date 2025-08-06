@@ -1,0 +1,12 @@
+* CMOS Inverter using FinFET (15nm)
+.include finfet_15nm_model.spice
+.include pfinfet_15nm_model.spice
+
+Vdd vdd 0 DC 0.8
+Vin in 0 DC 0.0
+M1 out in 0 0 nfinfet L=15n W=120n
+M2 out in vdd vdd pfinfet L=15n W=120n
+
+.dc Vin 0 0.8 0.05
+.print dc V(in) V(out)
+.end
