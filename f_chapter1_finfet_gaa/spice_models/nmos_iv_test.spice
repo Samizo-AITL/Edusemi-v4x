@@ -1,0 +1,12 @@
+* I-V curve test for FinFET or GAA
+* Switch .include to use either model
+.include finfet_15nm_model.spice
+*.include gaa_5nm_model.spice
+
+Vgs gate 0 DC 0
+Vds drain 0 DC 0
+M1 drain gate 0 0 nfinfet L=15n W=120n
+
+.dc Vgs 0 1.0 0.05
+.print dc V(drain) I(Vds)
+.end
