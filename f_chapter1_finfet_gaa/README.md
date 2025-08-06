@@ -56,6 +56,29 @@ This chapter builds upon the process knowledge from Chapter 3 and extends it to 
 
 ---
 
+## 🔬 実装モデル・回路例｜SPICE Models and Circuits
+
+本章のFinFET・GAA構造に対応した **BSIM-CMG準拠のSpiceモデル群**は、以下に格納されています：
+
+📁 [`spice_models/`](./spice_models/)
+
+| ファイル名 / Filename | 内容 / Description |
+|------------------------|--------------------|
+| `finfet_15nm_model.spice`      | 15nm FinFET NMOS モデル |
+| `pfinfet_15nm_model.spice`     | 15nm FinFET PMOS モデル |
+| `gaa_5nm_model.spice`          | 5nm GAA NMOS モデル |
+| `pgaa_5nm_model.spice`         | 5nm GAA PMOS モデル |
+| `nmos_iv_test.spice`           | NMOSのI-V特性確認ベンチ |
+| `cmos_inverter_finfet.spice`   | FinFET CMOSインバータ回路 |
+| `cmos_inverter_gaa.spice`      | GAA CMOSインバータ回路 |
+
+> **🧪 特に、CMOSインバータ回路（FinFET / GAA）の `.dc` 解析を通じて、先端構造のVTC（伝達特性）を観察可能です。**  
+モデルは BSIM-CMGに準拠しており、LTspiceやngspiceで実行可能です。
+
+📘 詳細と使用例は [`spice_models/README.md`](./spice_models/README.md) を参照してください。
+
+---
+
 ## 🖼️ 図版フォルダ / Image Directory
 
 構造断面図、ゲート包囲図、スケーリングロードマップ等を `images/` フォルダに順次格納します。  
