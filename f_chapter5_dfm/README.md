@@ -1,5 +1,11 @@
+---
+layout: default
+title: 特別編 第5章　PDKとレイアウト検証による物理整合とDFM設計指針 
+---
+
+
 # 🧬 特別編 第5章：PDKとレイアウト検証による物理整合とDFM設計指針  
-# 🧬 Appendix Chapter 5: Physical Verification and DFM Design Guidelines with PDK
+**Special Chapter 5: Physical Verification and DFM Design Guidelines with PDK**
 
 本章では、Sky130 PDKを用いたレイアウト検証と、  
 GDSレベルでの物理整合・製造配慮（DFM）に関する設計指針を学びます。  
