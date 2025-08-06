@@ -78,4 +78,3 @@ This chapter introduces the concept of the **System Design Kit (SystemDK)** and 
 ## 🔙 戻る｜Back to Top
 
 [Edusemi-v4x トップへ戻る](../README.md)
-
