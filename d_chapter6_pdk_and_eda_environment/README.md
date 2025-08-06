@@ -83,4 +83,4 @@ PDKは、各ノードの **MOSデバイス物性を忠実に反映したSPICEモ
 ---
 
 ## 🔙 戻る｜Back to Top
-**🏠 [Edusemi-v4x トップへ戻る｜Back to Edusemi-v4x Top](../README.md)**
+**🏠 [Edusemi-v4x トップへ戻る｜Back to Edusemi-v4x Top](../README.md)** 
