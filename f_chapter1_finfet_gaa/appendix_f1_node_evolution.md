@@ -1,6 +1,14 @@
-# 📈 appendix_f1_node_evolution.md  
-## プロセス技術の進化と物理パラメータ推移  
+---
+layout: default
+title: プロセス技術の進化と物理パラメータ推移  
+---
+
+---
+
+# 📈 プロセス技術の進化と物理パラメータ推移  
 ## Evolution of Process Nodes and Key Physical Parameters
+
+---
 
 本資料では、**90nm以降のCMOSプロセス技術の進化**について、構造形式・物理パラメータ・主要課題の観点からまとめます。  
 This document summarizes the **evolution of CMOS process technology since the 90nm node**, focusing on structure types, physical parameters, and key challenges.
