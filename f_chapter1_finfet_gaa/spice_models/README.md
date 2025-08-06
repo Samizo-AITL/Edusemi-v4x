@@ -147,4 +147,4 @@ M2 out in vdd vdd pgaa L=10n W=120n
 
 ---
 
-🔝 **[第1章トップに戻る（FinFET / GAA / CFET）](../README.md)**
+🔝 **[特別編　第1章トップに戻る（FinFET / GAA / CFET）](../README.md)**
