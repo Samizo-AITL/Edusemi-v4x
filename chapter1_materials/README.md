@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 基礎編 第1章：半導体物性とMOS構造の基礎
+title: 基礎編 第1章：半導体物性とMOS構造の基礎　
 ---
 
 ---
