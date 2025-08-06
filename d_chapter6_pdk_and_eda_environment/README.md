@@ -5,7 +5,7 @@ title: 応用編 第6章　PDKとEDA環境
 
 ---
 
-# 🛠️ 応用編 第6章：PDKとEDA環境  
+# 🛠️ 応用編 第6章：PDKとEDA環境 
 **Applied Chapter 6: PDK and EDA Environment**
 
 ---
