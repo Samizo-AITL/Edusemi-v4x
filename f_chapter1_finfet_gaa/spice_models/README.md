@@ -1,7 +1,9 @@
-# SPICE Models for FinFET / GAA Transistors  
-FinFET / GAA トランジスタ用 SPICE モデル
+# SPICE Models for FinFET / GAA / CFET Transistors  
+FinFET / GAA / CFET トランジスタ用 SPICE モデル
 
-このディレクトリには、15nm世代のFinFETおよび5nm世代のGAA（Gate-All-Around）構造に対応した、BSIM-CMG準拠のSPICEモデルを収録しています。
+このディレクトリには、15nm世代のFinFET、5nm世代のGAA（Gate-All-Around）構造、そして将来構想のCFET（Complementary FET）スタック構造に対応した、**BSIM-CMG準拠または仮想構成のSPICEモデル**を収録しています。  
+
+各モデルは、I-V特性やCMOSインバータとしての動作確認に利用でき、**FinFET / GAA / CFETの構造特性と電気動作の違いをSpiceベースで学ぶ教材構成**となっています。
 
 ---
 
