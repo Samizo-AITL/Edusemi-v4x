@@ -3,6 +3,8 @@ layout: default
 title: 基礎編 第1章：半導体物性とMOS構造の基礎
 ---
 
+---
+
 # 📘 基礎編 第1章：半導体物性とMOS構造の基礎  
 **Fundamentals-Chapter 1: Fundamentals of Semiconductor Physics and MOS Structure**
 
