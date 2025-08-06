@@ -107,3 +107,9 @@ Planar MOSFETs were dominant in CMOS technologies prior to the 90nm node, offeri
 ---
 
 📘 次節：[1.2 FinFET構造の原理とプロセス概要](f1_2_finfet.md)
+
+---
+
+[← 戻る / Back to Special Chapter 1 Top](../f_chapter1_finfet_gaa/README.md)
+
+
