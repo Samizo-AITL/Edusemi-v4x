@@ -1,3 +1,10 @@
+---
+layout: default
+title: 
+---
+
+---
+
 # 📘 X線回折（X-ray Diffraction, XRD）
 
 > 日本語・英語併記 / Bilingual Format  
