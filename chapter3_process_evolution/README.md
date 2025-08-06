@@ -1,5 +1,10 @@
+---
+layout: default
+title: 基礎編 第3章：プロセス技術と設計限界の理解 
+---
+
 # 📘 基礎編 第3章：プロセス技術と設計限界の理解  
-# 📘 Chapter 3: Process Evolution and Design Limits in CMOS
+**Chapter 3: Process Evolution and Design Limits in CMOS**
 
 ---
 
