@@ -86,3 +86,5 @@ which addresses multiple physical domains (thermal, electrical, mechanical, EMI)
 - Educational Workshop on System Constraint Co-Design (DCA / Jisso Univ.)
 
 ---
+
+**[← 戻る / Back to Special Chapter 2 Top](./README.md)**
