@@ -1,3 +1,10 @@
+---
+layout: default
+title: 2a.5 EMI/EMC設計とノイズ対策
+---
+
+---
+
 # 2a.5 EMI/EMC設計とノイズ対策  
 **2a.5 EMI/EMC Design and Noise Mitigation**
 
