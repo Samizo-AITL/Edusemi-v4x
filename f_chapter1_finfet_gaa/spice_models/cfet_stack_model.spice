@@ -1,0 +1,7 @@
+* CFET Stack Model (仮想モデル)
+* Based on BSIM-CMG-like abstraction (Not physical)
+
+.model ncfet nmos (VTO=0.35 TOX=0.9n U0=250 cmob=0.08 CGDO=2e-10 CGSO=2e-10)
+.model pcfet pmos (VTO=-0.35 TOX=0.9n U0=100 cmob=0.03 CGDO=2e-10 CGSO=2e-10)
+
+* NOTE: This is an abstract representation of stacked NMOS and PMOS for CFET
