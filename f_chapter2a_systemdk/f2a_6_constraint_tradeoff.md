@@ -1,3 +1,10 @@
+---
+layout: default
+title: 2a.6 物理制約のトレードオフ設計
+---
+
+---
+
 # 2a.6 物理制約のトレードオフ設計  
 **2a.6 Trade-off Design for Physical Constraints**
 
