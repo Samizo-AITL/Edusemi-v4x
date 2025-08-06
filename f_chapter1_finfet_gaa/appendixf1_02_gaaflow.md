@@ -1,5 +1,14 @@
+---
+layout: default
+title: GAA Multi-Nanosheet FET 製造プロセスフロー  
+---
+
+---
+
 # 📘 GAA Multi-Nanosheet FET 製造プロセスフロー  
-# 📘 GAA Multi-Nanosheet FET Process Flow
+**GAA Multi-Nanosheet FET Process Flow**
+
+---
 
 本ドキュメントでは、**先端ノード（5nm〜2nm世代）で採用されるGAA（Gate-All-Around）Multi-Nanosheet FET**の製造プロセスを、**日本語・英語併記形式**で段階的に解説します。各ステップは**目的・条件・技術要点**の3点に整理され、**表形式＋太字メリハリ**で視覚的に理解しやすい構成となっています。
 
@@ -501,4 +510,6 @@
 | **技術要点 / Key Points** | 熱設計・歩留まり・コストの最適化 | Balance between thermal design, yield, and cost |
 
 ---
+
+[← 戻る / Back to Special Chapter 1 Top](../f_chapter1_finfet_gaa/README.md)
 
