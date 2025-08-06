@@ -95,6 +95,22 @@ M2 out in vdd vdd pgaa L=10n W=120n
 
 ---
 
+## 🖼️ CMOS Inverter VTC Plots / 伝達特性グラフ
+
+以下は、FinFETおよびGAA CMOSインバータの `.dc` 解析によって得られた伝達特性（Vin–Vout）の比較図です：
+
+### 🔷 FinFET CMOS Inverter (15nm)
+![FinFET VTC](./images/vtc_finfet_cmos_inverter.png)
+
+---
+
+### 🟢 GAA CMOS Inverter (5nm)
+![GAA VTC](./images/vtc_gaa_cmos_inverter.png)
+
+---
+
+📌 GAAの方がスレッショルド電圧がやや低く、スイッチング遷移も鋭くなる傾向が見られます。  
+このように、**構造の違いが電気特性にどのように現れるか**を、Spiceと図で確認できます。
 📌 `.dc`解析を行うことで、CMOSインバータの **伝達特性（VTCカーブ）** をプロットできます。  
 LTspice / ngspice / XYプロッターなどで確認してください。
 
