@@ -119,7 +119,7 @@ M2 out in 0 0 ncfet L=10n W=120n
 
 ## 🖼️ CMOS Inverter VTC Plots / 伝達特性グラフ
 
-以下は、FinFETおよびGAA CMOSインバータの `.dc` 解析によって得られた伝達特性（Vin–Vout）のグラフです：
+以下は、FinFET・GAA・CFET CMOSインバータの `.dc` 解析によって得られた伝達特性（Vin–Vout）のグラフです：
 
 ### 🔷 FinFET CMOS Inverter (15nm)
 ![FinFET VTC](./Images/vtc_finfet_cmos_inverter.png)
@@ -127,8 +127,11 @@ M2 out in 0 0 ncfet L=10n W=120n
 ### 🟢 GAA CMOS Inverter (5nm)
 ![GAA VTC](./Images/vtc_gaa_cmos_inverter.png)
 
-📌 GAA構造はしきい値電圧がやや低く、スイッチング遷移がより鋭くなる傾向が観察されます。  
-このように、**構造の違いが電気特性にどのように現れるか**を、Spiceと図を通じて学べます。
+### 🔴 CFET CMOS Inverter (Stacked CMOS)
+![CFET VTC](./Images/vtc_cfet_cmos_inverter.png)
+
+📌 GAAおよびCFET構造はFinFETに比べて**しきい値電圧が低く、スイッチング遷移が鋭い**傾向があります。特にCFETは構造上、**理想的な反転動作**に近づくよう設計されています。  
+このように、**構造の違いが電気特性にどのように反映されるか**を、Spice解析および図を通じて学ぶことができます。
 
 > `.dc` 解析結果から得られる **VTCカーブ** は、LTspice / ngspice / Python等でも視覚化可能です。
 
