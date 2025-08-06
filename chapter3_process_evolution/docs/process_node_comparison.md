@@ -1,5 +1,12 @@
+---
+layout: default
+title: プロセスノード比較：180nm / 130nm / 90nm
+---
+
+---
+
 # 📐 プロセスノード比較：180nm / 130nm / 90nm  
-# Process Node Comparison: 180nm / 130nm / 90nm
+**Process Node Comparison: 180nm / 130nm / 90nm**
 
 本資料では、180nm・130nm・90nm 各世代のCMOSロジックプロセスを比較し、技術進化・製造要素・設計上のポイントを明確にします。  
 This document compares CMOS logic processes across the 180nm, 130nm, and 90nm nodes, highlighting technology evolution, manufacturing features, and design implications.
