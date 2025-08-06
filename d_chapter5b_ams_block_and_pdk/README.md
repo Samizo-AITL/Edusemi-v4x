@@ -1,5 +1,10 @@
-# 🌟 第5b章：製造技術で切り拓くアナログ差別化 — 1/fノイズ半減の実現  
-*Chapter 5b: Differentiated Analog Modules via Manufacturing Technology — Realizing 50% Reduction in 1/f Noise*
+---
+layout: default
+title: 応用編　第5b章　製造技術で切り拓くアナログ差別化 — 1/fノイズ半減の実現
+---
+
+# 🌟 応用編　第5b章：製造技術で切り拓くアナログ差別化 — 1/fノイズ半減の実現  
+**Applied Chapter 5b: Differentiated Analog Modules via Manufacturing Technology — Realizing 50% Reduction in 1/f Noise**
 
 ---
 
