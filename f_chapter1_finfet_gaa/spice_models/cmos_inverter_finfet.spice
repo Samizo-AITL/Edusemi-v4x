@@ -9,4 +9,4 @@ M2 out in vdd vdd pfinfet L=15n W=120n
 
 .dc Vin 0 0.8 0.05
 .print dc V(in) V(out)
-.end
+.end 
