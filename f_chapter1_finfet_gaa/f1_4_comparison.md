@@ -1,3 +1,10 @@
+---
+layout: default
+title: 1.4 FinFETとGAAの比較：構造・性能・設計影響の視点から
+---
+
+---
+
 # 🧬 1.4 FinFETとGAAの比較：構造・性能・設計影響の視点から  
 ## 1.4 Comparison of FinFET and GAA: Structure, Performance, and Design Impacts
 
@@ -92,4 +99,8 @@ FinFET and GAA represent two key approaches to 3D gate control in advanced CMOS 
 ---
 
 📘 本章はここまでです。補足資料は以下をご参照ください：  
-- [`appendixf1_03_finfet_vs_gaa.md`](./appendixf1_03_finfet_vs_gaa.md)：比較まとめ＋図解  
+- [`appendixf1_03_finfet_vs_gaa.md`](./appendixf1_03_finfet_vs_gaa.md)：比較まとめ＋図解
+
+---
+
+[← 戻る / Back to Special Chapter 1 Top](../f_chapter1_finfet_gaa/README.md)
