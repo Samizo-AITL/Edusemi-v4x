@@ -1,3 +1,10 @@
+---
+layout: default
+title: 
+---
+
+---
+
 # FeRAM / 薄膜ピエゾ特性評価原理  
 **FeRAM and Thin-Film Piezoelectric Characterization Principles**  
 （教育資料・社外公開可）
