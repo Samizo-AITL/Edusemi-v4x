@@ -1,4 +1,16 @@
+---
+layout: default
+title: Edusemi-v4x Top Page
+---
+
+---
+
 # 🎓 **Edusemi-v4x: Foundational Educational Materials for Semiconductor Product Development**
+
+🇯🇵 **[日本語版 README](./README.md)**  
+　 *Japanese version with full structure and chapter descriptions*
+
+---
 
 ✍️ **Introduction**
 
@@ -10,11 +22,6 @@ Yet these domains are **deeply interconnected**—**circuit behavior** depends o
 
 **Edusemi** addresses this by emphasizing the **structural interconnections** between foundational technologies.  
 While keeping an eye on application domains, the focus is on cultivating a **deep, practical understanding** of how these fundamentals work **together**.
-
----
-
-🇯🇵 **[日本語版 README](./README.md)**  
-　 *Japanese version with full structure and chapter descriptions*
 
 ---
 
