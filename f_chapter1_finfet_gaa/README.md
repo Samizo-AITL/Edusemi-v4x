@@ -58,22 +58,24 @@ This chapter builds upon the process knowledge from Chapter 3 and extends it to 
 
 ## 🔬 実装モデル・回路例｜SPICE Models and Circuits
 
-本章のFinFET・GAA構造に対応した **BSIM-CMG準拠のSpiceモデル群**は、以下に格納されています：
+本章の FinFET・GAA 構造および将来構想の CFET 構造に対応した **BSIM-CMG準拠または仮想定義のSpiceモデル群**は、以下に格納されています：
 
 📁 [`spice_models/`](./spice_models/)
 
 | ファイル名 / Filename | 内容 / Description |
 |------------------------|--------------------|
-| `finfet_15nm_model.spice`      | 15nm FinFET NMOS モデル |
-| `pfinfet_15nm_model.spice`     | 15nm FinFET PMOS モデル |
-| `gaa_5nm_model.spice`          | 5nm GAA NMOS モデル |
-| `pgaa_5nm_model.spice`         | 5nm GAA PMOS モデル |
-| `nmos_iv_test.spice`           | NMOSのI-V特性確認ベンチ |
-| `cmos_inverter_finfet.spice`   | FinFET CMOSインバータ回路 |
-| `cmos_inverter_gaa.spice`      | GAA CMOSインバータ回路 |
+| [`finfet_15nm_model.spice`](./spice_models/finfet_15nm_model.spice)      | 15nm FinFET NMOS モデル |
+| [`pfinfet_15nm_model.spice`](./spice_models/pfinfet_15nm_model.spice)    | 15nm FinFET PMOS モデル |
+| [`gaa_5nm_model.spice`](./spice_models/gaa_5nm_model.spice)              | 5nm GAA NMOS モデル |
+| [`pgaa_5nm_model.spice`](./spice_models/pgaa_5nm_model.spice)            | 5nm GAA PMOS モデル |
+| [`cfet_stack_model.spice`](./spice_models/cfet_stack_model.spice)        | 仮想CFET NMOS/PMOSスタックモデル |
+| [`nmos_iv_test.spice`](./spice_models/nmos_iv_test.spice)                | NMOSのI-V特性確認ベンチ |
+| [`cmos_inverter_finfet.spice`](./spice_models/cmos_inverter_finfet.spice) | FinFET CMOSインバータ回路 |
+| [`cmos_inverter_gaa.spice`](./spice_models/cmos_inverter_gaa.spice)     | GAA CMOSインバータ回路 |
+| [`cmos_inverter_cfet.spice`](./spice_models/cmos_inverter_cfet.spice)   | CFET CMOSインバータ回路（仮想） |
 
-> **🧪 特に、CMOSインバータ回路（FinFET / GAA）の `.dc` 解析を通じて、先端構造のVTC（伝達特性）を観察可能です。**  
-モデルは BSIM-CMGに準拠しており、LTspiceやngspiceで実行可能です。
+> **🧪 特に、CMOSインバータ回路（FinFET / GAA / CFET）の `.dc` 解析を通じて、先端構造の VTC（伝達特性） を観察可能です。**  
+モデルは BSIM-CMGに準拠しており、LTspiceやngspiceで実行可能です（CFETは仮想定義）。
 
 📘 詳細と使用例は [`spice_models/README.md`](./spice_models/README.md) を参照してください。
 
