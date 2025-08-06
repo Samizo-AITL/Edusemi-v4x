@@ -89,3 +89,5 @@ PDN設計は、SI/PIの両面から整合が求められる：
 - UCIe PHY Spec v1.1, Section 6 (Electrical Specs)
 
 ---
+
+**[← 戻る / Back to Special Chapter 2 Top](./README.md)**
