@@ -9,15 +9,15 @@ FinFET / GAA トランジスタ用 SPICE モデル
 
 | File | Description |
 |------|-------------|
-| `finfet_15nm_model.spice`        | 15nm FinFET NMOS モデル（BSIM-CMG） |
-| `pfinfet_15nm_model.spice`       | 15nm FinFET PMOS モデル |
-| `gaa_5nm_model.spice`            | 5nm GAA NMOS モデル（Multi-Nanosheet） |
-| `pgaa_5nm_model.spice`           | 5nm GAA PMOS モデル |
-| `nmos_iv_test.spice`             | NMOSのI-V特性確認用ベンチマーク回路 |
-| `cmos_inverter_finfet.spice`     | FinFET CMOSインバータ回路 |
-| `cmos_inverter_gaa.spice`        | GAA CMOSインバータ回路 |
-| `cfet_stack_model.spice`        | 仮想CFET NMOS/PMOSスタックモデル |
-| `cmos_inverter_cfet.spice`      | CFET CMOSインバータ回路（仮想） |
+| [`finfet_15nm_model.spice`](./finfet_15nm_model.spice)        | 15nm FinFET NMOS モデル（BSIM-CMG） |
+| [`pfinfet_15nm_model.spice`](./pfinfet_15nm_model.spice)      | 15nm FinFET PMOS モデル |
+| [`gaa_5nm_model.spice`](./gaa_5nm_model.spice)                | 5nm GAA NMOS モデル（Multi-Nanosheet） |
+| [`pgaa_5nm_model.spice`](./pgaa_5nm_model.spice)              | 5nm GAA PMOS モデル |
+| [`nmos_iv_test.spice`](./nmos_iv_test.spice)                  | NMOSのI-V特性確認用ベンチマーク回路 |
+| [`cmos_inverter_finfet.spice`](./cmos_inverter_finfet.spice)  | FinFET CMOSインバータ回路 |
+| [`cmos_inverter_gaa.spice`](./cmos_inverter_gaa.spice)        | GAA CMOSインバータ回路 |
+| [`cfet_stack_model.spice`](./cfet_stack_model.spice)          | 仮想CFET NMOS/PMOSスタックモデル |
+| [`cmos_inverter_cfet.spice`](./cmos_inverter_cfet.spice)      | CFET CMOSインバータ回路（仮想） |
 
 ---
 
