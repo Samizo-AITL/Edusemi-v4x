@@ -1,3 +1,10 @@
+---
+layout: default
+title: 1.3 GAA構造：完全ゲート包囲による短チャネル制御の極限へ  
+---
+
+---
+
 # 🧬 1.3 GAA構造：完全ゲート包囲による短チャネル制御の極限へ  
 ## 1.3 GAA Structure: Ultimate Short-Channel Control with Gate-All-Around
 
@@ -107,3 +114,9 @@ GAA offers excellent scalability and superior short-channel control. While manuf
 ---
 
 📘 次節：[1.4 プレーナ vs FinFET vs GAAの特性比較](f1_4_comparison.md)
+
+---
+
+[← 戻る / Back to Special Chapter 1 Top](../f_chapter1_finfet_gaa/README.md)
+
+
