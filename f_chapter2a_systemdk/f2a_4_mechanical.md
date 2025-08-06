@@ -1,3 +1,10 @@
+---
+layout: default
+title: 2a.4 実装応力と界面信頼性
+---
+
+---
+
 # 2a.4 実装応力と界面信頼性  
 **2a.4 Mechanical Stress and Interface Reliability**
 
