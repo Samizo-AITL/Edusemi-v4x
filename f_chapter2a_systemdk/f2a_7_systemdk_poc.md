@@ -1,3 +1,10 @@
+---
+layout: default
+title: f2a_7_systemdk_poc.md
+---
+
+---
+
 # 🎓 f2a_7_systemdk_poc.md  
 **SystemDKベースの統合PoC演習課題**  
 **SystemDK-Based PoC Exercise**
