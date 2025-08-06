@@ -1,5 +1,12 @@
-# 🧠 FSM×PID×LLMによる統合制御システムのSoC実装手法  
-# 🧠 SoC Implementation of Integrated Control System with FSM×PID×LLM
+---
+layout: default
+title: 特別編 第3章 FSM×PID×LLMによる統合制御システムのSoC実装手法
+---
+
+---
+
+# 🧠　特別編 第3章　: FSM×PID×LLMによる統合制御システムのSoC実装手法  
+**Special Chapter 3 : SoC Implementation of Integrated Control System with FSM×PID×LLM**
 
 本章では、**AITL-H構想（FSM・PID・LLMによる三層制御）**をベースに、  
 その統合制御システムを**SoCとして設計・実装**する手法を解説します。  
