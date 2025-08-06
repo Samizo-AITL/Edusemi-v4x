@@ -1,3 +1,10 @@
+---
+layout: default
+title: 補足資料 / Appendix：FinFETとGAAの構造・特性・設計影響の比較まとめ
+---
+
+---
+
 # 🧩 補足資料 / Appendix：FinFETとGAAの構造・特性・設計影響の比較まとめ  
 **Comparison Summary of FinFET and GAA (Gate-All-Around) Devices**
 
@@ -91,3 +98,6 @@ This appendix compares two advanced CMOS transistor structures — FinFET and GA
 - **GitHub**：[Samizo-AITL](https://github.com/Samizo-AITL)
 
 ---
+
+[← 戻る / Back to Special Chapter 1 Top](../f_chapter1_finfet_gaa/README.md)
+
