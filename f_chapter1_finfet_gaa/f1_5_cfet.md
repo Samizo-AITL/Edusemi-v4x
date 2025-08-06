@@ -93,5 +93,5 @@ This section explains the CFET concept in the context of FinFET and GAA evolutio
 
 ---
 
-### 🏠 [特別編トップへ戻る｜Back to Special Edition Top](README.md)
+[← 戻る / Back to Special Chapter 1 Top](../f_chapter1_finfet_gaa/README.md)
 
