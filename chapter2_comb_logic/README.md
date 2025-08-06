@@ -3,6 +3,8 @@ layout: default
 title: 基礎編 第2章：デジタル論理と論理回路設計
 ---
 
+---
+
 # 📘 基礎編 第2章：デジタル論理と論理回路設計  
 **Fundamentals-Chapter 2: Digital Logic and Logic Circuit Design**
 
