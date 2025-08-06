@@ -6,13 +6,13 @@ theme: minima
 
 kramdown:
   input: GFM
-  parse_block_html: true   # ✅ HTMLタグ（img, div等）を有効化
+  parse_block_html: true   # ✅ HTMLブロック（<img>や<div>）を有効化
   hard_wrap: false
 
-exclude:
+exclude:                   # ✅ ビルドから除外するファイル・ディレクトリ
   - Gemfile
   - Gemfile.lock
   - node_modules
   - vendor
 
-permalink: pretty
+permalink: pretty          # ✅ URLの末尾から .html を省略
