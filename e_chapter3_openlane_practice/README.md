@@ -1,4 +1,9 @@
-# 🏗️ 第3章：OpenLaneによるデジタル設計実習  
+---
+layout: default
+title: 実践編　第3章　OpenLaneによるデジタル設計実習
+---
+
+# 🏗️ 実践編　第3章：OpenLaneによるデジタル設計実習  
 **Practical Chapter 3: Digital Design Practice Using OpenLane**
 
 ---
