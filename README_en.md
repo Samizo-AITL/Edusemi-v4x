@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Edusemi-v4x Top Page
+title: Edusemi-v4x/README_en.md
 ---
 
 ---
