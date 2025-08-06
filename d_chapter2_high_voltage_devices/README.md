@@ -3,8 +3,10 @@ layout: default
 title: 応用編  第2章　高耐圧デバイス 
 ---
 
-# ⚡ 応用編  第2章　高耐圧デバイス
-**Applied Chapter 2 High Voltage Devices**
+---
+
+# ⚡ 応用編 第2章 : 高耐圧デバイス
+**Applied Chapter 2 : High Voltage Devices**
 
 ---
 
