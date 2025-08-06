@@ -99,3 +99,6 @@ title: 付録A-7：デュアルダマシン配線プロセスの詳細と比較
 > **Al/W interconnects remain pedagogically valuable** and accessible.
 
 ---
+
+[← 戻る / Back to Chapter 3: Process Evolution Top](../chapter3_process_evolution/README.md)
+
