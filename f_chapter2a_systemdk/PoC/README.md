@@ -43,6 +43,12 @@ with **GAA**, **AMS**, and **MRAM** functional blocks.
        style="max-width: 600px; width: 80%; height: auto;">
 </p>
 
+### 📊 構造図｜Block Diagram
+
+<img src="/Edusemi-v4x/f_chapter2a_systemdk/PoC/images/Physical_Design_PoC_Manual_Flowchart.png"
+     alt="SystemDK PoC Flowchart"
+     style="display: block; margin: auto; width: 60%;">
+
 ---
 
 ## 📚 セクション構成｜Section Structure
