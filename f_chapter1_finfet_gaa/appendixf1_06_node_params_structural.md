@@ -1,5 +1,11 @@
-# 🧬 appendixf1_06_node_params_structural.md
-## FinFET / GAA / CFET 各ノードの構造パラメータ比較  
+---
+layout: default
+title: FinFET / GAA / CFET 各ノードの構造パラメータ比較
+---
+
+---
+
+# 🧬 FinFET / GAA / CFET 各ノードの構造パラメータ比較  
 **Node Structural Parameters: $n$, $H$, $W$ for FinFET, GAA, and CFET**
 
 ---
@@ -39,4 +45,9 @@ This appendix provides structural parameters across nodes including number of ch
 ## 🔗 関連資料 / Related
 
 - [appendixf1_05_node_params.md](./appendixf1_05_node_params.md)  
-- [appendixf1_05a_cfet_params.md](./appendixf1_05a_cfet_params.md)  
+- [appendixf1_05a_cfet_params.md](./appendixf1_05a_cfet_params.md)
+
+---
+
+[← 戻る / Back to Special Chapter 1 Top](../f_chapter1_finfet_gaa/README.md)
+
