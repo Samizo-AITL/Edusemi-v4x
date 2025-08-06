@@ -1,0 +1,12 @@
+* CMOS Inverter using GAA (5nm)
+.include gaa_5nm_model.spice
+.include pgaa_5nm_model.spice
+
+Vdd vdd 0 DC 0.8
+Vin in 0 DC 0.0
+M1 out in 0 0 ngaa L=10n W=120n
+M2 out in vdd vdd pgaa L=10n W=120n
+
+.dc Vin 0 0.8 0.05
+.print dc V(in) V(out)
+.end
