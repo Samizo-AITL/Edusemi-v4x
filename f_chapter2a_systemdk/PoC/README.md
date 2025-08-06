@@ -22,9 +22,9 @@ with **GAA**, **AMS**, and **MRAM** functional blocks.
 
 ## 📊 構造図｜Block Diagram
 
-<p align="center">
-  <img src="./images/Physical_Design_PoC_Manual_Flowchart.png" alt="Physical Design PoC Manual Diagram" style="width:60%;">
-</p>
+<img src="./images/Physical_Design_PoC_Manual_Flowchart.png"
+     alt="Physical Design PoC Manual Diagram"
+     style="display: block; margin: auto; width: 60%;">
 
 ---
 
