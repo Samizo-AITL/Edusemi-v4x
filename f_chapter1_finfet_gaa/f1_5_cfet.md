@@ -1,3 +1,10 @@
+---
+layout: default
+title: 1.5 CFET構造とスタック型MOSの展望
+---
+
+---
+
 # 1.5 CFET構造とスタック型MOSの展望  
 # 1.5 CFET Structure and Outlook for Stacked MOS
 
@@ -87,3 +94,4 @@ This section explains the CFET concept in the context of FinFET and GAA evolutio
 ---
 
 ### 🏠 [特別編トップへ戻る｜Back to Special Edition Top](README.md)
+
