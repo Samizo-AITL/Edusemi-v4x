@@ -44,15 +44,15 @@ img {
   margin: 1.5em auto;
 }
 
-/* サイズ指定クラス（任意で使用） */
+/* カスタムサイズクラス */
 img.small {
-  max-width: 40%;
+  width: 40%;
 }
 img.medium {
-  max-width: 60%;
+  width: 60%;
 }
 img.large {
-  max-width: 80%;
+  width: 80%;
 }
 
 /* =========================
@@ -85,7 +85,7 @@ th, td {
   padding: 0.6em 1em;
   text-align: left;
 }
-table th {
+th {
   background-color: #f0f3f6;
   font-weight: 600;
 }
@@ -111,7 +111,7 @@ ul, ol {
 }
 
 /* =========================
-   ヘッダー・フッター（オプション）
+   ヘッダー・フッター（共通構造）
    ========================= */
 header, footer {
   text-align: center;
@@ -124,17 +124,17 @@ footer p {
 }
 
 /* =========================
-   モバイル対応（レスポンシブ調整）
+   モバイル対応（レスポンシブ）
    ========================= */
 @media screen and (max-width: 768px) {
   body {
     font-size: 15px;
     padding: 1rem;
   }
-  h1, h2, h3 {
+  h1, h2, h3, h4 {
     font-size: 1.2em;
   }
   img.small, img.medium, img.large {
-    max-width: 100%;
+    width: 100% !important;
   }
 }
