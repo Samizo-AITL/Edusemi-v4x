@@ -97,7 +97,7 @@ Edusemi-v4x/
 
 ---
 
-### 👤 著者・ライセンス｜Author & License
+## 👤 著者・ライセンス｜Author & License
 
 | 項目｜Item | 内容｜Details |
 |------------|----------------------------|
@@ -108,5 +108,5 @@ Edusemi-v4x/
 
 ---
 
-### 🔙 戻る｜Back to Top
+## 🔙 戻る｜Back to Top
 **🏠 [Edusemi-v4x トップへ戻る｜Back to Edusemi-v4x Top](../README.md)**
