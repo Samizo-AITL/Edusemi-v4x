@@ -1,3 +1,10 @@
+---
+layout: default
+title: 2a.10 設計フローに基づくSystemDK構成
+---
+
+---
+
 # 2a.10 設計フローに基づくSystemDK構成  
 **2a.10 SystemDK Architecture Based on Structured Design Flow**
 
