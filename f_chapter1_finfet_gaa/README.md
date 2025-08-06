@@ -3,8 +3,10 @@ layout: default
 title: 特別編 第1章　先端ノード技術（FinFET、GAA、CFET） 
 ---
 
+---
+
 # 🧬 特別編 第1章：先端ノード技術（FinFET、GAA、CFET）  
-**Chapter 1 Special Edition: Advanced Node Technologies – FinFET, GAA & CFET**
+**Special Chapter 1 : Advanced Node Technologies – FinFET, GAA & CFET**
 
 ---
 
