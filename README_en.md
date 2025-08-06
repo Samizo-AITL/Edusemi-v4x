@@ -196,6 +196,4 @@ You are free to **use**, **modify**, and **redistribute**—for **educational**,
 
 ---
 
-💬 [Join the Discussion on Edusemi → GitHub Discussions](https://github.com/Samizo-AITL/Edusemi-v4x/discussions)
-
----
+**💬 [Join the Discussion on Edusemi → GitHub Discussions](https://github.com/Samizo-AITL/Edusemi-v4x/discussions)**
