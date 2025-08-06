@@ -1,5 +1,10 @@
-# 📘 第5章｜SoC設計フローとEDAツール  
-# 📘 Chapter 5 | SoC Design Flows and EDA Tools
+---
+layout: default
+title: 基礎編　第5章｜SoC設計フローとEDAツール 
+---
+
+# 📘 基礎編　第5章｜SoC設計フローとEDAツール  
+**Chapter 5 | SoC Design Flows and EDA Tools**
 
 ---
 
