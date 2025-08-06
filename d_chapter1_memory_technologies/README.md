@@ -3,6 +3,8 @@ layout: default
 title: 応用編 第1章｜メモリ技術の構造と選定指針
 ---
 
+---
+
 # 💾 応用編 第1章｜メモリ技術の構造と選定指針  
 **Applied Chapter 1 | Memory Technologies – Structure and Selection Guidelines**
 
