@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Appendix F1-04: CFETの構造進化と技術的課題 
+title: Appendix F1-04 CFETの構造進化と技術的課題 
 ---
 
 ---
