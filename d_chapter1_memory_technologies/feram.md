@@ -1,3 +1,10 @@
+---
+layout: default
+title: 
+---
+
+---
+
 # 🔋 FeRAM（Ferroelectric Random Access Memory）｜FeRAM: Ferroelectric RAM
 
 ---
