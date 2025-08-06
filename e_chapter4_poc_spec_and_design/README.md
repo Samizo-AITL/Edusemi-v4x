@@ -3,6 +3,8 @@ layout: default
 title: 実践編 第4章　PoC仕様書と設計展開
 ---
 
+---
+
 # 🧩 実践編 第4章：PoC仕様書と設計展開  
 **Practical Chapter 4: PoC Specifications and Design Implementation**
 
