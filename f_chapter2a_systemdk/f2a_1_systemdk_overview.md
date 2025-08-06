@@ -73,4 +73,4 @@ In addition to chip-level expertise, engineers must acquire the ability to **des
 
 ---
 
-[← 戻る / Back to Special Chapter 2 Top](../README.md)
+**[← 戻る / Back to Special Chapter 2 Top](./README.md)**
