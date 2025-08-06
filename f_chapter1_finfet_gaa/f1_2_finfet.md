@@ -1,3 +1,10 @@
+---
+layout: default
+title: 1.2 FinFET構造：立体ゲートによる制御強化
+---
+
+---
+
 # 🧬 1.2 FinFET構造：立体ゲートによる制御強化  
 ## 1.2 FinFET Structure: Enhanced Electrostatic Control via 3D Gate
 
@@ -94,3 +101,7 @@ FinFET overcomes the fundamental limitations of planar MOSFETs by introducing 3D
 ---
 
 📘 次節：[1.3 GAA構造とMulti-Nanosheet技術](f1_3_gaa.md)
+
+---
+
+[← 戻る / Back to Special Chapter 1 Top](../f_chapter1_finfet_gaa/README.md)
