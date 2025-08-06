@@ -1,3 +1,10 @@
+---
+layout: default
+title: 2a.1 SystemDKの全体像と設計階層
+---
+
+---
+
 # 2a.1 SystemDKの全体像と設計階層  
 **2a.1 Overview and Hierarchy of SystemDK**
 
