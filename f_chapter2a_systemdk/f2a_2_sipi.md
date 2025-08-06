@@ -3,6 +3,8 @@ layout: default
 title: 2a.2 SI/PIとPDN設計
 ---
 
+---
+
 # 2a.2 SI/PIとPDN設計  
 **2a.2 Signal/Power Integrity and PDN Design**
 
