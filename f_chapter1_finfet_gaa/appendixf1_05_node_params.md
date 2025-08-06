@@ -167,6 +167,6 @@ $$
 
 ---
 
-🔝 [Back to Special Chapter 1 Top (FinFET / GAA / CFET)](./README.md)
+🔝 **[Back to Special Chapter 1 Top (FinFET / GAA / CFET)](./README.md)**
 
 ---
