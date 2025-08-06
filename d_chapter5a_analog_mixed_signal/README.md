@@ -1,5 +1,10 @@
-# 🧩 応用編 第5a章：0.18μm AMS設計技法  
-# 🧩 Applied Chapter 5a: 0.18μm AMS Design Techniques
+---
+layout: default
+title: 応用編 第5a章 0.18μm AMS設計技法
+---
+
+# 🧩 応用編 第5a章 0.18μm AMS設計技法  
+**Applied Chapter 5a: 0.18μm AMS Design Techniques**
 
 ---
 
