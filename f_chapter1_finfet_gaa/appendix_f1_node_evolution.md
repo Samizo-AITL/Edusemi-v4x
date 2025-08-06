@@ -71,4 +71,4 @@ Released under the **MIT License**, permitting free use and modification for edu
 
 ---
 
-📎 **[目次に戻る / Back to Appendix Index](./)**  
+[← 戻る / Back to Special Chapter 1 Top](../f_chapter1_finfet_gaa/README.md)
