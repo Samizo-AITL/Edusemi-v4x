@@ -6,7 +6,7 @@ title: 特別編 第4章：FSM×PID×LLM制御系のOpenLaneによるRTL-to-GDSI
 ---
 
 # 📘 特別編 第4章：FSM×PID×LLM制御系のOpenLaneによるRTL-to-GDSII実装  
-# 📘 Special Chapter 4: RTL-to-GDSII Implementation of FSM×PID×LLM Control System with OpenLane
+**Special Chapter 4: RTL-to-GDSII Implementation of FSM×PID×LLM Control System with OpenLane**
 
 ---
 
