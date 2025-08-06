@@ -1,6 +1,6 @@
 ---
 layout: default
-title: SystemDKにおける熱・応力・ノイズ制約の設計対応
+title: 特別編 第2a章　SystemDKにおける熱・応力・ノイズ制約の設計対応
 ---
 
 ---
