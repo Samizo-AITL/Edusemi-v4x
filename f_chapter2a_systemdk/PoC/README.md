@@ -26,10 +26,6 @@ with **GAA**, **AMS**, and **MRAM** functional blocks.
   <img src="./images/Physical_Design_PoC_Manual_Flowchart.png" alt="Physical Design PoC Manual Diagram" width="50%">
 </div>
 
-<div align="center">
-  <img src="/Edusemi-v4x/f_chapter2a_systemdk/PoC/images/Physical_Design_PoC_Manual_Flowchart.png" alt="Physical Design PoC Manual Diagram" width="60%">
-</div>
-
 ---
 
 ## 📚 セクション構成｜Section Structure
