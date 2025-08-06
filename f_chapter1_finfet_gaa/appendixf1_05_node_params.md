@@ -3,6 +3,8 @@ title: Parameter Comparison Table for FinFET and GAA Generations
 layout: default
 ---
 
+---
+
 # 📊 Parameter Comparison Table for FinFET and GAA Generations
 
 ---
@@ -167,6 +169,5 @@ $$
 
 ---
 
-🔝 **[Back to Special Chapter 1 Top (FinFET / GAA / CFET)](./README.md)**
+[← 戻る / Back to Special Chapter 1 Top](../f_chapter1_finfet_gaa/README.md)
 
----
