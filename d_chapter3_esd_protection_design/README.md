@@ -3,8 +3,10 @@ layout: default
 title: 応用編 第3章　ESD設計
 ---
 
-# ⚠️ 応用編 第3章　ESD設計 
-**Applied Chapter 3. ESD Protection Design**
+---
+
+# ⚠️ 応用編 第3章　: ESD設計 
+**Applied Chapter 3 : ESD Protection Design**
 
 ---
 
