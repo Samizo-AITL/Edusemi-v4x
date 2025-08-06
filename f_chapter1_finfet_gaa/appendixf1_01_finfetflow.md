@@ -8,6 +8,8 @@ title: 補足資料 / Appendix：FinFET 製造プロセスフロー（全48ス�
 # 🧬 補足資料 / Appendix：FinFET 製造プロセスフロー（全48ステップ）  
 **FinFET Full Process Flow – 48-Step Breakdown for Advanced Nodes**
 
+---
+
 本資料では、FinFET（Fin型トランジスタ）の製造プロセスを48ステップに分解し、各ステップの**目的・条件・技術ポイント**を詳細に解説します。  
 This document describes the full FinFET manufacturing flow, broken into **48 steps** with detailed **purpose, conditions, and key technical notes** for each.
 
