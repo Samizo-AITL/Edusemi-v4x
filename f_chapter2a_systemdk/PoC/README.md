@@ -22,10 +22,6 @@ with **GAA**, **AMS**, and **MRAM** functional blocks.
 
 ### 📊 構造図｜Block Diagram
 
-<div align="center">
-  <img src="./images/Physical_Design_PoC_Manual_Flowchart.png" alt="SystemDK PoC Flowchart" width="75%">
-</div>
-
 <!-- GitHub表示用（画像小さめ） -->
 ![SystemDK PoC Flowchart](./images/Physical_Design_PoC_Manual_Flowchart.png)
 
