@@ -2,11 +2,12 @@ title: Edusemi
 description: 教育ポータル
 
 markdown: kramdown
-theme: null         # ← Jekyllテーマを無効化
-exclude:            # ← Jekyllが処理しないファイル・フォルダ
+theme: minima        # ✅ Jekyll公式テーマ「minima」を有効化
+
+exclude:             # ✅ Jekyllが処理対象外とするファイル・フォルダ
   - Gemfile
   - Gemfile.lock
   - node_modules
   - vendor
 
-permalink: pretty   # ← .html拡張子をURLから省略
+permalink: pretty    # ✅ URLから .html を省略可能に
