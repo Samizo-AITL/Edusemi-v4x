@@ -1,5 +1,14 @@
+---
+layout: default
+title: SPICE Models for FinFET / GAA / CFET Transistors
+---
+
+---
+
 # SPICE Models for FinFET / GAA / CFET Transistors  
-FinFET / GAA / CFET トランジスタ用 SPICE モデル
+**FinFET / GAA / CFET トランジスタ用 SPICE モデル**
+
+---
 
 このディレクトリには、15nm世代のFinFET、5nm世代のGAA（Gate-All-Around）構造、そして将来構想のCFET（Complementary FET）スタック構造に対応した、**BSIM-CMG準拠または仮想構成のSPICEモデル**を収録しています。  
 
@@ -175,4 +184,4 @@ M2 out in 0 0 ncfet L=10n W=120n
 
 ---
 
-🔝 **[特別編　第1章トップに戻る（FinFET / GAA / CFET）](../README.md)**
+[← 戻る / Back to Special Chapter 1 Top](../f_chapter1_finfet_gaa/README.md)
