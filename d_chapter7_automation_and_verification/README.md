@@ -1,5 +1,10 @@
+---
+layout: default
+title: 応用編 第7章　自動化と実装検証技術
+---
+
 # 🤖 応用編 第7章：自動化と実装検証技術  
-# 🤖 Applied Chapter 7: Automation and Implementation Verification
+**Applied Chapter 7: Automation and Implementation Verification**
 
 ---
 
