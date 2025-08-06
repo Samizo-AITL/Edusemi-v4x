@@ -97,12 +97,5 @@ SystemDKを用いた実装設計において、物理制約（SI/PI、熱、応�
 
 ---
 
-## 👤 著者・ライセンス｜Author & License
+**[← 戻る / Back to Special Chapter 2 Top](./README.md)**
 
-| 項目 | 内容 |
-|------|------|
-| 著者 | 三溝 真一（Shinichi Samizo） |
-| GitHub | [Samizo-AITL](https://github.com/Samizo-AITL) |
-| ライセンス | MIT License（再配布・改変自由） |
-
----
