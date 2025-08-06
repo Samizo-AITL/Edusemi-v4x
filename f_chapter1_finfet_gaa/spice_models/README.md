@@ -58,11 +58,11 @@ FinFET / GAA トランジスタ用 SPICE モデル
 FinFET、GAA、CFET構造を使ったCMOSインバータの `.spice` 回路例です。  
 `.dc` 解析により、入力電圧 Vin に対する出力 Vout（VTC: Voltage Transfer Characteristic）を確認できます。
 
-| File                         | Description                             |
-|------------------------------|-----------------------------------------|
-| `cmos_inverter_finfet.spice` | FinFET CMOS インバータ回路（15nm）      |
-| `cmos_inverter_gaa.spice`    | GAA CMOS インバータ回路（5nm）         |
-| `cmos_inverter_cfet.spice`   | CFET CMOS インバータ回路（仮想モデル） |
+| File                                                          | Description                                 |
+|---------------------------------------------------------------|---------------------------------------------|
+| [`cmos_inverter_finfet.spice`](./cmos_inverter_finfet.spice)  | FinFET CMOS インバータ回路（15nm）          |
+| [`cmos_inverter_gaa.spice`](./cmos_inverter_gaa.spice)        | GAA CMOS インバータ回路（5nm）              |
+| [`cmos_inverter_cfet.spice`](./cmos_inverter_cfet.spice)      | CFET CMOS インバータ回路（仮想モデル）      |
 
 ### 🧪 FinFET CMOS Inverter
 
