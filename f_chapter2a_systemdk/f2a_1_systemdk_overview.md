@@ -72,3 +72,5 @@ In addition to chip-level expertise, engineers must acquire the ability to **des
 - [`f_chapter4_fsm_pid_llm/`](../f_chapter4_fsm_pid_llm/)：統合制御SoC設計と実装検証
 
 ---
+
+[← 戻る / Back to Special Chapter 2 Top](../README.md)
