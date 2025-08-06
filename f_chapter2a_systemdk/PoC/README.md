@@ -20,29 +20,6 @@ with **GAA**, **AMS**, and **MRAM** functional blocks.
 
 ---
 
-## 📊 構造図｜Block Diagram
-
-<img src="./images/Physical_Design_PoC_Manual_Flowchart.png"
-     alt="Physical Design PoC Manual Diagram"
-     style="display: block; margin: auto; width: 60%;">
-
-## 📊 構造図｜Block Diagram
-
-<img src="./images/Physical_Design_PoC_Manual_Flowchart.png"
-     alt="Physical Design PoC Manual Diagram"
-     style="display:block; margin:auto; width:60%;" />
-
-### 🧩 SystemDK PoC Manual Flowchart
-![SystemDK PoC Flowchart](./images/Physical_Design_PoC_Manual_Flowchart.png)
-
-## 📊 構造図｜Block Diagram
-
-<p align="center">
-  <img src="./images/Physical_Design_PoC_Manual_Flowchart.png"
-       alt="SystemDK PoC Flowchart"
-       style="max-width: 600px; width: 80%; height: auto;">
-</p>
-
 ### 📊 構造図｜Block Diagram
 
 <img src="/Edusemi-v4x/f_chapter2a_systemdk/PoC/images/Physical_Design_PoC_Manual_Flowchart.png"
