@@ -1,5 +1,11 @@
-# 🧬 appendixf1_05a_cfet_params.md  
-## CFET パラメータ補足資料  
+---
+layout: default
+title: CFET パラメータ補足資料
+---
+
+---
+
+# CFET パラメータ補足資料  
 **CFET Parameter Supplement (Extension of appendixf1_05_node_params.md)**
 
 ---
@@ -88,3 +94,8 @@ CFETはNMOS/PMOSを物理的に上下積層する構造であり、以下の点�
 - 本資料は教育・設計戦略検討用にまとめたものであり、**実製品や設計開発の直接的な基準にはなりません。**
 - CFET対応のBSIMモデルが将来整備された場合、本資料も適宜更新予定です。
 - 教育用教材・PoC構想・設計指針整理などにご自由にご活用ください。
+
+---
+
+[← 戻る / Back to Special Chapter 1 Top](../f_chapter1_finfet_gaa/README.md)
+
