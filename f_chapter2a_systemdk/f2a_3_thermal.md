@@ -1,3 +1,10 @@
+---
+layout: default
+title: 2a.3 熱設計と材料分布
+---
+
+---
+
 # 2a.3 熱設計と材料分布  
 **2a.3 Thermal Design and Material Considerations**
 
