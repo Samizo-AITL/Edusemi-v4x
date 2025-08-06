@@ -68,15 +68,14 @@ This chapter introduces the concept of the **System Design Kit (SystemDK)** and 
 
 ## 👤 著者・ライセンス｜Author & License
 
-| 項目 / Item | 内容 / Details |
-|-------------|----------------|
-| 著者 / Author | 三溝 真一（Shinichi Samizo）<br>Shinshu University / Ex-Epson |
-| GitHub | [Samizo-AITL](https://github.com/Samizo-AITL) |
-| Email | [shin3t72@gmail.com](mailto:shin3t72@gmail.com) |
-| ライセンス / License | MIT License（再配布・改変自由）<br>Redistribution and modification allowed |
+| 項目｜Item | 内容｜Details |
+|------------|----------------------------|
+| **著者｜Author** | 三溝 真一（Shinichi Samizo） |
+| **GitHub** | [Samizo-AITL](https://github.com/Samizo-AITL) |
+| **Email** | [shin3t72@gmail.com](mailto:shin3t72@gmail.com) |
+| **ライセンス｜License** | MIT License（再配布・改変自由）<br>Redistribution and modification allowed |
 
 ---
 
 ## 🔙 戻る｜Back to Top
-
-[Edusemi-v4x トップへ戻る](../README.md)
+**🏠 [Edusemi-v4x トップへ戻る｜Back to Edusemi-v4x Top](../README.md)**
