@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 基礎編　第5章｜SoC設計フローとEDAツール 
+title: 基礎編　第5章｜SoC設計フローとEDAツール  
 ---
 
 ---
