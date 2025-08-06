@@ -35,6 +35,14 @@ with **GAA**, **AMS**, and **MRAM** functional blocks.
 ### 🧩 SystemDK PoC Manual Flowchart
 ![SystemDK PoC Flowchart](./images/Physical_Design_PoC_Manual_Flowchart.png)
 
+## 📊 構造図｜Block Diagram
+
+<p align="center">
+  <img src="./images/Physical_Design_PoC_Manual_Flowchart.png"
+       alt="SystemDK PoC Flowchart"
+       style="max-width: 600px; width: 80%; height: auto;">
+</p>
+
 ---
 
 ## 📚 セクション構成｜Section Structure
