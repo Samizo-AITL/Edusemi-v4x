@@ -3,6 +3,8 @@ layout: default
 title: 実践編 第5章　設計結果の評価とレポート
 ---
 
+---
+
 # 🧪 実践編 第5章：設計結果の評価とレポート
 **Practical Chapter 5: Evaluation and Reporting of Design Results**
 
