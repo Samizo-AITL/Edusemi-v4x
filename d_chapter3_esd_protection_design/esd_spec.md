@@ -1,5 +1,12 @@
+---
+layout: default
+title: ESD試験モデルと評価規格
+---
+
+---
+
 # 📏 ESD試験モデルと評価規格  
-# 📏 ESD Test Models and Evaluation Standards
+**📏 ESD Test Models and Evaluation Standards**
 
 ---
 
