@@ -1,5 +1,12 @@
+---
+layout: default
+title: 5a.1 ポリ抵抗のばらつきと精度制御 
+---
+
+---
+
 # 🎚️ 5a.1 ポリ抵抗のばらつきと精度制御  
-# 🎚️ 5a.1 Poly Resistor Mismatch and Precision Control
+**🎚️ 5a.1 Poly Resistor Mismatch and Precision Control**
 
 ---
 
