@@ -152,7 +152,7 @@ N+  N−   P-Sub
 
 ## 🔗 関連リンク｜Related Topics
 
-- [📘 応用編 第2章｜高耐圧デバイス 全体README](../d_chapter2_high_voltage_devices/README.md)：章全体の構成と関連技術の導入  
+- [📘 応用編 第2章｜高耐圧デバイス 全体README](./README.md)：章全体の構成と関連技術の導入  
   *Chapter 2 Top: Overview of high-voltage devices and structure of this section*
 
 - [`ldmos.md`](./ldmos.md)：LDMOSによる高電流対応技術  
@@ -167,5 +167,3 @@ N+  N−   P-Sub
 ---
 
 © 2025 Shinichi Samizo / MIT License
-
----
