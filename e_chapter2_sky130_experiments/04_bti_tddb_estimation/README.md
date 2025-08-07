@@ -44,7 +44,7 @@ $$
 |--------|------------|---------------|------|
 | A      | スケーリング定数 | Scaling Constant | - |
 | n      | 時間依存係数 | Time Exponent | - |
-| $begin:math:text$E_a$end:math:text$ | 活性化エネルギー | Activation Energy | eV |
+| E_a    | 活性化エネルギー | Activation Energy | eV |
 | k      | ボルツマン定数 | Boltzmann Constant | eV/K |
 | T      | 絶対温度 | Absolute Temperature | K |
 
