@@ -1,3 +1,10 @@
+---
+layout: default
+title: 状態遷移図と状態表
+---
+
+---
+
 # 🔄 状態遷移図と状態表｜State Diagrams and Transition Tables
 
 ---
