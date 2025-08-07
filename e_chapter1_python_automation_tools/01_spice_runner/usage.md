@@ -25,7 +25,7 @@ The following environment is recommended:
 | PDK | `sky130_fd_pr__nfet_01v8.spice` |
 | 使用ライブラリ | `json`, `subprocess`, `pathlib` |
 
-> 📦 必要に応じて `requirements.txt` や `environment.yml` を活用してください。  
+> 📦 必要に応じて [`requirements.txt`](requirements.txt) や [`environment.yml`](environment.yml) を活用してください。  
 > Use `requirements.txt` or `environment.yml` as needed.
 
 ---
@@ -34,10 +34,10 @@ The following environment is recommended:
 
 | ファイル名 / Filename | 説明 / Description |
 |------------------------|---------------------|
-| `run_spice_sweep.py` | メインスクリプト：テンプレート展開＋SPICE 実行<br>Main script: expands template and runs ngspice |
-| `vgid_template.spice` | プレースホルダ形式の SPICE テンプレート<br>SPICE template with placeholders |
-| `config.json` | パラメータ設定ファイル（W/L/VDS 等）<br>Parameter config file |
-| `output/` | 出力ログ・生成ファイル格納先<br>Output folder for logs and .spice files |
+| [`run_spice_sweep.py`](run_spice_sweep.py) | メインスクリプト：テンプレート展開＋SPICE 実行<br>Main script: expands template and runs ngspice |
+| [`vgid_template.spice`](vgid_template.spice) | プレースホルダ形式の SPICE テンプレート<br>SPICE template with placeholders |
+| [`config.json`](config.json) | パラメータ設定ファイル（W/L/VDS 等）<br>Parameter config file |
+| [`output/`](output/) | 出力ログ・生成ファイル格納先<br>Output folder for logs and .spice files |
 
 ---
 
@@ -102,7 +102,7 @@ output/
 
 ## 📝 備考 / Notes
 
-- `vgid_template.spice` 内で `sky130_fd_pr__nfet_01v8.spice` を `.include` しておく必要があります  
+- [`vgid_template.spice`](vgid_template.spice) 内で `sky130_fd_pr__nfet_01v8.spice` を `.include` しておく必要があります  
   Ensure `.include "sky130_fd_pr__nfet_01v8.spice"` is present in the template  
 - `{{W}}`, `{{L}}`, `{{VDS}}` などの変数は Python によってテンプレートに挿入されます  
   These placeholders are dynamically inserted by Python  
