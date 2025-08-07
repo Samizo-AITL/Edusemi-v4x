@@ -68,32 +68,43 @@ python3 plot_tddb_model.py
 
 ### ⚡ BTIモデル式｜BTI Model Equation
 
-```text
-ΔVth(t) = A × tⁿ × exp(-Ea / kT)
-```
+MOSFETのBTI劣化（しきい値電圧シフト）は、以下の時間・温度依存モデルで記述されます：
+
+$$
+\Delta V_{\mathrm{th}}(t) = A \cdot t^n \cdot \exp\left(-\frac{E_{\mathrm{a}}}{kT}\right)
+$$
 
 | 項目｜Parameter | 内容｜Description |
 |-------|--------------------------|
-| A     | スケーリング定数 | Scaling factor |
-| n     | 時間依存係数（0.1〜0.3）| Time exponent |
-| Ea    | 活性化エネルギー [eV] | Activation energy |
-| k     | ボルツマン定数（8.617e-5 eV/K）| Boltzmann constant |
-| T     | 絶対温度 [K] | Absolute temperature |
+| $begin:math:text$ A $end:math:text$     | スケーリング定数 | Scaling factor |
+| $begin:math:text$ n $end:math:text$     | 時間依存係数（0.1〜0.3）| Time exponent |
+| $begin:math:text$ E_{\\mathrm{a}} $end:math:text$ | 活性化エネルギー [eV] | Activation energy |
+| $begin:math:text$ k $end:math:text$     | ボルツマン定数（$begin:math:text$8.617 \\times 10^{-5}$end:math:text$ eV/K）| Boltzmann constant |
+| $begin:math:text$ T $end:math:text$     | 絶対温度 [K] | Absolute temperature |
 
 ---
 
 ### ⚡ TDDBモデル式｜TDDB Model Equations
 
-```text
-MTTF ∝ exp(γ × E)        # 指数モデル（Eモデル）  
-MTTF ∝ 1 / Eⁿ             # パワーモデル
-```
+TDDB（酸化膜破壊寿命）は、次の2種類のモデルで近似されます：
+
+#### 🧾 指数モデル（Eモデル）：
+
+$$
+\mathrm{MTTF} \propto \exp(\gamma \cdot E)
+$$
+
+#### 📐 パワーモデル（フィールド指数モデル）：
+
+$$
+\mathrm{MTTF} \propto \frac{1}{E^n}
+$$
 
 | 項目｜Parameter | 内容｜Description |
 |-------|------------------------------|
-| E     | 酸化膜電界（V/nm or MV/cm） | Electric field across oxide |
-| γ     | 感度係数（材料依存） | Field acceleration factor |
-| n     | パワーモデル指数（2〜4） | Power model exponent |
+| $begin:math:text$ E $end:math:text$     | 酸化膜電界（V/nm or MV/cm） | Electric field across oxide |
+| $begin:math:text$ \\gamma $end:math:text$ | 電界加速係数（材料・膜厚依存） | Field acceleration factor |
+| $begin:math:text$ n $end:math:text$     | パワーモデル指数（2〜4） | Power model exponent |
 
 ---
 
