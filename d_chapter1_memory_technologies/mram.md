@@ -124,4 +124,3 @@ Using spin-polarized currents to switch magnetic states allows data retention ev
 
 © 2025 Shinichi Samizo / MIT License
 
----
