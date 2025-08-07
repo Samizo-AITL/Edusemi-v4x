@@ -1,5 +1,12 @@
+---
+layout: default
+title: 5b.5：1/fノイズ低減モジュールの製品化と応用展開
+---
+
+---
+
 # 5b.5：1/fノイズ低減モジュールの製品化と応用展開  
-*5b.5: Commercialization and Application Deployment of Low 1/f Noise Modules*
+**5b.5: Commercialization and Application Deployment of Low 1/f Noise Modules**
 
 ---
 
