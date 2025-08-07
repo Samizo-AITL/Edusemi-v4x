@@ -4,46 +4,22 @@ title: 使用方法：04_openlane_log_parser
 ---
 
 # 📊 使用方法：04_openlane_log_parser  
-**How to Use: 04_openlane_log_parser – Auto-Parsing & Visualization of OpenLane Logs**
+**How to Use: 04_openlane_log_parser – OpenLane Log Auto Parser**
 
-本フォルダでは、OpenLane フローから生成されるレポートファイル（delay、面積、消費電力など）を対象に、  
-**Pythonで自動的に情報を抽出・CSV化・グラフ化するツール群**を提供します。  
-This folder provides Python tools for automatically extracting, converting, and visualizing OpenLane reports such as delay, area, and power into CSVs and plots.
-
-OpenLane による SoC 設計演習と連携し、設計品質の可視化・比較を効率化します。  
-These tools support SoC design labs using OpenLane by enabling efficient quality comparison between runs.
-
----
-
-## 📄 内容と目的 / Overview & Purpose
-
-| 項目 / Item | 内容 / Description |
-|-------------|---------------------|
-| 対象ツール / Target | OpenLane（Yosys + OpenROAD） |
-| 入力形式 / Input | `openlane/<design>/reports/` 以下の `.rpt`, `.log`, `.txt` |
-| 出力形式 / Output | CSVファイル（delay/power/area）、折れ線グラフ（複数Run比較） |
-| 活用例 / Use Cases | クロック別遅延変化、電力比較、最小面積Runの抽出など |
-
----
-
-## 🧰 使用スクリプト例 / Example Scripts (Planned)
-
-```bash
-python3 parse_delay_report.py     # 最終遅延 (setup/slack) の抽出
-python3 parse_power_report.py     # dynamic/leakage power の集計
-python3 plot_area_vs_run.py       # 面積 vs Run ID の比較グラフ
-```
+このフォルダでは、OpenLane 実行後に出力される各種レポートファイルを自動解析し、  
+設計の **面積・遅延・電力などを CSV化・グラフ化** するツール群を提供します。  
+複数の設計バージョンや合成条件を比較・可視化することで、設計最適化・EDA教育に活用できます。
 
 ---
 
 ## 🔧 前提環境 / Requirements
 
-| 項目 / Item | 推奨設定 / Recommended |
-|-------------|------------------------|
+| 項目 / Item | 推奨バージョン / Version |
+|-------------|---------------------------|
 | Python | 3.9+ |
-| 使用ライブラリ | `pandas`, `matplotlib` |
+| 使用ライブラリ / Libraries | `pandas`, `matplotlib` |
 
-🔽 インストール例 / Installation:
+🔽 インストール：
 
 ```bash
 pip install pandas matplotlib
@@ -53,48 +29,89 @@ pip install pandas matplotlib
 
 ## 📁 構成ファイル一覧 / File Structure
 
-| スクリプト / Script | 説明 / Description |
-|----------------------|---------------------|
-| [`parse_delay_report.py`](parse_delay_report.py) | Slack / Delay 情報をログから抽出し CSV 出力<br>Extract setup timing from reports |
-| [`parse_power_report.py`](parse_power_report.py) | 消費電力情報（動的 / リーク）を収集し CSV 出力<br>Summarize dynamic & leakage power |
-| [`plot_area_vs_run.py`](plot_area_vs_run.py) | 各 Run の面積を比較しグラフ化<br>Visualize area across multiple runs |
-| [`figures/`](figures/) | 出力画像保存先（自動生成）<br>Output directory for generated figures |
+| ファイル名 / Filename | 説明 / Description |
+|------------------------|---------------------|
+| `parse_openlane_log.py` | メインスクリプト：OpenLaneログのCSV化＋グラフ出力 |
+| `example_config.json` | 対象レポートのディレクトリや比較条件を記述する設定ファイル |
+| `logs/` | OpenLane実行後の出力ログ（`metrics.csv`, `reports/*.rpt` などを格納） |
+| `results/` | 整理されたCSVデータや出力グラフ（自動生成されます） |
 
 ---
 
-## 📂 出力CSVフォーマット例 / Output CSV Example
+## 🚀 実行方法 / How to Run
+
+### 1️⃣ ログフォルダの準備 / Prepare Log Files
+
+以下のような構成で `logs/` フォルダにファイルを格納します：
 
 ```text
-results_delay.csv
+logs/
+├── run1/
+│   ├── metrics.csv
+│   └── reports/
+│       ├── final_summary_report.rpt
+│       ├── power.rpt
+│       └── area.rpt
+├── run2/
+│   ├── metrics.csv
+│   └── reports/
+│       └── ...
 ```
 
-```text
-┌────────┬────────┬────────┐
-│ Run ID │ Delay  │ Slack  │
-├────────┼────────┼────────┤
-│ run1   │ 1.23ns │ 0.10ns │
-│ run2   │ 1.05ns │ 0.20ns │
-└────────┴────────┴────────┘
-```
-
-🗂️ 他にも `results_power.csv`, `results_area.csv` などが生成されます。
+> 各 `runX/` は異なる OpenLane 実行ディレクトリを想定しています。
 
 ---
 
-## 🎯 教育的意義 / Educational Value
+### 2️⃣ スクリプト実行 / Run Parser Script
 
-- 設計制約（例：clock period）と物理成果（delay, area, power）との相関を理解  
-- 複数Run結果を視覚的に比較することでEDA感度を体感  
-- 自動CSV・グラフ出力により設計実験を効率化
+以下のように実行します：
+
+```bash
+python3 parse_openlane_log.py
+```
+
+- `example_config.json` 内のパスとラベルを修正すれば、比較対象を自由に変更できます。
+- 実行後、`results/` フォルダに解析結果が生成されます。
+
+---
+
+## 📈 出力例 / Output Example
+
+```text
+results/
+├── summary_table.csv
+├── delay_comparison.png
+├── area_comparison.png
+└── power_comparison.png
+```
+
+- `summary_table.csv`：各Runの遅延・面積・電力の一覧表  
+- `*_comparison.png`：各指標の比較グラフ（棒グラフまたは折れ線グラフ）
 
 ---
 
 ## 🔗 関連ツール / Related Tools
 
-| フォルダ / Folder | 機能 / Description |
-|------------------|---------------------|
-| [`../03_degradation_model/`](../03_degradation_model/) | 劣化モデルとの連携分析<br>Combine with degradation models for lifetime estimation |
-| [`../../e_chapter3_openlane_practice/`](../../e_chapter3_openlane_practice/) | OpenLaneによる物理設計実習教材<br>Hands-on layout design with OpenLane |
+| フォルダ | 機能 |
+|---------|------|
+| [`../03_degradation_model/`](../03_degradation_model/) | 信頼性モデルとの併用による設計評価 |
+| [`../../e_chapter3_openlane_practice/`](../../e_chapter3_openlane_practice/) | OpenLaneによる物理設計教材と連携 |
+
+---
+
+## 🎓 教育的意義 / Educational Purpose
+
+- 合成制約と成果物（Delay, Area, Power）の関係を視覚的に理解  
+- 複数Runの比較により EDA フローの感度分析を体験  
+- 自動レポート出力により設計実験の効率を大幅に向上
+
+---
+
+## 📝 備考 / Notes
+
+- OpenLane のバージョン・PDK により `metrics.csv` の構成が異なる可能性があります。  
+- 必ず事前に `flow.tcl` による各Runの完了を確認してください。  
+- Run名や比較軸のカスタマイズは、スクリプトまたは設定ファイルを直接編集してください。
 
 ---
 
