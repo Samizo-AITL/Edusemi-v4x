@@ -1,5 +1,12 @@
+---
+layout: default
+title: PDKの構成とデバイスモデル
+---
+
+---
+
 # 📦 PDKの構成とデバイスモデル  
-# 📦 Structure of PDK and Device Models
+**📦 Structure of PDK and Device Models**
 
 ---
 
