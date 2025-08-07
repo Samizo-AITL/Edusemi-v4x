@@ -1,4 +1,12 @@
-# ⚡ dv/dt耐性と電界破壊対策｜dv/dt Immunity and Breakdown Protection
+---
+layout: default
+title: dv/dt
+---
+
+---
+
+# ⚡ dv/dt耐性と電界破壊対策
+**dv/dt Immunity and Breakdown Protection**
 
 ---
 
@@ -97,4 +105,3 @@ Key destructive effects include:
 
 © 2025 Shinichi Samizo / MIT License
 
----
