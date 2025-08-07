@@ -106,3 +106,7 @@ Poly抵抗は便利かつ汎用的ですが、ばらつき・TCR・レイアウ�
 Poly resistors are versatile but demand careful design due to mismatch, temperature variation, and layout sensitivity. In precision analog systems, both **process-aware design and layout best practices** are critical.
 
 ---
+
+[🎛️ 応用編　第5章a：0.18um AMS設計技法　トップに戻る](./README.md)
+
+
