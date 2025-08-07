@@ -1,5 +1,12 @@
+---
+layout: default
+title: 5a.2 隣接トランジスタのマッチングとレイアウト設計
+---
+
+---
+
 # ⚖️ 5a.2 隣接トランジスタのマッチングとレイアウト設計  
-# ⚖️ 5a.2 Matching of Adjacent Transistors and Layout Techniques
+**⚖️ 5a.2 Matching of Adjacent Transistors and Layout Techniques**
 
 ---
 
