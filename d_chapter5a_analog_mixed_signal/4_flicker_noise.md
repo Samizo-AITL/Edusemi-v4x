@@ -1,5 +1,12 @@
+---
+layout: default
+title: 5a.4 1/fノイズの低減技術
+---
+
+---
+
 # 📉 5a.4 1/fノイズの低減技術  
-# 📉 5a.4 Flicker Noise Reduction Techniques
+**📉 5a.4 Flicker Noise Reduction Techniques**
 
 ---
 
