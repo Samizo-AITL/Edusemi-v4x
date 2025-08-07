@@ -1,5 +1,12 @@
+---
+layout: default
+title: ラッチアップ防止と寄生トランジスタ対策
+---
+
+---
+
 # 🛡️ ラッチアップ防止と寄生トランジスタ対策  
-# 🛡️ Latch-up Prevention and Parasitic Transistor Countermeasures
+**🛡️ Latch-up Prevention and Parasitic Transistor Countermeasures**
 
 ---
 
