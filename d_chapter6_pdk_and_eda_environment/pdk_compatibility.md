@@ -1,5 +1,12 @@
+---
+layout: default
+title: PDKの世代と互換性
+---
+
+---
+
 # 🔄 PDKの世代と互換性  
-# 🔄 PDK Generations and Compatibility
+**🔄 PDK Generations and Compatibility**
 
 ---
 
