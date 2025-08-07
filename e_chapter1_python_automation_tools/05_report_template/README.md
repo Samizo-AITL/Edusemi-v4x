@@ -1,73 +1,110 @@
 ---
 layout: default
-title: 05_report_template：自動レポート出力テンプレート
+title: 使用方法：05_report_template
 ---
 
-# 📝 05_report_template：自動レポート出力テンプレート  
-**05_report_template: Auto-Generated Reports for Simulation and Design Evaluation**
+# 📝 使用方法：05_report_template  
+**How to Use: 05_report_template – Automated Reporting Templates**
 
-このフォルダでは、`SPICE` や `OpenLane` のシミュレーション結果をもとに、  
-**MarkdownやJupyter Notebookで設計・評価レポートを自動生成するテンプレート群**を提供します。  
-This folder provides templates to auto-generate evaluation reports (Markdown/Jupyter) from simulation results like SPICE and OpenLane.
-
-Python解析と可視化をそのまま教育・プレゼン・報告に活用可能です。
-
----
-
-## 📄 テンプレート一覧 / Template List
-
-| ファイル名 / Filename | 説明 / Description |
-|------------------------|---------------------|
-| [`report_template.ipynb`](report_template.ipynb) | Vg–IdやVth・BTI・TDDBなどのグラフ付きJupyterレポート |
-| [`report_template.md`](report_template.md) | MarkdownベースのCLI向けレポートテンプレート |
-| [`auto_report_generator.py`](auto_report_generator.py) | CSV・グラフを読み取りMarkdownまたはNotebookに自動挿入するスクリプト |
-
-※テンプレートファイルは順次整備予定です。
+本フォルダでは、各章で得られた図表や数値データをレポートとしてまとめるテンプレートを提供します。  
+`Jupyter Notebook` 形式や `Markdown` 自動生成スクリプトを用いて、**教育レポートや技術記録の自動化を支援**します。  
+This folder provides tools to automatically compile simulation results into technical or educational reports using Jupyter or Markdown.
 
 ---
 
-## 🧰 活用例 / Use Cases
+## 🔧 前提環境 / Requirements
 
-- `output/` フォルダを走査し、特性グラフと計算値をNotebookでまとめてレポート化  
-- 劣化モデル（BTI/TDDB）の結果を時系列で挿入し、説明を可視化  
-- OpenLaneの設計Runごとの遅延・面積・電力をグラフで比較し傾向を記述
+| 項目 / Item | 推奨バージョン / Recommended |
+|-------------|-------------------------------|
+| Python | 3.9+ |
+| 使用ライブラリ / Required | `jupyter`, `nbconvert`, `matplotlib`, `pandas` |
 
----
-
-## 📦 必要パッケージ / Required Packages
+📦 インストール例 / Install Example:
 
 ```bash
-pip install jupyter pandas matplotlib
+pip install jupyter nbconvert matplotlib pandas
 ```
 
 ---
 
-## 🎓 教育的意義 / Educational Purpose
+## 📁 構成ファイル一覧 / File Structure
 
-- Python解析 → 結果整形 → レポート作成 の一貫自動化体験  
-- Jupyter Notebook により **手を動かしながらのレポート作成** が可能  
-- Markdown形式は **GitHubや印刷向けに最適化可能**
-
----
-
-## 🔗 関連リンク / Related Links
-
-| フォルダ | 説明 |
-|---------|------|
-| [`../02_plot_vgid/`](../02_plot_vgid/) | SPICE特性の可視化スクリプト |
-| [`../04_openlane_log_parser/`](../04_openlane_log_parser/) | OpenLaneログの解析＋グラフ出力 |
-| [`../../e_chapter1_python_automation_tools/`](../../e_chapter1_python_automation_tools/) | 実践編 第1章：Python自動化ツール教材 |
+| ファイル名 / Filename | 説明 / Description |
+|------------------------|---------------------|
+| [`template_report.ipynb`](template_report.ipynb) | Notebook形式のテンプレート。図付きレポートを作成可能<br>Jupyter Notebook template with figures |
+| [`insert_results.py`](insert_results.py) | CSVやPNGをMarkdownへ自動整形するスクリプト<br>Script to auto-generate Markdown report |
+| `images/` | グラフ・図表の格納用フォルダ（手動 or 自動）<br>Folder for images |
+| `report_output/` | MarkdownやPDFの出力先フォルダ<br>Exported reports directory |
 
 ---
 
-## 🚀 今後の拡張案 / Future Enhancements
+## 🚀 使用方法 / How to Run
 
-- [`nbconvert`](https://nbconvert.readthedocs.io/) による PDF レポート自動変換対応  
-- `auto_report_generator.py` の軽量版CLI作成（CSV＋グラフ自動整形）  
-- GitHub Actions での定期レポート出力自動化  
+### 1️⃣ Notebook を使う場合（対話形式）
+
+```bash
+jupyter notebook template_report.ipynb
+```
+
+- セルを順に実行してレポートを作成  
+- 画像・表・計算結果を自由に挿入可能
+
+---
+
+### 2️⃣ Markdown / PDF 形式で自動出力
+
+#### 自動Markdownレポート出力（スクリプト）：
+
+```bash
+python3 insert_results.py
+```
+
+#### PDF変換（Notebook → PDF）：
+
+```bash
+jupyter nbconvert template_report.ipynb --to pdf
+```
+
+📁 出力フォルダ例：
+
+```text
+report_output/
+├── auto_report.md
+├── auto_report.pdf
+└── embedded_figures/
+    ├── VgId_W1.0_L0.15.png
+    ├── bti_vth_shift.png
+    └── power_comparison.png
+```
+
+---
+
+## 🎯 教育的意義 / Educational Purpose
+
+- Pythonによる設計結果の **自動解析〜レポート出力** を一貫体験  
+- Notebook形式により **インタラクティブな学習** が可能  
+- Markdown形式は **GitHub提出や共有、PDF化にも便利**
+
+---
+
+## 🔗 関連ツール / Related Tools
+
+| フォルダ | 機能概要 |
+|---------|----------|
+| [`../01_spice_runner/`](../01_spice_runner/) | SPICE実行とログ生成 |
+| [`../03_degradation_model/`](../03_degradation_model/) | 信頼性モデル出力（BTI, TDDB） |
+| [`../04_openlane_log_parser/`](../04_openlane_log_parser/) | 面積・電力などのレポート自動生成 |
+
+---
+
+## 📝 備考 / Notes
+
+- Notebook形式は `.ipynb` に対応し、Google Colab などでも活用可能  
+- `insert_results.py` は指定ディレクトリの `.csv` や `.png` を自動抽出・整形  
+- カスタマイズにより研究レポート、学会資料にも応用可能です
 
 ---
 
 ## 🔙 戻る / Back to Top
 
-📂 [実践編 第1章：Python自動化ツール群トップに戻る / Back to Chapter 01 Top](../README.md)
+📂 [実践編 第1章：Python自動化ツール群トップに戻る](../README.md)
