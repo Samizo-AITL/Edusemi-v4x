@@ -3,8 +3,6 @@ layout: default
 title: 実践編 第2章　Sky130実験とSPICE特性評価　
 ---
 
----
-
 # ⚗️ 実践編 第2章：Sky130実験とSPICE特性評価  
 **Practical Chapter 2: Sky130 Experiments and SPICE-Based Characterization**
 
@@ -12,11 +10,11 @@ title: 実践編 第2章　Sky130実験とSPICE特性評価　
 
 ## 📘 概要｜Overview
 
-本章では、SkyWaterのSky130 PDKを用いて、MOSトランジスタの基本特性（Vg–Idカーブ、Vth）や劣化予測（BTI・TDDB）まで含む  
-**SPICEベースの設計評価実験**を構成します。  
+本章では、SkyWaterの Sky130 PDK を用いて、MOSトランジスタの基本特性（**Vg–Idカーブ・Vth抽出**）や、  
+**BTI / TDDB による劣化予測**まで含む、**SPICEベースの設計評価実験**を構成します。  
 
-This chapter uses the **Sky130 PDK** to evaluate MOSFET characteristics such as **Vg–Id curves**, **threshold voltage (Vth)**,  
-and **reliability predictions** using BTI and TDDB models through **SPICE simulations**.
+This chapter utilizes the **Sky130 PDK** to evaluate MOSFET characteristics such as **Vg–Id curves**,  
+**threshold voltage (Vth)**, and **reliability predictions** using BTI and TDDB models via **SPICE simulations**.
 
 ---
 
@@ -25,7 +23,7 @@ and **reliability predictions** using BTI and TDDB models through **SPICE simula
 - ✅ Sky130 MOS モデルによる SPICE 実験  
  SPICE simulation using Sky130 device models  
 - ✅ Python による自動化・可視化・寿命推定  
- Automation, visualization, and lifetime estimation via Python  
+ Automation, visualization, and lifetime estimation with Python  
 - ✅ `.meas` による定量抽出とスクリプト連携  
  Measurement extraction using `.meas` and scripting integration  
 
@@ -33,35 +31,47 @@ and **reliability predictions** using BTI and TDDB models through **SPICE simula
 
 ## 📁 章内構成｜Chapter Contents
 
-| フォルダ名｜Folder | 内容｜Description |
-|--------------------|---------------------------------------------|
-| [`01_setup_sky130_model/`](01_setup_sky130_model/) | Sky130と`ngspice`のセットアップ｜Set up ngspice and Sky130 |
-| [`02_idvg_experiment/`](02_idvg_experiment/) | Vg–Id特性シミュレーションとパラメトリックSweep｜Vg–Id sweeping |
-| [`03_vth_extraction/`](03_vth_extraction/) | `.meas` を使った Vth 抽出｜Extracting Vth using `.meas` |
-| [`04_bti_tddb_estimation/`](04_bti_tddb_estimation/) | 劣化（BTI・TDDB）による寿命予測｜Lifetime prediction using BTI/TDDB |
-| [`05_data_summary/`](05_data_summary/) | 実験結果のまとめとレポート出力｜Result summary and reporting |
+| フォルダ｜Folder | 内容｜Description |
+|------------------|----------------------------------------------------------|
+| [`01_setup_sky130_model/`](01_setup_sky130_model/) | Sky130 と `ngspice` の環境構築｜Set up Sky130 and ngspice |
+| [`02_idvg_experiment/`](02_idvg_experiment/) | Vg–Id 特性の Sweep シミュレーション｜Id–Vg parametric sweep |
+| [`03_vth_extraction/`](03_vth_extraction/) | `.meas` による Vth 自動抽出｜Automated Vth extraction |
+| [`04_bti_tddb_estimation/`](04_bti_tddb_estimation/) | BTI・TDDB による寿命評価モデル｜Reliability prediction |
+| [`05_data_summary/`](05_data_summary/) | 全実験結果の要約・図表出力｜Summary and visualization |
 
 ---
 
 ## 🔧 実行環境｜Required Environment
 
-- ✅ Sky130 PDK（e.g., `sky130_fd_pr__nfet_01v8`）  
-- ✅ `ngspice` version 35+  
-- ✅ Python 3.9+  
-- ✅ 必要パッケージ｜Packages: `matplotlib`, `pandas`, `numpy`, など  
+| 項目｜Item | 内容｜Details |
+|--------|----------------------------------------------------|
+| Python | 3.9 以上（Recommended: 3.10） |
+| 必須ライブラリ | `matplotlib`, `pandas`, `numpy` |
+| シミュレータ | `ngspice` version 35+ |
+| PDK環境 | `Sky130 PDK`（例：`sky130_fd_pr__nfet_01v8`） |
+
+インストール例：
+
+```bash
+pip install matplotlib pandas numpy
+```
 
 ---
 
-## 🔁 実験の流れ｜Experiment Flow
+## 🔁 実験フロー｜Experiment Flow
 
-1. `.spice` テンプレートと Sweep により特性取得  
-2. Python でログ解析とプロット  
-3. `.meas` による Vth 自動抽出  
-4. 劣化モデルを組み合わせて寿命予測  
+```text
+1. Sky130 PDK の .spice モデルを用意
+2. Vg–Id Sweep 用 SPICEネットリストを作成
+3. Python でログファイルを解析・可視化
+4. `.meas` により Vth 抽出処理を自動化
+5. BTI・TDDB に基づく劣化モデルを適用し寿命予測
+6. 最終レポートを Notebook / Markdown 形式で整形
+```
 
 ---
 
-## 📘 関連リンク｜Related Chapters
+## 🔗 関連リンク｜Related Chapters
 
 - [実践編 第1章：Pythonによる自動化ツール群](../e_chapter1_python_automation_tools/README.md)  
 - [実践編 第3章：OpenLaneによるデジタル設計実習](../e_chapter3_openlane_practice/README.md)  
@@ -70,29 +80,29 @@ and **reliability predictions** using BTI and TDDB models through **SPICE simula
 
 ## 📌 教材の意義｜Educational Significance
 
-- 📈 **特性＝現象** の実感をSPICEで得る
-- 🧪 `.meas` やスクリプトによる構造化評価
-- 🔄 信頼性評価・設計マージン設計との接続を体感
+- 📈 SPICEを通じた「**デバイス特性の可視化と理解**」  
+- 🧪 `.meas` による「**数値抽出とPython連携**」の習得  
+- 🔄 「**信頼性設計と物理設計の橋渡し**」を体感  
 
 ---
 
 ## 🧭 次に進むべき章｜Next Chapters
 
-- ✅ **第3章：OpenLaneでの物理設計と評価**
-- ✅ **応用編：高耐圧やESD設計との組合せ**
+- 🔜 **第3章：OpenLaneでの物理設計と評価**
+- 🔜 **応用編：高耐圧/ESD設計や AMS 評価との接続**
 
 ---
 
 ## 👤 著者・ライセンス｜Author & License
 
 | 項目｜Item | 内容｜Details |
-|------------|----------------------------|
+|----------|------------------------------|
 | **著者｜Author** | 三溝 真一（Shinichi Samizo） |
 | **GitHub** | [Samizo-AITL](https://github.com/Samizo-AITL) |
 | **Email** | [shin3t72@gmail.com](mailto:shin3t72@gmail.com) |
-| **ライセンス｜License** | MIT License（再配布・改変自由）<br>Redistribution and modification allowed |
+| **ライセンス** | MIT License（再配布・改変自由）<br>Redistribution and modification allowed |
 
 ---
 
-## 🔙 戻る｜Back to Top
+## 🔙 戻る｜Back to Top  
 **🏠 [Edusemi-v4x トップへ戻る｜Back to Edusemi-v4x Top](../README.md)**
