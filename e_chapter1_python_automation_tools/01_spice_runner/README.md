@@ -66,10 +66,4 @@ sudo apt install ngspice
 
 ---
 
-## 👤 技術監修・執筆
-
-**三溝 真一（Shinichi Samizo）**  
-GitHub: [Samizo-AITL](https://github.com/Samizo-AITL)  
-Email: shin3t72@gmail.com
-
----
+[🐍 実践編 第1章：Python自動化ツール群トップに戻る](../README.md)
