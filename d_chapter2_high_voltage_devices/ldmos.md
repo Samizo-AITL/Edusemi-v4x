@@ -1,3 +1,10 @@
+---
+layout: default
+title: LDMOS
+---
+
+---
+
 # ⚡ LDMOS（Laterally Diffused MOS）
 
 ---
@@ -134,5 +141,3 @@ GATE
 ---
 
 © 2025 Shinichi Samizo / MIT License
-
----
