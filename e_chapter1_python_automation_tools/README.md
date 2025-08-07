@@ -51,6 +51,38 @@ for semiconductor design and evaluation, integrated with **Sky130 PDK** and **Op
 - 実行環境｜Runtime tools:
   - `ngspice`, `Sky130 PDK`, `OpenLane`（セットアップ済）
 
+
+---
+
+## 🗺️ 自動化ツール群の構成図（Mermaidフローチャート＋色分け＋GitHubリンク）
+
+> ⚠️ このページではMermaidフローチャートは表示されません  
+> 👉 **以下のリンクからGitHubで視覚化表示をご確認ください：**  
+> [📎 GitHubでMermaidフローチャートを見る](https://github.com/Samizo-AITL/Edusemi-v4x/blob/main/e_chapter1_python_automation_tools/README.md)
+
+
+### 📊 ツール相関図（Pythonスクリプト群の接続関係）
+
+```mermaid
+graph TD
+    A01[📘 01_spice_runner<br>SPICE自動実行]
+    A02[📊 02_plot_vgid<br>Vg-Id特性の可視化]
+    A03[📉 03_degradation_model<br>信頼性モデル（BTI / TDDB）]
+    A04[📈 04_openlane_log_parser<br>OpenLaneログ解析]
+    A05[📝 05_report_template<br>自動レポート生成]
+
+    A01 --> A02
+    A02 --> A05
+    A03 --> A05
+    A04 --> A05
+
+    style A01 fill:#e0f7fa,stroke:#00796b,stroke-width:2px
+    style A02 fill:#f1f8e9,stroke:#33691e,stroke-width:2px
+    style A03 fill:#fff8e1,stroke:#f57f17,stroke-width:2px
+    style A04 fill:#fce4ec,stroke:#c2185b,stroke-width:2px
+    style A05 fill:#ede7f6,stroke:#4527a0,stroke-width:2px
+```
+
 ---
 
 ## 📘 関連章リンク｜Related Chapters
