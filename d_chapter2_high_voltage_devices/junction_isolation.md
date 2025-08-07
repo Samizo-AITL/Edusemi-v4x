@@ -5,7 +5,8 @@ title: Junction Isolation
 
 ---
 
-# 🧩 Junction Isolation（接合型絶縁構造）｜Junction Isolation
+# 🧩 Junction Isolation（接合型絶縁構造）
+**Junction Isolation**
 
 ---
 
