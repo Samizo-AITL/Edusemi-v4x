@@ -1,5 +1,12 @@
+---
+layout: default
+title: レイアウト実例とDRCルール適用事例
+---
+
+---
+
 # 🧩 レイアウト実例とDRCルール適用事例  
-# 🧩 Layout Case Studies and DRC Rule Applications
+**🧩 Layout Case Studies and DRC Rule Applications**
 
 ---
 
