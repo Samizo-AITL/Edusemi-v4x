@@ -1,3 +1,10 @@
+---
+layout: default
+title: 高耐圧デバイスのレイアウト設計と最適化
+---
+
+---
+
 # 📐 高耐圧デバイスのレイアウト設計と最適化｜Layout Design and Optimization for High-Voltage Devices
 
 ---
@@ -95,4 +102,3 @@ This section covers optimization from the following viewpoints:
 
 © 2025 Shinichi Samizo / MIT License
 
----
