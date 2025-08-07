@@ -1,5 +1,12 @@
+---
+layout: default
+title: DRC, LVS, ERCのチェックフロー
+---
+
+---
+
 # ✅ DRC, LVS, ERCのチェックフロー  
-# ✅ DRC, LVS, and ERC Check Flow
+**✅ DRC, LVS, and ERC Check Flow**
 
 ---
 
