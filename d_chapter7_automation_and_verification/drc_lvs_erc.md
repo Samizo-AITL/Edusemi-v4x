@@ -1,5 +1,12 @@
+---
+layout: default
+title: DRC・LVS・ERC の自動検証
+---
+
+---
+
 # 🧪 DRC・LVS・ERC の自動検証  
-# 🧪 Automated Checks: DRC, LVS, ERC
+**🧪 Automated Checks: DRC, LVS, ERC**
 
 ---
 
