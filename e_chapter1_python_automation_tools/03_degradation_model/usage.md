@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 使用方法：03_degradation_model
+title: 使用方法：03_degradation_model 
 ---
 
 # 📉 使用方法：03_degradation_model  
