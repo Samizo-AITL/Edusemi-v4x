@@ -69,7 +69,7 @@ ngspice nfet_vgid.spice
 
 - `ngspice` のグラフ表示機能で Vg–Id 特性を確認できます  
 - `.log` ファイルにはスイープ結果がテキスト出力されます  
-- **Python + matplotlib による可視化ツールは → [`plot_vgid/`](../plot_vgid/)** にあります
+- **Python + matplotlib による可視化ツールは → [`plot/`](../plot/)** にあります
 
 ---
 
