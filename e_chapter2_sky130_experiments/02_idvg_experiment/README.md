@@ -25,7 +25,7 @@ using only basic `matplotlib` functionality to promote intuitive understanding o
 | ファイル / フォルダ名 | 内容｜Description |
 |------------------------|----------------------------------------------------------|
 | [`plot/plot_vgid.py`](./plot/plot_vgid.py) | Vg–Id 特性を描画する Python スクリプト<br>Python script to plot Vg–Id curves |
-| [`../output/`](../output/) | `.log` ファイルを保存するフォルダ（実行結果出力）<br>Directory for `.log` files generated from simulation |
+| [`./output/`](./output/) | `.log` ファイルを保存するフォルダ（実行結果出力）<br>Directory for `.log` files generated from simulation |
 
 ---
 
