@@ -1,0 +1,7 @@
+{
+  "image_dir": "images",
+  "csv_dir": "results",
+  "output": "report_output/auto_report.md",
+  "title": "Sky130 結果レポート",
+  "sections": ["Vg–Id", "BTI", "TDDB", "OpenLane"]
+}
