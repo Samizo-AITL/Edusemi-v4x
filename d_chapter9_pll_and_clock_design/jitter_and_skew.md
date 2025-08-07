@@ -1,3 +1,10 @@
+---
+layout: default
+title: ジッタとスキューの理解と対策
+---
+
+---
+
 # ⏱ `jitter_and_skew.md` – ジッタとスキューの理解と対策  
 **Understanding and Mitigation of Jitter and Skew**
 
