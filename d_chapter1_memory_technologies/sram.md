@@ -1,3 +1,10 @@
+---
+layout: default
+title: SRAM (Static Random Access Memory)
+---
+
+---
+
 # 🧠 SRAM (Static Random Access Memory)
 
 ---
@@ -122,5 +129,3 @@ Unlike DRAM, it does not require refresh and can stably retain data using a 6-tr
 ---
 
 © 2025 Shinichi Samizo / MIT License
-
----
