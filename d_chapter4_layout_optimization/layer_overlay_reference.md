@@ -1,5 +1,12 @@
+---
+layout: default
+title: レイヤー整合とオーバーレイ設計原則
+---
+
+---
+
 # 🧩 レイヤー整合とオーバーレイ設計原則  
-# 🧩 Layer Alignment and Overlay Design Principles
+**🧩 Layer Alignment and Overlay Design Principles**
 
 ---
 
