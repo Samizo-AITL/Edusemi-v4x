@@ -1,5 +1,12 @@
+---
+layout: default
+title: ESD概要と保護設計の重要性
+---
+
+---
+
 # ⚠️ ESD概要と保護設計の重要性  
-# ⚠️ Overview of ESD and Importance of Protection Design
+**⚠️ Overview of ESD and Importance of Protection Design**
 
 ---
 
@@ -41,7 +48,7 @@ Such high-voltage pulses (hundreds to thousands of volts) can **damage delicate 
 ---
 
 ## 🔧 設計におけるESD保護の基本方針  
-## 🔧 Basic Principles of ESD Protection in Design
+**🔧 Basic Principles of ESD Protection in Design**
 
 - **外部からの放電電流を素早く逃がすパスを用意する**  
   Provide a fast discharge path for incoming ESD current.
