@@ -1,26 +1,42 @@
-# 📘 02_plot_vgid - Vg–Id 特性の可視化
+---
+layout: default
+title: 02_plot_vgid - Vg–Id 特性の可視化
+---
 
-このフォルダでは、前章で取得した SPICE ログ (`.log`) を読み取り、nMOS / pMOS の Vg–Id 特性を Python で可視化します。  
-教材目的で `matplotlib` の基本機能を使い、MOSFET の電気的挙動を視覚的に理解できるように設計されています。
+# 📘 02_plot_vgid - Vg–Id 特性の可視化  
+**Visualizing Vg–Id Characteristics from SPICE Output**
 
 ---
 
-## 📁 フォルダ構成
+## 📄 概要｜Overview
 
-| ファイル名 | 内容 |
-|------------|------|
-| [`plot_vgid.py`](./plot_vgid.py) | `.log` ファイルから Vg–Id 特性を描画する Python スクリプト |
-| `output/` | `.log` ファイルが保存されるディレクトリ（`01_setup_sky130_model/` で生成） |
+このフォルダでは、前章で取得した SPICE ログファイル（`.log`）を Python で読み取り、  
+**nMOS / pMOS の Vg–Id 特性カーブを可視化**するツールを提供します。  
+基本的な `matplotlib` の機能のみを用い、MOSFET の電気特性を**教育目的で直感的に理解**できる構成としています。
+
+This folder provides a tool to **visualize Vg–Id characteristics** of nMOS and pMOS devices,  
+by reading `.log` files generated from SPICE simulations. It is designed for **educational purposes**  
+using only basic `matplotlib` functionality to promote intuitive understanding of device behavior.
 
 ---
 
-## 🔧 前提条件
+## 📁 フォルダ構成｜Folder Structure
 
-- Python 3.x がインストール済みであること
-- 以下の Python ライブラリが使用可能であること：
-  - `matplotlib`
+| ファイル名 / Folder | 内容｜Description |
+|---------------------|---------------------------------------------|
+| [`plot_vgid.py`](./plot_vgid.py) | Vg–Id 特性を描画する Python スクリプト<br>Python script to plot Vg–Id curves |
+| `output/` | `.log` を保存するフォルダ（`01_setup_sky130_model` にて生成）<br>Directory for `.log` files generated previously |
 
-インストール例：
+---
+
+## 🔧 前提環境｜Requirements
+
+| 項目｜Item | 内容｜Details |
+|------------|------------------------|
+| 🐍 **Pythonバージョン**<br>Python Version | Python 3.x |
+| 📦 **必要ライブラリ**<br>Required Libraries | `matplotlib` |
+
+**インストール例｜Example Installation:**
 
 ```bash
 pip install matplotlib
@@ -28,34 +44,42 @@ pip install matplotlib
 
 ---
 
-## 🚀 実行方法
+## 🚀 実行方法｜How to Run
 
 ```bash
 python plot_vgid.py
 ```
 
-正常に実行されると、以下の2曲線が表示されます：
+正常に実行されると、以下のような Vg–Id 曲線が表示されます：
 
-- `sky130_fd_pr__nfet_01v8`（nMOS）
-- `sky130_fd_pr__pfet_01v8`（pMOS）
-
----
-
-## 📈 出力例
-
-プロットされるグラフは以下のような形式です：
-
-- X軸：Gate電圧 Vg [V]
-- Y軸：Drain電流 Id [μA]
-- 両特性を同一グラフ上に表示
-- 0μAラインの補助線付き
+- 📘 `sky130_fd_pr__nfet_01v8`（nMOS 特性）
+- 📗 `sky130_fd_pr__pfet_01v8`（pMOS 特性）
 
 ---
 
-## 🔗 関連リンク
+## 📈 出力例｜Example Output
 
-- 📁 [01_setup_sky130_model/](../01_setup_sky130_model/) — SPICE モデルとログ生成
-- 📘 [Sky130 PDK GitHub](https://github.com/google/skywater-pdk)
-- 🐍 [matplotlib 公式](https://matplotlib.org/)
+プロットされるグラフ形式：
+
+| 項目｜Item | 内容｜Details |
+|--------|-----------------------------|
+| **X軸｜X-axis** | ゲート電圧 Vg [V] |
+| **Y軸｜Y-axis** | ドレイン電流 Id [μA] |
+| **補助線｜Guides** | 0μA ラインの水平線付き |
+| **表示方法｜Display** | nMOS / pMOS 両方の特性を同一グラフに重ねて表示 |
 
 ---
+
+## 🔗 関連リンク｜Related Links
+
+| 項目｜Item | リンク｜Link |
+|--------|-------------------------|
+| 🛠️ SPICEモデル準備 | [../01_setup_sky130_model/](../01_setup_sky130_model/) |
+| 💾 Sky130 PDK GitHub | [https://github.com/google/skywater-pdk](https://github.com/google/skywater-pdk) |
+| 📊 matplotlib公式 | [https://matplotlib.org/](https://matplotlib.org/) |
+
+---
+
+## 🔙 戻る｜Back to Chapter Top
+
+[🏠 実践編 第2章 トップへ戻る｜Back to `e_chapter2_sky130_experiments` Top](../README.md)
