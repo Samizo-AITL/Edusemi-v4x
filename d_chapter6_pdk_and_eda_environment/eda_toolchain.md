@@ -29,8 +29,8 @@ This document outlines the roles of **commercial and open-source EDA tools**, an
 | ICC2 / Innovus | Synopsys / Cadence | 配置配線、タイミング検証<br>Place-and-route, timing |
 | Calibre | Siemens EDA | DRC / LVS / PEX（物理検証）<br>Design rule and layout verification |
 
-- 商用PDKはこれらツールと**セットで提供されることが多く**、**ツール依存性が高い**。  
-  *Commercial PDKs are tightly coupled with these tools and often vendor-locked.*
+> 商用PDKはこれらツールと**セットで提供されることが多く**、**ツール依存性が高い**。  
+> *Commercial PDKs are tightly coupled with these tools and often vendor-locked.*
 
 ---
 
@@ -44,24 +44,29 @@ This document outlines the roles of **commercial and open-source EDA tools**, an
 | KLayout | GDSビューア、DRC<br>GDS viewer, DRC engine | Pythonスクリプト拡張可 |
 | OpenROAD | 配置配線、STA、DRC連携<br>Place & Route tool | OpenLane構成に統合 |
 
-- Sky130のような**OSS PDKとの親和性が高く、教育・研究に向く**。  
-  *Well suited for open education and research applications.*
+> Sky130のような**OSS PDKとの親和性が高く、教育・研究に向く**。  
+> *Well suited for open education and research applications.*
 
 ---
 
 ## 🔁 ツール間のPDK接続構成（Mermaid形式）｜PDK Toolchain Flow (Mermaid)
 
+⚠️ **Mermaid図の表示について：**  
+このWebサイトではMermaid図が表示されません。  
+**以下のGitHubページで表示をご確認ください：**  
+👉 [GitHubでMermaid図を見る](https://github.com/Samizo-AITL/Edusemi-v4x/blob/main/d_chapter6_pdk_and_eda_environment/eda_toolchain.md)
+
 ```mermaid
 flowchart TD
-    SCH(Xschem<br>回路図) --> SIM(ngspice<br>シミュレーション)
-    SIM --> LAY(Magic<br>レイアウト)
-    LAY --> LVS(DRC / LVS / PEX<br>Magic, Netgen)
-    LVS --> PNR(OpenROAD<br>配置配線)
-    PNR --> FINAL(KLayout<br>最終検証)
+    SCH(📘 Xschem<br>回路図設計) --> SIM(🔬 ngspice<br>回路シミュレーション)
+    SIM --> LAY(📐 Magic<br>レイアウト編集)
+    LAY --> LVS(🧪 DRC/LVS/PEX<br>検証: Magic, Netgen)
+    LVS --> PNR(🚧 OpenROAD<br>配置・配線)
+    PNR --> FINAL(🔎 KLayout<br>最終確認・GDS出力)
 ```
 
-- `sky130A` PDK には、**各ツール専用の設定フォルダが整備**されており、ツール間の接続が容易。  
-- 各ツールは共通PDK内の**モデルファイルや検証ルール**を参照して設計を進める。
+> `sky130A` PDK には、**各ツール専用の設定フォルダが整備**されており、ツール間の接続が容易。  
+> 各ツールは共通PDK内の**モデルファイルや検証ルール**を参照して設計を進める。
 
 ---
 
