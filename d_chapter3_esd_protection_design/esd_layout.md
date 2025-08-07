@@ -1,5 +1,12 @@
+---
+layout: default
+title: ESD Layout
+---
+
+---
+
 # 🧩 レイアウトにおけるESD設計の工夫  
-# 🧩 Layout Techniques for ESD Protection Design
+**🧩 Layout Techniques for ESD Protection Design**
 
 ---
 
