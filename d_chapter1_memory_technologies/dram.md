@@ -1,3 +1,10 @@
+---
+layout: default
+title: DRAM（Dynamic Random Access Memory）
+---
+
+---
+
 # 🧠 DRAM（Dynamic Random Access Memory）
 
 ---
@@ -122,5 +129,3 @@ Integrated with cache hierarchy to hide latency.
 ---
 
 © 2025 Shinichi Samizo / MIT License
-
----
