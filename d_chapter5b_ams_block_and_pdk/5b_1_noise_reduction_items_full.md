@@ -1,5 +1,12 @@
+---
+layout: default
+title: 5b.1：1/fノイズ低減の製造技術アイテムと効果一覧
+---
+
+---
+
 # 🌟 5b.1：1/fノイズ低減の製造技術アイテムと効果一覧  
-*5b.1: Manufacturing-Based Techniques for 1/f Noise Reduction*
+**5b.1: Manufacturing-Based Techniques for 1/f Noise Reduction**
 
 ---
 
