@@ -30,7 +30,7 @@ OpenLane automatically performs verification at each design stage.
 ### 🔧 OpenLane設計フロー（Mermaid形式）｜OpenLane Flow (Mermaid)
 
 ```mermaid
-flowchart LR
+flowchart TD
     RTL([RTL])
     SYN(synthesis)
     FP(floorplan)
