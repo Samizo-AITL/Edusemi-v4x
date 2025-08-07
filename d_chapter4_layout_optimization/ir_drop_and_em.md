@@ -1,5 +1,12 @@
+---
+layout: default
+title: IRドロップとエレクトロマイグレーション（EM）対策
+---
+
+---
+
 # 🔋 IRドロップとエレクトロマイグレーション（EM）対策  
-# 🔋 IR Drop and Electromigration Countermeasures
+**🔋 IR Drop and Electromigration Countermeasures**
 
 ---
 
