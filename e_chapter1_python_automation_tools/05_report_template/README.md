@@ -18,9 +18,9 @@ Python解析と可視化をそのまま教育・プレゼン・報告に活用�
 
 | ファイル名 / Filename | 説明 / Description |
 |------------------------|---------------------|
-| `report_template.ipynb` | Vg–IdやVth・BTI・TDDBなどのグラフ付きJupyterレポート |
-| `report_template.md` | MarkdownベースのCLI向けレポートテンプレート |
-| `auto_report_generator.py` | CSV・グラフを読み取りMarkdownまたはNotebookに自動挿入するスクリプト |
+| [`report_template.ipynb`](report_template.ipynb) | Vg–IdやVth・BTI・TDDBなどのグラフ付きJupyterレポート |
+| [`report_template.md`](report_template.md) | MarkdownベースのCLI向けレポートテンプレート |
+| [`auto_report_generator.py`](auto_report_generator.py) | CSV・グラフを読み取りMarkdownまたはNotebookに自動挿入するスクリプト |
 
 ※テンプレートファイルは順次整備予定です。
 
@@ -62,7 +62,7 @@ pip install jupyter pandas matplotlib
 
 ## 🚀 今後の拡張案 / Future Enhancements
 
-- `nbconvert` による PDF レポート自動変換対応  
+- [`nbconvert`](https://nbconvert.readthedocs.io/) による PDF レポート自動変換対応  
 - `auto_report_generator.py` の軽量版CLI作成（CSV＋グラフ自動整形）  
 - GitHub Actions での定期レポート出力自動化  
 
