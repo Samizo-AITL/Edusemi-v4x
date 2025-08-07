@@ -1,86 +1,75 @@
 ---
 layout: default
-title: 04_bti_tddb_estimation - 劣化モデルの可視化
+title: 04_bti_tddb_estimation - 劣化モデルと数式可視化
 ---
 
-# 🧪 04_bti_tddb_estimation：BTI・TDDB 劣化モデルの可視化  
-**Degradation Model Visualization for BTI and TDDB**
+# 🧪 04_bti_tddb_estimation - 劣化モデルと数式可視化  
+**BTI & TDDB Degradation Modeling and Visualization**
 
 ---
 
 ## 📄 概要｜Overview
 
-本ディレクトリでは、MOSトランジスタの代表的な信頼性課題である  
-**BTI（Bias Temperature Instability）** および **TDDB（Time-Dependent Dielectric Breakdown）** に対する  
-**寿命モデルの数式とグラフをPythonで可視化**します。
+本章では、MOSトランジスタの信頼性課題である **BTI（Bias Temperature Instability）** および  
+**TDDB（Time-Dependent Dielectric Breakdown）** に関する基本モデルを Python により数式・グラフで可視化します。
 
-This directory visualizes **mathematical degradation models** for MOSFET reliability issues,  
-specifically **BTI** and **TDDB**, using Python plotting tools.
-
----
-
-## 🎯 学習目的｜Learning Objectives
-
-| 目的｜Goals |
-|-----------|
-| 📉 劣化現象の数式化による理解  
-| 🔥 時間・温度・電界と寿命の関係を定量化  
-| 🔍 SPICEでは扱いにくい**時間軸の劣化挙動**の可視化  
+This chapter visualizes key models of MOSFET reliability degradation—**BTI** and **TDDB**—using Python.  
+The goal is to intuitively understand their mathematical behavior through plots and formulae.
 
 ---
 
-## 🧾 スクリプト構成｜Script Structure
+## 🔧 スクリプト構成｜Files
 
-| ファイル名｜File | 内容｜Description |
-|------------------|-------------------------------------------|
-| [`plot_bti_model.py`](./plot_bti_model.py) | ΔVthの時間変化と温度依存をプロット |
-| [`plot_tddb_model.py`](./plot_tddb_model.py) | MTTFと電界強度の関係を可視化 |
-| [`model_constants.py`](./model_constants.py) | 各モデルで用いる定数群（Ea, γ, n など）を一元管理 |
-| [`output/`](./output/) | グラフ画像（`.png`）の保存フォルダ |
+| ファイル名｜Filename | 内容｜Description |
+|-----------------------|----------------------------|
+| `plot_bti_model.py` | ΔVth vs 時間（BTI劣化）を描画 |
+| `plot_tddb_model.py` | MTTF vs 電界（TDDB寿命）を描画 |
+| `model_constants.py` | モデル定数の一元管理（Ea, n など） |
+| `output/` | 出力図保存先（PNG形式） |
 
 ---
 
-## 📈 出力例｜Example Outputs
+## 📈 実行と出力｜Run and Output
 
-### 🔹 BTI劣化モデル（ΔVth vs 時間）
+### 🔸 BTI劣化モデルの実行
 
 ```bash
 python3 plot_bti_model.py
 ```
 
-- 時間（log軸）とΔVthの関係を温度別にプロット  
-- 出力画像：[`output/bti_degradation.png`](./output/bti_degradation.png)
+- ΔVth（しきい値シフト）の **時間・温度依存性** を log-log プロット  
+- 結果：`output/bti_degradation.png`
 
----
-
-### 🔹 TDDBモデル（MTTF vs 電界）
+### 🔸 TDDBモデルの実行
 
 ```bash
 python3 plot_tddb_model.py
 ```
 
-- 酸化膜電界 E による寿命変化をモデル比較  
-- 出力画像：[`output/tddb_models.png`](./output/tddb_models.png)
+- 電界強度と寿命（MTTF）の関係を2モデルで比較  
+- 結果：`output/tddb_models.png`
 
 ---
 
-## 📚 理論式と物理モデル｜Model Equations
+## 🔢 モデル式｜Model Equations
 
 ### ⚡ BTIモデル式｜BTI Model Equation
 
-MOSFETのBTI劣化（しきい値電圧シフト）は、以下の時間・温度依存モデルで記述されます：
+MOSFETのBTI劣化（しきい値電圧シフト）は、以下の時間・温度依存モデルで表されます：
 
-$$
-\Delta V_{\mathrm{th}}(t) = A \cdot t^n \cdot \exp\left(-\frac{E_{\mathrm{a}}}{kT}\right)
-$$
+<div align="center">
+<span>$$
+\Delta V_{th}(t) = A \cdot t^n \cdot \exp\left(-\frac{E_a}{kT}\right)
+$$</span>
+</div>
 
 | 項目｜Parameter | 内容｜Description |
-|-------|--------------------------|
-| <span>\( A \)</span>     | スケーリング定数 | Scaling factor |
-| <span>\( n \)</span>     | 時間依存係数（0.1〜0.3）| Time exponent |
-| <span>\( E_{\mathrm{a}} \)</span> | 活性化エネルギー [eV] | Activation energy |
-| <span>\( k \)</span>     | ボルツマン定数（<span>\(8.617 \times 10^{-5}\)</span> eV/K）| Boltzmann constant |
-| <span>\( T \)</span>     | 絶対温度 [K] | Absolute temperature |
+|----------------|------------------------|
+| <span>$begin:math:text$ A $end:math:text$</span> | スケーリング定数 |
+| <span>$begin:math:text$ n $end:math:text$</span> | 時間依存係数（0.1〜0.3） |
+| <span>$begin:math:text$ E_{\\mathrm{a}} $end:math:text$</span> | 活性化エネルギー [eV] |
+| <span>$begin:math:text$ k $end:math:text$</span> | ボルツマン定数（<span>$begin:math:text$8.617 \\times 10^{-5}$end:math:text$</span> eV/K） |
+| <span>$begin:math:text$ T $end:math:text$</span> | 絶対温度 [K] |
 
 ---
 
@@ -88,59 +77,52 @@ $$
 
 TDDB（酸化膜破壊寿命）は、次の2種類のモデルで近似されます：
 
-#### 🧾 指数モデル（Eモデル）：
+#### 📈 指数モデル（Eモデル）｜Exponential (E) Model
 
-$$
+<div align="center">
+<span>$$
 \mathrm{MTTF} \propto \exp(\gamma \cdot E)
-$$
+$$</span>
+</div>
 
-#### 📐 パワーモデル（フィールド指数モデル）：
+#### 📉 パワーモデル（フィールド指数モデル）｜Field Power Model
 
-$$
+<div align="center">
+<span>$$
 \mathrm{MTTF} \propto \frac{1}{E^n}
-$$
+$$</span>
+</div>
 
 | 項目｜Parameter | 内容｜Description |
-|-------|------------------------------|
-| <span>\( E \)</span>     | 酸化膜電界（V/nm or MV/cm） | Electric field across oxide |
-| <span>\( \gamma \)</span> | 電界加速係数（材料・膜厚依存） | Field acceleration factor |
-| <span>\( n \)</span>     | パワーモデル指数（2〜4） | Power model exponent |
+|----------------|----------------------------|
+| <span>$begin:math:text$ E $end:math:text$</span> | 酸化膜電界（V/nm または MV/cm） |
+| <span>$begin:math:text$ \\gamma $end:math:text$</span> | 電界加速係数（材料・膜厚依存） |
+| <span>$begin:math:text$ n $end:math:text$</span> | パワーモデル指数（2〜4） |
 
 ---
 
 ## 💡 教育的意義｜Educational Value
 
-- 📊 **数式・グラフ・設計インパクト** を同時に理解  
-- 🔄 **時間・温度・電界における信頼性設計マージン**の考察  
-- ⚙️ 実デバイス設計での **寿命予測と評価指標化** の基盤形成  
+- 数式・グラフ・設計インパクトを同時に理解  
+- 時間・温度・電界における **信頼性設計マージンの考察**  
+- 実測との整合性やパラメータ調整の教育的体験
 
 ---
 
-## 🔧 実行環境｜Requirements
+## 🔗 関連リンク｜Related Links
 
-| 項目｜Item | 内容｜Details |
-|--------|---------------------|
-| 🐍 Python | Version 3.x 推奨 |
-| 📦 必須パッケージ | `numpy`, `matplotlib` |
+| セクション | リンク |
+|------------|--------|
+| 📘 第2章トップ | [../README.md](../README.md) |
+| 🧮 第1章：Python自動化 | [../../e_chapter1_python_automation_tools/README.md](../../e_chapter1_python_automation_tools/README.md) |
+| 🧾 Sky130 PDK GitHub | [https://github.com/google/skywater-pdk](https://github.com/google/skywater-pdk) |
 
-### 📦 インストールコマンド｜Install Command
+---
+
+## 📦 必要なPythonパッケージ｜Requirements
 
 ```bash
 pip install numpy matplotlib
 ```
 
 ---
-
-## 🔗 関連リンク｜Related Chapters
-
-| 項目｜Item | リンク｜Link |
-|--------|-----------------------------------------------|
-| ⚗️ 実践編 第2章｜Sky130実験とSPICE特性評価 | [../README.md](../README.md) |
-| 🧰 実践編 第1章｜Python自動化ツール群 | [../../e_chapter1_python_automation_tools/README.md](../../e_chapter1_python_automation_tools/README.md) |
-| 🏗️ 実践編 第3章｜OpenLaneによるデジタル設計 | [../../e_chapter3_openlane_practice/README.md](../../e_chapter3_openlane_practice/README.md) |
-
----
-
-## 🔙 戻る｜Back to Chapter Top
-
-[🏠 実践編 第2章 トップへ戻る｜Back to `e_chapter2_sky130_experiments`](../README.md)
