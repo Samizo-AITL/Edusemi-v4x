@@ -1,3 +1,10 @@
+---
+layout: default
+title: MRAM
+---
+
+---
+
 # 🧲 MRAM（Magnetoresistive Random Access Memory）
 
 ---
