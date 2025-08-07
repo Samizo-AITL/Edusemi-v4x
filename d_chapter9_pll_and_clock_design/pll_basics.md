@@ -1,3 +1,10 @@
+---
+layout: default
+title: PLL
+---
+
+---
+
 # 🔧 `pll_basics.md` – PLLの基本構造と動作原理  
 **PLL Basics and Operation Principles**
 
