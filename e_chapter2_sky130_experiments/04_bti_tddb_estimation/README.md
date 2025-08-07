@@ -33,10 +33,10 @@ specifically **BTI** and **TDDB**, using Python plotting tools.
 
 | ファイル名｜File | 内容｜Description |
 |------------------|-------------------------------------------|
-| `plot_bti_model.py` | ΔVthの時間変化と温度依存をプロット |
-| `plot_tddb_model.py` | MTTFと電界強度の関係を可視化 |
-| `model_constants.py` | 各モデルで用いる定数群（Ea, γ, n など）を一元管理 |
-| `output/` | グラフ画像（`.png`）の保存フォルダ |
+| [`plot_bti_model.py`](./plot_bti_model.py) | ΔVthの時間変化と温度依存をプロット |
+| [`plot_tddb_model.py`](./plot_tddb_model.py) | MTTFと電界強度の関係を可視化 |
+| [`model_constants.py`](./model_constants.py) | 各モデルで用いる定数群（Ea, γ, n など）を一元管理 |
+| [`output/`](./output/) | グラフ画像（`.png`）の保存フォルダ |
 
 ---
 
@@ -49,7 +49,7 @@ python3 plot_bti_model.py
 ```
 
 - 時間（log軸）とΔVthの関係を温度別にプロット  
-- 出力画像：`output/bti_degradation.png`
+- 出力画像：[`output/bti_degradation.png`](./output/bti_degradation.png)
 
 ---
 
@@ -60,7 +60,7 @@ python3 plot_tddb_model.py
 ```
 
 - 酸化膜電界 E による寿命変化をモデル比較  
-- 出力画像：`output/tddb_models.png`
+- 出力画像：[`output/tddb_models.png`](./output/tddb_models.png)
 
 ---
 
