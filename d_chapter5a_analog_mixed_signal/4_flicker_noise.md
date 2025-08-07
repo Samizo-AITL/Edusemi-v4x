@@ -105,3 +105,9 @@ Flicker noise is a fundamental limitation in low-frequency analog circuits.
 Effective AMS design requires a **multilayered strategy of device choice, geometry tuning, oxide quality, and circuit-level techniques**.
 
 ---
+
+[🎛️ 応用編　第5章a：0.18um AMS設計技法　トップに戻る](./README.md)
+
+
+
+
