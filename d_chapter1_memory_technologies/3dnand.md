@@ -1,3 +1,10 @@
+---
+layout: default
+title: 3D NAND Flash Memory
+---
+
+---
+
 # 🗂️ 3D NAND Flash Memory | 3D NANDフラッシュメモリ
 
 ---
@@ -114,5 +121,3 @@ the 3D structure stacks memory cells **vertically** to continue capacity improve
 ---
 
 © 2025 Shinichi Samizo / MIT License
-
----
