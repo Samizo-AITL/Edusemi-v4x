@@ -1,5 +1,12 @@
+---
+layout: default
+title: アナログ／ミックスドシグナル設計の概要
+---
+
+---
+
 # 🧭 アナログ／ミックスドシグナル設計の概要  
-# 🧭 Overview of Analog / Mixed-Signal (AMS) Design
+**🧭 Overview of Analog / Mixed-Signal (AMS) Design**
 
 ---
 
