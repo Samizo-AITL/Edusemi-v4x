@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 
+title: FeRAM（Ferroelectric Random Access Memory）
 ---
 
 ---
@@ -150,5 +150,3 @@ FeRAMのプロセス実装に関心がある方は、以下の教材をご参照
 ---
 
 © 2025 Shinichi Samizo / MIT License
-
----
