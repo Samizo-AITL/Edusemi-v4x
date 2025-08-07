@@ -95,3 +95,8 @@ Controlling RSCE and LDD/Halo profiles is critical in aligning **process, device
 For AMS circuits, guaranteeing $V_{\mathrm{th}}$ accuracy and matching requires **co-optimization of channel engineering and thermal processing**.
 
 ---
+
+[🎛️ 応用編　第5章a：0.18um AMS設計技法　トップに戻る](./README.md)
+
+
+
