@@ -32,9 +32,9 @@ pip install pandas matplotlib
 
 | ファイル名 / Filename | 説明 / Description |
 |------------------------|---------------------|
-| `plot_vgid.py` | メインスクリプト：`.log` を読み取りグラフ描画<br>Main script for reading `.log` files and plotting |
-| `output/` | `01_spice_runner/` によって生成された `.log` 群<br>Generated log files from `01_spice_runner/` |
-| `figures/` | プロット画像の保存先（PNG, PDF）<br>Auto-generated directory for output figures |
+| [`plot_vgid.py`](plot_vgid.py) | メインスクリプト：`.log` を読み取りグラフ描画<br>Main script for reading `.log` files and plotting |
+| [`output/`](output/) | [`01_spice_runner`](../01_spice_runner/) によって生成された `.log` 群<br>Generated log files from `01_spice_runner` |
+| [`figures/`](figures/) | プロット画像の保存先（PNG, PDF）<br>Auto-generated directory for output figures |
 
 ---
 
@@ -73,7 +73,8 @@ figures/
 └── VgId_summary.pdf
 ```
 
-🖼️ 画像形式は `savefig()` によって保存され、レポートにも利用可能です。
+🖼️ 画像形式は `savefig()` によって保存され、レポートにも利用可能です。  
+Figures are saved as PNG/PDF using `savefig()` and can be embedded into reports.
 
 ---
 
@@ -81,17 +82,17 @@ figures/
 
 | フォルダ / Folder | 機能 / Description |
 |------------------|---------------------|
-| `../01_spice_runner/` | SPICEログの生成元<br>Source of simulation logs |
-| `../03_degradation_model/` | 劣化モデルとの連携<br>Integration with degradation models (e.g., Vth shifts) |
+| [`../01_spice_runner/`](../01_spice_runner/) | SPICEログの生成元<br>Source of simulation logs |
+| [`../03_degradation_model/`](../03_degradation_model/) | 劣化モデルとの連携（BTI / TDDB）<br>Integration with degradation models (e.g., Vth shifts) |
 
 ---
 
 ## 📝 備考 / Notes
 
 - `.log` ファイルから Vgs / Id をパースする正規表現はスクリプト内に定義済み  
-  Regex for parsing `.log` is embedded in the script
+  Regex for parsing `.log` is embedded in the script  
 - 出力形式（PNG/PDF）は `matplotlib.pyplot.savefig()` により変更可能  
-  Output format can be modified via `savefig()`
+  Output format can be modified via `savefig()`  
 - 軸ラベルや凡例のカスタマイズは必要に応じてスクリプト内で編集可能  
   You can customize axis labels and legends within the script
 
