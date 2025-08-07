@@ -85,18 +85,18 @@ output/
 └── vgid_W2.0_L0.3.log
 ```
 
-※ `.log` ファイルは、次ステップ `02_plot_vgid/` にて可視化されます。  
-These `.log` files can be parsed and visualized in the next step: `02_plot_vgid/`.
+📌 `.log` ファイルは、[**次のステップ**](../02_plot_vgid/)で可視化可能です。  
+`.log` files can be visualized in the next step: [`../02_plot_vgid/`](../02_plot_vgid/)
 
 ---
 
 ## 🔗 関連ツール / Related Tools
 
-| フォルダ / Folder | 機能 / Function |
-|------------------|------------------|
-| `02_plot_vgid/` | SPICE ログの可視化（matplotlib）<br>Visualization of SPICE logs |
-| `03_degradation_model/` | BTI・TDDB 劣化モデルとの連携解析<br>Degradation model integration |
-| `05_report_template/` | レポート出力支援テンプレート（Jupyter / Markdown）<br>Report generation template |
+| フォルダ / Folder | 機能 / Description |
+|------------------|---------------------|
+| [`../02_plot_vgid/`](../02_plot_vgid/) | SPICE ログの可視化（matplotlib）<br>Visualization of SPICE logs |
+| [`../03_degradation_model/`](../03_degradation_model/) | BTI・TDDB 劣化モデルとの連携解析<br>Degradation model integration |
+| [`../05_report_template/`](../05_report_template/) | レポート出力支援テンプレート（Jupyter / Markdown）<br>Report generation template |
 
 ---
 
