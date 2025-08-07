@@ -1,5 +1,12 @@
+---
+layout: default
+title: デジタル／アナログ境界：ADC・DACと混載設計課題
+---
+
+----
+
 # 🔄 デジタル／アナログ境界：ADC・DACと混載設計課題  
-# 🔄 Digital/Analog Interface: ADC, DAC, and Mixed-Signal Integration Challenges
+**🔄 Digital/Analog Interface: ADC, DAC, and Mixed-Signal Integration Challenges**
 
 ---
 
