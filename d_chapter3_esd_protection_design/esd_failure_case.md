@@ -1,5 +1,12 @@
+---
+layout: default
+title: ESD破壊の実例と物理解析
+---
+
+---
+
 # 💥 ESD破壊の実例と物理解析（Failure Analysis）  
-# 💥 ESD Failures and Physical Failure Analysis
+**💥 ESD Failures and Physical Failure Analysis**
 
 ---
 
