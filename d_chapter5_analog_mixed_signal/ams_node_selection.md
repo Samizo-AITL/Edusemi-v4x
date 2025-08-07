@@ -1,5 +1,12 @@
+---
+layout: default
+title: AMSにおけるノード選定指針
+---
+
+---
+
 # 🧭 AMSにおけるノード選定指針  
-# 🧭 Node Selection Guidelines in Analog / Mixed-Signal (AMS) Design
+**🧭 Node Selection Guidelines in Analog / Mixed-Signal (AMS) Design**
 
 ---
 
