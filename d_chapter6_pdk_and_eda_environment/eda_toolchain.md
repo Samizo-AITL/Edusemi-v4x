@@ -49,21 +49,15 @@ This document outlines the roles of **commercial and open-source EDA tools**, an
 
 ---
 
-## 🔁 ツール間のPDK接続構成（例：Sky130）  
-## 🔁 PDK Toolchain Flow Example (Sky130)
+## 🔁 ツール間のPDK接続構成（Mermaid形式）｜PDK Toolchain Flow (Mermaid)
 
-```
-回路図 (Xschem)
-↓
-シミュレーション (ngspice) ← スパイスモデル
-↓
-レイアウト (Magic)
-↓
-DRC / LVS / PEX (Magic, Netgen)
-↓
-配置配線 (OpenROAD)
-↓
-最終検証 (KLayout, custom scripts)
+```mermaid
+flowchart TD
+    SCH(Xschem<br>回路図) --> SIM(ngspice<br>シミュレーション)
+    SIM --> LAY(Magic<br>レイアウト)
+    LAY --> LVS(DRC / LVS / PEX<br>Magic, Netgen)
+    LVS --> PNR(OpenROAD<br>配置配線)
+    PNR --> FINAL(KLayout<br>最終検証)
 ```
 
 - `sky130A` PDK には、**各ツール専用の設定フォルダが整備**されており、ツール間の接続が容易。  
