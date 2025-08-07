@@ -1,5 +1,12 @@
+---
+layout: default
+title: BSIMモデルとPDKの関係
+---
+
+---
+
 # 📐 BSIMモデルとPDKの関係  
-# 📐 BSIM Models and Their Role in PDKs
+**📐 BSIM Models and Their Role in PDKs**
 
 ---
 
