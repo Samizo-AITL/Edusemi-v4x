@@ -22,10 +22,10 @@ using only basic `matplotlib` functionality to promote intuitive understanding o
 
 ## 📁 フォルダ構成｜Folder Structure
 
-| ファイル名 / Folder | 内容｜Description |
-|---------------------|---------------------------------------------|
+| ファイル / フォルダ名 | 内容｜Description |
+|------------------------|----------------------------------------------------------|
 | [`plot/plot_vgid.py`](./plot/plot_vgid.py) | Vg–Id 特性を描画する Python スクリプト<br>Python script to plot Vg–Id curves |
-| `output/` | `.log` を保存するフォルダ（`01_setup_sky130_model` にて生成）<br>Directory for `.log` files generated previously |
+| [`../output/`](../output/) | `.log` ファイルを保存するフォルダ（実行結果出力）<br>Directory for `.log` files generated from simulation |
 
 ---
 
@@ -33,7 +33,7 @@ using only basic `matplotlib` functionality to promote intuitive understanding o
 
 | 項目｜Item | 内容｜Details |
 |------------|------------------------|
-| 🐍 **Pythonバージョン**<br>Python Version | Python 3.x |
+| 🐍 **Python バージョン**<br>Python Version | Python 3.x |
 | 📦 **必要ライブラリ**<br>Required Libraries | `matplotlib` |
 
 **インストール例｜Example Installation:**
@@ -46,14 +46,23 @@ pip install matplotlib
 
 ## 🚀 実行方法｜How to Run
 
+### 🔹 基本的な実行
+
 ```bash
 python plot_vgid.py
 ```
 
-正常に実行されると、以下のような Vg–Id 曲線が表示されます：
+### 🔹 引数で `.log` ファイルを指定
 
-- 📘 `sky130_fd_pr__nfet_01v8`（nMOS 特性）
-- 📗 `sky130_fd_pr__pfet_01v8`（pMOS 特性）
+```bash
+python plot_vgid.py ../output/nfet_W1.0_L0.15.log
+```
+
+### 🔹 複数ファイルを一括描画（ワイルドカード対応）
+
+```bash
+python plot_vgid.py ../output/*.log
+```
 
 ---
 
@@ -70,11 +79,20 @@ python plot_vgid.py
 
 ---
 
+## 📝 補足事項｜Notes
+
+- `.log` ファイルは `ngspice` 実行後に `output/` フォルダ内に生成されます（例：`../01_setup_sky130_model/`）。
+- デバイス種別（nMOS / pMOS）はファイル名または中身から自動識別されます。
+- スクリプトは `matplotlib` のみで構成されており、外部依存はありません。
+
+---
+
 ## 🔗 関連リンク｜Related Links
 
 | 項目｜Item | リンク｜Link |
 |--------|-------------------------|
 | 🛠️ SPICEモデル準備 | [../01_setup_sky130_model/](../01_setup_sky130_model/) |
+| 📈 SPICE出力付き実験フォルダ | [../02_idvg_experiment/](../02_idvg_experiment/) |
 | 💾 Sky130 PDK GitHub | [https://github.com/google/skywater-pdk](https://github.com/google/skywater-pdk) |
 | 📊 matplotlib公式 | [https://matplotlib.org/](https://matplotlib.org/) |
 
