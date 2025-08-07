@@ -1,5 +1,12 @@
+---
+layout: default
+title: 製造対策の効果確認と安定性の評価
+---
+
+---
+
 # 5b.4：製造対策の効果確認と安定性の評価  
-*5b.4: Verification of Noise Reduction Effects and Stability Evaluation*
+**5b.4: Verification of Noise Reduction Effects and Stability Evaluation**
 
 ---
 
