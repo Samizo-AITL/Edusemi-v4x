@@ -1,5 +1,12 @@
+---
+layout: default
+title: EDAツールチェーン
+---
+
+---
+
 # 🧰 EDAツールチェーン：商用・OSSツールとの接続  
-# 🧰 EDA Toolchain: Integration with Commercial and OSS Tools
+**🧰 EDA Toolchain: Integration with Commercial and OSS Tools**
 
 ---
 
