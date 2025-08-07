@@ -3,8 +3,6 @@ layout: default
 title: 実践編 第1章 Pythonによる自動化ツール群 
 ---
 
----
-
 # 🛠️ 実践編 第1章：Pythonによる自動化ツール群  
 **Practical Chapter 1: Python-Based Automation Tools for Semiconductor Design**
 
@@ -92,4 +90,5 @@ for semiconductor design and evaluation, integrated with **Sky130 PDK** and **Op
 ---
 
 ## 🔙 戻る｜Back to Top
+
 **🏠 [Edusemi-v4x トップへ戻る｜Back to Edusemi-v4x Top](../README.md)**
