@@ -16,7 +16,7 @@ This folder contains a Python script that reads `.log` files generated from SPIC
 
 | ファイル名 / Filename | 説明 / Description |
 |------------------------|---------------------|
-| `plot_vgid.py` | `.log` ファイルから Vg–Id 特性を抽出しプロット<br>Reads `.log` files and plots the Vg–Id characteristics |
+| [`plot_vgid.py`](plot_vgid.py) | `.log` ファイルから Vg–Id 特性を抽出しプロット<br>Reads `.log` files and plots the Vg–Id characteristics |
 
 ---
 
@@ -25,13 +25,12 @@ This folder contains a Python script that reads `.log` files generated from SPIC
 以下の環境が必要です：  
 The following environment is required:
 
-```bash
-Python 3.8 以上 / Python 3.8+
-matplotlib
-```
+| 項目 / Item | バージョン・内容 / Details |
+|-------------|-----------------------------|
+| Python | 3.8 以上 / 3.8 or later |
+| ライブラリ | `matplotlib`（グラフ描画） |
 
-必要ライブラリのインストール：  
-Install the required library:
+🔽 インストール例 / Installation:
 
 ```bash
 pip install matplotlib
@@ -51,12 +50,15 @@ Run the following command:
 python3 plot_vgid.py output/nfet_W1.0_L0.15.log
 ```
 
-複数ファイルを一括プロットするには：  
+📂 複数ファイルを一括プロットする場合：  
 To plot multiple logs at once:
 
 ```bash
 python3 plot_vgid.py output/*.log
 ```
+
+プロットはターミナルに表示され、同時に `figures/` に保存されます。  
+Plots are shown interactively and also saved into the `figures/` folder.
 
 ---
 
@@ -90,8 +92,8 @@ The script reads this two-column format and plots Vg vs Id.
 
 | フォルダ / Folder | 機能 / Description |
 |------------------|---------------------|
-| `../01_spice_runner/` | SPICE シミュレーションの自動実行<br>Automated SPICE execution |
-| `../../e_chapter2_sky130_experiments/` | Sky130 実験と特性評価教材<br>Sky130 experiments and evaluation materials |
+| [`../01_spice_runner/`](../01_spice_runner/) | SPICE シミュレーションの自動実行<br>Automated SPICE execution |
+| [`../../e_chapter2_sky130_experiments/`](../../e_chapter2_sky130_experiments/) | Sky130 実験と特性評価教材<br>Sky130 experiments and evaluation materials |
 
 ---
 
