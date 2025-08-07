@@ -58,3 +58,5 @@ V(G)         I(VD)
 	•	../../e_chapter2_sky130_experiments/：Sky130実験と特性評価教材
 
 ---
+
+[🐍 実践編 第1章：Python自動化ツール群トップに戻る](../README.md)
