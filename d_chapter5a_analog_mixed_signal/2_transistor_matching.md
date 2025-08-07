@@ -88,3 +88,9 @@ Matching in AMS design sits at the intersection of layout, sizing, and process u
 To ensure high-precision circuits, **intentional matching layout practices and validation tools must be embedded from the design stage**.
 
 ---
+
+[🎛️ 応用編　第5章a：0.18um AMS設計技法　トップに戻る](./README.md)
+
+
+
+
