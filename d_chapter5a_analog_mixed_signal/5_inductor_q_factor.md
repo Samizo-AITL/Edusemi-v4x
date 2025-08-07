@@ -1,5 +1,12 @@
+---
+layout: default
+title: 5a.5 インダクタのQ値改善と配線・基板設計
+---
+
+---
+
 # 🌀 5a.5 インダクタのQ値改善と配線・基板設計  
-# 🌀 5a.5 Improving Inductor Q-Factor via Wiring and Substrate Design
+**🌀 5a.5 Improving Inductor Q-Factor via Wiring and Substrate Design**
 
 ---
 
