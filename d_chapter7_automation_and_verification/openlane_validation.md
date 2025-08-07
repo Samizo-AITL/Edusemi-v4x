@@ -1,5 +1,10 @@
+---
+layout: default
+title: OpenLaneによる実装検証とログ解析
+---
+
 # 🧪 OpenLaneによる実装検証とログ解析  
-# 🧪 Implementation Verification and Log Analysis with OpenLane
+**🧪 Implementation Verification and Log Analysis with OpenLane**
 
 ---
 
