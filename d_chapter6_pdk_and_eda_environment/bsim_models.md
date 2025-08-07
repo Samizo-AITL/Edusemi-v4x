@@ -117,12 +117,10 @@ It appears in PDK `.model` blocks and is supported by Spectre, HSPICE, ngspice, 
 
 ---
 
-## 👤 著者・ライセンス｜Author & License
-
-| 🏷️ 項目｜Item | 📝 内容｜Details |
-|---------------|-------------------|
-| **著者｜Author** | 三溝 真一（Shinichi Samizo） |
-| **GitHub** | [Samizo-AITL](https://github.com/Samizo-AITL) |
-| **License** | MIT License（再配布・改変自由） |
+### 🛠️ 応用編 第6章：PDKとEDA環境｜PDK and EDA Environment  
+[➡️ 章の詳細へ進む｜Go to Chapter](./README.md)
 
 ---
+
+© 2025 **Shinichi Samizo** / MIT License
+
