@@ -1,5 +1,12 @@
+---
+layout: default
+title: ノイズ設計とPSRR（電源変動耐性）
+---
+
+---
+
 # 🔇 ノイズ設計とPSRR（電源変動耐性）  
-# 🔇 Noise Design and PSRR (Power Supply Rejection Ratio)
+**🔇 Noise Design and PSRR (Power Supply Rejection Ratio)**
 
 ---
 
