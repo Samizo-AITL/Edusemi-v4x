@@ -52,9 +52,7 @@ pip install numpy matplotlib
 |----------------------|---------------------|
 | [`plot_bti_model.py`](plot_bti_model.py) | BTI（しきい値電圧の時間変化）モデルのプロット<br>Plot ΔVth over time (BTI model) |
 | [`plot_tddb_model.py`](plot_tddb_model.py) | TDDB（絶縁破壊寿命）の分布と電界依存性を可視化<br>Visualize TDDB lifetime distribution vs field |
-
-※ スクリプトは今後の実装予定です。  
-Scripts are planned and will be implemented soon.
+| [`common_plot.py`](common_plot.py) | 軸設定・描画スタイルなどの共通関数群<br>Common plotting utility functions |
 
 ---
 
