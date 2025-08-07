@@ -114,3 +114,8 @@ The Q-factor of on-chip inductors can be greatly improved by **optimized wiring,
 For AMS designs requiring high-Q inductors, **metal and substrate planning must be addressed from the process level**.
 
 ---
+
+[🎛️ 応用編　第5章a：0.18um AMS設計技法　トップに戻る](./README.md)
+
+
+
