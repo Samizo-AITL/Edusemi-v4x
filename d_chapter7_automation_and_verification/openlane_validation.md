@@ -128,6 +128,14 @@ def extract_drc_violations(log_file):
 
 ---
 
+## 🔗 GitHub上の教材ディレクトリ｜GitHub Directory
+
+📂 [`Samizo-AITL/Edusemi-v4x/d_chapter7_automation_and_verification`](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/d_chapter7_automation_and_verification)  
+> 本教材ファイルと関連リソースを含むGitHubリポジトリへアクセスできます。  
+> *Visit the GitHub directory containing this material and related files.*
+
+---
+
 ### 🤖 応用編 第7章：自動化と実装検証技術｜Applied Chapter 7: Automation and Implementation Verification  
 [➡️ 章の詳細へ進む｜Go to Chapter](./README.md)
 
