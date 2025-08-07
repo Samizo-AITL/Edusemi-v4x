@@ -1,5 +1,12 @@
+---
+layout: default
+title: CI/CDによる設計検証自動化
+---
+
+---
+
 # 🔄 CI/CDによる設計検証自動化  
-# 🔄 CI/CD-Based Automated Design Verification
+**🔄 CI/CD-Based Automated Design Verification**
 
 ---
 
