@@ -1,5 +1,12 @@
+---
+layout: default
+title: レイアウトの基本原則と設計ルールの意図
+---
+
+---
+
 # 📐 レイアウトの基本原則と設計ルールの意図  
-# 📐 Layout Principles and Design Rule Intentions
+**📐 Layout Principles and Design Rule Intentions**
 
 ---
 
