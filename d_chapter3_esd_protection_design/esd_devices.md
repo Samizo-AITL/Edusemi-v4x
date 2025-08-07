@@ -1,5 +1,12 @@
+---
+layout: default
+title: ESD保護素子の構造と動作原理
+---
+
+---
+
 # 🔧 ESD保護素子の構造と動作原理  
-# 🔧 Structure and Operating Principles of ESD Protection Devices
+**🔧 Structure and Operating Principles of ESD Protection Devices**
 
 ---
 
