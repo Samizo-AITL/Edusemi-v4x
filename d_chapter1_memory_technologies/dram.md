@@ -110,17 +110,17 @@ Integrated with cache hierarchy to hide latency.
 
 ## 📚 関連リンク | Related Sections
 
-[sram.md](./sram.md)：SRAMとの比較 | Comparison with SRAM  
-[基礎編 第4章](../chapter4_mos_characteristics/)：MOSばらつき | MOS variation  
-[応用編 第6章](../d_chapter6_pdk_and_eda_environment/)：eDRAM制約 | eDRAM design constraints
+- [📘 SRAMとの比較｜Comparison with SRAM](./sram.md)
+- [📗 基礎編 第4章：MOSばらつき｜MOS variation](../chapter4_mos_characteristics/)
+- [📙 応用編 第6章：eDRAM制約｜eDRAM design constraints](../d_chapter6_pdk_and_eda_environment/)
 
 ---
 
 ## 📦 技術アーカイブ（Edusemi-Plus） | Archive References
 
-[`DRAM_Startup_64M_1998.md`](https://github.com/Samizo-AITL/Edusemi-Plus/blob/main/archive/in1998/DRAM_Startup_64M_1998.md)：1998年DRAM立ち上げ | 64M DRAM ramp-up  
-[`VSRAM_2001.md`](https://github.com/Samizo-AITL/Edusemi-Plus/blob/main/archive/in2001/VSRAM_2001.md)：擬似SRAM開発 | pseudo-SRAM dev  
-[`MoSys_1T_SRAM_Links.md`](https://github.com/Samizo-AITL/Edusemi-Plus/blob/main/archive/in2001/MoSys_1T_SRAM_Links.md)：1T-SRAM参考リンク | 1T-SRAM links
+- [📄 1998年DRAM立ち上げ｜64M DRAM ramp-up](https://github.com/Samizo-AITL/Edusemi-Plus/blob/main/archive/in1998/DRAM_Startup_64M_1998.md)
+- [📄 擬似SRAM開発｜pseudo-SRAM development](https://github.com/Samizo-AITL/Edusemi-Plus/blob/main/archive/in2001/VSRAM_2001.md)
+- [🔗 1T-SRAM参考リンク｜1T-SRAM links](https://github.com/Samizo-AITL/Edusemi-Plus/blob/main/archive/in2001/MoSys_1T_SRAM_Links.md)
 
 ---
 
