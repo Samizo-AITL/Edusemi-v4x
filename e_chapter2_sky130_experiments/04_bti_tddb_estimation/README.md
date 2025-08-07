@@ -108,30 +108,6 @@ $$
 
 ---
 
-### ⚡ TDDBモデル式｜TDDB Model Equations
-
-TDDB（酸化膜破壊寿命）は、次の2種類のモデルで近似されます：
-
-#### 🧾 指数モデル（Eモデル）：
-
-$$
-\mathrm{MTTF} \propto \exp(\gamma \cdot E)
-$$
-
-#### 📐 パワーモデル（フィールド指数モデル）：
-
-$$
-\mathrm{MTTF} \propto \frac{1}{E^n}
-$$
-
-| 項目｜Parameter | 内容｜Description |
-|-------|------------------------------|
-| $begin:math:text$ E $end:math:text$     | 酸化膜電界（V/nm or MV/cm） | Electric field across oxide |
-| $begin:math:text$ \\gamma $end:math:text$ | 電界加速係数（材料・膜厚依存） | Field acceleration factor |
-| $begin:math:text$ n $end:math:text$     | パワーモデル指数（2〜4） | Power model exponent |
-
----
-
 ## 💡 教育的意義｜Educational Value
 
 - 📊 **数式・グラフ・設計インパクト** を同時に理解  
