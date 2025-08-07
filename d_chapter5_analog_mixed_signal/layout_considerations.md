@@ -1,5 +1,12 @@
+---
+layout: default
+title: アナログレイアウト設計の注意点
+---
+
+---
+
 # 🧱 アナログレイアウト設計の注意点  
-# 🧱 Key Considerations in Analog Layout Design
+**🧱 Key Considerations in Analog Layout Design**
 
 ---
 
