@@ -1,3 +1,10 @@
+---
+layout: default
+title: VerilogによるFSM記述
+---
+
+---
+
 # 💻 VerilogによるFSM記述｜FSM Description in Verilog
 
 ---
