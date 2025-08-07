@@ -1,3 +1,10 @@
+---
+layout: default
+title: Junction Isolation
+---
+
+---
+
 # 🧩 Junction Isolation（接合型絶縁構造）｜Junction Isolation
 
 ---
@@ -113,5 +120,3 @@ Junction Isolationだけでは、寄生npnや光電流による誤動作を完�
 ---
 
 © 2025 Shinichi Samizo / MIT License
-
----
