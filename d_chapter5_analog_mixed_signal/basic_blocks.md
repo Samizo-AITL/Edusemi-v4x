@@ -6,7 +6,7 @@ title: アナログ基本回路構成：Op-Amp、Buffer、Comparator
 ---
 
 # 🔧 アナログ基本回路構成：Op-Amp、Buffer、Comparator  
-# 🔧 Basic Analog Building Blocks: Op-Amp, Buffer, Comparator
+**🔧 Basic Analog Building Blocks: Op-Amp, Buffer, Comparator**
 
 ---
 
