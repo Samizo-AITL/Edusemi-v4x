@@ -27,8 +27,20 @@ OpenLane supports **Sky130PDK**, making it ideal for educational and research ap
 OpenLaneは各ステージで自動的に検証処理を実行します。  
 OpenLane automatically performs verification at each design stage.
 
-```text
-[RTL] → synthesis → floorplan → placement → CTS → routing → DRC / LVS / STA → [GDS]
+### 🔧 OpenLane設計フロー（Mermaid形式）｜OpenLane Flow (Mermaid)
+
+```mermaid
+flowchart LR
+    RTL([RTL])
+    SYN(synthesis)
+    FP(floorplan)
+    PLC(placement)
+    CTS(CTS)
+    RT(routing)
+    VERIF(DRC / LVS / STA)
+    GDS([GDS])
+
+    RTL --> SYN --> FP --> PLC --> CTS --> RT --> VERIF --> GDS
 ```
 
 ### ✔️ 各段階での自動チェック｜Stage-wise Auto Checks
