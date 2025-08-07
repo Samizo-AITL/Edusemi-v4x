@@ -31,10 +31,10 @@ pip install pandas matplotlib
 
 | ファイル名 / Filename | 説明 / Description |
 |------------------------|---------------------|
-| `parse_openlane_log.py` | メインスクリプト：OpenLaneログのCSV化＋グラフ出力 |
-| `example_config.json` | 対象レポートのディレクトリや比較条件を記述する設定ファイル |
-| `logs/` | OpenLane実行後の出力ログ（`metrics.csv`, `reports/*.rpt` などを格納） |
-| `results/` | 整理されたCSVデータや出力グラフ（自動生成されます） |
+| [`parse_openlane_log.py`](parse_openlane_log.py) | メインスクリプト：OpenLaneログのCSV化＋グラフ出力 |
+| [`example_config.json`](example_config.json) | 対象レポートのディレクトリや比較条件を記述する設定ファイル |
+| [`logs/`](logs/) | OpenLane実行後の出力ログ（`metrics.csv`, `reports/*.rpt` などを格納） |
+| [`results/`](results/) | 整理されたCSVデータや出力グラフ（自動生成されます） |
 
 ---
 
@@ -42,7 +42,7 @@ pip install pandas matplotlib
 
 ### 1️⃣ ログフォルダの準備 / Prepare Log Files
 
-以下のような構成で `logs/` フォルダにファイルを格納します：
+以下のような構成で [`logs/`](logs/) フォルダにファイルを格納します：
 
 ```text
 logs/
@@ -70,8 +70,8 @@ logs/
 python3 parse_openlane_log.py
 ```
 
-- `example_config.json` 内のパスとラベルを修正すれば、比較対象を自由に変更できます。
-- 実行後、`results/` フォルダに解析結果が生成されます。
+- [`example_config.json`](example_config.json) 内のパスとラベルを修正すれば、比較対象を自由に変更できます。
+- 実行後、[`results/`](results/) フォルダに解析結果が生成されます。
 
 ---
 
