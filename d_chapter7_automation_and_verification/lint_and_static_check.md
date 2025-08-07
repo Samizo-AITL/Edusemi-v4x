@@ -1,5 +1,12 @@
+---
+layout: default
+title: Lintと形式検証（Static Verification）
+---
+
+---
+
 # 🧪 Lintと形式検証（Static Verification）  
-# 🧪 Lint and Formal (Static) Verification
+**🧪 Lint and Formal (Static) Verification**
 
 ---
 
