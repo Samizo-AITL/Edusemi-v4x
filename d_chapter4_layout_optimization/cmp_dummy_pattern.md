@@ -1,5 +1,12 @@
+---
+layout: default
+title: CMP対応のダミーパターンと均一化設計
+---
+
+---
+
 # 🧪 CMP対応のダミーパターンと均一化設計  
-# 🧪 CMP-Compatible Dummy Pattern and Density Equalization Design
+**🧪 CMP-Compatible Dummy Pattern and Density Equalization Design**
 
 ---
 
