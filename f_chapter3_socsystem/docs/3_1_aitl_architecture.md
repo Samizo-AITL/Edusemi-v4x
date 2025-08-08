@@ -40,10 +40,10 @@ graph TB
     PID["📏 PID層\n物理安定層\n(制御器, Stabilizer)"]
     FSM["🔁 FSM層\n行動選択層\n(ステートマシン)"]
 
-    LLM -->|Command or Override| PID
+    LLM -->|Command / Override| PID
     FSM -->|ref (target value)| PID
     PID -->|Feedback (error)| FSM
-    
+
 ```
 
 - **FSM**：センサ信号に基づいて状態遷移・行動切替を行う  
