@@ -75,9 +75,7 @@ pip install matplotlib pandas numpy
 
 ## 🔬 SPICE評価のフロー図｜SPICE-Based Flow Overview (Mermaid)
 
-> ⚠️ このページではMermaidフローチャートは表示されません。  
-> 👉 GitHubページで以下を視覚的に確認できます：  
-> [📎 GitHubでMermaidフローチャートを見る](https://github.com/Samizo-AITL/Edusemi-v4x/blob/main/e_chapter2_sky130_experiments/README.md)
+ [📎 GitHubでMermaidフローチャートを見る](https://github.com/Samizo-AITL/Edusemi-v4x/blob/main/e_chapter2_sky130_experiments/README.md)
 
 ```mermaid
 graph TD
