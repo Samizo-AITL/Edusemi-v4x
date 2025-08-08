@@ -91,6 +91,6 @@ Violations will be highlighted in the GUI and reported in the terminal.
 
 ## 🔗 前後のリンク｜Navigation
 
-- ⬅️ [5.2 MagicによるGDS階層と層構成の可視化](5_2_magic_view.md)  
-- ▶️ [5.4 LVSの仕組みと等価性判定の論理](5_4_lvs_logic.md)  
+- ⬅️ [5.2 MagicによるGDS階層と層構成の可視化](5_2_magic_gds.md)  
+- ▶️ [5.4 LVSの仕組みと等価性判定の論理](5_4_lvs_check.md)  
 - 🏠 [特別編 第5章 READMEに戻る](README.md)
