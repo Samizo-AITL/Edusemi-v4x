@@ -69,6 +69,9 @@ python3 summary_bti_tddb.py
 
 ## 🔍 Mermaid図による構成可視化（Code Block）
 
+> ⚠️ GitHub PagesではMermaidが表示されません。  
+> 👉 [MermaidソースをGitHubで開く](./device_eval_summary.mmd)
+
 ```mermaid
 graph TD
   A[📘 Vth抽出<br>03_vth_extraction] --> B[📊 データ集計<br>summary_vth.py]
@@ -81,10 +84,6 @@ graph TD
   style D fill:#fff8e1,stroke:#f57f17,stroke-width:2px
   style E fill:#ede7f6,stroke:#4527a0,stroke-width:2px
 ```
-
-> ※ MermaidはGitHub Pages（Jekyll）では表示されない場合があります。  
-> 以下のエディタ等で確認できます：  
-> 🔗 [https://mermaid.live/](https://mermaid.live/)
 
 ---
 
