@@ -1,75 +1,97 @@
-# 3.4 LLMとの接続設計（RISC-V・I/O連携）
-
-## 🧠 LLM層の役割と特徴
-
-LLM（Large Language Model）やその他ソフト制御層は、AITL-H構成において以下の役割を担います：
-
-- 状況判断（例：歩く or 立ち止まるかの意図選択）
-- 外部対話・音声認識からの命令変換
-- FSM/PIDへの「上位指令」や「介入・調整」を提供
-
-> FSM/PIDがリアルタイムの制御基盤、LLMは非同期的な**意思決定層**として動作
+---
+layout: default
+title: 3.4 LLMとの接続設計（RISC-V・I/O連携）
+---
 
 ---
 
-## 🔄 接続方式：LLM ⇔ FSM・PID
-
-| 接続形態 | 内容 | 主な用途 |
-|----------|------|----------|
-| メモリマップ通信（MMIO） | RISC-Vがレジスタ書き換え | `action_mode`, `ref_override` |
-| 割り込み制御（IRQ） | LLMからイベント通知 | 状態変更、緊急停止など |
-| UART/I2C通信 | 外部センサ・クラウド連携 | 音声入力、遠隔指令 |
+# 🧠 3.4 LLMとの接続設計（RISC-V・I/O連携）  
+**Section 3.4: LLM-Based Integration with FSM/PID via RISC-V**
 
 ---
 
-## 📦 メモリマップ設計例（RISC-V ⇔ FSM/PID）
+## 🧠 LLM層の役割と特徴  
+**Role of the LLM Layer**
+
+LLM（Large Language Model）やソフトウェア制御層は、AITL-H構成において以下を担います：
+
+- 🧭 **状況判断**（例：歩く or 立ち止まるかの意図選択）  
+- 🗣️ **外部対話・音声認識からの命令変換**  
+- ⚙️ **FSM/PIDへの指令・調整・介入**
+
+> 🧩 **LLM = 意思決定層**、FSM/PID = リアルタイム制御層
+
+---
+
+## 🔄 LLM ⇔ FSM・PID の接続方式  
+**Communication Methods between LLM and FSM/PID**
+
+| 🛠 接続方式 | 🔍 内容 | 🎯 主な用途 |
+|------------|---------|------------|
+| **MMIO（Memory Mapped I/O）** | レジスタアクセス型通信 | `llm_action`, `llm_ref` |
+| **IRQ（割り込み）** | イベントベース通信 | 緊急停止、状態変更 |
+| **UART/I²C** | 外部通信インタフェース | 音声入力・クラウド接続 |
+
+---
+
+## 🧰 メモリマップ設計例（RISC-V ⇔ FSM/PID）  
+**Memory Map Example for LLM Control via RISC-V**
 
 | アドレス | 名称 | 説明 |
 |----------|------|------|
-| `0x0000_0000` | `llm_action` | FSMへの直接行動指定（override） |
-| `0x0000_0004` | `llm_ref` | PID制御用目標値の強制設定 |
-| `0x0000_0008` | `llm_mode` | FSM/PIDの制御モード設定（LLM主導/自律） |
-| `0x0000_000C` | `llm_status` | 状態監視用レジスタ（PID誤差など） |
+| `0x0000_0000` | `llm_action` | FSM行動指定（例：TURN） |
+| `0x0000_0004` | `llm_ref` | PID目標値の上書き |
+| `0x0000_0008` | `llm_mode` | FSM/PIDモード切替（自律/LLM） |
+| `0x0000_000C` | `llm_status` | PID制御の状態情報など |
 
-> 各アドレスは RISC-V の `lw/sw` 命令でアクセスされることを想定
-
----
-
-## 🧪 LLM命令フロー（例）
-
-LLM（GPT）判断：「旋回すべき」
-
-```
-→ RISC-V: sw 0x0002, 0x0000_0000   // llm_action = TURN
-→ FSM: action_out ← llm_action
-→ PID: ref ← pre-defined for TURN
-→ Actuator ← PID(u_out)
-```
+> 🔗 LLMは `lw`, `sw` 命令でアクセス
 
 ---
 
-## 🔌 LLM⇔ハード制御層のインターフェース設計
+## 🧪 LLM命令フロー（例）  
+**Example: LLM-Initiated Control Flow**
 
-| 信号名 | 方向 | 概要 | 接続先 |
+> **LLM判断：旋回すべき** → 指令をRISC-VからFSM/PIDに伝達
+
+```assembly
+sw 0x0002, 0x0000_0000   # llm_action = TURN
+```
+
+```
+FSM:    action_out ← llm_action  
+PID:    ref ← pre-defined ref for TURN  
+Actuator: ← PID(u_out)
+```
+
+---
+
+## 🔌 インターフェース信号設計  
+**Interface Signal Mapping**
+
+| 信号名 | 方向 | 内容 | 接続先 |
 |--------|------|------|--------|
-| `llm_action[2:0]` | LLM→FSM | 行動モード直接指令 | FSM |
-| `llm_ref[15:0]` | LLM→PID | PID目標値上書き | PID |
-| `llm_mode[1:0]` | LLM→制御共通 | FSM/PIDのモード切替 | FSM / PID |
-| `pid_status[15:0]` | PID→LLM | 誤差・応答など | 状態報告用 |
+| `llm_action[2:0]` | ⬅️ LLM→FSM | 行動指令 | FSMモジュール |
+| `llm_ref[15:0]`   | ⬅️ LLM→PID | PID目標値 | PID制御器 |
+| `llm_mode[1:0]`   | ⬅️ LLM→共通制御 | モード切替（自律/指令） | FSM / PID |
+| `pid_status[15:0]` | ⬅️ PID→LLM | 応答モニタ | LLM層の判断材料 |
 
 ---
 
-## 📝 実装上の注意点
+## ⚠️ 実装時の注意点  
+**Design Considerations**
 
-- LLMは非リアルタイムのため、**制御周波数の設計が要注意**
-- FSMとPIDには**LLMバイパス機構**（自律動作の優先）を確保
-- レジスタ設計は**クロックドメイン越え**に注意（同期FIFO等も検討）
+- ⏱ **非リアルタイム性の意識**：LLMは数ms〜数百msの反応遅れあり
+- 🔄 **FSM/PIDの自律動作維持**：LLM介入不能時にも安定制御可能に
+- ⏲ **レジスタ同期処理**：LLM（CPU）とFSM/PID（ハード）でドメインが異なる場合、同期FFやFIFOを用意
+
+---
+
+## 📎 次節との接続  
+**Next: SoC Integration and Bus Architecture**
+
+次の「**3.5 SoC統合とバス構造・通信設計**」では、FSM・PID・LLM各層を  
+**SoC全体の中で統合し、バス通信（AXI/APB等）としてどう接続するか**を解説します。
 
 ---
 
-## 📎 次節との接続
-
-次の「**3.5 SoC統合とバス構造・通信設計**」では、FSM・PID・LLMの各モジュールを  
-**SoC全体として統合する方法（AXI/APBバス、トップ階層設計）**を解説します。
-
----
+[🔙 特別編 第3章 README に戻る](./README.md)
