@@ -68,7 +68,7 @@ FEM analysis at the device level (e.g., GAA nanowires) captures fine-grained the
 ### 🖼️ 概念図（階層熱伝搬） / Conceptual Flow
 
 <p align="center">
-  <img src="../images/multiscale_thermal_flow_diagram.png" alt="Figure 2: Multiscale Flow" width="300"/>
+  <img src="https://samizo-aitl.github.io/Edusemi-v4x/f_chapter2a_systemdk/PoC/images/multiscale_thermal_flow_diagram.png" alt="Figure 2: Multiscale Flow" width="300"/>
 </p>
 
 <p align="center">
