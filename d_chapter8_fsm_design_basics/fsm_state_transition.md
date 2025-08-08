@@ -39,11 +39,11 @@ stateDiagram-v2
 - **ノード｜Node**：IDLE、WAIT_ACK、DONE
 - **矢印｜Arrow**：遷移を表す（トリガ条件付き）
 
-🛠 **作図ツール例｜Diagram Tools**：
-| 種類 | ツール例 |
-|------|----------|
-| **テキスト系｜Text-based** | PlantUML、Mermaid |
-| **GUI系｜Graphical** | Logisim、Graphviz |
+🛠 **作図ツール例 (Diagram Tools)**：
+| 種類          | ツール例              |
+|---------------|------------------------|
+| テキスト系<br>(Text-based) | PlantUML、Mermaid       |
+| GUI系<br>(Graphical)      | Logisim、Graphviz       |
 
 ---
 
