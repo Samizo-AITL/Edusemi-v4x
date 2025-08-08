@@ -3,6 +3,8 @@ layout: default
 title: 設計レポート解析：面積・タイミング・電力の可視化
 ---
 
+---
+
 # 📊 設計レポート解析：面積・タイミング・電力の可視化  
 **Analysis of Area, Timing, and Power Reports in OpenLane Flow**
 
