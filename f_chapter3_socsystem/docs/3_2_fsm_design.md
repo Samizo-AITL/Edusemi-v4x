@@ -124,19 +124,21 @@ FSMモジュールは、AITL-Hの上下層と以下のように信号接続さ�
 > ⚠️ このページではMermaidフローチャートは表示されません  
 > 👉 **以下のリンクからGitHubで視覚化表示をご確認ください：**  
 > [📎 GitHubでMermaidフローチャートを見る](https://github.com/Samizo-AITL/Edusemi-v4x/blob/main/f_chapter3_socsystem/docs/3_2_fsm_design.md)
-> 
+>
+
 ```mermaid
 flowchart TD
-    SENSOR["📡 センサ入力\n(sensor_in)"]
-    FSM["🔁 FSM層\n(行動選択)"]
+    SENSOR["🕊️ センサ入力\n(sensor_in)"]
+    FSM["🌀 FSM層\n(行動選択)"]
     PID["⚙️ PID層\n(物理安定化)"]
-    ACT["🔧 アクチュエータ\n(Actuator)"]
+    ACT["🛠️ アクチュエータ\n(Actuator)"]
     LLM["🧠 LLM層\n(状況判断)"]
 
     SENSOR --> FSM
-    FSM -- action_out --> PID
-    PID -- ctrl_out --> ACT
-    LLM -- command_in / feedback --> FSM
+    LLM -->|command_in / feedback| FSM
+    FSM -->|action_out| PID
+    PID -->|ctrl_out| ACT
+
 ```
 
 > 🧠 FSMは「**反射的行動生成**」、⚙️ PIDは「**物理制御安定化**」、LLMは「**状況判断とオーバーライド**」を担います。
