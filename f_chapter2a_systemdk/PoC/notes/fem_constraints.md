@@ -121,4 +121,3 @@ FEM解析とSystemDKの統合は、PoCの精度を高めるだけでなく、**�
 > Integration of FEM into SystemDK bridges PoC accuracy and mass-production validity.  
 Future directions include AI-assisted FEM optimization and multi-modal constraint integration.
 
----
