@@ -1,3 +1,10 @@
+---
+layout: default
+title: SystemDKにおけるFEM制約統合ノート
+---
+
+---
+
 # SystemDKにおけるFEM制約統合ノート  
 *SystemDK-Based Integration of FEM-Derived Constraints*
 
