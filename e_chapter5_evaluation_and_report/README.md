@@ -1,11 +1,9 @@
 ---
 layout: default
-title: 実践編 第5章　設計結果の評価とレポート
+title: 実践編 第5章 設計結果の評価とレポート
 ---
 
----
-
-# 🧪 実践編 第5章：設計結果の評価とレポート
+# 🧪 実践編 第5章：設計結果の評価とレポート  
 **Practical Chapter 5: Evaluation and Reporting of Design Results**
 
 ---
@@ -20,36 +18,40 @@ title: 実践編 第5章　設計結果の評価とレポート
 
 ## 📚 章構成｜Section Overview
 
-| 節番号 | 📘 日本語タイトル | 📙 English Title |
-|--------|------------------|------------------|
-| **5.1** | **シミュレーション結果と波形評価** | **Waveform Evaluation** |
-| **5.2** | **面積・タイミングとレポート解釈** | **Area & Timing Report** |
-| **5.3** | **DRC・LVSチェックとエラー解析** | **DRC/LVS & Error Analysis** |
-| **5.4** | **ブロック間比較と特性考察** | **Block Comparison** |
-| **5.5** | **改善提案と設計フィードバック** | **Feedback and Redesign** |
+| 節番号 | 📘 日本語タイトル | 📙 English Title | 🔗 リンク |
+|--------|------------------|------------------|-----------|
+| **5.1** | [シミュレーション結果と波形評価](5.1_waveform_evaluation.md) | Waveform Evaluation | `5.1_waveform_evaluation.md` |
+| **5.2** | [面積・タイミングとレポート解釈](5.2_area_timing_report.md) | Area & Timing Report | `5.2_area_timing_report.md` |
+| **5.3** | [DRC・LVSチェックとエラー解析](5.3_drc_lvs_analysis.md) | DRC/LVS & Error Analysis | `5.3_drc_lvs_analysis.md` |
+| **5.4** | [ブロック間比較と特性考察](5.4_block_comparison.md) | Block Comparison | `5.4_block_comparison.md` |
+| **5.5** | [改善提案と設計フィードバック](5.5_feedback_redesign.md) | Feedback and Redesign | `5.5_feedback_redesign.md` |
 
 ---
 
 ## 🎯 対象ブロック｜Target PoC Blocks
 
-- **FSM**（有限状態機械 / Finite State Machine）  
-- **MUX**（2:1セレクタ / 2:1 Multiplexer）  
-- **Adder**（4ビット加算器 / 4-bit Adder）  
+- ✅ **FSM**（有限状態機械 / Finite State Machine）  
+- ✅ **MUX**（2:1セレクタ / 2:1 Multiplexer）  
+- ✅ **Adder**（4ビット加算器 / 4-bit Adder）  
 
 ---
 
 ## 📘 学習のポイント｜Learning Objectives
 
-- **波形とレポートから「設計が正しいか」を読み取る**  
-- **数値（Slack、面積、DRC件数）に基づく評価と比較**  
-- **改善点を構造的に分析し、設計改善案として表現する**
+- 📈 **波形とレポートから「設計が正しいか」を読み取る**  
+- 🧠 **数値（Slack、面積、DRC件数）に基づく評価と比較**  
+- 🔧 **改善点を構造的に分析し、設計改善案として表現する**
 
 ---
 
 ## 🔗 次章への接続｜Next Step
 
-評価結果をもとに、**より高度な設計・実装（応用編）** へのステップアップが可能です。  
-例：高耐圧設計、AMS設計、DFM・PDK適応設計などへ展開。
+評価結果をもとに、**より高度な設計・実装（応用編）** へのステップアップが可能です。
+
+- 高耐圧設計（HV）
+- AMS混載設計
+- DFM/PDK適応設計
+- SRAM/非揮発性メモリ統合設計 などへ展開可能です。
 
 ---
 
@@ -64,5 +66,7 @@ title: 実践編 第5章　設計結果の評価とレポート
 
 ---
 
-## 🔙 戻る｜Back to Top
-**🏠 [Edusemi-v4x トップへ戻る｜Back to Edusemi-v4x Top](../README.md)**
+## 🔙 戻る｜Back
+
+- ⬅️ [第4章：PoC仕様と設計展開へ戻る](../04_poc_design_flow/README.md)
+- 🏠 [Edusemi-v4x トップへ戻る](../README.md)
