@@ -3,6 +3,8 @@ layout: default
 title: "3.3 PID制御のASIC実装（デジタル／アナログ）"
 ---
 
+---
+
 # ⚙️ 3.3 PID制御のASIC実装（デジタル／アナログ）  
 **Section 3.3: PID Controller Implementation (Digital / Analog)**
 
