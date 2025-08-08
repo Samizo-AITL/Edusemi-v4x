@@ -33,11 +33,11 @@ This chapter utilizes the **Sky130 PDK** to evaluate MOSFET characteristics such
 
 | フォルダ｜Folder | 内容｜Description |
 |------------------|----------------------------------------------------------|
-| [`01_setup_sky130_model/`](01_setup_sky130_model/) | Sky130 と `ngspice` の環境構築｜Set up Sky130 and ngspice |
-| [`02_idvg_experiment/`](02_idvg_experiment/) | Vg–Id 特性の Sweep シミュレーション｜Id–Vg parametric sweep |
-| [`03_vth_extraction/`](03_vth_extraction/) | `.meas` による Vth 自動抽出｜Automated Vth extraction |
-| [`04_bti_tddb_estimation/`](04_bti_tddb_estimation/) | BTI・TDDB による寿命評価モデル｜Reliability prediction |
-| [`05_data_summary/`](05_data_summary/) | 全実験結果の要約・図表出力｜Summary and visualization |
+| [`01_setup_sky130_model/`](01_setup_sky130_model/README.md) | Sky130 と `ngspice` の環境構築｜Set up Sky130 and ngspice |
+| [`02_idvg_experiment/`](02_idvg_experiment/README.md) | Vg–Id 特性の Sweep シミュレーション｜Id–Vg parametric sweep |
+| [`03_vth_extraction/`](03_vth_extraction/README.md) | `.meas` による Vth 自動抽出｜Automated Vth extraction |
+| [`04_bti_tddb_estimation/`](04_bti_tddb_estimation/README.md) | BTI・TDDB による寿命評価モデル｜Reliability prediction |
+| [`05_data_summary/`](05_data_summary/README.md) | 全実験結果の要約・図表出力｜Summary and visualization |
 
 ---
 
