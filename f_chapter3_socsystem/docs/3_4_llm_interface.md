@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 3.4 LLMとの接続設計（RISC-V・I/O連携）
+title: 3.4 LLMとの接続設計（RISC-V・I/O連携）　
 ---
 
 ---
