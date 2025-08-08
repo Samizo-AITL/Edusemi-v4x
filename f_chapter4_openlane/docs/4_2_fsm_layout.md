@@ -133,7 +133,7 @@ magic -T sky130A.tech runs/fsm_engine/results/final/gds/fsm_engine.gds
 
 ## 📎 前後の節｜Previous / Next Sections
 
-- ◀️ 前の節｜Previous: [4.1 OpenLane導入とプロジェクト構成](docs/4_1_openlane_intro.md)  
+- ◀️ 前の節｜Previous: [4.1 OpenLane導入とプロジェクト構成](./4_1_openlane_intro.md)  
 - ▶️ 次の節｜Next: [4.3 PIDモジュールの配置配線](./4_3_pid_layout.md)
 
 📚 [🔙 特別編 第4章 README に戻る](../README.md)
