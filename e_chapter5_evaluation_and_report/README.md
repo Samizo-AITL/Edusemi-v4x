@@ -18,13 +18,13 @@ title: 実践編 第5章 設計結果の評価とレポート
 
 ## 📚 章構成｜Section Overview
 
-| 節番号 | 📘 日本語タイトル | 📙 English Title | 🔗 リンク |
-|--------|------------------|------------------|-----------|
-| **5.1** | [シミュレーション結果と波形評価](5.1_waveform_evaluation.md) | Waveform Evaluation | `5.1_waveform_evaluation.md` |
-| **5.2** | [面積・タイミングとレポート解釈](5.2_area_timing_report.md) | Area & Timing Report | `5.2_area_timing_report.md` |
-| **5.3** | [DRC・LVSチェックとエラー解析](5.3_drc_lvs_analysis.md) | DRC/LVS & Error Analysis | `5.3_drc_lvs_analysis.md` |
-| **5.4** | [ブロック間比較と特性考察](5.4_block_comparison.md) | Block Comparison | `5.4_block_comparison.md` |
-| **5.5** | [改善提案と設計フィードバック](5.5_feedback_redesign.md) | Feedback and Redesign | `5.5_feedback_redesign.md` |
+| 節番号 | 📘 日本語タイトル | 📙 English Title | 🔗 ファイル名 |
+|--------|------------------|------------------|-----------------------------|
+| **5.1** | [シミュレーション結果と波形評価](5.1_simulation_result_check.md) | Waveform Evaluation | `5.1_simulation_result_check.md` |
+| **5.2** | [面積・タイミングとレポート解釈](5.2_area_and_timing_report.md) | Area & Timing Report | `5.2_area_and_timing_report.md` |
+| **5.3** | [DRC・LVSチェックとエラー解析](5.3_drc_and_lvs_check.md) | DRC/LVS & Error Analysis | `5.3_drc_and_lvs_check.md` |
+| **5.4** | [ブロック間比較と特性考察](5.4_comparison_summary.md) | Block Comparison | `5.4_comparison_summary.md` |
+| **5.5** | [改善提案と設計フィードバック](5.5_improvement_feedback.md) | Feedback and Redesign | `5.5_improvement_feedback.md` |
 
 ---
 
