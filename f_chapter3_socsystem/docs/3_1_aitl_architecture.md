@@ -34,16 +34,14 @@ title: 3.1 AITL-Hアーキテクチャと層分離設計
 > 👉 **以下のリンクからGitHubで視覚化表示をご確認ください：**  
 > [📎 GitHubでMermaidフローチャートを見る](https://github.com/Samizo-AITL/Edusemi-v4x/blob/main/f_chapter3_socsystem/docs/3_1_aitl_architecture.md)
 
-```mermaid
 graph TB
     LLM["🧠 LLM層\n知的制御層\n(GPT, RISC-V)"]
     PID["📏 PID層\n物理安定層\n(制御器, Stabilizer)"]
     FSM["🔁 FSM層\n行動選択層\n(ステートマシン)"]
 
-    LLM -->|Command / Override| PID
-    FSM -->|ref (target value)| PID
-    PID -->|Feedback (error)| FSM
-```
+    LLM -->|"Command / Override"| PID
+    FSM -->|"ref (target value)"| PID
+    PID -->|"Feedback (error)"| FSM
 
 - **FSM**：センサ信号に基づいて状態遷移・行動切替を行う  
   *FSM switches behavior based on sensor input.*
