@@ -139,11 +139,11 @@ endmodule
 
 ---
 
-## 📎 次節への接続｜Next Section
+📎 Previous｜前節：  
+🔙 [3.4 LLMとの接続設計（RISC-V・I/O連携）](3_4_llm_interface.md)
 
-次は「**3.6 ケーススタディ：三層制御によるPoC実装例**」です。  
-本章で示したSoC構成を基に、FSM×PID×LLMによる倒立振子制御などの**PoC事例**を取り上げます。
+📎 Next｜次節：  
+👉 [3.6 ケーススタディ：三層制御によるPoC実装例](3_6_case_study.md)  
+Real-world **case studies** of integrating FSM × PID × LLM for applications like **inverted pendulums and humanoid robots**.
 
----
-
-📚 [🔙 特別編 第3章 README に戻る](../README.md)
+📚 [🔙 特別編 第3章 README に戻る｜Back to Chapter 3 README](../README.md)
