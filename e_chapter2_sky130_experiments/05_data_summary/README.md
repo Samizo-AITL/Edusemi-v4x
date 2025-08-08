@@ -3,6 +3,8 @@ layout: default
 title: 05_data_summary - SPICE評価結果の集計と可視化
 ---
 
+---
+
 # 📊 05_data_summary - SPICE評価結果の集計と可視化  
 **Summary and Visualization of SPICE-Based Device Evaluation**
 
