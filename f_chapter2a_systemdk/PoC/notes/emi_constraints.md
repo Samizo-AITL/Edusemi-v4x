@@ -1,3 +1,9 @@
+---
+layout: default
+title: EMI制約とアイソレーション戦略
+---
+
+---
 # EMI制約とアイソレーション戦略（**EMI Constraints and Isolation Strategy**）
 
 ## 1. 概要 / **Overview**
