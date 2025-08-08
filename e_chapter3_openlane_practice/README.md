@@ -21,36 +21,6 @@ Sky130 PDKとの統合、制約記述、合成・配置・配線・DRCなど、
 
 ---
 
-## 📉 OpenLane設計フロー可視化（Mermaid）
-
-```mermaid
-graph TD
-    A[🔤 Verilog RTL]
-    B[🧠 論理合成\n(Synthesis)]
-    C[📐 フロアプラン\n(Floorplan)]
-    D[🏗️ 配置\n(Placement)]
-    E[🕘 クロックツリー合成\n(CTS)]
-    F[🔌 配線\n(Routing)]
-    G[🧪 検証\n(DRC / LVS)]
-    H[📦 GDS生成\n(GDS / LEF)]
-
-    A --> B --> C --> D --> E --> F --> G --> H
-
-    style A fill:#e3f2fd,stroke:#1e88e5,stroke-width:2px
-    style B fill:#f3e5f5,stroke:#8e24aa,stroke-width:2px
-    style C fill:#f1f8e9,stroke:#43a047,stroke-width:2px
-    style D fill:#fff3e0,stroke:#fb8c00,stroke-width:2px
-    style E fill:#fce4ec,stroke:#c2185b,stroke-width:2px
-    style F fill:#e0f2f1,stroke:#00897b,stroke-width:2px
-    style G fill:#ede7f6,stroke:#5e35b1,stroke-width:2px
-    style H fill:#eceff1,stroke:#546e7a,stroke-width:2px
-```
-
-> ✅ Mermaid Live Editor（[リンク](https://mermaid.live/)）や対応GitHub Pages環境で確認可能  
-> ❗ GitHub上の表示には制限があるため、Jekyll + Mermaid対応テーマでの動作推奨
-
----
-
 ## 🎯 学習目標｜Learning Objectives
 
 - ✅ RTL〜GDSまでの流れを把握し、実行できる  
@@ -60,7 +30,7 @@ graph TD
 - ✅ 面積・タイミング・電力などのレポートを解釈し設計へ反映  
   Interpret reports on area, timing, and power, and feed back into design  
 - ✅ `SDC`, `floorplan`, `PDN` などの制約記述に習熟  
-  Get familiar with design constraints such as `SDC`, `floorplan`, and `PDN`
+  Get familiar with design constraints such as `SDC`, `floorplan`, and `PDN`  
 
 ---
 
@@ -96,6 +66,36 @@ make pull-sky130-pdk
 ```
 
 🔎 詳細なセットアップ手順は → [`01_intro_openlane/`](01_intro_openlane/README.md)
+
+---
+
+## 🗺️ OpenLane設計フローの可視化（Mermaid対応）
+
+> ⚠️ この図はGitHubの通常プレビューでは表示されません  
+> ✅ Mermaid対応環境で表示するか、[Mermaid Live Editor](https://mermaid.live/edit)で確認してください
+
+```mermaid
+graph TD
+    A[📝 Verilog RTL]
+    B[🧠 Synthesis\n(論理合成)]
+    C[📐 Floorplan\n(配置計画)]
+    D[🔲 Placement\n(配置)]
+    E[🕒 CTS\n(クロックツリー合成)]
+    F[🔌 Routing\n(配線)]
+    G[🧪 DRC / LVS\n(検証)]
+    H[📦 GDS / LEF\n(出力)]
+
+    A --> B --> C --> D --> E --> F --> G --> H
+
+    style A fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    style B fill:#fce4ec,stroke:#c2185b,stroke-width:2px
+    style C fill:#f3e5f5,stroke:#6a1b9a,stroke-width:2px
+    style D fill:#f9fbe7,stroke:#827717,stroke-width:2px
+    style E fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+    style F fill:#e0f7fa,stroke:#006064,stroke-width:2px
+    style G fill:#fff3e0,stroke:#ef6c00,stroke-width:2px
+    style H fill:#ede7f6,stroke:#4527a0,stroke-width:2px
+```
 
 ---
 
