@@ -1,81 +1,116 @@
-# 5.6 チップ完成に向けた最終検証ステップ
-
-## 🎯 本節の目的
-
-- SoCレベルのGDS完成後に必要となる最終検証項目を整理する  
-- ERC、Antenna Check、Tapeout準備などの実施手順を確認する  
-- 完全な製造可能性（tapeout-ready）に向けた設計要件を理解する
+---
+layout: default
+title: 5.6 チップ完成に向けた最終検証ステップ
+---
 
 ---
 
-## 🧪 最終検証ステップの全体像
-
-1. **DRC**（Design Rule Check）
-2. **LVS**（Layout vs. Schematic）
-3. **ERC**（Electrical Rule Check）
-4. **Antenna Check**
-5. **Fill Cell確認**
-6. **バウンダリ構造チェック（Chip Edge）**
-7. **GDS出力・Tapeout条件の確認**
+# 🧪 5.6 チップ完成に向けた最終検証ステップ  
+**Final Verification Toward Tapeout**
 
 ---
 
-## 🔍 ERC：電気的ルールチェック
+## 🎯 本節の目的｜Objectives
 
-| チェック内容 | 例 |
-|--------------|----|
-| 未接続ピンの有無 | 出力ピンのフローティング |
-| GND/VDDの短絡・断線 | 電源ネットの不整合 |
-| 階層をまたぐ電源接続エラー | Power Pin不一致など |
-
-→ OpenLaneやMagicのエクスポートNetlistで確認可能。
-
----
-
-## 📏 Antenna Checkとは？
-
-製造時にポリやメタルが露出しすぎると、**帯電破壊**による不良が発生。  
-Sky130ではAntennaルールに基づき、ポリの比率や接続順を検証します。
-
-→ OpenLaneで自動挿入 or antenna diodeセルで対策。
+- **GDS完成後に必要な最終検証項目**を体系的に整理する  
+  **Understand the final verification items required before chip tapeout**
+- **ERC・Antenna Check・Fill構造などの要点**を把握する  
+  **Learn key checks such as ERC, antenna effect, and fill structure**
+- **tapeout-ready GDS**を目指した整合性の取り方を理解する  
+  **Grasp how to ensure manufacturability before final tapeout**
 
 ---
 
-## 🧱 Fill Cellの確認
+## 🧪 最終検証ステップ一覧｜Final Sign-off Checklist
 
-- メタル密度を均一化する目的
-- `fill_cell`や`tap_cell`をOpenLaneで自動追加
-- 特に大面積SoCでのレイアウト均一性が重要
-
----
-
-## 📦 バウンダリ構造とI/O
-
-- PAD配置、chip boundaryの形成
-- Corner CellやI/O Cellの配置が必要
-- 実製造でのパッケージ対応を視野に設計
+| ✅ **検証ステップ**<br>Check Step | 📋 **内容概要**<br>Description |
+|----------------------|------------------------------|
+| **DRC** | 物理ルール検証<br>Design Rule Check |
+| **LVS** | 論理等価性検証<br>Layout vs Schematic |
+| **ERC** | 電源・ピンの整合性確認<br>Electrical Rule Check |
+| **Antenna Check** | 帯電破壊リスク確認<br>Plasma charge damage check |
+| **Fill Cell確認** | メタル密度均一化<br>Metal density equalization |
+| **Boundary構造** | PADとChipエッジ確認<br>Chip I/O and corner structure |
+| **GDS整合性** | 出力ファイル・命名・圧縮など<br>GDS output readiness |
 
 ---
 
-## ✅ Tapeout前の最終チェックリスト
+## 🔍 ERC｜Electrical Rule Check
 
-| 項目 | チェック |
-|------|----------|
-| DRC | 全ルールpass |
-| LVS | 回路等価性OK |
-| ERC | 電源構造とピン構成整合 |
-| Fill | 均一なmetal分布確認 |
-| Antenna | Diode挿入済 or Pass |
-| GDSファイル | 正常に出力・命名・圧縮済 |
+| 🔍 **チェック項目**<br>Item | 🛠️ **例**<br>Examples |
+|----------------------|------------------------------|
+| 未接続ピン | フローティング出力がないか |
+| 電源の短絡・断線 | GND/VDDネットが正しく接続されているか |
+| 階層電源の整合性 | 上位モジュールとのPower Pin一致 |
 
----
-
-## ✅ 本節まとめ
-
-- チップ製造に必要な最終チェック項目は複数存在し、それぞれ目的が異なる  
-- Sky130 PDKとOpenLaneはこれらの自動化支援機能を備えており、効果的に活用できる  
-- 完全なtapeout-ready GDSを得るには、DRC・LVSに加え、ERC/Antenna/Fillの最終整合が必須
+📌 **OpenLaneまたはMagic抽出Netlist**を用いて確認可能です。
 
 ---
 
-👉 [戻る：特別編 第5章 README](../README.md)
+## ⚡ Antenna Check｜Antenna効果対策
+
+- **製造中の帯電破壊**を防ぐための重要チェック  
+- ポリやメタルが長く露出していると酸化膜が破壊されるリスク  
+- 対策として：
+  - `antenna diode`セルの挿入
+  - OpenLaneのAntenna自動チェックを使用
+
+```tcl
+set ::env::ANTENNA_CHECK_FULL true
+```
+
+---
+
+## 🧱 Fill Cell確認｜Metal Density Equalization
+
+- 配線密度のムラを防ぎ、**CMP工程での平坦性確保**  
+- 自動的に `fill_cells`, `tap_cells` を追加可能（OpenLane対応）
+
+```tcl
+set ::env::FILL_INSERTION true
+```
+
+📌 特に**大面積のSoC**ではこの処理が重要です。
+
+---
+
+## 📐 Chip Boundary構造の確認
+
+| ⚙️ **要素** | 💡 **内容** |
+|-------------|------------|
+| PAD配置     | 入出力ピンとその保護セル配置 |
+| Corner Cell | Chip角部に必須のセル配置 |
+| I/O Tap     | 境界付近の電源整合用セル |
+
+📦 **パッケージ実装**との整合を視野に、正確な配置が求められます。
+
+---
+
+## 📋 Tapeout前のチェックリスト｜Final Tapeout Checklist
+
+| 📌 **項目**<br>Item | ✅ **チェック内容**<br>What to Check |
+|-------------|------------------------------|
+| DRC | All physical rules are satisfied |
+| LVS | Logical equivalence confirmed |
+| ERC | Power, pins, unconnected nets |
+| Fill Cell | Metal density balanced |
+| Antenna | No violation or diode inserted |
+| GDS | Proper output, compression, naming |
+
+---
+
+## ✅ 本節まとめ｜Summary
+
+- **最終検証は、製造に耐えるチップかどうかを決定づける重要工程**  
+  **Final verification ensures manufacturable, reliable chip designs**
+- Sky130 + OpenLane により、多くのチェックが**自動化可能**  
+  **Most checks can be automated in the Sky130 flow**
+- **GDS出力前にERC/Antenna/Fillを含む包括的チェック**が必要  
+  **Include ERC, antenna, and fill structure in your final sign-off**
+
+---
+
+## 🔗 前後のリンク｜Navigation
+
+- ⬅️ [5.5 DFM設計：量産対応のためのレイアウト指針](5_5_dfm_guideline.md)  
+- 🏠 [特別編 第5章 README に戻る](README.md)
