@@ -62,9 +62,6 @@ for semiconductor design and evaluation, integrated with **Sky130 PDK** and **Op
 > 👉 **以下のリンクからGitHubで視覚化表示をご確認ください：**  
 > [📎 GitHubでMermaidフローチャートを見る](https://github.com/Samizo-AITL/Edusemi-v4x/blob/main/e_chapter1_python_automation_tools/README.md)
 
-
-### 📊 ツール相関図（Pythonスクリプト群の接続関係）
-
 ```mermaid
 graph TD
     A01[📘 01_spice_runner<br>SPICE自動実行]
