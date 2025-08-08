@@ -3,6 +3,8 @@ layout: default
 title: 01_setup_sky130_model - Sky130モデル準備と初期動作確認
 ---
 
+---
+
 # ⚙️ 01_setup_sky130_model  
 **Sky130 MOS Model Setup and Initial Simulation**
 
