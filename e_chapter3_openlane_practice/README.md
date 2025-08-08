@@ -23,10 +23,14 @@ Sky130 PDKとの統合、制約記述、合成・配置・配線・DRCなど、
 
 ## 🎯 学習目標｜Learning Objectives
 
-| ✅ | RTL〜GDSまでの流れを把握し、実行できる |
-| ✅ | 各ステージ（合成・配置・配線・DRC等）の目的とツールを理解 |
-| ✅ | 面積・タイミング・電力などのレポートを解釈し設計へ反映 |
-| ✅ | `SDC`, `floorplan`, `PDN` などの**制約記述**に習熟 |
+- ✅ RTL〜GDSまでの流れを把握し、実行できる  
+  Understand the full flow from RTL to GDS
+- ✅ 各ステージ（合成・配置・配線・DRC等）の目的とツールを理解  
+  Understand the roles of synthesis, placement, routing, DRC, etc.
+- ✅ 面積・タイミング・電力などのレポートを解釈し設計へ反映  
+  Interpret reports on area, timing, and power, and feed back into design
+- ✅ `SDC`, `floorplan`, `PDN` などの制約記述に習熟  
+  Get familiar with design constraints such as `SDC`, `floorplan`, and `PDN`
 
 ---
 
