@@ -1,21 +1,38 @@
-# 🚀 OpenLane導入とフローの全体像
+---
+layout: default
+title: OpenLane導入とフローの全体像
+---
 
-本節では、オープンソースEDAフロー「OpenLane」の導入手順と、RTLからGDS生成までの全体像を解説します。
+# 🚀 OpenLane導入とフローの全体像  
+**Introduction and Full Flow of OpenLane-Based Digital Design**
 
 ---
 
-## 📦 OpenLaneとは
+## 📘 概要｜Overview
 
-OpenLaneは、The-OpenROAD Projectの一部として開発されている、**デジタルLSI自動設計フロー**です。  
-Sky130 PDKと組み合わせることで、Verilog RTLから物理レイアウト（GDS）まで一貫して行えます。
+本節では、オープンソースEDAフロー「**OpenLane**」の導入方法と、  
+**RTL（Verilog）からGDS（物理レイアウト）までの全体ステップ**を解説します。
 
-- ベースツール：OpenROAD（配置配線・タイミング解析）
-- サポート：yosys（論理合成）、Magic（DRC/LVS）、ngspiceなど
-- 実行環境：Docker / ローカル（Python + Makefile）
+This section explains how to set up **OpenLane** and provides an overview of  
+the **digital design flow from RTL to GDS**, using open-source EDA tools.
 
 ---
 
-## 🔧 必要な環境構築
+## 📦 OpenLaneとは｜What is OpenLane?
+
+OpenLaneは、The-OpenROAD Projectが開発する **自動デジタルLSI設計フロー**です。  
+**Sky130 PDK**と組み合わせることで、Verilog RTLからGDSファイルの生成まで一貫して実行できます。
+
+| 項目｜Component | 説明｜Description |
+|----------------|------------------|
+| 🧠 ベースツール | OpenROAD（配置・配線・解析） |
+| ⚙️ 論理合成 | `yosys` |
+| 📐 物理検証 | `Magic`, `Netgen` |
+| 📦 実行環境 | Dockerベース or ローカル環境（Python + Make） |
+
+---
+
+## 🔧 導入手順｜Installation Steps
 
 ### 1. リポジトリのクローン
 
@@ -24,54 +41,65 @@ git clone https://github.com/The-OpenROAD-Project/OpenLane.git
 cd OpenLane
 ```
 
-### 2. OpenLaneとPDKの取得
+### 2. OpenLane本体とSky130 PDKを取得
 
 ```bash
 make pull-openlane
 make pull-sky130-pdk
 ```
 
-> ✅ 初回は1時間以上かかる場合があります
+> ⚠️ 初回ダウンロードには 1 時間以上かかる場合があります。
 
 ---
 
-## 🗂️ ディレクトリ構成（抜粋）
+## 🗂️ ディレクトリ構成（抜粋）｜Directory Structure
 
 ```text
 OpenLane/
-├── flow/                   # 実行用MakefileとPythonスクリプト
-├── designs/                # ユーザー設計を配置（例: picorv32, gcd）
-├── PDK_ROOT/               # sky130 PDKを含むディレクトリ（自動生成）
-└── config.tcl              # グローバル設定
+├── flow/                   # 実行スクリプト類（Makefile, Python）
+├── designs/                # ユーザーデザイン（例: picorv32, gcd）
+├── PDK_ROOT/               # Sky130 PDK保存ディレクトリ（自動生成）
+└── config.tcl              # グローバル設定ファイル
 ```
 
 ---
 
-## 📈 OpenLaneの設計フロー（概要）
+## 📈 設計フロー全体像｜Full Flow Overview
 
-以下のようなステップを、PythonまたはMakefileで一括処理します。
+OpenLaneは以下のフローを一括実行する構成になっています：
 
-| ステップ | 説明 | 使用ツール |
-|---------|------|------------|
-| 1. Synthesis | 論理合成（Verilog → gate） | `yosys` |
-| 2. Floorplan | 配置計画（コア領域・ピン配置） | `init_floorplan` |
-| 3. Placement | 論理セルの配置 | `OpenROAD` |
-| 4. CTS | クロックツリー合成 | `OpenROAD` |
-| 5. Routing | 配線処理 | `OpenROAD` |
-| 6. DRC/LVS | 物理検証 | `Magic`, `Netgen` |
-| 7. GDS出力 | 版下ファイル生成 | `KLayout`, `Magic` |
-
----
-
-## ✅ 教育活用の意義
-
-- 商用EDAと同様の **設計プロセスを無償で体験**
-- **PDKとの連携**や制約調整、結果解析を実装を通じて学べる
-- 実設計に近いログやレポート形式に触れ、**設計品質の可視化**が可能
+| ステップ | 説明｜Description | 使用ツール｜Tool |
+|---------|------------------|------------------|
+| 1️⃣ Synthesis | RTLをゲートレベルに論理合成 | `yosys` |
+| 2️⃣ Floorplan | コア領域やピン位置を定義 | `init_floorplan` |
+| 3️⃣ Placement | 論理セルの初期・詳細配置 | `OpenROAD` |
+| 4️⃣ CTS | クロックツリーの合成 | `OpenROAD` |
+| 5️⃣ Routing | 自動配線処理 | `OpenROAD` |
+| 6️⃣ DRC/LVS | 物理検証（設計ルール・接続） | `Magic`, `Netgen` |
+| 7️⃣ GDS Output | レイアウトGDSの出力 | `KLayout`, `Magic` |
 
 ---
 
-## 📝 備考
+## ✅ 教育的意義｜Why It Matters for Education
 
-- 本教材では最小構成の例（例：`gcd`, `inverter`）から始めます
-- 詳細なフロー実習は [`02_rtl_to_gds_flow/`](../02_rtl_to_gds_flow/README.md) にて
+- 🔓 **商用EDAと同等の設計フロー**を無償で体験できる  
+- 🔍 **PDK連携や制約記述（floorplan, SDC）**を実装を通じて学べる  
+- 📊 実設計に近い **ログ・レポート・GDS出力**を生成でき、分析に活用可能  
+
+---
+
+## 📎 関連教材リンク｜Related Chapter Links
+
+- [📘 02_rtl_to_gds_flow - 実設計フロー実習](../02_rtl_to_gds_flow/README.md)  
+- [🏠 第3章トップへ戻る](../README.md)  
+- [🏗️ OpenLane公式GitHub](https://github.com/The-OpenROAD-Project/OpenLane)  
+
+---
+
+## 📝 備考｜Notes
+
+- 本教材では `gcd` や `inverter` など最小設計から学習を開始します  
+- 実務では SoCや複雑なIPマクロへ応用が可能です  
+- 今後の章で各フローの実行手順・設定ファイルの編集方法も学習します
+
+---
