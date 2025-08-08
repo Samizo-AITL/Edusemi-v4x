@@ -128,7 +128,7 @@ magic -T sky130A.tech runs/pid_controller/results/final/gds/pid_controller.gds
 
 ## 📎 前後の節｜Previous / Next Sections
 
-- ◀️ 前の節｜Previous: [4.2 FSMモジュールの配置配線](docs/4_2_fsm_layout.md)  
-- ▶️ 次の節｜Next: [4.4 SoC統合モジュールの実装](docs/4_4_soc_layout.md)
+- ◀️ 前の節｜Previous: [4.2 FSMモジュールの配置配線](./4_2_fsm_layout.md)  
+- ▶️ 次の節｜Next: [4.4 SoC統合モジュールの実装](./4_4_soc_layout.md)
 
 📚 [🔙 特別編 第4章 README に戻る](../README.md)
