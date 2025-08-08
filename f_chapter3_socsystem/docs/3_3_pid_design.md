@@ -29,7 +29,7 @@ $$
 - $e[k] = r[k] - y[k]$: **目標値と現在値の差 / Error (target - actual)**
 - $u[k]$: **出力 / Output**
 - $K_p, K_i, K_d$: **比例・積分・微分ゲイン / Proportional, Integral, Derivative gains**
-- 
+  
 ---
 
 ## 🛠️ デジタルPID制御器のRTL構成 / RTL Implementation of Digital PID
