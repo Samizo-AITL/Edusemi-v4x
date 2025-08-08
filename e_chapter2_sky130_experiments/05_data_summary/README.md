@@ -25,8 +25,8 @@ using previously obtained `.log` and `.dat` files. The goal is to make data read
 |---------------------|------------------------------------------------|
 | [`summary_vth.py`](./summary_vth.py) | Vth抽出データの統合・W/L依存の描画 |
 | [`summary_bti_tddb.py`](./summary_bti_tddb.py) | 劣化モデル（BTI/TDDB）の比較グラフ作成 |
-| `data/` | 各章から出力された `.dat` or `.csv` を格納 |
-| `output/` | グラフ画像・加工済データの保存先 |
+| [`data/`](./data/) | 各章から出力された `.dat` or `.csv` を格納 |
+| [`output/`](./output/) | グラフ画像・加工済データの保存先 |
 
 ---
 
@@ -69,8 +69,8 @@ python3 summary_bti_tddb.py
 
 ```mermaid
 graph TD
-  A[Vth抽出<br>03_vth_extraction] --> B[📊 データ集計<br>summary_vth.py]
-  C[BTI/TDDBモデル<br>04_bti_tddb_estimation] --> D[📉 劣化可視化<br>summary_bti_tddb.py]
+  A[📘 Vth抽出<br>03_vth_extraction] --> B[📊 データ集計<br>summary_vth.py]
+  C[📘 BTI/TDDBモデル<br>04_bti_tddb_estimation] --> D[📉 劣化可視化<br>summary_bti_tddb.py]
   B --> E[📈 設計指標グラフ]
   D --> E
   style A fill:#e0f7fa,stroke:#00796b,stroke-width:2px
@@ -80,8 +80,9 @@ graph TD
   style E fill:#ede7f6,stroke:#4527a0,stroke-width:2px
 ```
 
-※ Mermaid Live Editor 等で可視化可能：  
-🔗 [https://mermaid.live/](https://mermaid.live/)
+> ※ MermaidはGitHub Pages（Jekyll）では表示されない場合があります。  
+> 以下のエディタ等で確認できます：  
+> 🔗 [https://mermaid.live/](https://mermaid.live/)
 
 ---
 
