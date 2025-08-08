@@ -43,7 +43,6 @@ graph TB
     LLM -->|Command / Override| PID
     FSM -->|ref (target value)| PID
     PID -->|Feedback (error)| FSM
-
 ```
 
 - **FSM**：センサ信号に基づいて状態遷移・行動切替を行う  
