@@ -1,18 +1,31 @@
-# 4.2 FSMモジュールの配置配線（Place & Route）
-
-## 🎯 本節の目的
-
-- FSMモジュール（`fsm_engine.v`）を OpenLane で配置配線し、GDSII まで生成する  
-- `config.tcl` を用いた最小構成で flow を実行する  
-- 面積・DRC・タイミングなどの基本的なレポートを確認する
+---
+layout: default
+title: 4.2 FSMモジュールの配置配線（Place & Route）
+---
 
 ---
 
-## 🛠️ ディレクトリ構成の準備
+# 4.2 FSMモジュールの配置配線（Place & Route）  
+**Place-and-Route of FSM Module**
 
-以下のように `fsm_engine` 用のプロジェクトディレクトリを構成します：
+---
 
-```
+## 🎯 本節の目的｜Purpose of This Section
+
+| 📝 日本語｜Japanese | 📘 English |
+|----------------------|-----------|
+| FSMモジュールをOpenLaneで配置配線しGDSII生成 | Run place-and-route of FSM module using OpenLane |
+| `config.tcl` による最小構成のflowを確認 | Execute the flow with minimal `config.tcl` |
+| 面積・DRC・タイミングなどをレポートで確認 | Analyze reports on area, DRC, and timing |
+
+---
+
+## 🛠️ ディレクトリ構成の準備｜Directory Structure
+
+以下のように FSM 用のプロジェクト構成を準備します：  
+Set up your FSM project directory as follows:
+
+```text
 f_chapter4_openlane/
 └── openlane/
     └── fsm_engine/
@@ -21,41 +34,47 @@ f_chapter4_openlane/
             └── fsm_engine.v
 ```
 
-`fsm_engine.v` は、特別編 第3章で設計したFSM回路を流用します。
+> `fsm_engine.v` は特別編 第3章の FSM RTL を流用します。  
+> Use the FSM RTL design from Chapter 3.
 
 ---
 
-## 📦 config.tcl（最小構成例）
+## ⚙️ `config.tcl` の最小構成｜Minimal `config.tcl`
+
+以下は FSM の簡易設定例です：  
+Here is an example of a minimal configuration file for FSM:
 
 ```tcl
 set ::env(DESIGN_NAME) fsm_engine
 set ::env(VERILOG_FILES) [glob $::env(DESIGN_DIR)/src/fsm_engine.v]
 set ::env(CLOCK_PORT) "clk"
 set ::env(CLOCK_PERIOD) "10.0"
+
 set ::env(FP_CORE_UTIL) 30
 set ::env(PL_TARGET_DENSITY) 0.5
 ```
 
-※ `CLOCK_PORT` は必須です。FSM内に明示的なクロックがない場合でも、ポート名 `clk` を仮定して記述してください。
+> ⚠️ `CLOCK_PORT` は仮に `clk` として指定（FSMに明示クロックがない場合も必要）
 
 ---
 
-## 🚀 flow.tcl の実行手順
+## 🚀 フローの実行｜Running the Flow
 
-OpenLane のルートディレクトリに移動して、以下のコマンドを実行します：
+OpenLaneディレクトリに移動し、以下のように実行：  
+Run OpenLane flow using:
 
 ```bash
 cd OpenLane/
 ./flow.tcl -design ../f_chapter4_openlane/openlane/fsm_engine
 ```
 
-※ 必要に応じて `-run_path` や `-tag` オプションで出力ディレクトリを変更可能です。
+> 必要に応じて `-tag` や `-run_path` で出力先を変更可能です。
 
 ---
 
-## 📂 成果物構成とレポート出力
+## 📂 成果物とレポート構成｜Output Structure and Reports
 
-```
+```text
 runs/fsm_engine/
 ├── config.tcl
 ├── logs/
@@ -72,41 +91,49 @@ runs/fsm_engine/
 
 ---
 
-## 📊 評価項目と確認ポイント
+## 📊 評価項目と確認ポイント｜Evaluation Metrics
 
-| 項目        | 確認内容                                              |
-|-------------|-------------------------------------------------------|
-| ✅ 論理合成 | `area.rpt` にてセル面積・インスタンス数を確認         |
-| ✅ DRC      | `drc.rpt` を確認し、違反数が 0 であることを目標とする |
-| ✅ LVS      | `lvs.rpt` で論理とレイアウトの一致を確認              |
-| ✅ タイミング | Slackの有無、Violationの有無を確認                    |
+| ✅ 項目｜Metric | 🔍 確認内容｜Check Points |
+|------------------|---------------------------|
+| 論理合成<br>Synthesis | `area.rpt` にてセル数・合成結果確認 |
+| DRCチェック<br>DRC | `drc.rpt` で違反 0 を目指す |
+| LVS検証<br>LVS | `lvs.rpt` で論理とレイアウトの一致を確認 |
+| タイミング<br>Timing | SlackやViolationの有無を確認 |
 
 ---
 
-## 🖼️ レイアウト可視化手順
+## 🖼️ レイアウトの可視化｜GDS Layout Visualization
 
-### 🔍 KLayout を使用する場合：
+### 🔍 KLayoutの場合｜Using KLayout
 
 ```bash
 klayout runs/fsm_engine/results/final/gds/fsm_engine.gds
 ```
 
-### 🔍 Magic を使用する場合（Sky130用）：
+### 🔍 Magicの場合｜Using Magic
 
 ```bash
 magic -T sky130A.tech runs/fsm_engine/results/final/gds/fsm_engine.gds
 ```
 
-※ 配置されたステート、セル密度、I/O配置などを視覚的に確認できます。
+> 配置状態、セル密度、I/O配置などの視覚確認に最適  
+> Useful to inspect placement, density, I/O locations visually
 
 ---
 
-## ✅ まとめ
+## ✅ まとめ｜Summary
 
-- FSMモジュール単体を OpenLane で GDSII まで自動実装可能であることを確認  
-- `config.tcl` の簡潔な設定と `flow.tcl` の実行でフローが完結  
-- 次節では PID モジュールの実装へと進み、比較評価を行います
+| 日本語｜Japanese | English |
+|------------------|---------|
+| FSMモジュールの GDSII 自動生成を確認 | Confirmed GDSII generation from FSM RTL |
+| `config.tcl` 設定と `flow.tcl` 実行だけで完結 | Minimal configuration enables full flow |
+| 次節では PID モジュールへの展開へ | Next, move on to PID module design |
 
 ---
 
-👉 [4.3 PIDモジュールの配置配線へ進む](4_3_pid_layout.md)
+## 📎 前後の節｜Previous / Next Sections
+
+- ◀️ 前の節｜Previous: [4.1 OpenLane導入とプロジェクト構成](docs/4_1_openlane_intro.md)  
+- ▶️ 次の節｜Next: [4.3 PIDモジュールの配置配線](docs/4_3_pid_layout.md)
+
+📚 [🔙 特別編 第4章 README に戻る](../README.md)
