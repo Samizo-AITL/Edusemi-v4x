@@ -69,8 +69,9 @@ python3 summary_bti_tddb.py
 
 ## 🔍 Mermaid図による構成可視化（Code Block）
 
-> ⚠️ GitHub PagesではMermaidが表示されません。  
-> 👉 [MermaidソースをGitHubで開く](./device_eval_summary.mmd)
+> ⚠️ このページではMermaidフローチャートは表示されません。  
+> 👉 GitHubページで以下を視覚的に確認できます：  
+> [📎 GitHubでMermaidフローチャートを見る](https://github.com/Samizo-AITL/Edusemi-v4x/blob/main/e_chapter2_sky130_experiments/05_data_summary/README.md)
 
 ```mermaid
 graph TD
