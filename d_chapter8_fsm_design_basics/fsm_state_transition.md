@@ -24,6 +24,10 @@ This helps catch design errors early and understand behavior logically.
 状態遷移図は、**状態ノードと遷移矢印**で構成される構造図です。  
 A state diagram consists of **nodes (states)** and **directed edges (transitions)**.
 
+> ⚠️ このページではMermaidフローチャートは表示されません  
+> 👉 **以下のリンクからGitHubで視覚化表示をご確認ください：**  
+> [📎 GitHubでMermaidフローチャートを見る](https://github.com/Samizo-AITL/Edusemi-v4x/blob/main/f_chapter3_socsystem/docs/3_1_aitl_architecture.md)
+
 ```mermaid
 stateDiagram-v2
     [*] --> IDLE
