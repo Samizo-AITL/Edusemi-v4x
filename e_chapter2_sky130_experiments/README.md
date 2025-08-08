@@ -71,6 +71,33 @@ pip install matplotlib pandas numpy
 
 ---
 
+## 🔬 SPICE評価のフロー図｜SPICE-Based Flow Overview (Mermaid)
+
+> ⚠️ このページではMermaidフローチャートは表示されません。  
+> 👉 GitHubページで以下を視覚的に確認できます：  
+> [📎 GitHubでMermaidフローチャートを見る](https://github.com/Samizo-AITL/Edusemi-v4x/blob/main/e_chapter2_sky130_experiments/README.md)
+
+```mermaid
+graph TD
+    A[📦 Sky130 PDK<br>Spiceモデル] --> B[📄 ネットリスト作成<br>Id–Vg Sweep]
+    B --> C[⚙️ ngspice 実行<br>Spice Simulation]
+    C --> D[📊 Python解析<br>ログ整形・Plot出力]
+    D --> E[📏 Vth抽出<br>.meas + Python]
+    E --> F[⏱️ 劣化評価<br>BTI / TDDB モデル]
+    F --> G[📝 結果出力<br>Notebook or Markdown]
+
+    %% 色分け
+    classDef spice fill:#E1F5FE,stroke:#0288D1,stroke-width:1px;
+    classDef python fill:#FFF3E0,stroke:#EF6C00,stroke-width:1px;
+    classDef report fill:#EDE7F6,stroke:#5E35B1,stroke-width:1px;
+
+    class A,B,C spice;
+    class D,E python;
+    class F,G report;
+```
+
+---
+
 ## 🔗 関連リンク｜Related Chapters
 
 - [実践編 第1章：Pythonによる自動化ツール群](../e_chapter1_python_automation_tools/README.md)  
