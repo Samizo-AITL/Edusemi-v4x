@@ -3,6 +3,8 @@ layout: default
 title: 3.6 ケーススタディ：三層制御によるPoC実装例　
 ---
 
+---
+
 # 3.6 ケーススタディ：三層制御によるPoC実装例  
 **Case Study: PoC Implementation of Triple-Layered Control (FSM × PID × LLM)**
 
