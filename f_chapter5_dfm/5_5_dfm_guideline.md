@@ -1,57 +1,81 @@
-# 5.5 DFM設計：量産対応のためのレイアウト指針
-
-## 🎯 本節の目的
-
-- DFM（Design for Manufacturability）の基本概念を理解する  
-- 製造ばらつきや歩留まりに配慮した設計ルールと実践指針を学ぶ  
-- Sky130 PDKにおけるDFM対応のための具体的なレイアウト工夫を把握する
+---
+layout: default
+title: 5.5 DFM設計：量産対応のためのレイアウト指針
+---
 
 ---
 
-## 🧪 DFMとは？
-
-DFMは、設計が製造工程で再現可能であり、  
-歩留まりと信頼性を確保できるように**設計段階から配慮する手法**です。
+# 🏭 5.5 DFM設計：量産対応のためのレイアウト指針  
+**DFM Design Guidelines for Manufacturability**
 
 ---
 
-## 🧩 代表的なDFM課題と設計対策
+## 🎯 本節の目的｜Objectives
 
-| 課題 | 設計対策 |
-|------|----------|
-| 配線ピッチ過小 | 十分なメタル間隔を確保、metal spacingルール強化 |
-| via信頼性不足 | viaの冗長配置（double via）を推奨 |
-| コンポーネントの熱集中 | 発熱源分散、GND/VDD配線の厚み増強 |
-| 過度なセル密度 | コア密度(`FP_CORE_UTIL`)を低めに設定 |
-| エッジ影響 | boundary処理（Well Tapやフィラーセル配置）を徹底 |
-
----
-
-## 🔍 Sky130でのDFM支援項目（例）
-
-- `sky130_fd_sc_hd`：高歩留まり標準セル（well tap含む）
-- `well_tap_placement`：OpenLaneフローで自動配置可能
-- `antenna rule`：メタル過剰露出による製造破壊対策
-- `fill cell`：配線密度均一化のためのダミーセル挿入
+- **DFM（Design for Manufacturability）の基本概念**を理解する  
+  **Understand the fundamental concept of DFM**
+- **歩留まり・信頼性に配慮した設計手法**を学ぶ  
+  **Learn layout strategies to enhance yield and reliability**
+- **Sky130 PDK における DFM 支援要素と設定項目**を把握する  
+  **Explore DFM-support features in the Sky130 environment**
 
 ---
 
-## 🛠️ OpenLane設定の工夫（DFM向け）
+## 🧪 DFMとは？｜What is DFM?
 
-| パラメータ | 意味 | 推奨設定例 |
-|------------|------|------------|
-| `FP_CORE_UTIL` | 論理セル密度 | 0.35〜0.5程度に抑える |
-| `PL_TARGET_DENSITY` | 目標配置密度 | 0.5〜0.6でDRC緩和 |
-| `GRT_ALLOW_CONGESTION` | 配線混雑許容 | `1`にすると冗長ルーティング回避 |
+DFMとは、**製造ばらつきや微細構造によるリスクに備え**、  
+**設計初期から量産対応を意識して設計を最適化する文化**です。
 
----
-
-## ✅ 本節まとめ
-
-- DFMは**製造性と信頼性を両立するための設計文化**  
-- Sky130 PDKはDFM支援要素が多数含まれており、積極的に活用すべき  
-- 設計パラメータやレイアウト配置は、DFMの視点で意識して調整が必要
+📌 製品としての **再現性・歩留まり・信頼性を高める** ことがDFMの目的です。
 
 ---
 
-👉 [5.6 チップ完成に向けた最終検証ステップ](5_6_final_check.md)
+## 🧩 よくあるDFM課題と対策｜Common Issues and Solutions
+
+| ⚠️ **課題**<br>Issue | 🛠️ **設計対策**<br>Design Strategy |
+|------------------|---------------------------|
+| 配線ピッチが狭い<br>Narrow metal pitch | **Metal spacing**を十分に確保<br>Apply tighter spacing rules |
+| ビア信頼性不足<br>Via reliability issues | **冗長ビア配置（double via）**を使用<br>Use redundant vias |
+| 熱集中による劣化<br>Heat concentration | GND/VDD配線の**幅増し・分散配置**<br>Distribute heat-generating cells |
+| セル密度過多<br>High core density | `FP_CORE_UTIL`を低めに設定<br>Reduce core utilization ratio |
+| チップ端部の歪み<br>Edge-related variation | **Well Tap・Filler Cellの配置徹底**<br>Place filler/tap cells at edges |
+
+---
+
+## 🔍 Sky130におけるDFM支援要素｜DFM-Friendly Features in Sky130
+
+| 📦 **要素** | 🔍 **説明**<br>Description |
+|-------------|---------------------------|
+| `sky130_fd_sc_hd` | 高歩留まり向け標準セル群<br>High-yield optimized standard cells |
+| `well_tap_placement` | 自動Well Tap配置<br>Auto-insertion of well taps in OpenLane |
+| `antenna rule` | アンテナ効果による破壊防止<br>Prevent oxide damage from metal antenna effect |
+| `fill cell insertion` | 配線密度均一化ダミーセル<br>Dummy fill cells for metal density balance |
+
+---
+
+## ⚙️ OpenLaneにおけるDFMパラメータ例｜DFM Parameters in OpenLane
+
+| ⚙️ **パラメータ**<br>Parameter | 📝 **説明**<br>Description | ✅ **推奨例**<br>Recommended Value |
+|---------------------|-----------------------------|-----------------------------|
+| `FP_CORE_UTIL` | セル密度（floorplan密度）<br>Core utilization ratio | `0.35`〜`0.5` |
+| `PL_TARGET_DENSITY` | 配置密度の目標値<br>Placement target density | `0.5`〜`0.6` |
+| `GRT_ALLOW_CONGESTION` | 混雑ルーティングの許容<br>Allow routing congestion | `1`（許容） |
+
+---
+
+## ✅ 本節まとめ｜Summary
+
+- DFMは、**再現性と歩留まりを高める設計手法の総称**です  
+  **DFM ensures manufacturable and reliable layout designs**
+- Sky130はDFMに配慮したセルやルールが多数含まれている  
+  **Sky130 includes various features to support DFM design**
+- OpenLane設定や配置ルールもDFM観点で適切に調整が必要  
+  **Careful tuning of OpenLane parameters improves DFM compliance**
+
+---
+
+## 🔗 前後のリンク｜Navigation
+
+- ⬅️ [5.4 LVSの仕組みと等価性判定の論理](5_4_lvs_check.md)  
+- ▶️ [5.6 チップ完成に向けた最終検証ステップ](5_6_final_verification.md)  
+- 🏠 [特別編 第5章 README に戻る](README.md)
