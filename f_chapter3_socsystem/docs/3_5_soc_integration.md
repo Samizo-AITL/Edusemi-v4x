@@ -28,6 +28,22 @@ FSM・PID・LLMの三層制御モジュールを、1つのSoCとして統合す�
 
 ## 🏗 SoC全体構成ブロック図｜SoC Block Diagram
 
+```mermaid
+flowchart TD
+    subgraph SoC_Top [SoC Top Module]
+        direction TB
+
+        FSM[🧠 FSM] <--> PID[⚙️ PID]
+        FSM -->|action_out| LLM
+        PID -->|u_out| LLM
+        
+        LLM[🔌 LLM Interface]
+        CPU[RISC-V CPU]
+        CPU -->|MMIO| LLM
+        CPU -->|IRQ| LLM
+    end
+```
+
 ```text
     +-----------------------------+
     |           SoC Top          |
