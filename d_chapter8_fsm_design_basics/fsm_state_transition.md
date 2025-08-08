@@ -26,8 +26,7 @@ A state diagram consists of **nodes (states)** and **directed edges (transitions
 
 > ⚠️ このページではMermaidフローチャートは表示されません  
 > 👉 **以下のリンクからGitHubで視覚化表示をご確認ください：**  
-> [📎 GitHubでMermaidフローチャートを見る](https://github.com/Samizo-AITL/Edusemi-v4x/blob/main/d_chapter8_fsm_design_basics
-/fsm_state_transition.md)
+> [📎 GitHubでMermaidフローチャートを見る](https://github.com/Samizo-AITL/Edusemi-v4x/blob/main/d_chapter8_fsm_design_basics/fsm_state_transition.md)
 
 ```mermaid
 stateDiagram-v2
