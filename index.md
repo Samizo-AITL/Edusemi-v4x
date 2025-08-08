@@ -102,7 +102,7 @@ title: Edusemi-v4x/index.md
 
 ## 🔗 **関連プロジェクト**
 
-### 🎛️ **[EduController](https://github.com/Samizo-AITL/EduController)**  
+### 🎛️ **[EduController](https://samizo-aitl.github.io/EduController/)**  
 - **制御理論（PID・状態空間）〜AI制御（NN・RL・LLM）**まで網羅  
 - **PoC設計・OpenLane制御実装**との連動構成  
 - **Pythonによる設計演習・RTL検証・FSM生成支援**も収録
