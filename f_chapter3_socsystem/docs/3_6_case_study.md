@@ -1,82 +1,101 @@
-# 3.6 ケーススタディ：三層制御によるPoC実装例
+---
+layout: default
+title: 3.6 ケーススタディ：三層制御によるPoC実装例
+---
 
-## 🎯 本節の目的
+# 3.6 ケーススタディ：三層制御によるPoC実装例  
+**Case Study: PoC Implementation of Triple-Layered Control (FSM × PID × LLM)**
+
+---
+
+## 🎯 本節の目的｜Objective of This Section
 
 本章で解説した三層制御構造（FSM・PID・LLM）を実際に組み合わせて実装し、  
-SoC上でどのように動作するかを具体例で検証します。
+**SoC上での動作検証や制御特性の評価**を行います。
+
+This section demonstrates the practical implementation of the **FSM × PID × LLM** control structure,  
+and evaluates their behavior and performance on an actual SoC.
 
 ---
 
-## 🧪 ケース①：倒立振子の安定化制御
+## 🧪 ケース①：倒立振子の安定化制御｜Case 1: Stabilization of an Inverted Pendulum
 
-### 📌 構成概要
+### 📌 構成概要｜System Configuration
 
-| 層 | 実装内容 |
-|----|----------|
-| FSM | 倒立振子の起動・停止・落下状態遷移を管理 |
-| PID | 角度センサからの値に基づいてトルクを制御 |
-| LLM | ユーザ命令（例："止まって"）に基づいてFSMを指示 |
+| 層<br>Layer | 実装内容｜Function |
+|-------------|--------------------|
+| **FSM**     | 起動・停止・落下状態の遷移管理<br>Manages states like start, stop, fall |
+| **PID**     | 角度センサに基づいてトルクを出力<br>Generates torque from angle sensor |
+| **LLM**     | 「止まって」などの命令をFSMへ指示<br>Issues commands such as "stop" to FSM |
 
-### 🌀 状態遷移例（FSM）
+### 🌀 状態遷移例｜State Transitions
 
+```text
 IDLE → INIT_BALANCE → STABILIZING → FALLEN
+```
 
-### 🔁 制御ループ
+### 🔁 制御ループ｜Control Loop
 
-1. FSMが「起動」状態を認識
-2. PIDがリアルタイムに角度補正を行い、倒立維持
-3. LLMが「停止命令」を出せばFSMが STOP 状態へ
-
----
-
-## 🤖 ケース②：人型ロボットの立ち上がり・旋回制御
-
-### 📌 構成概要
-
-| 層 | 実装内容 |
-|----|----------|
-| FSM | 行動パターン（立ち上がり、旋回、停止）を管理 |
-| PID | サーボの角度・速度を連続制御 |
-| LLM | 「方向転換」などの指令を自然言語から抽出しFSMに伝達 |
-
-### 💡 特徴的な設計ポイント
-
-- LLMが命令を自然言語で受け取り → FSMへマップ変換
-- FSMはそれに基づき状態遷移
-- PIDは歩行・旋回ごとに別の目標角度で連続制御
+1. FSMが「起動」状態へ遷移  
+2. PIDがリアルタイムに角度を補正  
+3. LLMが「停止」命令 → FSMがSTOP状態に移行
 
 ---
 
-## 🧭 評価指標の例
+## 🤖 ケース②：人型ロボットの旋回・立ち上がり制御  
+**Case 2: Standing and Turning Control of Humanoid Robot**
 
-| 指標 | 評価内容 |
-|------|----------|
-| 安定性 | PID出力の発振や過渡応答 |
-| 応答性 | FSMの状態遷移速度、LLM介入のレイテンシ |
-| 柔軟性 | LLMによる指令変更の適応能力 |
-| 拡張性 | 状態・モードの追加による再設計コスト |
+### 📌 構成概要｜System Configuration
 
----
+| 層<br>Layer | 実装内容｜Function |
+|-------------|--------------------|
+| **FSM**     | 立ち上がり・旋回・停止の行動管理<br>Handles standing up, turning, and stopping |
+| **PID**     | サーボ制御（角度・速度）<br>Servo control (angle/velocity) |
+| **LLM**     | 自然言語命令をFSMコマンドに変換<br>Maps natural language to FSM commands |
 
-## 📝 実装と評価のヒント
+### 💡 設計のポイント｜Design Highlights
 
-- トレースログを取り、FSM状態・PID出力・LLM命令を時系列で比較
-- LLMを使った制御の場合、**「介入のタイミングと粒度」**が鍵
-- FSM・PIDそれぞれが**LLM非依存でも機能**するように設計すべき
-
----
-
-## 📦 関連PoC構成例（GitHub）
-
-- [`AITL-H/PoC/`](https://github.com/Samizo-AITL/AITL-H/tree/main/PoC)：FSM/PID/LLMの接続済みサンプル
-- [`AITL-H/implementary/`](https://github.com/Samizo-AITL/AITL-H/tree/main/implementary)：各層の制御実装コード
+- LLMが「方向転換して」などを解釈しFSMへ伝達  
+- FSMは行動遷移（例：旋回開始→停止）を実行  
+- PIDは各行動ごとのパラメータで補正制御
 
 ---
 
-## ✅ まとめと次の展開
+## 🧭 評価指標｜Evaluation Metrics
 
-- FSM×PID×LLMによる統合制御は、「反応＋安定＋判断」を組み合わせた強力な構造
-- SoC上にモジュール化すれば、多様なシステムへ再利用可能
-- 次章以降では、**OpenLane等による物理設計**や**自動化設計補助**への展開が可能
+| 評価項目｜Item | 内容｜Description |
+|--------------|----------------|
+| **安定性**<br>Stability | PID応答の収束性・発振抑制 |
+| **応答性**<br>Responsiveness | FSMの状態遷移スピード、LLM介入の遅延 |
+| **柔軟性**<br>Flexibility | LLMによる指令変更への対応力 |
+| **拡張性**<br>Extensibility | 状態数や命令種別の追加の容易さ |
 
 ---
+
+## 📝 実装・評価のヒント｜Implementation Notes
+
+- 🧾 **トレースログ出力**を活用し、状態・出力・命令を時系列で可視化  
+- ⏱ LLM命令の**タイミングと粒度**が制御の質に影響  
+- ⚙ FSMとPIDは**LLMが停止しても単独で動作可能**な設計が望ましい
+
+---
+
+## 📦 関連PoC構成｜Related PoC Repositories
+
+- 🔗 [**AITL-H/PoC/**](https://github.com/Samizo-AITL/AITL-H/tree/main/PoC)  
+　FSM / PID / LLMの接続例を含むPoC全体構成
+
+- 🔗 [**AITL-H/implementary/**](https://github.com/Samizo-AITL/AITL-H/tree/main/implementary)  
+　各層のRTL設計・ソフト制御コードを収録
+
+---
+
+## ✅ まとめと次の展開｜Summary & Future Steps
+
+- FSM × PID × LLM の三層制御は、**反応・安定・判断**の統合アーキテクチャ
+- モジュール化設計により、**多様なPoC/ロボット/制御装置に応用可能**
+- 次章では、**OpenLaneなどを活用した物理設計や自動化設計**の応用展開に進みます
+
+---
+
+📚 [🔙 特別編 第3章 README に戻る](../README.md)
