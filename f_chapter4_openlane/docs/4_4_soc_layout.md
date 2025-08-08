@@ -126,7 +126,7 @@ magic -T sky130A.tech runs/soc_top/results/final/gds/soc_top.gds
 
 ## 📎 前後の節｜Previous / Next Sections
 
-- ◀️ 前の節｜Previous: [4.3 PIDモジュールの配置配線](docs/4_3_pid_layout.md)  
-- ▶️ 次の節｜Next: [4.5 設計評価レポートと比較](docs/4_5_evaluation.md)
+- ◀️ 前の節｜Previous: [4.3 PIDモジュールの配置配線](./4_3_pid_layout.md)  
+- ▶️ 次の節｜Next: [4.5 設計評価レポートと比較](./4_5_evaluation.md)
 
 📚 [🔙 特別編 第4章 README に戻る](../README.md)
