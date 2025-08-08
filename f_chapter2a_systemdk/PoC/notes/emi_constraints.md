@@ -50,8 +50,8 @@
 ---
 
 <p align="center">
-  <img src="../images/emi_interference_mram_ams.png" alt="EMI Interference Diagram" width="70%">
+  <img src="https://samizo-aitl.github.io/Edusemi-v4x/f_chapter2a_systemdk/PoC/images/emi_interference_mram_ams.png" alt="EMI Interference Diagram" width="70%">
 </p>
 
-<p align="center"><b>図2 / Figure 2：</b>PoC評価ボード上の**FPGA、MRAM、AMSブロック間のEMI干渉経路の概念図**。書き込みパルスやPLLノイズなどが**AMS回路へ影響**を与える経路を示す。  
-*A conceptual EMI interference diagram between FPGA, MRAM, and AMS blocks on a PoC board. It shows how write pulses and PLL noise affect AMS circuits.*</p>
+<p align="center"><b>図2 / Figure 2：</b>PoC評価ボード上の<strong>FPGA、MRAM、AMSブロック間のEMI干渉経路の概念図</strong>。書き込みパルスやPLLノイズなどが<strong>AMS回路へ影響</strong>を与える経路を示す。<br>
+<em>A conceptual EMI interference diagram between FPGA, MRAM, and AMS blocks on a PoC board. It shows how write pulses and PLL noise affect AMS circuits.</em></p>
