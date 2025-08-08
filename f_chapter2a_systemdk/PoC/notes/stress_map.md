@@ -42,8 +42,10 @@
 ---
 
 <p align="center">
-  <img src="../images/mram_stress_map_sample.png" alt="MRAM Stress Map" width="70%">
+  <img src="https://samizo-aitl.github.io/Edusemi-v4x/f_chapter2a_systemdk/PoC/images/mram_stress_map_sample.png" alt="MRAM Stress Map" width="70%">
 </p>
 
-<p align="center"><b>図1 / Figure 1：</b> MRAMセル断面構造における熱-応力分布（FEMシミュレーション例）。**MTJ領域において応力集中**が見られる。  
-*Simulated thermal stress distribution in an MRAM cell. **Stress is concentrated** around the MTJ region.*</p>
+<p align="center">
+  <b>図1 / Figure 1：</b> MRAMセル断面構造における<strong>熱-応力分布</strong>（FEMシミュレーション例）。<strong>MTJ領域において応力集中</strong>が見られる。<br>
+  <em>Simulated thermal stress distribution in an MRAM cell. <strong>Stress is concentrated</strong> around the MTJ region.</em>
+</p>
