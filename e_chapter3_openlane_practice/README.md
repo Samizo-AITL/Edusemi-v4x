@@ -100,34 +100,6 @@ graph TD
     class J,K manuf;
 ```
 
-## 🗺️ OpenLane設計フローの可視化（Mermaid対応）
-
-> ⚠️ この図はGitHubの通常プレビューでは表示されません  
-> ✅ Mermaid対応環境で表示するか、[Mermaid Live Editor](https://mermaid.live/edit)で確認してください
-
-```mermaid
-graph TD
-    A[📝 Verilog RTL]
-    B[🧠 Synthesis\n(論理合成)]
-    C[📐 Floorplan\n(配置計画)]
-    D[🔲 Placement\n(配置)]
-    E[🕒 CTS\n(クロックツリー合成)]
-    F[🔌 Routing\n(配線)]
-    G[🧪 DRC / LVS\n(検証)]
-    H[📦 GDS / LEF\n(出力)]
-
-    A --> B --> C --> D --> E --> F --> G --> H
-
-    style A fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
-    style B fill:#fce4ec,stroke:#c2185b,stroke-width:2px
-    style C fill:#f3e5f5,stroke:#6a1b9a,stroke-width:2px
-    style D fill:#f9fbe7,stroke:#827717,stroke-width:2px
-    style E fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
-    style F fill:#e0f7fa,stroke:#006064,stroke-width:2px
-    style G fill:#fff3e0,stroke:#ef6c00,stroke-width:2px
-    style H fill:#ede7f6,stroke:#4527a0,stroke-width:2px
-```
-
 ---
 
 ## 🔗 関連章｜Related Chapters
