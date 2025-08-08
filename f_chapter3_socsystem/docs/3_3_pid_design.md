@@ -22,14 +22,14 @@ It bridges digital decision logic with physical systems, ensuring **responsivene
 
 ## 🧮 PID制御の基本式（離散型） / Discrete PID Equation
 
-```math
-u[k] = K_p \cdot e[k] + K_i \cdot \sum e[k] + K_d \cdot (e[k] - e[k-1])
-```
+$$
+u[k] = K_p \cdot e[k] + K_i \cdot \sum_{i=0}^{k} e[i] + K_d \cdot (e[k] - e[k-1])
+$$
 
-- `e[k] = r[k] - y[k]`: **目標値と現在値の差 / Error (target - actual)**
-- `u[k]`: **出力 / Output**
-- `Kp, Ki, Kd`: **比例・積分・微分ゲイン / Proportional, Integral, Derivative gains**
-
+- $e[k] = r[k] - y[k]$: **目標値と現在値の差 / Error (target - actual)**
+- $u[k]$: **出力 / Output**
+- $K_p, K_i, K_d$: **比例・積分・微分ゲイン / Proportional, Integral, Derivative gains**
+- 
 ---
 
 ## 🛠️ デジタルPID制御器のRTL構成 / RTL Implementation of Digital PID
