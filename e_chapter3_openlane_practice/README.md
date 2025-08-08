@@ -98,6 +98,7 @@ graph TD
     class A,B,C,D,E front_end;
     class F,G,H,I back_end;
     class J,K manuf;
+```
 
 ## 🗺️ OpenLane設計フローの可視化（Mermaid対応）
 
