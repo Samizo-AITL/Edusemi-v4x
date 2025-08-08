@@ -75,7 +75,8 @@ make pull-sky130-pdk
 
 > ⚠️ このページではMermaidフローチャートは**表示されません**。  
 > 👉 以下のリンクからGitHubでご確認ください：  
-> [📎 GitHubでMermaidフローチャートを見る](https://github.com/Samizo-AITL/Edusemi-v4x/blob/main/chapter5_soc_design_flow/5.1_soc_design_flow.md)
+> [📎 GitHubでMermaidフローチャートを見る](https://github.com/Samizo-AITL/Edusemi-v4x/blob/main/e_chapter3_openlane_practice
+/README.md)
 
 ```mermaid
 graph TD
