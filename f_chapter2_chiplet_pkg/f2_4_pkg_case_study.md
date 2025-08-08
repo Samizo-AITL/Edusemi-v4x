@@ -1,92 +1,101 @@
-# 2.4 実例紹介：AMD・Intel・Appleのパッケージング戦略  
-# 2.4 Case Studies: Packaging Strategies of AMD, Intel, and Apple
+---
+layout: default
+title: 2.4 実例紹介 - パッケージング戦略事例（AMD・Intel・Apple）
+---
 
 ---
 
-## 🎯 目的 / Objective
-
-この節では、主要半導体企業が**チップレット、2.5D、3Dパッケージ技術をどのように活用しているか**を、代表的な製品事例を通じて学びます。  
-This section introduces how leading semiconductor companies apply **chiplet, 2.5D, and 3D packaging technologies** in real-world products.
+# 📦 2.4 実例紹介：AMD・Intel・Appleのパッケージング戦略  
+**2.4 Case Studies: Packaging Strategies of AMD, Intel, and Apple**
 
 ---
 
-## 🔶 AMD：Infinity Fabricによるマルチチップアーキテクチャ  
-## 🔶 AMD: Multi-Chip Architecture via Infinity Fabric
+## 🎯 目的｜Objective
 
-### ✦ Ryzen / EPYC（Zen以降）  
-Zen-based Ryzen and EPYC architectures
-
-- **構成**：小型CPUダイ（CCD）とI/Oダイ（IOD）の分離構成  
-  **Structure**: Separate CPU dies (CCD) and I/O die (IOD)
-- **接続**：Infinity Fabric（独自の高速インターコネクト）  
-  **Connection**: Proprietary Infinity Fabric interconnect
-- **利点**：歩留まり改善、コスト削減、スケーラブル設計  
-  **Benefits**: Better yield, cost savings, scalable performance
-
-| 製品 / Product | 特徴 / Feature | 備考 / Notes |
-|----------------|------------------|----------------|
-| **Ryzen 3000 / 5000** | CCD + IOD構成（7nm + 12nm）<br>CCD + IOD (7nm + 12nm) | 異種プロセス混載<br>Heterogeneous process |
-| **EPYC (Rome)** | 最大8CCD + 1IOD<br>Up to 8 CCDs + 1 IOD | サーバ向け高スケール性<br>High scalability for servers |
+この節では、主要半導体企業が**チップレット、2.5D、3Dパッケージ技術**をどのように活用しているかを、代表的な製品事例を通じて学びます。  
+This section explores how leading semiconductor companies leverage **chiplet, 2.5D, and 3D packaging technologies** in real products.
 
 ---
 
-## 🔷 Intel：EMIBとFoverosによる垂直・水平接続の両立  
-## 🔷 Intel: Combining EMIB and Foveros for 2.5D/3D Integration
+## 🔶 AMD｜Infinity Fabricによるマルチチップ戦略  
+**AMD: Multi-Chip Strategy via Infinity Fabric**
+
+### ✦ Ryzen / EPYC（Zenアーキテクチャ以降）  
+**Zen-based Ryzen and EPYC architectures**
+
+- **構成**：小型CPUダイ（CCD）とI/Oダイ（IOD）を分離  
+  *Separate CPU cores (CCD) and I/O die (IOD)*
+- **接続**：Infinity Fabricで高速通信  
+  *High-speed link via Infinity Fabric*
+- **利点**：スケーラビリティ・歩留まり改善・異種混載  
+  *Scalable design, improved yield, heterogeneous processes*
+
+| 🖥️ 製品 / Product | 特徴 / Feature | 備考 / Notes |
+|------------------|------------------|-------------------------|
+| **Ryzen 3000 / 5000** | CCD + IOD（7nm + 12nm）<br>CCD + IOD (7nm + 12nm) | プロセス分離構成<br>Separate process nodes |
+| **EPYC Rome** | 最大8CCD + 1IOD<br>Up to 8 CCDs + 1 IOD | サーバ向け高スケーラビリティ<br>High scalability for servers |
+
+---
+
+## 🔷 Intel｜EMIBとFoverosによる垂直・水平統合  
+**Intel: Hybrid Vertical & Horizontal Integration with EMIB and Foveros**
 
 ### ✦ EMIB（Embedded Multi-die Interconnect Bridge）
 
-- **小型インターポーザ**を部分的に用いた**水平接続**  
-  Local bridge interposer for **side-by-side connection**
-- **高密度接続とコスト抑制**の両立  
-  Balances **density and cost**
+- **小型インターポーザ**でローカル接続  
+  *Local bridge interposer for compact inter-die links*
+- **複数ダイを効率よく統合**しコストも抑制  
+  *Efficient multi-die integration with cost control*
 
-### ✦ Foveros（3D積層技術）
+### ✦ Foveros（3D TSV積層技術）
 
-- **TSVによるロジック-ロジック積層**  
-  Stacks logic-on-logic using **TSVs**
-- 初搭載：**Intel Lakefield（2019）**  
-  First used in **Intel Lakefield (2019)**
+- **TSVを使ってロジック同士を積層**  
+  *Logic-on-logic stacking via TSVs*
+- 初搭載：**Lakefield（2019）**
 
-| 技術 / Technology | 製品例 / Product Example | 備考 / Notes |
-|-------------------|--------------------------|---------------|
-| **EMIB** | Stratix 10 | FPGAとメモリの連結<br>FPGA-memory interface |
-| **Foveros** | Lakefield, Meteor Lake | 3D CPUチップ構造<br>3D CPU architecture |
-
----
-
-## 🍏 Apple：UltraFusionによるロジックダイ連結  
-## 🍏 Apple: Logic Die Fusion via UltraFusion
-
-### ✦ M1 Ultra（2022）
-
-- 2個のM1 Maxを**パッケージレベルで融合**  
-  Two M1 Max dies **fused at the package level**
-- **UltraFusion**と呼ばれるI/Fで1チップのように動作  
-  Acts as a single chip via the **UltraFusion** interface
-
-| 項目 / Item | 内容 / Description |
-|--------------|---------------------|
-| **バス帯域**<br>Bus Bandwidth | 最大2.5 TB/s<br>Up to 2.5 TB/s |
-| **実装方式**<br>Integration Type | 2.5D的インターポーザ構造<br>2.5D-style interposer |
-| **設計意図**<br>Design Intent | パッケージ内でチップサイズ限界を超える<br>Overcome single-die size limits |
+| 🔧 技術 / Technology | 製品例 / Example Product | 備考 / Notes |
+|----------------------|--------------------------|---------------|
+| **EMIB** | Stratix 10 | FPGAとメモリ接続<br>FPGA-memory bridging |
+| **Foveros** | Lakefield / Meteor Lake | CPUコアの3D積層構成<br>3D-stacked CPU architecture |
 
 ---
 
-## 🧩 事例にみる技術選定の視点  
-## 🧩 Key Takeaways from Packaging Strategies
+## 🍏 Apple｜UltraFusionによるロジックダイ統合  
+**Apple: Logic Die Integration via UltraFusion**
 
-| 観点 / Aspect | **AMD** | **Intel** | **Apple** |
-|---------------|---------|-----------|-----------|
-| **接続構造**<br>Integration Type | 水平方向マルチダイ接続<br>Horizontal multi-die | EMIB + TSVによる混合型<br>Hybrid (EMIB + TSV) | ロジック同士の2.5D連結<br>2.5D logic fusion |
-| **コスト志向**<br>Cost Focus | 高<br>High | 中<br>Medium | 高（性能最優先）<br>High (performance first) |
-| **再利用性**<br>Reusability | 高（CCD再利用）<br>High (CCD reused) | 中（構成設計ごとに異なる）<br>Medium (per design) | 低（専用構造）<br>Low (application-specific) |
+### ✦ M1 Ultra（2022年）
+
+- **M1 Maxを2個融合**し**1チップのように動作**  
+  *Two M1 Max dies fused into a single chip behavior*
+- UltraFusionにより**高帯域かつ低レイテンシ**を実現  
+  *UltraFusion enables high-bandwidth, low-latency integration*
+
+| 📌 項目 / Item | 内容 / Description |
+|----------------|---------------------|
+| **帯域幅**<br>Bus Bandwidth | 最大2.5 TB/s<br>Up to 2.5 TB/s |
+| **実装形式**<br>Integration Type | 2.5Dインターポーザ的構造<br>2.5D-style interposer |
+| **設計目的**<br>Design Goal | 単一ダイ制限の突破<br>Breaks single-die size limits |
 
 ---
 
-## 📎 次節への接続  
-## 📎 Connection to Next Section
+## 🧩 3社比較：戦略の違いと設計思想  
+**Comparison of Strategies and Design Philosophies**
 
-次節 [**2.5：設計上の課題**](./f2_5_design_challenges.md) では、これらの構造を**設計・量産**するうえで直面する「**熱・テスト・歩留まり**」の課題とその**対策技術**について詳しく解説します。  
-In the next section [**2.5: Design Challenges**](./f2_5_design_challenges.md), we will discuss **thermal, test, and yield issues** in designing and mass-producing these packages.
+| 🧠 観点 / Aspect | **AMD** | **Intel** | **Apple** |
+|------------------|---------|-----------|-----------|
+| **接続構造**<br>Integration | 水平方向マルチダイ<br>Horizontal multi-die | EMIB + TSV の複合構造<br>EMIB + TSV hybrid | 2.5D ロジック融合<br>2.5D logic fusion |
+| **コスト志向**<br>Cost Focus | 高コスト最小化<br>Cost reduction prioritized | コストと性能の両立<br>Balance of cost and performance | 性能最重視<br>Performance prioritized |
+| **再利用性**<br>Reusability | CCD再利用で高<br>High (CCD reuse) | 中程度<br>Medium | 専用構成で低<br>Low (custom design) |
 
 ---
+
+## 📎 次節への接続｜Connection to Next Section
+
+次節 [**2.5：設計上の課題**](./f2_5_design_challenges.md) では、これらのパッケージを**実際に製品化する際に直面する「熱・テスト・歩留まり」問題**とその**対策技術**について詳しく解説します。  
+In the next section [**2.5: Design Challenges**](./f2_5_design_challenges.md), we will explore **thermal, test, and yield issues** and the **technical solutions** adopted in real implementations.
+
+---
+
+## 🏁 特別編 第2章 トップへ戻る｜Back to Chapter 2 Top
+
+🔗 [📚 特別編 第2章 トップに戻る](./README.md)
