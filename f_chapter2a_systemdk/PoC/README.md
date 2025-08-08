@@ -4,7 +4,7 @@ title: SystemDK PoC Manual
 ---
 
 # 📦 SystemDK PoCマニュアル  
-**SystemDK-Based PoC Manual for Physical Constraint Integration**
+**SystemDK-Based PoC Manual for Physical Constraint Integration** 
 
 ---
 
