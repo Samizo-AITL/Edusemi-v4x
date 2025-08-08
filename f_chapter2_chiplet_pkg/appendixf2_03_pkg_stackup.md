@@ -1,17 +1,29 @@
-# 📘 Appendix 2.3：インターポーザと再配線層（RDL）の積層構造  
-# 📘 Appendix 2.3: Interposer and Redistribution Layer (RDL) Stack Structures
+---
+layout: default
+title: Appendix 2.3 - Interposer and Redistribution Layer (RDL) Stack Structures
+---
 
 ---
 
-本資料では、2.5D/3Dパッケージにおける**インターポーザ構造やRDLの積層構成**を、典型的な設計例を交えて解説します。  
-This appendix introduces **interposer wiring and redistribution layer (RDL) stack configurations** used in 2.5D/3D packaging technologies.
+# 📘 Appendix 2.3：インターポーザと再配線層（RDL）の積層構造  
+**Appendix 2.3: Interposer and Redistribution Layer (RDL) Stack Structures**
+
+---
+
+## 📌 概要 / Overview
+
+本資料では、2.5D・3Dパッケージにおける**インターポーザ構造とRDL（Redistribution Layer）構成**について、**代表的な設計例**をもとに解説します。  
+*This appendix presents typical structures of silicon interposers and RDL stacks used in 2.5D/3D packaging.*
+
+それぞれが**多チップ接続・熱分散・信号配線**の中核技術として機能します。  
+They are essential for **multi-die interconnects, thermal management, and high-density routing.**
 
 ---
 
 ## 🧩 インターポーザ（Si）構造例  
-## 🧩 Silicon Interposer: Structural Example
+**Silicon Interposer: Structural Example**
 
-### ✦ 典型構成（上面図） / Typical Layout (Top View)
+### ✦ 上面図（Top View）
 
 ```
 Top View:
@@ -25,58 +37,63 @@ Top View:
 Bottom: RDL + bump array
 ```
 
-### ✦ 積層断面構成 / Cross-Sectional Layers
+### ✦ 積層断面構成 / Cross-Section Layers
 
-| 層 / Layer | 内容 / Description | 特徴 / Characteristics |
-|------------|---------------------|--------------------------|
-| **Die層**<br>Die Layer | 複数のロジック／メモリダイ<br>Logic or memory dies | μ-bumpで接続<br>Connected via μ-bumps |
-| **接続層**<br>Connection Layer | TSV + RDL | 垂直配線＋再配線層<br>Vertical vias and metal routing |
-| **配線層**<br>Metal Layer | Cu + PI（2–4層） | 高密度Cu配線＋PI絶縁<br>High-density Cu + PI insulation |
-| **バンプ層**<br>Bump Layer | C4/Snバンプ | 基板（FC-BGA）と接続<br>Connection to substrate (e.g., FC-BGA) |
+| 🧩 層 / Layer | 🔧 内容 / Description | 📘 特徴 / Characteristics |
+|---------------|------------------------|----------------------------|
+| **Die層**<br>Die Layer | ロジック/メモリダイ群<br>Logic/memory dies | μ-bumpで接続<br>μ-bump interconnect |
+| **接続層**<br>Connection Layer | TSV + RDL | 垂直ビアと再配線層<br>Vertical vias and redistribution |
+| **配線層**<br>Metal Layer | Cu + PI (2–4層) | 高密度配線＋絶縁<br>High-density routing and insulation |
+| **バンプ層**<br>Bump Layer | C4/Sn バンプ | 基板接続（FC-BGAなど）<br>Connection to package substrate |
 
 ---
 
-## 🔄 RDL構造（Fan-Out/WLP型）  
-## 🔄 RDL Structure: Fan-Out and WLP Type
+## 🔄 RDL構造（Fan-Out / WLP）  
+**Fan-Out and WLP-Type RDL Structures**
 
-### ✦ Fan-Out型RDLの典型構成 / Typical Fan-Out RDL Stack
+### ✦ 典型構成 / Typical Fan-Out RDL Stack
 
-| 層 / Layer | 材料 / Material | 目的 / Purpose |
-|------------|------------------|----------------|
-| **上部配線層**<br>Top Metal Layer | Cu + PI | 信号ルーティング<br>Signal routing |
-| **中間層**<br>Mid Layers | Cu + PI (2–6層) | 多層配線構成<br>Multilayer redistribution |
-| **チップ埋込層**<br>Chip-Embed Layer | Mold樹脂<br>Mold Resin | ファンアウトスペース確保<br>Die support and fan-out area |
-| **下部接続層**<br>Bottom I/O Layer | Cuバンプ<br>Cu bumps | PCB接続（LGA/BGA）<br>Board-level connectivity |
+| 🧩 層 / Layer | 🔧 材料 / Material | 📘 目的 / Purpose |
+|--------------|---------------------|---------------------|
+| **上部配線層**<br>Top Metal | Cu + PI | 信号配線ルーティング<br>Signal routing |
+| **中間配線層**<br>Mid Metal Layers | Cu + PI (2–6層) | 多層再配線構成<br>Multilayer redistribution |
+| **チップ埋込層**<br>Embedded Die Layer | Mold樹脂<br>Mold Resin | Fan-Outスペース確保<br>Supports die and area expansion |
+| **I/O層**<br>Bottom I/O Layer | Cuバンプ<br>Cu Bumps | LGA/BGA接続<br>Board-level interconnects |
+
+---
 
 ### ✦ 特徴 / Characteristics
 
-- **コアレス構造**：基板レスのため超薄型化が可能  
-  *Coreless* design enables ultra-thin packaging  
-- **チップ周囲への配線拡張（Fan-Out）**  
-  Signal fan-out from embedded die to wider region  
-- **μ-bumpやHybrid Bondingとの相性が良好**  
-  Compatible with μ-bump and hybrid bonding interfaces
+- ✅ **超薄型パッケージ**が可能（コアレス設計）  
+  Enables **ultra-thin packaging** with coreless design  
+- 🔄 **チップ外周への信号拡張（Fan-Out）**  
+  Signal redistribution from chip to package edge  
+- 🔗 **μ-bump / Hybrid Bondingと高相性**  
+  Compatible with advanced bonding techniques like μ-bump and hybrid bonding  
 
 ---
 
-## 🏗️ 多層化における設計ポイント  
-## 🏗️ Key Considerations for Multilayer RDL and Interposers
+## 🏗️ 多層化における設計観点  
+**Key Considerations for Multilayer Design**
 
-| 観点 / Aspect | 留意点 / Design Notes |
-|----------------|------------------------|
-| **寸法制御**<br>Dimensional Control | 膜厚・ライン幅・配線間隔の精密管理<br>Precise control of thickness, width, spacing |
-| **熱応力管理**<br>Thermal Stress | CTE差によるひずみに配慮<br>CTE mismatch between layers |
-| **レジスト整合性**<br>Resist Alignment | マルチレイヤのアライメント精度が重要<br>Critical mask alignment for each layer |
-| **平坦性制御**<br>Planarization | CMPによる表面平坦化が必須<br>CMP needed for step-height reduction and litho accuracy |
+| 🔍 観点 / Aspect | 🛠️ 留意点 / Design Considerations |
+|------------------|-----------------------------------|
+| **寸法制御**<br>Dimensional Accuracy | 膜厚・ライン幅・ギャップの精密制御<br>Accurate thickness, line width, spacing |
+| **熱応力管理**<br>Thermal Stress Control | CTE差による応力とクラックに注意<br>Handle stress from CTE mismatch |
+| **レジスト整合性**<br>Resist Alignment | 各層のマスク合わせ精度が重要<br>Precise mask alignment between layers |
+| **平坦性維持**<br>Planarity / CMP | CMP工程での平坦化が不可欠<br>Ensure flat surface via CMP for lithography |
 
 ---
 
 ## 📌 まとめ / Summary
 
-インターポーザとRDLは、チップ間の**電気・熱・機械インタフェース**として機能する**パッケージ基盤技術**です。  
-Interposers and RDLs serve as the **mechanical, electrical, and thermal interface** between multiple chips.
+インターポーザとRDLは、**チップレット技術や先端実装**を支える不可欠な基盤技術です。  
+*Interposers and RDLs are foundational technologies in chiplet-based and advanced packaging.*
 
-➡ これらの積層構造の最適設計は、**高密度・高性能なパッケージングの鍵**となります。  
-➡ Their careful design determines the **scalability and performance** of advanced packages.
+➡ 電気・熱・信号配線の複合的制約を同時に扱うため、**構造設計と材料選定の統合的最適化**が求められます。  
+➡ Their complexity demands a **co-optimized structural and material design** approach.
 
 ---
+
+## 🔗 特別編 第2章 トップへ戻る  
+[📎 戻る｜Back to Chapter 2 Top](./README.md)
