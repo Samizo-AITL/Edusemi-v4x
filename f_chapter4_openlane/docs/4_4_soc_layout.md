@@ -1,18 +1,31 @@
-# 4.4 SoC統合モジュールの実装（FSM + PID）
-
-## 🎯 本節の目的
-
-- FSMおよびPIDを統合した `soc_top.v` を配置配線し、GDSII を生成する  
-- 複数モジュール統合における floorplan・面積・配線のスケーリングを観察する  
-- SoCレベルの物理設計課題（I/O配置、リソース制約）に触れる
+---
+layout: default
+title: 4.4 SoC統合モジュールの実装（FSM + PID）
+---
 
 ---
 
-## 🛠️ ディレクトリ構成の準備
+# 4.4 SoC統合モジュールの実装（FSM + PID）  
+**Implementation of Integrated SoC Module (FSM + PID)**
 
-以下のように `soc_top` 用のプロジェクトディレクトリを構成します：
+---
 
-```
+## 🎯 本節の目的｜Purpose of This Section
+
+| 📝 日本語｜Japanese | 📘 English |
+|--------------------|-----------|
+| FSM＋PIDを統合した `soc_top.v` の配置配線とGDS生成を行う | Perform P&R and GDSII generation for `soc_top.v` |
+| 複数モジュール統合に伴う floorplan・配線の最適化を観察 | Observe floorplan and routing for multiple modules |
+| SoCレベル設計のI/O配置や制約を把握する | Understand I/O placement and design constraints |
+
+---
+
+## 🛠️ ディレクトリ構成｜Project Directory Structure
+
+以下のように `soc_top` 用プロジェクトを準備します：  
+Set up the following structure for the `soc_top` project:
+
+```text
 f_chapter4_openlane/
 └── openlane/
     └── soc_top/
@@ -21,11 +34,11 @@ f_chapter4_openlane/
             └── soc_top.v
 ```
 
-`soc_top.v` には、FSMとPIDモジュールのトップ統合RTLが含まれます。
+> `soc_top.v` includes integrated RTL of FSM and PID.
 
 ---
 
-## 📦 config.tcl（最小構成例）
+## ⚙️ config.tcl の構成例｜Sample `config.tcl`
 
 ```tcl
 set ::env(DESIGN_NAME) soc_top
@@ -36,9 +49,15 @@ set ::env(FP_CORE_UTIL) 45
 set ::env(PL_TARGET_DENSITY) 0.5
 ```
 
+> 複数モジュール統合のため `FP_CORE_UTIL` を上方調整しています。  
+> Core utilization increased due to integration.
+
 ---
 
-## 🚀 flow.tcl の実行手順
+## 🚀 フロー実行｜Running the Flow
+
+以下のコマンドでOpenLaneを実行：  
+Run OpenLane with the following command:
 
 ```bash
 cd OpenLane/
@@ -47,9 +66,9 @@ cd OpenLane/
 
 ---
 
-## 📂 成果物構成とレポート出力
+## 📂 成果物とレポート構成｜Output Artifacts and Reports
 
-```
+```text
 runs/soc_top/
 ├── config.tcl
 ├── logs/
@@ -66,36 +85,48 @@ runs/soc_top/
 
 ---
 
-## 📊 評価と観察ポイント
+## 📊 評価と観察ポイント｜Evaluation Metrics
 
-| 項目        | 内容                                                  |
-|-------------|-------------------------------------------------------|
-| ✅ 統合面積 | FSM + PID 単体面積の合算に対する増減を観察             |
-| ✅ 配線密度 | クロックや制御信号配線の混雑度、密度の最適化           |
-| ✅ I/O配置  | 統合モジュールにおけるI/O port配置とDRC違反の抑制確認 |
+| ✅ 項目｜Metric | 🔍 内容・目的｜Purpose |
+|----------------|------------------------|
+| 統合面積<br>Total Area | FSM + PID合計面積との比較 |
+| 配線密度<br>Routing Density | 配線混雑とfloorplan調整 |
+| I/O配置<br>I/O Placement | I/Oの配置とDRC影響の確認 |
 
 ---
 
-## 🖼️ レイアウト可視化手順
+## 🖼️ レイアウト可視化｜Layout Visualization
+
+### 🔍 KLayout を使用する場合｜Using KLayout
 
 ```bash
 klayout runs/soc_top/results/final/gds/soc_top.gds
 ```
 
-または
+### 🔍 Magic を使用する場合｜Using Magic
 
 ```bash
 magic -T sky130A.tech runs/soc_top/results/final/gds/soc_top.gds
 ```
 
----
-
-## ✅ まとめ
-
-- FSMとPIDを統合したSoC構成もOpenLaneで一括自動配置配線が可能  
-- 複数モジュール統合により floorplan・配線戦略が重要となる  
-- 次節では FSM / PID / SoC 各設計の物理評価を比較・分析する
+> 各モジュールのレイアウト領域やI/O配置を視覚確認できます。  
+> Useful for inspecting layout regions and port placements.
 
 ---
 
-👉 [4.5 設計評価レポートと比較へ進む](4_5_evaluation.md)
+## ✅ まとめ｜Summary
+
+| 🇯🇵 日本語 | 🇺🇸 English |
+|------------|------------|
+| FSMとPIDの統合SoCがOpenLaneでGDS化可能 | FSM and PID SoC can be implemented via OpenLane |
+| Floorplanや配線の工夫が重要になる | Floorplan and routing strategy become critical |
+| 次節では全モジュールの設計比較・分析を実施 | Next: Compare all modules’ metrics and performance |
+
+---
+
+## 📎 前後の節｜Previous / Next Sections
+
+- ◀️ 前の節｜Previous: [4.3 PIDモジュールの配置配線](docs/4_3_pid_layout.md)  
+- ▶️ 次の節｜Next: [4.5 設計評価レポートと比較](docs/4_5_evaluation.md)
+
+📚 [🔙 特別編 第4章 README に戻る](../README.md)
