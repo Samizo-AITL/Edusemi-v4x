@@ -26,7 +26,8 @@ A state diagram consists of **nodes (states)** and **directed edges (transitions
 
 > ⚠️ このページではMermaidフローチャートは表示されません  
 > 👉 **以下のリンクからGitHubで視覚化表示をご確認ください：**  
-> [📎 GitHubでMermaidフローチャートを見る](https://github.com/Samizo-AITL/Edusemi-v4x/blob/main/f_chapter3_socsystem/docs/3_1_aitl_architecture.md)
+> [📎 GitHubでMermaidフローチャートを見る](https://github.com/Samizo-AITL/Edusemi-v4x/blob/main/d_chapter8_fsm_design_basics
+/fsm_state_transition.md)
 
 ```mermaid
 stateDiagram-v2
@@ -34,19 +35,6 @@ stateDiagram-v2
     IDLE --> WAIT_ACK : start
     WAIT_ACK --> DONE : ack_received
     DONE --> [*]
-```
-
-
-```text
-    [IDLE]
-      |
-    start
-      ↓
-   [WAIT_ACK]
-      |
-   ack_received
-      ↓
-    [DONE]
 ```
 
 - **ノード｜Node**：IDLE、WAIT_ACK、DONE
