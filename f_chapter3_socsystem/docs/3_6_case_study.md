@@ -37,10 +37,23 @@ and evaluates their behavior and performance on an actual SoC.
 ```mermaid
 stateDiagram-v2
     [*] --> IDLE
-    IDLE --> INIT_BALANCE : 起動命令 / Start
-    INIT_BALANCE --> STABILIZING : センサ安定 / Sensor OK
-    STABILIZING --> FALLEN : バランス喪失 / Fall
+    IDLE --> INIT_BALANCE : 起動命令\nStart
+    INIT_BALANCE --> STABILIZING : センサ安定\nSensor OK
+    STABILIZING --> FALLEN : バランス喪失\nFall
     FALLEN --> [*]
+
+    %% スタイル指定
+    state IDLE          { IDLE }
+    state INIT_BALANCE  { INIT_BALANCE }
+    state STABILIZING   { STABILIZING }
+    state FALLEN        { FALLEN }
+
+    %% ノード色・枠・文字色などをカスタマイズ
+    style IDLE           fill:#fdf6e3,stroke:#666,stroke-width:1px
+    style INIT_BALANCE   fill:#d6f5ff,stroke:#3399cc,stroke-width:2px
+    style STABILIZING    fill:#d6f5ff,stroke:#3399cc,stroke-width:2px
+    style FALLEN         fill:#ffe6e6,stroke:#cc0000,stroke-width:2px,color:#990000
+
 ```    
 
 ### 🔁 制御ループ｜Control Loop
