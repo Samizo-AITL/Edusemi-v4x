@@ -21,6 +21,35 @@ Sky130 PDKとの統合、制約記述、合成・配置・配線・DRCなど、
 
 ---
 
+## 📈 OpenLane設計フロー可視化（Mermaid）
+
+```mermaid
+graph TD
+    A[🔤 Verilog RTL]
+    B[🧠 論理合成<br>(Synthesis)]
+    C[📐 フロアプラン<br>(Floorplan)]
+    D[🏗️ 配置<br>(Placement)]
+    E[🕘 クロックツリー合成<br>(CTS)]
+    F[🔌 配線<br>(Routing)]
+    G[🧪 検証<br>(DRC / LVS)]
+    H[📦 GDS生成<br>(GDS / LEF)]
+
+    A --> B --> C --> D --> E --> F --> G --> H
+
+    style A fill:#e3f2fd,stroke:#1e88e5,stroke-width:2px
+    style B fill:#f3e5f5,stroke:#8e24aa,stroke-width:2px
+    style C fill:#f1f8e9,stroke:#43a047,stroke-width:2px
+    style D fill:#fff3e0,stroke:#fb8c00,stroke-width:2px
+    style E fill:#fce4ec,stroke:#c2185b,stroke-width:2px
+    style F fill:#e0f2f1,stroke:#00897b,stroke-width:2px
+    style G fill:#ede7f6,stroke:#5e35b1,stroke-width:2px
+    style H fill:#eceff1,stroke:#546e7a,stroke-width:2px
+```
+
+> ✅ Mermaid非対応環境では[Mermaid Live Editor](https://mermaid.live/)で確認可能
+
+---
+
 ## 🎯 学習目標｜Learning Objectives
 
 - ✅ RTL〜GDSまでの流れを把握し、実行できる  
