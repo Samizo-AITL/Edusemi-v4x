@@ -36,10 +36,13 @@ title: 3.1 AITL-Hアーキテクチャと層分離設計
 
 ```mermaid
 graph TB
-    LLM["🧠 LLM層\n知的制御層\n(GPT, RISC-V)"]
-    PID["📏 PID層\n物理安定層\n(制御器, Stabilizer)"]
-    FSM["🔁 FSM層\n行動選択層\n(ステートマシン)"]
-    
+    LLM[LLM Layer<br>Intelligent Control<br>(GPT, RISC-V)]
+    PID[PID Layer<br>Physical Stabilization<br>(Controller)]
+    FSM[FSM Layer<br>Behavior Switching<br>(State Machine)]
+
+    LLM -->|Command / Override| PID
+    FSM -->|ref (target value)| PID
+    PID -->|Feedback (error)| FSM    
 ```
 
 - **FSM**：センサ信号に基づいて状態遷移・行動切替を行う  
