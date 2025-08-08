@@ -31,7 +31,7 @@ This chapter explores physical verification using the Sky130 PDK and outlines la
 
 | 🔢 **節番号**<br>**Section** | 📖 **タイトル（日本語）**<br>**Title (JP)** | 📘 **Title (EN)** | 📝 **概要｜Summary** |
 |--------------------------|---------------------------------------------|--------------------|-------------------------|
-| **5.1** | [PDK構造の理解とSky130レイヤー体系](docs/5_1_pdk_check.md) | Understanding PDK and Sky130 Layer System | レイヤー命名・マスク体系を解説<br>Layer naming and mask structure |
+| **5.1** | [PDK構造の理解とSky130レイヤー体系](docs/5_1_pdk_layer.md) | Understanding PDK and Sky130 Layer System | レイヤー命名・マスク体系を解説<br>Layer naming and mask structure |
 | **5.2** | [MagicによるGDS階層と層構成の可視化](docs/5_2_magic_gds.md) | Visualizing GDS Hierarchy with Magic | セル構造・金属層構成の可視化<br>Viewing hierarchy and metal layers |
 | **5.3** | [DRCルールとその根拠（例：metal spacing）](docs/5_3_drc_check.md) | DRC Rules and Their Basis (e.g., Metal Spacing) | MagicでのDRCチェック実施と背景の理解<br>Checking rules and understanding their reasoning |
 | **5.4** | [LVSの仕組みと等価性判定の論理](docs/5_4_lvs_check.md) | LVS Concepts and Equivalence Checking | ネットリストとGDSの比較手法を解説<br>Comparing netlists with layouts |
