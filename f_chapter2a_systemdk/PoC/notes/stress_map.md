@@ -1,4 +1,13 @@
+---
+layout: default
+title: MRAM応力分布図 
+---
+
+---
+
 # MRAM応力分布図（**MRAM Stress Distribution Map**）
+
+---
 
 ## 1. 概要 / **Overview**
 - **MRAMセルにおける機械的応力**は、**信頼性や書き込み動作**に大きな影響を与える。  
