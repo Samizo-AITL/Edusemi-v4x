@@ -3,6 +3,8 @@ layout: default
 title: 04_bti_tddb_estimation - 劣化モデルの数式可視化
 ---
 
+---
+
 # 🧪 04_bti_tddb_estimation  
 **BTI・TDDB 劣化モデルの数式可視化**  
 *BTI / TDDB Degradation Models with Equation Visualization*
