@@ -1,6 +1,6 @@
 ---
 layout: default
-title: RTLからGDSへの設計フロー実習
+title: RTLからGDSへの設計フロー実習　
 ---
 
 ---
