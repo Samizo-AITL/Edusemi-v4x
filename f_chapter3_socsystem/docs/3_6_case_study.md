@@ -39,11 +39,6 @@ stateDiagram-v2
     FALLEN --> [*]
 ```    
 
-
-```text
-IDLE → INIT_BALANCE → STABILIZING → FALLEN
-```
-
 ### 🔁 制御ループ｜Control Loop
 
 1. FSMが「起動」状態へ遷移  
