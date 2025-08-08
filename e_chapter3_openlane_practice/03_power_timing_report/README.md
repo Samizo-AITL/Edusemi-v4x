@@ -22,9 +22,14 @@ to extract key metrics like **area, timing slack, and power consumption** and vi
 
 ## 🎯 学習目的｜Objectives
 
-| ✅ | OpenLaneが出力するレポートログを構造的に解析できる |
-| ✅ | 面積・消費電力・タイミング情報をCSV化・視覚化できる |
-| ✅ | 複数Runの結果を比較・分析する基盤を習得できる |
+- ✅ **OpenLaneが出力するレポートログを構造的に解析できる**  
+  *You can structurally analyze report logs output by OpenLane.*
+
+- ✅ **面積・消費電力・タイミング情報をCSV化・視覚化できる**  
+  *You can convert and visualize area, power, and timing information as CSV.*
+
+- ✅ **複数Runの結果を比較・分析する基盤を習得できる**  
+  *You can learn how to compare and analyze results across multiple runs.*
 
 ---
 
