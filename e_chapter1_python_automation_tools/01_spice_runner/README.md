@@ -3,8 +3,12 @@ layout: default
 title: 01_spice_runner：SPICEシミュレーション自動化スクリプト
 ---
 
+---
+
 # 🐍 01_spice_runner：SPICEシミュレーション自動化スクリプト  
 **01_spice_runner: Automated SPICE Simulation Scripts**
+
+---
 
 このフォルダでは、Sky130 の SPICE モデルを使用したトランジスタ特性のシミュレーションを  
 Python によって自動化・バッチ実行するためのスクリプトを提供します。  
