@@ -81,6 +81,6 @@ magic -T sky130A.tech soc_top.gds
 
 ## 🔗 前後のリンク｜Navigation
 
-- ⬅️ [5.1 PDK構造の理解とSky130レイヤー体系](5_1_pdk_layers.md)  
-- ▶️ [5.3 DRCルールとその根拠（例：metal spacing）](5_3_drc_rules.md)  
+- ⬅️ [5.1 PDK構造の理解とSky130レイヤー体系](5_1_pdk_layer.md)  
+- ▶️ [5.3 DRCルールとその根拠（例：metal spacing）](5_3_drc_check.md)  
 - 🏠 [特別編 第5章 READMEに戻る](README.md)
