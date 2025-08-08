@@ -3,6 +3,8 @@ layout: default
 title: 4.6 GDSレイアウトの可視化と考察
 ---
 
+---
+
 # 4.6 GDSレイアウトの可視化と考察  
 **GDS Layout Visualization and Analysis**
 
@@ -82,7 +84,7 @@ magic -T sky130A.tech fsm_engine.gds
 
 ## 📎 前後の節｜Previous / Next Sections
 
-- ◀️ 前の節｜Previous: [4.5 設計評価レポートと比較](docs/4_5_evaluation.md)  
+- ◀️ 前の節｜Previous: [4.5 設計評価レポートと比較](./4_5_evaluation.md)  
 - ✅ この節が最終章です｜This is the final section of Chapter 4.
 
 📚 [🔙 特別編 第4章 README に戻る](../README.md)
