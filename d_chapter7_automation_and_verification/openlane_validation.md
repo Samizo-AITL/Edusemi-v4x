@@ -28,7 +28,7 @@ OpenLaneは各ステージで自動的に検証処理を実行します。
 
 ### 🔁 OpenLane設計フロー（Mermaid形式）｜OpenLane Flow (Mermaid)
 
-[GitHubでMermaidフローチャートを確認する](https://github.com/Samizo-AITL/Edusemi-v4x/blob/main/d_chapter6_pdk_and_eda_environment/eda_toolchain.md)
+[GitHubでMermaidフローチャートを確認する](https://github.com/Samizo-AITL/Edusemi-v4x/blob/main/d_chapter7_automation_and_verification)
 
 ```mermaid
 flowchart TD
