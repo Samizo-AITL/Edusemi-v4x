@@ -3,8 +3,12 @@ layout: default
 title: 使用方法：04_openlane_log_parser
 ---
 
+---
+
 # 📊 04_openlane_log_parser：OpenLaneログの自動解析と可視化  
 **Automated Parsing and Visualization of OpenLane Reports**
+
+---
 
 本フォルダでは、OpenLane 実行後に出力されるレポート群（`.rpt`, `.csv`, `.log`）を Python スクリプトで解析し、  
 **設計の遅延・面積・電力などを自動抽出し、CSV化・グラフ化** するツールを提供します。
