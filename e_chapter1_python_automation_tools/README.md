@@ -3,6 +3,8 @@ layout: default
 title: 実践編 第1章 Pythonによる自動化ツール群 
 ---
 
+---
+
 # 🛠️ 実践編 第1章：Pythonによる自動化ツール群  
 **Practical Chapter 1: Python-Based Automation Tools for Semiconductor Design**
 
