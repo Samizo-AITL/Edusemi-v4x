@@ -30,6 +30,16 @@ and evaluates their behavior and performance on an actual SoC.
 
 ### 🌀 状態遷移例｜State Transitions
 
+```mermaid
+stateDiagram-v2
+    [*] --> IDLE
+    IDLE --> INIT_BALANCE : 起動命令 / Start
+    INIT_BALANCE --> STABILIZING : センサ安定 / Sensor OK
+    STABILIZING --> FALLEN : バランス喪失 / Fall
+    FALLEN --> [*]
+```    
+
+
 ```text
 IDLE → INIT_BALANCE → STABILIZING → FALLEN
 ```
