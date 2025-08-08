@@ -70,5 +70,5 @@ title: 実践編 第5章 設計結果の評価とレポート
 
 ## 🔙 戻る｜Back
 
-- ⬅️ [第4章：PoC仕様と設計展開へ戻る](../04_poc_design_flow/README.md)
+- ⬅️ [第4章：PoC仕様と設計展開へ戻る](./04_poc_design_flow/README.md)
 - 🏠 [Edusemi-v4x トップへ戻る](../README.md)
