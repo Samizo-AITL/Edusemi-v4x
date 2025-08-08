@@ -102,17 +102,17 @@ title: Edusemi-v4x/index.md
 
 ## 🔗 **関連プロジェクト**
 
-### 🎛️ **[EduController](https://github.com/Samizo-AITL/EduController/README.md)**  
+### 🎛️ **[EduController](https://github.com/Samizo-AITL/EduController)**  
 - **制御理論（PID・状態空間）〜AI制御（NN・RL・LLM）**まで網羅  
 - **PoC設計・OpenLane制御実装**との連動構成  
 - **Pythonによる設計演習・RTL検証・FSM生成支援**も収録
 
-### 🤖 **[AITL-H](https://github.com/Samizo-AITL/AITL-H/README.md)**  
+### 🤖 **[AITL-H](https://github.com/Samizo-AITL/AITL-H)**  
 - **FSM（本能）＋PID（理性）＋LLM（知性）**による三層制御アーキテクチャ  
 - **人型ロボット・統合制御のPoC実装**が可能  
 - Edusemiの**特別編3・4章**と構造的に連携
 
-### 🌐 **[Edusemi-Plus](https://github.com/Samizo-AITL/edusemi-plus/README.md)**  
+### 🌐 **[Edusemi-Plus](https://github.com/Samizo-AITL/edusemi-plus)**  
 - **地政学・製品戦略・AI・量子・投資**など産業構造を読み解く応用教材  
 - **Apple Silicon・CHIPS法・Cryo-CMOS**など実例を解説  
 - 技術だけでなく**社会との接点や背景**を探究
