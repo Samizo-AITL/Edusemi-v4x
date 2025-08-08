@@ -32,7 +32,7 @@ title: 3.1 AITL-Hアーキテクチャと層分離設計
 
 > ⚠️ このページではMermaidフローチャートは表示されません  
 > 👉 **以下のリンクからGitHubで視覚化表示をご確認ください：**  
-> [📎 GitHubでMermaidフローチャートを見る](https://github.com/Samizo-AITL/Edusemi-v4x/blob/main/e_chapter1_python_automation_tools/README.md)
+> [📎 GitHubでMermaidフローチャートを見る](https://github.com/Samizo-AITL/Edusemi-v4x/blob/main/f_chapter3_socsystem/docs/3_1_aitl_architecture.md)
 
 ```mermaid
 flowchart TB
