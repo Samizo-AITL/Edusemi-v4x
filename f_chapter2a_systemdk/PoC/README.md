@@ -22,14 +22,10 @@ with **GAA**, **AMS**, and **MRAM** functional blocks.
 
 ### 📊 構造図｜Block Diagram
 
-<!-- Markdown形式：GitHubでも表示される -->
-![SystemDK PoC Flowchart](./images/Physical_Design_PoC_Manual_Flowchart.png)
-
-<!-- HTML形式（GitHub Pages用・サイズ変更） -->
 <p align="center">
-  <img src="./images/Physical_Design_PoC_Manual_Flowchart.png" alt="SystemDK PoC Flowchart" width="60%">
+  <img src="{{ '/images/Physical_Design_PoC_Manual_Flowchart.png' | relative_url }}" alt="SystemDK PoC Flowchart" width="60%">
 </p>
-     
+
 ---
 
 ## 📚 セクション構成｜Section Structure
