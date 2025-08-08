@@ -90,4 +90,4 @@ sky130A/
 ## 🔗 前後のリンク｜Navigation
 
 - ⬅️ [特別編 第5章 READMEに戻る](README.md)  
-- ▶️ [5.2 MagicによるGDS階層と層構成の可視化](5_2_magic_view.md)
+- ▶️ [5.2 MagicによるGDS階層と層構成の可視化](5_2_magic_gds.md)
