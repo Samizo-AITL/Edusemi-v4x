@@ -4,7 +4,10 @@ title: EMI制約とアイソレーション戦略
 ---
 
 ---
+
 # EMI制約とアイソレーション戦略（**EMI Constraints and Isolation Strategy**）
+
+---
 
 ## 1. 概要 / **Overview**
 - **EMI（電磁妨害）**は**PoC設計**において重要な設計課題である。  
