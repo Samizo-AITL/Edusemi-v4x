@@ -22,8 +22,12 @@ with **GAA**, **AMS**, and **MRAM** functional blocks.
 
 ### 📊 構造図｜Block Diagram
 
+<!-- GitHub表示用 -->
+![SystemDK PoC Flowchart](https://samizo-aitl.github.io/Edusemi-v4x/f_chapter2a_systemdk/PoC/images/Physical_Design_PoC_Manual_Flowchart.png)
+
+<!-- GitHub Pages用（サイズ変更） -->
 <p align="center">
-  <img src="/Edusemi-v4x/f_chapter2a_systemdk/PoC/images/Physical_Design_PoC_Manual_Flowchart.png" alt="SystemDK PoC Flowchart" width="60%">
+  <img src="https://samizo-aitl.github.io/Edusemi-v4x/f_chapter2a_systemdk/PoC/images/Physical_Design_PoC_Manual_Flowchart.png" alt="SystemDK PoC Flowchart" width="60%">
 </p>
 
 ---
