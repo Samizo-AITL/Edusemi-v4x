@@ -1,26 +1,45 @@
-# 3.2 FSM設計とRTLモジュール構成
+---
+layout: default
+title: "3.2 FSM設計とRTLモジュール構成"
+---
 
-## 🧠 FSM（Finite State Machine）の役割
-
-FSMは、AITL-Hにおける「**本能的行動制御**」を担う層であり、  
-環境入力に応じて状態遷移を行い、定型的かつ瞬時な行動を生成します。
+# 3.2 FSM設計とRTLモジュール構成  
+🧠 Design and RTL Implementation of FSM (Finite State Machine)
 
 ---
 
-## ⚙️ 状態遷移モデルの設計手順
+## 🧠 FSMの役割と位置づけ  
+**FSM（Finite State Machine）は、AITL-Hにおける「本能的行動制御」層**を担い、  
+環境入力に基づいて状態遷移を行い、**定型的かつ瞬時な行動**を生成します。
 
-1. **行動仕様の分解**
-   - ロボットの立ち上がり、旋回、停止などを**状態単位で分割**
-2. **状態と遷移条件の定義**
-   - 各状態とその間を結ぶ**トリガ条件（入力信号）**を定義
-3. **状態遷移図（State Diagram）作成**
-   - `start → walking → turning → stop` などのパターンを図示
-4. **状態符号（state encoding）の決定**
-   - Binary, One-hotなどの方式を選定
+> FSM is responsible for *instinctive behavior control* in AITL-H. It transitions states based on environment inputs and generates quick, predefined actions.
 
 ---
 
-## 🧩 RTLモジュール構成（例：fsm_engine.v）
+## ⚙️ 状態遷移モデルの設計手順  
+**How to Design a State Transition Model**
+
+1. **🧩 行動仕様の分解**  
+   ロボットの立ち上がり、旋回、停止などを**状態単位で分割**  
+   → Decompose behavior into discrete states (e.g., start, walk, turn, stop)
+
+2. **🔁 状態と遷移条件の定義**  
+   各状態とその間を結ぶ**トリガ条件（センサ入力など）**を定義  
+   → Define states and transition conditions (input signals, events)
+
+3. **🗺 状態遷移図の作成**  
+   `start → walking → turning → stop` などを**視覚的に図示**  
+   → Draw the state diagram for clarity and validation
+
+4. **🔢 状態符号の決定（state encoding）**  
+   Binary, One-hotなどの方式を選定し、RTLで扱いやすく  
+   → Choose state encoding scheme: binary, one-hot, gray code, etc.
+
+---
+
+## 💻 RTLモジュール構成（例：fsm_engine.v）
+
+以下は、典型的なFSM制御モジュールのVerilog実装例です：
 
 ```verilog
 module fsm_engine (
@@ -71,51 +90,55 @@ module fsm_engine (
 
 endmodule
 ```
-💡 本テンプレートは verilog/fsm_engine.v に実装されます。
+
+📌 このテンプレートは `verilog/fsm_engine.v` に実装されます。
 
 ---
 
-## 🔌 AITL構成との接続例（ポート設計）
+## 🔌 AITLアーキテクチャとの接続例（ポート設計）
 
-FSMモジュールは、AITL-Hアーキテクチャにおいて**上下の層と信号レベルで接続**されます。以下に、典型的な接続構成を示します。
+FSMモジュールは、AITL-Hの上下層と以下のように信号接続されます：
 
-| 信号名 | ビット幅 | 説明 | 接続先 |
-|--------|----------|------|--------|
-| `clk` | 1bit | システムクロック | SoC共通 |
-| `rst` | 1bit | 非同期リセット | SoC共通 |
-| `sensor_in` | 4bit | センサ状態入力 | PID層 または センサIF |
-| `action_out` | 3bit | 行動制御信号 | PID層 または アクチュエータIF |
+| 🧾 信号名        | ビット幅 | 説明                               | 接続先             |
+|------------------|----------|------------------------------------|--------------------|
+| `clk`            | 1bit     | システムクロック                   | SoC共通            |
+| `rst`            | 1bit     | 非同期リセット                     | SoC共通            |
+| `sensor_in`      | 4bit     | センサからの状態信号入力           | PID層 or Sensor IF |
+| `action_out`     | 3bit     | FSMによる行動制御信号              | PID層 or Actuator  |
 
-> 備考：`action_out` は、状態に応じて PID制御器に「行動種別」を通知する制御信号（例：歩行、旋回、停止など）
-
----
-
-## 📝 補足：FSM設計の設計指針
-
-- 状態数は**4〜8程度**を基本とし、階層型FSM（HFSM）で拡張可能
-- 条件分岐が複雑・非決定的な場合は**LLM側に判断を委譲**する
-- `case`文で状態ごとの**明示的な遷移定義**を記述する
-- 状態は `enum` を用いて**読みやすさと検証容易性を確保**
+> `action_out` は、状態に応じてPID制御器へ行動種別（歩行・旋回・停止など）を通知します。
 
 ---
 
-## 🔄 AITL-H内部の信号流れ（簡易図）
-```
+## 📌 FSM設計のポイントと設計指針
+
+- ✅ 状態数は**4〜8個程度**を基本とし、複雑化する場合は階層型FSM（HFSM）を導入
+- 🔁 非決定的・複雑な制御分岐は**LLMに委譲**し、FSMは単純化
+- 📚 `case`文での**明示的な遷移制御**により検証性・デバッグ性を向上
+- 🧾 `typedef enum` の利用により**可読性と保守性**を向上
+
+---
+
+## 🔄 AITL-H 内部の信号流れ（概略図）
+
+```text
 センサ入力
 ↓ sensor_in
 [FSM層]── action_out ──▶[PID層]── ctrl_out ──▶ Actuator
 ▲
 │
-LLM層 ←─ command_in / feedback
+LLM層 ←── command_in / feedback
 ```
-> FSMは「反射的行動」、PIDは「連続的制御」、LLMは「状況判断と介入」
+
+> 🧠 FSMは「**反射的行動生成**」、⚙️ PIDは「**物理制御安定化**」、LLMは「**状況判断とオーバーライド**」を担います。
 
 ---
 
 ## 📎 次節との接続
 
-次の「**3.3 PID制御のASIC実装**」では、本FSMから出力された `action_out` をもとに、  
-**PID制御器がどのように物理挙動を安定化させるか**をRTL視点・SoC統合視点から解説します。
+👉 次の「**3.3 PID制御のASIC実装**」では、本FSMから出力された `action_out` をもとに、  
+**PID制御器がどのように物理挙動を安定化させるか**をRTLおよびSoC統合の観点から解説します。
 
 ---
 
+👉 [🔙 特別編第3章のREADMEに戻る](../README.md)
