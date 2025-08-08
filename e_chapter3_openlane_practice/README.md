@@ -75,9 +75,7 @@ make pull-sky130-pdk
 
 ## 🗺️ SoC設計の全体フロー｜SoC Design Flow Overview (Mermaid Diagram)
 
-> ⚠️ このページではMermaidフローチャートは**表示されません**。  
-> 👉 以下のリンクからGitHubでご確認ください：  
-> [📎 GitHubでMermaidフローチャートを見る](https://github.com/Samizo-AITL/Edusemi-v4x/blob/main/e_chapter3_openlane_practice/README.md)
+ [📎 GitHubでMermaidフローチャートを見る](https://github.com/Samizo-AITL/Edusemi-v4x/blob/main/e_chapter3_openlane_practice/README.md)
 
 ```mermaid
 graph TD
