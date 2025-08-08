@@ -145,11 +145,11 @@ flowchart TD
 
 ---
 
-## 📎 次節との接続
+📎 Previous｜前節：  
+🔙 [3.1 AITL-Hアーキテクチャと層分離設計](3_1_aitl_architecture.md)
 
-👉 次の「**3.3 PID制御のASIC実装**」では、本FSMから出力された `action_out` をもとに、  
-**PID制御器がどのように物理挙動を安定化させるか**をRTLおよびSoC統合の観点から解説します。
+📎 Next｜次節：  
+👉 [3.3 PID制御のASIC実装（デジタル／アナログ）](3_3_pid_design.md)  
+Implementation of **PID controllers** in ASIC design, both in **digital and analog domains**.
 
----
-
-👉 [🔙 特別編第3章のREADMEに戻る](../README.md)
+📚 [🔙 特別編 第3章 README に戻る｜Back to Chapter 3 README](../README.md)
