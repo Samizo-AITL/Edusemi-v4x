@@ -3,8 +3,12 @@ layout: default
 title: 使用方法：03_degradation_model
 ---
 
+---
+
 # 📉 使用方法：03_degradation_model  
 **How to Use: 03_degradation_model – Reliability Modeling Tools**
+
+---
 
 このフォルダでは、MOSトランジスタにおける代表的な信頼性劣化現象である  
 **BTI（Bias Temperature Instability）** や **TDDB（Time Dependent Dielectric Breakdown）** の理論モデルに基づき、  
