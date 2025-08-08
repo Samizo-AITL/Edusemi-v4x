@@ -3,8 +3,12 @@ layout: default
 title: 02_plot_vgid：SPICEログのVg–Id特性可視化
 ---
 
+---
+
 # 📈 02_plot_vgid：SPICEログのVg–Id特性可視化  
 **02_plot_vgid: Visualization of Vg–Id Characteristics from SPICE Logs**
+
+---
 
 このフォルダは、Sky130 PDK を用いた `.spice` シミュレーション結果（`.log`ファイル）から、  
 ゲート電圧 Vg に対するドレイン電流 Id の特性（Vg–Id カーブ）を描画する Python スクリプトを格納しています。  
