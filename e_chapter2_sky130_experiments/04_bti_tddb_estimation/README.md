@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 04_bti_tddb_estimation - 劣化モデルの数式可視化
+title: 04_bti_tddb_estimation - 劣化モデルの数式可視化　
 ---
 
 ---
