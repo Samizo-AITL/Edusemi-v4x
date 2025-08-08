@@ -3,6 +3,8 @@ layout: default
 title: 02_idvg_experiment - Vg–Id 特性実験
 ---
 
+---
+
 # 📘 02_idvg_experiment：Vg–Id 特性実験  
 **MOSFET Vg–Id Characterization Using Sky130 PDK**
 
