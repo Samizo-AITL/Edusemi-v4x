@@ -39,14 +39,7 @@ graph TD
     LLM["🧠 LLM層\n知的制御層\n(GPT, RISC-V)"]
     PID["📏 PID層\n物理安定層\n(制御器, Stabilizer)"]
     FSM["🔁 FSM層\n行動選択層\n(ステートマシン)"]
-
-    LLM -->|Command / Override| PID
-    PID -->|Feedback (error)| FSM
-    FSM -->|ref (目標値)| PID
-
-    style LLM fill:#e3f2fd,stroke:#1565c0,stroke-width:2px
-    style PID fill:#f1f8e9,stroke:#2e7d32,stroke-width:2px
-    style FSM fill:#fff3e0,stroke:#ef6c00,stroke-width:2px
+    
 ```
 
 - **FSM**：センサ信号に基づいて状態遷移・行動切替を行う  
