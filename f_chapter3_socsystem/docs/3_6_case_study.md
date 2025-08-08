@@ -42,19 +42,12 @@ stateDiagram-v2
     STABILIZING --> FALLEN : バランス喪失\nFall
     FALLEN --> [*]
 
-    %% スタイル指定
-    state IDLE          { IDLE }
-    state INIT_BALANCE  { INIT_BALANCE }
-    state STABILIZING   { STABILIZING }
-    state FALLEN        { FALLEN }
-
-    %% ノード色・枠・文字色などをカスタマイズ
+    %% ノード色・枠・文字色などをカスタマイズ（スタイル定義のみ）
     style IDLE           fill:#fdf6e3,stroke:#666,stroke-width:1px
     style INIT_BALANCE   fill:#d6f5ff,stroke:#3399cc,stroke-width:2px
     style STABILIZING    fill:#d6f5ff,stroke:#3399cc,stroke-width:2px
     style FALLEN         fill:#ffe6e6,stroke:#cc0000,stroke-width:2px,color:#990000
-
-```    
+```
 
 ### 🔁 制御ループ｜Control Loop
 
