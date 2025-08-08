@@ -3,8 +3,12 @@ layout: default
 title: 使用方法：05_report_template
 ---
 
+---
+
 # 📝 使用方法：05_report_template  
 **How to Use: 05_report_template – Automated Reporting Templates**
+
+---
 
 本フォルダでは、各章で得られた図表や数値データをレポートとしてまとめるテンプレートを提供します。  
 `Jupyter Notebook` 形式や `Markdown` 自動生成スクリプトを用いて、**教育レポートや技術記録の自動化を支援**します。  
