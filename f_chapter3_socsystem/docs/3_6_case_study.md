@@ -113,4 +113,7 @@ stateDiagram-v2
 
 ---
 
-📚 [🔙 特別編 第3章 README に戻る](../README.md)
+📎 Previous｜前節：  
+🔙 [3.5 SoC統合とバス構造・通信設計](3_5_soc_integration.md)
+
+📚 [🔙 特別編 第3章 README に戻る｜Back to Chapter 3 README](../README.md)
