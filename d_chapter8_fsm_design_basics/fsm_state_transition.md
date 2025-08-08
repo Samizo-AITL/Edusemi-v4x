@@ -24,6 +24,15 @@ This helps catch design errors early and understand behavior logically.
 状態遷移図は、**状態ノードと遷移矢印**で構成される構造図です。  
 A state diagram consists of **nodes (states)** and **directed edges (transitions)**.
 
+```mermaid
+stateDiagram-v2
+    [*] --> IDLE
+    IDLE --> WAIT_ACK : start
+    WAIT_ACK --> DONE : ack_received
+    DONE --> [*]
+```
+
+
 ```text
     [IDLE]
       |
