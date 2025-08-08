@@ -112,7 +112,7 @@ title: Edusemi-v4x/index.md
 - **人型ロボット・統合制御のPoC実装**が可能  
 - Edusemiの**特別編3・4章**と構造的に連携
 
-### 🌐 **[Edusemi-Plus](https://samizo-aitl.github.io/edusemi-plus/)**  
+### 🌐 **[Edusemi-Plus](https://samizo-aitl.github.io/Edusemi-Plus/)**  
 - **地政学・製品戦略・AI・量子・投資**など産業構造を読み解く応用教材  
 - **Apple Silicon・CHIPS法・Cryo-CMOS**など実例を解説  
 - 技術だけでなく**社会との接点や背景**を探究
