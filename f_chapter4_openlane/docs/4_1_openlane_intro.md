@@ -102,8 +102,7 @@ set ::env(PL_TARGET_DENSITY) 0.5
 ---
 
 ## 📎 前後の節｜Previous / Next Sections
-
-- ◀️ 前の節｜Previous: [特別編第3章 3.6 ケーススタディ](../f_chapter3_socsystem/docs/3_6_case_study.md)  
+  
 - ▶️ 次の節｜Next: [4.2 FSMモジュールの配置配線](./4_2_fsm_layout.md)
 
 📚 [🔙 特別編 第4章 README に戻る](../README.md)
