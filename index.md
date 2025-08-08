@@ -144,10 +144,10 @@ title: Edusemi-v4x/index.md
 
 ---
 
-**💬 [Edusemi教材に関する議論はこちら → Discussions](https://github.com/Samizo-AITL/Edusemi-v4x/discussions)**
+## 💬 [Edusemi教材に関する議論はこちら → Discussions](https://github.com/Samizo-AITL/Edusemi-v4x/discussions)**
 
 
 ---
 
-### 📄 **[改訂履歴（ChangeLog）](revision_history.md)**
+## 📄 **[改訂履歴（ChangeLog）](revision_history.md)**
 
