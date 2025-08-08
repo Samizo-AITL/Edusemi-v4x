@@ -40,9 +40,9 @@ graph TB
     PID["📏 PID層\n物理安定層\n(制御器, Stabilizer)"]
     FSM["🔁 FSM層\n行動選択層\n(ステートマシン)"]
 
-    LLM --> PID["Command or Override"]
-    FSM --> PID["ref (target value)"]
-    PID --> FSM["Feedback (error)"]
+    LLM -->|Command or Override| PID
+    FSM -->|ref (target value)| PID
+    PID -->|Feedback (error)| FSM
     
 ```
 
