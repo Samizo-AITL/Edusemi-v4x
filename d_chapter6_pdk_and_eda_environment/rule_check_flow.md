@@ -32,8 +32,7 @@ In LSI design, **physical verification** is essential for ensuring design qualit
 
 ## 🔁 チェックフロー全体像（Sky130系）｜Overall Flow Example (Sky130)
 
-⚠️ このWebサイトではMermaid図が表示されません。  
-👉 [**GitHubでフローチャートを確認**](https://github.com/Samizo-AITL/Edusemi-v4x/blob/main/d_chapter6_pdk_and_eda_environment/rule_check_flow.md)
+[GitHubでMermaidフローチャートを確認](https://github.com/Samizo-AITL/Edusemi-v4x/blob/main/d_chapter6_pdk_and_eda_environment/rule_check_flow.md)
 
 ```mermaid
 graph TD
