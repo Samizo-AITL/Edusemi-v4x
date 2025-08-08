@@ -3,6 +3,8 @@ layout: default
 title: 4.5 設計評価レポートと比較（FSM / PID / SoC）
 ---
 
+---
+
 # 4.5 設計評価レポートと比較（FSM / PID / SoC）  
 **Design Evaluation and Comparison (FSM / PID / SoC)**
 
@@ -87,7 +89,7 @@ title: 4.5 設計評価レポートと比較（FSM / PID / SoC）
 
 ## 📎 前後の節｜Previous / Next Sections
 
-- ◀️ 前の節｜Previous: [4.4 SoC統合モジュールの実装](docs/4_4_soc_layout.md)  
-- ▶️ 次の節｜Next: [4.6 GDSレイアウトの可視化と考察](docs/4_6_gds_view.md)
+- ◀️ 前の節｜Previous: [4.4 SoC統合モジュールの実装](./4_4_soc_layout.md)  
+- ▶️ 次の節｜Next: [4.6 GDSレイアウトの可視化と考察](./4_6_gds_view.md)
 
 📚 [🔙 特別編 第4章 README に戻る](../README.md)
