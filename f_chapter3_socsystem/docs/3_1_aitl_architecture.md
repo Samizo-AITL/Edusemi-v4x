@@ -35,18 +35,23 @@ title: 3.1 AITL-Hアーキテクチャと層分離設計
 > [📎 GitHubでMermaidフローチャートを見る](https://github.com/Samizo-AITL/Edusemi-v4x/blob/main/f_chapter3_socsystem/docs/3_1_aitl_architecture.md)
 
 ```mermaid
-%% Mermaid diagram with color styling
 graph TB
-    %% ノード定義（HTML-like blocksで色設定）
-    LLM["<div style='background:#FFEECC;border:2px solid #FF9900;padding:5px;'>🧠 LLM層<br/>知的制御層<br/>(GPT, RISC-V)</div>"]
-    PID["<div style='background:#D0F0FF;border:2px solid #3399FF;padding:5px;'>📏 PID層<br/>物理安定層<br/>(制御器, Stabilizer)</div>"]
-    FSM["<div style='background:#E0FFE0;border:2px solid #33CC33;padding:5px;'>🔁 FSM層<br/>行動選択層<br/>(ステートマシン)</div>"]
+    LLM["🧠 LLM層<br/>知的制御層<br/>(GPT, RISC-V)"]
+    PID["📏 PID層<br/>物理安定層<br/>(制御器, Stabilizer)"]
+    FSM["🔁 FSM層<br/>行動選択層<br/>(ステートマシン)"]
 
-    %% 接続線
     LLM -->|"Command / Override"| PID
     FSM -->|"ref (target value)"| PID
     PID -->|"Feedback (error)"| FSM
 
+    %% ノードごとにクラス付けして色分け
+    classDef llmClass fill:#FFF2CC,stroke:#FFB000,stroke-width:2px;
+    classDef pidClass fill:#D9EAD3,stroke:#6AA84F,stroke-width:2px;
+    classDef fsmClass fill:#D0E0E3,stroke:#3D85C6,stroke-width:2px;
+
+    class LLM llmClass;
+    class PID pidClass;
+    class FSM fsmClass;
 ```
 
 - **FSM**：センサ信号に基づいて状態遷移・行動切替を行う  
