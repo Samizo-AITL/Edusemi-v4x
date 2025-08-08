@@ -98,4 +98,4 @@ flowchart TB
 
 ## 🔙 戻る｜Back to Chapter Top
 
-🏠 [特別編 第3章 トップに戻る｜Back to Special Chapter 3 README](./README.md)
+🏠 [特別編 第3章 トップに戻る｜Back to Special Chapter 3 README](../README.md)
