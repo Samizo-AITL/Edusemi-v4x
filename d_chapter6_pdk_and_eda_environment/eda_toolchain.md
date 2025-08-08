@@ -51,10 +51,7 @@ This document outlines the roles of **commercial and open-source EDA tools**, an
 
 ## 🔁 ツール間のPDK接続構成（Mermaid形式）｜PDK Toolchain Flow (Mermaid)
 
-⚠️ **Mermaid図の表示について：**  
-このWebサイトではMermaid図が表示されません。  
-**以下のGitHubページで表示をご確認ください：**  
-👉 [GitHubでMermaid図を見る](https://github.com/Samizo-AITL/Edusemi-v4x/blob/main/d_chapter6_pdk_and_eda_environment/eda_toolchain.md)
+[GitHubでMermaidフローチャートを確認する](https://github.com/Samizo-AITL/Edusemi-v4x/blob/main/d_chapter6_pdk_and_eda_environment/eda_toolchain.md)
 
 ```mermaid
 flowchart TD
