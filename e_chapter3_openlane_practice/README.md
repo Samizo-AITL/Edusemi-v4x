@@ -69,6 +69,36 @@ make pull-sky130-pdk
 
 ---
 
+## 🗺️ SoC設計の全体フロー（Mermaid図＋色分け＋アイコン）  
+**🗺️ SoC Design Flow with Colored Mermaid Diagram and Icons**
+
+> ⚠️ このページではMermaidフローチャートは表示されません。  
+> 👉 **以下のリンクからGitHubで表示可能です：**  
+> [📎 GitHubでMermaidフローチャートを確認](https://github.com/Samizo-AITL/Edusemi-v4x/blob/main/chapter5_soc_design_flow/5.1_soc_design_flow.md)
+
+```mermaid
+graph TD
+    A[📝 仕様策定<br>Specification] --> B[🔧 RTL設計<br>RTL Design]
+    B --> C[🔃 論理合成<br>Logic Synthesis]
+    C --> D[🧪 DFT挿入<br>Test Insert]
+    D --> E[📤 ゲートネットリスト生成<br>Gate-level Netlist]
+    E --> F[📐 配置・配線<br>Placement & Routing]
+    F --> G[⏱️ タイミング解析<br>Static Timing Analysis]
+    G --> H[🔍 検証<br>DRC, LVS, Simulation]
+    H --> I[💾 GDS出力<br>GDS Export]
+    I --> J[🎞️ マスク生成<br>Mask Generation]
+    J --> K[🏭 製造<br>Fabrication]
+
+    %% 色分けスタイル定義
+    classDef front_end fill:#D0F0FD,stroke:#2B7A78,stroke-width:1px;
+    classDef back_end  fill:#FFDDC1,stroke:#D77A61,stroke-width:1px;
+    classDef manuf     fill:#E0E0E0,stroke:#777,stroke-width:1px;
+
+    %% クラス適用
+    class A,B,C,D,E front_end;
+    class F,G,H,I back_end;
+    class J,K manuf;
+
 ## 🗺️ OpenLane設計フローの可視化（Mermaid対応）
 
 > ⚠️ この図はGitHubの通常プレビューでは表示されません  
