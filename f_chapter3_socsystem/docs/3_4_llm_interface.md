@@ -86,12 +86,11 @@ Actuator: ← PID(u_out)
 
 ---
 
-## 📎 次節との接続  
-**Next: SoC Integration and Bus Architecture**
+📎 Previous｜前節：  
+🔙 [3.3 PID制御のASIC実装（デジタル／アナログ）](3_3_pid_design.md)
 
-次の「**3.5 SoC統合とバス構造・通信設計**」では、FSM・PID・LLM各層を  
-**SoC全体の中で統合し、バス通信（AXI/APB等）としてどう接続するか**を解説します。
+📎 Next｜次節：  
+👉 [3.5 SoC統合とバス構造・通信設計](3_5_soc_integration.md)  
+Integrating all control layers (FSM, PID, LLM) into a **single SoC**, and designing communication using **AXI/APB buses**.
 
----
-
-[🔙 特別編 第3章 README に戻る](./README.md)
+📚 [🔙 特別編 第3章 README に戻る｜Back to Chapter 3 README](../README.md)
