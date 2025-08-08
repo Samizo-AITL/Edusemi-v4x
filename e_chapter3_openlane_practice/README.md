@@ -21,18 +21,18 @@ Sky130 PDKとの統合、制約記述、合成・配置・配線・DRCなど、
 
 ---
 
-## 📈 OpenLane設計フロー可視化（Mermaid）
+## 📉 OpenLane設計フロー可視化（Mermaid）
 
 ```mermaid
 graph TD
     A[🔤 Verilog RTL]
-    B[🧠 論理合成<br>(Synthesis)]
-    C[📐 フロアプラン<br>(Floorplan)]
-    D[🏗️ 配置<br>(Placement)]
-    E[🕘 クロックツリー合成<br>(CTS)]
-    F[🔌 配線<br>(Routing)]
-    G[🧪 検証<br>(DRC / LVS)]
-    H[📦 GDS生成<br>(GDS / LEF)]
+    B[🧠 論理合成\n(Synthesis)]
+    C[📐 フロアプラン\n(Floorplan)]
+    D[🏗️ 配置\n(Placement)]
+    E[🕘 クロックツリー合成\n(CTS)]
+    F[🔌 配線\n(Routing)]
+    G[🧪 検証\n(DRC / LVS)]
+    H[📦 GDS生成\n(GDS / LEF)]
 
     A --> B --> C --> D --> E --> F --> G --> H
 
@@ -46,18 +46,19 @@ graph TD
     style H fill:#eceff1,stroke:#546e7a,stroke-width:2px
 ```
 
-> ✅ Mermaid非対応環境では[Mermaid Live Editor](https://mermaid.live/)で確認可能
+> ✅ Mermaid Live Editor（[リンク](https://mermaid.live/)）や対応GitHub Pages環境で確認可能  
+> ❗ GitHub上の表示には制限があるため、Jekyll + Mermaid対応テーマでの動作推奨
 
 ---
 
 ## 🎯 学習目標｜Learning Objectives
 
 - ✅ RTL〜GDSまでの流れを把握し、実行できる  
-  Understand the full flow from RTL to GDS
+  Understand the full flow from RTL to GDS  
 - ✅ 各ステージ（合成・配置・配線・DRC等）の目的とツールを理解  
-  Understand the roles of synthesis, placement, routing, DRC, etc.
+  Understand the roles of synthesis, placement, routing, DRC, etc.  
 - ✅ 面積・タイミング・電力などのレポートを解釈し設計へ反映  
-  Interpret reports on area, timing, and power, and feed back into design
+  Interpret reports on area, timing, and power, and feed back into design  
 - ✅ `SDC`, `floorplan`, `PDN` などの制約記述に習熟  
   Get familiar with design constraints such as `SDC`, `floorplan`, and `PDN`
 
@@ -109,7 +110,7 @@ make pull-sky130-pdk
 
 - ✅ Sky130 PDK に対応した最小構成回路を題材にしています  
 - 🔁 実務応用では SoC、IPマクロ設計、タイミング最適化などへ拡張可能  
-- 📤 GDS出力により、後工程（マスク設計、MPW発注）まで繋がる体験に対応
+- 📤 GDS出力により、後工程（マスク設計、MPW発注）まで繋がる体験に対応  
 
 ---
 
