@@ -1,22 +1,39 @@
-# 3.5 SoC統合とバス構造・通信設計
-
-## 🧩 統合設計の目的
-
-FSM・PID・LLMの三層制御モジュールを、1つのSoCとして統合する際に必要な設計は：
-
-- 各モジュールの**明確な役割分離とインターフェース定義**
-- **通信バス**を用いたモジュール間接続（AXI, APB等）
-- トップモジュールでの**接続スケーラビリティの確保**
+---
+layout: default
+title: 3.5 SoC統合とバス構造・通信設計
+---
 
 ---
 
-## 🏗 SoC全体構成ブロック図（概念）
-```
+# 3.5 SoC統合とバス構造・通信設計  
+**SoC Integration and Bus-Based Communication Design**
+
+---
+
+## 🧩 統合設計の目的｜Purpose of Integration
+
+FSM・PID・LLMの三層制御モジュールを、1つのSoCとして統合する際に必要な設計は以下の通りです：
+
+📝 **日本語｜Japanese**
+- 各モジュールの**明確な役割分離とインターフェース定義**
+- **通信バス**を用いたモジュール間接続（AXI, APB等）
+- トップモジュールでの**スケーラビリティの確保**
+
+📝 **English**
+- Clear separation of responsibilities and interface definitions
+- Interconnection via **communication bus** (e.g., AXI, APB)
+- Scalability management in the top-level module
+
+---
+
+## 🏗 SoC全体構成ブロック図｜SoC Block Diagram
+
+```text
     +-----------------------------+
     |           SoC Top          |
     |                             |
     |   +---------+   +--------+  |
-    |   |   FSM   |←→|  PID    |  |
+    |   |   FSM   |←→|   PID   |  |
     |   +----+----+   +--------+  |
     |        ↑                ↑   |
     |        | action_out     | u_out
@@ -27,26 +44,25 @@ FSM・PID・LLMの三層制御モジュールを、1つのSoCとして統合す�
     |            ↑   ↑
     |         MMIO  IRQ
     +-----------------------------+
-
 ```
 
 ---
 
-## 📡 バス接続方式の選択肢
+## 📡 バス接続方式の選択肢｜Bus Architecture Options
 
-| バス種別 | 用途 | メリット | 備考 |
-|----------|------|----------|------|
-| AXI4 | 高速SoC設計全般 | 高帯域・複数マスター対応 | LLM/RISC-V ↔ MMIO |
-| APB | 周辺デバイス制御 | 簡易構成・低電力 | FSM, PID 接続に適 |
+| 🧩 バス種別<br>Bus Type | 🔧 用途<br>Usage | ✅ メリット<br>Merits | 📝 備考<br>Remarks |
+|------------------|----------------|------------------|----------------|
+| AXI4 | 高速制御・LLM通信 | 高帯域・複数マスター対応 | RISC-V ↔ LLM I/F |
+| APB | 周辺制御・FSM/PID連携 | 低電力・実装容易 | FSM/PIDに適 |
 
-> 教材設計では、「RISC-Vマスター + AXI + APBブリッジ + FSM/PIDスレーブ」の構成を推奨
+💡 教材設計では、「**RISC-Vマスター + AXI + APBブリッジ + FSM/PIDスレーブ**」構成を推奨。
 
 ---
 
-## 🔄 接続モジュールと信号整理
+## 🔄 各モジュール接続と信号一覧｜Module Connections and Signal Summary
 
-| モジュール | 主なポート | 接続先 |
-|------------|------------|--------|
+| 🔧 モジュール<br>Module | 📶 ポート例<br>Main Ports | 🔗 接続先<br>Connected To |
+|------------------|------------------------|------------------|
 | FSM | `clk`, `rst`, `sensor_in`, `action_out` | Top, Sensor, PID |
 | PID | `clk`, `rst`, `ref`, `y`, `u_out` | FSM, Actuator |
 | LLM I/F | `llm_action`, `llm_ref`, `mode` | RISC-V ↔ FSM/PID |
@@ -54,7 +70,8 @@ FSM・PID・LLMの三層制御モジュールを、1つのSoCとして統合す�
 
 ---
 
-## ⚙️ トップモジュールの設計例（抜粋）
+## ⚙️ トップモジュールの設計例（抜粋）  
+**Top-Level RTL Example**
 
 ```verilog
 module soc_top (
@@ -64,7 +81,8 @@ module soc_top (
     input wire [15:0] y_feedback,
     output wire [15:0] actuator_out
 );
-    // FSMインスタンス
+
+    // FSM Instance
     wire [2:0] action_out;
     fsm_engine fsm_inst (
         .clk(clk),
@@ -73,7 +91,7 @@ module soc_top (
         .action_out(action_out)
     );
 
-    // PIDインスタンス
+    // PID Instance
     wire [15:0] ref;
     pid_controller pid_inst (
         .clk(clk),
@@ -83,7 +101,7 @@ module soc_top (
         .u_out(actuator_out)
     );
 
-    // LLM I/F（MMIO接続想定）
+    // LLM Interface (MMIO Controlled)
     llm_interface llm_if (
         .llm_action_in(mmio_action),
         .llm_ref_in(mmio_ref),
@@ -96,16 +114,19 @@ endmodule
 
 ---
 
-## 📝 統合設計の注意点
-	•	バスクロックと制御クロックのドメイン整合
-	•	MMIO制御はレイテンシ許容設計
-	•	モジュール間は中間バッファリングやFIFO設計も検討
+## 📝 統合設計の注意点｜Design Considerations
+
+- ⏱ **バスクロックと制御クロックの整合性**
+- 📉 **MMIO通信レイテンシを許容する設計**
+- 🧺 **バッファリングやFIFOの挿入検討**
 
 ---
 
-## 📎 次節との接続
+## 📎 次節への接続｜Next Section
 
-次は「3.6 ケーススタディ：三層制御によるPoC実装例」です。
-実際にこのSoC構成をもとに、FSM×PID×LLMによる倒立振子やロボット制御のPoC実装事例を紹介します。
+次は「**3.6 ケーススタディ：三層制御によるPoC実装例**」です。  
+本章で示したSoC構成を基に、FSM×PID×LLMによる倒立振子制御などの**PoC事例**を取り上げます。
 
 ---
+
+📚 [🔙 特別編 第3章 README に戻る](../README.md)
