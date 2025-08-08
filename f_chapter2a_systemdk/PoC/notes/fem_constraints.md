@@ -29,7 +29,7 @@ thermal distribution in GAA structures, stress concentration in MRAM stacks, and
 ---
 
 <p align="center">
-  <img src="../images/fem_gaa_thermal_en_fixed.png" alt="Figure 1: GAA Thermal FEM" width="500"/>
+  <img src="https://samizo-aitl.github.io/Edusemi-v4x/f_chapter2a_systemdk/PoC/images/fem_gaa_thermal_en_fixed.png" alt="Figure 1: GAA Thermal FEM" width="500"/>
 </p>
 
 <p align="center">
