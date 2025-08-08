@@ -3,6 +3,8 @@ layout: default
 title: 03_vth_extraction - `.meas` によるVth抽出
 ---
 
+---
+
 # 📐 03_vth_extraction：`.meas` によるしきい値電圧抽出  
 **Extracting Threshold Voltage (Vth) Using `.meas` in SPICE**
 
