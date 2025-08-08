@@ -35,7 +35,7 @@ title: 3.1 AITL-Hアーキテクチャと層分離設計
 > [📎 GitHubでMermaidフローチャートを見る](https://github.com/Samizo-AITL/Edusemi-v4x/blob/main/f_chapter3_socsystem/docs/3_1_aitl_architecture.md)
 
 ```mermaid
-graph TB
+graph TD
     LLM["🧠 LLM層\n知的制御層\n(GPT, RISC-V)"]
     PID["📏 PID層\n物理安定層\n(制御器, Stabilizer)"]
     FSM["🔁 FSM層\n行動選択層\n(ステートマシン)"]
