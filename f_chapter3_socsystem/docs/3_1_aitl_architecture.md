@@ -103,15 +103,8 @@ graph TB
 
 ---
 
-## 📎 次節との接続  
-**Connection to the Next Section**
+📎 Next Section｜次節へ  
+👉 [3.2 FSM設計とRTLモジュール構成](3_2_fsm_design.md)  
+**Designing Finite State Machines (FSMs)** and building **modular RTL structures** for control logic.
 
-次の「**3.2 FSM設計とRTLモジュール構成**」では、  
-この三層構造の**最下層であるFSM**について、**状態設計とRTL実装**の手法を詳述します。  
-*In the next section (3.2), we focus on FSM design and RTL implementation as the foundational behavior layer.*
-
----
-
-## 🔙 戻る｜Back to Chapter Top
-
-🏠 [特別編 第3章 トップに戻る｜Back to Special Chapter 3 README](../README.md)
+📚 [🔙 特別編 第3章 README に戻る｜Back to Chapter 3 README](../README.md)
