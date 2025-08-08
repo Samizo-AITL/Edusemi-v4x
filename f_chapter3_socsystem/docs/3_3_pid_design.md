@@ -125,11 +125,11 @@ FSM issues behavior commands, which are converted to reference values (`ref`) fo
 
 ---
 
-## 📎 次節との接続 / To the Next Section
+📎 Previous｜前節：  
+🔙 [3.2 FSM設計とRTLモジュール構成](3_2_fsm_design.md)
 
-▶️ 次は [**3.4 LLMとの接続設計（RISC-V連携）**](3_4_llm_connection.md) に進みます。  
-In the next section, we explore **LLM control integration** including **RISC-V co-design**, memory mapping, and interrupt handling.
+📎 Next｜次節：  
+👉 [3.4 LLMとの接続設計（RISC-V・I/O連携）](3_4_llm_interface.md)  
+How to interface **LLM-based instructions** with **RISC-V SoC** and I/O control modules.
 
----
-
-🔙 [特別編第3章のREADMEに戻る](../README.md)  
+📚 [🔙 特別編 第3章 README に戻る｜Back to Chapter 3 README](../README.md)
