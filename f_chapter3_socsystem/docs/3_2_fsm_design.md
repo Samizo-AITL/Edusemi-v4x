@@ -135,16 +135,6 @@ flowchart TD
     LLM -- command_in / feedback --> FSM
 ```
 
-
-```text
-センサ入力
-↓ sensor_in
-[FSM層]── action_out ──▶[PID層]── ctrl_out ──▶ Actuator
-▲
-│
-LLM層 ←── command_in / feedback
-```
-
 > 🧠 FSMは「**反射的行動生成**」、⚙️ PIDは「**物理制御安定化**」、LLMは「**状況判断とオーバーライド**」を担います。
 
 ---
