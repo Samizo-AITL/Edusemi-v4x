@@ -3,8 +3,6 @@ layout: default
 title: 1.5 CFET構造とスタック型MOSの展望
 ---
 
----
-
 # 1.5 CFET構造とスタック型MOSの展望  
 # 1.5 CFET Structure and Outlook for Stacked MOS
 
@@ -12,86 +10,89 @@ title: 1.5 CFET構造とスタック型MOSの展望
 
 ## 📘 概要｜Overview
 
-**CFET（Complementary FET）は、nFETとpFETを垂直方向に積層することで面積効率と配線自由度をさらに向上させる、ポストGAA時代のトランジスタ構造です。**  
-本節では、FinFETやGAAとの連続性を踏まえ、CFETの構造、動作原理、製造課題、設計影響、今後の展望について整理します。
+**CFET（Complementary FET）** は、**nFETとpFETを垂直方向に積層**する次世代トランジスタ構造です。  
+FinFET → GAA の進化を引き継ぎながら、**セル面積の大幅削減**と**配線自由度の拡大**を可能にします。
 
-**Complementary FET (CFET)** refers to a future transistor structure in which **nFET and pFET are vertically stacked**, enabling further improvements in area scaling and layout flexibility beyond GAA.  
-This section explains the CFET concept in the context of FinFET and GAA evolution, focusing on its structure, operating principles, manufacturing challenges, design implications, and future outlook.
+> CFET vertically stacks nFET and pFET, aiming for denser standard cells and improved routing flexibility beyond GAA.
 
 ---
 
 ## 🧱 構造原理｜Structural Concept
 
-- GAAでは **複数の水平ナノシート**を積層（n/pが同一層）。
-- CFETでは **nFETとpFETを縦に積層**（例：n-FET上にp-FET）。
-- 垂直積層により、**配線層・セル面積・レイアウト対称性**を改善可能。
+```mermaid
+graph TB
+    subgraph Upper Layer
+        PFET["p-FET<br/>(Upper Nanosheets)"]
+    end
+    OX["Isolation Oxide"]
+    subgraph Lower Layer
+        NFET["n-FET<br/>(Lower Nanosheets)"]
+    end
+    SUB["Substrate / Handle Wafer"]
 
-> In GAA, multiple horizontal nanosheets are stacked, but both nFET and pFET are placed side-by-side.  
-> CFET vertically stacks nFET and pFET, enabling denser integration and better symmetry.
-
+    PFET --> OX --> NFET --> SUB
 ```
- p-FET   ← Upper layer
- ─────
- Oxide
- ─────
- n-FET   ← Lower layer
- ─────
- Substrate
-```
+> **GAA**: n/p を同一層に並列配置  
+> **CFET**: n/p を垂直積層し、レイアウト面積を縮小
 
 ---
 
 ## ⚡ 電気的特徴と設計影響｜Electrical Characteristics & Design Impact
 
-| 項目｜Item | CFETの特性｜CFET Features |
-|-----------|--------------------------|
-| ゲート制御 | GAAと同等（4面制御）<br>Same as GAA (gate-all-around) |
-| 対称性 | 垂直構造によりn/pの配置が対象<br>Vertical symmetry for n/p |
-| クロストーク | ソース/ドレイン間の干渉に注意が必要<br>Increased risk of crosstalk |
-| 配線自由度 | 配線層の空間が広がる<br>More routing flexibility |
-| 設計難易度 | PDK整備・抽象化レイヤ必須<br>Requires advanced PDK support |
+| 🔍 項目 / Item | 💡 CFETの特性 / CFET Features |
+|----------------|--------------------------------|
+| ゲート制御 | GAAと同等の4面制御 / Same as GAA |
+| n/p対称性 | 垂直構造でレイアウト対称性向上 |
+| クロストーク | 層間干渉に対策必要 |
+| 配線自由度 | BEOL空間の有効利用 |
+| 設計難易度 | 高度PDK・抽象化必須 |
 
 ---
 
 ## 🏭 製造課題｜Manufacturing Challenges
 
 - **チャネルごとのドーピング独立性**：nFETとpFETのドーピング分離が難しい  
-- **熱処理のステップ分離**：下層が熱予算を超えやすい  
-- **エピ成長と選択エッチング**：複数ステップの精度が極めて重要  
-- **BEOLとの整合性**：金属層との高さ調整やIRドロップ対応が必須  
+- **熱処理ステップ分離**：下層が熱予算を超えやすい  
+- **選択エピ成長とエッチング精度**：複数工程の整合が必須  
+- **BEOL統合**：金属層高さやIRドロップの調整
 
-> Key challenges include independent doping control, thermal budget balancing between layers, selective epitaxy, and integration with BEOL (Back-End of Line).
+> Independent doping, thermal budget control, selective epitaxy, and BEOL integration are critical for CFET fabrication.
 
 ---
 
 ## 🧩 モジュール統合効果｜Module-Level Integration Advantage
 
-- **CFETの最大の利点は、Inverterモジュールを1セル内で完結できる点**
-- n/p領域の物理的分離が不要になり、**セル面積を半減できる**
-- 標準セル設計では、**実質的に2倍のインバータ密度**を実現可能
+- **インバータモジュールを1セルで完結**  
+- n/pの物理的分離が不要、**セル面積半減**  
+- 標準セル密度が実質**2倍**
 
-> CFET enables the tightest possible integration of inverter modules by vertically stacking nFET/pFET pairs, eliminating the need for lateral separation.  
-> This allows approximately **2× inverter density** in standard cell layouts.
+> CFET enables the tightest inverter integration, halving cell area and doubling density.
 
 ---
 
 ## 🔮 今後の展望｜Future Outlook
 
-- **2030年以降のCFET実装**がIntelやIMECロードマップに登場  
-- **システム・オン・スタック（SoS）**時代に向けた準備段階  
-- **EDA/PDKの仮想抽象設計**に対応した設計者教育が求められる  
+```mermaid
+timeline
+    title CFET Roadmap
+    2024 : GAA mainstream adoption
+    2026 : Early CFET R&D (IME, Intel labs)
+    2030 : Pilot CFET integration in niche products
+    2032 : CFET standard cell libraries emerge
+```
 
-> CFET is positioned as a post-GAA solution, expected to emerge in the 2030s. Education and design must prepare for stack-aware abstractions.
+- **2030年代前半**：IntelやIMEが試作段階へ  
+- **EDA/PDK整備**と**設計者教育**が必須  
+- **システム・オン・スタック（SoS）**時代の中核技術へ
 
 ---
 
 ### 🔗 関連補足｜Related Appendices
 
-- [`appendixf1_04_cfet.md`](appendixf1_04_cfet.md)：CFETの構造変遷と技術的課題の詳細  
-- [`appendixf1_05a_cfet_params.md`](appendixf1_05a_cfet_params.md)：CFETの設計・電気パラメータ補足  
-- [`appendixf1_05_node_params_structural.md`](appendixf1_05_node_params_structural.md)：ノード構造パラメータ比較（n, H, W）
+- [`appendixf1_04_cfet.md`](appendixf1_04_cfet.md)  
+- [`appendixf1_05a_cfet_params.md`](appendixf1_05a_cfet_params.md)  
+- [`appendixf1_05_node_params_structural.md`](appendixf1_05_node_params_structural.md)  
 
 ---
 
 [← 戻る / Back to Special Chapter 1 Top](../f_chapter1_finfet_gaa/README.md)
-
