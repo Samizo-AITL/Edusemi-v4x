@@ -170,3 +170,70 @@ PFET --> Iso --> NFET --> SubW
 class M1,M2 metal
 class CpS,CpD,CnS,CnD,VIA12 contact
 ```
+
+```mermaid
+flowchart TB
+%% CFET 断面の簡易3D風（擬似）イメージ
+
+classDef metal fill:#cfd8dc,stroke:#333,stroke-width:1px,color:#111;
+classDef contact fill:#dddddd,stroke:#333,stroke-width:1px,color:#111;
+classDef oxide fill:#e6f2ff,stroke:#333,stroke-width:1px,color:#111;
+classDef gate fill:#c8a37a,stroke:#333,stroke-width:1px,color:#111;
+classDef si fill:#fff5f0,stroke:#333,stroke-width:1px,color:#111;
+classDef dopN fill:#a6c0ff,stroke:#333,stroke-width:1px,color:#111;
+classDef dopP fill:#ff9da6,stroke:#333,stroke-width:1px,color:#111;
+
+%% ── BEOL ─────────────────────────────────
+subgraph BEOL["BEOL (配線)"]
+direction TB
+M2[M2 Metal]:::metal
+VIA12[Via (M1↔M2)]:::contact
+M1[M1 Metal]:::metal
+end
+
+%% ── 上層：pFET ────────────────────────────
+subgraph PFET["pFET（上層）/ Upper Layer"]
+direction TB
+pS[p+ Source]:::dopP
+pGate[Gate (GAA wrap)]:::gate
+pNS2[Upper Nanosheet]:::si
+pNS1[Lower Nanosheet]:::si
+pD[p+ Drain]:::dopP
+end
+
+%% ── 中間絶縁 ─────────────────────────────
+Iso[Interlayer Oxide]:::oxide
+
+%% ── 下層：nFET ────────────────────────────
+subgraph NFET["nFET（下層）/ Lower Layer"]
+direction TB
+nS[n+ Source]:::dopN
+nGate[Gate (GAA wrap)]:::gate
+nNS2[Upper Nanosheet]:::si
+nNS1[Lower Nanosheet]:::si
+nD[n+ Drain]:::dopN
+end
+
+%% ── バルク/ハンドル ──────────────────────
+SubW[Substrate / Handle]:::si
+
+%% 接続（擬似3D：斜め表現は矢印種で表現）
+pS -->|Contact| CpS[W Plug]:::contact --> M1
+pD -->|Contact| CpD[W Plug]:::contact --> M1
+nS -->|Contact| CnS[W Plug]:::contact --> M1
+nD -->|Contact| CnD[W Plug]:::contact --> M1
+M1 --> VIA12 --> M2
+
+%% ゲートとナノシートの囲み関係（擬似）
+pGate --- pNS2
+pGate --- pNS1
+nGate --- nNS2
+nGate --- nNS1
+
+%% 縦積みスタック（ノード経由で接続）
+pNS1 --> Iso --> nNS1 --> SubW
+
+%% 仕上げのクラス指定
+class M1,M2 metal;
+class CpS,CpD,CnS,CnD,VIA12 contact;
+```
