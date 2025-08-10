@@ -79,4 +79,42 @@ Currently, graphs are generated using a simplified square-law model for educatio
 
 ---
 
+## 📡 今後の実測データ入手方法 / Future Acquisition of Measured Data
+
+**日本語**  
+将来的には、教育用プロセス（例: SkyWater sky130）の実測データを取得し、本付録のシミュレーション結果と比較します。具体的な入手方法は以下の通りです。  
+
+1. **Google/SkyWater Shuttle Program**  
+   - OpenMPW Shuttleを利用して設計したテストチップを無料製造。  
+   - [https://developers.google.com/silicon](https://developers.google.com/silicon)  
+
+2. **TinyTapeout / Efabless経由での有償試作**  
+   - 小規模設計のMPW試作サービス。  
+   - [https://tinytapeout.com/](https://tinytapeout.com/)  
+
+3. **大学・教育機関の共同研究**  
+   - 大学研究室や教育プロジェクトと連携し、実測チップデータを共有。  
+
+4. **既存公開データセットの活用**  
+   - SkyWater関連GitHubや論文の実測波形データを収集。  
+
+**English**  
+In the future, measured data from educational processes (e.g., SkyWater sky130) will be obtained and compared with the simulation results in this appendix. Potential sources include:
+
+1. **Google/SkyWater Shuttle Program**  
+   - Fabricate test chips for free via OpenMPW Shuttle.  
+   - [https://developers.google.com/silicon](https://developers.google.com/silicon)  
+
+2. **TinyTapeout / Efabless Paid MPW Services**  
+   - Small-scale MPW prototyping service.  
+   - [https://tinytapeout.com/](https://tinytapeout.com/)  
+
+3. **University and Educational Collaborations**  
+   - Partner with universities or educational projects to share measured chip data.  
+
+4. **Public Dataset Utilization**  
+   - Gather measured waveform data from SkyWater-related GitHub repos or academic publications.
+
+---
+
 🔙 [第4章に戻る / Back to Chapter 4](../f_chapter4_mos_basics/README.md)
