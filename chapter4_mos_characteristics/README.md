@@ -49,6 +49,13 @@ title: 基礎編　第4章｜MOSトランジスタ特性と設計基盤　　
 
 ---
 
+## 📎 関連付録｜Related Appendix
+
+- [付録B1: 0.18µm / 0.13µm MOSトランジスタ基礎特性](../appendix_b1_018um_013um_mos_basics.md)  
+  Representative parameters, characteristic graphs (educational model), and BSIM3 simulation package link.
+
+---
+
 ## 🔜 次章への導入｜Lead-in to Next Chapter
 
 | 日本語 – Japanese                                                                                          | English – English                                                                                             |
