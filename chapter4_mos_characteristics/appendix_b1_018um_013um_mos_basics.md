@@ -34,17 +34,15 @@ This appendix summarizes representative basic characteristics of MOS transistors
 
 ## 📈 特性グラフ / Characteristic Graphs
 
-> ※ 実際のPDKまたは教育用SPICEモデルを用いたシミュレーション結果を挿入します。
+> 軸表記 / Axis labels: **横軸 (x)** = 電圧 (V<sub>g</sub> または V<sub>d</sub>)、**縦軸 (y)** = 電流 (I<sub>d</sub>) または 容量 (C<sub>g</sub>)
 
-- **I<sub>ds</sub>–V<sub>gs</sub> 特性**（V<sub>ds</sub>固定）
-- **I<sub>ds</sub>–V<sub>ds</sub> 特性**（V<sub>gs</sub>をパラメータ）
-- **C<sub>gs</sub>–V<sub>gs</sub> 特性**（酸化膜厚の違いを反映）
+- **Vg–Id 特性**（Vd固定、V<sub>th</sub>抽出に使用）
+- **Vd–Id 特性**（Vgをパラメータにしたドレイン掃引）
+- **Vg–Cg 特性**（酸化膜厚の違いを反映したゲート容量）
 
-```markdown
-![Id-Vg Characteristics 0.18um vs 0.13um](../assets/images/mosfet_idvg_018_013.png)
-![Id-Vd Characteristics 0.18um vs 0.13um](../assets/images/mosfet_idvd_018_013.png)
-![Cg-Vg Characteristics 0.18um vs 0.13um](../assets/images/mosfet_cgvg_018_013.png)
-```
+![Vg-Id Characteristics 0.18um vs 0.13um](../assets/images/mosfet_vg_id_018_013.png)  
+![Vd-Id Characteristics 0.18um vs 0.13um](../assets/images/mosfet_vd_id_018_013.png)  
+![Vg-Cg Characteristics 0.18um vs 0.13um](../assets/images/mosfet_vg_cg_018_013.png)
 
 ---
 
