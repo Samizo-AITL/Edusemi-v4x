@@ -10,10 +10,12 @@ title: "付録B1: 0.18µm / 0.13µm MOSトランジスタ基礎特性 | Appendix
 
 ## 📝 概要 / Overview
 **日本語**  
-本付録では、0.18µmおよび0.13µmロジックプロセスにおけるMOSトランジスタの代表的な基礎特性を整理します。閾値電圧、ゲート酸化膜厚、移動度、飽和電流、リーク電流などを比較し、設計・教育における指針とします。
+本付録では、0.18µmおよび0.13µmロジックプロセスにおけるMOSトランジスタの代表的な基礎特性を整理します。閾値電圧、ゲート酸化膜厚、移動度、飽和電流、リーク電流などを比較し、設計・教育における指針とします。  
+現時点では教育用の簡易二乗則モデルで生成した特性グラフを掲載していますが、将来的に **ngspice + BSIM3モデル** による実測に近いシミュレーション結果へ置き換える予定です。
 
 **English**  
-This appendix summarizes representative basic characteristics of MOS transistors in 0.18µm and 0.13µm logic processes. Key parameters such as threshold voltage, gate oxide thickness, mobility, saturation current, and leakage current are compared to serve as design and educational references.
+This appendix summarizes representative basic characteristics of MOS transistors in 0.18µm and 0.13µm logic processes. Key parameters such as threshold voltage, gate oxide thickness, mobility, saturation current, and leakage current are compared for design and educational purposes.  
+Currently, graphs are generated using a simplified square-law model for educational purposes, with plans to replace them with **ngspice + BSIM3 model** simulations in the future.
 
 ---
 
@@ -32,17 +34,13 @@ This appendix summarizes representative basic characteristics of MOS transistors
 
 ---
 
-## 📈 特性グラフ / Characteristic Graphs
+## 📈 特性グラフ（簡易モデル版） / Characteristic Graphs (Simplified Model)
 
-> 軸表記 / Axis labels: **横軸 (x)** = 電圧 (V<sub>g</sub> または V<sub>d</sub>)、**縦軸 (y)** = 電流 (I<sub>d</sub>) または 容量 (C<sub>g</sub>)
+> **条件**: 単位幅（W=1µm）で規格化、教育用二乗則モデルで作成。将来BSIM3版に置き換え予定。
 
-- **Vg–Id 特性**（Vd固定、V<sub>th</sub>抽出に使用）
-- **Vd–Id 特性**（Vgをパラメータにしたドレイン掃引）
-- **Vg–Cg 特性**（酸化膜厚の違いを反映したゲート容量）
-
-![Vg-Id Characteristics 0.18um vs 0.13um](../assets/images/mosfet_vg_id_018_013.png)  
-![Vd-Id Characteristics 0.18um vs 0.13um](../assets/images/mosfet_vd_id_018_013.png)  
-![Vg-Cg Characteristics 0.18um vs 0.13um](../assets/images/mosfet_vg_cg_018_013.png)
+![Vg–Id Characteristics (W=1µm normalized)](../chapter4_mos_characteristics/figures/mosfet_vg_id_018_013.png)  
+![Vd–Id Characteristics (W=1µm normalized)](../chapter4_mos_characteristics/figures/mosfet_vd_id_018_013.png)  
+![Vg–Cg Characteristics (W=1µm normalized)](../chapter4_mos_characteristics/figures/mosfet_vg_cg_018_013.png)  
 
 ---
 
@@ -62,9 +60,22 @@ This appendix summarizes representative basic characteristics of MOS transistors
 
 ---
 
-## 📚 関連リンク / Related Links
-- [基礎編 第4章: MOSトランジスタ特性と設計基盤](../f_chapter4_mos_basics/README.md)
-- [付録: プロセスノード進化と物理パラメータ](../appendix_f1_node_evolution.md)
+## 📦 参考: ngspice用BSIM3デッキ一式 + プロッタースクリプト  
+**Reference: ngspice BSIM3 Decks + Plotter Script**
+
+本付録のグラフをBSIM3モデルで再生成するためのデッキとスクリプトを用意しています。  
+教育用のプレースホルダモデルを同梱していますが、実務では実PDKのBSIM3モデルに置き換えて使用してください。
+
+📥 [BSIM3 Simulation Package (ngspice)](../assets/bsim3_pkg_with_models.zip)
+
+**内容 / Contents**
+- `README.md` – 実行手順  
+- `decks/bsim3_vg_id.sp` – Vg–Id 特性（0.18µm/0.13µm NMOS）  
+- `decks/bsim3_vd_id.sp` – Vd–Id 特性（0.18µm NMOS、Vgステップ）  
+- `decks/bsim3_vg_cg.sp` – Vg–Cg 特性（0.18µm/0.13µm NMOS）  
+- `models/bsim3_018.lib` – 教育用0.18µm NMOSモデル（BSIM3v3）  
+- `models/bsim3_013.lib` – 教育用0.13µm NMOSモデル（BSIM3v3）  
+- `tools/plot_bsim3_csv.py` – CSVからPNGを生成するPythonスクリプト
 
 ---
 
