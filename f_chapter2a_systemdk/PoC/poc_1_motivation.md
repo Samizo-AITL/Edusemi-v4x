@@ -1,3 +1,10 @@
+---
+layout: default
+title: 1. なぜSystemDKによるPoC
+---
+
+---
+
 # 🚀 1. なぜSystemDKによるPoCか？  
 **1. Why a PoC Using SystemDK?**
 
