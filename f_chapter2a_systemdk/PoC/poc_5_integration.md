@@ -1,3 +1,9 @@
+---
+layout: default
+title:  5. Chiplet統合における制約整合とレイアウト設計  
+---
+
+---
 
 # 🔗 5. Chiplet統合における制約整合とレイアウト設計  
 **5. Constraint Alignment and Layout Design in Chiplet Integration**
