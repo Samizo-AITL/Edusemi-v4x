@@ -1,3 +1,10 @@
+---
+layout: default
+title:  7. PoCのまとめと教育的意義  
+---
+
+---
+
 # 📘 7. PoCのまとめと教育的意義  
 **7. Summary and Educational Reflections on the PoC**
 
