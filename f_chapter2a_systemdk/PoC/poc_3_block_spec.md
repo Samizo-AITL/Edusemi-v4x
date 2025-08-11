@@ -1,3 +1,10 @@
+---
+layout: default
+title: 3. GAA / AMS / MRAMブロックの仕様と構成定義  
+---
+
+---
+
 # 🧱 3. GAA / AMS / MRAMブロックの仕様と構成定義  
 **3. Specification and Composition of GAA, AMS, and MRAM Blocks**
 
