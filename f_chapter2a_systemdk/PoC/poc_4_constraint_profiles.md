@@ -1,3 +1,10 @@
+---
+layout: default
+title:  4. 物理制約プロファイル定義 
+---
+
+---
+
 # 🎛️ 4. 物理制約プロファイル定義  
 **4. Constraint Profiles for SI/PI, Thermal, Stress, and EMI/EMC**
 
