@@ -1,3 +1,10 @@
+---
+layout: default
+title: 2. SystemDKプラットフォームの構造と意義  
+---
+
+---
+
 # 📡 2. SystemDKプラットフォームの構造と意義  
 **2. SystemDK as a Platform for Constraint-Aware Design**
 
