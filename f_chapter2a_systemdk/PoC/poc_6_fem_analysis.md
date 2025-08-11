@@ -1,3 +1,10 @@
+---
+layout: default
+title:  6. FEM・熱・電磁界・応力解析の事例
+---
+
+---
+
 # 🧪 6. FEM・熱・電磁界・応力解析の事例  
 **6. Examples of FEM, Thermal, Electromagnetic, and Stress Analysis**
 
