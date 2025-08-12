@@ -43,6 +43,7 @@ While keeping an eye on application domains, the focus is on cultivating a **dee
 | [2](chapter2_comb_logic/README.md) | **Digital Logic and Circuit Design** | **Combinational** / **sequential logic**, **FSMs**, **HDL basics** |
 | [3](chapter3_process_evolution/README.md) | **Process Technology and Scaling Limitations** | **Node evolution**, **interconnects**, **lithography**, **device variability** |
 | [4](chapter4_mos_characteristics/README.md) | **MOS Transistor Characteristics and Design Foundations** | **Dimensions**, **PDK**, **design rules**, **reliability** |
+| [5a](chapter5a_spec_module_if/README.md) | **Specification, Module Selection, and Interface Design** | Covers **upstream process, IF design, and PoC linkage** |
 | [5](chapter5_soc_design_flow/README.md) | **SoC Design Flow and EDA Tools** | **RTL**, **synthesis**, **place & route**, **DRC/LVS**, **timing analysis** |
 | [6](chapter6_test_and_package/README.md) | **Testing, Packaging, and Productization** | **ETEST**, **wafer test**, **failure analysis**, **reliability qualification** |
 | [7](chapter7_design_review_and_org/README.md) | **Design Reviews and Organizational Collaboration** | **DR processes**, **defect case studies**, **SRAM failures**, **team consensus** |
