@@ -3,8 +3,6 @@ layout: default
 title: 基礎編 第5a章｜仕様策定・モジュール選定・インターフェース設計
 ---
 
----
-
 # 📘 基礎編 第5a章 : 仕様策定・モジュール選定・インターフェース設計  
 **Fundamentals Chapter 5a : Specification Definition, Module Selection, and Interface Design**
 
@@ -36,10 +34,10 @@ title: 基礎編 第5a章｜仕様策定・モジュール選定・インター�
 
 | No. | セクション名（日本語） | Section Title (English) | 内容概要 | 関連付録 |
 |-----|----------------------|-------------------------|----------|----------|
-| [5a.1](5a.1_spec_process.md) | 仕様策定のプロセス | Specification Process | 機能要件・性能要件・制約条件の整理 | [📎 付録：仕様書例](appendix_5a1_spec_example.md) |
-| [5a.2](5a.2_module_selection.md) | モジュール選定の基準と事例 | Module Selection Criteria and Examples | CPU/DSP、メモリ、I/O、AMSの選定基準 | — |
-| [5a.3](5a.3_interface_design.md) | インターフェース設計と種類 | Interface Design and Types | 外部通信、内部バス、メモリIF、アナログIF、GPIO、電源 | [📎 付録：インターフェース性能一覧](appendix_5a3_interface_speed_map.md) |
-| [5a.4](5a.4_linking_poc.md) | PoCへの接続 | Linking to PoC | FPGAでの検証フローと上流設計の関係 | — |
+| [5a.1](5a_1_spec_process.md) | 仕様策定のプロセス | Specification Process | 機能要件・性能要件・制約条件の整理 | [📎 付録：仕様書例](appendix_5a1_spec_example.md) |
+| [5a.2](5a_2_module_selection.md) | モジュール選定の基準と事例 | Module Selection Criteria and Examples | CPU/DSP、メモリ、I/O、AMSの選定基準 | — |
+| [5a.3](5a_3_interface_design.md) | インターフェース設計と種類 | Interface Design and Types | 外部通信、内部バス、メモリIF、アナログIF、GPIO、電源 | [📎 付録：インターフェース性能一覧](appendix_5a3_interface_speed_map.md) |
+| [5a.4](5a_4_linking_poc.md) | PoCへの接続 | Linking to PoC | FPGAでの検証フローと上流設計の関係 | — |
 
 ---
 
@@ -89,13 +87,13 @@ title: 基礎編 第5a章｜仕様策定・モジュール選定・インター�
 
 ```mermaid
 flowchart LR
-    A[SoC]
-    A --> B[外部通信IF]
-    A --> C[内部バスIF]
-    A --> D[メモリIF]
-    A --> E[アナログIF]
-    A --> F[制御/GPIO]
-    A --> G[電源IF]
+    A[SoC / System-on-Chip]
+    A --> B[外部通信IF / External Communication]
+    A --> C[内部バスIF / Internal Bus]
+    A --> D[メモリIF / Memory IF]
+    A --> E[アナログIF / Analog IF]
+    A --> F[制御・GPIO / Control & GPIO]
+    A --> G[電源IF / Power IF]
 ```
 
 ---
