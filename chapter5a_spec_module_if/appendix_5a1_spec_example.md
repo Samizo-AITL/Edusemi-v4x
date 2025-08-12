@@ -68,8 +68,8 @@ title: 付録 5a.1｜仕様書の具体例（教育用サンプル 3種）
 
 ## 🔗 関連リンク
 
-- [第5a.1節：仕様策定のプロセス](../5a.1_spec_process.md)  
-- [第5a章 README](../README.md)  
+- [第5a.1節：仕様策定のプロセス](./5a.1_spec_process.md)  
+- [第5a章 README](./README.md)  
 
 ---
 
