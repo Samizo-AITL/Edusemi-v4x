@@ -82,22 +82,13 @@ title: 基礎編 第5a章｜仕様策定・モジュール選定・インター�
 
 ```mermaid
 flowchart LR
-    subgraph Row1
-        B[外部通信IF]
-        C[内部バスIF]
-        D[メモリIF]
-    end
-    subgraph Row2
-        E[アナログIF]
-        F[制御/GPIO]
-        G[電源IF]
-    end
-    A[SoC] --> B
-    A --> C
-    A --> D
-    A --> E
-    A --> F
-    A --> G
+    A[SoC]
+    A --> B[外部通信IF]
+    A --> C[内部バスIF]
+    A --> D[メモリIF]
+    A --> E[アナログIF]
+    A --> F[制御/GPIO]
+    A --> G[電源IF]
 ```
 
 ---
