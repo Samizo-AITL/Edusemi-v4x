@@ -3,6 +3,8 @@ layout: default
 title: 基礎編 第5a.3a付録｜インターフェース性能比較マップ
 ---
 
+---
+
 # 📎 基礎編 第5a.3a付録 : インターフェース性能比較マップ  
 **Fundamentals Appendix 5a.3a : Interface Performance Comparison Map**
 
