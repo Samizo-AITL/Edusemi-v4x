@@ -43,6 +43,7 @@ title: Edusemi-v4x/index.md
 | [2](chapter2_comb_logic/README.md) | **デジタル論理と論理回路設計** | **組み合わせ回路・順序回路・FSM・HDL**の基礎 |
 | [3](chapter3_process_evolution/README.md) | **プロセス技術と微細化の制約** | **ノード変遷・配線・リソグラフィ・信頼性**の基盤理解 |
 | [4](chapter4_mos_characteristics/README.md) | **MOSトランジスタ特性と設計基盤** | **寸法・特性・PDK・デザインルール**との関係 |
+| [5a](chapter5a_spec_module_if/README.md) | **仕様策定・モジュール選定・インターフェース設計** | **上流工程・IF設計・PoC接続**までの流れを整理 |
 | [5](chapter5_soc_design_flow/README.md) | **SoC設計フローとEDAツール** | **RTL設計・配置配線・DRC/LVS・タイミング検証**など |
 | [6](chapter6_test_and_package/README.md) | **テスト・パッケージ・製品化** | **ETEST・不良解析・信頼性試験・出荷管理**まで |
 | [7](chapter7_design_review_and_org/README.md) | **デザインレビューと開発組織連携** | **SRAM不良事例・DR構造・合意形成**の実践視点 |
