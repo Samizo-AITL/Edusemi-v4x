@@ -12,13 +12,16 @@ title: 基礎編　第5章｜SoC設計フローとEDAツール
 
 ## 🔄 前章との接続｜Connection to Previous Chapter
 
-| 🇯🇵 日本語                                                                                                     | 🇺🇸 English                                                                                                        |
-|--------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------|
-| 第4章では、MOSトランジスタの**動作・寸法ルール・PDK**を通して「製造可能な設計基盤」を構築しました。                      | Chapter 4 established a **manufacturable design base** via MOS characteristics, rules, and PDKs.                |
-| 本章では、それを活用して**SoCとして機能する回路設計・検証プロセス**へと進みます。                                 | In this chapter, we apply that foundation to the **design and verification flow of a functional SoC**.          |
+| 🇯🇵 日本語 | 🇺🇸 English |
+|-----------|-----------|
+| 第4章では、MOSトランジスタの**動作・寸法ルール・PDK**を通して「製造可能な設計基盤」を構築しました。 | Chapter 4 established a **manufacturable design base** via MOS characteristics, rules, and PDKs. |
+| 第5a章では、その基盤を活用して**SoC設計の上流工程（仕様策定・モジュール選定・インターフェース設計）**を整理しました。 | Chapter 5a organized the **upstream stages of SoC design** (specification, module selection, interface design) based on that foundation. |
+| 本章では、それらを踏まえて**SoCとして機能する回路設計・検証プロセス**へと進みます。 | In this chapter, we build on those to proceed to the **design and verification flow of a functional SoC**. |
 
-➡️ [📘 **第4章：MOSトランジスタ特性と設計基盤**](../chapter4_mos_characteristics/README.md) に戻る  
-➡️ [📘 **Chapter 4: MOS Characteristics and Design Infrastructure**](../chapter4_mos_characteristics/README.md) (EN)
+➡️ [📘 **第4章：MOSトランジスタ特性と設計基盤**](../chapter4_mos_characteristics/README.md)  
+➡️ [📘 **Chapter 4: MOS Characteristics and Design Infrastructure**](../chapter4_mos_characteristics/README.md) (EN)  
+➡️ [📘 **第5a章：仕様策定・モジュール選定・インターフェース設計**](../chapter5a_spec_module_if/README.md)  
+➡️ [📘 **Chapter 5a: Specification, Module Selection, and Interface Design**](../chapter5a_spec_module_if/README.md) (EN)
 
 ---
 
