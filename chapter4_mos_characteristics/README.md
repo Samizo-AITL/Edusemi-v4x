@@ -60,11 +60,11 @@ title: 基礎編　第4章｜MOSトランジスタ特性と設計基盤　　
 
 | 日本語 – Japanese                                                                                          | English – English                                                                                             |
 |-------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| 次章（第5章）では、本章で扱った**PDKや設計ルールの知識**を活用し、**SoC設計フローとEDAツール**の実践に進みます。 | Chapter 5 builds on this by applying **PDK knowledge and design rules** to **SoC design flows and EDA tools**. |
-| PDKの読み解きや、信頼性モデルの物理的裏付けは、ツールを用いた設計と検証の前提になります。                        | Understanding **PDK structures and reliability modeling** is foundational for successful digital/analog design. |
+| 次章（第5a章）では、本章で扱った**PDKや設計ルールの知識**を基に、**SoC設計の上流工程（仕様策定・モジュール選定・IF設計）**に進みます。 | Chapter 5a builds on this by applying **PDK knowledge and design rules** to the **upstream stages of SoC design (specification, module selection, interface design)**. |
+| ここで整理した寸法・特性・制約の理解が、上流での仕様決定やモジュール構成、IF設計の前提となります。                  | The understanding of dimensions, characteristics, and constraints gained here forms the basis for upstream specification decisions, module configurations, and interface design. |
 
-➡️ [📘 **第5章：SoC設計フローとEDAツール**](../chapter5_soc_design_flow/README.md) に進む  
-➡️ [📘 **Chapter 5: SoC Design Flows and EDA Tools**](../chapter5_soc_design_flow/README.md) (EN)
+➡️ [📘 **第5a章：仕様策定・モジュール選定・インターフェース設計**](../chapter5a_spec_module_if/README.md) に進む  
+➡️ [📘 **Chapter 5a: Specification, Module Selection, and Interface Design**](../chapter5a_spec_module_if/README.md) (EN)
 
 ---
 
