@@ -3,6 +3,8 @@ layout: default
 title: 基礎編 第5a章｜仕様策定・モジュール選定・インターフェース設計
 ---
 
+---
+
 # 📘 基礎編 第5a章 : 仕様策定・モジュール選定・インターフェース設計  
 **Fundamentals Chapter 5a : Specification Definition, Module Selection, and Interface Design**
 
