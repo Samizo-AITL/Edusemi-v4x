@@ -3,6 +3,8 @@ layout: default
 title: 付録 5a.1｜仕様書の具体例（教育用サンプル 3種）
 ---
 
+---
+
 # 📎 付録 5a.1 : 仕様書の具体例（教育用サンプル 3種）  
 **Appendix 5a.1 : Example Specification Documents (3 Educational Samples)**
 
