@@ -34,12 +34,12 @@ title: 基礎編 第5a章｜仕様策定・モジュール選定・インター�
 
 ## 📚 節構成｜Chapter Structure
 
-| No. | セクション名（日本語） | Section Title (English) | 内容概要 |
-|-----|----------------------|-------------------------|----------|
-| 5a.1 | 仕様策定のプロセス | Specification Process | 機能要件・性能要件・制約条件の整理 |
-| 5a.2 | モジュール選定の基準と事例 | Module Selection Criteria and Examples | CPU/DSP、メモリ、I/O、AMSの選定基準 |
-| 5a.3 | インターフェース設計と種類 | Interface Design and Types | 外部通信、内部バス、メモリIF、アナログIF、GPIO、電源 |
-| 5a.4 | PoCへの接続 | Linking to PoC | FPGAでの検証フローと上流設計の関係 |
+| No. | セクション名（日本語） | Section Title (English) | 内容概要 | 関連付録 |
+|-----|----------------------|-------------------------|----------|----------|
+| 5a.1 | 仕様策定のプロセス | Specification Process | 機能要件・性能要件・制約条件の整理 | [📎 付録：仕様書例](appendix_5a1_spec_example.md) |
+| 5a.2 | モジュール選定の基準と事例 | Module Selection Criteria and Examples | CPU/DSP、メモリ、I/O、AMSの選定基準 | — |
+| 5a.3 | インターフェース設計と種類 | Interface Design and Types | 外部通信、内部バス、メモリIF、アナログIF、GPIO、電源 | [📎 付録：インターフェース性能一覧](appendix_5a3_interface_speed_map.md) |
+| 5a.4 | PoCへの接続 | Linking to PoC | FPGAでの検証フローと上流設計の関係 | — |
 
 ---
 
@@ -51,6 +51,8 @@ title: 基礎編 第5a章｜仕様策定・モジュール選定・インター�
   処理速度、スループット、消費電力、応答時間  
 - **制約条件（Constraints）**  
   製造ノード、電源電圧範囲、環境条件（温度、湿度）、EMI規格
+
+📎 詳細は → [付録：仕様書例](appendix_5a1_spec_example.md)
 
 ---
 
@@ -75,6 +77,8 @@ title: 基礎編 第5a章｜仕様策定・モジュール選定・インター�
 | **アナログIF** | ADC, DAC, LVDS, MIPI CSI/DSI | 分解能、帯域幅、信号品質 |
 | **制御/GPIO** | GPIO, PWM, 割り込み線 | 本数、駆動能力、電圧レベル |
 | **電源IF** | 電源ピン、PMIC、電圧監視 | 電圧レール数、リップル許容 |
+
+📎 詳細は → [付録：インターフェース性能一覧](appendix_5a3_interface_speed_map.md)
 
 ---
 
