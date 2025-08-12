@@ -85,7 +85,7 @@ title: 基礎編 第5a章｜仕様策定・モジュール選定・インター�
 ### 📊 IF構成例（Mermaid図）
 
 > **💡 GitHub PagesではMermaid図が直接描画されない場合があります。**  
-> ソースは[こちら（GitHub表示）](https://github.com/Samizo-AITL/Edusemi-v4x/blob/main/chapter5a_spec_module_interface/README.md)から確認できます。
+> ソースは[こちら（GitHub表示）](https://github.com/Samizo-AITL/Edusemi-v4x/blob/main/chapter5a_spec_module_if/README.md)から確認できます。
 
 ```mermaid
 flowchart LR
