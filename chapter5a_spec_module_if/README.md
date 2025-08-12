@@ -36,10 +36,10 @@ title: 基礎編 第5a章｜仕様策定・モジュール選定・インター�
 
 | No. | セクション名（日本語） | Section Title (English) | 内容概要 | 関連付録 |
 |-----|----------------------|-------------------------|----------|----------|
-| [5a.1](5a_1_specification_process.md) | 仕様策定のプロセス | Specification Process | 機能要件・性能要件・制約条件の整理 | [📎 付録：仕様書例](appendix_5a1_spec_example.md) |
-| [5a.2](5a_2_module_selection.md) | モジュール選定の基準と事例 | Module Selection Criteria and Examples | CPU/DSP、メモリ、I/O、AMSの選定基準 | — |
-| [5a.3](5a_3_interface_design.md) | インターフェース設計と種類 | Interface Design and Types | 外部通信、内部バス、メモリIF、アナログIF、GPIO、電源 | [📎 付録：インターフェース性能一覧](appendix_5a3_interface_speed_map.md) |
-| [5a.4](5a_4_linking_to_poc.md) | PoCへの接続 | Linking to PoC | FPGAでの検証フローと上流設計の関係 | — |
+| [5a.1](5a.1_spec_process.md) | 仕様策定のプロセス | Specification Process | 機能要件・性能要件・制約条件の整理 | [📎 付録：仕様書例](appendix_5a1_spec_example.md) |
+| [5a.2](5a.2_module_selection.md) | モジュール選定の基準と事例 | Module Selection Criteria and Examples | CPU/DSP、メモリ、I/O、AMSの選定基準 | — |
+| [5a.3](5a.3_interface_design.md) | インターフェース設計と種類 | Interface Design and Types | 外部通信、内部バス、メモリIF、アナログIF、GPIO、電源 | [📎 付録：インターフェース性能一覧](appendix_5a3_interface_speed_map.md) |
+| [5a.4](5a.4_linking_poc.md) | PoCへの接続 | Linking to PoC | FPGAでの検証フローと上流設計の関係 | — |
 
 ---
 
