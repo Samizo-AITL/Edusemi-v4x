@@ -40,7 +40,7 @@ title: 基礎編 第5a.3a付録｜インターフェース性能比較マップ
 ## 🗺 性能マップ（帯域幅 vs 距離）｜Performance Map (Bandwidth vs Distance)
 
 > 💡 Mermaid図をGitHubで見る  
-> [🔗 View on GitHub (appendix_5a3_interface_sf.md)](https://github.com/Samizo-AITL/Edusemi-v4x/blob/main/chapter5a_spec_module_if/appendix_5a3_interface_speed_map.md)
+> [🔗 View on GitHub (appendix_5a3_interface_speed_map.md)](https://github.com/Samizo-AITL/Edusemi-v4x/blob/main/chapter5a_spec_module_if/appendix_5a3_interface_speed_map.md)
 
 ```mermaid
 %% Bandwidth vs Distance chart (log scale impression)
