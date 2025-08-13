@@ -3,6 +3,8 @@ layout: default
 title: Edusemi-v4x/index.md
 ---
 
+---
+
 # 🎓 **Edusemi-v4x｜半導体プロダクト開発のための基礎教育教材**  
 🇺🇸 *Foundational Educational Materials for Semiconductor Product Development*
 
@@ -122,8 +124,6 @@ title: Edusemi-v4x/index.md
 | **ライセンス種別 / Type** | MITライセンス |
 | **利用条件 / Usage** | 自由に使用・改変・再配布が可能<br>*Free to use, modify, redistribute* |
 | **推奨利用 / Recommended Uses** | 教育・研究・社内研修など<br>*Education, research, corporate training* |
-
----
 
 ---
 
