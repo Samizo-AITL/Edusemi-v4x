@@ -1,0 +1,97 @@
+/* ========== Edusemi-v4x custom styles ========== */
+:root{
+  --bg: #ffffff;
+  --fg: #1f2937;     /* slate-800 */
+  --muted:#6b7280;   /* slate-500 */
+  --brand:#1d4ed8;   /* blue-700 */
+  --brand-2:#0ea5e9; /* sky-500 */
+  --accent:#16a34a;  /* green-600 */
+  --table-h:#f8fafc; /* slate-50 */
+  --line:#e5e7eb;    /* slate-200 */
+  --btn-bg:#111827;  /* gray-900 */
+  --btn-fg:#ffffff;
+}
+
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#0b1020;
+    --fg:#e5e7eb;
+    --muted:#9ca3af;
+    --brand:#60a5fa;
+    --brand-2:#38bdf8;
+    --accent:#34d399;
+    --table-h:#0f172a; 
+    --line:#1f2937;
+    --btn-bg:#111827;
+    --btn-fg:#e5e7eb;
+  }
+}
+
+/* Base */
+html, body{
+  background:var(--bg);
+  color:var(--fg);
+}
+h1,h2,h3{
+  line-height:1.25;
+  letter-spacing:.2px;
+}
+h1{ font-weight:800; }
+h2{ margin-top:2.2rem; border-left:6px solid var(--brand); padding-left:.6rem; }
+h3{ margin-top:1.6rem; }
+p, li{ line-height:1.8; }
+em{ color: var(--brand-2); }
+
+hr{ border:none; border-top:1px solid var(--line); margin:2rem 0; }
+
+/* Emojis a little larger & aligned */
+h1 .emoji, h2 .emoji, h3 .emoji { font-size:1.05em; }
+h1, h2, h3 { scroll-margin-top: 80px; }
+
+/* Links */
+a{ color:var(--brand); text-decoration:none; }
+a:hover{ text-decoration:underline; }
+
+/* Buttons */
+.btn-link, .btn-secondary{
+  display:inline-block; padding:.55rem .9rem; border-radius:.6rem;
+  font-weight:600; text-decoration:none; margin:.2rem .2rem 0 0;
+}
+.btn-link{ background:var(--btn-bg); color:var(--btn-fg); }
+.btn-link:hover{ filter:brightness(1.08); }
+.btn-secondary{ background:transparent; border:1px solid var(--line); color:var(--fg); }
+.btn-secondary:hover{ border-color:var(--brand-2); color:var(--brand-2); }
+
+/* Tables */
+table.nice-table{
+  width:100%; border-collapse:separate; border-spacing:0;
+  margin: .8rem 0 1.6rem; font-size:0.97rem;
+  border:1px solid var(--line); border-radius:.6rem; overflow:hidden;
+}
+table.nice-table thead th{
+  background:var(--table-h); font-weight:700; text-align:left; 
+  border-bottom:1px solid var(--line);
+  padding:.7rem .8rem;
+}
+table.nice-table td{
+  padding:.55rem .8rem; border-bottom:1px solid var(--line);
+}
+table.nice-table tr:last-child td{ border-bottom:none; }
+table.nice-table tbody tr:hover{ background: color-mix(in oklab, var(--table-h), transparent 70%); }
+
+/* Icon list */
+.icon-list{ list-style:none; padding-left:0; }
+.icon-list li{ margin:.4rem 0; }
+
+/* Blockquote callout */
+blockquote{
+  border-left:4px solid var(--accent);
+  background: color-mix(in oklab, var(--accent), transparent 92%);
+  padding:.8rem 1rem; margin:1rem 0; border-radius:.4rem;
+}
+
+/* Code fences inside markdown */
+pre code{ font-size:.95rem; }
+
+/* Improve tap targets on mobile */
+a, .btn-link, .btn-secondary { -webkit-tap-highlight-color: transparent; }
