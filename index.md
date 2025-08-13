@@ -125,5 +125,18 @@ title: Edusemi-v4x/index.md
 
 ---
 
-💬 **[Edusemi教材に関する議論はこちら → Discussions](https://github.com/Samizo-AITL/Edusemi-v4x/discussions)**  
-📄 **[改訂履歴 / ChangeLog](revision_history.md)**
+---
+
+### 💬 **Discussions / 議論コーナー**  
+> 教材の改善提案・質問・議論はこちらから参加できます  
+> *Join discussions, share feedback, or ask questions.*
+
+[➡️ Edusemi Discussions へ移動](https://github.com/Samizo-AITL/Edusemi-v4x/discussions)
+
+---
+
+### 📄 **ChangeLog / 改訂履歴**  
+> バージョン更新・修正内容の履歴を確認できます  
+> *See the history of updates and changes.*
+
+[➡️ 改訂履歴ページを開く](revision_history.md)
