@@ -12,6 +12,16 @@ title: Edusemi-v4x/README.md
 
 ---
 
+## 🔗 **公式リンク**
+- 🇯🇵 **日本語版**
+  - 💻 **GitHub**: [https://github.com/Samizo-AITL/Edusemi-v4x](https://github.com/Samizo-AITL/Edusemi-v4x)
+  - 🌐 **GitHub Pages**: [https://samizo-aitl.github.io/Edusemi-v4x/](https://samizo-aitl.github.io/Edusemi-v4x/)
+- 🇺🇸 **English Version**
+  - 💻 **GitHub**: [https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/en](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/en)
+  - 🌐 **GitHub Pages**: [https://samizo-aitl.github.io/Edusemi-v4x/en/](https://samizo-aitl.github.io/Edusemi-v4x/en/)
+ 
+---
+
 ## ✍️ **はじめに | Introduction**
 
 半導体技術は **トランジスタの発明** から始まり、**MOS構造** の登場によって急速に進化しました。  
