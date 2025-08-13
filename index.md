@@ -8,8 +8,8 @@ title: Edusemi-v4x/index.md
 
 # 🎓 Edusemi-v4x  
 **半導体プロダクト開発のための基礎教育教材**  
-🇺🇸 *Foundational Educational Materials for Semiconductor Product Development*  
-<a class="btn-link" href="./en/index.md">English index.md →</a>
+🇺🇸 *Foundational Educational Materials for Semiconductor Product Development* 
+<a class="btn-link" href="./en/">English index →</a>
 
 ---
 
