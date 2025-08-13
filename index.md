@@ -9,7 +9,7 @@ title: Edusemi-v4x/index.md
 🇺🇸 *Foundational Educational Materials for Semiconductor Product Development*
 
 <p align="left">
-<a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue"></a><br>
+<a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue"></a>
 <a href="https://samizo-aitl.github.io"><img src="https://img.shields.io/badge/view-site-brightgreen"></a>
 </p>
   
