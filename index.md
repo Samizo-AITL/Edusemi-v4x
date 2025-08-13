@@ -3,129 +3,84 @@ layout: default
 title: Edusemi-v4x/index.md
 ---
 
----
+# 🎓 **Edusemi-v4x｜半導体プロダクト開発のための基礎教育教材**  
+🇺🇸 *Foundational Educational Materials for Semiconductor Product Development*
 
-# 🎓 **Edusemi-v4x：半導体プロダクト開発のための基礎教育教材**
-
-🇺🇸 **[English README](./en/README.md)**  
-　*Foundational Educational Materials for Semiconductor Product Development*
+📄 **[English README →](./en/README.md)**  
 
 ---
 
-✍️ **はじめに | Introduction**
+## ✍️ **はじめに | Introduction**
 
-半導体技術は、**トランジスタの発明**から始まり、**MOS構造**の登場で急速に進化しました。  
-**微細化と集積化**はムーアの法則に沿って進み、LSIはあらゆる分野に広がっています。
+半導体技術は **トランジスタの発明** から始まり、**MOS構造** の登場によって急速に進化しました。  
+**微細化と集積化** はムーアの法則に沿って進み、LSIはあらゆる分野に浸透しています。
 
-しかし、**物性・回路・プロセス・テスト**などの分野は分業化が進み、教育現場では分断されがちです。  
-実務ではこれらは密接につながっており、**回路はデバイスの動作原理に依存し、設計はプロセスや信頼性に支えられています**。
+しかし、**物性・回路・プロセス・テスト** などの基礎分野は教育現場で分断されがちです。  
+実務ではこれらは密接に関連しており、**回路はデバイス原理に依存し、設計はプロセスと信頼性に支えられています**。
 
-**Edusemi** は、このような「**基礎技術同士の構造的つながり**」に焦点を当てた教育教材です。  
-**応用に向けた視野**を意識しつつも、「基礎技術同士の構造的つながり」に集中し、実務に活きる**構造的理解**を育てることを目指します。
+**Edusemi** は、この「**基礎技術間の構造的つながり**」に焦点を当て、応用を見据えた **構造的理解** を育成する教材です。
 
----
-
-📘 **プロジェクト概要**
-
-**Edusemi-v4x** は、**半導体の設計・製造・検査・品質保証に関する一貫した基礎知識**を、**体系的かつ実践的**に学ぶための**オープン教材プロジェクト**です。
-
-- 🎯 対象：**工学系の学生、若手技術者、教育者**
-- ⭐ 特徴：**基礎のつながり重視**、**回路設計から量産検査までの一貫理解**
-- 🧪 実習対応：**sky130、OpenLane、Python、GitHub、ChatGPT** による**対話型学習統合**
+> 💡 **Design follows physics, and productization follows verification.**  
+> *物性 → 回路 → 実装 → 検証* の接続を可視化します。
 
 ---
 
-## 🧭 **基礎編　章構成一覧**
+## 📘 **プロジェクト概要 | Project Overview**
 
-| 章 | タイトル | 概要 |
-|----|----------|------|
-| [1](chapter1_materials/README.md) | **半導体物性と材料基礎** | **バンド構造・PN接合・MOS電界効果**などの基礎物性 |
-| [2](chapter2_comb_logic/README.md) | **デジタル論理と論理回路設計** | **組み合わせ回路・順序回路・FSM・HDL**の基礎 |
-| [3](chapter3_process_evolution/README.md) | **プロセス技術と微細化の制約** | **ノード変遷・配線・リソグラフィ・信頼性**の基盤理解 |
-| [4](chapter4_mos_characteristics/README.md) | **MOSトランジスタ特性と設計基盤** | **寸法・特性・PDK・デザインルール**との関係 |
-| [5a](chapter5a_spec_module_if/README.md) | **仕様策定・モジュール選定・インターフェース設計** | **上流工程・IF設計・PoC接続**までの流れを整理 |
-| [5](chapter5_soc_design_flow/README.md) | **SoC設計フローとEDAツール** | **RTL設計・配置配線・DRC/LVS・タイミング検証**など |
-| [6](chapter6_test_and_package/README.md) | **テスト・パッケージ・製品化** | **ETEST・不良解析・信頼性試験・出荷管理**まで |
-| [7](chapter7_design_review_and_org/README.md) | **デザインレビューと開発組織連携** | **SRAM不良事例・DR構造・合意形成**の実践視点 |
+**Edusemi-v4x** は、**設計・製造・検査・品質保証** を一貫して学べる **オープン教材** です。
+
+- 🎯 **対象 / Target**：工学系学生・若手技術者・教育者  
+- ⭐ **特徴 / Features**：基礎のつながり重視、設計〜量産検査まで網羅  
+- 🧪 **実習 / Practice**：sky130・OpenLane・Python・GitHub・ChatGPT 対応
 
 ---
 
-## 🧩 **応用編　章構成一覧**
+## 🧭 **基礎編 | Fundamentals**
 
-| 章 | タイトル | 概要 |
-|----|----------|------|
-| [1](d_chapter1_memory_technologies/README.md) | **メモリ技術** | **SRAM・DRAM・FeRAM・MRAM**の構造・特性・用途 |
-| [2](d_chapter2_high_voltage_devices/README.md) | **高耐圧デバイス** | **LDMOS・電界制御構造・高電圧デバイス設計** |
-| [3](d_chapter3_esd_protection_design/README.md) | **ESD設計** | **保護素子・破壊事例・試験規格・レイアウト注意点** |
-| [4](d_chapter4_layout_optimization/README.md) | **レイアウト設計と最適化** | **CMPダミー・IRドロップ・ラッチアップ防止**など |
-| [5](d_chapter5_analog_mixed_signal/README.md) | **アナログ／ミックスドシグナル** | **アナログ設計・ノイズ・混載設計の課題と対策** |
-| [5a](d_chapter5a_analog_mixed_signal/README.md) | **0.18μm AMS設計技法** | **ばらつき・マッチング・1/fノイズ・Q値改善**など設計的最適化 |
-| [5b](d_chapter5b_ams_block_and_pdk/README.md) | **製造技術によるアナログ差別化** | **1/fノイズ半減・製造起点のAMSモジュール創出と製品展開** |
-| [6](d_chapter6_pdk_and_eda_environment/README.md) | **PDKとEDA環境** | **DRC/LVS/ERC・PDK構成・EDAフロー**の理解 |
-| [7](d_chapter7_automation_and_verification/README.md) | **自動化と実装検証技術** | **OpenLane・CI/CD・Lint・ログ解析**の導入例 |
-| [8](d_chapter8_fsm_design_basics/README.md) | **FSM設計（有限状態機械）** | **Moore/Mealy型・状態遷移図・Verilog記述** |
-| [9](d_chapter9_pll_and_clock_design/README.md) | **PLLとクロック設計** | **PLL構造・ジッタ/スキュー・STA設計配慮** |
+| 📖 章 / Chapter | 📚 タイトル / Title | 📝 概要 / Summary |
+|----|------------|----------------|
+| [1](chapter1_materials/README.md) | **半導体物性と材料基礎**<br>*Semiconductor Physics & Materials* | バンド構造・PN接合・MOS電界効果 |
+| [2](chapter2_comb_logic/README.md) | **デジタル論理と回路設計**<br>*Digital Logic & Circuit Design* | 組み合わせ回路・順序回路・FSM・HDL |
+| [3](chapter3_process_evolution/README.md) | **プロセス技術と微細化制約**<br>*Process Technology & Scaling* | ノード変遷・配線・リソ・信頼性 |
+| [4](chapter4_mos_characteristics/README.md) | **MOSトランジスタ特性**<br>*MOS Characteristics* | 寸法・特性・PDK・デザインルール |
+| [5a](chapter5a_spec_module_if/README.md) | **仕様策定とIF設計**<br>*Spec Definition & Interface Design* | 上流工程・モジュール選定・PoC接続 |
+| [5](chapter5_soc_design_flow/README.md) | **SoC設計フロー**<br>*SoC Design Flow* | RTL・P&R・DRC/LVS・タイミング |
+| [6](chapter6_test_and_package/README.md) | **テスト・パッケージ**<br>*Test & Packaging* | ETEST・不良解析・信頼性試験・出荷 |
+| [7](chapter7_design_review_and_org/README.md) | **デザインレビューと組織連携**<br>*Design Review & Collaboration* | SRAM不良事例・DR構造・合意形成 |
 
 ---
 
-## 🛠 **実践編　章構成一覧**
+## 🔗 **関連プロジェクト | Related Projects**
 
-| 章 | タイトル | 概要 |
-|----|----------|------|
-| [1](e_chapter1_python_automation_tools/README.md) | **Pythonによる自動化ツール群** | **SPICE解析・OpenLaneログ処理・特性可視化スクリプト** |
-| [2](e_chapter2_sky130_experiments/README.md) | **Sky130実験とSPICE特性評価** | **Vg–Id特性・Vth推定・BTI/TDDB評価**など |
-| [3](e_chapter3_openlane_practice/README.md) | **OpenLaneによるデジタル設計実習** | **合成〜配置配線〜GDS出力までの流れを体験** |
-| [4](e_chapter4_poc_spec_and_design/README.md) | **PoC仕様書と設計展開** | **FSM・MUX・Adder設計とVerilogテストベンチ演習** |
-| [5](e_chapter5_evaluation_and_report/README.md) | **設計結果の評価とレポート** | **面積・波形・タイミング・DRC/LVS結果の分析と改善提案** |
+| 🚀 プロジェクト / Project | 📄 概要 / Overview | 🔍 主な特徴・内容 / Key Features |
+|--------------|----------------|------------------|
+| 🌐 [**Edusemi-Plus**](https://github.com/Samizo-AITL/edusemi-plus) | 地政学・製品戦略・AI・量子・投資など、産業構造を読み解く応用教材<br>*Applied learning on geopolitics, AI, quantum, and industry structure* | - Apple Silicon・CHIPS法・Cryo-CMOS 実例解説<br>- 技術と社会の接点を探究 |
+| 🎛️ [**EduController**](https://github.com/Samizo-AITL/EduController) | 制御理論（PID・状態空間）〜AI制御（NN・RL・LLM）まで網羅<br>*From classical control to AI-based control* | - PoC設計・OpenLane制御実装連動<br>- Python演習・RTL検証・FSM生成支援 |
+| 🤖 [**AITL-H**](https://github.com/Samizo-AITL/AITL-H) | FSM（本能）＋PID（理性）＋LLM（知性）の三層制御アーキテクチャ<br>*Three-layer control: FSM + PID + LLM* | - 人型ロボット統合制御PoC<br>- Edusemi特別編3・4章と連携 |
 
 ---
 
-## 📦 **特別編：章構成一覧**
-
-| 章 | タイトル | 概要 |
-|----|----------|------|
-| [1](f_chapter1_finfet_gaa/README.md) | **先端ノード（FinFET・GAA・CFET）** | **Fin構造・GAA・CFETの構造・設計影響・スケーリング技術** |
-| [2](f_chapter2_chiplet_pkg/README.md) | **チップレットと先端パッケージ技術** | **2.5D/3D・TSV・異種集積事例** |
-| [2a](f_chapter2a_systemdk/README.md) | **SystemDKにおける熱・応力・ノイズ制約の設計対応** | **信号・電源（SI/PI）、熱、応力、電磁ノイズ（EMI/EMC）を統合的に扱う実装制約設計** |
-| [3](f_chapter3_socsystem/README.md) | **FSM×PID×LLMによる統合制御SoC実装** | **AITL制御のSoC適用と統合制御展開** |
-| [4](f_chapter4_openlane/README.md) | **FSM×PID×LLMのOpenLane実装** | **統合制御RTLの配置配線・DRC検証** |
-| [5](f_chapter5_dfm/README.md) | **PDKと物理整合・DFM設計** | **DRC・LVS・DFM設計指針とSky130活用** |
-
----
-
-## 🔗 **関連プロジェクト**
-
-| プロジェクト | 概要 | 主な特徴・内容 |
-|--------------|------|----------------|
-| 🌐 [**Edusemi-Plus**](https://github.com/Samizo-AITL/edusemi-plus) | 地政学・製品戦略・AI・量子・投資など、産業構造を読み解く応用教材 | - Apple Silicon・CHIPS法・Cryo-CMOSなど実例解説<br>- 技術だけでなく社会との接点や背景を探究 |
-| 🎛️ [**EduController**](https://github.com/Samizo-AITL/EduController) | 制御理論（PID・状態空間）からAI制御（NN・RL・LLM）まで網羅 | - PoC設計・OpenLane制御実装との連動<br>- Pythonによる設計演習・RTL検証・FSM生成支援 |
-| 🤖 [**AITL-H**](https://github.com/Samizo-AITL/AITL-H) | FSM（本能）＋PID（理性）＋LLM（知性）による三層制御アーキテクチャ | - 人型ロボット・統合制御のPoC実装<br>- Edusemi特別編3・4章と構造的に連携 |
-
----
 ## 👤 **執筆者情報 / Author**
 
-| 項目 | 内容 |
-|------|------|
+| 📌 項目 / Item | 🖊️ 内容 / Details |
+|------|---------|
 | **氏名 / Name** | 三溝 真一（Shinichi Samizo） |
 | **学歴 / Education** | 信州大学大学院 電気電子工学 修了 |
 | **経歴 / Career** | 元 セイコーエプソン株式会社 技術者（1997年〜） |
 | **経験領域 / Expertise** | 半導体デバイス（ロジック・メモリ・高耐圧混載）<br>インクジェット薄膜ピエゾアクチュエータ<br>PrecisionCoreプリントヘッド製品化・BOM管理・ISO教育 |
-| **連絡先 / Contact** | ✉️ [shin3t72@gmail.com](mailto:shin3t72@gmail.com)<br>🐦 [https://x.com/shin3t72](https://x.com/shin3t72)<br>💻 [https://samizo-aitl.github.io/](https://samizo-aitl.github.io/) |
+| **連絡先 / Contact** | ✉️ [shin3t72@gmail.com](mailto:shin3t72@gmail.com)<br>🐦 [x.com/shin3t72](https://x.com/shin3t72)<br>💻 [samizo-aitl.github.io](https://samizo-aitl.github.io/) |
 
 ---
 
 ## 📄 **ライセンス / License**
 
-| 項目 | 内容 |
-|------|------|
+| 📌 項目 / Item | 📜 内容 / Details |
+|------|---------|
 | **ライセンス種別 / Type** | MITライセンス |
-| **利用条件 / Usage** | 自由に使用・改変・再配布が可能 |
-| **推奨利用 / Recommended Uses** | 教育・研究・社内研修など |
+| **利用条件 / Usage** | 自由に使用・改変・再配布が可能<br>*Free to use, modify, redistribute* |
+| **推奨利用 / Recommended Uses** | 教育・研究・社内研修など<br>*Education, research, corporate training* |
 
 ---
 
-**💬 [Edusemi教材に関する議論はこちら → Discussions](https://github.com/Samizo-AITL/Edusemi-v4x/discussions)**
-
----
-
-**📄 [改訂履歴（ChangeLog）](revision_history.md)**
+💬 **[Edusemi教材に関する議論はこちら → Discussions](https://github.com/Samizo-AITL/Edusemi-v4x/discussions)**  
+📄 **[改訂履歴 / ChangeLog](revision_history.md)**
