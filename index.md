@@ -14,7 +14,11 @@ title: Edusemi-v4x/index.md
          alt="Samizo-AITLポータルサイトに戻る"
          style="display:inline-block;margin:0;vertical-align:middle">
   </a>
-</p>
+  <a href="./LICENSE">
+    <img src="https://img.shields.io/badge/license-MIT-blue"
+         alt="MIT License"
+         style="display:inline-block;margin:0;vertical-align:middle">
+  </a>
   
 ---
 
