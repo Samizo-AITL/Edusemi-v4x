@@ -9,7 +9,7 @@ title: Edusemi-v4x/en/README.md
 # 🎓 Edusemi-v4x  
 **Foundational Educational Materials for Semiconductor Product Development**
 
-<a class="btn-link" href="../index.md">🇯🇵 Japanese index.md →</a>
+<a class="btn-link" href="../">🇯🇵 Japanese index →</a>
 
 ---
 
