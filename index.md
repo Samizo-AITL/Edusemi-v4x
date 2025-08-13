@@ -9,10 +9,6 @@ title: Edusemi-v4x/index.md
 🇺🇸 *Foundational Educational Materials for Semiconductor Product Development*
 
 [![Samizo-AITLポータルサイトに戻る](https://img.shields.io/badge/Samizo--AITL%20ポータルサイトに戻る-brightgreen)](https://samizo-aitl.github.io/) [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-
-
-| [![Samizo-AITL ポータルサイトに戻る](https://img.shields.io/badge/Samizo--AITL%20ポータルサイトに戻る-brightgreen)](https://samizo-aitl.github.io/) [![MIT License](https://img.shields.io/badge/license-MIT-blue)](./LICENSE) |
-| :-- |
   
 ---
 
