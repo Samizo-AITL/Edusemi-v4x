@@ -109,13 +109,11 @@ In practice, these are closely connected—**circuits depend on device physics, 
 
 ---
 
-## 🔗 **Related Projects**
-
 | 🌐 Project | Overview | Key Features |
-|-----------|----------|--------------|
-| 🌐 [**Edusemi-Plus**](https://github.com/Samizo-AITL/edusemi-plus) | Applied learning materials analyzing geopolitics, product strategy, AI, quantum, and investment | - Case studies on Apple Silicon, CHIPS Act, Cryo-CMOS<br>- Exploring socio-technical intersections |
-| 🎛️ [**EduController**](https://github.com/Samizo-AITL/EduController) | Covers control theory (PID, state-space) to AI control (NN, RL, LLM) | - Linked with PoC design and OpenLane control implementation<br>- Python design exercises, RTL verification, FSM generation |
-| 🤖 [**AITL-H**](https://github.com/Samizo-AITL/AITL-H) | Three-layer control architecture: FSM (instinct) + PID (reason) + LLM (intelligence) | - Humanoid robot PoC<br>- Structurally linked with Edusemi Special Topics 3 & 4 |
+|------------|----------|--------------|
+| 🌐 [**Edusemi-Plus**](https://samizo-aitl.github.io/Edusemi-Plus/) <br>💻 [GitHub](https://github.com/Samizo-AITL/Edusemi-Plus) | Applied learning materials analyzing geopolitics, product strategy, AI, quantum, and investment. | - Case studies on Apple Silicon, CHIPS Act, and Cryo-CMOS<br>- Explores not only technology but also its social context and background |
+| 🎛️ [**EduController**](https://samizo-aitl.github.io/EduController/) <br>💻 [GitHub](https://github.com/Samizo-AITL/EduController) | Covers control theory (PID, state-space) to AI control (NN, RL, LLM). | - PoC design linked with OpenLane control implementation<br>- Design exercises, RTL verification, and FSM generation support in Python |
+| 🤖 [**AITL-H**](https://samizo-aitl.github.io/AITL-H/) <br>💻 [GitHub](https://github.com/Samizo-AITL/AITL-H) | Three-layer control architecture: FSM (instinct) + PID (reason) + LLM (intelligence). | - PoC implementation for humanoid robots and integrated control<br>- Structurally linked with Edusemi special editions 3 & 4 |
 
 ---
 
