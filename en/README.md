@@ -12,6 +12,16 @@ title: Edusemi-v4x/en/README.md
 
 ---
 
+## 🔗 **Official Links**
+- 🇯🇵 **Japanese Version**
+  - 💻 **GitHub**: [https://github.com/Samizo-AITL/Edusemi-v4x](https://github.com/Samizo-AITL/Edusemi-v4x)
+  - 🌐 **GitHub Pages**: [https://samizo-aitl.github.io/Edusemi-v4x/](https://samizo-aitl.github.io/Edusemi-v4x/)
+- 🇺🇸 **English Version**
+  - 💻 **GitHub**: [https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/en](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/en)
+  - 🌐 **GitHub Pages**: [https://samizo-aitl.github.io/Edusemi-v4x/en/](https://samizo-aitl.github.io/Edusemi-v4x/en/)
+
+---
+
 ## ✍️ **Introduction**
 
 Semiconductor technology began with the **invention of the transistor** and rapidly evolved with the advent of the **MOS structure**.  
