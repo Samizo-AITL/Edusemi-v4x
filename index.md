@@ -3,13 +3,13 @@ layout: default
 title: Edusemi-v4x/index.md
 ---
 
-<!-- ページ専用スタイル -->
+<!-- ページ専用スタイル（Pagesでは有効／GitHub上では無害） -->
 <link rel="stylesheet" href="{{ '/assets/css/edusemi.css' | relative_url }}"/>
 
 # 🎓 Edusemi-v4x  
 **半導体プロダクト開発のための基礎教育教材**  
 🇺🇸 *Foundational Educational Materials for Semiconductor Product Development*  
-<br>　<a class="btn-link" href="{{ '/en/' | relative_url }}">English index →</a>
+<br>　<a class="btn-link" href="en/">English index →</a>
 
 ---
 
@@ -42,14 +42,14 @@ title: Edusemi-v4x/index.md
 <table class="nice-table">
 <thead><tr><th>章</th><th>タイトル</th><th>概要</th></tr></thead>
 <tbody>
-<tr><td>1</td><td><a href="{{ '/chapter1_materials/' | relative_url }}">半導体物性と材料基礎</a></td><td>バンド構造・PN接合・MOS電界効果</td></tr>
-<tr><td>2</td><td><a href="{{ '/chapter2_comb_logic/' | relative_url }}">デジタル論理と回路設計</a></td><td>組み合わせ回路・順序回路・FSM・HDL</td></tr>
-<tr><td>3</td><td><a href="{{ '/chapter3_process_evolution/' | relative_url }}">プロセス技術と微細化の制約</a></td><td>ノード変遷・配線・リソ・信頼性</td></tr>
-<tr><td>4</td><td><a href="{{ '/chapter4_mos_characteristics/' | relative_url }}">MOSトランジスタ特性</a></td><td>寸法・特性・PDK・デザインルール</td></tr>
-<tr><td>5a</td><td><a href="{{ '/chapter5a_spec_module_if/' | relative_url }}">仕様策定とIF設計</a></td><td>上流工程・モジュール選定・PoC接続</td></tr>
-<tr><td>5</td><td><a href="{{ '/chapter5_soc_design_flow/' | relative_url }}">SoC設計フロー</a></td><td>RTL・P&R・DRC/LVS・タイミング</td></tr>
-<tr><td>6</td><td><a href="{{ '/chapter6_test_and_package/' | relative_url }}">テスト・パッケージ</a></td><td>ETEST・不良解析・信頼性試験・出荷</td></tr>
-<tr><td>7</td><td><a href="{{ '/chapter7_design_review_and_org/' | relative_url }}">デザインレビューと組織連携</a></td><td>SRAM不良事例・DR構造・合意形成</td></tr>
+<tr><td>1</td><td><a href="chapter1_materials/README.md">半導体物性と材料基礎</a></td><td>バンド構造・PN接合・MOS電界効果</td></tr>
+<tr><td>2</td><td><a href="chapter2_comb_logic/README.md">デジタル論理と回路設計</a></td><td>組み合わせ回路・順序回路・FSM・HDL</td></tr>
+<tr><td>3</td><td><a href="chapter3_process_evolution/README.md">プロセス技術と微細化の制約</a></td><td>ノード変遷・配線・リソ・信頼性</td></tr>
+<tr><td>4</td><td><a href="chapter4_mos_characteristics/README.md">MOSトランジスタ特性</a></td><td>寸法・特性・PDK・デザインルール</td></tr>
+<tr><td>5a</td><td><a href="chapter5a_spec_module_if/README.md">仕様策定とIF設計</a></td><td>上流工程・モジュール選定・PoC接続</td></tr>
+<tr><td>5</td><td><a href="chapter5_soc_design_flow/README.md">SoC設計フロー</a></td><td>RTL・P&R・DRC/LVS・タイミング</td></tr>
+<tr><td>6</td><td><a href="chapter6_test_and_package/README.md">テスト・パッケージ</a></td><td>ETEST・不良解析・信頼性試験・出荷</td></tr>
+<tr><td>7</td><td><a href="chapter7_design_review_and_org/README.md">デザインレビューと組織連携</a></td><td>SRAM不良事例・DR構造・合意形成</td></tr>
 </tbody>
 </table>
 
@@ -60,17 +60,17 @@ title: Edusemi-v4x/index.md
 <table class="nice-table">
 <thead><tr><th>章</th><th>タイトル</th><th>概要</th></tr></thead>
 <tbody>
-<tr><td>1</td><td><a href="{{ '/d_chapter1_memory_technologies/' | relative_url }}">メモリ技術</a></td><td>SRAM・DRAM・FeRAM・MRAM</td></tr>
-<tr><td>2</td><td><a href="{{ '/d_chapter2_high_voltage_devices/' | relative_url }}">高耐圧デバイス</a></td><td>LDMOS・電界制御・高電圧設計</td></tr>
-<tr><td>3</td><td><a href="{{ '/d_chapter3_esd_protection_design/' | relative_url }}">ESD設計</a></td><td>保護素子・破壊事例・試験規格</td></tr>
-<tr><td>4</td><td><a href="{{ '/d_chapter4_layout_optimization/' | relative_url }}">レイアウト最適化</a></td><td>CMPダミー・IRドロップ・ラッチアップ</td></tr>
-<tr><td>5</td><td><a href="{{ '/d_chapter5_analog_mixed_signal/' | relative_url }}">アナログ／MIX信号</a></td><td>アナログ設計・ノイズ・混載設計</td></tr>
-<tr><td>5a</td><td><a href="{{ '/d_chapter5a_analog_mixed_signal/' | relative_url }}">0.18μm AMS設計技法</a></td><td>ばらつき・マッチング・1/fノイズ</td></tr>
-<tr><td>5b</td><td><a href="{{ '/d_chapter5b_ams_block_and_pdk/' | relative_url }}">製造起点のAMS差別化</a></td><td>1/fノイズ低減・製造技術応用</td></tr>
-<tr><td>6</td><td><a href="{{ '/d_chapter6_pdk_and_eda_environment/' | relative_url }}">PDKとEDA環境</a></td><td>DRC/LVS/ERC・PDK構成</td></tr>
-<tr><td>7</td><td><a href="{{ '/d_chapter7_automation_and_verification/' | relative_url }}">自動化と検証</a></td><td>OpenLane・CI/CD・Lint</td></tr>
-<tr><td>8</td><td><a href="{{ '/d_chapter8_fsm_design_basics/' | relative_url }}">FSM設計</a></td><td>Moore/Mealy・状態遷移図・Verilog</td></tr>
-<tr><td>9</td><td><a href="{{ '/d_chapter9_pll_and_clock_design/' | relative_url }}">PLLとクロック</a></td><td>PLL構造・ジッタ・STA配慮</td></tr>
+<tr><td>1</td><td><a href="d_chapter1_memory_technologies/README.md">メモリ技術</a></td><td>SRAM・DRAM・FeRAM・MRAM</td></tr>
+<tr><td>2</td><td><a href="d_chapter2_high_voltage_devices/README.md">高耐圧デバイス</a></td><td>LDMOS・電界制御・高電圧設計</td></tr>
+<tr><td>3</td><td><a href="d_chapter3_esd_protection_design/README.md">ESD設計</a></td><td>保護素子・破壊事例・試験規格</td></tr>
+<tr><td>4</td><td><a href="d_chapter4_layout_optimization/README.md">レイアウト最適化</a></td><td>CMPダミー・IRドロップ・ラッチアップ</td></tr>
+<tr><td>5</td><td><a href="d_chapter5_analog_mixed_signal/README.md">アナログ／MIX信号</a></td><td>アナログ設計・ノイズ・混載設計</td></tr>
+<tr><td>5a</td><td><a href="d_chapter5a_analog_mixed_signal/README.md">0.18μm AMS設計技法</a></td><td>ばらつき・マッチング・1/fノイズ</td></tr>
+<tr><td>5b</td><td><a href="d_chapter5b_ams_block_and_pdk/README.md">製造起点のAMS差別化</a></td><td>1/fノイズ低減・製造技術応用</td></tr>
+<tr><td>6</td><td><a href="d_chapter6_pdk_and_eda_environment/README.md">PDKとEDA環境</a></td><td>DRC/LVS/ERC・PDK構成</td></tr>
+<tr><td>7</td><td><a href="d_chapter7_automation_and_verification/README.md">自動化と検証</a></td><td>OpenLane・CI/CD・Lint</td></tr>
+<tr><td>8</td><td><a href="d_chapter8_fsm_design_basics/README.md">FSM設計</a></td><td>Moore/Mealy・状態遷移図・Verilog</td></tr>
+<tr><td>9</td><td><a href="d_chapter9_pll_and_clock_design/README.md">PLLとクロック</a></td><td>PLL構造・ジッタ・STA配慮</td></tr>
 </tbody>
 </table>
 
@@ -81,11 +81,11 @@ title: Edusemi-v4x/index.md
 <table class="nice-table">
 <thead><tr><th>章</th><th>タイトル</th><th>概要</th></tr></thead>
 <tbody>
-<tr><td>1</td><td><a href="{{ '/e_chapter1_python_automation_tools/' | relative_url }}">Python自動化ツール</a></td><td>SPICE解析・OpenLaneログ処理</td></tr>
-<tr><td>2</td><td><a href="{{ '/e_chapter2_sky130_experiments/' | relative_url }}">Sky130実験</a></td><td>Vg–Id・Vth推定・BTI/TDDB評価</td></tr>
-<tr><td>3</td><td><a href="{{ '/e_chapter3_openlane_practice/' | relative_url }}">OpenLane実習</a></td><td>合成〜配置配線〜GDS出力</td></tr>
-<tr><td>4</td><td><a href="{{ '/e_chapter4_poc_spec_and_design/' | relative_url }}">PoC設計展開</a></td><td>FSM・MUX・Adder・テスト</td></tr>
-<tr><td>5</td><td><a href="{{ '/e_chapter5_evaluation_and_report/' | relative_url }}">評価とレポート</a></td><td>面積・波形・タイミング・DRC/LVS</td></tr>
+<tr><td>1</td><td><a href="e_chapter1_python_automation_tools/README.md">Python自動化ツール</a></td><td>SPICE解析・OpenLaneログ処理</td></tr>
+<tr><td>2</td><td><a href="e_chapter2_sky130_experiments/README.md">Sky130実験</a></td><td>Vg–Id・Vth推定・BTI/TDDB評価</td></tr>
+<tr><td>3</td><td><a href="e_chapter3_openlane_practice/README.md">OpenLane実習</a></td><td>合成〜配置配線〜GDS出力</td></tr>
+<tr><td>4</td><td><a href="e_chapter4_poc_spec_and_design/README.md">PoC設計展開</a></td><td>FSM・MUX・Adder・テスト</td></tr>
+<tr><td>5</td><td><a href="e_chapter5_evaluation_and_report/README.md">評価とレポート</a></td><td>面積・波形・タイミング・DRC/LVS</td></tr>
 </tbody>
 </table>
 
@@ -96,12 +96,12 @@ title: Edusemi-v4x/index.md
 <table class="nice-table">
 <thead><tr><th>章</th><th>タイトル</th><th>概要</th></tr></thead>
 <tbody>
-<tr><td>1</td><td><a href="{{ '/f_chapter1_finfet_gaa/' | relative_url }}">先端ノード</a></td><td>FinFET・GAA・CFETと設計影響</td></tr>
-<tr><td>2</td><td><a href="{{ '/f_chapter2_chiplet_pkg/' | relative_url }}">チップレットと先端パッケージ</a></td><td>2.5D/3D・TSV・異種集積</td></tr>
-<tr><td>2a</td><td><a href="{{ '/f_chapter2a_systemdk/' | relative_url }}">SystemDK実装制約設計</a></td><td>SI/PI・熱・応力・EMI/EMC</td></tr>
-<tr><td>3</td><td><a href="{{ '/f_chapter3_socsystem/' | relative_url }}">統合制御SoC実装</a></td><td>FSM×PID×LLM（AITL）</td></tr>
-<tr><td>4</td><td><a href="{{ '/f_chapter4_openlane/' | relative_url }}">OpenLane実装</a></td><td>統合制御RTLの配置配線</td></tr>
-<tr><td>5</td><td><a href="{{ '/f_chapter5_dfm/' | relative_url }}">DFM設計</a></td><td>DRC・LVS・DFM指針・Sky130</td></tr>
+<tr><td>1</td><td><a href="f_chapter1_finfet_gaa/README.md">先端ノード</a></td><td>FinFET・GAA・CFETと設計影響</td></tr>
+<tr><td>2</td><td><a href="f_chapter2_chiplet_pkg/README.md">チップレットと先端パッケージ</a></td><td>2.5D/3D・TSV・異種集積</td></tr>
+<tr><td>2a</td><td><a href="f_chapter2a_systemdk/README.md">SystemDK実装制約設計</a></td><td>SI/PI・熱・応力・EMI/EMC</td></tr>
+<tr><td>3</td><td><a href="f_chapter3_socsystem/README.md">統合制御SoC実装</a></td><td>FSM×PID×LLM（AITL）</td></tr>
+<tr><td>4</td><td><a href="f_chapter4_openlane/README.md">OpenLane実装</a></td><td>統合制御RTLの配置配線</td></tr>
+<tr><td>5</td><td><a href="f_chapter5_dfm/README.md">DFM設計</a></td><td>DRC・LVS・DFM指針・Sky130</td></tr>
 </tbody>
 </table>
 
@@ -138,5 +138,5 @@ title: Edusemi-v4x/index.md
 ## 📄 ライセンス | License
 
 MITライセンスに基づき、自由に使用・改変・再配布が可能。教育・研究・社内研修への活用も歓迎します。  
-<a class="btn-link" href="{{ '/revision_history/' | relative_url }}">改訂履歴（ChangeLog）</a>　
+<a class="btn-link" href="revision_history.md">改訂履歴（ChangeLog）</a>　
 <a class="btn-secondary" href="https://github.com/Samizo-AITL/Edusemi-v4x/discussions">Discussions →</a>
