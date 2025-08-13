@@ -13,12 +13,13 @@ title: Edusemi-v4x/README.md
 ---
 
 ## 🔗 **公式リンク**
-- 🇯🇵 **日本語版**
-  - 💻 **GitHub**: [https://github.com/Samizo-AITL/Edusemi-v4x](https://github.com/Samizo-AITL/Edusemi-v4x)
-  - 🌐 **GitHub Pages**: [https://samizo-aitl.github.io/Edusemi-v4x/](https://samizo-aitl.github.io/Edusemi-v4x/)
-- 🇺🇸 **English Version**
-  - 💻 **GitHub**: [https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/en](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/en)
-  - 🌐 **GitHub Pages**: [https://samizo-aitl.github.io/Edusemi-v4x/en/](https://samizo-aitl.github.io/Edusemi-v4x/en/)
+
+| 言語 | 種別 | リンク |
+|------|------|--------|
+| 🇯🇵 日本語版 | 💻 GitHub | [https://github.com/Samizo-AITL/Edusemi-v4x](https://github.com/Samizo-AITL/Edusemi-v4x) |
+| 🇯🇵 日本語版 | 🌐 GitHub Pages | [https://samizo-aitl.github.io/Edusemi-v4x/](https://samizo-aitl.github.io/Edusemi-v4x/) |
+| 🇺🇸 English Version | 💻 GitHub | [https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/en](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/en) |
+| 🇺🇸 English Version | 🌐 GitHub Pages | [https://samizo-aitl.github.io/Edusemi-v4x/en/](https://samizo-aitl.github.io/Edusemi-v4x/en/) |
  
 ---
 
