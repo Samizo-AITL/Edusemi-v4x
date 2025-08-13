@@ -7,7 +7,7 @@ title: Edusemi-v4x/README.md
 
 # 🎓 **Edusemi-v4x：半導体プロダクト開発のための基礎教育教材**
 
-🇺🇸 **[English README](./README_en.md)**  
+🇺🇸 **[English README](./en/README.md)**  
 　*Foundational Educational Materials for Semiconductor Product Development*
 
 ---
