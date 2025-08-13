@@ -95,48 +95,37 @@ title: Edusemi-v4x/index.md
 
 ## 🔗 **関連プロジェクト**
 
-### 🌐 **[Edusemi-Plus](https://github.com/Samizo-AITL/edusemi-plus)**  
-- **地政学・製品戦略・AI・量子・投資**など産業構造を読み解く応用教材  
-- **Apple Silicon・CHIPS法・Cryo-CMOS**など実例を解説  
-- 技術だけでなく**社会との接点や背景**を探究
-
-### 🎛️ **[EduController](https://github.com/Samizo-AITL/EduController)**  
-- **制御理論（PID・状態空間）〜AI制御（NN・RL・LLM）**まで網羅  
-- **PoC設計・OpenLane制御実装**との連動構成  
-- **Pythonによる設計演習・RTL検証・FSM生成支援**も収録
-
-### 🤖 **[AITL-H](https://github.com/Samizo-AITL/AITL-H)**  
-- **FSM（本能）＋PID（理性）＋LLM（知性）**による三層制御アーキテクチャ  
-- **人型ロボット・統合制御のPoC実装**が可能  
-- Edusemiの**特別編3・4章**と構造的に連携
+| プロジェクト | 概要 | 主な特徴・内容 |
+|--------------|------|----------------|
+| 🌐 [**Edusemi-Plus**](https://github.com/Samizo-AITL/edusemi-plus) | 地政学・製品戦略・AI・量子・投資など、産業構造を読み解く応用教材 | - Apple Silicon・CHIPS法・Cryo-CMOSなど実例解説<br>- 技術だけでなく社会との接点や背景を探究 |
+| 🎛️ [**EduController**](https://github.com/Samizo-AITL/EduController) | 制御理論（PID・状態空間）からAI制御（NN・RL・LLM）まで網羅 | - PoC設計・OpenLane制御実装との連動<br>- Pythonによる設計演習・RTL検証・FSM生成支援 |
+| 🤖 [**AITL-H**](https://github.com/Samizo-AITL/AITL-H) | FSM（本能）＋PID（理性）＋LLM（知性）による三層制御アーキテクチャ | - 人型ロボット・統合制御のPoC実装<br>- Edusemi特別編3・4章と構造的に連携 |
 
 ---
-
 ## 👤 **執筆者情報 / Author**
 
-**三溝 真一（Shinichi Samizo）**  
-- **信州大学大学院 電気電子工学 修了**  
-- 元 **セイコーエプソン**株式会社 技術者（1997年〜）
-
-📌 **経験領域**：  
-- **半導体デバイス(ロジック・メモリ・高耐圧混載)**  
-- **インクジェット薄膜ピエゾアクチュエータ**  
-- **PrecisionCoreプリントヘッド製品化・BOM管理・ISO教育**
-
-📬 **連絡先**  
-- ✉️ [shin3t72@gmail.com](mailto:shin3t72@gmail.com)  
-- 🐦 [https://x.com/shin3t72](https://x.com/shin3t72)  
-- 💻 [https://samizo-aitl.github.io/](https://samizo-aitl.github.io/)
+| 項目 | 内容 |
+|------|------|
+| **氏名 / Name** | 三溝 真一（Shinichi Samizo） |
+| **学歴 / Education** | 信州大学大学院 電気電子工学 修了 |
+| **経歴 / Career** | 元 セイコーエプソン株式会社 技術者（1997年〜） |
+| **経験領域 / Expertise** | 半導体デバイス（ロジック・メモリ・高耐圧混載）<br>インクジェット薄膜ピエゾアクチュエータ<br>PrecisionCoreプリントヘッド製品化・BOM管理・ISO教育 |
+| **連絡先 / Contact** | ✉️ [shin3t72@gmail.com](mailto:shin3t72@gmail.com)<br>🐦 [https://x.com/shin3t72](https://x.com/shin3t72)<br>💻 [https://samizo-aitl.github.io/](https://samizo-aitl.github.io/) |
 
 ---
 
-## 📄 **ライセンス**
+## 📄 **ライセンス / License**
 
-本教材は **MITライセンス** に基づき、**自由に使用・改変・再配布**が可能です。  
-**教育・研究・社内研修**への活用も歓迎します。
+| 項目 | 内容 |
+|------|------|
+| **ライセンス種別 / Type** | MITライセンス |
+| **利用条件 / Usage** | 自由に使用・改変・再配布が可能 |
+| **推奨利用 / Recommended Uses** | 教育・研究・社内研修など |
 
 ---
 
 **💬 [Edusemi教材に関する議論はこちら → Discussions](https://github.com/Samizo-AITL/Edusemi-v4x/discussions)**
+
+---
 
 **📄 [改訂履歴（ChangeLog）](revision_history.md)**
