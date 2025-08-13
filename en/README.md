@@ -8,7 +8,7 @@ title: Edusemi-v4x/en/README.md
 # 🎓 **Edusemi-v4x | Foundational Educational Materials for Semiconductor Product Development**  
 🇯🇵 *半導体プロダクト開発のための基礎教育教材*
 
-[![license](https://img.shields.io/badge/license-MIT-blue)](./LICENSE)
+[![license](https://img.shields.io/badge/license-MIT-blue)](../LICENSE)
 [![view](https://img.shields.io/badge/view-site-brightgreen)](https://samizo-aitl.github.io/en)
 
 ---
