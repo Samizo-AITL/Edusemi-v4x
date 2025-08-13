@@ -10,7 +10,7 @@ title: Edusemi-v4x/en/README.md
 
 <p align="left">
 <a href="../LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue"></a>
-<a href="https://samizo-aitl.github.io/Edusemi-v4x/en/"><img src="https://img.shields.io/badge/view-site-brightgreen"></a>
+<a href="https://samizo-aitl.github.io/en/"><img src="https://img.shields.io/badge/view-site-brightgreen"></a>
 </p>
 
 ---
