@@ -11,7 +11,7 @@ title: Edusemi-v4x/index.md
 <p align="left">
 <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue"></a><br>
 <a href="https://samizo-aitl.github.io"><img src="https://img.shields.io/badge/view-site-brightgreen"></a>
-</
+</p>
   
 ---
 
