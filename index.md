@@ -21,6 +21,42 @@ title: Edusemi-v4x/index.md
 
 ---
 
+## ✍️ **はじめに | Introduction**
+
+半導体技術は **トランジスタの発明** から始まり、**MOS構造** の登場によって急速に進化しました。  
+*Semiconductor technology began with the **invention of the transistor**, and advanced rapidly with the advent of the **MOS structure**.*  
+
+**微細化と集積化** はムーアの法則に沿って進み、LSIはあらゆる分野に浸透しています。  
+*Miniaturization and integration progressed in line with Moore's Law, and LSIs have penetrated into all fields.*  
+
+しかし、**物性・回路・プロセス・テスト** などの基礎分野は教育現場で分断されがちです。  
+*However, in education, **fundamental areas such as device physics, circuit design, process technology, and testing** are often taught separately.*  
+
+実務ではこれらは密接に関連しており、**回路はデバイス原理に依存し、設計はプロセスと信頼性に支えられています**。  
+*In practice, these areas are deeply interconnected — **circuits depend on device principles, and designs are supported by process technology and reliability**.*  
+
+**Edusemi** は、この「**基礎技術間の構造的つながり**」に焦点を当て、応用を見据えた **構造的理解** を育成する教材です。  
+***Edusemi** focuses on this "**structural connection between fundamental technologies**" and fosters **structural understanding** with an eye toward applications.*  
+
+> 💡 **Design follows physics, and productization follows verification.**  
+> *💡 Design follows physics, and productization follows verification.*  
+> *物性 → 回路 → 実装 → 検証* の接続を可視化します。  
+> *Visualizing the flow: Physics → Circuits → Implementation → Verification*  
+
+---
+
+## 📘 **プロジェクト概要 | Project Overview**
+
+**Edusemi-v4x** は、**設計・製造・検査・品質保証** を一貫して学べる **オープン教材** です。  
+***Edusemi-v4x** is an *open educational resource* for learning **design, manufacturing, inspection, and quality assurance** in an integrated way.*  
+
+- 🎯 **対象 / Target**：工学系学生・若手技術者・教育者  
+  *🎯 Target: Engineering students, junior engineers, and educators*  
+- ⭐ **特徴 / Features**：基礎のつながり重視、設計〜量産検査まで網羅  
+  *⭐ Features: Emphasis on foundational connections, covering everything from design to mass-production testing*  
+- 🧪 **実習 / Practice**：sky130・OpenLane・Python・GitHub・ChatGPT 対応  
+  *🧪 Practice: Compatible with Sky130, OpenLane, Python, GitHub, and ChatGPT*
+  
 ---
 
 ## 🧭 **基礎編 | Fundamentals**
