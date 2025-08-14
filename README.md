@@ -157,11 +157,3 @@ title: Edusemi-v4x/README.md
 
 [![💬 GitHub Discussions](https://img.shields.io/badge/💬%20GitHub-Discussions-brightgreen?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/discussions)
 [![📄 ChangeLog](https://img.shields.io/badge/📄%20View-ChangeLog-orange?logo=markdown)](revision_history.md)
-
-## 💬 **フィードバックと改訂履歴 | Feedback & ChangeLog**
-> 改善提案や議論はGitHub Discussionsから、改訂履歴はChangeLogにて公開。  
-> *Propose improvements via GitHub Discussions, and track updates in the ChangeLog.*
-
-[![💬 Discussions](https://img.shields.io/badge/GitHub-Discussions-brightgreen?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/discussions)  
-[![📄 ChangeLog](https://img.shields.io/badge/View-ChangeLog-orange?logo=markdown)](revision_history.md)
-
