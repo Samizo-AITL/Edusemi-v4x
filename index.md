@@ -159,14 +159,14 @@ title: Edusemi-v4x/index.md
 > *Different licenses are applied to code and educational materials.*
 
 ### 🖥 **ソースコード | Source Code**
-- **ライセンス種別 / Type**： [MIT License](https://opensource.org/licenses/MIT)  
+- **ライセンス種別 / Type**： [**MIT License**](https://opensource.org/licenses/MIT)  
 - **利用条件 / Usage**： 自由に使用・改変・再配布が可能（商用利用可）  
   *Free to use, modify, and redistribute (commercial use allowed)*  
 - **推奨利用 / Recommended Uses**： 自動化スクリプト、設計ツール、EDA連携コード  
   *Automation scripts, design tools, EDA integration code*
 
 ### 📚 **教材（文書・図版）| Educational Materials (Documents & Figures)**
-- **ライセンス種別 / Type**： [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)  
+- **ライセンス種別 / Type**： [**CC BY-NC-SA 4.0**](https://creativecommons.org/licenses/by-nc-sa/4.0/)  
 - **利用条件 / Usage**： 表示必須、非営利利用のみ、同一条件での継承が必要  
   *Attribution required, non-commercial use only, share alike under the same terms*  
 - **推奨利用 / Recommended Uses**： 教育・研究・社内研修・講義資料  
