@@ -112,7 +112,6 @@ title: Edusemi-v4x/index.md
 
 ---
 
-
 ## 🔗 **関連プロジェクト | Related Projects**
 > Edusemiと連動し、制御理論・社会構造・先端技術を横断的に学べる姉妹プロジェクト群。  
 > *Sister projects linked with Edusemi, covering control theory, socio-industrial structures, and advanced technologies.*
