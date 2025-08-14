@@ -81,8 +81,6 @@ title: Edusemi-v4x/README.md
 | 🧩 **第8章 / Chapter8**<br>[![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/d_chapter8_fsm_design_basics/)<br>[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/d_chapter8_fsm_design_basics) | FSM設計（有限状態機械）<br>*FSM Design (Finite State Machine)* | Moore型／Mealy型FSMの構造と動作原理を理解し、状態遷移図やVerilogによる3段階記述法を学ぶ。<br>*Understand the structure and operation of Moore and Mealy FSMs, and learn three-stage description methods in Verilog with state diagrams.* |
 | 🧩 **第9章 / Chapter9**<br>[![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/d_chapter9_pll_and_clock_design/)<br>[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/d_chapter9_pll_and_clock_design) | PLLとクロック設計<br>*PLL and Clock Design* | PLLの動作原理からスキュー／ジッタ対策、クロックツリー設計までを体系的に学び、高精度クロック生成・配布の設計技術を習得する。<br>*Learn PLL principles, skew/jitter countermeasures, and clock tree design to acquire high-precision clock generation and distribution techniques.* |
 
-
-
 ---
 
 ## 🛠 **実践編 | Practice**
