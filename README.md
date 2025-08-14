@@ -61,40 +61,6 @@ title: Edusemi-v4x/README.md
 | 🧭 **第6章 / Chapter6**<br>[![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/chapter6_test_and_package/)<br>[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/chapter6_test_and_package) | テスト・パッケージ<br>*Test & Packaging* | ETEST・不良解析・信頼性試験・出荷 |
 | 🧭 **第7章 / Chapter7**<br>[![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/chapter7_design_review_and_org/)<br>[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/chapter7_design_review_and_org) | デザインレビューと組織連携<br>*Design Review & Collaboration* | SRAM不良事例・DR構造・合意形成 |
 
-## 🧭 **基礎編 | Fundamentals**
-
-> 半導体の**物性・論理回路・プロセス技術**など、すべての応用の土台となる基礎領域を体系的に学びます。  
-> *Covers semiconductor physics, logic design, and process fundamentals essential for all applications.*
-
-| 📖 章 / Chapter | 📚 タイトル / Title | 📝 概要 / Summary |
-|----|------------|----------------|
-| 🧭 **第1章 / Chapter1**<br>[![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/chapter1_materials/)<br>[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/chapter1_materials) |半導体物性と材料基礎<br>*Semiconductor Physics & Materials* | バンド構造・PN接合・MOS電界効果 |
-| 🧭 **2 デジタル論理と回路設計**<br>*Digital Logic & Circuit Design*<br>[![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/chapter2_comb_logic/) [![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/chapter2_comb_logic) | 組み合わせ回路・順序回路・FSM・HDL |
-| 🧭 **3 プロセス技術と微細化制約**<br>*Process Technology & Scaling*<br>[![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/chapter3_process_evolution/) [![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/chapter3_process_evolution) | ノード変遷・配線・リソ・信頼性 |
-| 🧭 **4 MOSトランジスタ特性**<br>*MOS Characteristics*<br>[![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/chapter4_mos_characteristics/) [![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/chapter4_mos_characteristics) | 寸法・特性・PDK・デザインルール |
-| 🧭 **5a 仕様策定とIF設計**<br>*Spec Definition & Interface Design*<br>[![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/chapter5a_spec_module_if/) [![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/chapter5a_spec_module_if) | 上流工程・モジュール選定・PoC接続 |
-| 🧭 **5 SoC設計フロー**<br>*SoC Design Flow*<br>[![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/chapter5_soc_design_flow/) [![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/chapter5_soc_design_flow) | RTL・P&R・DRC/LVS・タイミング |
-| 🧭 **6 テスト・パッケージ**<br>*Test & Packaging*<br>[![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/chapter6_test_and_package/) [![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/chapter6_test_and_package) | ETEST・不良解析・信頼性試験・出荷 |
-| 🧭 **7 デザインレビューと組織連携**<br>*Design Review & Collaboration*<br>[![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/chapter7_design_review_and_org/) [![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/chapter7_design_review_and_org) | SRAM不良事例・DR構造・合意形成 |
-
-
-
-
-## 🧭 **基礎編 | Fundamentals**
-> 半導体の**物性・論理回路・プロセス技術**など、すべての応用の土台となる基礎領域を体系的に学びます。  
-> *Covers semiconductor physics, logic design, and process fundamentals essential for all applications.*
-
-| 📖 章 / Chapter | 📚 タイトル / Title | 📝 概要 / Summary |
-|----|------------|----------------|
-| 🧭 **[1](chapter1_materials/README.md)** | **半導体物性と材料基礎**<br>*Semiconductor Physics & Materials* | バンド構造・PN接合・MOS電界効果 |
-| 🧭 **[2](chapter2_comb_logic/README.md)** | **デジタル論理と回路設計**<br>*Digital Logic & Circuit Design* | 組み合わせ回路・順序回路・FSM・HDL |
-| 🧭 **[3](chapter3_process_evolution/README.md)** | **プロセス技術と微細化制約**<br>*Process Technology & Scaling* | ノード変遷・配線・リソ・信頼性 |
-| 🧭 **[4](chapter4_mos_characteristics/README.md)** | **MOSトランジスタ特性**<br>*MOS Characteristics* | 寸法・特性・PDK・デザインルール |
-| 🧭 **[5a](chapter5a_spec_module_if/README.md)** | **仕様策定とIF設計**<br>*Spec Definition & Interface Design* | 上流工程・モジュール選定・PoC接続 |
-| 🧭 **[5](chapter5_soc_design_flow/README.md)** | **SoC設計フロー**<br>*SoC Design Flow* | RTL・P&R・DRC/LVS・タイミング |
-| 🧭 **[6](chapter6_test_and_package/README.md)** | **テスト・パッケージ**<br>*Test & Packaging* | ETEST・不良解析・信頼性試験・出荷 |
-| 🧭 **[7](chapter7_design_review_and_org/README.md)** | **デザインレビューと組織連携**<br>*Design Review & Collaboration* | SRAM不良事例・DR構造・合意形成 |
-
 ---
 
 ## 🧩 **応用編 | Applications**
