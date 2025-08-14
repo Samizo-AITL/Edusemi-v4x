@@ -109,31 +109,34 @@ In practice, these are closely connected—**circuits depend on device physics, 
 ---
 
 ## 🔗 **Related Projects**
+> Sister projects linked with Edusemi, covering control theory, socio-industrial structures, and advanced technologies.
 
 | 🌐 Project | Overview | Key Features |
-|------------|----------|--------------|
-| ➕ [**Edusemi-Plus**](https://samizo-aitl.github.io/Edusemi-Plus/) <br>💻 [GitHub](https://github.com/Samizo-AITL/Edusemi-Plus) | Applied learning materials analyzing geopolitics, product strategy, AI, quantum, and investment. | - Case studies on Apple Silicon, CHIPS Act, and Cryo-CMOS<br>- Explores not only technology but also its social context and background |
-| 🎛️ [**EduController**](https://samizo-aitl.github.io/EduController/) <br>💻 [GitHub](https://github.com/Samizo-AITL/EduController) | Covers control theory (PID, state-space) to AI control (NN, RL, LLM). | - PoC design linked with OpenLane control implementation<br>- Design exercises, RTL verification, and FSM generation support in Python |
-| 🤖 [**AITL-H**](https://samizo-aitl.github.io/AITL-H/) <br>💻 [GitHub](https://github.com/Samizo-AITL/AITL-H) | Three-layer control architecture: FSM (instinct) + PID (reason) + LLM (intelligence). | - PoC implementation for humanoid robots and integrated control<br>- Structurally linked with Edusemi special editions 3 & 4 |
+|---|---|---|
+| ➕ **Edusemi-Plus**<br>[![🌐 View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-Plus/en/) [![💻 View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-Plus) | Applied learning materials analyzing geopolitics, product strategy, AI, quantum, and investment. | - In-depth analysis of Apple Silicon, CHIPS Act, and Cryo-CMOS<br>- Explores not only technology but also its societal context and background |
+| 🎛️ **EduController**<br>[![🌐 View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/EduController/en/) [![💻 View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/EduController) | Covers control theory (PID, state-space) to AI control (NN, RL, LLM). | - Linked with PoC design and OpenLane control implementation<br>- Design exercises in Python, RTL verification, FSM generation support |
+| 🤖 **AITL-H**<br>[![🌐 View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/AITL-H/en/) [![💻 View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H) | Three-layer control architecture: FSM (instinct) + PID (reason) + LLM (intelligence). | - PoC implementation for humanoid robot integrated control<br>- Structurally linked with Edusemi Special Edition Chapters 3 & 4 |
 
 ---
 
 ## 👤 **Author**
+> Author with professional background in semiconductors and inkjet actuators, creating materials integrating theory and practice.
 
 | 📌 Item | Details |
-|--------|---------|
+|------|------|
 | **Name** | Shinichi Samizo |
-| **Education** | M.Eng., Electrical & Electronic Engineering, Shinshu University |
+| **Education** | M.Eng., Electrical and Electronic Engineering, Shinshu University |
 | **Career** | Former engineer at Seiko Epson Corporation (1997–) |
-| **Expertise** | Semiconductor devices (logic, memory, HV mixed integration)<br>Inkjet thin-film piezo actuators<br>PrecisionCore printhead productization, BOM management, ISO training |
+| **Expertise** | Semiconductor devices (logic, memory, high-voltage mixed)<br>Thin-film piezoelectric actuators for inkjet<br>PrecisionCore printhead productization, BOM management, ISO training |
 | **Contact** | ✉️ [shin3t72@gmail.com](mailto:shin3t72@gmail.com)<br>🐦 [https://x.com/shin3t72](https://x.com/shin3t72)<br>💻 [https://samizo-aitl.github.io/](https://samizo-aitl.github.io/) |
 
 ---
 
 ## 📄 **License**
+> Open license allowing free use for education, research, and corporate training.
 
 | 📌 Item | Details |
-|--------|---------|
+|------|------|
 | **Type** | MIT License |
 | **Usage** | Free to use, modify, and redistribute |
 | **Recommended Uses** | Education, research, corporate training |
@@ -141,6 +144,7 @@ In practice, these are closely connected—**circuits depend on device physics, 
 ---
 
 ## 💬 **Feedback & ChangeLog**
+> Propose improvements via GitHub Discussions, and track updates in the ChangeLog.
 
-💬 **[Discuss Edusemi materials → Discussions](https://github.com/Samizo-AITL/Edusemi-v4x/discussions)**  
-📄 **[Revision History / ChangeLog](../revision_history.md)**
+[![💬 GitHub Discussions](https://img.shields.io/badge/💬%20GitHub-Discussions-brightgreen?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/discussions)
+[![📄 ChangeLog](https://img.shields.io/badge/📄%20View-ChangeLog-orange?logo=markdown)](revision_history.md)
