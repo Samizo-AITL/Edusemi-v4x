@@ -14,6 +14,34 @@ From version 4.0 onward, updates are maintained in the new repository `Edusemi-v
 
 ---
 
+## 🆕 v4.4（2025年8月14日 / August 14, 2025）  
+**関連プロジェクト・著者情報・フィードバック部分のUI改善と英語版整備**  
+**Improved UI for Related Projects, Author Info, and Feedback sections; added English version**
+
+🔹 関連プロジェクト一覧を **「View Site / View Repo」バッジ式** に統一  
+  - 日英両版に対応  
+  - 外部リンクとリポジトリリンクを視覚的に明確化  
+Standardized Related Projects list with “View Site / View Repo” badges  
+  - Supports both JP and EN versions  
+  - Clear visual separation of site and repo links
+
+🔹 著者情報テーブルの英語版を作成  
+  - 名前・経歴・専門領域・連絡先を日英併記で明確化  
+Added English Author Info table  
+  - Name, career, expertise, and contact in bilingual format
+
+🔹 フィードバック＆改訂履歴のリンクをバッジ化  
+  - GitHub Discussions と ChangeLog をカラー識別  
+Converted Feedback & ChangeLog links into badges  
+  - Color-coded GitHub Discussions and ChangeLog links
+
+🔹 英語版 `README.md` に対応する構造を統一  
+  - 日本語版との差分を最小化  
+Unified structure in English `README.md`  
+  - Minimized differences from JP version
+
+---
+
 ## 🆕 v4.3（2025年8月1日 / August 1, 2025）  
 **アナログ設計・製造差別化・先端ノード・メモリ評価を強化し、応用編と特別編を拡充**  
 **Expanded analog design, process-driven optimization, advanced nodes, and memory evaluation – strengthening the Applied and Special Editions**
