@@ -155,15 +155,35 @@ title: Edusemi-v4x/index.md
 ---
 
 ## 📄 **ライセンス | License**
-> オープンライセンスにより、教育・研究・社内研修などへの自由な利用が可能。  
-> *Open license allowing free use for education, research, and corporate training.*
+> コードと教材で異なるライセンスを適用しています。  
+> *Different licenses are applied to code and educational materials.*
 
-| 📌 項目 / Item | 内容 / Details |
-|------|------|
-| **ライセンス種別 / Type** | MITライセンス |
-| **利用条件 / Usage** | 自由に使用・改変・再配布が可能 |
-| **推奨利用 / Recommended Uses** | 教育・研究・社内研修など |
+### 🖥 **ソースコード | Source Code**
+- **ライセンス種別 / Type**： [MIT License](https://opensource.org/licenses/MIT)  
+- **利用条件 / Usage**： 自由に使用・改変・再配布が可能（商用利用可）  
+  *Free to use, modify, and redistribute (commercial use allowed)*  
+- **推奨利用 / Recommended Uses**： 自動化スクリプト、設計ツール、EDA連携コード  
+  *Automation scripts, design tools, EDA integration code*
 
+### 📚 **教材（文書・図版）| Educational Materials (Documents & Figures)**
+- **ライセンス種別 / Type**： [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)  
+- **利用条件 / Usage**： 表示必須、非営利利用のみ、同一条件での継承が必要  
+  *Attribution required, non-commercial use only, share alike under the same terms*  
+- **推奨利用 / Recommended Uses**： 教育・研究・社内研修・講義資料  
+  *Education, research, internal corporate training, lecture materials*
+
+### 📌 **利用例 / Usage Examples**
+| 種別 / Type | 可否 / Allowed? | 備考 / Notes |
+|-------------|----------------|--------------|
+| 大学講義での教材利用<br>*Use in university lectures* | ✅ | 出典表示を行うこと<br>*Must include attribution* |
+| 社内研修での利用<br>*Use in corporate training* | ✅ | 非営利目的に限る<br>*Non-commercial only* |
+| 商用出版物への転載<br>*Reproduction in commercial publications* | ❌ | CC BY-NC-SAでは不可<br>*Not allowed under CC BY-NC-SA* |
+| 自動化コードの商用製品組込み<br>*Integration of automation code into commercial products* | ✅ | MIT適用のため可能<br>*Allowed under MIT* |
+
+⚠ **注意 / Note**  
+- コード（MIT）と教材（CC BY-NC-SA）のライセンスは**混在不可**です。利用するコンテンツのライセンスを必ず確認してください。  
+  *MIT and CC BY-NC-SA licenses cannot be mixed. Always verify the license of the content you use.*
+  
 ---
 
 ## 💬 **フィードバックと改訂履歴 | Feedback & ChangeLog**
