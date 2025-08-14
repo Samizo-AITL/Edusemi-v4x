@@ -8,6 +8,8 @@ title: SystemDKにおける熱・応力・ノイズ制約の設計対応
 # 📦 特別編 第2a章：SystemDKにおける熱・応力・ノイズ制約の設計対応  
 **Special Chapter 2a: Design Handling of Thermal, Stress, and Noise Constraints in SystemDK**
 
+[![Samizo-AITLポータルサイトに戻る](https://img.shields.io/badge/Samizo--AITL%20ポータルサイトに戻る-brightgreen)](https://samizo-aitl.github.io/) [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 ---
 
 ## 📘 概要｜Overview
