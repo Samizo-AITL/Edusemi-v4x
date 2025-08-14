@@ -144,6 +144,13 @@ title: Edusemi-v4x/index.md
 > 本教材の企画・執筆者。半導体・インクジェット分野での実務経験を持ち、教育と実装を融合した教材開発を行う。  
 > *Author with professional background in semiconductors and inkjet actuators, creating materials integrating theory and practice.*
 
+| 📌 項目 / Item | 内容 / Details |
+|------|------|
+| **氏名 / Name** | 三溝 真一（Shinichi Samizo）<br>*Shinichi Samizo* |
+| **学歴 / Education** | 信州大学大学院 電気電子工学 修了<br>*M.S. in Electrical and Electronic Engineering, Shinshu University* |
+| **経歴 / Career** | 元 セイコーエプソン株式会社 技術者（1997年〜）<br>*Former Engineer at Seiko Epson Corporation (since 1997)* |
+| **経験領域 / Expertise** | 半導体デバイス（ロジック・メモリ・高耐圧混載）<br>*Semiconductor devices (logic, memory, high-voltage mixed integration)*<br>インクジェット薄膜ピエゾアクチュエータ<br>*Inkjet thin-film piezo actuators*<br>PrecisionCoreプリントヘッド製品化・BOM管理・ISO教育<br>*Productization of PrecisionCore printheads, BOM management, and ISO training* |
+| **連絡先 / Contact** | ✉️ [shin3t72@gmail.com](mailto:shin3t72@gmail.com)<br>🐦 [https://x.com/shin3t72](https://x.com/shin3t72)<br>💻 [https://samizo-aitl.github.io/](https://samizo-aitl.github.io/) |
 
 ---
 
