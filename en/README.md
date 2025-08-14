@@ -46,65 +46,57 @@ In practice, these are closely connected—**circuits depend on device physics, 
 
 ---
 
-## 🧭 **Fundamentals**
-> Systematically covers **semiconductor physics, logic design, and process technology**—the foundation of all applications.
-
+## 🧭 Fundamentals
 | 📖 Chapter | 📚 Title | 📝 Summary |
 |----|--------|---------|
-| 🧭 **[1](../chapter1_materials/README.md)** | **Semiconductor Physics & Materials** | Band structure, PN junction, MOS field effect |
-| 🧭 **[2](../chapter2_comb_logic/README.md)** | **Digital Logic & Circuit Design** | Combinational/sequential circuits, FSM, HDL |
-| 🧭 **[3](../chapter3_process_evolution/README.md)** | **Process Technology & Scaling** | Node evolution, interconnect, lithography, reliability |
-| 🧭 **[4](../chapter4_mos_characteristics/README.md)** | **MOS Characteristics** | Dimensions, characteristics, PDK, design rules |
-| 🧭 **[5a](../chapter5a_spec_module_if/README.md)** | **Spec Definition & Interface Design** | Upstream process, module selection, PoC connectivity |
-| 🧭 **[5](../chapter5_soc_design_flow/README.md)** | **SoC Design Flow** | RTL, P&R, DRC/LVS, timing |
-| 🧭 **[6](../chapter6_test_and_package/README.md)** | **Test & Packaging** | ETEST, failure analysis, reliability testing, shipment |
-| 🧭 **[7](../chapter7_design_review_and_org/README.md)** | **Design Review & Collaboration** | SRAM failure cases, DR structure, consensus building |
+| 🧭 **Chapter 1**<br>[![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/chapter1_materials/)<br>[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/chapter1_materials) | **Semiconductor Physics & Materials** | Band structure, PN junction, MOS field effect |
+| 🧭 **Chapter 2**<br>[![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/chapter2_comb_logic/)<br>[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/chapter2_comb_logic) | **Digital Logic & Circuit Design** | Combinational/sequential circuits, FSM, HDL |
+| 🧭 **Chapter 3**<br>[![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/chapter3_process_evolution/)<br>[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/chapter3_process_evolution) | **Process Technology & Scaling** | Node evolution, interconnect, lithography, reliability |
+| 🧭 **Chapter 4**<br>[![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/chapter4_mos_characteristics/)<br>[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/chapter4_mos_characteristics) | **MOS Characteristics** | Dimensions, characteristics, PDK, design rules |
+| 🧭 **Chapter 5a**<br>[![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/chapter5a_spec_module_if/)<br>[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/chapter5a_spec_module_if) | **Spec Definition & Interface Design** | Upstream process, module selection, PoC connectivity |
+| 🧭 **Chapter 5**<br>[![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/chapter5_soc_design_flow/)<br>[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/chapter5_soc_design_flow) | **SoC Design Flow** | RTL, P&R, DRC/LVS, timing |
+| 🧭 **Chapter 6**<br>[![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/chapter6_test_and_package/)<br>[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/chapter6_test_and_package) | **Test & Packaging** | ETEST, failure analysis, reliability testing, shipment |
+| 🧭 **Chapter 7**<br>[![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/chapter7_design_review_and_org/)<br>[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/chapter7_design_review_and_org) | **Design Review & Collaboration** | SRAM failure cases, DR structure, consensus building |
 
 ---
 
-## 🧩 **Applications**
-> Builds on fundamentals to cover **memory, high-voltage, ESD, and analog/mixed-signal design**.
-
+## 🧩 Applications
 | 📖 Chapter | 📚 Title | 📝 Summary |
 |----|--------|---------|
-| 🧩 **[1](../d_chapter1_memory_technologies/README.md)** | **Memory Technologies** | SRAM, DRAM, FeRAM, MRAM |
-| 🧩 **[2](../d_chapter2_high_voltage_devices/README.md)** | **High-Voltage Devices** | LDMOS, field control, high-voltage design |
-| 🧩 **[3](../d_chapter3_esd_protection_design/README.md)** | **ESD Protection Design** | Protection devices, failure cases, test standards |
-| 🧩 **[4](../d_chapter4_layout_optimization/README.md)** | **Layout Optimization** | CMP dummy, IR drop, latch-up |
-| 🧩 **[5](../d_chapter5_analog_mixed_signal/README.md)** | **Analog / Mixed-Signal** | Analog design, noise, mixed integration |
-| 🧩 **[5a](../d_chapter5a_analog_mixed_signal/README.md)** | **0.18μm AMS Design** | Variability, matching, 1/f noise |
-| 🧩 **[5b](../d_chapter5b_ams_block_and_pdk/README.md)** | **AMS Differentiation from Manufacturing** | 1/f noise reduction, leveraging manufacturing |
-| 🧩 **[6](../d_chapter6_pdk_and_eda_environment/README.md)** | **PDK & EDA Environment** | DRC/LVS/ERC, PDK structure |
-| 🧩 **[7](../d_chapter7_automation_and_verification/README.md)** | **Automation & Verification** | OpenLane, CI/CD, lint |
-| 🧩 **[8](../d_chapter8_fsm_design_basics/README.md)** | **FSM Design** | Moore/Mealy, state diagrams, Verilog |
-| 🧩 **[9](../d_chapter9_pll_and_clock_design/README.md)** | **PLL & Clock Design** | PLL structure, jitter, STA considerations |
+| 🧩 **Chapter 1**<br>[![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/d_chapter1_memory_technologies/)<br>[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/d_chapter1_memory_technologies) | **Memory Technologies** | SRAM, DRAM, FeRAM, MRAM |
+| 🧩 **Chapter 2**<br>[![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/d_chapter2_high_voltage_devices/)<br>[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/d_chapter2_high_voltage_devices) | **High-Voltage Devices** | LDMOS, field control, high-voltage design |
+| 🧩 **Chapter 3**<br>[![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/d_chapter3_esd_protection_design/)<br>[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/d_chapter3_esd_protection_design) | **ESD Protection Design** | Protection devices, failure cases, test standards |
+| 🧩 **Chapter 4**<br>[![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/d_chapter4_layout_optimization/)<br>[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/d_chapter4_layout_optimization) | **Layout Optimization** | CMP dummy, IR drop, latch-up |
+| 🧩 **Chapter 5**<br>[![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/d_chapter5_analog_mixed_signal/)<br>[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/d_chapter5_analog_mixed_signal) | **Analog / Mixed-Signal** | Analog design, noise, mixed integration |
+| 🧩 **Chapter 5a**<br>[![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/d_chapter5a_analog_mixed_signal/)<br>[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/d_chapter5a_analog_mixed_signal) | **0.18μm AMS Design** | Variability, matching, 1/f noise |
+| 🧩 **Chapter 5b**<br>[![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/d_chapter5b_ams_block_and_pdk/)<br>[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/d_chapter5b_ams_block_and_pdk) | **AMS Differentiation from Manufacturing** | 1/f noise reduction, leveraging manufacturing |
+| 🧩 **Chapter 6**<br>[![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/d_chapter6_pdk_and_eda_environment/)<br>[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/d_chapter6_pdk_and_eda_environment) | **PDK & EDA Environment** | DRC/LVS/ERC, PDK structure |
+| 🧩 **Chapter 7**<br>[![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/d_chapter7_automation_and_verification/)<br>[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/d_chapter7_automation_and_verification) | **Automation & Verification** | OpenLane, CI/CD, lint |
+| 🧩 **Chapter 8**<br>[![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/d_chapter8_fsm_design_basics/)<br>[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/d_chapter8_fsm_design_basics) | **FSM Design** | Moore/Mealy, state diagrams, Verilog |
+| 🧩 **Chapter 9**<br>[![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/d_chapter9_pll_and_clock_design/)<br>[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/d_chapter9_pll_and_clock_design) | **PLL & Clock Design** | PLL structure, jitter, STA considerations |
 
 ---
 
-## 🛠 **Practice**
-> Hands-on training through **Python automation, Sky130 experiments, and OpenLane implementation**.
-
+## 🛠 Practice
 | 📖 Chapter | 📚 Title | 📝 Summary |
 |----|--------|---------|
-| 🛠 **[1](../e_chapter1_python_automation_tools/README.md)** | **Python Automation Tools** | SPICE analysis, OpenLane log processing |
-| 🛠 **[2](../e_chapter2_sky130_experiments/README.md)** | **Sky130 Experiments** | Vg–Id, Vth estimation, BTI/TDDB evaluation |
-| 🛠 **[3](../e_chapter3_openlane_practice/README.md)** | **OpenLane Practice** | Synthesis → P&R → GDS output |
-| 🛠 **[4](../e_chapter4_poc_spec_and_design/README.md)** | **PoC Design Development** | FSM, MUX, adder, testing |
-| 🛠 **[5](../e_chapter5_evaluation_and_report/README.md)** | **Evaluation & Reporting** | Area, waveform, timing, DRC/LVS |
+| 🛠 **Chapter 1**<br>[![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/e_chapter1_python_automation_tools/)<br>[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/e_chapter1_python_automation_tools) | **Python Automation Tools** | SPICE analysis, OpenLane log processing |
+| 🛠 **Chapter 2**<br>[![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/e_chapter2_sky130_experiments/)<br>[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/e_chapter2_sky130_experiments) | **Sky130 Experiments** | Vg–Id, Vth estimation, BTI/TDDB evaluation |
+| 🛠 **Chapter 3**<br>[![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/e_chapter3_openlane_practice/)<br>[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/e_chapter3_openlane_practice) | **OpenLane Practice** | Synthesis → P&R → GDS output |
+| 🛠 **Chapter 4**<br>[![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/e_chapter4_poc_spec_and_design/)<br>[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/e_chapter4_poc_spec_and_design) | **PoC Design Development** | FSM, MUX, adder, testing |
+| 🛠 **Chapter 5**<br>[![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/e_chapter5_evaluation_and_report/)<br>[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/e_chapter5_evaluation_and_report) | **Evaluation & Reporting** | Area, waveform, timing, DRC/LVS |
 
 ---
 
-## 📦 **Special Topics**
-> Focuses on **advanced nodes, chiplets, integrated control SoCs**, and other frontier topics.
-
+## 📦 Special Topics
 | 📖 Chapter | 📚 Title | 📝 Summary |
 |----|--------|---------|
-| 📦 **[1](../f_chapter1_finfet_gaa/README.md)** | **Advanced Nodes** | FinFET, GAA, CFET and their design impacts |
-| 📦 **[2](../f_chapter2_chiplet_pkg/README.md)** | **Chiplets & Advanced Packaging** | 2.5D/3D, TSV, heterogeneous integration |
-| 📦 **[2a](../f_chapter2a_systemdk/README.md)** | **SystemDK Design Constraints** | SI/PI, thermal, stress, EMI/EMC |
-| 📦 **[3](../f_chapter3_socsystem/README.md)** | **Integrated Control SoC** | FSM × PID × LLM (AITL) |
-| 📦 **[4](../f_chapter4_openlane/README.md)** | **OpenLane Implementation** | P&R of integrated control RTL |
-| 📦 **[5](../f_chapter5_dfm/README.md)** | **Design for Manufacturability** | DRC, LVS, DFM guidelines, Sky130 |
+| 📦 **Chapter 1**<br>[![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/f_chapter1_finfet_gaa/)<br>[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/f_chapter1_finfet_gaa) | **Advanced Nodes** | FinFET, GAA, CFET and their design impacts |
+| 📦 **Chapter 2**<br>[![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/f_chapter2_chiplet_pkg/)<br>[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/f_chapter2_chiplet_pkg) | **Chiplets & Advanced Packaging** | 2.5D/3D, TSV, heterogeneous integration |
+| 📦 **Chapter 2a**<br>[![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/f_chapter2a_systemdk/)<br>[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/f_chapter2a_systemdk) | **SystemDK Design Constraints** | SI/PI, thermal, stress, EMI/EMC |
+| 📦 **Chapter 3**<br>[![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/f_chapter3_socsystem/)<br>[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/f_chapter3_socsystem) | **Integrated Control SoC** | FSM × PID × LLM (AITL) |
+| 📦 **Chapter 4**<br>[![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/f_chapter4_openlane/)<br>[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/f_chapter4_openlane) | **OpenLane Implementation** | P&R of integrated control RTL |
+| 📦 **Chapter 5**<br>[![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/f_chapter5_dfm/)<br>[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/f_chapter5_dfm) | **Design for Manufacturability
 
 ---
 
