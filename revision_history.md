@@ -1,3 +1,10 @@
+---
+layout: default
+title: 改訂履歴 / ChangeLog  
+---
+
+---
+
 # 📘 改訂履歴 / ChangeLog
 
 このファイルは、Edusemi プロジェクトのバージョン別改訂内容を記録するものです。  
