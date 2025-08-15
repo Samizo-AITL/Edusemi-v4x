@@ -21,6 +21,21 @@ title: Edusemi-v4x/en/index.md
 
 ---
 
+## 📑 **Table of Contents**
+
+- [✍️ Introduction](#️-introduction)
+- [📘 Project Overview](#-project-overview)
+- [🧭 Fundamentals](#-fundamentals)
+- [🧩 Applications](#-applications)
+- [🛠 Practice](#-practice)
+- [📦 Special Topics](#-special-topics)
+- [🔗 Related Projects](#-related-projects)
+- [👤 Author](#-author)
+- [📄 License](#-license)
+- [💬 Feedback & ChangeLog](#-feedback--changelog)
+
+---
+
 ## ✍️ **Introduction**
 
 Semiconductor technology began with the **invention of the transistor** and rapidly evolved with the advent of the **MOS structure**.  
