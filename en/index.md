@@ -154,12 +154,13 @@ In practice, these are closely connected—**circuits depend on device physics, 
 | **Education** | M.Eng., Electrical and Electronic Engineering, Shinshu University |
 | **Career** | Former engineer at Seiko Epson Corporation (1997–) |
 | **Expertise** | Semiconductor devices (logic, memory, high-voltage mixed)<br>Thin-film piezoelectric actuators for inkjet<br>PrecisionCore printhead productization, BOM management, ISO training |
-| **Contact** | ✉️ [shin3t72@gmail.com](mailto:shin3t72@gmail.com)<br>🐦 [https://x.com/shin3t72](https://x.com/shin3t72)<br>💻 [https://samizo-aitl.github.io/](https://samizo-aitl.github.io/) |
+| **Contact** | ✉️ [Email](mailto:shin3t72@gmail.com) / 🐦 [X](https://x.com/shin3t72) / 💻 [GitHub](https://samizo-aitl.github.io/) |
 
 ---
 
 
 ## 📄 **License**
+[![Hybrid License](https://img.shields.io/badge/license-Hybrid-blueviolet)](https://samizo-aitl.github.io/Edusemi-v4x/#-ライセンス--license)
 > Adopts a hybrid licensing model according to the nature of the materials, code, and diagrams.  
 > *Hybrid licensing based on the nature of the materials, code, and diagrams.*
 
