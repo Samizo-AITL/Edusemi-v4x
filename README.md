@@ -10,7 +10,7 @@ title: Edusemi-v4x/README.md
 
 [![Samizo-AITLポータルサイトに戻る](https://img.shields.io/badge/Samizo--AITL%20ポータルサイトに戻る-brightgreen)](https://samizo-aitl.github.io/) 
 
-> 🆕 **最新の改訂内容は [ChangeLog](revision_history.md) から確認できます。**  
+> 🆕 **最新の改訂内容は [改訂履歴　/ ChangeLog](revision_history.md) から確認できます。**  
 > *Check the latest updates in the [ChangeLog](revision_history.md).*
 
 <p align="right">
@@ -32,16 +32,16 @@ title: Edusemi-v4x/README.md
 ---
 
 ## 📑 目次 | Table of Contents
-1. ✍️ [はじめに / Introduction](#️-はじめに--introduction)
-2. 📘 [プロジェクト概要 / Project Overview](#-プロジェクト概要--project-overview)
-3. 🧭 [基礎編 / Fundamentals](#-基礎編--fundamentals)
-4. 🧩 [応用編 / Applications](#-応用編--applications)
-5. 🛠 [実践編 / Practice](#-実践編--practice)
-6. 📦 [特別編 / Special Topics](#-特別編--special-topics)
-7. 🔗 [関連プロジェクト / Related Projects](#-関連プロジェクト--related-projects)
-8. 👤 [執筆者情報 / Author](#-執筆者情報--author)
-9. 📄 [ライセンス / License](#-ライセンス--license)
-10. 💬 [フィードバック / Feedback](#-フィードバック--feedback)
+1. [✍️ はじめに / Introduction](#introduction)
+2. [📘 プロジェクト概要 / Project Overview](#project-overview)
+3. [🧭 基礎編 / Fundamentals](#fundamentals)
+4. [🧩 応用編 / Applications](#applications)
+5. [🛠 実践編 / Practice](#practice)
+6. [📦 特別編 / Special Topics](#special-topics)
+7. [🔗 関連プロジェクト / Related Projects](#related-projects)
+8. [👤 執筆者情報 / Author](#author)
+9. [📄 ライセンス / License](#license)
+10. [💬 フィードバック / Feedback](#feedback)
    
 ---
 
