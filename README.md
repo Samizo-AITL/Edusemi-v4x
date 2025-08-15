@@ -19,6 +19,9 @@ title: Edusemi-v4x/README.md
 | 🇯🇵 Japanese | [![🌐 GitHub Pages JP](https://img.shields.io/badge/GitHub%20Pages-日本語版-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/) | [![💻 GitHub Repo JP](https://img.shields.io/badge/GitHub-日本語版-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x) |
 | 🇺🇸 English | [![🌐 GitHub Pages EN](https://img.shields.io/badge/GitHub%20Pages-English-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/en/) | [![💻 GitHub Repo EN](https://img.shields.io/badge/GitHub-English-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/en) |
 
+[![Last Update](https://img.shields.io/badge/Last_Update-2025--08--15-blue)](https://github.com/Samizo-AITL/Edusemi-v4x/blob/main/CHANGELOG.md)
+[![ChangeLog](https://img.shields.io/badge/View-ChangeLog-orange)](https://github.com/Samizo-AITL/Edusemi-v4x/blob/main/CHANGELOG.md)
+
 ---
 
 ## 📑 目次 | Table of Contents
