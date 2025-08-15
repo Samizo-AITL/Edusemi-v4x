@@ -9,7 +9,6 @@ title: Edusemi-v4x/index.md
 🇺🇸 *Foundational Educational Materials for Semiconductor Product Development*
 
 [![Samizo-AITLポータルサイトに戻る](https://img.shields.io/badge/Samizo--AITL%20ポータルサイトに戻る-brightgreen)](https://samizo-aitl.github.io/)   
-
 [![Hybrid License](https://img.shields.io/badge/license-Hybrid-blueviolet)](https://samizo-aitl.github.io/Edusemi-v4x/#-ライセンス--license)
 
 > 🆕 **最新の改訂内容は [改訂履歴 / ChangeLog](revision_history.md) から確認できます。**  
@@ -177,11 +176,12 @@ title: Edusemi-v4x/index.md
 | **学歴 / Education** | 信州大学大学院 電気電子工学 修了<br>*M.S. in Electrical and Electronic Engineering, Shinshu University* |
 | **経歴 / Career** | 元 セイコーエプソン株式会社 技術者（1997年〜）<br>*Former Engineer at Seiko Epson Corporation (since 1997)* |
 | **経験領域 / Expertise** | 半導体デバイス（ロジック・メモリ・高耐圧混載）<br>*Semiconductor devices (logic, memory, high-voltage mixed integration)*<br>インクジェット薄膜ピエゾアクチュエータ<br>*Inkjet thin-film piezo actuators*<br>PrecisionCoreプリントヘッド製品化・BOM管理・ISO教育<br>*Productization of PrecisionCore printheads, BOM management, and ISO training* |
-| **連絡先 / Contact** | ✉️ [shin3t72@gmail.com](mailto:shin3t72@gmail.com)<br>🐦 [https://x.com/shin3t72](https://x.com/shin3t72)<br>💻 [https://samizo-aitl.github.io/](https://samizo-aitl.github.io/) |
+| **連絡先 / Contact** | ✉️ [Email](mailto:shin3t72@gmail.com) / 🐦 [X](https://x.com/shin3t72) / 💻 [GitHub](https://samizo-aitl.github.io/) |
 
 ---
 
 ## 📄 **ライセンス | License**
+[![Hybrid License](https://img.shields.io/badge/license-Hybrid-blueviolet)](https://samizo-aitl.github.io/Edusemi-v4x/#-ライセンス--license)
 > 教材・コード・図表の性質に応じたハイブリッドライセンスを採用。  
 > *Hybrid licensing based on the nature of the materials, code, and diagrams.*
 
