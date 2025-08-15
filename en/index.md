@@ -6,9 +6,18 @@ title: Edusemi-v4x/en/index.md
 ---
 
 # 🎓 **Edusemi-v4x | Foundational Educational Materials for Semiconductor Product Development**  
-🇯🇵 *半導体プロダクト開発のための基礎教育教材*
 
 [![Back to Samizo-AITL Portal](https://img.shields.io/badge/Back%20to%20Samizo--AITL%20Portal-brightgreen)](https://samizo-aitl.github.io/en) 
+
+> 🆕 **Check the latest updates in the [ChangeLog](../revision_history.md).**  
+> *Review all recent modifications in the [ChangeLog](../revision_history.md).*
+
+<p align="right">
+  <img src="https://img.shields.io/badge/Last%20Update-2025--08--15-orange" alt="Last Update">
+  <a href="../revision_history.md">
+    <img src="https://img.shields.io/badge/View-ChangeLog-blue?logo=markdown" alt="View ChangeLog">
+  </a>
+</p>
 
 ---
 
@@ -32,7 +41,7 @@ title: Edusemi-v4x/en/index.md
 - [🔗 Related Projects](#-related-projects)
 - [👤 Author](#-author)
 - [📄 License](#-license)
-- [💬 Feedback & ChangeLog](#-feedback--changelog)
+- [💬 Feedback](#-feedback)
 
 ---
 
@@ -161,9 +170,7 @@ In practice, these are closely connected—**circuits depend on device physics, 
 
 ---
 
-## 💬 **Feedback & ChangeLog**
-> Suggestions and discussions are welcome via GitHub Discussions.  
-> The update history is published in the ChangeLog.
+## 💬 **Feedback**
+> Propose improvements or start discussions via GitHub Discussions.
 
-[![💬 GitHub Discussions](https://img.shields.io/badge/💬%20GitHub-Discussions-brightgreen?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/discussions)  
-[![📄 ChangeLog](https://img.shields.io/badge/📄%20View-ChangeLog-orange?logo=markdown)]( ../revision_history.md)
+[![💬 GitHub Discussions](https://img.shields.io/badge/💬%20GitHub-Discussions-brightgreen?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/discussions)
