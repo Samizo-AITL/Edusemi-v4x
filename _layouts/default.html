@@ -7,8 +7,31 @@
 
     <!-- Base theme CSS (GitHub Pages 標準のまま) -->
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-    <!-- Edusemi custom CSS（全ページ適用。ここだけ追加） -->
+    <!-- Edusemi custom CSS（全ページ適用） -->
     <link rel="stylesheet" href="{{ '/assets/css/edusemi.css' | relative_url }}">
+
+    <!-- ✅ MathJax (CHTML) for LaTeX math -->
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']],
+          displayMath: [['$$', '$$'], ['\\[', '\\]']]
+        },
+        chtml: { scale: 1.0 },
+        options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+      };
+    </script>
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+    <!-- ✅ Mermaid for diagrams (optional on pages that include ```mermaid blocks) -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js" defer></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        if (window.mermaid) {
+          mermaid.initialize({ startOnLoad: true });
+        }
+      });
+    </script>
   </head>
   <body>
     <main class="page-content" aria-label="Content">
