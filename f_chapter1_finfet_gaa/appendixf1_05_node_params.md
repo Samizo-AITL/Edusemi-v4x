@@ -7,6 +7,8 @@ layout: default
 
 # 📊 Parameter Comparison Table for FinFET and GAA Generations
 
+[![Hybrid License](https://img.shields.io/badge/license-Hybrid-blueviolet)](./README.md#📄-ライセンス--license)
+
 ---
 
 ## 🔄 NMOS / PMOS Parameter Comparison Table (22nm–1.4nm, Typical @25℃, BSIM-CMG)
