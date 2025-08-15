@@ -31,6 +31,7 @@ title: Edusemi-v4x/index.md
 7. [関連プロジェクト / Related Projects](#-関連プロジェクト--related-projects)
 8. [執筆者情報 / Author](#-執筆者情報--author)
 9. [ライセンス / License](#-ライセンス--license)
+10. [フィードバックと改訂履歴 / Feedback & ChangeLog](#-フィードバックと改訂履歴--feedback--changelog)
    
 ---
 
