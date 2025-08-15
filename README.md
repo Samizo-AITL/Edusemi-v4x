@@ -10,7 +10,7 @@ title: Edusemi-v4x/README.md
 
 [![Samizo-AITLポータルサイトに戻る](https://img.shields.io/badge/Samizo--AITL%20ポータルサイトに戻る-brightgreen)](https://samizo-aitl.github.io/) 
 
-> 🆕 **最新の改訂内容は [改訂履歴　/ ChangeLog](revision_history.md) から確認できます。**  
+> 🆕 **最新の改訂内容は [改訂履歴 / ChangeLog](revision_history.md) から確認できます。**  
 > *Check the latest updates in the [ChangeLog](revision_history.md).*
 
 <p align="right">
