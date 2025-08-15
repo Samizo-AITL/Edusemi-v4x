@@ -8,6 +8,8 @@ title: FinFET / GAA / CFET 各ノードの構造パラメータ比較
 # 🧬 FinFET / GAA / CFET 各ノードの構造パラメータ比較  
 **Node Structural Parameters: $n$, $H$, $W$ for FinFET, GAA, and CFET**
 
+[![Hybrid License](https://img.shields.io/badge/license-Hybrid-blueviolet)](./README.md#📄-ライセンス--license)
+
 ---
 
 ## 📘 概要 / Overview
