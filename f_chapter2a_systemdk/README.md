@@ -8,6 +8,8 @@ title: 特別編 第2a章　SystemDKにおける熱・応力・ノイズ制約�
 # 📦 特別編 第2a章：SystemDKにおける熱・応力・ノイズ制約の設計対応  
 **Special Chapter 2a: Design Handling of Thermal, Stress, and Noise Constraints in SystemDK**
 
+[![Hybrid License](https://img.shields.io/badge/license-Hybrid-blueviolet)](./README.md#📄-ライセンス--license)
+
 ---
 
 ## 📘 概要｜Overview
