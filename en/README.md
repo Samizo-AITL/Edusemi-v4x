@@ -9,6 +9,8 @@ title: Edusemi-v4x/en/README.md
 
 [![Back to Samizo-AITL Portal](https://img.shields.io/badge/Back%20to%20Samizo--AITL%20Portal-brightgreen)](https://samizo-aitl.github.io/en) 
 
+[![Hybrid License](https://img.shields.io/badge/license-Hybrid-blueviolet)](https://samizo-aitl.github.io/Edusemi-v4x/#-ライセンス--license)
+
 > 🆕 **Check the latest updates in the [ChangeLog](../revision_history.md).**  
 > *Review all recent modifications in the [ChangeLog](../revision_history.md).*
 
