@@ -32,16 +32,16 @@ title: Edusemi-v4x/en/README.md
 
 ## 📑 **Table of Contents**
 
-- [✍️ Introduction](#introduction)
-- [📘 Project Overview](#project-overview)
-- [🧭 Fundamentals](#fundamentals)
-- [🧩 Applications](#applications)
-- [🛠 Practice](#practice)
-- [📦 Special Topics](#special-topics)
-- [🔗 Related Projects](#related-projects)
-- [👤 Author](#author)
-- [📄 License](#license)
-- [💬 Feedback](#feedback)
+1. [✍️ Introduction](#️-introduction)
+2. [📘 Project Overview](#-project-overview)
+3. [🧭 Fundamentals](#-fundamentals)
+4. [🧩 Applications](#-applications)
+5. [🛠 Practice](#-practice)
+6. [📦 Special Topics](#-special-topics)
+7. [🔗 Related Projects](#-related-projects)
+8. [👤 Author](#-author)
+9. [📄 License](#-license)
+10. [💬 Feedback](#-feedback)
   
 ---
 
