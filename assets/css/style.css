@@ -138,3 +138,26 @@ footer p {
     width: 100% !important;
   }
 }
+
+/* ===== ToCアンカーずれ対策 & スムーススクロール ===== */
+html { scroll-behavior: smooth; }
+h1, h2, h3, h4 { scroll-margin-top: 80px; }
+
+/* ===== コンテンツ幅の安定化（main だけを中央寄せ）===== */
+main {
+  max-width: 900px;       /* 880〜960pxでお好み調整 */
+  margin: 0 auto;
+  padding: 1.5rem 1rem;   /* 既存bodyのpaddingが強い場合は軽めに */
+}
+
+/* ===== 表のモバイル対策（横スクロール可） ===== */
+table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+table thead, table tbody, table tr { width: 100%; }
+
+/* ===== 見出しのボーダー調整（h1は下線なし推奨） ===== */
+h1 { border-bottom: none; margin-bottom: 1rem; }
+h2, h3, h4 { border-bottom: 1px solid #eaecef; }
+
+/* ===== バッジ/ボタンの並びが崩れる場合の微調整（任意） ===== */
+a img { vertical-align: middle; }
+
