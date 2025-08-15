@@ -8,27 +8,40 @@
   <meta name="author" content="Shinichi Samizo">
   <meta name="theme-color" content="#1d4ed8">
 
-  <!-- Base theme CSS -->
+  {%- comment -%} Canonical（末尾スラッシュの揺れ対策にも） {%- endcomment -%}
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+
+  {%- comment -%} Open Graph / Twitter Card {%- endcomment -%}
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ page.title | default: site.title | escape }}">
+  <meta property="og:description" content="{{ page.excerpt | default: site.description | default: 'Edusemi 教育ポータル' | strip_newlines | escape }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:image" content="{{ site.social_image | default: '/assets/og-image.png' | absolute_url }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ page.title | default: site.title | escape }}">
+  <meta name="twitter:description" content="{{ page.excerpt | default: site.description | default: 'Edusemi 教育ポータル' | strip_newlines | escape }}">
+  <meta name="twitter:image" content="{{ site.social_image | default: '/assets/og-image.png' | absolute_url }}">
+
+  {%- comment -%} Base theme CSS → Edusemi overrides の順 {%- endcomment -%}
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-  <!-- Edusemi custom CSS (テーマの後に読み込み) -->
   <link rel="stylesheet" href="{{ '/assets/css/edusemi.css' | relative_url }}">
   <link rel="icon" href="{{ '/assets/favicon.ico' | relative_url }}">
 
-  <!-- ✅ MathJax (CHTMLで統一) -->
+  {# ✅ MathJax（CHTML） #}
   <script>
     window.MathJax = {
       tex: {
         inlineMath: [['$', '$'], ['\\(', '\\)']],
         displayMath: [['$$', '$$'], ['\\[', '\\]']]
       },
-      chtml: { scale: 1.0 },   // CHTMLレンダラ設定
+      chtml: { scale: 1.0 },
       options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
     };
   </script>
-  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 
-  <!-- ✅ Mermaid.js -->
-  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js" defer></script>
+  {# ✅ Mermaid.js #}
+  <script defer src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function(){
       if (window.mermaid) {
@@ -38,8 +51,16 @@
   </script>
 </head>
 
-<body>
-  <main class="wrapper">
+{%- comment -%}
+  左寄せ版にしたいページは Front Matter に `layout_left: true` を付ける。
+  style.css の `.layout-left main, .layout-left footer { margin-left:0; margin-right:auto; }` が効く。
+{%- endcomment -%}
+<body{% if page.layout_left %} class="layout-left"{% endif %}>
+
+  <!-- アクセシビリティ：キーボードで本文直行 -->
+  <a href="#content" class="sr-only sr-only-focusable">本文へスキップ</a>
+
+  <main id="content" class="wrapper">
     {{ content }}
   </main>
 
