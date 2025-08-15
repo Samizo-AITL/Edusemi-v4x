@@ -1,176 +1,115 @@
 /* =========================
-   Edusemi-v4x Layout & Theme
+   Edusemi カスタムスタイル
    ========================= */
 
-/* テーマ変数（ライト / ダーク） */
-:root{
-  --bg:#ffffff;
-  --fg:#24292e;       /* GitHubに近い本文色 */
-  --muted:#6b7280;    /* 補足文字 */
-  --brand:#1d4ed8;    /* 青（リンク・アクセント） */
-  --brand-2:#0ea5e9;  /* 2nd青 */
-  --accent:#16a34a;   /* 緑（コールアウト） */
-  --table-h:#f6f8fa;  /* テーブルヘッダ背景 */
-  --line:#e5e7eb;     /* 淡い罫線 */
-  --btn-bg:#111827;   /* ボタン背景 */
-  --btn-fg:#ffffff;
-}
-
-@media (prefers-color-scheme: dark){
-  :root{
-    --bg:#0b1020;
-    --fg:#e5e7eb;
-    --muted:#9ca3af;
-    --brand:#60a5fa;
-    --brand-2:#38bdf8;
-    --accent:#34d399;
-    --table-h:#0f172a;
-    --line:#1f2937;
-    --btn-bg:#111827;
-    --btn-fg:#e5e7eb;
-  }
-}
-
-/* ----- レイアウト（中央寄せを抑えて“GitHub風の締まり”に） ----- */
-body{
-  background:var(--bg);
-  color:var(--fg);
-}
-
-/* コンテンツ幅と寄せ方を制御 */
-.wrapper{
-  max-width: 920px;         /* GitHubより少し狭めで締まりを出す */
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 16px;
-  padding-right: 16px;
-}
-
-/* ヘッダ直下やページ上下の余白を詰める */
-main.wrapper{
-  padding-top: 12px;
-  padding-bottom: 28px;      /* 以前より詰め気味 */
-}
-
-/* 見出し・本文の行間をややタイトに（GitHub寄り） */
-h1,h2,h3,h4{ line-height:1.25; letter-spacing:.2px; }
-p, li{ line-height:1.7; }
-
-/* セクション上の余白を詰める（モバイルでも間延びしない） */
-h1{ font-weight:800; margin-top: 1.2rem; margin-bottom: .8rem; }
-h2{ margin-top: 1.8rem; margin-bottom: .8rem; border-left: 6px solid var(--brand); padding-left: .55rem; }
-h3{ margin-top: 1.2rem; margin-bottom: .6rem; }
-h4{ margin-top: 1rem; margin-bottom: .5rem; }
-
-/* アンカーリンクで飛んだ時に見出しが隠れないよう調整（固定ヘッダ分） */
-h1, h2, h3, h4 { scroll-margin-top: 80px; }
-
-/* 画像周りの余白を詰める（中央寄せを維持） */
-img{ margin: 1.0rem auto; }
-
-/* 区切り線の間延び防止 */
-hr{ border:none; border-top:1px solid var(--line); margin: 1.4rem 0; }
-
-/* ----- リンク / ボタン ----- */
-a{ color:var(--brand); text-decoration:none; }
-a:hover{ text-decoration:underline; }
-
-.btn-link, .btn-secondary{
-  display:inline-block; padding:.5rem .85rem; border-radius:.55rem;
-  font-weight:600; text-decoration:none; margin:.2rem .2rem 0 0;
-}
-.btn-link{ background:var(--btn-bg); color:var(--btn-fg); }
-.btn-link:hover{ filter:brightness(1.08); }
-.btn-secondary{ background:transparent; border:1px solid var(--line); color:var(--fg); }
-.btn-secondary:hover{ border-color:var(--brand-2); color:var(--brand-2); }
-
-/* ----- テーブル（見た目改善） ----- */
-table{
-  border-collapse: separate;
-  border-spacing: 0;
-  width: 100%;
-  margin: .8rem 0 1.3rem;
-  font-size: 0.97rem;
-  border:1px solid var(--line);
-  border-radius: .6rem;
-  overflow: hidden;
-}
-thead th{
-  background: var(--table-h);
-  font-weight: 700;
-  text-align: left;
-  border-bottom:1px solid var(--line);
-}
-th, td{ padding:.55rem .75rem; }
-tbody tr{ border-bottom:1px solid var(--line); }
-tbody tr:last-child{ border-bottom: none; }
-tbody tr:hover{ background: color-mix(in oklab, var(--table-h), transparent 70%); }
-
-/* ----- 引用（コールアウト化） ----- */
-blockquote{
-  border-left:4px solid var(--accent);
-  background: color-mix(in oklab, var(--accent), transparent 92%);
-  padding:.75rem .95rem; margin:1rem 0; border-radius:.4rem;
-}
-
-/* ----- コードブロック ----- */
-pre{
-  background-color: var(--table-h);
-  border:1px solid var(--line);
-  border-radius:6px;
-  padding: .9rem 1rem;
-  overflow:auto;
-}
-pre code{ font-size:.95rem; }
-
-/* ----- 目次のクリック感（タップ強調OFF） ----- */
-a, .btn-link, .btn-secondary { -webkit-tap-highlight-color: transparent; }
-
-/* ----- モバイル・タブレット最適化 ----- */
-@media (max-width: 1024px){
-  .wrapper{ max-width: 860px; }
-  h2{ margin-top: 1.6rem; }
-}
-@media (max-width: 768px){
-  .wrapper{ max-width: 720px; }
-  main.wrapper{ padding-top: 8px; padding-bottom: 20px; }
-  h1{ margin-top: .8rem; }
-  p, li{ line-height:1.65; }
-  th, td{ padding:.5rem .6rem; }
-}
-
-/* =========================
-   Edusemi 専用カスタム調整
-   ========================= */
-
-/* 全体の上下間隔をやや詰める */
+/* ページ全体の幅・中央寄せ制御 */
 .wrapper {
-  max-width: 980px;  /* 中央寄せを抑える（GitHub風） */
+  max-width: 980px; /* GitHub README に近い幅 */
   margin: 0 auto;
-  padding: 1.5rem 1.2rem;
+  padding: 1.5rem 1rem; /* 上下余白を少なめに */
 }
 
-/* 見出しの間隔を縮小（GitHub Pagesだと余白が広すぎるため） */
+/* 背景と文字色（light/dark共通） */
+body {
+  background-color: #ffffff;
+  color: #24292e;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* 見出しスタイル */
 h1, h2, h3, h4 {
-  margin-top: 1.8rem;
-  margin-bottom: 0.8rem;
+  font-weight: 600;
+  margin-top: 1.8rem; /* 上の余白を短めに */
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #eaecef;
+  padding-bottom: 0.3em;
+  line-height: 1.25;
+}
+h1 {
+  font-size: 1.8em;
+}
+h2 {
+  font-size: 1.5em;
+}
+h3 {
+  font-size: 1.25em;
 }
 
-/* 段落とリスト間の余白を詰める */
-p, ul, ol {
-  margin-top: 0.4rem;
-  margin-bottom: 0.8rem;
+/* 段落の間隔調整 */
+p {
+  margin-top: 0;
+  margin-bottom: 0.8em;
 }
 
-/* iPad・スマホでの中央寄り防止 */
-@media screen and (max-width: 1024px) {
-  body {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
+/* リンクカラー */
+a {
+  color: #0366d6;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* テーブルデザイン */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1em 0;
+}
+th, td {
+  border: 1px solid #dfe2e5;
+  padding: 0.5em 0.8em;
+}
+th {
+  background-color: #f6f8fa;
+  font-weight: 600;
+}
+
+/* 引用デザイン */
+blockquote {
+  padding: 0.6em 1em;
+  color: #6a737d;
+  border-left: 0.25em solid #dfe2e5;
+  background-color: #f6f8fa;
+  margin: 1em 0;
+}
+
+/* 画像 */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1em auto;
+}
+
+/* コードブロック */
+pre {
+  background-color: #f6f8fa;
+  padding: 0.8em;
+  border: 1px solid #d1d5da;
+  border-radius: 6px;
+  overflow-x: auto;
+}
+code {
+  background-color: #f6f8fa;
+  padding: 0.2em 0.4em;
+  font-size: 90%;
+  border-radius: 3px;
+}
+
+/* モバイル対応 */
+@media screen and (max-width: 768px) {
   .wrapper {
-    margin-left: 0;
-    margin-right: 0;
     padding: 1rem;
+  }
+  h1 {
+    font-size: 1.5em;
+  }
+  h2 {
+    font-size: 1.3em;
+  }
+  h3 {
+    font-size: 1.1em;
   }
 }
