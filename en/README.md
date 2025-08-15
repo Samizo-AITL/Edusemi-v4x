@@ -9,6 +9,7 @@ title: Edusemi-v4x/en/README.md
 
 [![Back to Samizo-AITL Portal](https://img.shields.io/badge/Back%20to%20Samizo--AITL%20Portal-brightgreen)](https://samizo-aitl.github.io/en) 
 
+
 ---
 
 ## 🔗 Official Links
@@ -31,7 +32,7 @@ title: Edusemi-v4x/en/README.md
 - [🔗 Related Projects](#-related-projects)
 - [👤 Author](#-author)
 - [📄 License](#-license)
-- [💬 Feedback & ChangeLog](#-feedback--changelog)
+- [💬 Feedback](#-feedback)
 
 ---
 
@@ -159,9 +160,7 @@ In practice, these are closely connected—**circuits depend on device physics, 
 
 ---
 
-## 💬 **Feedback & ChangeLog**
-> Suggestions and discussions are welcome via GitHub Discussions.  
-> The update history is published in the ChangeLog.
+## 💬 **Feedback**
+> Propose improvements or start discussions via GitHub Discussions.
 
-[![💬 GitHub Discussions](https://img.shields.io/badge/💬%20GitHub-Discussions-brightgreen?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/discussions)  
-[![📄 ChangeLog](https://img.shields.io/badge/📄%20View-ChangeLog-orange?logo=markdown)]( ../revision_history.md)
+[![💬 GitHub Discussions](https://img.shields.io/badge/💬%20GitHub-Discussions-brightgreen?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/discussions)
