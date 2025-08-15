@@ -32,17 +32,17 @@ title: Edusemi-v4x/index.md
 ---
 
 ## 📑 目次 | Table of Contents
-1. [はじめに / Introduction](#-はじめに--introduction)
-2. [プロジェクト概要 / Project Overview](#-プロジェクト概要--project-overview)
-3. [基礎編 / Fundamentals](#-基礎編--fundamentals)
-4. [応用編 / Applications](#-応用編--applications)
-5. [実践編 / Practice](#-実践編--practice)
-6. [特別編 / Special Topics](#-特別編--special-topics)
-7. [関連プロジェクト / Related Projects](#-関連プロジェクト--related-projects)
-8. [執筆者情報 / Author](#-執筆者情報--author)
-9. [ライセンス / License](#-ライセンス--license)
-10. [フィードバック / Feedback](#-フィードバック--feedback)
-   
+1. ✍️ [はじめに / Introduction](#️-はじめに--introduction)
+2. 📘 [プロジェクト概要 / Project Overview](#-プロジェクト概要--project-overview)
+3. 🧭 [基礎編 / Fundamentals](#-基礎編--fundamentals)
+4. 🧩 [応用編 / Applications](#-応用編--applications)
+5. 🛠 [実践編 / Practice](#-実践編--practice)
+6. 📦 [特別編 / Special Topics](#-特別編--special-topics)
+7. 🔗 [関連プロジェクト / Related Projects](#-関連プロジェクト--related-projects)
+8. 👤 [執筆者情報 / Author](#-執筆者情報--author)
+9. 📄 [ライセンス / License](#-ライセンス--license)
+10. 💬 [フィードバック / Feedback](#-フィードバック--feedback)
+
 ---
 
 ## ✍️ **はじめに | Introduction**
