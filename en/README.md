@@ -9,6 +9,15 @@ title: Edusemi-v4x/en/README.md
 
 [![Back to Samizo-AITL Portal](https://img.shields.io/badge/Back%20to%20Samizo--AITL%20Portal-brightgreen)](https://samizo-aitl.github.io/en) 
 
+> 🆕 **Check the latest updates in the [ChangeLog](../revision_history.md).**  
+> *Review all recent modifications in the [ChangeLog](../revision_history.md).*
+
+<p align="right">
+  <img src="https://img.shields.io/badge/Last%20Update-2025--08--15-orange" alt="Last Update">
+  <a href="../revision_history.md">
+    <img src="https://img.shields.io/badge/View-ChangeLog-blue?logo=markdown" alt="View ChangeLog">
+  </a>
+</p>
 
 ---
 
