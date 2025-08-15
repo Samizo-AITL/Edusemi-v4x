@@ -133,18 +133,21 @@ In practice, these are closely connected—**circuits depend on device physics, 
 ---
 
 ## 📄 **License**
-> Open license allowing free use for education, research, and corporate training.
+> Adopts a hybrid licensing model according to the nature of the materials, code, and diagrams.  
+> *Hybrid licensing based on the nature of the materials, code, and diagrams.*
 
-| 📌 Item | Details |
-|------|------|
-| **Type** | MIT License |
-| **Usage** | Free to use, modify, and redistribute |
-| **Recommended Uses** | Education, research, corporate training |
+| 📌 Item | License | Description |
+|------|------|------|
+| **Code** | [**MIT License**](https://opensource.org/licenses/MIT) | Free to use, modify, and redistribute |
+| **Text materials** | [**CC BY 4.0**](https://creativecommons.org/licenses/by/4.0/) or [**CC BY-SA 4.0**](https://creativecommons.org/licenses/by-sa/4.0/) | Attribution required, share-alike for BY-SA |
+| **Figures & diagrams** | [**CC BY-NC 4.0**](https://creativecommons.org/licenses/by-nc/4.0/) | Non-commercial use only |
+| **External references** | Follow the original license | Cite the original source |
 
 ---
 
 ## 💬 **Feedback & ChangeLog**
-> Propose improvements via GitHub Discussions, and track updates in the ChangeLog.
+> Suggestions and discussions are welcome via GitHub Discussions.  
+> The update history is published in the ChangeLog.
 
-[![💬 GitHub Discussions](https://img.shields.io/badge/💬%20GitHub-Discussions-brightgreen?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/discussions)
+[![💬 GitHub Discussions](https://img.shields.io/badge/💬%20GitHub-Discussions-brightgreen?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/discussions)  
 [![📄 ChangeLog](https://img.shields.io/badge/📄%20View-ChangeLog-orange?logo=markdown)](revision_history.md)
