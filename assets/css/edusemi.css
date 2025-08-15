@@ -1,4 +1,6 @@
-/* ========== Edusemi-v4x custom styles ========== */
+/* ========== Edusemi-v4x custom styles (final) ========== */
+
+/* ---------- Theme variables (light/dark) ---------- */
 :root{
   --bg: #ffffff;
   --fg: #1f2937;     /* slate-800 */
@@ -27,7 +29,27 @@
   }
 }
 
-/* Base */
+/* ---------- Layout width & general tightening ---------- */
+.markdown-body,
+.page,
+.site-content,
+.container,
+.wrapper{
+  max-width: 980px;           /* お好みで 860〜1080px */
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* 見出し・段落などの余白をタイトに */
+.markdown-body h1 { margin: 0.9em 0 0.45em; }
+.markdown-body h2 { margin: 0.85em 0 0.4em; }
+.markdown-body h3 { margin: 0.8em 0 0.35em; }
+.markdown-body p  { margin: 0.5em 0; line-height: 1.6; }
+.markdown-body ul,
+.markdown-body ol { margin: 0.45em 0 0.7em 1.3em; }
+.markdown-body img { margin: 6px 0; }
+
+/* ---------- Base ---------- */
 html, body{
   background:var(--bg);
   color:var(--fg);
@@ -44,7 +66,7 @@ em{ color: var(--brand-2); }
 
 hr{ border:none; border-top:1px solid var(--line); margin:2rem 0; }
 
-/* Emojis a little larger & aligned */
+/* Emojis slightly larger & anchor offset */
 h1 .emoji, h2 .emoji, h3 .emoji { font-size:1.05em; }
 h1, h2, h3 { scroll-margin-top: 80px; }
 
@@ -62,7 +84,30 @@ a:hover{ text-decoration:underline; }
 .btn-secondary{ background:transparent; border:1px solid var(--line); color:var(--fg); }
 .btn-secondary:hover{ border-color:var(--brand-2); color:var(--brand-2); }
 
-/* Tables */
+/* ---------- Tables (generic left align) ---------- */
+.markdown-body table{
+  width:100%;
+  table-layout:auto;
+  border-collapse:collapse;
+  margin: .8rem 0 1.2rem;
+  margin-left:0;                       /* 中央寄せ防止 */
+  border:1px solid var(--line);
+}
+.markdown-body th,
+.markdown-body td{
+  text-align:left;
+  vertical-align:top;
+  padding:.55rem .8rem;
+  border-bottom:1px solid var(--line);
+  word-break:break-word;
+}
+.markdown-body thead th{
+  background:var(--table-h);
+  font-weight:700;
+}
+.markdown-body tr:last-child td{ border-bottom:none; }
+
+/* ---------- Nicer table variant (use class 'nice-table') ---------- */
 table.nice-table{
   width:100%; border-collapse:separate; border-spacing:0;
   margin: .8rem 0 1.6rem; font-size:0.97rem;
@@ -77,7 +122,9 @@ table.nice-table td{
   padding:.55rem .8rem; border-bottom:1px solid var(--line);
 }
 table.nice-table tr:last-child td{ border-bottom:none; }
-table.nice-table tbody tr:hover{ background: color-mix(in oklab, var(--table-h), transparent 70%); }
+table.nice-table tbody tr:hover{
+  background: color-mix(in oklab, var(--table-h), transparent 70%);
+}
 
 /* Icon list */
 .icon-list{ list-style:none; padding-left:0; }
@@ -90,7 +137,7 @@ blockquote{
   padding:.8rem 1rem; margin:1rem 0; border-radius:.4rem;
 }
 
-/* Code fences inside markdown */
+/* Code fences */
 pre code{ font-size:.95rem; }
 
 /* Improve tap targets on mobile */
