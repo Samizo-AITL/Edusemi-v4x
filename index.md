@@ -29,7 +29,7 @@ title: Edusemi-v4x/index.md
 5. [実践編 / Practice](#-実践編--practice)
 6. [特別編 / Special Topics](#-特別編--special-topics)
 7. [関連プロジェクト / Related Projects](#-関連プロジェクト--related-projects)
-8. [執筆者情報 / Author ](#-執筆者情報--author-profile)
+8. [執筆者情報 / Author](#-執筆者情報--author)
 9. [ライセンス / License](#-ライセンス--license)
    
 ---
