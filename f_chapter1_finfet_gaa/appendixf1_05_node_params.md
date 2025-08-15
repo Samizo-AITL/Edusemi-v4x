@@ -7,7 +7,7 @@ layout: default
 
 # 📊 Parameter Comparison Table for FinFET and GAA Generations
 
-[![Hybrid License](https://img.shields.io/badge/license-Hybrid-blueviolet)](./README.md#📄-ライセンス--license)
+[![Hybrid License](https://img.shields.io/badge/license-Hybrid-blueviolet)](https://samizo-aitl.github.io/Edusemi-v4x/#-ライセンス--license)
 
 ---
 
