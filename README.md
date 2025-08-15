@@ -8,6 +8,13 @@ title: Edusemi-v4x/README.md
 # 🎓 **Edusemi-v4x｜半導体プロダクト開発のための基礎教育教材**  
 🇺🇸 *Foundational Educational Materials for Semiconductor Product Development*
 
+<p align="right">
+  <img src="https://img.shields.io/badge/Last%20Update-2025--08--15-orange" alt="Last Update">
+  <a href="revision_history.md">
+    <img src="https://img.shields.io/badge/View-ChangeLog-blue?logo=markdown" alt="View ChangeLog">
+  </a>
+</p>
+
 [![Samizo-AITLポータルサイトに戻る](https://img.shields.io/badge/Samizo--AITL%20ポータルサイトに戻る-brightgreen)](https://samizo-aitl.github.io/) 
 
 --- 
@@ -18,13 +25,6 @@ title: Edusemi-v4x/README.md
 |-----------------|----------------|-----------|
 | 🇯🇵 Japanese | [![🌐 GitHub Pages JP](https://img.shields.io/badge/GitHub%20Pages-日本語版-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/) | [![💻 GitHub Repo JP](https://img.shields.io/badge/GitHub-日本語版-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x) |
 | 🇺🇸 English | [![🌐 GitHub Pages EN](https://img.shields.io/badge/GitHub%20Pages-English-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/en/) | [![💻 GitHub Repo EN](https://img.shields.io/badge/GitHub-English-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/en) |
-
-<p align="right">
-  <img src="https://img.shields.io/badge/Last%20Update-2025--08--15-orange" alt="Last Update">
-  <a href="revision_history.md">
-    <img src="https://img.shields.io/badge/View-ChangeLog-blue?logo=markdown" alt="View ChangeLog">
-  </a>
-</p>
 
 ---
 
