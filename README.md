@@ -31,19 +31,6 @@ title: Edusemi-v4x/README.md
 
 ---
 
-## 📑 目次 | Table of Contents
-1. [✍️ はじめに / Introduction](#introduction)
-2. [📘 プロジェクト概要 / Project Overview](#project-overview)
-3. [🧭 基礎編 / Fundamentals](#fundamentals)
-4. [🧩 応用編 / Applications](#applications)
-5. [🛠 実践編 / Practice](#practice)
-6. [📦 特別編 / Special Topics](#special-topics)
-7. [🔗 関連プロジェクト / Related Projects](#related-projects)
-8. [👤 執筆者情報 / Author](#author)
-9. [📄 ライセンス / License](#license)
-10. [💬 フィードバック / Feedback](#feedback)
-
-
 ## 📑 **目次 | Table of Contents**
 
 1. [✍️ はじめに / Introduction](#-はじめに--introduction)
@@ -56,7 +43,6 @@ title: Edusemi-v4x/README.md
 8. [👤 執筆者情報 / Author](#-執筆者情報--author)
 9. [📄 ライセンス / License](#-ライセンス--license)
 10. [💬 フィードバック / Feedback](#-フィードバック--feedback)
-
 
 ---
 
