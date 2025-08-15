@@ -166,40 +166,22 @@ title: Edusemi-v4x/README.md
 ---
 
 ## 📄 **ライセンス | License**
-> コードと教材で異なるライセンスを適用しています。  
-> *Different licenses are applied to code and educational materials.*
+> 教材・コード・図表の性質に応じたハイブリッドライセンスを採用。  
+> *Hybrid licensing based on the nature of the materials, code, and diagrams.*
 
-### 🖥 **ソースコード | Source Code**
-- **ライセンス種別 / Type**： [**MIT License**](https://opensource.org/licenses/MIT)  
-- **利用条件 / Usage**： 自由に使用・改変・再配布が可能（商用利用可）  
-  *Free to use, modify, and redistribute (commercial use allowed)*  
-- **推奨利用 / Recommended Uses**： 自動化スクリプト、設計ツール、EDA連携コード  
-  *Automation scripts, design tools, EDA integration code*
+| 📌 項目 / Item | ライセンス / License | 説明 / Description |
+|------|------|------|
+| **コード（Code）** | [**MIT License**](https://opensource.org/licenses/MIT) | 自由に使用・改変・再配布が可能<br>*Free to use, modify, and redistribute* |
+| **教材テキスト（Text materials）** | [**CC BY 4.0**](https://creativecommons.org/licenses/by/4.0/) または [**CC BY-SA 4.0**](https://creativecommons.org/licenses/by-sa/4.0/) | 著者表示必須、継承条件あり（BY-SAの場合）<br>*Attribution required, share-alike for BY-SA* |
+| **図表・イラスト（Figures & diagrams）** | [**CC BY-NC 4.0**](https://creativecommons.org/licenses/by-nc/4.0/) | 非商用利用のみ許可<br>*Non-commercial use only* |
+| **外部引用（External references）** | 元ライセンスに従う<br>*Follow the original license* | 引用元を明記<br>*Cite the original source* |
 
-### 📚 **教材（文書・図版）| Educational Materials (Documents & Figures)**
-- **ライセンス種別 / Type**： [**CC BY-NC-SA 4.0**](https://creativecommons.org/licenses/by-nc-sa/4.0/)  
-- **利用条件 / Usage**： 表示必須、非営利利用のみ、同一条件での継承が必要  
-  *Attribution required, non-commercial use only, share alike under the same terms*  
-- **推奨利用 / Recommended Uses**： 教育・研究・社内研修・講義資料  
-  *Education, research, internal corporate training, lecture materials*
-
-### 📌 **利用例 / Usage Examples**
-| 種別 / Type | 可否 / Allowed? | 備考 / Notes |
-|-------------|----------------|--------------|
-| 大学講義での教材利用<br>*Use in university lectures* | ✅ | 出典表示を行うこと<br>*Must include attribution* |
-| 社内研修での利用<br>*Use in corporate training* | ✅ | 非営利目的に限る<br>*Non-commercial only* |
-| 商用出版物への転載<br>*Reproduction in commercial publications* | ❌ | CC BY-NC-SAでは不可<br>*Not allowed under CC BY-NC-SA* |
-| 自動化コードの商用製品組込み<br>*Integration of automation code into commercial products* | ✅ | MIT適用のため可能<br>*Allowed under MIT* |
-
-⚠ **注意 / Note**  
-- コード（MIT）と教材（CC BY-NC-SA）のライセンスは**混在不可**です。利用するコンテンツのライセンスを必ず確認してください。  
-  *MIT and CC BY-NC-SA licenses cannot be mixed. Always verify the license of the content you use.*
-  
 ---
 
 ## 💬 **フィードバックと改訂履歴 | Feedback & ChangeLog**
 > 改善提案や議論はGitHub Discussionsから、改訂履歴はChangeLogにて公開。  
 > *Propose improvements via GitHub Discussions, and track updates in the ChangeLog.*
 
-[![💬 GitHub Discussions](https://img.shields.io/badge/💬%20GitHub-Discussions-brightgreen?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/discussions)
+[![💬 GitHub Discussions](https://img.shields.io/badge/💬%20GitHub-Discussions-brightgreen?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/discussions)  
 [![📄 ChangeLog](https://img.shields.io/badge/📄%20View-ChangeLog-orange?logo=markdown)](revision_history.md)
+
