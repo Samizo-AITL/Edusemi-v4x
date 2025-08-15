@@ -138,3 +138,39 @@ a, .btn-link, .btn-secondary { -webkit-tap-highlight-color: transparent; }
   p, li{ line-height:1.65; }
   th, td{ padding:.5rem .6rem; }
 }
+
+/* =========================
+   Edusemi 専用カスタム調整
+   ========================= */
+
+/* 全体の上下間隔をやや詰める */
+.wrapper {
+  max-width: 980px;  /* 中央寄せを抑える（GitHub風） */
+  margin: 0 auto;
+  padding: 1.5rem 1.2rem;
+}
+
+/* 見出しの間隔を縮小（GitHub Pagesだと余白が広すぎるため） */
+h1, h2, h3, h4 {
+  margin-top: 1.8rem;
+  margin-bottom: 0.8rem;
+}
+
+/* 段落とリスト間の余白を詰める */
+p, ul, ol {
+  margin-top: 0.4rem;
+  margin-bottom: 0.8rem;
+}
+
+/* iPad・スマホでの中央寄り防止 */
+@media screen and (max-width: 1024px) {
+  body {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .wrapper {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 1rem;
+  }
+}
