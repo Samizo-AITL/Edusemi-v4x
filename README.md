@@ -41,7 +41,7 @@ title: Edusemi-v4x/README.md
 7. [関連プロジェクト / Related Projects](#-関連プロジェクト--related-projects)
 8. [執筆者情報 / Author](#-執筆者情報--author)
 9. [ライセンス / License](#-ライセンス--license)
-10. [フィードバックと改訂履歴 / Feedback & ChangeLog](#-フィードバックと改訂履歴--feedback--changelog)
+10. [フィードバック / Feedback](#-フィードバック--feedback)
    
 ---
 
@@ -188,10 +188,8 @@ title: Edusemi-v4x/README.md
 
 ---
 
-## 💬 **フィードバックと改訂履歴 | Feedback & ChangeLog**
-> 改善提案や議論はGitHub Discussionsから、改訂履歴はChangeLogにて公開。  
-> *Propose improvements via GitHub Discussions, and track updates in the ChangeLog.*
+## 💬 **フィードバック | Feedback**
+> 改善提案や議論はGitHub Discussionsからお願いします。  
+> *Propose improvements or start discussions via GitHub Discussions.*
 
-[![💬 GitHub Discussions](https://img.shields.io/badge/💬%20GitHub-Discussions-brightgreen?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/discussions)  
-[![📄 ChangeLog](https://img.shields.io/badge/📄%20View-ChangeLog-orange?logo=markdown)](revision_history.md)
-
+[![💬 GitHub Discussions](https://img.shields.io/badge/💬%20GitHub-Discussions-brightgreen?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/discussions)
