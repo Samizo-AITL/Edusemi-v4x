@@ -89,6 +89,17 @@ Edusemi-v4x/
 
 ---
 
+## 👤 **著者・ライセンス | Author & License**
+
+| 📌 項目 / Item | 📄 内容 / Details |
+|------|------|
+| **著者 / Author** | 三溝 真一（Shinichi Samizo） |
+| **GitHub** | [Samizo-AITL](https://github.com/Samizo-AITL) |
+| **Email** | [shin3t72@gmail.com](mailto:shin3t72@gmail.com) |
+| **ライセンス / License** | **Hybrid License**<br>コード / Code: [MIT](https://opensource.org/licenses/MIT)<br>教材テキスト / Text: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)<br>図表 / Figures: [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) |
+
+
+
 ## 👤 著者・ライセンス | Author & License
 
 | 項目 | 内容 | Details |
