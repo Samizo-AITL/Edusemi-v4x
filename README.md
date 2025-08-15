@@ -26,6 +26,16 @@ title: Edusemi-v4x/README.md
 
 </div>
 
+
+
+<p align="right">
+  <img src="https://img.shields.io/badge/Last%20Update-2025--08--15-orange" alt="Last Update">
+  <a href="revision_history.md">
+    <img src="https://img.shields.io/badge/View-ChangeLog-blue?logo=markdown" alt="View ChangeLog">
+  </a>
+</p>
+
+
 ---
 
 ## 📑 目次 | Table of Contents
