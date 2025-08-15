@@ -1,16 +1,18 @@
-/* ========== Edusemi-v4x custom styles (final) ========== */
+/* =========================
+   Edusemi-v4x Layout & Theme
+   ========================= */
 
-/* ---------- Theme variables (light/dark) ---------- */
+/* テーマ変数（ライト / ダーク） */
 :root{
-  --bg: #ffffff;
-  --fg: #1f2937;     /* slate-800 */
-  --muted:#6b7280;   /* slate-500 */
-  --brand:#1d4ed8;   /* blue-700 */
-  --brand-2:#0ea5e9; /* sky-500 */
-  --accent:#16a34a;  /* green-600 */
-  --table-h:#f8fafc; /* slate-50 */
-  --line:#e5e7eb;    /* slate-200 */
-  --btn-bg:#111827;  /* gray-900 */
+  --bg:#ffffff;
+  --fg:#24292e;       /* GitHubに近い本文色 */
+  --muted:#6b7280;    /* 補足文字 */
+  --brand:#1d4ed8;    /* 青（リンク・アクセント） */
+  --brand-2:#0ea5e9;  /* 2nd青 */
+  --accent:#16a34a;   /* 緑（コールアウト） */
+  --table-h:#f6f8fa;  /* テーブルヘッダ背景 */
+  --line:#e5e7eb;     /* 淡い罫線 */
+  --btn-bg:#111827;   /* ボタン背景 */
   --btn-fg:#ffffff;
 }
 
@@ -22,61 +24,59 @@
     --brand:#60a5fa;
     --brand-2:#38bdf8;
     --accent:#34d399;
-    --table-h:#0f172a; 
+    --table-h:#0f172a;
     --line:#1f2937;
     --btn-bg:#111827;
     --btn-fg:#e5e7eb;
   }
 }
 
-/* ---------- Layout width & general tightening ---------- */
-.markdown-body,
-.page,
-.site-content,
-.container,
-.wrapper{
-  max-width: 980px;           /* お好みで 860〜1080px */
-  margin: 0 auto;
-  padding: 0 16px;
-}
-
-/* 見出し・段落などの余白をタイトに */
-.markdown-body h1 { margin: 0.9em 0 0.45em; }
-.markdown-body h2 { margin: 0.85em 0 0.4em; }
-.markdown-body h3 { margin: 0.8em 0 0.35em; }
-.markdown-body p  { margin: 0.5em 0; line-height: 1.6; }
-.markdown-body ul,
-.markdown-body ol { margin: 0.45em 0 0.7em 1.3em; }
-.markdown-body img { margin: 6px 0; }
-
-/* ---------- Base ---------- */
-html, body{
+/* ----- レイアウト（中央寄せを抑えて“GitHub風の締まり”に） ----- */
+body{
   background:var(--bg);
   color:var(--fg);
 }
-h1,h2,h3{
-  line-height:1.25;
-  letter-spacing:.2px;
+
+/* コンテンツ幅と寄せ方を制御 */
+.wrapper{
+  max-width: 920px;         /* GitHubより少し狭めで締まりを出す */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
 }
-h1{ font-weight:800; }
-h2{ margin-top:2.2rem; border-left:6px solid var(--brand); padding-left:.6rem; }
-h3{ margin-top:1.6rem; }
-p, li{ line-height:1.8; }
-em{ color: var(--brand-2); }
 
-hr{ border:none; border-top:1px solid var(--line); margin:2rem 0; }
+/* ヘッダ直下やページ上下の余白を詰める */
+main.wrapper{
+  padding-top: 12px;
+  padding-bottom: 28px;      /* 以前より詰め気味 */
+}
 
-/* Emojis slightly larger & anchor offset */
-h1 .emoji, h2 .emoji, h3 .emoji { font-size:1.05em; }
-h1, h2, h3 { scroll-margin-top: 80px; }
+/* 見出し・本文の行間をややタイトに（GitHub寄り） */
+h1,h2,h3,h4{ line-height:1.25; letter-spacing:.2px; }
+p, li{ line-height:1.7; }
 
-/* Links */
+/* セクション上の余白を詰める（モバイルでも間延びしない） */
+h1{ font-weight:800; margin-top: 1.2rem; margin-bottom: .8rem; }
+h2{ margin-top: 1.8rem; margin-bottom: .8rem; border-left: 6px solid var(--brand); padding-left: .55rem; }
+h3{ margin-top: 1.2rem; margin-bottom: .6rem; }
+h4{ margin-top: 1rem; margin-bottom: .5rem; }
+
+/* アンカーリンクで飛んだ時に見出しが隠れないよう調整（固定ヘッダ分） */
+h1, h2, h3, h4 { scroll-margin-top: 80px; }
+
+/* 画像周りの余白を詰める（中央寄せを維持） */
+img{ margin: 1.0rem auto; }
+
+/* 区切り線の間延び防止 */
+hr{ border:none; border-top:1px solid var(--line); margin: 1.4rem 0; }
+
+/* ----- リンク / ボタン ----- */
 a{ color:var(--brand); text-decoration:none; }
 a:hover{ text-decoration:underline; }
 
-/* Buttons */
 .btn-link, .btn-secondary{
-  display:inline-block; padding:.55rem .9rem; border-radius:.6rem;
+  display:inline-block; padding:.5rem .85rem; border-radius:.55rem;
   font-weight:600; text-decoration:none; margin:.2rem .2rem 0 0;
 }
 .btn-link{ background:var(--btn-bg); color:var(--btn-fg); }
@@ -84,61 +84,57 @@ a:hover{ text-decoration:underline; }
 .btn-secondary{ background:transparent; border:1px solid var(--line); color:var(--fg); }
 .btn-secondary:hover{ border-color:var(--brand-2); color:var(--brand-2); }
 
-/* ---------- Tables (generic left align) ---------- */
-.markdown-body table{
-  width:100%;
-  table-layout:auto;
-  border-collapse:collapse;
-  margin: .8rem 0 1.2rem;
-  margin-left:0;                       /* 中央寄せ防止 */
+/* ----- テーブル（見た目改善） ----- */
+table{
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  margin: .8rem 0 1.3rem;
+  font-size: 0.97rem;
   border:1px solid var(--line);
+  border-radius: .6rem;
+  overflow: hidden;
 }
-.markdown-body th,
-.markdown-body td{
-  text-align:left;
-  vertical-align:top;
-  padding:.55rem .8rem;
+thead th{
+  background: var(--table-h);
+  font-weight: 700;
+  text-align: left;
   border-bottom:1px solid var(--line);
-  word-break:break-word;
 }
-.markdown-body thead th{
-  background:var(--table-h);
-  font-weight:700;
-}
-.markdown-body tr:last-child td{ border-bottom:none; }
+th, td{ padding:.55rem .75rem; }
+tbody tr{ border-bottom:1px solid var(--line); }
+tbody tr:last-child{ border-bottom: none; }
+tbody tr:hover{ background: color-mix(in oklab, var(--table-h), transparent 70%); }
 
-/* ---------- Nicer table variant (use class 'nice-table') ---------- */
-table.nice-table{
-  width:100%; border-collapse:separate; border-spacing:0;
-  margin: .8rem 0 1.6rem; font-size:0.97rem;
-  border:1px solid var(--line); border-radius:.6rem; overflow:hidden;
-}
-table.nice-table thead th{
-  background:var(--table-h); font-weight:700; text-align:left; 
-  border-bottom:1px solid var(--line);
-  padding:.7rem .8rem;
-}
-table.nice-table td{
-  padding:.55rem .8rem; border-bottom:1px solid var(--line);
-}
-table.nice-table tr:last-child td{ border-bottom:none; }
-table.nice-table tbody tr:hover{
-  background: color-mix(in oklab, var(--table-h), transparent 70%);
-}
-
-/* Icon list */
-.icon-list{ list-style:none; padding-left:0; }
-.icon-list li{ margin:.4rem 0; }
-
-/* Blockquote callout */
+/* ----- 引用（コールアウト化） ----- */
 blockquote{
   border-left:4px solid var(--accent);
   background: color-mix(in oklab, var(--accent), transparent 92%);
-  padding:.8rem 1rem; margin:1rem 0; border-radius:.4rem;
+  padding:.75rem .95rem; margin:1rem 0; border-radius:.4rem;
 }
 
-/* Code fences */
+/* ----- コードブロック ----- */
+pre{
+  background-color: var(--table-h);
+  border:1px solid var(--line);
+  border-radius:6px;
+  padding: .9rem 1rem;
+  overflow:auto;
+}
 pre code{ font-size:.95rem; }
 
-/* Improve tap targets on mobile */
+/* ----- 目次のクリック感（タップ強調OFF） ----- */
 a, .btn-link, .btn-secondary { -webkit-tap-highlight-color: transparent; }
+
+/* ----- モバイル・タブレット最適化 ----- */
+@media (max-width: 1024px){
+  .wrapper{ max-width: 860px; }
+  h2{ margin-top: 1.6rem; }
+}
+@media (max-width: 768px){
+  .wrapper{ max-width: 720px; }
+  main.wrapper{ padding-top: 8px; padding-bottom: 20px; }
+  h1{ margin-top: .8rem; }
+  p, li{ line-height:1.65; }
+  th, td{ padding:.5rem .6rem; }
+}
