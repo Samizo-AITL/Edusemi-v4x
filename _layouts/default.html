@@ -6,6 +6,21 @@
     <title>{{ page.title | default: site.title | escape }}</title>
     <meta name="description" content="{{ page.description | default: site.description }}">
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+
+    <!-- ✅ MathJax (LaTeX 数式) -->
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']],
+          displayMath: [['$$','$$'], ['\\[','\\]']]
+        },
+        options: { skipHtmlTags: ['script','noscript','style','textarea'] }
+      };
+    </script>
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+    <!-- ✅ Mermaid (図) -->
+    <script defer src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
   </head>
   <body>
     <main class="page-content" aria-label="Content">
@@ -14,13 +29,10 @@
       </div>
     </main>
 
-    <!-- Mermaid本体 -->
-    <script defer src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-
-    <!-- Mermaid 初期化：code→div 置換 + ライト固定 + 中央寄せ -->
+    <!-- Mermaid 初期化：```mermaid → <div class="mermaid"> 変換 + ライト固定 + 中央寄せ -->
     <script>
       document.addEventListener('DOMContentLoaded', function () {
-        // 1) ```mermaid → <code class="language-mermaid"> を <div class="mermaid"> に置換
+        // 1) code.language-mermaid を div.mermaid へ
         document.querySelectorAll('code.language-mermaid').forEach(function (code) {
           const pre = code.closest('pre');
           const div = document.createElement('div');
@@ -28,22 +40,16 @@
           div.textContent = code.textContent;
           (pre || code).replaceWith(div);
         });
-
-        // 2) 中央寄せ（Pages側）
+        // 2) 中央寄せ
         document.querySelectorAll('.mermaid').forEach(function (el) {
           el.style.display = 'block';
           el.style.margin = '1.5rem auto';
           el.style.maxWidth = '960px';
           el.style.textAlign = 'center';
         });
-
-        // 3) ライトテーマ固定（黒ボックス回避）
+        // 3) ライト固定
         if (window.mermaid) {
-          mermaid.initialize({
-            startOnLoad: true,
-            securityLevel: 'loose',
-            theme: 'default'
-          });
+          mermaid.initialize({ startOnLoad: true, securityLevel: 'loose', theme: 'default' });
         }
       });
     </script>
