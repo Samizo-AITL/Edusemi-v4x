@@ -26,10 +26,10 @@ with **GAA**, **AMS**, and **MRAM** functional blocks.
 
 ```mermaid
 flowchart TD
-    A[Physical Design PoC Manual]
-    B[Integration of SystemDK,<br>SI/PI, Thermal, Stress,<br>EMI EMC]
-    C[Integration into<br>heterogeneous PoC designs<br>using GAA / AMS / MRAM]
-    D[GAA / AMS / MRAM]
+    A["Physical Design PoC Manual<br>物理設計 PoC マニュアル"]
+    B["Integration of SystemDK,<br>SI/PI, Thermal, Stress, EMI EMC<br>SystemDK・SI/PI・熱・応力・EMI EMC の統合"]
+    C["Integration into heterogeneous PoC designs<br>using GAA / AMS / MRAM<br>GAA・AMS・MRAM を用いた異種PoC設計への統合"]
+    D["GAA / AMS / MRAM<br>GAA・AMS・MRAM"]
 
     A --> B --> C --> D
 
