@@ -32,10 +32,6 @@ and evaluates their behavior and performance on an actual SoC.
 
 ### 🌀 状態遷移例｜State Transitions
 
-> ⚠️ このページではMermaidフローチャートは表示されません  
-> 👉 **以下のリンクからGitHubで視覚化表示をご確認ください：**  
-> [📎 GitHubでMermaidフローチャートを見る](https://github.com/Samizo-AITL/Edusemi-v4x/blob/main/f_chapter3_socsystem/docs/3_6_case_study.md)
-
 ```mermaid
 stateDiagram-v2
     [*] --> IDLE
