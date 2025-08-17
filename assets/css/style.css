@@ -9,3 +9,22 @@
   max-width: 960px;
   text-align: center;
 }
+/* ===== 表の罫線を復活（GitHub風） ===== */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  margin: 1em 0;
+}
+
+th, td {
+  border: 1px solid #dfe2e5;
+  padding: 0.6em 0.8em;
+  vertical-align: top;
+}
+
+th {
+  background-color: #f6f8fa;
+  font-weight: 600;
+  text-align: left;
+}
