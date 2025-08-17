@@ -24,10 +24,21 @@ with **GAA**, **AMS**, and **MRAM** functional blocks.
 
 ### 📊 構造図｜Block Diagram
 
-<!-- GitHub Pages用（サイズ変更） -->
-<p align="center">
-  <img src="https://samizo-aitl.github.io/Edusemi-v4x/f_chapter2a_systemdk/PoC/images/Physical_Design_PoC_Manual_Flowchart.png" alt="SystemDK PoC Flowchart" width="60%">
-</p>
+```mermaid
+flowchart TD
+    A[Physical Design PoC Manual]
+    B[Integration of SystemDK,<br>SI/PI, Thermal, Stress,<br>EMI EMC]
+    C[Integration into<br>heterogeneous PoC designs<br>using GAA / AMS / MRAM]
+    D[GAA / AMS / MRAM]
+
+    A --> B --> C --> D
+
+    %% 色付け
+    style A fill:#ffffff,stroke:#000000,stroke-width:2px
+    style B fill:#ffffff,stroke:#1f77b4,stroke-width:2px
+    style C fill:#ffffff,stroke:#ff7f0e,stroke-width:2px
+    style D fill:#ffffff,stroke:#ff7f0e,stroke-width:2px
+```
 
 ---
 
