@@ -51,8 +51,6 @@ This document outlines the roles of **commercial and open-source EDA tools**, an
 
 ## 🔁 ツール間のPDK接続構成（Mermaid形式）｜PDK Toolchain Flow (Mermaid)
 
-[GitHubでMermaidフローチャートを確認する](https://github.com/Samizo-AITL/Edusemi-v4x/blob/main/d_chapter6_pdk_and_eda_environment/eda_toolchain.md)
-
 ```mermaid
 flowchart TD
     SCH(📘 Xschem<br>回路図設計) --> SIM(🔬 ngspice<br>回路シミュレーション)
