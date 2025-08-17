@@ -30,8 +30,6 @@ title: 3.1 AITL-Hアーキテクチャと層分離設計
 ## 🧱 三層構造の接続イメージ（ブロック図）  
 **Block Diagram: Three-Layer Integration**
 
-[📎 GitHubでMermaidフローチャートを見る](https://github.com/Samizo-AITL/Edusemi-v4x/blob/main/f_chapter3_socsystem/docs/3_1_aitl_architecture.md)
-
 ```mermaid
 graph TB
     LLM["🧠 LLM層<br/>知的制御層<br/>(GPT, RISC-V)"]
