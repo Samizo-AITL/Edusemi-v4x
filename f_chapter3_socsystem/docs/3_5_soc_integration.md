@@ -28,10 +28,6 @@ FSM・PID・LLMの三層制御モジュールを、1つのSoCとして統合す�
 
 ## 🏗 SoC全体構成ブロック図｜SoC Block Diagram
 
-> ⚠️ このページではMermaidフローチャートは表示されません  
-> 👉 **以下のリンクからGitHubで視覚化表示をご確認ください：**  
-> [📎 GitHubでMermaidフローチャートを見る](https://github.com/Samizo-AITL/Edusemi-v4x/blob/main/f_chapter3_socsystem/docs/3_5_soc_integration.md)
-
 ```mermaid
 flowchart TB
   subgraph SoC_Top_Module [SoC Top Module]
