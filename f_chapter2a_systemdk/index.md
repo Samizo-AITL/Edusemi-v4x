@@ -24,6 +24,9 @@ This chapter introduces the concept of the **System Design Kit (SystemDK)** and 
 
 これらの要素は単独ではなく相互に影響し合うため、**統合的かつ階層的な設計管理**が求められます。SystemDKはその設計判断の基盤です。
 
+📌 筆者もインクジェットプリントヘッドの駆動IC実装（COF）を担当した際、ヘッドへの実装応力、放熱、EMI/EMCノイズ耐性といった問題に直面した経験があります。  
+*The author also encountered such challenges during COF implementation of driver ICs for inkjet printheads, particularly regarding mechanical stress, thermal dissipation, and EMI/EMC noise immunity.*
+
 ---
 
 ## 📚 節構成｜Section Structure
