@@ -26,7 +26,7 @@ title: 2a.10 設計フローに基づくSystemDK構成
 　- Use Case明確化、データフロー構築、性能要件の定義
 
 2. **モジュール分解（U-Chiplet構想準拠）**  
-　*SoC Logic、AMS、MRAM、IFなどを独立設計単位として分割*  
+　*SoC Logic、AMS、MRAM、Interposer、IFなどを独立設計単位として分割*  
 　- 機能密度、電源/周波数、レイアウトの観点でブロック分離
 
 3. **論理設計（RTL/IP開発）**  
@@ -52,7 +52,7 @@ title: 2a.10 設計フローに基づくSystemDK構成
 6. **制約の分配とDesignKit化**  
 　*解析結果を以下の設計キットへ構造的に反映：*  
 　- **BRDK**：基板設計向け熱・電源・信号制約  
-　- **IPDK**：再利用IP向けピン配置・ノイズ・応力制約  
+　- **IPDK**：インターポーザ設計向けTSV・バンプ・配線制約  
 　- **PKGDK**：パッケージ統合向けの層構造・熱/応力特性制約
 
 ---
@@ -84,10 +84,10 @@ title: 2a.10 設計フローに基づくSystemDK構成
 | **設計フェーズ** | **主な対象領域** | **適用される制約要素** |
 |------------------|------------------|--------------------------|
 | **全体アーキ設計**<br>*System Architecture* | 機能ブロック定義<br>*Functional Partitioning* | I/O構成、演算負荷、制御構造<br>*I/O, Processing Load, Control Logic* |
-| **モジュール選定**<br>*Module Selection* | SoC / AMS / MRAM / IF | ピン数、速度、電圧互換性<br>*Pin Count, Speed, Voltage Matching* |
+| **モジュール選定**<br>*Module Selection* | SoC / AMS / MRAM / Interposer / IF | ピン数、速度、電圧互換性<br>*Pin Count, Speed, Voltage Matching* |
 | **RTL・物理設計**<br>*RTL & Physical Design* | Verilog / Layout | フロアプラン、配線長、PDN構成<br>*Floorplan, Routing, PDN Design* |
 | **多物理場解析**<br>*Multi-Physics Analysis* | 熱 / SI/PI / EMI/応力 | IR drop, 熱伝導, 機械応力<br>*IR Drop, Thermal, Mechanical Stress* |
-| **BRDK / IPDK / PKGDK** | 基板 / IP / パッケージ | EMI, 電源整合、熱設計<br>*EMI, Power Integrity, Thermal* |
+| **BRDK / IPDK / PKGDK** | 基板 / インターポーザ / パッケージ | EMI, 電源整合、熱設計<br>*EMI, Power Integrity, Thermal* |
 | **SystemDK統合**<br>*SystemDK Integration* | 全レイヤ構造統合 | 制約相互依存の整理と可視化<br>*Constraint Coherence & Reusability* |
 
 ---
@@ -95,14 +95,17 @@ title: 2a.10 設計フローに基づくSystemDK構成
 ## 📘 補足：関連設計キット（DesignKit）の定義  
 **Glossary: Definitions of DesignKit Components in SystemDK**
 
+📘 **用語注意**:  
+本ドキュメント内での **IP = Interposer** を指す。  
+一般的な「Intellectual Property (IP block)」とは区別して使用する。  
+
 | **略称** | **名称（日本語）** | **定義（日本語）** | **Definition (English)** |
 |----------|---------------------|----------------------|----------------------------|
 | **BRDK** | Board Design Kit | 基板設計用の制約セット。<br>電源・信号・EMI・熱特性に基づく設計指針を提供。 | Constraint kit for board-level design. Includes power/EMI/thermal/layout guidance. |
-| **IPDK** | Intellectual Property Design Kit | IPブロックやIF回路に対し、ピン配置・ノイズ・応力などを制約として規定。 | Constraint kit for reusable IPs and interface blocks, with pinout, EMI, and stress specs. |
+| **IPDK** | Interposer Design Kit | インターポーザ層に対して、バンプ配置・TSV・配線遅延・SI/PI・熱応力制約を規定。 | Constraint kit for interposer-level design, including bump layout, TSV rules, routing parasitics, SI/PI, and thermo-mechanical constraints. |
 | **PKGDK** | Package Design Kit | 複数ダイの統合に必要なパッケージ層制約を提供。<br>熱設計・バンプ配置・ストレス制御などを含む。 | Constraint set for package-level integration including thermal, bump layout, and stress analysis. |
 | **SystemDK** | System Design Knowledge Kit | 各DesignKitを統合的に運用する設計思想フレームワーク。<br>制約間の整合性・再利用性を重視。 | A design philosophy to unify and manage all constraint layers, enabling cross-kit consistency and reuse. |
 
 ---
 
 **[← 戻る / Back to Special Chapter 2 Top](./README.md)**
-
