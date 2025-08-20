@@ -150,7 +150,10 @@ layout: default
   - 環境試験（温湿度、振動、塵埃影響など, 例: **IEC 60068-2**）  
     *Environmental tests (temperature/humidity, vibration, dust impact, etc.)*  
 
+---
+
 ### EMI/EMC試験 / EMI/EMC Evaluation
+
 - **新規IC実装時の評価 / New IC Evaluation**  
   - I/O数やドライブ能力の変化により、スイッチングノイズ特性が変化  
   - 高速インターフェース追加による放射ノイズスペクトルの変動  
@@ -158,14 +161,24 @@ layout: default
 
 - **COF基材変更時の評価 / COF Substrate Evaluation**  
   - PIやフィラーの違いにより **誘電率 (Dk)** が変化  
-  - Dk変化 → 特性インピーダンス変動 → 信号反射・クロストーク増大 → 放射EMI増加  
+  - **因果チェーン / Causal Chain:**  
+
+    ```mermaid
+    graph LR
+      A[COF基材変更 / Substrate change] --> B[誘電率Dk変化 / Dk variation]
+      B --> C[特性インピーダンス変動 / Impedance variation]
+      C --> D[信号反射・クロストーク増大 / Reflections & Crosstalk]
+      D --> E[放射EMI増加 / Increased EMI radiation]
+    ```  
+
   - よって **基材変更だけでもEMC再評価が必要**  
-  *Changes in dielectric constant (Dk) affect impedance, reflections, and crosstalk, leading to increased EMI — requiring EMC re-evaluation even without new ICs.*  
+  *Even a substrate change alone requires EMC re-evaluation.*  
 
 - **相互影響の観点 / Mutual Influence**  
   - **COFがプリンタ全体に与える影響**（放射/伝導ノイズ源となる可能性）  
+    *COF’s effect on the printer (potential source of radiated/conducted noise)*  
   - **プリンタ環境がCOF挙動に与える影響**（外来ノイズの感受性）  
-  *Both COF’s effect on the printer and the printer’s effect on COF must be assessed.*
+    *Printer’s effect on COF (susceptibility to external noise)*  
 
 ---
 
