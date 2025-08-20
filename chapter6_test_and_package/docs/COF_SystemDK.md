@@ -11,6 +11,14 @@ layout: default
 
 ---
 
+## ⚠️ 本資料の前提 / Disclaimer
+本資料は **COF (Chip on Film) に関する一般技術的な内容**を教育目的で整理したものであり、  
+特定企業・製品固有の機密情報には触れていません。  
+> This document summarizes **general COF packaging technology** for educational use.  
+> It does not include confidential or company-specific data.
+
+---
+
 ## 1. 🧩 基材と材料 / Substrate and Materials
 - **FCCL基材**: 薄型銅箔（約 8 µm）＋ポリイミドフィルム  
 - **加工**: ロールから短冊にスリット加工し、搬送用スプロケットホールを形成  
@@ -126,3 +134,23 @@ flowchart TB
 ## 10. 📚 学習課題例 / Learning Exercises
 - **Q1.** 基材の誘電率 Dk が 0.5 増加した場合、特性インピーダンスと EMC 特性にどう影響するか？  
 - **Q2.** NCP接合と ACF接合の違いを整理し、アクチュエータ実装に最適な方式を説明せよ。  
+
+---
+
+## 11. 🔥 熱伝導と放熱性 / Thermal Conduction and Heat Dissipation
+
+- **材料の限界 / Material Limits**  
+  - PI基材の熱伝導率は **約 0.2 W/mK** と極めて低い  
+  - 銅配線は高伝導性だが、幅・厚みが小さいため十分な放熱経路にはならない  
+
+- **実装上の結果 / Practical Outcome**  
+  - 駆動ICで発生した熱は **アクチュエータ側にはほとんど伝わらない**  
+  - 主な熱流路は **IC背面 → 接着材 → モジュールフレーム** となる  
+
+- **対策アプローチ / Design Approaches**  
+  - IC背面に **放熱パッド / サーマルスプレッダ**を追加  
+  - **モジュール筐体（金属フレーム）** に直接熱を逃がす設計  
+  - **高熱伝導エポキシ**や **サーマルビア**を利用し、熱拡散を補助  
+
+> 💡 COF単体での熱設計自由度は低い。  
+> **SystemDK視点では「モジュール全体での放熱設計」が不可欠**。
