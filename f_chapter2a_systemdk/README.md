@@ -23,10 +23,12 @@ This chapter introduces the concept of the **System Design Kit (SystemDK)** and 
 これらの要素は単独ではなく相互に影響し合うため、**統合的かつ階層的な設計管理**が求められます。SystemDKはその設計判断の基盤です。
 
 
-📌 筆者もインクジェットプリントヘッドの駆動IC実装（COF）を担当した際、ヘッドへの実装応力、放熱、EMI/EMCノイズ耐性といった問題に直面した経験があります。  
-*The author also encountered such challenges during COF implementation of driver ICs for inkjet printheads, particularly regarding mechanical stress, thermal dissipation, and EMI/EMC noise immunity.*
+📌 本教材は、COF実装に伴う典型的な技術課題（実装応力、放熱、EMI/EMC耐性など）を整理したものであり、  
+**特定企業や製品に依存しない一般的な教育資料**として構成されています。  
+*This material summarizes common technical challenges in COF implementation, such as mechanical stress, thermal dissipation, and EMI/EMC immunity, presented as a general educational resource independent of any specific company or product.*  
+
 - [COF Packaging and System-Level Evaluation](../chapter6_test_and_package/docs/COF_SystemDK.md)  
-  → インクジェットヘッドにおける COF 実装プロセスと EMC 評価事例
+  → **COF実装プロセスとSystem-Level評価を、教材的に体系化した内容**
   
 ---
 
