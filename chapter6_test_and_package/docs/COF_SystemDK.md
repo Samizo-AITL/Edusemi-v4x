@@ -150,9 +150,7 @@ layout: default
   - 環境試験（温湿度、振動、塵埃影響など, 例: **IEC 60068-2**）  
     *Environmental tests (temperature/humidity, vibration, dust impact, etc.)*  
 
----
-
-### EMI/EMC試験 / EMI/EMC Evaluation
+#### EMI/EMC試験 / EMI/EMC Evaluation
 
 - **新規IC実装時の評価 / New IC Evaluation**  
   - I/O数やドライブ能力の変化により、スイッチングノイズ特性が変化  
@@ -164,7 +162,7 @@ layout: default
   - **因果チェーン / Causal Chain:**  
 
     ```mermaid
-    graph LR
+    graph TB
       A[COF基材変更 / Substrate change] --> B[誘電率Dk変化 / Dk variation]
       B --> C[特性インピーダンス変動 / Impedance variation]
       C --> D[信号反射・クロストーク増大 / Reflections & Crosstalk]
