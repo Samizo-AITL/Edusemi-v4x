@@ -97,11 +97,24 @@ layout: default
   - 一方で、IC局所発熱の放熱は難しく、COF単体での熱拡散自由度は低い  
     *Conversely, dissipating local IC heat is difficult, limiting thermal spreading freedom within COF alone.*  
 
-- **まとめ**  
-  - COFの低熱伝導性は「利点（熱遮断）」と「制約（放熱性不足）」を併せ持つ  
-    *COF’s low thermal conductivity offers both an advantage (thermal isolation) and a constraint (poor heat dissipation).*  
-  - 実際のシステムでは、基板・モジュール・筐体レベルで放熱パスを設計することが必須  
-    *System-level design must secure thermal paths at board, module, and enclosure levels.*  
+### ✅ 熱設計における「利点」と「制約」 / Advantages vs Constraints
+
+| 観点 / Aspect | **利点（Advantage）** | **制約（Constraint）** |
+|--------------|----------------------|-------------------------|
+| 熱流入 / Heat Inflow | 隣接素子への不要な熱流入を防げる | — |
+| 放熱 / Heat Dissipation | — | IC局所の熱がこもりやすい |
+| 設計影響 / Design Impact | 熱干渉の低減 | 放熱経路を外部に必ず設計する必要あり |
+
+
+### 🔄 熱挙動の因果関係 / Thermal Behavior Causal Flow
+
+```mermaid
+graph TD
+  A[COF基材: 低熱伝導] --> B[隣接素子へ熱を遮断 / Thermal Isolation]
+  A --> C[IC局所熱がこもる / Local Heat Trapping]
+  B --> D[利点: 干渉低減 / Advantage]
+  C --> E[制約: 放熱性不足 / Constraint]
+```
 
 ---
 
