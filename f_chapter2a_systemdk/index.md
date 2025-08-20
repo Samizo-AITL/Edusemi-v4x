@@ -46,13 +46,13 @@ This chapter introduces the concept of the **System Design Kit (SystemDK)** and 
 ## 🎯 本章の意義｜Educational Significance
 
 - 各物理制約を個別に学びつつ、**相互依存関係と衝突の整理**ができるようになる  
-  *Learn each physical constraint individually while organizing their interdependencies and conflicts.*  
+  *Learn each physical constraint individually while organizing their **interdependencies and conflicts**.*  
 - **PDK/IPDK/PKGDKからSystemDKへの階層的思考**を育てる  
-  *Develop hierarchical thinking from PDK/IPDK/PKGDK toward SystemDK.*  
+  *Develop **hierarchical thinking** from PDK/IPDK/PKGDK toward SystemDK.*  
 - Chiplet配置やパッケージ設計における、**“物理的に動く”設計判断**を実体験として学ぶ  
-  *Experience "physically feasible" design decisions in chiplet placement and package design.*  
+  *Experience **"physically feasible" design decisions** in chiplet placement and package design.*  
 - SoC開発やPoC教育の出口として、**実装段階までを見越した教育**を提供  
-  *Provide education that anticipates implementation stages as an outcome of SoC development and PoC training.*  
+  *Provide education that anticipates **implementation stages** as an outcome of SoC development and PoC training.*  
 
 ---
 
@@ -61,37 +61,37 @@ This chapter introduces the concept of the **System Design Kit (SystemDK)** and 
 📦 **SystemDKに基づくPoCマニュアル（GAA / AMS / MRAM統合設計）**  
 *PoC Manual based on SystemDK (GAA / AMS / MRAM Integrated Design)*  
 
-🔗 [➡️ `PoC/README.md` を開く（Go to PoC Manual）](./PoC/README.md)
+🔗 [➡️ **`PoC/README.md`** を開く（Go to PoC Manual）](./PoC/README.md)
 
-> SystemDKの物理制約管理を実地で体験する演習教材です。  
-> *This is a hands-on training material to experience physical constraint management in SystemDK.*  
-> 実装対象：GAAトランジスタ、AMS回路、MRAMモジュールを含む統合設計  
-> *Includes GAA transistors, AMS circuits, and MRAM modules as implementation targets.*  
+> **SystemDKの物理制約管理**を実地で体験する演習教材です。  
+> *This is a hands-on training material to experience **physical constraint management** in SystemDK.*  
+> 実装対象：**GAAトランジスタ、AMS回路、MRAMモジュール**を含む統合設計  
+> *Includes **GAA transistors, AMS circuits, and MRAM modules** as implementation targets.*  
 
 ---
 
 ## 🔗 関連章との接続｜Linked Chapters
 
 - [`f_chapter2_chiplet_pkg/`](../f_chapter2_chiplet_pkg/)  
-  → Chipletとパッケージの基礎を扱い、SystemDKの前提知識となる部分。  
-  *Covers the basics of chiplets and packaging, serving as foundational knowledge for SystemDK.*  
+  → **Chipletとパッケージの基礎**を扱い、SystemDKの前提知識となる部分。  
+  *Covers the **basics of chiplets and packaging**, serving as foundational knowledge for SystemDK.*  
 
 - [`d_chapter5_analog_mixed_signal/`](../d_chapter5_analog_mixed_signal/)  
-  → AMS設計とレイアウトの物理制約を解説。信号／電源整合性とSystemDKをつなぐ。  
-  *Explains AMS design and layout physical constraints, linking signal/power integrity with SystemDK.*  
+  → **AMS設計とレイアウトの物理制約**を解説。信号／電源整合性とSystemDKをつなぐ。  
+  *Explains **AMS design and layout physical constraints**, linking signal/power integrity with SystemDK.*  
 
 - [`f_chapter4_fsm_pid_llm/`](../f_chapter4_fsm_pid_llm/)  
-  → 制御SoCのPoCとの接続事例。SystemDKの設計判断が制御系にどう反映されるかを示す。  
-  *Case study of linking with control SoC PoC, showing how SystemDK design decisions affect control systems.*  
+  → **制御SoCのPoCとの接続事例**。SystemDKの設計判断が制御系にどう反映されるかを示す。  
+  *Case study of linking with **control SoC PoC**, showing how SystemDK design decisions affect control systems.*  
 
 - [`chapter6_test_and_package/docs/COF_SystemDK.md`](../chapter6_test_and_package/docs/COF_SystemDK.md)  
-  → COF実装を具体例に、熱・応力・EMI/EMC評価がどのようにシステムレベル設計に波及するかを学べる。  
-  *Uses COF implementation as a concrete example to study how thermal, stress, and EMI/EMC evaluations propagate to system-level design.*  
+  → **COF実装の具体例**を通じ、熱・応力・EMI/EMC評価が**システムレベル設計に波及**する過程を学べる。  
+  *Uses **COF implementation** as a concrete example to study how **thermal, stress, and EMI/EMC evaluations propagate** to system-level design.*  
 
 - [`chapter6_test_and_package/6.4_packaging.md`](../chapter6_test_and_package/6.4_packaging.md)  
-  → 一般的なパッケージ工程と信頼性確保の流れ。COFを含む実装技術との比較理解に有効。  
-  *Covers general packaging processes and reliability assurance, useful for comparative understanding with COF and other implementation technologies.*
-
+  → **一般的なパッケージ工程と信頼性確保**の流れ。COFを含む実装技術との**比較理解**に有効。  
+  *Covers **general packaging processes and reliability assurance**, useful for **comparative understanding** with COF and other implementation technologies.*
+  
 ---
 
 ## 👤 **著者・ライセンス | Author & License**
