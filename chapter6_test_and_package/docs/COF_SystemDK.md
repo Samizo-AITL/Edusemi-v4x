@@ -78,28 +78,35 @@ layout: default
 ## 6. 📡 System評価 / System-Level Evaluation
 
 ### (1) COF単体評価  
-- 開放/短絡検査 (Open/Short)  
-- ICリーク測定 (Leak current)  
-- ファンクションテスト (Logic/Functionality)  
-- 耐久試験: Heat Cycle (6.1–6.3共通)  
+- 開放/短絡検査 (Open/Short Test)  
+- ICリーク測定 (Leak Current Measurement)  
+- ファンクションテスト (Logic/Functionality Test)  
+- 耐久試験: Heat Cycle  
 
 ### (2) COF + アクチュエータ実装評価  
 - 開放/短絡検査  
 - PZTセグメントのオープン/ショート検査  
-- PZT耐久試験（例: **180億パルスで特性劣化5%以内**）  
+- 耐久試験  
+  - Heat Cycle  
+  - **PZT耐久試験（例: 180億パルスで特性劣化5%以内）**  
 
 ### (3) ヘッドモジュール評価  
-- 印字検査（機能確認）  
-- 吐出特性試験（Jetting）  
+- 印字機能検査（Functional Printing Test）  
+- 吐出特性試験（Jetting Characteristics Test）  
 - 耐久試験  
+  - Heat Cycle  
+  - PZT耐久（パルス駆動による劣化確認）  
+  - 吐出安定性試験（Jetting Stability over Long Duration）  
 
 ### (4) プリンタ機体実装評価  
-- 印字品質検査  
+- 印字品質検査（Print Quality Test）  
 - 耐久試験  
+  - 長時間運転試験（印字品質維持、搬送・駆動系の安定性確認）  
+  - 環境試験（温湿度、振動、塵埃影響など）  
 - EMC試験  
   - **COFがプリンタ全体に与える影響**  
-  - **プリンタ環境がCOF挙動に与える影響**  
-
+  - **プリンタ環境がCOF挙動に与える影響**
+  
 ---
 
 ## 7. 🧠 SystemDK視点まとめ / SystemDK Perspective
