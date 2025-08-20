@@ -143,7 +143,31 @@ layout: default
   - 長時間運転試験（印字品質維持、搬送・駆動系の安定性確認）  
     *Long-duration operation test (print quality retention, stability of transport and drive system)*  
   - 環境試験（温湿度、振動、塵埃影響など）  
-    *Environmental tests (temperature/humidity, vibration, dust impact, etc.)*  
+    *Environmental tests (temperature/humidity, vibration, dust impact, etc.)*
+
+conditions*  
+
+### EMI/EMC試験 / EMI/EMC Evaluation
+- **新規IC実装時の評価 / New IC Evaluation**  
+  - I/O数やドライブ能力の変化により、スイッチングノイズ特性が変化  
+  - 高速インターフェース追加による放射ノイズスペクトルの変動  
+  *Changes in I/O and drive capability alter switching noise; faster interfaces affect EMI spectrum.*  
+
+- **COF基材変更時の評価 / COF Substrate Evaluation**  
+  - PIやフィラーの違いにより **誘電率 (Dk)** が変化  
+  - Dk変化 → 特性インピーダンス変動 → 信号反射・クロストーク増大 → 放射EMI増加  
+  - よって **基材変更だけでもEMC再評価が必要**  
+  *Changes in dielectric constant (Dk) affect impedance, reflections, and crosstalk, leading to increased EMI — requiring EMC re-evaluation even without new ICs.*  
+
+- **相互影響の観点 / Mutual Influence**  
+  - **COFがプリンタ全体に与える影響**（放射/伝導ノイズ源となる可能性）  
+  - **プリンタ環境がCOF挙動に与える影響**（外来ノイズの感受性）  
+  *Both COF’s effect on the printer and the printer’s effect on COF must be assessed.*  
+
+---
+    
+
+
 - EMC試験  
   - **COFがプリンタ全体に与える影響**  
     *Impact of COF on overall printer*  
