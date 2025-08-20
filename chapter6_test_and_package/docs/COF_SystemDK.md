@@ -4,8 +4,12 @@ lang: ja-en
 layout: default
 ---
 
+---
+
 # COF Packaging and System-Level Evaluation  
-# COFパッケージングとシステムレベル評価
+**COFパッケージングとシステムレベル評価**
+
+---
 
 ## 1. 基材と材料 / Substrate and Materials
 - 薄型銅箔（約 8 µm）＋ポリイミドフィルムによるフレキシブル基材 (FCCL)  
