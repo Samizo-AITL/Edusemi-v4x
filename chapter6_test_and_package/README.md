@@ -54,6 +54,13 @@ title: 基礎編 第6章：テスト・パッケージ・製品化
 | 6.5 | [6.5_final_test.md](6.5_final_test.md) | **ファイナルテスト**：市場出荷前の最終判定<br>✅ *Final test as the gatekeeper for shipping* |
 | 6.6 | [6.6_reliability_and_shipping.md](6.6_reliability_and_shipping.md) | **信頼性試験と製品出荷**：バーンイン、寿命試験、出荷管理<br>⏳ *Burn-in, life tests, and shipping control* |
 
+
+### 📎 補足資料｜Supplementary Materials
+
+- [`chapter6_test_and_package/docs/COF_SystemDK.md`](../chapter6_test_and_package/docs/COF_SystemDK.md)  
+  **COF実装とシステムレベルEMI/EMC評価**を扱う教育用補足資料。基材変更→Dk変化→信号/ノイズ→EMC再評価の因果を整理。  
+  *Educational supplement on **COF implementation and system-level EMI/EMC evaluation**, detailing the causal chain: substrate change → Dk variation → signal/noise impact → EMC re-qualification.*
+
 ---
 
 ## ✅ 本章の意義｜Significance of This Chapter
