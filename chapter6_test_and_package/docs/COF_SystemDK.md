@@ -45,13 +45,24 @@ layout: default
 
 - **接合方式**: フリップチップAuバンプ接合  
   *Bonding method: Flip-chip Au bump connection*  
+
 - **補強**: アンダーフィル樹脂で充填し、機械的強度と絶縁性を確保  
   *Reinforcement: Underfill resin for mechanical strength and insulation*  
+
 - **デザインルール**: 異電位配線間には確実に樹脂が入り込むことを保証  
   *Design rule: Ensure resin fills between different potential wirings*  
-- **検証試験**: HTS/HAST/85-85によりシート抵抗やリーク安定性を確認  
-  *Verification: HTS/HAST/85-85 tests for sheet resistance and leakage stability*  
 
+- **絶縁破壊リスク / Insulation Breakdown Risk**  
+  - アンダーフィルが未充填の場合、局所的に **空気絶縁に依存**  
+    *If underfill is missing, insulation locally relies on air gaps.*  
+  - 高温高湿や高電圧下では、空気絶縁が破壊されてショート発生  
+    *Under high temperature/humidity or high voltage, air insulation can break down and cause shorts.*  
+  - 結果として **局所的なアーク放電や焼損** を招く危険がある  
+    *This may result in local arcing or burning damage.*  
+
+- **検証試験**: HTS/HAST/85-85によりシート抵抗やリーク安定性を確認  
+  *Verification: HTS/HAST/85-85 tests for sheet resistance and leakage stability*
+  
 ---
 
 ## 3. 🔗 COFアクチュエータ実装 / COF–Actuator Assembly
