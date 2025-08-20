@@ -4,160 +4,127 @@ lang: ja-en
 layout: default
 ---
 
----
-
 # 📦 COF Packaging and System-Level Evaluation  
 **COFパッケージングとシステムレベル評価**
 
 ---
 
 ## ⚠️ 本資料の前提 / Disclaimer
-本資料は **COF (Chip on Film) に関する一般技術的な内容**を教育目的で整理したものであり、  
-特定企業・製品固有の機密情報には触れていません。  
-> This document summarizes **general COF packaging technology** for educational use.  
-> It does not include confidential or company-specific data.
+本資料は **COF (Chip on Film) に関する一般技術的内容**を教育目的で整理したものであり、  
+特定企業や製品固有の機密情報には触れていません。  
+
+> This document summarizes **general COF packaging technology** for educational use,  
+> and does not include confidential or company-specific data.
 
 ---
 
-## 1. 🧩 基材と材料 / Substrate and Materials
-- **FCCL基材**: 薄型銅箔（約 8 µm）＋ポリイミドフィルム  
-- **加工**: ロールから短冊にスリット加工し、搬送用スプロケットホールを形成  
-- **表面粗さ (Ra, Rz)**: 実装信頼性や導通に直結するため重要  
+## 1. 🏭 COF基材製造 / COF Substrate Fabrication
+- **基材構成 / Substrate Structure**  
+  - FCCL (Flexible Copper Clad Laminate)  
+  - 銅箔: 約 8 µm / Cu foil: ~8 µm  
+  - ポリイミド (PI): 20–50 µm / Polyimide (PI): 20–50 µm  
+
+- **加工プロセス / Process**  
+  - ロールから短冊にスリット加工 / Slitting roll FCCL into strips  
+  - 搬送用スプロケットホール形成 / Punching sprocket holes  
+  - フォトリソ＋エッチングで配線形成 / Circuit patterning via photolithography & etching  
+  - ソルダーレジスト塗布、Padのみ開口 / Solder resist coating with pad openings  
+  - Pad直Auめっき（約0.5 µm） / Direct Au plating (~0.5 µm)  
+
+- **設計要点 / Design Notes**  
+  - 表面粗さ (Ra, Rz) は導通信頼性に直結 / Surface roughness critical for reliability  
+  - Ni/Au構造は保存性向上だがコスト増 / Ni/Au improves stability but adds cost  
 
 ---
 
-## 2. 🖌 パターニングと表面処理 / Patterning and Surface Treatment
-- **配線形成**: フォトリソ＋エッチングで微細配線を形成  
-- **保護膜**: 緑色ソルダーレジストを塗布し、パッドのみを開口  
-- **パッド処理**: 直 Au めっき（約 0.5 µm）  
-  - Ni バリアなしでも Cu 拡散影響は限定的  
-  - 加速試験（HTS/HAST/85-85）でシート抵抗変化はほぼなし  
+## 2. ⚙️ COF IC実装 / IC Assembly on COF
+- **接合方式 / Bonding Method**  
+  - フリップチップ実装 / Flip-chip bonding  
+  - IC側 Auバンプ ⇔ COF側 Auパッド / IC Au bumps ⇔ COF Au pads  
+
+- **補強 / Reinforcement**  
+  - アンダーフィル樹脂で機械的・絶縁強化 / Underfill resin for mechanical & insulation reliability  
+  - 異電位配線間には確実に樹脂充填 / Ensure resin fills between different potentials  
+
+- **リスク管理 / Risk Control**  
+  - ボイドや樹脂不足はショートリスク / Voids or resin shortage may cause shorts  
+  - 熱サイクル試験で界面クラック監視 / Interface cracks checked by thermal cycle tests  
 
 ---
 
-## 3. ⚙️ IC実装とアンダーフィル / IC Assembly and Underfill
-- **方式**: フリップチップ実装（Au バンプ接合）  
-- **補強**: アンダーフィル樹脂で機械的・絶縁的強化  
-  - 異電位配線間は確実に樹脂を充填  
-  - デザインルール: 「必ず樹脂が配線間に入り込む」ことを保証  
+## 3. 🔗 COF アクチュエータ実装 / Actuator Connection
+- **接続対象 / Target Connection**  
+  - COF端子 Au ⇔ アクチュエータ配線 Au / COF pad Au ⇔ Actuator wiring Au  
+
+- **接合方式 / Bonding Method**  
+  - NCP (Non-Conductive Paste) による Au–Au接合 / Au–Au bonding with NCP  
+  - NCPは補強・空隙充填・防湿を担う / NCP provides reinforcement, void filling, moisture barrier  
+
+- **実装ルール / Assembly Rules**  
+  - Au表面の洗浄・活性化必須 / Au surface cleaning & activation mandatory  
+  - Pad周囲にNCP逃げ領域設計 / Provide NCP escape areas around pads  
+  - 信頼性試験で接触抵抗変化を監視 / Monitor resistance drift in reliability tests  
 
 ---
 
-## 4. 📡 システム評価 / System Evaluation
-- **実装階層**: COF単体 → ヘッドモジュール → プリンタ機体  
-- **EMC評価**: 電波暗室で放射・伝導・感受性を評価  
-- **知見**: 基材の誘電率 (Dk)、誘電正接 (Df)、吸湿特性が  
-  **システム全体のEMI/EMC挙動に大きく影響**  
-
----
-
-## 5. 🧪 NCP接合の適用例 / Example of NCP Bonding
-
-- **ICとCOFの接合**  
-  - フリップチップBump接合  
-  - IC側 Auバンプ ⇔ COF端子 Au  
-  - 狭ピッチ・高密度実装に有効  
-
-- **COF端子とアクチュエータ配線の接合**  
-  - NCP (Non-Conductive Paste) を用いたAu–Au接合  
-  - NCPは電気的導通ではなく、補強・空隙充填・防湿を担う  
-
-- **実装ルール**  
-  - Au表面は洗浄・活性化を必須とする  
-  - Pad周囲にNCP逃げ領域を設けることで樹脂過多を防止  
-  - 信頼性試験（85/85, HAST, Thermal Cycle）にて接触抵抗ドリフトを監視
-    
----
-
-## 6. 🔄 プロセスフロー / Process Flow
-
-### 📜 概要フロー
-```mermaid
-flowchart TB
-    A[FCCL基材準備 Cu 8um + PI] --> B[短冊化 スリット・外形]
-    B --> C[スプロケットホール形成]
-    C --> D[フォトリソ エッチング]
-    D --> E[ソルダーレジスト形成]
-    E --> F[Pad Auめっき 0.5um]
-    F --> G[IC実装 Auバンプ]
-    G --> H[アンダーフィル充填]
-    H --> I[ヘッドモジュール化]
-    I --> J[プリンタ機体に実装]
-    J --> K[電波暗室でEMC評価]
-    K --> L[設計フィードバック]
-```
-
-### 🔧 NCP接合フロー
-```mermaid
-flowchart TB
-    A[Au配線面洗浄 活性化] --> B[NCP塗布 基板側]
-    B --> C[高精度位置合わせ]
-    C --> D[熱圧着 TC TS Au-Au接触 NCP硬化]
-    D --> E[ポストキュア 外観・電気検査]
-    E --> F[追加アンダーフィル 封止]
-```
-
----
-
-## 7. 📊 比較・検討事項 / Comparative Considerations
-
-### Ni/Au vs 直Auめっき
-- Ni/Au: 保存性高い、だがコスト増  
-- 直Au: 実装性良、シート抵抗安定  
-
-### ロール基材 vs 短冊基材
-- ロール: 高スループット、搬送自動化  
-- 短冊: 高精度、試作向き  
-
-### アンダーフィル有無
-- 有: 信頼性高い、絶縁性良  
-- 無: 熱伝導改善、だがリークリスク  
-
----
-
-## 8. 🔍 接合方式の比較 / Bonding Method Comparison
-
+## 4. 🧪 接合方式の比較 / Bonding Methods Comparison
 | 項目 / Item          | **NCP** (Non-Conductive Paste) | **ACP** (Anisotropic Conductive Paste) | **ACF** (Anisotropic Conductive Film) |
 |-----------------------|--------------------------------|-----------------------------------------|---------------------------------------|
-| 材料形態 / Form       | ペースト (液状)               | ペースト (液状, 導電粒子含む)           | フィルム状 (導電粒子含む)              |
-| 導通機構 / Conduction | Au–Au直接接触                  | 粒子が垂直方向で局所導通                | 粒子が垂直方向で局所導通                |
-| 絶縁性 / Insulation   | 高い                          | 粒子分散に依存                          | 粒子分散に依存                          |
-| 実装ピッチ / Pitch    | 超狭ピッチ対応可               | 狭ピッチ対応可                           | 狭ピッチ対応可 (FPCで実績多)           |
-| プロセス性 / Process  | 塗布 → 熱圧着                  | 塗布 → 熱圧着                            | ラミネーション → 熱圧着                |
-| リワーク性 / Rework   | 一部可能                       | 困難                                    | 困難                                   |
-| 応用例 / Application  | Auバンプ実装, MEMS             | 小型モジュール, センサー                 | LCDドライバIC, FPC接続                  |
-| 特徴 / Notes          | 接触抵抗安定性が高い           | 粒子均一性課題                          | 量産性高い、実績豊富                   |
+| 材料形態 / Form       | ペースト (液状) / Paste (liquid) | ペースト (導電粒子含) / Paste (w/ conductive particles) | フィルム / Film (w/ conductive particles) |
+| 導通機構 / Conduction | Au–Au直接接触 / Direct Au–Au contact | 粒子による垂直局所導通 / Vertical conduction via particles | 粒子による垂直局所導通 / Vertical conduction via particles |
+| 絶縁性 / Insulation   | 高い / High                  | 粒子分散に依存 / Depends on dispersion | 粒子分散に依存 / Depends on dispersion |
+| 実装ピッチ / Pitch    | 超狭ピッチ対応 / Ultra-fine pitch | 狭ピッチ対応 / Fine pitch capable       | 狭ピッチ対応 / Fine pitch capable      |
+| プロセス性 / Process  | 塗布 → 熱圧着 / Dispense → Thermocompression | 塗布 → 熱圧着 / Dispense → Thermocompression | ラミネート → 熱圧着 / Laminate → Thermocompression |
+| リワーク性 / Rework   | 一部可能 / Partially possible | 困難 / Difficult                       | 困難 / Difficult                       |
+| 応用例 / Application  | Auバンプ, MEMS / Au bump, MEMS | 小型モジュール / Small modules         | LCDドライバ, FPC / LCD drivers, FPC   |
 
 ---
 
-## 9. 🧠 SystemDK視点のまとめ / SystemDK Summary
-- COF基材の変更は「**材料 → パッケージ → モジュール → システム**」へ波及  
-- EMC評価は **フィードバックループ**として機能し、単なる材料選択を超える  
-- SystemDK的には、  
-  **材料物性 → 実装信頼性 → 信号伝送特性 → EMC挙動**  
-  の因果連鎖を理解することが必須  
+## 5. 🔥 熱設計 / Thermal Considerations
+- **PI基材の熱特性 / PI Thermal Properties**  
+  - 低熱伝導率 (~0.2 W/mK) → 熱クロストーク低減 / Low thermal conductivity reduces crosstalk  
+  - Cu配線以外は放熱パスになりにくい / Poor heat spreading except via Cu traces  
+
+- **利点 / Advantages**  
+  - 隣接素子への熱流入を抑制 / Suppresses heat flow to neighboring devices  
+  - 温度安定性に寄与 / Contributes to stability  
+
+- **課題 / Challenges**  
+  - IC発熱拡散が困難 / Difficult to dissipate IC heat  
+  - COF単体での熱設計自由度が小さい / Limited thermal design freedom at COF level  
+
+- **対応策（システム設計） / System-Level Solutions**  
+  - モジュール側でヒートスプレッダ利用 / Heat spreaders at module level  
+  - 実装基板で熱パス設計 / Thermal paths via mounting substrate  
 
 ---
 
-## 10. 📚 学習課題例 / Learning Exercises
-- **Q1.** 基材の誘電率 Dk が 0.5 増加した場合、特性インピーダンスと EMC 特性にどう影響するか？  
-- **Q2.** NCP接合と ACF接合の違いを整理し、アクチュエータ実装に最適な方式を説明せよ。  
+## 6. 📡 System評価 / System-Level Evaluation
+- **評価階層 / Evaluation Levels**  
+  1. COF単体 / COF itself  
+  2. モジュール（ヘッドなど）/ Module (head or subsystem)  
+  3. システム全体（機体）/ Whole system  
+
+- **EMC評価 / EMC Evaluation**  
+  - 電波暗室で放射・伝導・感受性を確認 / Radiation, conduction, immunity in anechoic chamber  
+  - 誘電率 Dk・誘電正接 Df・吸湿性が影響大 / Dk, Df, moisture absorption strongly affect EMC  
+
+- **SystemDK視点 / SystemDK Perspective**  
+  - 材料 → パッケージ → モジュール → システム / Material → Package → Module → System  
+  - 物性変化が信号伝送・EMCに直結 / Material property change directly affects EMC  
+  - 評価は設計フィードバックループとして機能 / Evaluation works as design feedback loop  
 
 ---
 
-## 11.  🔥 熱伝導と放熱性 / Thermal Conduction and Heat Dissipation
+## 📚 学習課題例 / Learning Exercises
+- **Q1.** COF基材の誘電率 Dk が +0.5 変化した場合、特性インピーダンスとEMC特性はどう変化するか？  
+> If the dielectric constant Dk of the COF substrate increases by +0.5, how will characteristic impedance and EMC behavior change?  
 
-COF基材（PI＋Cu）は、Cu配線を除けば熱伝導率が低いという特徴を持つ。  
-このため、隣接素子（例：アクチュエータ）への不要な熱流入を防ぐ効果があり、  
-クロストークや誤動作を抑える上では有利に働く。  
+- **Q2.** IC ⇔ COF ⇔ アクチュエータ接続で、NCPとACFを比較し、長期信頼性の観点から適性を論ぜよ。  
+> Compare NCP and ACF in IC ⇔ COF ⇔ actuator connection, and discuss suitability in terms of long-term reliability.  
 
-一方で、この低熱伝導性は駆動ICのような局所発熱源の放熱を難しくし、  
-COF単体では熱拡散や放熱パスの設計自由度が限られるという制約を生む。  
-
-したがって、COFの熱特性は「両刃の剣」である。  
-**熱伝達を遮断する利点と、放熱設計の難しさを同時に理解し、  
-材料 → パッケージ → モジュール → システムの階層で  
-適切に役割分担することが不可欠である。**
+- **Q3.** COF基材の低熱伝導率が「利点」と「制約」になる事例を挙げよ。  
+> Give examples where low thermal conductivity of COF substrate is both an advantage and a limitation.  
 
 ---
 
