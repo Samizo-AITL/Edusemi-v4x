@@ -165,16 +165,6 @@ conditions*
   *Both COF’s effect on the printer and the printer’s effect on COF must be assessed.*  
 
 ---
-    
-
-
-- EMC試験  
-  - **COFがプリンタ全体に与える影響**  
-    *Impact of COF on overall printer*  
-  - **プリンタ環境がCOF挙動に与える影響**  
-    *Impact of printer environment on COF behavior*  
-
----
 
 ## 7. 🧠 SystemDK視点まとめ / SystemDK Perspective
 
