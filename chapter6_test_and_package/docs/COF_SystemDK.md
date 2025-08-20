@@ -58,16 +58,35 @@ layout: default
 
 - **COF端子 (Au) ⇔ アクチュエータ配線 (Au)** を **NCP (Non-Conductive Paste)** で接合  
   *Bond COF terminals (Au) to actuator wiring (Au) using NCP*  
+
 - **導通機構**: Au–Au金属接触、NCPは空隙充填・補強・防湿に寄与  
   *Conduction: Au–Au metal contact, NCP fills voids, reinforces, and protects from moisture*  
-- **実装ルール**  
-  - Au表面の洗浄・活性化を必須  
-    *Au surface cleaning and activation required*  
-  - Pad周囲にNCP逃げ領域を設計  
-    *Provide NCP escape region around pad*  
-  - 信頼性試験（85/85, HAST, Thermal Cycle）で接触抵抗のドリフトを評価  
-    *Evaluate contact resistance drift via reliability tests (85/85, HAST, Thermal Cycle)*  
 
+- **NCP採用の理由 / Why NCP is used**  
+  - **超狭ピッチ接合を実現するため、導電粒子を含まないNCPが必要**  
+    *NCP without conductive particles is required to achieve ultra-fine-pitch bonding.*  
+  - そのため、**COF端子もアクチュエータ実装配線もAuであることが必須**  
+    *Thus, both COF terminals and actuator wiring must be Au.*  
+
+### ⚠️ マイグレーションリスク / Migration Risk
+
+- 狭ピッチで異電位配線が存在し、かつ **高電圧 (例: 30V)・高温高湿環境** では、金属マイグレーションのリスクが高まる  
+  *When narrow-pitch, different-potential wirings exist under high voltage (e.g., 30V) and high temperature/humidity, the risk of metal migration increases.*  
+
+- **Auはイオン化傾向が低くても完全に安全ではない**  
+  *Even though Au has a low ionization tendency, it is not completely immune.*  
+
+- 筆者の経験としても、**Au配線間でマイグレーション事例が発生**したことがある  
+  *Based on the author’s experience, migration cases have occurred even between Au wirings.*  
+
+- **設計・実装上の対策例 / Design & Implementation Countermeasures**  
+  - 配線間隔を設計ルール以上に確保  
+    *Ensure wiring spacing beyond minimum design rules*  
+  - 防湿性の高い樹脂を適用し、イオン水分の介在を抑制  
+    *Apply moisture-resistant resin to suppress ionic water intrusion*  
+  - 高温高湿試験（85/85, HAST）でマイグレーションの進展有無を確認  
+    *Check for migration progression through 85/85 and HAST tests*
+    
 ---
 
 ## 4. 🧪 接合方式の比較 / Bonding Methods
