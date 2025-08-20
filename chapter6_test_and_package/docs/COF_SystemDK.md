@@ -44,12 +44,12 @@ layout: default
 ### 概要フロー
 ```mermaid
 flowchart LR
-    A[FCCL基材準備 (Cu 8um + PI)] --> B[短冊化 (スリット・外形)]
+    A[FCCL基材準備 Cu 8um + PI] --> B[短冊化 スリット・外形]
     B --> C[スプロケットホール形成]
-    C --> D[フォトリソ/エッチング]
+    C --> D[フォトリソ エッチング]
     D --> E[ソルダーレジスト形成]
     E --> F[Pad Auめっき 0.5um]
-    F --> G[IC実装 (Auバンプ)]
+    F --> G[IC実装 Auバンプ]
     G --> H[アンダーフィル充填]
     H --> I[ヘッドモジュール化]
     I --> J[プリンタ機体に実装]
@@ -60,11 +60,11 @@ flowchart LR
 ### NCP接合フロー
 ```mermaid
 flowchart LR
-    A[Au配線面洗浄・活性化] --> B[NCP塗布 基板側]
+    A[Au配線面洗浄 活性化] --> B[NCP塗布 基板側]
     B --> C[高精度位置合わせ]
-    C --> D[熱圧着 (TC/TS) Au–Au接触 + NCP硬化]
-    D --> E[ポストキュア・外観・電気検査]
-    E --> F[追加アンダーフィル/封止 (必要に応じ)]
+    C --> D[熱圧着 TC TS Au-Au接触 NCP硬化]
+    D --> E[ポストキュア 外観・電気検査]
+    E --> F[追加アンダーフィル 封止]
 ```
 
 ## 7. 比較・検討事項 / Comparative Considerations
