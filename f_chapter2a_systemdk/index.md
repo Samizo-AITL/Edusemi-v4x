@@ -64,12 +64,21 @@ This chapter introduces the concept of the **System Design Kit (SystemDK)** and 
 
 ## 🔗 関連章との接続｜Linked Chapters
 
-- [`f_chapter2_chiplet_pkg/`](../f_chapter2_chiplet_pkg/)：Chipletとパッケージ技術の基礎  
-- [`d_chapter5_analog_mixed_signal/`](../d_chapter5_analog_mixed_signal/)：AMS設計とレイアウト物理制約  
-- [`f_chapter4_fsm_pid_llm/`](../f_chapter4_fsm_pid_llm/)：制御SoCの統合PoCとの接続  
-- [`chapter6_test_and_package/docs/COF_SystemDK.md`](../chapter6_test_and_package/docs/COF_SystemDK.md)：COF実装とシステムレベルEMC評価  
-- [`chapter6_test_and_package/6.4_packaging.md`](../chapter6_test_and_package/6.4_packaging.md)：基本的なパッケージ工程と信頼性確保
+- [`f_chapter2_chiplet_pkg/`](../f_chapter2_chiplet_pkg/)  
+  → Chipletとパッケージの基礎を扱い、SystemDKの前提知識となる部分。  
 
+- [`d_chapter5_analog_mixed_signal/`](../d_chapter5_analog_mixed_signal/)  
+  → AMS設計とレイアウトの物理制約を解説。信号／電源整合性とSystemDKをつなぐ。  
+
+- [`f_chapter4_fsm_pid_llm/`](../f_chapter4_fsm_pid_llm/)  
+  → 制御SoCのPoCとの接続事例。SystemDKの設計判断が制御系にどう反映されるかを示す。  
+
+- [`chapter6_test_and_package/docs/COF_SystemDK.md`](../chapter6_test_and_package/docs/COF_SystemDK.md)  
+  → COF実装を具体例に、熱・応力・EMI/EMC評価がどのようにシステムレベル設計に波及するかを学べる。  
+
+- [`chapter6_test_and_package/6.4_packaging.md`](../chapter6_test_and_package/6.4_packaging.md)  
+  → 一般的なパッケージ工程と信頼性確保の流れ。COFを含む実装技術との比較理解に有効。
+  
 ---
 
 ## 👤 **著者・ライセンス | Author & License**
