@@ -43,7 +43,7 @@ layout: default
 
 ### 概要フロー
 ```mermaid
-flowchart LR
+flowchart TB
     A[FCCL基材準備 Cu 8um + PI] --> B[短冊化 スリット・外形]
     B --> C[スプロケットホール形成]
     C --> D[フォトリソ エッチング]
@@ -59,7 +59,7 @@ flowchart LR
 
 ### NCP接合フロー
 ```mermaid
-flowchart LR
+flowchart TB
     A[Au配線面洗浄 活性化] --> B[NCP塗布 基板側]
     B --> C[高精度位置合わせ]
     C --> D[熱圧着 TC TS Au-Au接触 NCP硬化]
