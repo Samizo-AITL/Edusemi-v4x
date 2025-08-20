@@ -3,6 +3,8 @@ layout: default
 title: f2a_9_evaluation_methods.md
 ---
 
+---
+
 # 🧪 f2a_9_evaluation_methods.md  
 **SystemDKにおける物理制約の評価手法**  
 **Evaluation Methods for Physical Constraints in SystemDK**
