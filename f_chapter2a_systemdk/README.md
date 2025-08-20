@@ -71,6 +71,8 @@ This chapter introduces the concept of the **System Design Kit (SystemDK)** and 
 - [`f_chapter2_chiplet_pkg/`](../f_chapter2_chiplet_pkg/)：Chipletとパッケージ技術の基礎  
 - [`d_chapter5_analog_mixed_signal/`](../d_chapter5_analog_mixed_signal/)：AMS設計とレイアウト物理制約  
 - [`f_chapter4_fsm_pid_llm/`](../f_chapter4_fsm_pid_llm/)：制御SoCの統合PoCとの接続  
+- [`chapter6_test_and_package/docs/COF_SystemDK.md`](../chapter6_test_and_package/docs/COF_SystemDK.md)：COF実装とシステムレベルEMC評価  
+- [`chapter6_test_and_package/6.4_packaging.md`](../chapter6_test_and_package/6.4_packaging.md)：基本的なパッケージ工程と信頼性確保
 
 ---
 
