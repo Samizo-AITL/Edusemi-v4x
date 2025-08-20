@@ -113,6 +113,7 @@ layout: default
 - ファンクションテスト (Logic/Functionality Test)  
 - 耐久試験: Heat Cycle  
   *Durability Test: Heat Cycle*  
+  - 例: **JEDEC JESD22-A104** (–40℃〜125℃, 500 cycles)  
 
 ### (2) COF + アクチュエータ実装評価  
 - 開放/短絡検査  
@@ -120,9 +121,13 @@ layout: default
 - PZTセグメントのオープン/ショート検査  
   *Open/Short Test of PZT Segments*  
 - 耐久試験  
-  - Heat Cycle  
+  - Heat Cycle（例: JESD22-A104 準拠）  
   - **PZT耐久試験（例: 180億パルスで特性劣化5%以内）**  
     *PZT endurance test (e.g., within 5% degradation after 18 billion pulses)*  
+  - 高温高湿試験 85/85（例: **JEDEC JESD22-A101**）  
+    *85℃ / 85%RH high temperature humidity test*  
+  - HAST試験（例: **JEDEC JESD22-A110**）  
+    *Highly Accelerated Stress Test under pressure steam*  
 
 ### (3) ヘッドモジュール評価  
 - 印字機能検査（Functional Printing Test）  
@@ -130,7 +135,7 @@ layout: default
 - 吐出特性試験（Jetting Characteristics Test）  
   *Jetting characteristics test*  
 - 耐久試験  
-  - Heat Cycle  
+  - Heat Cycle（例: JESD22-A104 準拠）  
   - PZT耐久（パルス駆動による劣化確認）  
     *PZT endurance test (confirming degradation by pulse driving)*  
   - 吐出安定性試験（Jetting Stability over Long Duration）  
@@ -142,10 +147,8 @@ layout: default
 - 耐久試験  
   - 長時間運転試験（印字品質維持、搬送・駆動系の安定性確認）  
     *Long-duration operation test (print quality retention, stability of transport and drive system)*  
-  - 環境試験（温湿度、振動、塵埃影響など）  
-    *Environmental tests (temperature/humidity, vibration, dust impact, etc.)*
-
-conditions*  
+  - 環境試験（温湿度、振動、塵埃影響など, 例: **IEC 60068-2**）  
+    *Environmental tests (temperature/humidity, vibration, dust impact, etc.)*  
 
 ### EMI/EMC試験 / EMI/EMC Evaluation
 - **新規IC実装時の評価 / New IC Evaluation**  
@@ -162,7 +165,7 @@ conditions*
 - **相互影響の観点 / Mutual Influence**  
   - **COFがプリンタ全体に与える影響**（放射/伝導ノイズ源となる可能性）  
   - **プリンタ環境がCOF挙動に与える影響**（外来ノイズの感受性）  
-  *Both COF’s effect on the printer and the printer’s effect on COF must be assessed.*  
+  *Both COF’s effect on the printer and the printer’s effect on COF must be assessed.*
 
 ---
 
