@@ -30,15 +30,31 @@ layout: default
 
 - **FCCL基材**: 薄型Cu箔 (約8 µm) とポリイミドフィルムの積層  
   *FCCL substrate: Thin Cu foil (~8 µm) laminated with polyimide film*  
+
 - **加工**: ロールから短冊にスリット加工、搬送用スプロケットホール形成  
   *Processing: Slit from roll into strips, form sprocket holes for transport*  
+
 - **パターニング**: フォトリソ＋エッチングで微細配線形成  
   *Patterning: Fine wiring via photolithography and etching*  
+
 - **保護膜**: ソルダーレジストで配線を被覆、パッドのみ開口  
   *Protective layer: Solder resist covers wiring, pads opened*  
+
 - **パッド処理**: 直Auめっき（~0.5 µm）、Cu拡散は限定的  
   *Pad treatment: Direct Au plating (~0.5 µm), limited Cu diffusion*  
 
+- **めっき電位供給パッドの設計**  
+  - Auめっきを均一に行うため、基材端部に **通電パッド／リードバー** を設ける  
+  - めっき槽内でここに電位を与え、Cu配線全体に電流を流す  
+  - めっき終了後、これらのリードは基材カット工程で除去され、最終製品には残らない  
+  *Design of plating current-supply pads:  
+  - Add current-supply pads/lead bars at the substrate edge to achieve uniform Au plating  
+  - Voltage is applied here in the plating bath to conduct current through Cu traces  
+  - After plating, these leads are cut away and do not remain in the final product*  
+
+- **表面粗さ (Ra, Rz)**: 実装時の接続信頼性に影響するため、管理が重要  
+  *Surface roughness (Ra, Rz) critically affects assembly reliability and must be controlled*
+  
 ---
 
 ## 2. ⚙️ COF IC実装 / COF IC Assembly
