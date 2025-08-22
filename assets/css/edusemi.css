@@ -1,109 +1,98 @@
 /* =========================
-   Edusemi カスタムスタイル（左詰め・幅制限）
+   Edusemi カスタム（左詰め・幅制限 / GitHub風）
    ========================= */
-
-/* ベース（GitHub風） */
-body {
-  background-color: #ffffff;
-  color: #24292e;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+.edusemi-root {
+  /* 日本語=ゴシック / 英語=サンセリフ */
+  font-family: -apple-system, BlinkMacSystemFont, "Noto Sans JP",
+               "Hiragino Kaku Gothic ProN", "Yu Gothic",
+               "Segoe UI", Helvetica, Arial, sans-serif;
   line-height: 1.6;
+  color: #24292e;
+  background: #ffffff;
   margin: 0;
 }
 
-/* ★ 左詰め＋幅制限：.wrapper があれば優先、無い場合は main.container に適用 */
-.wrapper,
-main.container {
-  max-width: 980px;         /* GitHub README に近い幅 */
-  margin: 0;                /* 中央寄せをやめて左詰め */
-  padding: 1.5rem 1rem;     /* 上下左右の余白 */
+/* ラッパ（.wrapper or main.container を想定） */
+.edusemi-root .wrapper,
+.edusemi-root main.container {
+  max-width: 980px;      /* GitHub README 相当 */
+  margin: 0;             /* 左詰め */
+  padding: 1.5rem 1rem;
 }
 
-/* 見出し（GitHub寄せ） */
-h1, h2, h3, h4 {
+/* 見出し */
+.edusemi-root h1, .edusemi-root h2, .edusemi-root h3, .edusemi-root h4 {
   font-weight: 600;
   margin-top: 1.8rem;
   margin-bottom: 1rem;
   border-bottom: 1px solid #eaecef;
-  padding-bottom: 0.3em;
+  padding-bottom: .3em;
   line-height: 1.25;
 }
-h1 { font-size: 1.8em; }
-h2 { font-size: 1.5em; }
-h3 { font-size: 1.25em; }
+.edusemi-root h1 { font-size: 1.8em; }
+.edusemi-root h2 { font-size: 1.5em; }
+.edusemi-root h3 { font-size: 1.25em; }
 
-/* 段落 */
-p { margin: 0 0 0.8em; }
+.edusemi-root p { margin: 0 0 .8em; }
 
 /* リンク */
-a {
-  color: #0366d6;
-  text-decoration: none;
-}
-a:hover { text-decoration: underline; }
+.edusemi-root a { color: #0366d6; text-decoration: none; font-weight: 600; }
+.edusemi-root a:hover { text-decoration: underline; }
 
-/* 画像（左寄せ・ブロック表示） */
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 1em 0;           /* 左詰めにするため左右の auto を外す */
+/* 画像（左寄せ） */
+.edusemi-root img {
+  max-width: 100%; height: auto; display: block; margin: 1em 0;
 }
 
-/* テーブル（GitHub風） */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 1em 0;
-}
-th, td {
-  border: 1px solid #dfe2e5;
-  padding: 0.5em 0.8em;
+/* テーブル（実用寄り：2px罫線＋横余白広め） */
+.edusemi-root table { width: 100%; border-collapse: collapse; margin: 1em 0; }
+.edusemi-root th, .edusemi-root td {
+  border: 2px solid #bbb;
+  padding: .6em 1.1em;       /* 横余白↑ */
   vertical-align: top;
 }
-th {
-  background-color: #f6f8fa;
-  font-weight: 600;
+.edusemi-root th {
+  background: #f6f8fa;
+  font-weight: 700;
   text-align: left;
+  border-color: #999;        /* ヘッダー強め */
 }
+.edusemi-root tbody tr:nth-child(odd)  td { background: #fff; }
+.edusemi-root tbody tr:nth-child(even) td { background: #f7f3ea; }
 
 /* 引用 */
-blockquote {
-  padding: 0.6em 1em;
-  color: #6a737d;
-  border-left: 0.25em solid #dfe2e5;
-  background-color: #f6f8fa;
-  margin: 1em 0;
+.edusemi-root blockquote {
+  padding: .6em 1em; color: #6a737d;
+  border-left: .25em solid #dfe2e5; background: #f6f8fa; margin: 1em 0;
 }
 
 /* コード */
-pre {
-  background-color: #f6f8fa;
-  padding: 0.8em;
-  border: 1px solid #d1d5da;
-  border-radius: 6px;
-  overflow-x: auto;
+.edusemi-root pre {
+  background: #f6f8fa; padding: .8em; border: 1px solid #d1d5da;
+  border-radius: 6px; overflow-x: auto;
 }
-code {
-  background-color: #f6f8fa;
-  padding: 0.2em 0.4em;
-  font-size: 90%;
+.edusemi-root code {
+  background: #f6f8fa; padding: .2em .4em; font-size: 90%;
   border-radius: 3px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+               "Courier New", monospace;
 }
+
+/* 箇条書きの余白調整 */
+.edusemi-root ul, .edusemi-root ol { margin: .6em 0 1em 1.2em; }
+.edusemi-root li { margin: .25em 0; }
+
+/* 横スクロール保険（表やコードがはみ出すのを回避） */
+.edusemi-root .wrapper, .edusemi-root main.container { overflow-x: auto; }
 
 /* モバイル */
-@media screen and (max-width: 768px) {
-  .wrapper,
-  main.container {
-    max-width: 100%;
-    padding: 1rem;
-  }
-  h1 { font-size: 1.5em; }
-  h2 { font-size: 1.3em; }
-  h3 { font-size: 1.1em; }
+@media (max-width: 768px) {
+  .edusemi-root .wrapper,
+  .edusemi-root main.container { max-width: 100%; padding: 1rem; }
+  .edusemi-root h1 { font-size: 1.5em; }
+  .edusemi-root h2 { font-size: 1.3em; }
+  .edusemi-root h3 { font-size: 1.1em; }
 }
 
-/* （必要なら）テーマがタイトルを隠している場合の救済 */
-.page-title, .post-title {
-  display: block !important;
-}
+/* タイトルが隠れるテーマ向けの救済 */
+.edusemi-root .page-title, .edusemi-root .post-title { display: block !important; }
