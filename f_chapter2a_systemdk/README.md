@@ -81,7 +81,6 @@ This chapter introduces the concept of the **System Design Kit (SystemDK)** and 
 | 📕 Packaging Process (Ch.6.4) | 一般的パッケージ工程と信頼性<br>*General packaging process and reliability* | [![Site](https://img.shields.io/badge/View-Site-brightgreen?style=for-the-badge&logo=githubpages)](https://samizo-aitl.github.io/Edusemi-v4x/chapter6_test_and_package/6.4_packaging.html) [![Repo](https://img.shields.io/badge/View-Repo-blue?style=for-the-badge&logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/blob/main/chapter6_test_and_package/6.4_packaging.md) |
 
 ---
----
 
 ## 👤 **著者・ライセンス | Author & License**
 
