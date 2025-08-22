@@ -70,27 +70,17 @@ This chapter introduces the concept of the **System Design Kit (SystemDK)** and 
 
 ---
 
-## 🔗 関連章との接続｜Linked Chapters
+## 📎 関連リンク / Related Links
 
-- [`f_chapter2_chiplet_pkg/`](../f_chapter2_chiplet_pkg/)  
-  → **Chipletとパッケージの基礎**を扱い、SystemDKの前提知識となる部分。  
-  *Covers the **basics of chiplets and packaging**, serving as foundational knowledge for SystemDK.*  
-
-- [`d_chapter5_analog_mixed_signal/`](../d_chapter5_analog_mixed_signal/)  
-  → **AMS設計とレイアウトの物理制約**を解説。信号／電源整合性とSystemDKをつなぐ。  
-  *Explains **AMS design and layout physical constraints**, linking signal/power integrity with SystemDK.*  
-
-- [`f_chapter4_fsm_pid_llm/`](../f_chapter4_fsm_pid_llm/)  
-  → **制御SoCのPoCとの接続事例**。SystemDKの設計判断が制御系にどう反映されるかを示す。  
-  *Case study of linking with **control SoC PoC**, showing how SystemDK design decisions affect control systems.*  
-
-- [`chapter6_test_and_package/docs/COF_SystemDK.md`](../chapter6_test_and_package/docs/COF_SystemDK.md)  
-  → **COF実装の具体例**を通じ、熱・応力・EMI/EMC評価が**システムレベル設計に波及**する過程を学べる。  
-  *Uses **COF implementation** as a concrete example to study how **thermal, stress, and EMI/EMC evaluations propagate** to system-level design.*  
-
-- [`chapter6_test_and_package/6.4_packaging.md`](../chapter6_test_and_package/6.4_packaging.md)  
-  → **一般的なパッケージ工程と信頼性確保**の流れ。COFを含む実装技術との**比較理解**に有効。  
-  *Covers **general packaging processes and reliability assurance**, useful for **comparative understanding** with COF and other implementation technologies.*
+| 項目 / Item | 説明 / Description | Links |
+|-------------|-------------------|-------|
+| 🏠 Edusemi-v4x トップ | 教材全体のトップページ<br>*Top page of Edusemi-v4x* | [![Site](https://img.shields.io/badge/View-Site-brightgreen?style=for-the-badge&logo=githubpages)](https://samizo-aitl.github.io/Edusemi-v4x/) [![Repo](https://img.shields.io/badge/View-Repo-blue?style=for-the-badge&logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x) |
+| 🧩 Assembly & Integration | 実装技術カテゴリの総合ページ<br>*Assembly & Integration index* | [![Site](https://img.shields.io/badge/View-Site-brightgreen?style=for-the-badge&logo=githubpages)](https://samizo-aitl.github.io/Edusemi-Plus/Assembly-Integration/) [![Repo](https://img.shields.io/badge/View-Repo-blue?style=for-the-badge&logo=github)](https://github.com/Samizo-AITL/Edusemi-Plus/tree/main/Assembly-Integration) |
+| 📘 Chiplet & Package (Ch.2) | チップレットとパッケージの基礎<br>*Basics of chiplets and packaging* | [![Site](https://img.shields.io/badge/View-Site-brightgreen?style=for-the-badge&logo=githubpages)](https://samizo-aitl.github.io/Edusemi-v4x/f_chapter2_chiplet_pkg/) [![Repo](https://img.shields.io/badge/View-Repo-blue?style=for-the-badge&logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/f_chapter2_chiplet_pkg) |
+| 📗 AMS Design (Ch.5) | AMS設計と物理制約<br>*AMS design and physical constraints* | [![Site](https://img.shields.io/badge/View-Site-brightgreen?style=for-the-badge&logo=githubpages)](https://samizo-aitl.github.io/Edusemi-v4x/d_chapter5_analog_mixed_signal/) [![Repo](https://img.shields.io/badge/View-Repo-blue?style=for-the-badge&logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/d_chapter5_analog_mixed_signal) |
+| 📙 Control SoC PoC (Ch.4) | 制御SoC PoCとの接続事例<br>*Control SoC PoC linkage* | [![Site](https://img.shields.io/badge/View-Site-brightgreen?style=for-the-badge&logo=githubpages)](https://samizo-aitl.github.io/Edusemi-v4x/f_chapter4_fsm_pid_llm/) [![Repo](https://img.shields.io/badge/View-Repo-blue?style=for-the-badge&logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/f_chapter4_fsm_pid_llm) |
+| 📒 COF + SystemDK (Ch.6) | COF実装と物理制約評価<br>*COF implementation and constraint evaluation* | [![Site](https://img.shields.io/badge/View-Site-brightgreen?style=for-the-badge&logo=githubpages)](https://samizo-aitl.github.io/Edusemi-v4x/chapter6_test_and_package/docs/COF_SystemDK.html) [![Repo](https://img.shields.io/badge/View-Repo-blue?style=for-the-badge&logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/blob/main/chapter6_test_and_package/docs/COF_SystemDK.md) |
+| 📕 Packaging Process (Ch.6.4) | 一般的パッケージ工程と信頼性<br>*General packaging process and reliability* | [![Site](https://img.shields.io/badge/View-Site-brightgreen?style=for-the-badge&logo=githubpages)](https://samizo-aitl.github.io/Edusemi-v4x/chapter6_test_and_package/6.4_packaging.html) [![Repo](https://img.shields.io/badge/View-Repo-blue?style=for-the-badge&logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/blob/main/chapter6_test_and_package/6.4_packaging.md) |
   
 ---
 
