@@ -154,7 +154,9 @@ In practice, these are closely connected—**circuits depend on device physics, 
 | **Education** | M.Eng., Electrical and Electronic Engineering, Shinshu University |
 | **Career** | Former engineer at Seiko Epson Corporation (1997–) |
 | **Expertise** | Semiconductor devices (logic, memory, high-voltage mixed)<br>Thin-film piezoelectric actuators for inkjet<br>PrecisionCore printhead productization, BOM management, ISO training |
-| **Contact** | ✉️ [Email](mailto:shin3t72@gmail.com) / 🐦 [X](https://x.com/shin3t72) / 💻 [GitHub](https://samizo-aitl.github.io/) |
+| **✉️ Email** | [![Email](https://img.shields.io/badge/Email-shin3t72%40gmail.com-red?style=for-the-badge&logo=gmail)](mailto:shin3t72@gmail.com) |
+| **🐦　X** | [![X](https://img.shields.io/badge/X-@shin3t72-black?style=for-the-badge&logo=x)](https://x.com/shin3t72) |
+| **💻 GitHub** | [![GitHub](https://img.shields.io/badge/GitHub-Samizo--AITL-blue?style=for-the-badge&logo=github)](https://github.com/Samizo-AITL) |
 
 ---
 
