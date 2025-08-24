@@ -48,6 +48,17 @@ flowchart TB
     GND --> Drain --> Gate --> Source
 ```
 
+```mermaid
+flowchart TB
+    subgraph GND["GND Guard Ring (外周)"]
+        subgraph Drain["Drain (N+) 高電圧端子"]
+            subgraph Gate["Gate (Poly) リング状ゲート"]
+                Source["Source (N+) 中央ソース"]
+            end
+        end
+    end
+```
+
 ---
 
 ## 📐 特性と設計パラメータ｜Characteristics and Design Parameters
