@@ -44,12 +44,13 @@ flowchart LR
 
 ```mermaid
 flowchart TB
-    GND["GND Guard Ring (外周)"]
-    Drain["Drain (N+) 高電圧端子"]
-    Gate["Gate (Poly) リング状ゲート"]
-    Source["Source (N+) 中央ソース"]
-
-    GND --> Drain --> Gate --> Source
+    subgraph GND["GND Guard Ring (外周)"]
+        subgraph Drain["Drain (N+) 高電圧端子"]
+            subgraph Gate["Gate (Poly) リング状ゲート"]
+                Source["Source (N+) 中央ソース"]
+            end
+        end
+    end
 ```
 ---
 
