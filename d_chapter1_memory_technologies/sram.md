@@ -27,7 +27,7 @@ Unlike DRAM, it does not require refresh and can stably retain data using a 6-tr
 ### 📐 構成図｜Schematic
 
 ```mermaid
-flowchart TB
+flowchart LR
     subgraph SRAM_Cell [SRAM 6T Cell]
         VDD[VDD]
         GND[GND]
