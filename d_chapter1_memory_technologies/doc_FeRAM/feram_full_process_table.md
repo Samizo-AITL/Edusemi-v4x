@@ -20,38 +20,94 @@ title: 📘 0.18µm FeRAM Process Flow — 完全版
 
 ## 🟦 Part 1: FEOL (*Front-End of Line*)  
 
-| 工程名 / Step | 処理内容 / Process | 分類 / Category | 目的 / Purpose | 処理条件 / Condition | 寸法 / CD | 膜厚 / Thickness | Mask |
-|---------------|--------------------|-----------------|----------------|----------------------|-----------|------------------|------|
+---
+
+### 🔹 素子分離 / *Isolation (STI)*  
+
+| 工程名 / Step | 処理内容 / Process | 分類 / Category | 目的 / Purpose | 条件 / Condition | 寸法 / CD | 膜厚 / Thickness | Mask |
+|---------------|--------------------|-----------------|----------------|------------------|-----------|------------------|------|
 | **FS-DP** | SiON保護膜堆積<br>*SiON protection film deposition* | 全体 / Global | 界面保護<br>*Interface protection* | 200Å @ 700℃ | - | - | - |
 | **FSN-DP** | STI用窒化膜堆積<br>*STI nitride deposition* | Field | 酸化防止キャップ<br>*Oxidation cap* | 1500Å @ 750℃ | - | - | - |
-| **F-PH** | フォトリソグラフィ<br>*Photolithography* | Field | パターン定義<br>*Patterning* | - | 0.28µm | - | F |
-| **F-ET** | エッチング（RIE等）<br>*Etching (RIE)* | Field | パターン転写<br>*Pattern transfer* | - | 0.28µm | - | - |
+| **F-PH** | フォトリソグラフィ<br>*Photolithography* | Field | STIパターン定義<br>*STI patterning* | - | 0.28µm | - | F |
+| **F-ET** | エッチング（RIE等）<br>*Etching (RIE)* | Field | トレンチ形成<br>*Trench etching* | - | 0.28µm | - | - |
 | **F-DP** | STI酸化膜埋込<br>*STI oxide fill* | Field | トレンチフィル<br>*Trench fill* | - | - | 4000Å | - |
 | **F-CMP** | STI CMP<br>*CMP planarization* | Field | 平坦化<br>*Planarization* | - | - | - | - |
-| **PRE-OX** | 犠牲酸化膜形成<br>*Sacrificial oxidation* | 前処理 / Pre | 表面改質・汚染除去<br>*Surface treatment* | Dry OX ~80Å | - | 80Å | - |
-| **NWL-PH** | フォトリソ（N-Well）<br>*Lithography (N-Well)* | Well | N-Well定義<br>*N-Well definition* | - | - | - | NWL |
-| **NWL-ION** | イオン注入<br>*Ion implantation* | Well | N-Well形成<br>*N-Well formation* | 800keV, 2E13 | - | - | - |
-| **PWL-PH** | フォトリソ（P-Well）<br>*Lithography (P-Well)* | Well | P-Well定義<br>*P-Well definition* | - | - | - | PWL |
-| **PWL-ION** | イオン注入<br>*Ion implantation* | Well | P-Well形成<br>*P-Well formation* | 200keV, 5E12 | - | - | - |
-| **NCD-PH** | フォトリソ（1.8V NMOS） | CD | Nch領域定義 | - | 1.8V | - | NCD |
-| **NCD-ION** | NMOSチャネル注入<br>*NMOS channel doping* | CD | Vth調整 | B, 50keV, 1E13 | 1.8V | - | - |
-| **PCD-PH** | フォトリソ（1.8V PMOS） | CD | Pch領域定義 | - | 1.8V | - | PCD |
-| **PCD-ION** | PMOSチャネル注入<br>*PMOS channel doping* | CD | Vth調整 | BF₂, 30keV, 1E13 | 1.8V | - | - |
-| **NCD2-PH** | フォトリソ（3.3V NMOS） | CD | Nch再調整 | - | 3.3V | - | NCD2 |
-| **NCD2-ION** | NMOSチャネル再注入 | CD | Vth調整 | B, 50keV, 1E13 | 3.3V | - | - |
-| **PCD2-PH** | フォトリソ（3.3V PMOS） | CD | Pch再調整 | - | 3.3V | - | PCD2 |
-| **PCD2-ION** | PMOSチャネル再注入 | CD | Vth調整 | BF₂, 30keV, 1E13 | 3.3V | - | - |
-| **G1-OX** | ゲート酸化 (第1段)<br>*Gate oxidation (G1)* | Gate | 初期酸化膜 | Dry OX 35Å | 全MOS | 35Å | - |
-| **G1-PH** | フォトリソ（3.3V保護） | Gate | レジスト保護 | - | 3.3V | - | G1 |
-| **G1-ET** | 酸化膜除去 (1.8V領域) | Gate | G1膜除去 | HF/SPM | 1.8V | 0Å | - |
-| **G2-OX** | ゲート酸化 (第2段) | Gate | 再酸化 | Dry OX 35Å | 1.8V | 35Å | - |
-| **PLY-DP** | ポリSi堆積 | Gate | ゲート電極 | LPCVD | - | 1500Å | - |
-| **PLY-PH** | フォトリソ（ゲート） | Gate | パターン定義 | KrF | 0.18µm | - | PLY |
-| **PLY-ET** | ポリゲートエッチング | Gate | ゲート形成 | RIE | 0.18µm | - | - |
-| **NLL/PLL-PH, ION** | NMOS/PMOS LDD注入 | LDD | 浅拡散形成 | As/BF₂ | 1.8V | - | - |
-| **NLM/PLM-PH, ION** | NMOS/PMOS LDD注入 | LDD | 浅拡散形成 | As/BF₂ | 3.3V | - | - |
-| **SW-DP, SW-ET** | スペーサ堆積＋エッチ | Gate | LDD保護 | LPCVD+RIE | - | 800Å | - |
-| **NLL2/PLL2, NLM2/PLM2** | NMOS/PMOS深拡散注入 | S/D | ソース・ドレイン形成 | As/BF₂, 40keV | 1.8V/3.3V | - | - |
+| **PRE-OX** | 犠牲酸化膜形成<br>*Sacrificial oxidation* | Pre | 表面改質・汚染除去<br>*Surface treatment* | Dry OX ~80Å | - | 80Å | - |
+
+📘 **解説 / Explanation**  
+素子分離では **STI (Shallow Trench Isolation)** を形成し、デバイス間のリークを防ぐ。  
+最後に犠牲酸化膜 (*sacrificial oxide*) を形成し、注入前に表面欠陥や汚染を除去する。  
+*Isolation relies on STI to suppress device-to-device leakage. Sacrificial oxide at the end prepares the surface for well/channel implants.*  
+
+---
+
+### 🔹 ウェル形成 / *Well Formation*  
+
+| 工程名 / Step | 処理内容 / Process | 分類 / Category | 目的 / Purpose | 条件 / Condition | Mask |
+|---------------|--------------------|-----------------|----------------|------------------|------|
+| **NWL-PH** | フォトリソ（N-Well）<br>*Lithography (N-Well)* | Well | N-Well定義<br>*N-Well definition* | - | NWL |
+| **NWL-ION** | イオン注入<br>*Ion implantation* | Well | N-Well形成<br>*N-Well formation* | 800keV, 2E13 | - |
+| **PWL-PH** | フォトリソ（P-Well）<br>*Lithography (P-Well)* | Well | P-Well定義<br>*P-Well definition* | - | PWL |
+| **PWL-ION** | イオン注入<br>*Ion implantation* | Well | P-Well形成<br>*P-Well formation* | 200keV, 5E12 | - |
+
+📘 **解説 / Explanation**  
+**N-Well / P-Well** を形成し、CMOSのNMOS/PMOSデバイス領域を分離する。  
+深い注入エネルギーを用いてウェル領域を確立。  
+*Wells define NMOS/PMOS regions for CMOS. High-energy implants are used to form well profiles.*  
+
+---
+
+### 🔹 チャネル調整注入 / *Channel Doping*  
+
+| 工程名 / Step | 処理内容 / Process | 分類 / Category | 対象 / Target | 条件 / Condition |
+|---------------|--------------------|-----------------|---------------|------------------|
+| **NCD/PCD-PH** | フォトリソ（1.8V NMOS/PMOS） | CD | 1.8Vデバイス | - |
+| **NCD-ION** | NMOSチャネル注入<br>*NMOS channel implant* | CD | Vth調整 (1.8V) | B, 50keV, 1E13 |
+| **PCD-ION** | PMOSチャネル注入<br>*PMOS channel implant* | CD | Vth調整 (1.8V) | BF₂, 30keV, 1E13 |
+| **NCD2/PCD2-PH** | フォトリソ（3.3V NMOS/PMOS） | CD | 3.3Vデバイス | - |
+| **NCD2-ION** | NMOSチャネル注入<br>*NMOS channel implant* | CD | Vth調整 (3.3V) | B, 50keV, 1E13 |
+| **PCD2-ION** | PMOSチャネル注入<br>*PMOS channel implant* | CD | Vth調整 (3.3V) | BF₂, 30keV, 1E13 |
+
+📘 **解説 / Explanation**  
+チャネルドーピングで **しきい値電圧 (Vth)** を制御。  
+低電圧1.8Vでは浅い注入、高電圧3.3Vでは深い注入を採用。  
+*Channel implants tune the threshold voltage (Vth). Shallow implants are used for 1.8V devices, deeper for 3.3V devices.*  
+
+---
+
+### 🔹 ゲート形成 / *Gate Formation*  
+
+| 工程名 / Step | 処理内容 / Process | 分類 / Category | 目的 / Purpose | 条件 / Condition | CD | 膜厚 |
+|---------------|--------------------|-----------------|----------------|------------------|----|------|
+| **G1-OX** | ゲート酸化 (第1段)<br>*Gate oxidation (G1)* | Gate | 初期酸化膜 | Dry OX 35Å | - | 35Å |
+| **G1-PH** | フォトリソ（3.3V保護） | Gate | レジスト保護 | - | 3.3V | - |
+| **G1-ET** | 酸化膜除去 (1.8V領域) | Gate | 逆Tox制御 | HF/SPM | 1.8V | 0Å |
+| **G2-OX** | ゲート酸化 (第2段)<br>*Gate oxidation (G2)* | Gate | 再酸化 | Dry OX 35Å | 1.8V | 35Å |
+| **PLY-DP** | ポリSi堆積 | Gate | ゲート電極 | LPCVD | - | 1500Å |
+| **PLY-PH** | フォトリソ（ゲート） | Gate | パターン定義 | KrF | 0.18µm | - |
+| **PLY-ET** | ポリゲートエッチング | Gate | ゲート形成 | RIE | 0.18µm | - |
+
+📘 **解説 / Explanation**  
+ゲート酸化は **逆Tox方式** により1.8Vと3.3Vで膜厚を分離。  
+ポリSiゲートを形成し、最小寸法0.18µmでパターン化。  
+*Inverse Tox scheme controls oxide thickness for 1.8V vs. 3.3V. Poly-Si gates are patterned at 0.18µm CD.*  
+
+---
+
+### 🔹 LDD・S/D形成 / *LDD & Source/Drain Formation*  
+
+| 工程名 / Step | 処理内容 / Process | 分類 / Category | 対象 / Target | 条件 / Condition |
+|---------------|--------------------|-----------------|---------------|------------------|
+| **NLL/PLL-PH, ION** | NMOS/PMOS LDD注入 | LDD | 1.8Vデバイス | As (NMOS), BF₂ (PMOS) |
+| **NLM/PLM-PH, ION** | NMOS/PMOS LDD注入 | LDD | 3.3Vデバイス | As (NMOS), BF₂ (PMOS) |
+| **SW-DP, SW-ET** | スペーサ堆積＋エッチ<br>*Spacer deposition + etch* | Gate | LDD保護 | LPCVD+RIE |
+| **NLL2/PLL2-ION** | NMOS/PMOS 深拡散注入 | S/D | 1.8Vデバイス | As/BF₂, 40keV |
+| **NLM2/PLM2-ION** | NMOS/PMOS 深拡散注入 | S/D | 3.3Vデバイス | As/BF₂, 40keV |
+
+📘 **解説 / Explanation**  
+LDD注入により短チャネル効果を抑制。  
+その後スペーサ形成を経て、ソース・ドレインを深拡散注入。  
+*LDD implants mitigate short-channel effects. After spacer formation, deep S/D implants complete the transistor structure.*  
 
 ---
 
