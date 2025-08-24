@@ -24,14 +24,13 @@ Using spin-polarized currents to switch magnetic states allows data retention ev
 
 ## 🧩 構造：MTJセル（磁気トンネル接合） / Structure: MTJ Cell
 
-```
- ┌───────────────┐
- │  磁性固定層（方向一定） │  Fixed Magnetic Layer
- ├───────────────┤
- │  絶縁トンネル層       │  Tunnel Barrier
- ├───────────────┤
- │  磁性可変層（書換可能） │  Free Magnetic Layer
- └───────────────┘
+```mermaid
+flowchart TB
+    Fixed[固定磁性層<br>Fixed Magnetic Layer]
+    Barrier[絶縁トンネル層<br>Tunnel Barrier]
+    Free[磁性可変層<br>Free Magnetic Layer]
+
+    Fixed --> Barrier --> Free
 ```
 
 ### 📌 動作原理 / Operating Principle
