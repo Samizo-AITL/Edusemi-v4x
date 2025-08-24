@@ -36,6 +36,13 @@ graph TD
         CAP
     end
 ```
+```mermaid
+flowchart TB
+    WL[WL（ワード線）] --> FET[アクセスFET]
+    FET --> CAP[強誘電体キャパシタ]
+    CAP --> BL[BL（ビット線）]
+```
+
 
 | 項目 | 内容（日本語） | 内容（English） |
 |------|----------------|-----------------|
