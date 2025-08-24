@@ -26,24 +26,41 @@ Unlike DRAM, it does not require refresh and can stably retain data using a 6-tr
 
 ### 📐 構成図｜Schematic
 
-```
-               VDD
-                |
-              +---+
-              | P1|───┐
-              +---+   |
-                |     |
-                |    Q (保存ノード / Storage Node)
-                |     |
-  BL───AX1──────┘     └──────AX2───BL_bar
-       |                        |
-      WL -----------------------
-                |     |
-              +---+  +---+
-              | N1|  | N2|   ← インバータ下部 / Bottom inverters
-              +---+  +---+
-                |     |
-               GND   GND
+```mermaid
+flowchart TB
+    subgraph SRAM_Cell [SRAM 6T Cell]
+        VDD[VDD]
+        GND[GND]
+
+        Q[Q (Storage Node)]
+        QB[Q_bar (Complement Node)]
+
+        BL[Bit Line (BL)]
+        BLB[Bit Line Bar (BL_bar)]
+        WL[Word Line (WL)]
+
+        %% Access transistors
+        WL --> AX1[AX1 (Access FET)]
+        WL --> AX2[AX2 (Access FET)]
+
+        AX1 --> Q
+        AX2 --> QB
+        Q --> BL
+        QB --> BLB
+
+        %% Cross-coupled inverters
+        Q --> INV1[Inverter1]
+        INV1 --> QB
+        QB --> INV2[Inverter2]
+        INV2 --> Q
+
+        %% Power connections
+        INV1 --- VDD
+        INV1 --- GND
+        INV2 --- VDD
+        INV2 --- GND
+    end
+
 ```
 
 ### 🔍 各構成要素の説明｜Component Description
