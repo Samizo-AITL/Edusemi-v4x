@@ -64,8 +64,6 @@ title: 📘 0.18µm FeRAM Process Flow — 完全版
 | **CO-ET** | エッチング（RIE等）<br>*Etching (RIE)* | Salicide | 不要Co層除去<br>*Remove unreacted Co* | H₂SO₄系 | - | - | - |
 | **LMP2-ANL** | 相転移アニール<br>*Phase transformation annealing* | Salicide | CoSi₂形成<br>*CoSi₂ formation* | 750℃ 30s | - | - | - |
 
----
-
 ## 🔍 解説 / Explanation  
 
 - **CoSi₂ サリサイド形成**は、ソース・ドレイン・ゲートの低抵抗化に必須。  
@@ -79,3 +77,35 @@ title: 📘 0.18µm FeRAM Process Flow — 完全版
 
 ---
 
+## 🟦 Part 3: Capacitor Formation (Pt/PZT/Ti + AlOx)  
+
+| 工程名 / Step | 処理内容 / Process | 分類 / Category | 目的 / Purpose | 処理条件 / Condition | 寸法 / CD | 膜厚 / Thickness | Mask |
+|---------------|--------------------|-----------------|----------------|----------------------|-----------|------------------|------|
+| **TI1-SP** | Tiスパッタリング<br>*Ti sputtering* | Capacitor | Ptとの密着層<br>*Adhesion layer for Pt* | DC Sputter, 300W, Ar | - | 300Å | - |
+| **Pt-SP** | Ptスパッタリング<br>*Pt sputtering* | Capacitor | 下部電極形成<br>*Bottom electrode* | DC Sputter, 1kW, Ar | - | 1500Å | - |
+| **PZT-COT** | PZTスピンコート<br>*PZT spin coating* | Capacitor | 強誘電体前駆体堆積<br>*Ferroelectric precursor deposition* | Sol-Gel, 3000rpm | - | 1000Å | - |
+| **PZT-ANL** | PZTアニール<br>*PZT annealing* | Capacitor | ペロブスカイト結晶化<br>*Perovskite crystallization* | RTA, 650℃, O₂, 60s | - | - | - |
+| **TI2-SP** | Tiスパッタリング<br>*Ti sputtering* | Capacitor | 上部電極バッファ<br>*Top electrode buffer* | DC Sputter, 300W, Ar | - | 300Å | - |
+| **CAP-PH** | フォトリソグラフィ<br>*Photolithography* | Capacitor | キャパシタパターン定義<br>*Capacitor patterning* | KrF, 248nm | 0.35µm | - | CAP |
+| **CAP-ET** | イオンミリング<br>*Ion milling (IBE)* | Capacitor | Pt/PZT/Tiパターニング<br>*Patterning of Pt/PZT/Ti stack* | Ion Beam Etch | 0.35µm | - | - |
+| **ALOX-SP** | AlOxスパッタ<br>*AlOx sputtering* | Capacitor | PZT一次保護膜<br>*First protection layer* | RF Sputter, 400W, Ar/O₂ | - | 300Å | - |
+| **ALOX-DP** | AlOx ALD堆積<br>*AlOx ALD deposition* | Capacitor | 高密度保護膜形成<br>*High-density protective film* | ALD, 200℃, TMA/H₂O | - | 300Å | - |
+| **ALOX-PH** | フォトリソグラフィ<br>*Photolithography* | Capacitor | 接続開口パターン定義<br>*Contact via opening* | KrF, 248nm | 0.35µm | ALOX |
+| **ALOX-ET** | エッチング（RIE）<br>*Etching (RIE)* | Capacitor | 開口形成<br>*Via hole formation* | BCl₃/Cl₂ | 0.35µm | - | - |
+
+## 🔍 解説 / Explanation  
+
+- **Pt/PZT/Ti 構造**は、FeRAMセルの中心構造。  
+  *Pt/PZT/Ti stack forms the core of the FeRAM capacitor cell.*  
+
+- **PZTアニール (650℃, O₂)** によりペロブスカイト結晶化を実現。  
+  *Annealing at 650℃ in O₂ crystallizes PZT into the perovskite phase.*  
+
+- **AlOx保護膜（二重構造：スパッタ＋ALD）**により、  
+  水素還元によるPZT特性劣化を防止。  
+  *Dual AlOx protection (sputtering + ALD) prevents PZT degradation caused by hydrogen exposure.*  
+
+- パターニングは **CMPではなくIBE (Ion Beam Etching)** を採用。  
+  *Patterning requires IBE instead of CMP due to Pt’s resistance to chemical etching.*  
+
+---
