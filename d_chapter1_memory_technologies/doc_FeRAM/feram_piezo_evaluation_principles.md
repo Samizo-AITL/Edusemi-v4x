@@ -34,6 +34,20 @@ title:
 
 ---
 
+## 📊 FeRAM ヒステリシスループ
+**FeRAM Hysteresis Loop (Pr=15, Ps=20, Vc=1 V)**  
+
+![FeRAM Hysteresis](figures/stylized_hysteresis.png)
+
+---
+
+## 🦋 薄膜ピエゾ バタフライカーブ
+**Thin-Film Piezoelectric Butterfly Curve (±20 V)**  
+
+![Piezo Butterfly](figures/stylized_butterfly.png)
+
+---
+
 ## 2. 薄膜ピエゾ特性とバタフライカーブ  
 *2. Thin-Film Piezoelectric Properties and Butterfly Curve*
 
