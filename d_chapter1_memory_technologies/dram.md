@@ -26,16 +26,9 @@ However, **the capacitor charge leaks over time**, so **refresh operations are r
 
 ```mermaid
 flowchart TB
-    subgraph DRAM_Cell [DRAM 1T1C Cell]
-        WL[Word Line (WL)]
-        FET[Access FET<br>(Switch)]
-        CAP[Capacitor<br>(Stores charge)]
-        BL[Bit Line (BL)]
-    end
-
-    WL --> FET
-    FET --> CAP
-    CAP --> BL
+    WL[WL（ワード線）] --> FET[アクセスFET]
+    FET --> CAP[キャパシタ<br>データ=電荷で保持]
+    CAP --> BL[BL（ビット線）]
 ```
 
 ### 🔍 要素の説明 | Description of Components
