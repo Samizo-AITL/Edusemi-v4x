@@ -24,12 +24,13 @@ title:
   → *Separates switching and non-switching currents, effective for extracting Pr*
 
 ### ✅ 主なパラメータ / *Key Parameters*
+
 | 項目 / Item | 意味 / Meaning | 単位 / Unit |
 |-------------|----------------|-------------|
-| Pm | 最大分極 / *Maximum polarization* | μC/cm² |
-| Pr | 残留分極 / *Remanent polarization* | μC/cm² |
-| Vc | 保証電圧 / *Coercive voltage* | V |
-| 2Pr | 記憶保持力の指標 / *Memory window* | μC/cm² |
+| **Pm**  | 最大分極 / *Maximum polarization* | μC/cm² |
+| **Pr**  | 残留分極 / *Remanent polarization* | μC/cm² |
+| **Vc**  | 保証電圧 / *Coercive voltage* | V |
+| **2Pr** | 記憶保持力の指標 / *Memory window* | μC/cm² |
 
 ---
 
