@@ -33,14 +33,16 @@ Main application areas include:
 
 【HV-NMOS構造例｜Example HV-NMOS Structure】
 
-```
-┌──────────────┐
-│    Gate (Poly)       │
-├──────────────┤
-│ LDD領域（拡張拡散） │  ← 電界緩和・耐圧向上
-└──────────────┘
-│   │    │
-N+  N−   P-Sub
+```mermaid
+flowchart TB
+    Gate[Gate (Poly)]
+    LDD[LDD領域 (拡張領域)]
+    Nplus[N+ Drain]
+    Nminus[N- Drift Region]
+    Psub[P- Substrate]
+
+    Gate --> LDD --> Nplus
+    LDD --> Nminus --> Psub
 ```
 
 → 多重ウェル構造（Deep N-Well）でSub絶縁
