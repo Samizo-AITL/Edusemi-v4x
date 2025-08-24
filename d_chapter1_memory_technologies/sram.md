@@ -40,8 +40,8 @@ flowchart TB
         WL[Word Line (WL)]
 
         %% Access transistors
-        WL --> AX1[AX1 (Access FET)]
-        WL --> AX2[AX2 (Access FET)]
+        WL --> AX1[AX1 Access FET]
+        WL --> AX2[AX2 Access FET]
 
         AX1 --> Q
         AX2 --> QB
