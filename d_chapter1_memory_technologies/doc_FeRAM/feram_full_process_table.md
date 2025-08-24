@@ -141,68 +141,77 @@ title: 📘 0.18µm FeRAM Process Flow — 完全版
 
 ### 🔹 ILD & Contact Formation (*F2-DP〜Via*)  
 
-| 工程名 / Step | 処理内容 / Process | 分類 / Category | 目的 / Purpose | 条件 / Condition |
-|---------------|--------------------|-----------------|----------------|------------------|
-| **F2-DP** | ILD堆積<br>*ILD deposition* | ILD | 配線前絶縁膜 | PE-TEOS, 6000Å |
-| **F2-CMP** | CMP平坦化<br>*CMP planarization* | CMP | 表面平坦化 | CMP |
-| **CNT-PH/ET** | フォト＋エッチ<br>*Lithography + Etching* | Contact | コンタクト開口形成 | CD = 0.24µm |
-| **TIN-SP** | TiNスパッタ<br>*TiN sputtering* | Barrier | バリアメタル形成 | DC sputter, 300Å |
-| **CW-DP** | Wデポジション<br>*W deposition* | Plug | Wプラグ充填 | CVD, WF₆, 4000Å |
-| **CW-CMP** | W CMP<br>*W CMP planarization* | CMP | 平坦化 | CMP |
+| 工程名 / Step | 処理内容 / Process | 分類 / Category | 目的 / Purpose | 条件 / Condition | Mask |
+|---------------|--------------------|-----------------|----------------|------------------|------|
+| **F2-DP** | ILD堆積<br>*ILD deposition* | ILD | 配線前絶縁膜<br>*Pre-interconnect insulation* | PE-TEOS, 6000Å | - |
+| **F2-CMP** | CMP平坦化<br>*CMP planarization* | CMP | 表面平坦化<br>*Surface planarization* | CMP | - |
+| **CNT-PH/ET** | フォト＋エッチ<br>*Lithography + Etching* | Contact | コンタクト開口形成<br>*Contact hole formation* | CD = 0.24µm | CNT |
+| **TIN-SP** | TiNスパッタ<br>*TiN sputtering* | Barrier | バリアメタル形成<br>*Barrier metal* | DC sputter, 300Å | - |
+| **CW-DP** | Wデポジション<br>*W deposition* | Plug | Wプラグ充填<br>*W plug filling* | CVD, WF₆, 4000Å | - |
+| **CW-CMP** | W CMP<br>*W CMP planarization* | CMP | 平坦化<br>*Planarization* | CMP | - |
 
-📘 **解説**  
-ILDで絶縁し、Wプラグで下層デバイスとのコンタクトを確立。TiNバリアがW拡散を防ぐ。  
-*ILD provides insulation; W plug establishes contact. TiN barrier prevents W diffusion.*  
+📘 **解説 / Explanation**  
+ILDで絶縁を確保し、Wプラグで下層デバイスとの電気的接続を確立。TiNバリアでW拡散を防止。  
+*ILD provides insulation; W plugs connect devices to interconnects. TiN barrier prevents tungsten diffusion.*  
 
 ---
 
 ### 🔹 Capacitor Formation (*Pt/PZT/Ti + AlOx*)  
 
-| 工程名 / Step | 処理内容 / Process | 分類 / Category | 目的 / Purpose | 条件 / Condition |
-|---------------|--------------------|-----------------|----------------|------------------|
-| **TI1-SP** | Tiスパッタ | Capacitor | Pt下地密着層 | 300Å |
-| **Pt-SP** | Ptスパッタ | Capacitor | 下部電極形成 | 1500Å |
-| **PZT-COT** | PZTスピンコート | Capacitor | 強誘電体前駆体 | Sol-Gel, 1000Å |
-| **PZT-ANL** | PZTアニール | Capacitor | ペロブスカイト結晶化 | RTA, 650℃ O₂ |
-| **TI2-SP** | Tiスパッタ | Capacitor | 上部電極バッファ | 300Å |
-| **CAP-PH/ET** | フォト＋イオンミリング | Capacitor | キャパシタパターニング | KrF, CD=0.35µm |
-| **ALOX-SP/DP** | AlOxスパッタ＋ALD | Capacitor | 保護膜（二重構造） | 各300Å |
-| **ALOX-PH/ET** | フォト＋エッチ | Capacitor | 接続開口形成 | KrF, 0.35µm |
+| 工程名 / Step | 処理内容 / Process | 分類 / Category | 目的 / Purpose | 条件 / Condition | Mask |
+|---------------|--------------------|-----------------|----------------|------------------|------|
+| **TI1-SP** | Tiスパッタ | Capacitor | Pt下地密着層<br>*Adhesion for Pt* | 300Å | - |
+| **Pt-SP** | Ptスパッタ | Capacitor | 下部電極形成<br>*Bottom electrode* | 1500Å | - |
+| **PZT-COT** | PZTスピンコート | Capacitor | 強誘電体前駆体<br>*Ferroelectric precursor* | Sol-Gel, 1000Å | - |
+| **PZT-ANL** | PZTアニール | Capacitor | ペロブスカイト結晶化<br>*Perovskite crystallization* | RTA, 650℃ O₂ | - |
+| **TI2-SP** | Tiスパッタ | Capacitor | 上部電極バッファ<br>*Top electrode buffer* | 300Å | - |
+| **CAP-PH/ET** | フォト＋イオンミリング | Capacitor | キャパシタパターニング<br>*Capacitor patterning* | KrF, CD=0.35µm | CAP |
+| **ALOX-SP/DP** | AlOxスパッタ＋ALD | Capacitor | 保護膜（二重構造）<br>*Protective film (dual)* | 各300Å | - |
+| **ALOX-PH/ET** | フォト＋エッチ | Capacitor | 接続開口形成<br>*Opening formation* | KrF, 0.35µm | ALOX |
 
-📘 **解説**  
-Pt/PZT/Ti構造でFeRAMセル形成。AlOx保護膜（二重構造）で水素還元劣化を防ぐ。PtはCMP不可のためIBEを採用。  
-*Pt/PZT/Ti capacitor is core of FeRAM. Dual AlOx layers prevent H₂ degradation. IBE used for Pt patterning.*  
+📘 **解説 / Explanation**  
+- **Pt/PZT/Ti** 構造でFeRAMセルを形成。  
+- **PZTアニール (650℃ O₂)** によりペロブスカイト結晶化を達成。  
+- **AlOx保護膜（二重：スパッタ＋ALD）**で水素還元劣化を防止。  
+- **PtはCMP困難のためIBE**でパターニング。  
+*Pt/PZT/Ti capacitor is core of FeRAM. PZT crystallized via O₂ anneal. Dual AlOx prevents H₂ degradation. Pt patterned using IBE instead of CMP.*  
 
 ---
 
 ### 🔹 BEOL Interconnects (M1〜M3)  
 
-| 工程名 / Step | 処理内容 / Process | 分類 / Category | 目的 / Purpose | 条件 / Condition |
-|---------------|--------------------|-----------------|----------------|------------------|
-| **HLX-DP〜HWX-CMP** | ILD-0, Via-0, Wプラグ形成 | Interconnect | Capacitor-M1接続 | CD=0.24µm |
-| **ALA-SP/PH/ET** | Metal-1 Al配線形成 | Metal-1 | セル配線 | 0.28µm, 6000Å |
-| **HLA-DP〜HWA-CMP** | ILD-1, Via-1, Wプラグ形成 | Interconnect | M1-M2接続 | CD=0.24µm |
-| **ALB-SP/PH/ET** | Metal-2 Al配線形成 | Metal-2 | 中間配線 | 0.35µm, 6000Å |
-| **HLB-DP〜HWB-CMP** | ILD-2, Via-2, Wプラグ形成 | Interconnect | M2-M3接続 | CD=0.28µm |
-| **ALC-SP/PH/ET** | Metal-3 Al配線形成 | Metal-3 | グローバル配線 | 0.50µm, 8000Å |
+| 工程名 / Step | 処理内容 / Process | 分類 / Category | 目的 / Purpose | 条件 / Condition | Mask |
+|---------------|--------------------|-----------------|----------------|------------------|------|
+| **HLX-DP〜HWX-CMP** | ILD-0, Via-0, Wプラグ形成 | Interconnect | Capacitor-M1接続 | CD=0.24µm | HLX |
+| **ALA-SP/PH/ET** | Metal-1 Al配線形成 | Metal-1 | セル配線<br>*Cell wiring* | 0.28µm, 6000Å | ALA |
+| **HLA-DP〜HWA-CMP** | ILD-1, Via-1, Wプラグ形成 | Interconnect | M1-M2接続 | CD=0.24µm | HLA |
+| **ALB-SP/PH/ET** | Metal-2 Al配線形成 | Metal-2 | 中間配線<br>*Intermediate wiring* | 0.35µm, 6000Å | ALB |
+| **HLB-DP〜HWB-CMP** | ILD-2, Via-2, Wプラグ形成 | Interconnect | M2-M3接続 | CD=0.28µm | HLB |
+| **ALC-SP/PH/ET** | Metal-3 Al配線形成 | Metal-3 | グローバル配線<br>*Global wiring* | 0.50µm, 8000Å | ALC |
 
-📘 **解説**  
-M1〜M3のAl配線で多層配線を構成。各層はWプラグとILDで接続。M3はグローバル配線用途。  
-*Three Al layers form interconnects. W plugs + ILD connect layers. M3 serves as global wiring.*  
+📘 **解説 / Explanation**  
+- BEOLは **M1〜M3の3層Al配線**で構成。  
+- 各層は **Wプラグ＋ILD**で接続される。  
+- **M1: セル配線, M2: 中間配線, M3: グローバル配線**。  
+- **CMP**により段差を抑制。  
+*BEOL uses 3 layers of Al interconnects. W plugs + ILD ensure reliable connections. M1 for cells, M2 for intermediate, M3 for global wiring. CMP controls planarity.*  
 
 ---
 
 ### 🔹 Pad & Passivation  
 
-| 工程名 / Step | 処理内容 / Process | 分類 / Category | 目的 / Purpose | 条件 / Condition |
-|---------------|--------------------|-----------------|----------------|------------------|
-| **ALD-SP/PH/ET** | Al厚膜パッド形成 | Pad | Bond Pad作製 | 3.0µm, 10000Å |
-| **PAD-DP** | パッシベーション膜堆積 | Passivation | 環境保護 | SiN+SiO₂, 8000Å |
-| **PAD-PH/ET** | フォト＋エッチ | Passivation | I/O開口形成 | 3.0µm |
+| 工程名 / Step | 処理内容 / Process | 分類 / Category | 目的 / Purpose | 条件 / Condition | Mask |
+|---------------|--------------------|-----------------|----------------|------------------|------|
+| **ALD-SP/PH/ET** | Al厚膜パッド形成<br>*Thick Al pad formation* | Pad | Bond Pad作製<br>*Bond pad formation* | 3.0µm, 10000Å | PAD |
+| **PAD-DP** | パッシベーション膜堆積<br>*Passivation deposition* | Passivation | 環境保護<br>*Environmental protection* | SiN+SiO₂, 8000Å | - |
+| **PAD-PH/ET** | フォト＋エッチ<br>*Lithography + Etching* | Passivation | I/O開口形成<br>*Opening formation* | CD=3.0µm | PAD |
 
-📘 **解説**  
-厚膜Alパッドでワイヤボンディング対応。パッシベーションで湿気・Na拡散を防ぎ信頼性確保。  
-*Thick Al pads enable wire bonding. SiN+SiO₂ passivation protects against humidity/Na diffusion.*  
+📘 **解説 / Explanation**  
+- **厚膜Alパッド**でワイヤボンディング・フリップチップ接続に対応。  
+- **パッシベーション膜 (SiN+SiO₂)** で湿気・Na拡散を防ぎ、長期信頼性を確保。  
+- **通常プロセスでは最終工程に水素シンターを含めるが、本フローではPZT水素還元劣化を防ぐため削除。**  
+*Thick Al pads support bonding. SiN+SiO₂ passivation ensures long-term reliability.  
+Normally a final hydrogen sintering step is included, but here it is omitted to avoid hydrogen-induced degradation of PZT.*  
 
 ---
 
@@ -210,8 +219,8 @@ M1〜M3のAl配線で多層配線を構成。各層はWプラグとILDで接続�
 
 | 工程名 / Step | 内容 / Details |
 |---------------|----------------|
-| **E-TEST** | Vth, Ioff, FeRAM保持特性などを最終ウェハで測定<br>*Measure Vth, Ioff, FeRAM retention at wafer level* |
+| **E-TEST** | Vth, Ioff, FeRAM保持・書込特性を最終ウェハで測定<br>*Wafer-level measurement of Vth, Ioff, FeRAM retention & write characteristics* |
 
-📘 **解説**  
+📘 **解説 / Explanation**  
 最終テストでCMOS特性とFeRAM特性を同時に評価。  
 *Final wafer test verifies both CMOS and FeRAM characteristics.*  
