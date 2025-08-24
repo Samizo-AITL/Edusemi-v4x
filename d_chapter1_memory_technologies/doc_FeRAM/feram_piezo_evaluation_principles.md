@@ -39,7 +39,7 @@ title:
 ### 📊 FeRAM ヒステリシスループ
 **FeRAM Hysteresis Loop (Pr=15 μC/cm², Pm≈20 μC/cm², Vc=1 V)**  
 
-![FeRAM Hysteresis](figures/stylized_hysteresis.png)  
+<img src="figures/stylized_hysteresis.png" alt="FeRAM Hysteresis" width="80%">
 
 *注: この図は教材用にスタイライズしたもので、指定値と若干異なります。後日修正版に更新予定です。*  
 
@@ -62,7 +62,7 @@ title:
 ### 🦋 薄膜ピエゾ バタフライカーブ
 **Thin-Film Piezoelectric Butterfly Curve (±20 V)**  
 
-![Piezo Butterfly](figures/stylized_butterfly.png)
+<img src="figures/stylized_butterfly.png" alt="Piezo Butterfly" width="80%">
 
 *注: 本図は教材用にスタイライズしたもので、横軸電圧スケールが指定値（±20 V）と異なっています。  
 後日、正しい電圧条件に基づいた修正版グラフに更新予定です。*
