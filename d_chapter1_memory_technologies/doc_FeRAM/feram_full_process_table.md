@@ -1,3 +1,20 @@
+---
+layout: default
+title: 0.18μm FeRAM Process Flow（強誘電体メモリプロセス）
+---
+
+---
+
+# 📘 0.18μm FeRAM Process Flow（強誘電体メモリプロセス）
+
+[![Hybrid License](https://img.shields.io/badge/license-Hybrid-blueviolet)](https://samizo-aitl.github.io/Edusemi-v4x/#-ライセンス--license)
+
+> ⚠️ **注意 / Notice**  
+> 本プロセスフローは、三溝真一による**構想・教育目的**のプロセス設計に基づいています。実在する製品・製造フロー・企業機密とは一切関係ありません。  
+> *This process flow is a conceptual and educational design proposed by **Shinichi Samizo**. It is not related to any actual product, manufacturing process, or proprietary information.*
+
+---
+
 ## 📋 フルプロセスフロー / Full Process Table 
 
 | 工程名 | 処理内容 | 分類 | 目的 | 処理条件 | 寸法 | 膜厚 | Mask |
