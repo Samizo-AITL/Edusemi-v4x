@@ -24,19 +24,18 @@ However, **the capacitor charge leaks over time**, so **refresh operations are r
 
 ## 🔧 セル構造：1T1C DRAMセル | DRAM Cell Structure: 1T1C
 
-```
-WL（ワード線）
-│
-├──┐
-│  ｜ アクセスFET（スイッチ）
-▼  ●─────────┐
-ゲート       ソース│
-▼
-┌────────┐
-│ キャパシタ │ ← データを電荷で保持
-└────────┘
-▲
-ビット線（BL）
+```mermaid
+flowchart TB
+    subgraph DRAM_Cell [DRAM 1T1C Cell]
+        WL[Word Line (WL)]
+        FET[Access FET<br>(Switch)]
+        CAP[Capacitor<br>(Stores charge)]
+        BL[Bit Line (BL)]
+    end
+
+    WL --> FET
+    FET --> CAP
+    CAP --> BL
 ```
 
 ### 🔍 要素の説明 | Description of Components
