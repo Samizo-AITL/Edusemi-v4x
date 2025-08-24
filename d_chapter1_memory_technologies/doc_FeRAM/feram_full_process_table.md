@@ -174,7 +174,10 @@ ILDで絶縁を確保し、Wプラグで下層デバイスとの電気的接続�
 - **PZTアニール (650℃ O₂)** によりペロブスカイト結晶化を達成。  
 - **AlOx保護膜（二重：スパッタ＋ALD）**で水素還元劣化を防止。  
 - **PtはCMP困難のためIBE**でパターニング。  
-*Pt/PZT/Ti capacitor is core of FeRAM. PZT crystallized via O₂ anneal. Dual AlOx prevents H₂ degradation. Pt patterned using IBE instead of CMP.*  
+- **FeRAMのPZT膜厚 (≈100–200 nm)** はMEMS薄膜ピエゾ素子 (≈1 µm) の約1/5〜1/10と薄いため、**電極Pt(100〜150 nm)が相対的に厚く見える**点に注意。  
+
+*Pt/PZT/Ti capacitor is the core of FeRAM. PZT is crystallized via O₂ anneal. Dual AlOx prevents H₂ degradation. Pt is patterned using IBE.  
+Note: FeRAM PZT film (~100–200 nm) is much thinner than MEMS piezo PZT (~1 µm), so Pt electrodes (~100–150 nm) appear relatively thick.*  
 
 ---
 
