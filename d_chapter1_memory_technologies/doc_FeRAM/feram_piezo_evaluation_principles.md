@@ -27,15 +27,21 @@ title:
 
 | 項目 / Item | 意味 / Meaning | 単位 / Unit |
 |-------------|----------------|-------------|
-| **Pm**  | 最大分極 / *Maximum polarization* | μC/cm² |
+| **Pm**  | 最大分極（実測値） / *Maximum polarization (measured)* | μC/cm² |
 | **Pr**  | 残留分極 / *Remanent polarization* | μC/cm² |
-| **Vc**  | 保証電圧 / *Coercive voltage* | V |
+| **Vc**  | 保証電圧（強制電圧） / *Coercive voltage* | V |
 | **2Pr** | 記憶保持力の指標 / *Memory window* | μC/cm² |
 
-### 📊 FeRAM ヒステリシスループ
-**FeRAM Hysteresis Loop (Pr=15, Ps=20, Vc=1 V)**  
+> **注記 / Note:**  
+> 飽和分極 *Ps (Saturation polarization)* は材料が理論的に持つ最大値ですが、  
+> 実際の測定で得られるのは **Pm** です。多くの場合 Pm < Ps となります。
 
-![FeRAM Hysteresis](figures/stylized_hysteresis.png)
+### 📊 FeRAM ヒステリシスループ
+**FeRAM Hysteresis Loop (Pr=15 μC/cm², Pm≈20 μC/cm², Vc=1 V)**  
+
+![FeRAM Hysteresis](figures/stylized_hysteresis.png)  
+
+*注: この図は教材用にスタイライズしたもので、指定値と若干異なります。後日修正版に更新予定です。*  
 
 ---
 
@@ -53,7 +59,7 @@ title:
 - 分極反転点で変位が非線形にジャンプ / *Nonlinear jump at polarization reversal*  
 - ヒステリシスを持つ蝶型ループを形成 / *Forms a butterfly-shaped hysteresis loop*
 
-## 🦋 薄膜ピエゾ バタフライカーブ
+### 🦋 薄膜ピエゾ バタフライカーブ
 **Thin-Film Piezoelectric Butterfly Curve (±20 V)**  
 
 ![Piezo Butterfly](figures/stylized_butterfly.png)
