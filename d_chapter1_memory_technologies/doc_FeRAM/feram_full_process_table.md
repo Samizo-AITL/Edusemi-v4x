@@ -155,3 +155,36 @@ title: 📘 0.18µm FeRAM Process Flow — 完全版
   *Ti/TiN barrier prevents W diffusion and ensures reliable connections.*  
 
 ---
+
+## 🟦 Part 5: Pad / Passivation  
+
+| 工程名 / Step | 処理内容 / Process | 分類 / Category | 目的 / Purpose | 処理条件 / Condition | 寸法 / CD | 膜厚 / Thickness | Mask |
+|---------------|--------------------|-----------------|----------------|----------------------|-----------|------------------|------|
+| **ALD-SP** | Al堆積<br>*Al deposition* | Pad | Bond Pad形成 | PVD Al | - | 10000Å | - |
+| **ALD-PH** | フォトリソグラフィ<br>*Photolithography* | Pad | Bond Padパターン定義 | i-line, 365nm | 3.0µm | - | PAD |
+| **ALD-ET** | エッチング（RIE）<br>*Etching (RIE)* | Pad | Bond Pad形成 | Cl₂/BCl₃ RIE | 3.0µm | - | - |
+| **PAD-DP** | パッシベーション膜堆積<br>*Passivation deposition* | Passivation | 外部環境からの保護 | SiN + SiO₂, PECVD | - | 8000Å | - |
+| **PAD-PH** | フォトリソグラフィ<br>*Photolithography* | Passivation | 開口定義（I/O形成） | i-line | 3.0µm | - | PAD |
+| **PAD-ET** | エッチング（RIE）<br>*Etching (RIE)* | Passivation | 開口形成 | CHF₃/O₂ RIE | 3.0µm | - | - |
+| **E-TEST** | 電気特性評価<br>*Electrical testing* | Test | Vth, Ioff, FeRAM特性測定 | 自動テスター | - | - | - |
+
+## 🔍 解説 / Explanation  
+
+- **Bond Pad**  
+  最終金属（M3上）に **厚膜Alパッド** を形成。ワイヤボンディング・フリップチップ接続に対応。  
+  *Thick Al pads are deposited on M3 for wire bonding or flip-chip connection.*  
+
+- **Passivation**  
+  SiN + SiO₂ の積層で外部環境から保護。湿気やNa拡散を防ぎ、長期信頼性を確保。  
+  *SiN + SiO₂ passivation protects the device from humidity and Na diffusion, ensuring long-term reliability.*  
+
+- **開口形成**  
+  パッド領域をフォト＋RIEで開口し、外部I/Oとの電気接続を確立。  
+  *Openings are defined by photolithography and RIE to enable electrical connection with external I/Os.*  
+
+- **E-Test**  
+  最終ウェハで **FeRAMセルの保持特性 / 書き込み特性 / CMOSデバイス特性** を測定。  
+  *Final wafer testing measures FeRAM retention, write characteristics, and CMOS device parameters.*  
+
+
+
