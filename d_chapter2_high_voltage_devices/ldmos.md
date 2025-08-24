@@ -67,24 +67,19 @@ flowchart TB
 
 ## ⚙️ SOI基板構造による高耐圧化｜SOI-Based High Voltage Structure
 
-```text
-【SOI LDMOS構造｜SOI LDMOS Cross-Section】
+**図3. SOI LDMOS構造断面図｜SOI LDMOS Cross-Section**
 
-    ┌──────────────┐
-    │   Metal / Passivation  │
-    ├──────────────┤
-    │       Gate (Poly)       │
-    ├──────────────┤
-    │   Drift / N− Region    │ ← 高耐圧ドレイン拡散
-    ├──────────────┤
-    │   P-Body / N+ Source   │
-    ├──────────────┤
-    │   SOI Layer (Si)       │ ← トランジスタ層
-    ├──────────────┤
-    │   BOX (SiO₂)           │ ← Buried Oxide 絶縁層
-    ├──────────────┤
-    │   Handle Wafer (Sub)   │ ← 基板バルク不要（浮遊）
-    └──────────────┘
+```mermaid
+flowchart TB
+    Metal["Metal / Passivation"]
+    Gate["Gate (Poly)"]
+    Drift["Drift / N- Region<br>高耐圧ドレイン拡散"]
+    Pbody["P-Body / N+ Source"]
+    SOI["SOI Layer (Si) トランジスタ層"]
+    BOX["BOX (SiO₂) 絶縁層"]
+    Handle["Handle Wafer (Sub) 基板 / バルク不要（浮遊）"]
+
+    Metal --> Gate --> Drift --> Pbody --> SOI --> BOX --> Handle
 ```
 
 | 特徴｜Feature | 解説｜Description |
