@@ -28,16 +28,12 @@ the 3D structure stacks memory cells **vertically** to continue capacity improve
 
 ## 🧱 Structure and Evolution | 構造と進化
 
-```
-┌─────────────────────┐
-│      Controller      │ ← ECC, wear-leveling, I/F control  
-│      コントローラ     │
-└─────────────────────┘
-        │││││││││││
-┌──────────────────────────┐
-│  Cell array (3D stacked)  │ ← Expanding from 64 to 500+ layers  
-│   セルアレイ（垂直積層）    │
-└──────────────────────────┘
+```mermaid
+flowchart TB
+    Controller[Controller<br>コントローラ<br>ECC, wear-leveling, I/F control]
+    CellArray[Cell Array (3D Stacked)<br>セルアレイ（垂直積層）<br>64 → 500+ layers]
+
+    Controller --> CellArray
 ```
 
 ### 🔍 Key Elements | 基本構造と技術要素
