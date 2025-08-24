@@ -29,6 +29,7 @@ title: LDMOS
 
 ```mermaid
 flowchart LR
+  subgraph CrossSection ["LDMOS構造断面図｜Cross-Section"]
     Gate["Gate (Poly)"]
     Psub["P-Sub"]
     Drift["Drift領域 (低ドープN-)"]
@@ -40,16 +41,7 @@ flowchart LR
 
 ```mermaid
 flowchart TB
-    GND["GND Guard Ring (外周)"]
-    Drain["Drain (N+) 高電圧端子 (外周)"]
-    Gate["Gate (Poly) リング状ゲート"]
-    Source["Source (N+) 中央ソース"]
-
-    GND --> Drain --> Gate --> Source
-```
-
-```mermaid
-flowchart TB
+ subgraph RingGate ["リングゲート型LDMOSレイアウト｜Ring-Gate Layout"]
     subgraph GND["GND Guard Ring (外周)"]
         subgraph Drain["Drain (N+) 高電圧端子"]
             subgraph Gate["Gate (Poly) リング状ゲート"]
