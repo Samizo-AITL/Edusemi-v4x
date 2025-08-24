@@ -35,11 +35,11 @@ Main application areas include:
 
 ```mermaid
 flowchart TB
-    Gate[Gate (Poly)]
-    LDD[LDD領域 (拡張領域)]
-    Nplus[N+ Drain]
-    Nminus[N- Drift Region]
-    Psub[P- Substrate]
+    Gate["Gate : Poly"]
+    LDD["LDD領域 : Drain Extended Region"]
+    Nplus["N+ Drain"]
+    Nminus["N- Drift Region"]
+    Psub["P- Substrate"]
 
     Gate --> LDD --> Nplus
     LDD --> Nminus --> Psub
