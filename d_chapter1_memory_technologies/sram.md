@@ -60,7 +60,6 @@ flowchart TB
         INV2 --- VDD
         INV2 --- GND
     end
-
 ```
 
 ### 🔍 各構成要素の説明｜Component Description
