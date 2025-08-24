@@ -224,3 +224,41 @@ Normally a final hydrogen sintering step is included, but here it is omitted to 
 📘 **解説 / Explanation**  
 最終テストでCMOS特性とFeRAM特性を同時に評価。  
 *Final wafer test verifies both CMOS and FeRAM characteristics.*  
+
+---
+
+## 🔗 関連教材リンク / *Related Links*  
+
+| リンク / Link | 内容 / Description |  
+|---------------|--------------------|  
+| 🔬 [0.18μm CMOSロジックプロセス](../../chapter3_process_evolution/docs/0.18um_Logic_ProcessFlow.md) | 0.18μm CMOSロジックプロセスフロー（教育モデル）<br>*0.18µm CMOS logic process flow (educational model)* |  
+| 🔬 [0.18μm CMOS 1.8V/3.3V/5V混載フロントエンドプロセス](../../chapter3_process_evolution/docs/0.18um_1.8V_3.3V_5V.md) | 1.8V/3.3V/5V混載フロントエンドプロセスフロー（教育モデル）<br>*1.8V/3.3V/5V mixed frontend process flow (educational model)* |  
+| 📐 [MOSトランジスタの特性と信頼性](../../chapter4_mos_characteristics/README.md) | MOSトランジスタ特性と信頼性<br>*MOS transistor characteristics and reliability* |  
+| 💾 [メモリ技術：SRAM / DRAM / FeRAM / MRAM / 3DNAND](../../d_chapter1_memory_technologies/README.md) | メモリ技術教材（SRAM, DRAM, FeRAM, MRAM, 3DNAND）<br>*Memory technologies: SRAM, DRAM, FeRAM, MRAM, 3DNAND* |  
+
+---
+
+## 👤 **執筆者 / Author**
+
+| **項目 / Item** | **内容 / Details** |
+|-----------------|--------------------|
+| **著者 / Author** | 三溝 真一（Shinichi Samizo） |
+| **Email** | [![Email](https://img.shields.io/badge/Email-shin3t72%40gmail.com-red?style=for-the-badge&logo=gmail)](mailto:shin3t72@gmail.com) |
+| **X** | [![X](https://img.shields.io/badge/X-@shin3t72-black?style=for-the-badge&logo=x)](https://x.com/shin3t72) |
+| **GitHub** | [![GitHub](https://img.shields.io/badge/GitHub-Samizo--AITL-blue?style=for-the-badge&logo=github)](https://github.com/Samizo-AITL) |
+
+---
+
+## 📄 **ライセンス / License**
+[![Hybrid License](https://img.shields.io/badge/license-Hybrid-blueviolet)](#-ライセンス--license)  
+
+> 教材・コード・図表の性質に応じたハイブリッドライセンスを採用。  
+> *Hybrid licensing based on the nature of the materials, code, and diagrams.*
+
+| 📌 項目 / Item | ライセンス / License | 説明 / Description |
+|------|------|------|
+| **コード（Code）** | [MIT License](https://opensource.org/licenses/MIT) | 自由に使用・改変・再配布が可能<br>*Free to use, modify, and redistribute* |
+| **教材テキスト（Text materials）** | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) | 著者表示必須<br>*Attribution required* |
+| **図表・イラスト（Figures & diagrams）** | [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) | 非商用利用のみ許可<br>*Non-commercial use only* |
+| **外部引用（External references）** | 元ライセンスに従う<br>*Follow the original license* | 引用元を明記<br>*Cite the original source* |
+
