@@ -36,17 +36,6 @@ Main application areas include:
 ```mermaid
 flowchart TB
     Gate["Gate : Poly"]
-    LDD["LDD領域 : Drain Extended Region"]
-    Nplus["N+ Drain"]
-    Nminus["N- Drift Region"]
-    Psub["P- Substrate"]
-
-    Gate --> LDD --> Nplus
-    LDD --> Nminus --> Psub
-```
-```mermaid
-flowchart TB
-    Gate["Gate : Poly"]
 
     subgraph Device [HV-NMOS Structure]
         LDD["LDD領域 : Drain Extended Region"]
