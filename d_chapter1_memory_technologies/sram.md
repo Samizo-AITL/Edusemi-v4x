@@ -32,16 +32,16 @@ flowchart TB
         VDD[VDD]
         GND[GND]
 
-        Q[Q (Storage Node)]
-        QB[Q_bar (Complement Node)]
+        Q[Q : Storage Node]
+        QB[Q_bar : Complement Node]
 
         BL[Bit Line (BL)]
         BLB[Bit Line Bar (BL_bar)]
         WL[Word Line (WL)]
 
         %% Access transistors
-        WL --> AX1[AX1 Access FET]
-        WL --> AX2[AX2 Access FET]
+        WL --> AX1[AX1 : Access FET]
+        WL --> AX2[AX2 : Access FET]
 
         AX1 --> Q
         AX2 --> QB
