@@ -116,114 +116,83 @@ LDD形成でホットキャリアを抑制し、スペーサで拡散制御。�
 
 ---
 
-## 🟦 Part 3: Capacitor Formation (Pt/PZT/Ti + AlOx)  
-
-| 工程名 / Step | 処理内容 / Process | 分類 / Category | 目的 / Purpose | 処理条件 / Condition | 寸法 / CD | 膜厚 / Thickness | Mask |
-|---------------|--------------------|-----------------|----------------|----------------------|-----------|------------------|------|
-| **TI1-SP** | Tiスパッタリング<br>*Ti sputtering* | Capacitor | Ptとの密着層<br>*Adhesion layer for Pt* | DC Sputter, 300W, Ar | - | 300Å | - |
-| **Pt-SP** | Ptスパッタリング<br>*Pt sputtering* | Capacitor | 下部電極形成<br>*Bottom electrode* | DC Sputter, 1kW, Ar | - | 1500Å | - |
-| **PZT-COT** | PZTスピンコート<br>*PZT spin coating* | Capacitor | 強誘電体前駆体堆積<br>*Ferroelectric precursor deposition* | Sol-Gel, 3000rpm | - | 1000Å | - |
-| **PZT-ANL** | PZTアニール<br>*PZT annealing* | Capacitor | ペロブスカイト結晶化<br>*Perovskite crystallization* | RTA, 650℃, O₂, 60s | - | - | - |
-| **TI2-SP** | Tiスパッタリング<br>*Ti sputtering* | Capacitor | 上部電極バッファ<br>*Top electrode buffer* | DC Sputter, 300W, Ar | - | 300Å | - |
-| **CAP-PH** | フォトリソグラフィ<br>*Photolithography* | Capacitor | キャパシタパターン定義<br>*Capacitor patterning* | KrF, 248nm | 0.35µm | - | CAP |
-| **CAP-ET** | イオンミリング<br>*Ion milling (IBE)* | Capacitor | Pt/PZT/Tiパターニング<br>*Patterning of Pt/PZT/Ti stack* | Ion Beam Etch | 0.35µm | - | - |
-| **ALOX-SP** | AlOxスパッタ<br>*AlOx sputtering* | Capacitor | PZT一次保護膜<br>*First protection layer* | RF Sputter, 400W, Ar/O₂ | - | 300Å | - |
-| **ALOX-DP** | AlOx ALD堆積<br>*AlOx ALD deposition* | Capacitor | 高密度保護膜形成<br>*High-density protective film* | ALD, 200℃, TMA/H₂O | - | 300Å | - |
-| **ALOX-PH** | フォトリソグラフィ<br>*Photolithography* | Capacitor | 接続開口パターン定義<br>*Contact via opening* | KrF, 248nm | 0.35µm | ALOX |
-| **ALOX-ET** | エッチング（RIE）<br>*Etching (RIE)* | Capacitor | 開口形成<br>*Via hole formation* | BCl₃/Cl₂ | 0.35µm | - | - |
-
-## 🔍 解説 / Explanation  
-
-- **Pt/PZT/Ti 構造**は、FeRAMセルの中心構造。  
-  *Pt/PZT/Ti stack forms the core of the FeRAM capacitor cell.*  
-
-- **PZTアニール (650℃, O₂)** によりペロブスカイト結晶化を実現。  
-  *Annealing at 650℃ in O₂ crystallizes PZT into the perovskite phase.*  
-
-- **AlOx保護膜（二重構造：スパッタ＋ALD）**により、  
-  水素還元によるPZT特性劣化を防止。  
-  *Dual AlOx protection (sputtering + ALD) prevents PZT degradation caused by hydrogen exposure.*  
-
-- パターニングは **CMPではなくIBE (Ion Beam Etching)** を採用。  
-  *Patterning requires IBE instead of CMP due to Pt’s resistance to chemical etching.*  
+## 🟩 Part 2: Capacitor + BEOL (*Back-End of Line*)  
 
 ---
 
-## 🟩 Part 4: BEOL (W Plug + Al Interconnects)  
+### 🔹 ILD & Contact Formation (*F2-DP〜Via*)  
 
-| 工程名 / Step | 処理内容 / Process | 分類 / Category | 目的 / Purpose | 処理条件 / Condition | 寸法 / CD | 膜厚 / Thickness | Mask |
-|---------------|--------------------|-----------------|----------------|----------------------|-----------|------------------|------|
-| **HLX-DP** | ILD-0堆積<br>*ILD-0 deposition* | ILD | Capacitor上絶縁 | PE-TEOS, 400℃ | - | 6000Å | - |
-| **HLX-PH** | フォトリソグラフィ<br>*Photolithography* | ILD | Via-0パターン定義 | KrF, 248nm | 0.24µm | - | HLX |
-| **HLX-ET** | エッチング（RIE）<br>*Etching (RIE)* | ILD | Via-0開口形成 | CHF₃/O₂ RIE | 0.24µm | - | - |
-| **TINX-SP** | Ti/TiNスパッタ<br>*Ti/TiN sputter* | Barrier | バリア層形成 | DC/RF Sputter | - | 300Å | - |
-| **HWX-DP** | Wプラグ堆積<br>*W plug deposition* | Plug | Via-0充填 | W-CVD, WF₆, 400℃ | - | 5000Å | - |
-| **HWX-CMP** | CMP研磨<br>*CMP planarization* | CMP | M1接続用平坦化 | CMP | - | - | - |
-| **ALA-SP** | Metal-1 Al堆積<br>*Metal-1 Al deposition* | Metal-1 | セル配線形成 | PVD | - | 6000Å | - |
-| **ALA-PH** | フォトリソグラフィ<br>*Photolithography* | Metal-1 | パターン定義 | KrF | 0.28µm | - | ALA |
-| **ALA-ET** | エッチング（RIE）<br>*Etching (RIE)* | Metal-1 | 配線形成 | Cl₂/BCl₃ RIE | 0.28µm | - | - |
-| **HLA-DP** | ILD-1堆積<br>*ILD-1 deposition* | ILD | M1上絶縁 | PE-TEOS | - | 6000Å | - |
-| **HLA-PH** | フォトリソグラフィ<br>*Photolithography* | ILD | Via-1開口 | KrF | 0.24µm | - | HLA |
-| **HLA-ET** | エッチング（RIE）<br>*Etching (RIE)* | ILD | Via-1形成 | CHF₃/O₂ RIE | 0.24µm | - | - |
-| **HWA-DP** | Wプラグ堆積<br>*W plug deposition* | Plug | M2接続 | W-CVD | - | 5000Å | - |
-| **HWA-CMP** | CMP研磨<br>*CMP planarization* | CMP | 平坦化 | CMP | - | - | - |
-| **ALB-SP** | Metal-2 Al堆積<br>*Metal-2 Al deposition* | Metal-2 | 中間配線 | PVD | - | 6000Å | - |
-| **ALB-PH** | フォトリソグラフィ<br>*Photolithography* | Metal-2 | パターン定義 | KrF | 0.35µm | - | ALB |
-| **ALB-ET** | エッチング（RIE）<br>*Etching (RIE)* | Metal-2 | 配線形成 | Cl₂/BCl₃ RIE | 0.35µm | - | - |
-| **HLB-DP** | ILD-2堆積<br>*ILD-2 deposition* | ILD | M2上絶縁 | PE-TEOS | - | 6000Å | - |
-| **HLB-PH** | フォトリソグラフィ<br>*Photolithography* | ILD | Via-2開口 | KrF | 0.28µm | - | HLB |
-| **HLB-ET** | エッチング（RIE）<br>*Etching (RIE)* | ILD | Via-2形成 | CHF₃/O₂ RIE | 0.28µm | - | - |
-| **HWB-DP** | Wプラグ堆積<br>*W plug deposition* | Plug | M3接続 | W-CVD | - | 5000Å | - |
-| **HWB-CMP** | CMP研磨<br>*CMP planarization* | CMP | 平坦化 | CMP | - | - | - |
-| **ALC-SP** | Metal-3 Al堆積<br>*Metal-3 Al deposition* | Metal-3 | グローバル配線 | PVD | - | 8000Å | - |
-| **ALC-PH** | フォトリソグラフィ<br>*Photolithography* | Metal-3 | パターン定義 | KrF | 0.50µm | - | ALC |
-| **ALC-ET** | エッチング（RIE）<br>*Etching (RIE)* | Metal-3 | 配線形成 | Cl₂/BCl₃ RIE | 0.50µm | - | - |
+| 工程名 / Step | 処理内容 / Process | 分類 / Category | 目的 / Purpose | 条件 / Condition |
+|---------------|--------------------|-----------------|----------------|------------------|
+| **F2-DP** | ILD堆積<br>*ILD deposition* | ILD | 配線前絶縁膜 | PE-TEOS, 6000Å |
+| **F2-CMP** | CMP平坦化<br>*CMP planarization* | CMP | 表面平坦化 | CMP |
+| **CNT-PH/ET** | フォト＋エッチ<br>*Lithography + Etching* | Contact | コンタクト開口形成 | CD = 0.24µm |
+| **TIN-SP** | TiNスパッタ<br>*TiN sputtering* | Barrier | バリアメタル形成 | DC sputter, 300Å |
+| **CW-DP** | Wデポジション<br>*W deposition* | Plug | Wプラグ充填 | CVD, WF₆, 4000Å |
+| **CW-CMP** | W CMP<br>*W CMP planarization* | CMP | 平坦化 | CMP |
 
-## 🔍 解説 / Explanation  
-
-- **BEOLは3層Al配線 (M1〜M3)** を基本とし、各層は **Wプラグ + ILD絶縁膜**で接続。  
-  *The BEOL consists of three Al interconnect layers (M1–M3), each connected by W plugs and isolated with ILD.*  
-
-- **CMPによる平坦化**を随所に導入し、多層化時の段差を抑制。  
-  *CMP is applied after each W plug formation to ensure planarity for multilayer integration.*  
-
-- **寸法スケーリング**：M1〜M2は0.28–0.35µm、M3はグローバル配線として0.5µm。  
-  *Line widths scale from 0.28–0.35µm for M1–M2 to 0.5µm for M3 global wiring.*  
-
-- **バリア層 (Ti/TiN)** によりW拡散を防止し、接続信頼性を確保。  
-  *Ti/TiN barrier prevents W diffusion and ensures reliable connections.*  
+📘 **解説**  
+ILDで絶縁し、Wプラグで下層デバイスとのコンタクトを確立。TiNバリアがW拡散を防ぐ。  
+*ILD provides insulation; W plug establishes contact. TiN barrier prevents W diffusion.*  
 
 ---
 
-## 🟦 Part 5: Pad / Passivation  
+### 🔹 Capacitor Formation (*Pt/PZT/Ti + AlOx*)  
 
-| 工程名 / Step | 処理内容 / Process | 分類 / Category | 目的 / Purpose | 処理条件 / Condition | 寸法 / CD | 膜厚 / Thickness | Mask |
-|---------------|--------------------|-----------------|----------------|----------------------|-----------|------------------|------|
-| **ALD-SP** | Al堆積<br>*Al deposition* | Pad | Bond Pad形成 | PVD Al | - | 10000Å | - |
-| **ALD-PH** | フォトリソグラフィ<br>*Photolithography* | Pad | Bond Padパターン定義 | i-line, 365nm | 3.0µm | - | PAD |
-| **ALD-ET** | エッチング（RIE）<br>*Etching (RIE)* | Pad | Bond Pad形成 | Cl₂/BCl₃ RIE | 3.0µm | - | - |
-| **PAD-DP** | パッシベーション膜堆積<br>*Passivation deposition* | Passivation | 外部環境からの保護 | SiN + SiO₂, PECVD | - | 8000Å | - |
-| **PAD-PH** | フォトリソグラフィ<br>*Photolithography* | Passivation | 開口定義（I/O形成） | i-line | 3.0µm | - | PAD |
-| **PAD-ET** | エッチング（RIE）<br>*Etching (RIE)* | Passivation | 開口形成 | CHF₃/O₂ RIE | 3.0µm | - | - |
-| **E-TEST** | 電気特性評価<br>*Electrical testing* | Test | Vth, Ioff, FeRAM特性測定 | 自動テスター | - | - | - |
+| 工程名 / Step | 処理内容 / Process | 分類 / Category | 目的 / Purpose | 条件 / Condition |
+|---------------|--------------------|-----------------|----------------|------------------|
+| **TI1-SP** | Tiスパッタ | Capacitor | Pt下地密着層 | 300Å |
+| **Pt-SP** | Ptスパッタ | Capacitor | 下部電極形成 | 1500Å |
+| **PZT-COT** | PZTスピンコート | Capacitor | 強誘電体前駆体 | Sol-Gel, 1000Å |
+| **PZT-ANL** | PZTアニール | Capacitor | ペロブスカイト結晶化 | RTA, 650℃ O₂ |
+| **TI2-SP** | Tiスパッタ | Capacitor | 上部電極バッファ | 300Å |
+| **CAP-PH/ET** | フォト＋イオンミリング | Capacitor | キャパシタパターニング | KrF, CD=0.35µm |
+| **ALOX-SP/DP** | AlOxスパッタ＋ALD | Capacitor | 保護膜（二重構造） | 各300Å |
+| **ALOX-PH/ET** | フォト＋エッチ | Capacitor | 接続開口形成 | KrF, 0.35µm |
 
-## 🔍 解説 / Explanation  
+📘 **解説**  
+Pt/PZT/Ti構造でFeRAMセル形成。AlOx保護膜（二重構造）で水素還元劣化を防ぐ。PtはCMP不可のためIBEを採用。  
+*Pt/PZT/Ti capacitor is core of FeRAM. Dual AlOx layers prevent H₂ degradation. IBE used for Pt patterning.*  
 
-- **Bond Pad**  
-  最終金属（M3上）に **厚膜Alパッド** を形成。ワイヤボンディング・フリップチップ接続に対応。  
-  *Thick Al pads are deposited on M3 for wire bonding or flip-chip connection.*  
+---
 
-- **Passivation**  
-  SiN + SiO₂ の積層で外部環境から保護。湿気やNa拡散を防ぎ、長期信頼性を確保。  
-  *SiN + SiO₂ passivation protects the device from humidity and Na diffusion, ensuring long-term reliability.*  
+### 🔹 BEOL Interconnects (M1〜M3)  
 
-- **開口形成**  
-  パッド領域をフォト＋RIEで開口し、外部I/Oとの電気接続を確立。  
-  *Openings are defined by photolithography and RIE to enable electrical connection with external I/Os.*  
+| 工程名 / Step | 処理内容 / Process | 分類 / Category | 目的 / Purpose | 条件 / Condition |
+|---------------|--------------------|-----------------|----------------|------------------|
+| **HLX-DP〜HWX-CMP** | ILD-0, Via-0, Wプラグ形成 | Interconnect | Capacitor-M1接続 | CD=0.24µm |
+| **ALA-SP/PH/ET** | Metal-1 Al配線形成 | Metal-1 | セル配線 | 0.28µm, 6000Å |
+| **HLA-DP〜HWA-CMP** | ILD-1, Via-1, Wプラグ形成 | Interconnect | M1-M2接続 | CD=0.24µm |
+| **ALB-SP/PH/ET** | Metal-2 Al配線形成 | Metal-2 | 中間配線 | 0.35µm, 6000Å |
+| **HLB-DP〜HWB-CMP** | ILD-2, Via-2, Wプラグ形成 | Interconnect | M2-M3接続 | CD=0.28µm |
+| **ALC-SP/PH/ET** | Metal-3 Al配線形成 | Metal-3 | グローバル配線 | 0.50µm, 8000Å |
 
-- **E-Test**  
-  最終ウェハで **FeRAMセルの保持特性 / 書き込み特性 / CMOSデバイス特性** を測定。  
-  *Final wafer testing measures FeRAM retention, write characteristics, and CMOS device parameters.*  
+📘 **解説**  
+M1〜M3のAl配線で多層配線を構成。各層はWプラグとILDで接続。M3はグローバル配線用途。  
+*Three Al layers form interconnects. W plugs + ILD connect layers. M3 serves as global wiring.*  
 
+---
 
+### 🔹 Pad & Passivation  
 
+| 工程名 / Step | 処理内容 / Process | 分類 / Category | 目的 / Purpose | 条件 / Condition |
+|---------------|--------------------|-----------------|----------------|------------------|
+| **ALD-SP/PH/ET** | Al厚膜パッド形成 | Pad | Bond Pad作製 | 3.0µm, 10000Å |
+| **PAD-DP** | パッシベーション膜堆積 | Passivation | 環境保護 | SiN+SiO₂, 8000Å |
+| **PAD-PH/ET** | フォト＋エッチ | Passivation | I/O開口形成 | 3.0µm |
+
+📘 **解説**  
+厚膜Alパッドでワイヤボンディング対応。パッシベーションで湿気・Na拡散を防ぎ信頼性確保。  
+*Thick Al pads enable wire bonding. SiN+SiO₂ passivation protects against humidity/Na diffusion.*  
+
+---
+
+### 🔹 E-Test  
+
+| 工程名 / Step | 内容 / Details |
+|---------------|----------------|
+| **E-TEST** | Vth, Ioff, FeRAM保持特性などを最終ウェハで測定<br>*Measure Vth, Ioff, FeRAM retention at wafer level* |
+
+📘 **解説**  
+最終テストでCMOS特性とFeRAM特性を同時に評価。  
+*Final wafer test verifies both CMOS and FeRAM characteristics.*  
