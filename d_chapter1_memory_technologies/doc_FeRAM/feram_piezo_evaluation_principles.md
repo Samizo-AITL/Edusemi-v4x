@@ -59,8 +59,10 @@ title:
 - *Capable of nm-scale displacement measurement*
 
 ### ✔ DBLI（Double Beam Laser Interferometer, aixACCT Germany）
-- **裏面研磨不要 / *No backside thinning required***  
+- **原理上は裏面研磨不要 / *In principle, no backside thinning required***  
 - **フルウエハ対応 / *Compatible with full wafers***  
+- ただし実際には、信号強度やS/N比改善のために**基板を100〜200µm程度まで裏面研磨するケースが多い**  
+  *In practice, backside thinning to ~100–200 µm is often performed to improve signal strength and S/N ratio*  
 - PZT薄膜の表面たわみをナノ精度で計測可能  
   *Measures PZT thin-film surface deflection with nanometer accuracy*  
 - バタフライカーブや電界依存変位特性をそのまま抽出可能  
@@ -79,7 +81,7 @@ flowchart LR
     subgraph SAMPLE["試料 / *Sample*"]
         subgraph STACK["薄膜構造 / *Thin-Film Stack*"]
             FILM["PZT薄膜（測定対象）\n*PZT thin film (meas. target)*"]
-            SUB["Si基板（裏面加工不要）\n*Si substrate (no backside thinning)*"]
+            SUB["Si基板（裏面研磨推奨）\n*Si substrate (backside thinning recommended)*"]
         end
         P1["測定点A\n*Point A*"]
         P2["測定点B\n*Point B*"]
@@ -97,7 +99,7 @@ flowchart LR
 
     %% Notes
     classDef note fill:#f9f9f9,stroke:#bbb,color:#333,font-size:11px;
-    N1["特徴：2点同時の表面たわみを干渉で比較 → バタフライ曲線/電界依存変位を抽出\n*Two-point surface deflection via interference → butterfly curve / E-field dependent strain*"]:::note
+    N1["特徴：原理上は裏面研磨不要だが、実務では薄化により信号強度とS/Nを改善\n*Principle: no backside thinning, but in practice wafer thinning improves signal strength & S/N*"]:::note
     C --- N1
 ```
 
