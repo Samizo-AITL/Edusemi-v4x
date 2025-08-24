@@ -30,8 +30,8 @@ the 3D structure stacks memory cells **vertically** to continue capacity improve
 
 ```mermaid
 flowchart TB
-    Controller[Controller / コントローラ\nECC, wear-leveling, I/F control]
-    CellArray[Cell Array (3D Stacked)\nセルアレイ（垂直積層）\n64 → 500+ layers]
+    Controller["Controller / コントローラ\nECC, wear-leveling, I/F control"]
+    CellArray["Cell Array (3D Stacked)\nセルアレイ（垂直積層）\n64 → 500+ layers"]
 
     Controller --> CellArray
 ```
