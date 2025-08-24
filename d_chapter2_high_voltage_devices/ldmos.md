@@ -27,32 +27,30 @@ title: LDMOS
 
 ## 🏗️ 構造と特徴｜Structure and Features
 
+**図1. LDMOS構造断面図 | Cross-Section**
+
 ```mermaid
 flowchart LR
-    subgraph CrossSection ["LDMOS構造断面図｜Cross-Section"]
-        Gate["Gate (Poly)"]
-        Psub["P-Sub"]
-        Drift["Drift領域 (低ドープN-)"]
-        Nplus["N+ Drain"]
+    Gate["Gate (Poly)"]
+    Psub["P-Sub"]
+    Drift["Drift領域 (低ドープN-)"]
+    Nplus["N+ Drain"]
 
-        Gate --> Drift --> Nplus
-        Psub --- Drift
-    end
+    Gate --> Drift --> Nplus
+    Psub --- Drift
 ```
+
+**図2. リングゲート型LDMOSレイアウト | Ring-Gate Layout**
 
 ```mermaid
 flowchart TB
-    subgraph RingGate ["リングゲート型LDMOSレイアウト｜Ring-Gate Layout"]
-        subgraph GND["GND Guard Ring (外周)"]
-            subgraph Drain["Drain (N+) 高電圧端子"]
-                subgraph Gate["Gate (Poly) リング状ゲート"]
-                    Source["Source (N+) 中央ソース"]
-                end
-            end
-        end
-    end
-```
+    GND["GND Guard Ring (外周)"]
+    Drain["Drain (N+) 高電圧端子"]
+    Gate["Gate (Poly) リング状ゲート"]
+    Source["Source (N+) 中央ソース"]
 
+    GND --> Drain --> Gate --> Source
+```
 ---
 
 ## 📐 特性と設計パラメータ｜Characteristics and Design Parameters
