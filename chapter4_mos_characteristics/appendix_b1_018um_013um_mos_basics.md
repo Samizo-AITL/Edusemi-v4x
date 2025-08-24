@@ -3,6 +3,8 @@ layout: default
 title: "付録B1: 0.18µm / 0.13µm MOSトランジスタ基礎特性 | Appendix B1: Basic MOSFET Characteristics for 0.18µm / 0.13µm"
 ---
 
+---
+
 # 📎 付録B1: 0.18µm / 0.13µm MOSトランジスタ基礎特性  
 **Appendix B1: Basic MOSFET Characteristics for 0.18µm / 0.13µm**
 
@@ -36,11 +38,12 @@ Currently, graphs are generated using a simplified square-law model for educatio
 
 ## 📈 特性グラフ（簡易モデル版） / Characteristic Graphs (Simplified Model)
 
-> **条件**: 単位幅（W=1µm）で規格化、教育用二乗則モデルで作成。将来BSIM3版に置き換え予定。
+> **条件**: 単位幅（W=1µm）で規格化、教育用二乗則モデルで作成。将来BSIM3版に置き換え予定。  
+> *Condition: Normalized to unit width (W=1µm), created using educational quadratic-law model. To be replaced with BSIM3 in the future.*
 
-![Vg–Id Characteristics (W=1µm normalized)](../chapter4_mos_characteristics/figures/mosfet_vg_id_018_013.png)  
-![Vd–Id Characteristics (W=1µm normalized)](../chapter4_mos_characteristics/figures/mosfet_vd_id_018_013.png)  
-![Vg–Cg Characteristics (W=1µm normalized)](../chapter4_mos_characteristics/figures/mosfet_vg_cg_018_013.png)  
+<img src="../chapter4_mos_characteristics/figures/mosfet_vg_id_018_013.png" alt="Vg–Id Characteristics (W=1µm normalized)" width="50%">  
+<img src="../chapter4_mos_characteristics/figures/mosfet_vd_id_018_013.png" alt="Vd–Id Characteristics (W=1µm normalized)" width="50%">  
+<img src="../chapter4_mos_characteristics/figures/mosfet_vg_cg_018_013.png" alt="Vg–Cg Characteristics (W=1µm normalized)" width="50%">
 
 ---
 
