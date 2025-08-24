@@ -64,6 +64,9 @@ title:
 
 ![Piezo Butterfly](figures/stylized_butterfly.png)
 
+*注: 本図は教材用にスタイライズしたもので、横軸電圧スケールが指定値（±20 V）と異なっています。  
+後日、正しい電圧条件に基づいた修正版グラフに更新予定です。*
+
 ---
 
 ## 3. 測定法：LDV / DBLI  
