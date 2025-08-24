@@ -54,3 +54,28 @@ title: 📘 0.18µm FeRAM Process Flow — 完全版
 | **NLL2/PLL2, NLM2/PLM2** | NMOS/PMOS深拡散注入 | S/D | ソース・ドレイン形成 | As/BF₂, 40keV | 1.8V/3.3V | - | - |
 
 ---
+
+## 🟦 Part 2: Salicide Process  
+
+| 工程名 / Step | 処理内容 / Process | 分類 / Category | 目的 / Purpose | 処理条件 / Condition | 寸法 / CD | 膜厚 / Thickness | Mask |
+|---------------|--------------------|-----------------|----------------|----------------------|-----------|------------------|------|
+| **CO-SP** | Coスパッタリング<br>*Co sputtering* | Salicide | 前駆体形成<br>*Precursor layer* | - | - | 300Å | - |
+| **LMP-ANL** | サリサイドアニール<br>*Salicide annealing* | Salicide | CoSi形成<br>*CoSi formation* | 550℃ 30s | - | - | - |
+| **CO-ET** | エッチング（RIE等）<br>*Etching (RIE)* | Salicide | 不要Co層除去<br>*Remove unreacted Co* | H₂SO₄系 | - | - | - |
+| **LMP2-ANL** | 相転移アニール<br>*Phase transformation annealing* | Salicide | CoSi₂形成<br>*CoSi₂ formation* | 750℃ 30s | - | - | - |
+
+---
+
+## 🔍 解説 / Explanation  
+
+- **CoSi₂ サリサイド形成**は、ソース・ドレイン・ゲートの低抵抗化に必須。  
+  *Formation of CoSi₂ salicide is essential for reducing the resistance of source, drain, and gate.*  
+
+- 2段階アニールにより、**Co → CoSi → CoSi₂**へと相転移を制御。  
+  *Two-step annealing controls the phase transition from Co → CoSi → CoSi₂.*  
+
+- **不要な未反応Co膜は酸処理で除去**し、素子間リークを防止。  
+  *Unreacted Co film is removed by acid etching to prevent device leakage.*  
+
+---
+
