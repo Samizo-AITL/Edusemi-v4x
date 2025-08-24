@@ -35,9 +35,9 @@ flowchart TB
         Q[Q : Storage Node]
         QB[Q_bar : Complement Node]
 
-        BL[Bit Line (BL)]
-        BLB[Bit Line Bar (BL_bar)]
-        WL[Word Line (WL)]
+        BL[Bit Line]
+        BLB[Bit Line Bar]
+        WL[Word Line]
 
         %% Access transistors
         WL --> AX1[AX1 : Access FET]
