@@ -109,3 +109,49 @@ title: 📘 0.18µm FeRAM Process Flow — 完全版
   *Patterning requires IBE instead of CMP due to Pt’s resistance to chemical etching.*  
 
 ---
+
+## 🟩 Part 4: BEOL (W Plug + Al Interconnects)  
+
+| 工程名 / Step | 処理内容 / Process | 分類 / Category | 目的 / Purpose | 処理条件 / Condition | 寸法 / CD | 膜厚 / Thickness | Mask |
+|---------------|--------------------|-----------------|----------------|----------------------|-----------|------------------|------|
+| **HLX-DP** | ILD-0堆積<br>*ILD-0 deposition* | ILD | Capacitor上絶縁 | PE-TEOS, 400℃ | - | 6000Å | - |
+| **HLX-PH** | フォトリソグラフィ<br>*Photolithography* | ILD | Via-0パターン定義 | KrF, 248nm | 0.24µm | - | HLX |
+| **HLX-ET** | エッチング（RIE）<br>*Etching (RIE)* | ILD | Via-0開口形成 | CHF₃/O₂ RIE | 0.24µm | - | - |
+| **TINX-SP** | Ti/TiNスパッタ<br>*Ti/TiN sputter* | Barrier | バリア層形成 | DC/RF Sputter | - | 300Å | - |
+| **HWX-DP** | Wプラグ堆積<br>*W plug deposition* | Plug | Via-0充填 | W-CVD, WF₆, 400℃ | - | 5000Å | - |
+| **HWX-CMP** | CMP研磨<br>*CMP planarization* | CMP | M1接続用平坦化 | CMP | - | - | - |
+| **ALA-SP** | Metal-1 Al堆積<br>*Metal-1 Al deposition* | Metal-1 | セル配線形成 | PVD | - | 6000Å | - |
+| **ALA-PH** | フォトリソグラフィ<br>*Photolithography* | Metal-1 | パターン定義 | KrF | 0.28µm | - | ALA |
+| **ALA-ET** | エッチング（RIE）<br>*Etching (RIE)* | Metal-1 | 配線形成 | Cl₂/BCl₃ RIE | 0.28µm | - | - |
+| **HLA-DP** | ILD-1堆積<br>*ILD-1 deposition* | ILD | M1上絶縁 | PE-TEOS | - | 6000Å | - |
+| **HLA-PH** | フォトリソグラフィ<br>*Photolithography* | ILD | Via-1開口 | KrF | 0.24µm | - | HLA |
+| **HLA-ET** | エッチング（RIE）<br>*Etching (RIE)* | ILD | Via-1形成 | CHF₃/O₂ RIE | 0.24µm | - | - |
+| **HWA-DP** | Wプラグ堆積<br>*W plug deposition* | Plug | M2接続 | W-CVD | - | 5000Å | - |
+| **HWA-CMP** | CMP研磨<br>*CMP planarization* | CMP | 平坦化 | CMP | - | - | - |
+| **ALB-SP** | Metal-2 Al堆積<br>*Metal-2 Al deposition* | Metal-2 | 中間配線 | PVD | - | 6000Å | - |
+| **ALB-PH** | フォトリソグラフィ<br>*Photolithography* | Metal-2 | パターン定義 | KrF | 0.35µm | - | ALB |
+| **ALB-ET** | エッチング（RIE）<br>*Etching (RIE)* | Metal-2 | 配線形成 | Cl₂/BCl₃ RIE | 0.35µm | - | - |
+| **HLB-DP** | ILD-2堆積<br>*ILD-2 deposition* | ILD | M2上絶縁 | PE-TEOS | - | 6000Å | - |
+| **HLB-PH** | フォトリソグラフィ<br>*Photolithography* | ILD | Via-2開口 | KrF | 0.28µm | - | HLB |
+| **HLB-ET** | エッチング（RIE）<br>*Etching (RIE)* | ILD | Via-2形成 | CHF₃/O₂ RIE | 0.28µm | - | - |
+| **HWB-DP** | Wプラグ堆積<br>*W plug deposition* | Plug | M3接続 | W-CVD | - | 5000Å | - |
+| **HWB-CMP** | CMP研磨<br>*CMP planarization* | CMP | 平坦化 | CMP | - | - | - |
+| **ALC-SP** | Metal-3 Al堆積<br>*Metal-3 Al deposition* | Metal-3 | グローバル配線 | PVD | - | 8000Å | - |
+| **ALC-PH** | フォトリソグラフィ<br>*Photolithography* | Metal-3 | パターン定義 | KrF | 0.50µm | - | ALC |
+| **ALC-ET** | エッチング（RIE）<br>*Etching (RIE)* | Metal-3 | 配線形成 | Cl₂/BCl₃ RIE | 0.50µm | - | - |
+
+## 🔍 解説 / Explanation  
+
+- **BEOLは3層Al配線 (M1〜M3)** を基本とし、各層は **Wプラグ + ILD絶縁膜**で接続。  
+  *The BEOL consists of three Al interconnect layers (M1–M3), each connected by W plugs and isolated with ILD.*  
+
+- **CMPによる平坦化**を随所に導入し、多層化時の段差を抑制。  
+  *CMP is applied after each W plug formation to ensure planarity for multilayer integration.*  
+
+- **寸法スケーリング**：M1〜M2は0.28–0.35µm、M3はグローバル配線として0.5µm。  
+  *Line widths scale from 0.28–0.35µm for M1–M2 to 0.5µm for M3 global wiring.*  
+
+- **バリア層 (Ti/TiN)** によりW拡散を防止し、接続信頼性を確保。  
+  *Ti/TiN barrier prevents W diffusion and ensures reliable connections.*  
+
+---
