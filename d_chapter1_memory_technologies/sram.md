@@ -55,10 +55,10 @@ flowchart TB
         INV2 --> Q
 
         %% Power connections
-        INV1 --- VDD
-        INV1 --- GND
-        INV2 --- VDD
-        INV2 --- GND
+        VDD --- INV1
+        GND --- INV1
+        VDD --- INV2
+        GND --- INV2
     end
 ```
 
