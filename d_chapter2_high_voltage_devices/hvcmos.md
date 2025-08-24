@@ -44,6 +44,22 @@ flowchart TB
     Gate --> LDD --> Nplus
     LDD --> Nminus --> Psub
 ```
+```mermaid
+flowchart TB
+    Gate["Gate : Poly"]
+
+    subgraph Device [HV-NMOS Structure]
+        LDD["LDD領域 : Drain Extended Region"]
+        Nplus["N+ Drain"]
+        Nminus["N- Drift Region"]
+        Psub["P- Substrate"]
+    end
+
+    Gate --> LDD
+    LDD --> Nplus
+    LDD --> Nminus
+    Nminus --> Psub
+```
 
 → 多重ウェル構造（Deep N-Well）でSub絶縁
 → 厚膜酸化によるゲート耐圧向上
