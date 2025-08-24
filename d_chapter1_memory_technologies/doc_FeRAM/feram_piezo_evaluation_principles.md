@@ -32,19 +32,10 @@ title:
 | **Vc**  | 保証電圧 / *Coercive voltage* | V |
 | **2Pr** | 記憶保持力の指標 / *Memory window* | μC/cm² |
 
----
-
-## 📊 FeRAM ヒステリシスループ
+### 📊 FeRAM ヒステリシスループ
 **FeRAM Hysteresis Loop (Pr=15, Ps=20, Vc=1 V)**  
 
 ![FeRAM Hysteresis](figures/stylized_hysteresis.png)
-
----
-
-## 🦋 薄膜ピエゾ バタフライカーブ
-**Thin-Film Piezoelectric Butterfly Curve (±20 V)**  
-
-![Piezo Butterfly](figures/stylized_butterfly.png)
 
 ---
 
@@ -61,6 +52,11 @@ title:
 - 縦軸：変位量（nmオーダー） / *Vertical: Displacement (nm scale)*  
 - 分極反転点で変位が非線形にジャンプ / *Nonlinear jump at polarization reversal*  
 - ヒステリシスを持つ蝶型ループを形成 / *Forms a butterfly-shaped hysteresis loop*
+
+## 🦋 薄膜ピエゾ バタフライカーブ
+**Thin-Film Piezoelectric Butterfly Curve (±20 V)**  
+
+![Piezo Butterfly](figures/stylized_butterfly.png)
 
 ---
 
