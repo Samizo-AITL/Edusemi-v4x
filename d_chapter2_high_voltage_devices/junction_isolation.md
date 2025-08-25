@@ -34,13 +34,15 @@ In high-voltage devices, suppression of **parasitic transistor action and substr
 
 ```mermaid
 flowchart TB
-    subgraph PSub["P-Sub（基板）｜Substrate"]
-        subgraph NBL["N+ Buried Layer｜埋め込み層"]
-            PWell["P-Well（素子領域）｜Device Region"]
+    subgraph PSub["P-Sub (Substrate)"]
+        subgraph NBL["N+ Buried Layer"]
+            PWell["P-Well (Device Region)"]
         end
     end
 
-    NBL --- Note["⚠️ P/N/Pで寄生トランジスタ形成の可能性あり<br>🔒 N層ガードにより電気的遮断"]
+    PSub --- Note1["基板"]
+    NBL --- Note2["埋め込み層"]
+    PWell --- Note3["素子領域"]
 ```
 
 - **PN接合に逆バイアスを印加し、空乏層で絶縁を形成**  
