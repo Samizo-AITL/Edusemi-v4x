@@ -41,15 +41,29 @@ This section covers optimization from the following viewpoints:
 **CMP（Chemical Mechanical Polishing）工程ではパターン密度差が問題となります。**  
 **Pattern density variations can cause dishing or erosion during CMP.**
 
-```
-配線層例｜Interconnect Example
+```mermaid
+flowchart LR
+    %% Overall title
+    %% CMP Dummy Fill concept: Before vs After
 
-┌─────┐      ┌─────┐
-│配線A│      │配線B│      ← 密度差あり
-└─────┘      └─────┘
+    subgraph B["CMP前｜Before: Density Mismatch"]
+        WA["配線A<br>Interconnect A"]
+        GAP["（空白）<br>Open area"]
+        WB["配線B<br>Interconnect B"]
+        NoteB["⚠️ 密度差 → Dishing/Erosion リスク"]
+        WA --- GAP --- WB
+        B --> NoteB
+    end
 
-↓ Dummy挿入（非機能）
-░░░░░░░      ░░░░░░░
+    -->  | Dummy 挿入 | 
+
+    subgraph A["CMP後｜After: Dummy Fill Inserted"]
+        WA2["配線A<br>Interconnect A"]
+        D1["Dummy Fill<br>（非機能 / Non-functional）"]
+        WB2["配線B<br>Interconnect B"]
+        D2["Dummy Fill"]
+        WA2 --- D1 --- WB2 --- D2
+    end
 ```
 
 - **電気的には機能しないが、機械加工での均一性を確保**  
