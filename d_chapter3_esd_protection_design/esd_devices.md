@@ -35,13 +35,14 @@ This section explains the **structure and operation** of commonly used ESD prote
 
 ### ① クランプダイオード（Clamp Diode）
 
-```
-          +3.3V
-            │
-        ┌───┴───┐
-        │       │
-     →─┘       └─→ GND
-  入力パッド / Input Pad
+```mermaid
+flowchart TB
+    PAD[入力パッド / Input Pad]
+    VDD[(+3.3V)]
+    GND[(GND)]
+
+    PAD -->|Forward| VDD
+    PAD -->|Reverse| GND
 ```
 
 - ➕ 順方向：VDD側に電流を逃がす  
@@ -53,13 +54,17 @@ This section explains the **structure and operation** of commonly used ESD prote
 
 ### ② GGNMOS（Gate-Grounded NMOS）
 
-```
-[I/O]──┬───────┐
-       │       │
-     [D]      [S]
-       └───┬───┘
-          [G]
-          GND
+```mermaid
+flowchart TB
+    IO[入力 I/O Pad]
+    D[Drain]
+    S[Source]
+    G[Gate (GND固定)]
+
+    IO --> D
+    S --> GND
+    G --> GND
+    D -. 放電時導通 .-> S
 ```
 
 - 🔒 **ゲートをGNDに固定**し、常時OFF  
@@ -76,12 +81,18 @@ This section explains the **structure and operation** of commonly used ESD prote
 - 💥 誤トリガや回復困難なラッチ状態が課題  
 - 🧪 **LVTSCR（Low-Voltage Triggered SCR）**で制御性を改善
 
-```
-  Anode (+)
-    │
-  P+ ─ N- ─ P- ─ N+ 
-               │
-             Cathode (−)
+```mermaid
+flowchart LR
+    A[Anode (+)]
+    Pp[P+]
+    N1[N-]
+    P2[P-]
+    N2[N+]
+    K[Cathode (−)]
+
+    A --> Pp --> N1 --> P2 --> N2 --> K
+    Pp -. 寄生NPN .- P2
+    N1 -. 寄生PNP .- N2
 ```
 
 ---
