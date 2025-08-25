@@ -56,10 +56,10 @@ flowchart TB
 
 ```mermaid
 flowchart TB
-    IO[入力 I/O Pad]
-    D[Drain]
-    S[Source]
-    G[Gate (GND固定)]
+    IO["I/O Pad (入力)"]
+    D["Drain"]
+    S["Source"]
+    G["Gate (GND固定)"]
 
     IO --> D
     D -. 放電時導通 .-> S
@@ -83,12 +83,12 @@ flowchart TB
 
 ```mermaid
 flowchart LR
-    A[Anode (+)]
-    Pp[P+]
-    N1[N-]
-    P2[P-]
-    N2[N+]
-    K[Cathode (−)]
+    A["Anode (+)"]
+    Pp["P+"]
+    N1["N-"]
+    P2["P-"]
+    N2["N+"]
+    K["Cathode (−)"]
 
     A --> Pp --> N1 --> P2 --> N2 --> K
     Pp -. 寄生NPN .- P2
