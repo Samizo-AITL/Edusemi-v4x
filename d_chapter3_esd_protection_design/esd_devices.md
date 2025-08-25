@@ -82,7 +82,7 @@ flowchart TB
 - 🧪 **LVTSCR（Low-Voltage Triggered SCR）**で制御性を改善
 
 ```mermaid
-flowchart LR
+flowchart TB
     A["Anode (+)"]
     Pp["P+"]
     N1["N-"]
