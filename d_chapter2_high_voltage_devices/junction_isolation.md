@@ -32,17 +32,18 @@ In high-voltage devices, suppression of **parasitic transistor action and substr
 
 ## 🔬 Junction Isolationの仕組み｜How Junction Isolation Works
 
-```text
-【接合型絶縁の断面模式図｜Cross-section Schematic】
+```mermaid
+flowchart TB
+    subgraph PSub["P-Sub（基板）｜Substrate"]
+        subgraph NBL["N+ Buried Layer｜埋め込み層"]
+            PWell["P-Well（素子領域）｜Device Region"]
+        end
+    end
 
-P-Well（素子）  
-│  
-────┼───── N+ Buried Layer  
-↓  
-P-Sub（基板）
-
-→ P/N/Pで寄生トランジスタ形成の可能性あり  
-→ N層ガードにより電気的遮断
+    note right of NBL
+        "P/N/Pで寄生トランジスタ形成の可能性あり\n
+         N層ガードにより電気的遮断"
+    end
 ```
 
 - **PN接合に逆バイアスを印加し、空乏層で絶縁を形成**  
