@@ -80,11 +80,11 @@ flowchart TB
 
 ## 🧪 応用例｜Applications
 
-| 用途｜Application | 説明｜Description |
-|------|-------------|-----------------|
-| ゲートドライバ｜Gate Driver | 高電圧スイッチングFETの制御 |
-| 電源モニタ｜Power Monitor | 高耐圧入力で電圧を監視・検出 |
-| フルブリッジ制御｜H-Bridge Control | 上下のHVトランジスタを対で駆動可能 |
+| 用途 | 説明 |
+|------|------|
+| ゲートドライバ <br> *Gate Driver* | 高電圧スイッチングFETの制御 <br> *Control of high-voltage switching FETs* |
+| 電源モニタ <br> *Power Monitor* | 高耐圧入力で電圧を監視・検出 <br> *Voltage monitoring and detection with high-voltage input* |
+| フルブリッジ制御 <br> *H-Bridge Control* | 上下のHVトランジスタを対で駆動可能 <br> *Enables driving of upper and lower HV transistors in pairs* |
 
 ---
 
@@ -102,11 +102,11 @@ flowchart TB
 
 ## ⚠️ 信頼性と環境耐性｜Reliability & Environmental Vulnerability
 
-| 項目｜Concern | 説明｜Description | 対策｜Countermeasures |
-|------|--------|------------------|-----------------------|
-| COP影響<br>COP Defect | シリコン結晶起因の局所欠陥が、HV領域でリークや絶縁破壊を誘発 | ウエハテストで**HVスクリーニング**実施 |
-| 熱ストレス<br>Thermal Stress | 厚膜酸化・ドレイン拡張が熱により劣化しやすい | **HTOL試験**、放熱レイアウト、SOA管理 |
-| 光感受性<br>Photo Sensitivity | 光による光起電流で誤動作・リークが発生 | **ALメタルガードリング**、遮光樹脂使用 |
+| 項目 <br> *Concern* | 説明 <br> *Description* | 対策 <br> *Countermeasures* |
+|---------------------|-------------------------|-----------------------------|
+| COP影響 <br> *COP Defect* | シリコン結晶起因の局所欠陥が、HV領域でリークや絶縁破壊を誘発 <br> *Local defects originating from silicon crystal may induce leakage or dielectric breakdown in HV regions* | ウエハテストで **HVスクリーニング** 実施 <br> *Perform HV screening in wafer test* |
+| 熱ストレス <br> *Thermal Stress* | 厚膜酸化・ドレイン拡張が熱により劣化しやすい <br> *Thick oxide and drain extension are prone to degradation under thermal stress* | **HTOL試験**、放熱レイアウト、SOA管理 <br> *HTOL test, thermal dissipation layout, SOA management* |
+| 光感受性 <br> *Photo Sensitivity* | 光による光起電流で誤動作・リークが発生 <br> *Photogenerated current may cause malfunction or leakage* | **ALメタルガードリング**、遮光樹脂使用 <br> *Al metal guard ring, use of light-shielding resin* |
 
 ---
 
