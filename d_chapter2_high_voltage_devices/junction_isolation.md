@@ -59,10 +59,14 @@ Junction Isolationだけでは、寄生npnや光電流による誤動作を完�
 
 ```mermaid
 flowchart TB
-    subgraph Guard["GND Guard Ring (P+)｜外周：寄生防止・GND引き落とし"]
-        subgraph JIso["Junction Isolated Cell｜内部：PN接合で構造絶縁"]
+    subgraph Guard["GND Guard Ring (P+)"]
+        subgraph JIso["Junction Isolated Cell"]
         end
     end
+
+    %% 外側に補足を追加
+    Guard --- Note1["外周: 寄生防止・GND引き落とし"]
+    JIso --- Note2["内部: PN接合で構造絶縁"]
 ```
 
 - **ラッチアップ・光感受性・熱ノイズへの多重対策**  
