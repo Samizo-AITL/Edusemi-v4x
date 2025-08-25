@@ -62,7 +62,7 @@ Such high-voltage pulses (hundreds to thousands of volts) can **damage delicate 
 ## 🔁 設計フローにおける位置づけ / Placement in the Design Flow
 
 ```mermaid
-flowchart LR
+flowchart TB
     IO[外部I/O<br>External I/O]
     ESD[ESD保護素子<br>ESD Protection Device]
     Rlim[ESD制限抵抗<br>Current-limiting Resistor]
