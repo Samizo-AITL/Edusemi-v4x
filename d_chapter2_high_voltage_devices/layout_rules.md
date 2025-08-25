@@ -42,31 +42,34 @@ This section covers optimization from the following viewpoints:
 **Pattern density variations can cause dishing or erosion during CMP.**
 
 ```mermaid
+%%{init: {'flowchart': {'htmlLabels': false}} }%%
 flowchart LR
-    %% Before: 密度差あり
-    subgraph B["CMP前｜Before: Density Mismatch"]
+    %% ===== Before (短い見出し) =====
+    subgraph B["CMP前"]
         WA["配線A<br>Interconnect A"]
         GAP["（空白）<br>Open area"]
         WB["配線B<br>Interconnect B"]
         WA --- GAP --- WB
     end
-    NoteB["⚠️ 密度差 → Dishing/Erosion リスク"]
+    BNote["Before: Density mismatch<br>密度差あり → Dishing/Erosion リスク"]
 
-    %% Dummy 挿入ノード
+    %% 中央：Dummy 挿入
     Mid["Dummy 挿入<br>Dummy Fill"]
 
-    %% After: Dummyあり
-    subgraph A["CMP後｜After: Dummy Fill Inserted"]
+    %% ===== After (短い見出し) =====
+    subgraph A["CMP後"]
         WA2["配線A<br>Interconnect A"]
-        D1["Dummy Fill"]
+        D1["Dummy Fill<br>（非機能）"]
         WB2["配線B<br>Interconnect B"]
         D2["Dummy Fill"]
         WA2 --- D1 --- WB2 --- D2
     end
+    ANote["After: Density balanced<br>ダミーで密度均し"]
 
-    %% フロー接続
-    B --> NoteB
+    %% フロー接続と注記
     B --> Mid --> A
+    B --- BNote
+    A --- ANote
 ```
 
 - **電気的には機能しないが、機械加工での均一性を確保**  
