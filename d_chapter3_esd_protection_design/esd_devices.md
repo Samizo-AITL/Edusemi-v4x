@@ -62,9 +62,9 @@ flowchart TB
     G[Gate (GND固定)]
 
     IO --> D
+    D -. 放電時導通 .-> S
     S --> GND
     G --> GND
-    D -. 放電時導通 .-> S
 ```
 
 - 🔒 **ゲートをGNDに固定**し、常時OFF  
