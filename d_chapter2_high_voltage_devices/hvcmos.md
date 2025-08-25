@@ -130,15 +130,13 @@ flowchart TB
 
 【レイアウト例｜Guard Ring Layout】
 
-```
-┌────────────────────────┐
-│      Metal Shield (Al)       │ ← 光遮蔽
-├────────────────────────┤
-│  GND Guard Ring (P+)    │ ← 寄生防止
-│  ┌────────────────┐  │
-│  │     HV-NMOS Core     │  │
-│  └────────────────┘  │
-└────────────────────────┘
+```mermaid
+flowchart TB
+    subgraph Metal["Metal Shield (Al)｜光遮蔽"]
+        subgraph Guard["GND Guard Ring (P+)｜寄生防止"]
+            Core["HV-NMOS Core"]
+        end
+    end
 ```
 
 > GND-tied guard ring and metal shielding suppress light-induced and parasitic effects.
