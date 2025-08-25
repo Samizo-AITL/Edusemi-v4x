@@ -80,13 +80,12 @@ flowchart TB
 
 ## 🧪 応用例｜Applications
 
-```
 | 用途｜Application | 説明｜Description |
 |------|-------------|-----------------|
 | ゲートドライバ｜Gate Driver | 高電圧スイッチングFETの制御 |
 | 電源モニタ｜Power Monitor | 高耐圧入力で電圧を監視・検出 |
 | フルブリッジ制御｜H-Bridge Control | 上下のHVトランジスタを対で駆動可能 |
-```
+
 ---
 
 ## 🔁 プロセスフロー順序｜Process Flow Order
@@ -102,13 +101,13 @@ flowchart TB
 ---
 
 ## ⚠️ 信頼性と環境耐性｜Reliability & Environmental Vulnerability
-```
+
 | 項目｜Concern | 説明｜Description | 対策｜Countermeasures |
 |------|--------|------------------|-----------------------|
 | COP影響<br>COP Defect | シリコン結晶起因の局所欠陥が、HV領域でリークや絶縁破壊を誘発 | ウエハテストで**HVスクリーニング**実施 |
 | 熱ストレス<br>Thermal Stress | 厚膜酸化・ドレイン拡張が熱により劣化しやすい | **HTOL試験**、放熱レイアウト、SOA管理 |
 | 光感受性<br>Photo Sensitivity | 光による光起電流で誤動作・リークが発生 | **ALメタルガードリング**、遮光樹脂使用 |
-```
+
 ---
 
 ## 🛡️ 耐圧設計の実装技術｜Breakdown Voltage Enhancement Techniques
