@@ -43,9 +43,6 @@ This section covers optimization from the following viewpoints:
 
 ```mermaid
 flowchart LR
-    %% Overall title
-    %% CMP Dummy Fill concept: Before vs After
-
     subgraph B["CMP前｜Before: Density Mismatch"]
         WA["配線A<br>Interconnect A"]
         GAP["（空白）<br>Open area"]
@@ -55,7 +52,7 @@ flowchart LR
         B --> NoteB
     end
 
-    -->  | Dummy 挿入 | 
+    Mid["Dummy 挿入<br>Dummy Fill Inserted"]
 
     subgraph A["CMP後｜After: Dummy Fill Inserted"]
         WA2["配線A<br>Interconnect A"]
@@ -64,6 +61,8 @@ flowchart LR
         D2["Dummy Fill"]
         WA2 --- D1 --- WB2 --- D2
     end
+
+    B --> Mid --> A
 ```
 
 - **電気的には機能しないが、機械加工での均一性を確保**  
