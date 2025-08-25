@@ -57,15 +57,12 @@ flowchart TB
 Junction Isolationだけでは、寄生npnや光電流による誤動作を完全には防げません。  
 **そのため、レイアウト的な工夫として「P+ GNDガードリング」を外周に配置し、電位を固定・電流を逃がす**のが一般的です。
 
-```text
-【Junction Isolation + Guard Ring レイアウト概念】
-
-┌──────────────────────┐
-│  GND Guard Ring (P+)  │ ← 外周：寄生防止・GND引き落とし
-│  ┌────────────────┐  │
-│  │   Junction Isolated Cell  │ ← 内部：PN接合で構造絶縁
-│  └────────────────┘  │
-└──────────────────────┘
+```mermaid
+flowchart TB
+    subgraph Guard["GND Guard Ring (P+)｜外周：寄生防止・GND引き落とし"]
+        subgraph JIso["Junction Isolated Cell｜内部：PN接合で構造絶縁"]
+        end
+    end
 ```
 
 - **ラッチアップ・光感受性・熱ノイズへの多重対策**  
