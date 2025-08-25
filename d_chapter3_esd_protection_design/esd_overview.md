@@ -61,9 +61,14 @@ Such high-voltage pulses (hundreds to thousands of volts) can **damage delicate 
 
 ## 🔁 設計フローにおける位置づけ / Placement in the Design Flow
 
-```
-[外部I/O] → [ESD保護素子] → [ESD制限抵抗] → [本回路]
-[External I/O] → [ESD Protection Device] → [Current-limiting Resistor] → [Core Circuit]
+```mermaid
+flowchart LR
+    IO[外部I/O<br>External I/O]
+    ESD[ESD保護素子<br>ESD Protection Device]
+    Rlim[ESD制限抵抗<br>Current-limiting Resistor]
+    CORE[本回路<br>Core Circuit]
+
+    IO --> ESD --> Rlim --> CORE
 ```
 
 - **パッドセル内にESD素子を実装（例：GGNMOS、ダイオード等）**  
