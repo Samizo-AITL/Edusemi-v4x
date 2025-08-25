@@ -35,20 +35,26 @@ This section outlines the **mechanism of latch-up and layout-based prevention te
 
 ## 🔬 発生モデル：寄生SCR構造 | Parasitic SCR Model
 
-```
-    Anode(VDD)
-       │
-    P+ (N-Well)
-       │
-   N-Well
-       │
-    N+ (Base)
-       │
-    P-Well
-       │
-    P+ (Cathode: GND)
+```mermaid
+flowchart TB
+    VDD[Anode (VDD)]
+    Pp[P+ in N-Well]
+    NW[N-Well]
+    Nplus[N+ (Base)]
+    PW[P-Well]
+    Pc[P+ (Cathode)]
+    GND[(GND)]
 
-  このように、**P-N-P-N**構造が無意識に形成されるため、**物理的な隔離・電位制御が必要**です。
+    %% 縦方向の PNPN パス
+    VDD --> Pp --> NW --> Nplus --> PW --> Pc --> GND
+
+    %% 寄生 BJT の相互結合（点線）
+    Pp -. parasitic PNP .- PW
+    Nplus -. parasitic NPN .- NW
+
+    %% 補足ノード
+    Note["PNPN path ⇒ SCR conduction when triggered"]
+    Pc --- Note
 ```
 
 > 🔍 このSCR構造により、**外部トリガで自励振動的に電流が流れる**ため、  
