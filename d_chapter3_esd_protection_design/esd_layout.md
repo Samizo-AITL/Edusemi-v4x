@@ -26,9 +26,14 @@ Wide metal paths, short distances, and solid connections to ground are essential
 
 ## 🔀 基本ESDレイアウト構成 / Basic ESD Layout Structure
 
-```
-[I/Oパッド]──[ESD素子]──[制限抵抗]──[本回路]  
-[I/O Pad]──[ESD Device]──[Resistor]──[Core Circuit]
+```mermaid
+flowchart TB
+    IO["I/Oパッド<br>I/O Pad"]
+    ESD["ESD素子<br>ESD Device"]
+    R["制限抵抗<br>Resistor"]
+    CORE["本回路<br>Core Circuit"]
+
+    IO --> ESD --> R --> CORE
 ```
 
 - ✅ **順序：パッド → 保護素子 → 本回路**  
