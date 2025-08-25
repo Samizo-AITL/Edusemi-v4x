@@ -43,25 +43,29 @@ This section covers optimization from the following viewpoints:
 
 ```mermaid
 flowchart LR
+    %% Before: 密度差あり
     subgraph B["CMP前｜Before: Density Mismatch"]
         WA["配線A<br>Interconnect A"]
         GAP["（空白）<br>Open area"]
         WB["配線B<br>Interconnect B"]
-        NoteB["⚠️ 密度差 → Dishing/Erosion リスク"]
         WA --- GAP --- WB
-        B --> NoteB
     end
+    NoteB["⚠️ 密度差 → Dishing/Erosion リスク"]
 
-    Mid["Dummy 挿入<br>Dummy Fill Inserted"]
+    %% Dummy 挿入ノード
+    Mid["Dummy 挿入<br>Dummy Fill"]
 
+    %% After: Dummyあり
     subgraph A["CMP後｜After: Dummy Fill Inserted"]
         WA2["配線A<br>Interconnect A"]
-        D1["Dummy Fill<br>（非機能 / Non-functional）"]
+        D1["Dummy Fill"]
         WB2["配線B<br>Interconnect B"]
         D2["Dummy Fill"]
         WA2 --- D1 --- WB2 --- D2
     end
 
+    %% フロー接続
+    B --> NoteB
     B --> Mid --> A
 ```
 
