@@ -72,14 +72,15 @@ flowchart TB
   GND guard rings in multiple rings enhance robustness
 
 **Top View（例 / Example）**:
-```
-┌──────────────┐
-│  P+ GND Ring │ ← 接地 / GND
-│              │
-│  ESD Device  │ ← 内部素子 / ESD Core
-│              │
-│  N+ VDD Ring │ ← 保護電圧 / VDD
-└──────────────┘
+```mermaid
+flowchart TB
+    subgraph PGR["P+ GND Guard Ring (接地 / GND)"]
+        subgraph CORE["ESD Device (内部素子 / ESD Core)"]
+        end
+    end
+    NGR["N+ VDD Guard Ring (保護電圧 / VDD)"]
+
+    PGR --- NGR
 ```
 
 ---
