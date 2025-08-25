@@ -37,24 +37,22 @@ This section outlines the **mechanism of latch-up and layout-based prevention te
 
 ```mermaid
 flowchart TB
-    VDD[Anode (VDD)]
-    Pp[P+ in N-Well]
-    NW[N-Well]
-    Nplus[N+ (Base)]
-    PW[P-Well]
-    Pc[P+ (Cathode)]
-    GND[(GND)]
+    VDD["Anode (VDD) / P+ in N-Well"]
+    NW["N-Well"]
+    Nplus["N+ (Base)"]
+    PW["P-Well"]
+    Pc["P+ (Cathode) / GND"]
 
     %% 縦方向の PNPN パス
-    VDD --> Pp --> NW --> Nplus --> PW --> Pc --> GND
+    VDD --> NW --> Nplus --> PW --> Pc
 
     %% 寄生 BJT の相互結合（点線）
-    Pp -. parasitic PNP .- PW
+    NW -. parasitic PNP .- PW
     Nplus -. parasitic NPN .- NW
 
-    %% 補足ノード
-    Note["PNPN path ⇒ SCR conduction when triggered"]
-    Pc --- Note
+    %% 補足コメント
+    NoteSCR["⚠️ PNPN path ⇒ SCR conduction when triggered"]
+    Pc --- NoteSCR
 ```
 
 > 🔍 このSCR構造により、**外部トリガで自励振動的に電流が流れる**ため、  
