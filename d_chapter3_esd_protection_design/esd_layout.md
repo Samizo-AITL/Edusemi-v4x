@@ -74,11 +74,10 @@ flowchart TB
 **Top View（例 / Example）**:
 ```mermaid
 flowchart TB
-    subgraph PGR["P+ GND<br>Guard Ring<br>(接地 / GND)"]
-        CORE["ESD Device<br>(内部素子)<br>/ ESD Core"]
+    subgraph PGR["P+ GND Ring"]
+        CORE["ESD Core"]
     end
-
-    NGR["N+ VDD<br>Guard Ring<br>(保護電圧 / VDD)"]
+    NGR["N+ VDD Ring"]
 
     PGR --- NGR
 ```
