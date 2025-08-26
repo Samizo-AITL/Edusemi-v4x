@@ -75,7 +75,7 @@ N2G([G]):::term
 N2D([D]):::term
 N2S([S]):::term
 
-%% Connectivity PMOS (parallel)
+%% --- PMOS (parallel) ---
 A --> P1G --> P1
 VDD --> P1S --> P1
 P1 --> P1D --> Y
@@ -84,7 +84,7 @@ B --> P2G --> P2
 VDD --> P2S --> P2
 P2 --> P2D --> Y
 
-%% Connectivity NMOS (series)
+%% --- NMOS (series) ---
 A --> N1G --> N1
 N1 --> N1D --> Y
 N1S --> N1 --> N2D
