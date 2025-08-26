@@ -3,8 +3,6 @@ layout: default
 title: レイヤー整合とオーバーレイ設計原則
 ---
 
----
-
 # 🧩 レイヤー整合とオーバーレイ設計原則  
 **🧩 Layer Alignment and Overlay Design Principles**
 
@@ -47,7 +45,7 @@ This document focuses on **PLY / CNT / ALA / HL** layers, explaining their **phy
 
 ---
 
-### 設計ルールまとめ | Design Rule Summary
+### 設計ルールまとめ | Design Rule Summary (CNT)
 
 | 関係 | 指針 / Guideline |
 |------|------------------|
@@ -74,7 +72,15 @@ flowchart TD
     CNT --> Note1
     CNT --> Note2
     PLY --> Note3
+
+    %% --- スタイル ---
+    style Note1 fill:#f0e6ff,stroke:#333,stroke-width:1px
+    style Note2 fill:#f0e6ff,stroke:#333,stroke-width:1px
+    style Note3 fill:#e6f7ff,stroke:#333,stroke-width:1px
 ```
+
+---
+
 ### 設計ルールまとめ | Design Rule Summary (HL)
 
 | 関係 | 指針 / Guideline |
@@ -100,6 +106,11 @@ flowchart TD
     HL --> Note1
     HL --> Note2
     HL --> Note3
+
+    %% --- スタイル ---
+    style Note1 fill:#f0ffe6,stroke:#333,stroke-width:1px
+    style Note2 fill:#f0ffe6,stroke:#333,stroke-width:1px
+    style Note3 fill:#fff0e6,stroke:#333,stroke-width:1px
 ```
 
 ---
@@ -108,8 +119,8 @@ flowchart TD
 
 | 項目 / Item | 指針 / Guideline |
 |-------------|------------------|
-| **最小エンクロージャ**<br>Minimum Enclosure | CNT→PLYやCNT→ALAで**0.06μm以上**（PDK依存）<br>≥ 0.06μm enclosure for CNTs by PLY/ALA (depends on PDK) |
-| **Overlayマージン**<br>Overlay Margin | 各マスク誤差±0.04μm程度を許容。**中心合わせが基本**<br>Mask misalignment margin ±0.04μm; centering is standard |
+| **最小エンクロージャ**<br>Minimum Enclosure | CNT→PLYやCNT→ALAで**0.06μm以上**（PDK依存）<br>≥ 0.06µm enclosure for CNTs by PLY/ALA (depends on PDK) |
+| **Overlayマージン**<br>Overlay Margin | 各マスク誤差±0.04µm程度を許容。**中心合わせが基本**<br>Mask misalignment margin ±0.04µm; centering is standard |
 | **中心配置原則**<br>Centering Rule | Contact/Viaは上下層の**中心に配置**してマージン確保<br>Place contacts/vias at center of top/bottom layers |
 | **密度・CMP考慮**<br>Density / CMP | Dummy Fillとの干渉防止、**Spacingルールとの整合が重要**<br>Ensure compatibility with dummy fills and spacing rules |
 
