@@ -10,6 +10,14 @@ title: 特別編 第1章　先端ノード技術（FinFET、GAA、CFET）
 
 ---
 
+## 🔗 公式リンク / *Official Links*
+
+| 言語 / Language | GitHub Pages 🌐 | GitHub 💻 |
+|-----------------|----------------|-----------|
+| 🇯🇵 日本語 / *Japanese* | [![GitHub Pages JP](https://img.shields.io/badge/GitHub%20Pages-日本語版-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/f_chapter1_finfet_gaa/) | [![GitHub Repo JP](https://img.shields.io/badge/GitHub-日本語版-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/f_chapter1_finfet_gaa) |
+
+---
+
 ## 🔰 概要 / Overview
 
 **本章では、FinFET・GAA（Gate-All-Around）・CFET（Complementary FET）に代表される微細化対応の新トランジスタ構造について、物理特性・電気特性・設計影響の観点から体系的に解説します。**  
