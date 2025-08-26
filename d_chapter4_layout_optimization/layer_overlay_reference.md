@@ -137,6 +137,26 @@ flowchart TD
 
 ---
 
+## 📏 補足：Overlapの数理的表現  
+**📏 Supplement: Mathematical Representation of Overlap**
+
+オーバーレイ（Overlay）はPDKで直接扱われるが、  
+オーバーラップ（Overlap）は幾何学的な包含関係として数理的に表現できる。  
+
+例えば、**CNT (Contact)** が F, PLY, ALA の三層に収まる条件を  
+ベクトル的にモデル化すると次のようになる：
+
+$$
+CNT = \sqrt{x^2 + y^2 + z^2}, \quad x=F, \; y=PLY, \; z=ALA
+$$
+
+ここで $x, y, z$ は各基準層（Active, Poly, Metal1）への寄与を表す。  
+CNT の成立はこれらの**合成距離**として理解できる。  
+
+> 💡 *This formula is a conceptual model: CNT exists as a vector sum of its enclosures in F, PLY, and ALA.*
+
+---
+
 ## 🎯 教材的意義 | Educational Perspective
 
 - DRCチェックだけでなく、**物理的重なりの設計意図**を理解する  
