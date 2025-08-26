@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 応用編 第6章　PDKとEDA環境
+title: 応用編 第6章　PDKとEDA環境 
 ---
 
 ---
