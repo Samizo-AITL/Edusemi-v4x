@@ -47,21 +47,13 @@ This document focuses on **PLY / CNT / ALA / HL** layers, explaining their **phy
 
 ---
 
-```mermaid
-flowchart TD
-    subgraph ALA [Metal1 ALA]
-        subgraph PLY [Polysilicon PLY]
-            subgraph F [Active F]
-                CNT[Contact CNT]
-            end
-        end
-    end
+### 設計ルールまとめ | Design Rule Summary
 
-    %% ルール注記を斜めに逃がす
-    CNT -. "Enclose ≥0.06µm" .-> PLY
-    CNT -. "Enclose ≥0.06µm" .-> ALA
-    PLY -. "Overlay ≥0.0µm" .-> F
-```
+| 関係 | 指針 / Guideline |
+|------|------------------|
+| CNT → PLY | Enclose ≥ 0.06µm |
+| CNT → ALA | Enclose ≥ 0.06µm |
+| PLY → F   | Overlay ≥ 0.0µm |
 
 ```mermaid
 flowchart TD
@@ -73,13 +65,15 @@ flowchart TD
         end
     end
 
-    %% 注記ノード
+    %% --- 注記ノード ---
     Note1[[Enclose ≥0.06µm]]
     Note2[[Overlay ≥0.0µm]]
 
+    %% --- 矢印で関連付け ---
     CNT --> Note1
     PLY --> Note2
 ```
+
 
 
 ---
