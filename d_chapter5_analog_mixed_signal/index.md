@@ -10,6 +10,14 @@ title: 応用編 第5章　アナログ／ミックスドシグナル
 
 ---
 
+## 🔗 公式リンク / *Official Links*
+
+| 言語 / Language | GitHub Pages 🌐 | GitHub 💻 |
+|-----------------|----------------|-----------|
+| 🇯🇵 日本語 / *Japanese* | [![GitHub Pages JP](https://img.shields.io/badge/GitHub%20Pages-日本語版-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/d_chapter5_analog_mixed_signal/) | [![GitHub Repo JP](https://img.shields.io/badge/GitHub-日本語版-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/d_chapter5_analog_mixed_signal) |
+
+---
+
 ## 📘 概要｜Overview
 
 **アナログ／ミックスドシグナル（AMS）設計**は、デジタルとアナログが混在するSoCやセンサ応用において不可欠な技術領域です。  
