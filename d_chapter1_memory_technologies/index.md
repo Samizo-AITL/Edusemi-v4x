@@ -10,6 +10,14 @@ title: 応用編 第1章｜メモリ技術の構造と選定指針
 
 ---
 
+## 🔗 公式リンク / *Official Links*
+
+| 言語 / Language | GitHub Pages 🌐 | GitHub 💻 |
+|-----------------|----------------|-----------|
+| 🇯🇵 日本語 / *Japanese* | [![GitHub Pages JP](https://img.shields.io/badge/GitHub%20Pages-日本語版-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/d_chapter1_memory_technologies/) | [![GitHub Repo JP](https://img.shields.io/badge/GitHub-日本語版-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/d_chapter1_memory_technologieschapter) |
+
+---
+
 ## 🎯 章のねらい｜Chapter Objectives
 
 | 🇯🇵 日本語                                                                                                      | 🇺🇸 English                                                                                                   |
