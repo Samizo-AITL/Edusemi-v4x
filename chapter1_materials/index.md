@@ -105,11 +105,11 @@ Edusemi-v4x/
 | **✉️ Email** | [![Email](https://img.shields.io/badge/Email-shin3t72%40gmail.com-red?style=for-the-badge&logo=gmail)](mailto:shin3t72@gmail.com) |
 | **🐦　X** | [![X](https://img.shields.io/badge/X-@shin3t72-black?style=for-the-badge&logo=x)](https://x.com/shin3t72) |
 | **💻 GitHub** | [![GitHub](https://img.shields.io/badge/GitHub-Samizo--AITL-blue?style=for-the-badge&logo=github)](https://github.com/Samizo-AITL) |
-| **ライセンス / License** | **Hybrid License**<br>コード / Code: [MIT](https://opensource.org/licenses/MIT)<br>教材テキスト / Text: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)<br>図表 / Figures: [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) |
+| **📜 ライセンス / License** | [![MIT](https://img.shields.io/badge/Code-MIT-green?style=for-the-badge)](https://opensource.org/licenses/MIT) [![CC BY 4.0](https://img.shields.io/badge/Text-CC--BY--4.0-lightgrey?style=for-the-badge)](https://creativecommons.org/licenses/by/4.0/) [![CC BY-NC 4.0](https://img.shields.io/badge/Figures-CC--BY--NC--4.0-yellow?style=for-the-badge)](https://creativecommons.org/licenses/by-nc/4.0/) |
 
 ---
 
 ## 🔙 戻る｜Back to Top
-🏠 [Edusemi-v4x Top](../README.md)  
-[![Site](https://img.shields.io/badge/Site-brightgreen)](../README.md)
-[![Repo](https://img.shields.io/badge/Repo-blue)](https://github.com/Samizo-AITL/Edusemi-v4x)
+
+[![Site](https://img.shields.io/badge/Edusemi--v4x%20Site-brightgreen?style=for-the-badge&logo=githubpages)](../README.md)  
+[![Repo](https://img.shields.io/badge/Edusemi--v4x%20Repo-blue?style=for-the-badge&logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x)
