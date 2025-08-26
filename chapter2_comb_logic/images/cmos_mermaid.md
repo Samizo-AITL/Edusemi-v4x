@@ -38,7 +38,7 @@ GND --> NS --> N
 ```
 
 ```mermaid
-flowchart TB
+flowchart LR
 classDef pmos fill:#fff3f8,stroke:#c2185b,stroke-width:2px;
 classDef nmos fill:#eef5ff,stroke:#1565c0,stroke-width:2px;
 classDef rail fill:#eeeeee,stroke:#888,stroke-dasharray:3 2;
