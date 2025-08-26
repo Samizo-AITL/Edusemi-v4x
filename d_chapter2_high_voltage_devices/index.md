@@ -88,7 +88,7 @@ title: 応用編  第2章　高耐圧デバイス
 
 - [`junction_isolation.md`](./junction_isolation.md)  
   **寄生素子を防ぐ絶縁設計**  
-  *Isolation to prevent parasitic transistors*
+  *Isolation to prevent parasitic transistors* 
 
 - [`layout_rules.md`](./layout_rules.md)  
   **CMPとガードリングの最適設計指針**  
