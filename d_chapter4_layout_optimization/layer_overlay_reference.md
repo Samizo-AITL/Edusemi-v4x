@@ -57,23 +57,28 @@ flowchart TD
         end
     end
 
-    %% ルール注記（矢印にラベルを入れる）
-    CNT -- "Enclose ≥0.06µm" --> PLY
-    CNT -- "Enclose ≥0.06µm" --> ALA
-    PLY -- "Overlay ≥0.0µm" --> F
+    %% ルール注記を斜めに逃がす
+    CNT -. "Enclose ≥0.06µm" .-> PLY
+    CNT -. "Enclose ≥0.06µm" .-> ALA
+    PLY -. "Overlay ≥0.0µm" .-> F
 ```
 
 ```mermaid
 flowchart TD
-    subgraph ALB [Metal2 ALB]
-        subgraph ALA [Metal1 ALA]
-            HL[Via1 HL]
+    subgraph ALA [Metal1 ALA]
+        subgraph PLY [Polysilicon PLY]
+            subgraph F [Active F]
+                CNT[Contact CNT]
+            end
         end
     end
 
-    %% Via のルール
-    HL -- "Enclose ≥0.06µm" --> ALA
-    HL -- "Enclose ≥0.06µm" --> ALB
+    %% 注記ノード
+    Note1[[Enclose ≥0.06µm]]
+    Note2[[Overlay ≥0.0µm]]
+
+    CNT --> Note1
+    PLY --> Note2
 ```
 
 
