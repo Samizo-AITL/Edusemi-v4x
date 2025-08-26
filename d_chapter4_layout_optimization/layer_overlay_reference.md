@@ -47,6 +47,34 @@ This document focuses on **PLY / CNT / ALA / HL** layers, explaining their **phy
 
 ---
 
+```mermaid
+flowchart TD
+    subgraph Layers
+        F[Active (F)]
+        PLY[Polysilicon (PLY)]
+        CNT[Contact (CNT)]
+        ALA[Metal1 (ALA)]
+        ALB[Metal2 (ALB)]
+        HL[Via1 (HL)]
+    end
+
+    %% Gate formation
+    PLY -->|overlaps| F
+
+    %% Contact enclosure
+    CNT -->|inside| PLY
+    CNT -->|inside| ALA
+
+    %% Metal1 enclosure
+    ALA -->|encloses| CNT
+
+    %% Via1 enclosure
+    HL -->|inside both| ALA
+    HL -->|inside both| ALB
+```
+
+---
+
 ## 🛠️ 設計ルールのポイント | Design Rule Highlights
 
 | 項目 / Item | 指針 / Guideline |
