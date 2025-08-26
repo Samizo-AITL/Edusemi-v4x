@@ -1,4 +1,4 @@
-
+```mermaid
 flowchart TB
 %% ===== Styles =====
 classDef pmos fill:#fff3f8,stroke:#c2185b,stroke-width:2px;
@@ -21,8 +21,9 @@ VDD --- P --- Y
 Y   --- N --- GND
 A --|G| P
 A --|G| N
+```
 
-
+```mermaid
 flowchart TB
 classDef pmos fill:#fff3f8,stroke:#c2185b,stroke-width:2px;
 classDef nmos fill:#eef5ff,stroke:#1565c0,stroke-width:2px;
@@ -53,8 +54,10 @@ A --|G| P1
 B --|G| P2
 A --|G| N1
 B --|G| N2
+```
 
 
+```mermaid
 flowchart TB
 classDef pmos fill:#fff3f8,stroke:#c2185b,stroke-width:2px;
 classDef nmos fill:#eef5ff,stroke:#1565c0,stroke-width:2px;
@@ -86,9 +89,9 @@ VDD --- P3 --- Y
 Y   --- N3 --- GND
 YN --|G| P3
 YN --|G| N3
+```
 
-
-
+```mermaid
 flowchart TB
 classDef pmos fill:#fff3f8,stroke:#c2185b,stroke-width:2px;
 classDef nmos fill:#eef5ff,stroke:#1565c0,stroke-width:2px;
@@ -113,7 +116,7 @@ Y   --- N2 --- GND
 
 A --|G| P1;  B --|G| P2
 A --|G| N1;  B --|G| N2
-
+```
 
 
 
