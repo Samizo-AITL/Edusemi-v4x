@@ -56,7 +56,26 @@ flowchart TD
             end
         end
     end
+
+    %% ルール注記
+    CNT -. Enclose ≥0.06µm -.-> PLY
+    CNT -. Enclose ≥0.06µm -.-> ALA
+    PLY -. Overlay ≥0.0µm -.-> F
 ```
+
+```mermaid
+flowchart TD
+    subgraph ALB [Metal2 ALB]
+        subgraph ALA [Metal1 ALA]
+            HL[Via1 HL]
+        end
+    end
+
+    %% Via のルール
+    HL -. Enclose ≥0.06µm -.-> ALA
+    HL -. Enclose ≥0.06µm -.-> ALB
+```
+
 
 ---
 
