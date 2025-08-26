@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="360" viewBox="0 0 900 360" font-family="sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 Z" fill="#333"/>
+    </marker>
+    <style>
+      .blk{fill:#f6f4ff;stroke:#8894c7;stroke-width:2}
+      .zone{fill:#fff9d6;stroke:#d4c46b;stroke-width:2}
+      .pwr{fill:#ffe0e0;stroke:#a33;stroke-width:2}
+      .gnd{fill:#e0e9ff;stroke:#336;stroke-width:2}
+      .wire{stroke:#333;stroke-width:2;fill:none;marker-end:url(#arrow)}
+      .label{font-size:14px; fill:#333}
+      .title{font-size:16px; font-weight:bold; fill:#333}
+    </style>
+  </defs>
+
+  <!-- Titles -->
+  <text x="20" y="24" class="title">2入力 ANDゲート（CMOS：NAND + Inverter） / 2-Input AND (CMOS)</text>
+
+  <!-- Power rails -->
+  <rect x="40" y="60" width="80" height="30" rx="6" class="pwr"/>
+  <text x="80" y="80" text-anchor="middle" class="label">VDD</text>
+  <rect x="760" y="280" width="80" height="30" rx="6" class="gnd"/>
+  <text x="800" y="300" text-anchor="middle" class="label">GND</text>
+
+  <!-- Inputs -->
+  <rect x="40" y="140" width="80" height="30" rx="6" class="blk"/>
+  <text x="80" y="160" text-anchor="middle" class="label">A 入力</text>
+  <rect x="40" y="200" width="80" height="30" rx="6" class="blk"/>
+  <text x="80" y="220" text-anchor="middle" class="label">B 入力</text>
+
+  <!-- NAND zone -->
+  <rect x="160" y="90" width="320" height="200" rx="8" class="zone"/>
+  <text x="320" y="110" text-anchor="middle" class="label">NAND ステージ（PMOS 並列 / NMOS 直列）</text>
+
+  <!-- PMOS parallel block -->
+  <rect x="200" y="130" width="90" height="40" rx="6" class="blk"/>
+  <text x="245" y="155" text-anchor="middle" class="label">PMOS_A</text>
+  <rect x="310" y="130" width="90" height="40" rx="6" class="blk"/>
+  <text x="355" y="155" text-anchor="middle" class="label">PMOS_B</text>
+
+  <!-- NMOS series block -->
+  <rect x="245" y="210" width="90" height="40" rx="6" class="blk"/>
+  <text x="290" y="235" text-anchor="middle" class="label">NMOS_A</text>
+  <rect x="355" y="210" width="90" height="40" rx="6" class="blk"/>
+  <text x="400" y="235" text-anchor="middle" class="label">NMOS_B</text>
+
+  <!-- NAND OUT node -->
+  <rect x="500" y="170" width="80" height="30" rx="6" class="blk"/>
+  <text x="540" y="190" text-anchor="middle" class="label">NAND_OUT</text>
+
+  <!-- Inverter zone -->
+  <rect x="600" y="120" width="220" height="160" rx="8" class="zone"/>
+  <text x="710" y="140" text-anchor="middle" class="label">インバータ（NOT）</text>
+
+  <!-- Inverter devices -->
+  <rect x="640" y="160" width="90" height="36" rx="6" class="blk"/>
+  <text x="685" y="182" text-anchor="middle" class="label">PMOS_INV</text>
+  <rect x="640" y="210" width="90" height="36" rx="6" class="blk"/>
+  <text x="685" y="232" text-anchor="middle" class="label">NMOS_INV</text>
+
+  <!-- Final output -->
+  <rect x="820" y="170" width="60" height="30" rx="6" class="blk"/>
+  <text x="850" y="190" text-anchor="middle" class="label">Y</text>
+
+  <!-- Wires: inputs to NAND -->
+  <path class="wire" d="M120,155 C150,155 170,155 200,150"/>
+  <path class="wire" d="M120,215 C150,215 290,215 310,150"/>
+
+  <!-- VDD to PMOS (parallel) -->
+  <path class="wire" d="M120,75 C160,75 200,75 200,130"/>
+  <path class="wire" d="M120,75 C200,75 355,75 355,130"/>
+
+  <!-- PMOS to NAND_OUT (both to node inside zone) -->
+  <path class="wire" d="M290,150 C360,150 500,150 500,185"/>
+  <path class="wire" d="M400,150 C460,150 500,150 500,185"/>
+
+  <!-- NAND_OUT to NMOS_A (start of series) -->
+  <path class="wire" d="M500,185 C470,185 460,185 400,210"/>
+
+  <!-- NMOS series to GND -->
+  <path class="wire" d="M445,230 C520,230 780,230 780,295"/>
+
+  <!-- A/B to NMOS gates -->
+  <path class="wire" d="M120,155 C180,155 245,155 245,210"/>
+  <path class="wire" d="M120,215 C200,215 355,215 355,210"/>
+
+  <!-- NAND_OUT to Inverter gates -->
+  <path class="wire" d="M580,185 C610,185 640,185 640,178"/>
+  <path class="wire" d="M580,185 C610,185 640,185 640,228"/>
+
+  <!-- VDD to PMOS_INV -->
+  <path class="wire" d="M120,75 C220,75 640,75 640,160"/>
+
+  <!-- NMOS_INV to GND -->
+  <path class="wire" d="M730,228 C760,228 800,228 800,295"/>
+
+  <!-- Inverter to output Y -->
+  <path class="wire" d="M730,178 C770,178 820,178 820,185"/>
+
+  <!-- Notes -->
+  <text x="42" y="335" class="label">・AND = NAND 出力を NOT で反転 / AND = Invert NAND output</text>
+  <text x="42" y="318" class="label">・2入力 AND のMOS数 = 6（PMOS×3, NMOS×3）</text>
+</svg>
