@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: default 
 title: 応用編 第8章 FSM設計（有限状態機械）
 ---
 
