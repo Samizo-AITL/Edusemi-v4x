@@ -66,12 +66,14 @@ flowchart TD
     end
 
     %% --- 注記ノード ---
-    Note1[[Enclose ≥0.06µm]]
-    Note2[[Overlay ≥0.0µm]]
+    Note1[[CNT → PLY<br/>Enclose ≥0.06µm]]
+    Note2[[CNT → ALA<br/>Enclose ≥0.06µm]]
+    Note3[[PLY → F<br/>Overlay ≥0.0µm]]
 
-    %% --- 矢印で関連付け ---
+    %% --- 関連付け ---
     CNT --> Note1
-    PLY --> Note2
+    CNT --> Note2
+    PLY --> Note3
 ```
 ### 設計ルールまとめ | Design Rule Summary (HL)
 
@@ -83,7 +85,6 @@ flowchart TD
 
 ```mermaid
 flowchart TD
-    %% 入れ子構造
     subgraph ALB [Metal2 ALB]
         subgraph ALA [Metal1 ALA]
             HL[Via1 HL]
@@ -91,9 +92,9 @@ flowchart TD
     end
 
     %% --- 注記ノード ---
-    Note1[[Enclose ≥0.06µm]]
-    Note2[[Enclose ≥0.06µm]]
-    Note3[[Centering recommended]]
+    Note1[[HL → ALA<br/>Enclose ≥0.06µm]]
+    Note2[[HL → ALB<br/>Enclose ≥0.06µm]]
+    Note3[[HL 配置<br/>Centering recommended]]
 
     %% --- 関連付け ---
     HL --> Note1
