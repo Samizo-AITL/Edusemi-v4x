@@ -110,5 +110,7 @@ Edusemi-v4x/
 ---
 
 ## 🔙 戻る｜Back to Top
-**🏠 [Edusemi-v4x トップへ戻る｜Back to Edusemi-v4x Top](../README.md)**
+**🏠 [Edusemi-v4x トップへ戻る｜Back to Edusemi-v4x Top](../README.md)**  
 
+[![View Site](https://img.shields.io/badge/View%20Site-brightgreen)](../README.md)  
+[![View Repo](https://img.shields.io/badge/View%20Repo-blue)](https://github.com/Samizo-AITL/Edusemi-v4x)
