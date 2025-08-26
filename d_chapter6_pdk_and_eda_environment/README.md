@@ -10,6 +10,14 @@ title: 応用編 第6章　PDKとEDA環境
 
 ---
 
+## 🔗 公式リンク / *Official Links*
+
+| 言語 / Language | GitHub Pages 🌐 | GitHub 💻 |
+|-----------------|----------------|-----------|
+| 🇯🇵 日本語 / *Japanese* | [![GitHub Pages JP](https://img.shields.io/badge/GitHub%20Pages-日本語版-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/d_chapter6_pdk_and_eda_environment/) | [![GitHub Repo JP](https://img.shields.io/badge/GitHub-日本語版-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/d_chapter6_pdk_and_eda_environment) |
+
+---
+
 ## 📘 概要｜Overview
 
 **PDK（Process Design Kit）** は、特定の半導体プロセスに最適化された **設計ルール・SPICEモデル・レイアウト情報・EDA統合ファイルの集合体** です。  
