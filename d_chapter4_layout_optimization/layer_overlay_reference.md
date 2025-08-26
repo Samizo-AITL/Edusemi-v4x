@@ -50,12 +50,12 @@ This document focuses on **PLY / CNT / ALA / HL** layers, explaining their **phy
 ```mermaid
 flowchart TD
     subgraph Layers
-        F[Active (F)]
-        PLY[Polysilicon (PLY)]
-        CNT[Contact (CNT)]
-        ALA[Metal1 (ALA)]
-        ALB[Metal2 (ALB)]
-        HL[Via1 (HL)]
+        F[Active F]
+        PLY[Polysilicon PLY]
+        CNT[Contact CNT]
+        ALA[Metal1 ALA]
+        ALB[Metal2 ALB]
+        HL[Via1 HL]
     end
 
     %% Gate formation
