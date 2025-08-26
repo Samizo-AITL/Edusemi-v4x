@@ -73,8 +73,33 @@ flowchart TD
     CNT --> Note1
     PLY --> Note2
 ```
+### 設計ルールまとめ | Design Rule Summary (HL)
 
+| 関係 | 指針 / Guideline |
+|------|------------------|
+| HL → ALA | Enclose ≥ 0.06µm |
+| HL → ALB | Enclose ≥ 0.06µm |
+| HL（配置） | Centering recommended（上下メタルの中心合わせ） |
 
+```mermaid
+flowchart TD
+    %% 入れ子構造
+    subgraph ALB [Metal2 ALB]
+        subgraph ALA [Metal1 ALA]
+            HL[Via1 HL]
+        end
+    end
+
+    %% --- 注記ノード ---
+    Note1[[Enclose ≥0.06µm]]
+    Note2[[Enclose ≥0.06µm]]
+    Note3[[Centering recommended]]
+
+    %% --- 関連付け ---
+    HL --> Note1
+    HL --> Note2
+    HL --> Note3
+```
 
 ---
 
