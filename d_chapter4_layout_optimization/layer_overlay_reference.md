@@ -57,10 +57,10 @@ flowchart TD
         end
     end
 
-    %% ルール注記
-    CNT -. Enclose ≥0.06µm -.-> PLY
-    CNT -. Enclose ≥0.06µm -.-> ALA
-    PLY -. Overlay ≥0.0µm -.-> F
+    %% ルール注記（矢印にラベルを入れる）
+    CNT -- "Enclose ≥0.06µm" --> PLY
+    CNT -- "Enclose ≥0.06µm" --> ALA
+    PLY -- "Overlay ≥0.0µm" --> F
 ```
 
 ```mermaid
@@ -72,8 +72,8 @@ flowchart TD
     end
 
     %% Via のルール
-    HL -. Enclose ≥0.06µm -.-> ALA
-    HL -. Enclose ≥0.06µm -.-> ALB
+    HL -- "Enclose ≥0.06µm" --> ALA
+    HL -- "Enclose ≥0.06µm" --> ALB
 ```
 
 
