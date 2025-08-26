@@ -49,10 +49,10 @@ This document focuses on **PLY / CNT / ALA / HL** layers, explaining their **phy
 
 ```mermaid
 flowchart TD
-    subgraph ALA [Metal1 (ALA)]
-        subgraph PLY [Polysilicon (PLY)]
-            subgraph F [Active (F)]
-                CNT[Contact (CNT)]
+    subgraph ALA [Metal1 ALA]
+        subgraph PLY [Polysilicon PLY]
+            subgraph F [Active F]
+                CNT[Contact CNT]
             end
         end
     end
