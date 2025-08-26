@@ -10,6 +10,14 @@ title: 特別編 第4章：FSM×PID×LLM制御系のOpenLaneによるRTL-to-GDSI
 
 ---
 
+## 🔗 公式リンク / *Official Links*
+
+| 言語 / Language | GitHub Pages 🌐 | GitHub 💻 |
+|-----------------|----------------|-----------|
+| 🇯🇵 日本語 / *Japanese* | [![GitHub Pages JP](https://img.shields.io/badge/GitHub%20Pages-日本語版-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/f_chapter4_openlane/) | [![GitHub Repo JP](https://img.shields.io/badge/GitHub-日本語版-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/f_chapter4_openlane) |
+
+---
+
 本章では、FSM・PID・統合SoCモジュールを対象に、Sky130 PDKを用いた  
 **OpenLaneによる配置配線フロー（RTL-to-GDSII）**を学習します。  
 This chapter focuses on implementing **place-and-route (RTL-to-GDSII)** using OpenLane and Sky130 PDK for FSM, PID, and integrated SoC modules.
