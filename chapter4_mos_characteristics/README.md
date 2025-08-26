@@ -10,6 +10,14 @@ title: 基礎編　第4章｜MOSトランジスタ特性と設計基盤　　
 
 ---
 
+## 🔗 公式リンク / *Official Links*
+
+| 言語 / Language | GitHub Pages 🌐 | GitHub 💻 |
+|-----------------|----------------|-----------|
+| 🇯🇵 日本語 / *Japanese* | [![GitHub Pages JP](https://img.shields.io/badge/GitHub%20Pages-日本語版-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/chapter4_mos_characteristics/) | [![GitHub Repo JP](https://img.shields.io/badge/GitHub-日本語版-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/chapter4_mos_characteristics) |
+
+---
+
 ## 🔄 前章との接続｜Connection to Previous Chapter
 
 | 日本語 – Japanese                                                                                  | English – English                                                                                  |
