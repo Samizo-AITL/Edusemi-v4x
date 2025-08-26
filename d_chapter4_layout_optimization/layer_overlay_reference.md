@@ -73,6 +73,23 @@ flowchart TD
     HL -->|inside both| ALB
 ```
 
+```mermaid
+flowchart TD
+    CNT[Contact CNT]
+    F[Active F]
+    PLY[Polysilicon PLY]
+    ALA[Metal1 ALA]
+
+    %% CNT が Active 内
+    CNT -->|inside| F
+
+    %% CNT が Poly 内
+    CNT -->|inside| PLY
+
+    %% CNT が Metal1 内
+    CNT -->|inside| ALA
+```
+
 ---
 
 ## 🛠️ 設計ルールのポイント | Design Rule Highlights
