@@ -1,0 +1,85 @@
+
+\documentclass[journal]{IEEEtran}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{siunitx}
+\usepackage{hyperref}
+\usepackage{cite}
+
+\graphicspath{{./}}
+
+\title{A Comparative Review of DRAM and FeRAM: The Boundary between Volatile and Non-Volatile Memory and Future Perspectives}
+
+\author{Shinichi~Samizo%
+\thanks{S. Samizo is with Project Design Hub (Samizo-AITL), Japan. E-mail: \texttt{samizo-aitl@example.org}.}
+}
+
+\markboth{Draft for IEEE-style submission}{Samizo: DRAM vs FeRAM Comparative Review}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Dynamic Random-Access Memory (DRAM) has served as the workhorse of volatile memory technology for decades, while Ferroelectric Random-Access Memory (FeRAM), particularly HfO$_2$-based devices, has emerged as a promising non-volatile alternative. This review provides a comparative analysis of DRAM and FeRAM in terms of scaling trends, device reliability, and system-level implications. Key metrics such as access speed, retention time, endurance, and energy per bit are summarized in Table~\ref{tab:comparison}, while Figs.~\ref{fig:svr} and \ref{fig:evs} illustrate the trade-offs between speed, retention, and energy efficiency. Finally, we highlight hybrid perspectives where DRAM and FeRAM may co-exist in future memory hierarchies, and discuss challenges for bridging the volatile--non-volatile boundary.
+\end{abstract}
+
+\begin{IEEEkeywords}
+DRAM, FeRAM, FeFET, HfO$_2$, reliability, retention, endurance, scaling, memory hierarchy, review.
+\end{IEEEkeywords}
+
+\section{Introduction}
+% Brief motivation and scope
+\input{sections/intro.tex}
+
+\section{DRAM Technology and Scaling}
+\input{sections/dram.tex}
+
+\section{FeRAM Technology and Advances}
+\input{sections/feram.tex}
+
+\section{Comparative Analysis: DRAM vs FeRAM}
+\label{sec:comparison}
+Table~\ref{tab:comparison} summarizes representative metrics collected from the literature (speed, retention, endurance, energy/bit, and cell footprint). Fig.~\ref{fig:svr} shows the speed--retention map; Fig.~\ref{fig:evs} shows the write energy--speed map.
+
+\begin{table}[!t]
+\caption{Representative metrics for DRAM and FeRAM (literature values).}
+\label{tab:comparison}
+\centering
+\begin{tabular}{@{}lcccccc@{}}
+\toprule
+\textbf{Tech.} & \textbf{Speed} & \textbf{Retention} & \textbf{Endurance} & \textbf{Energy/bit} & \textbf{Cell} \\
+ & (ns) & (s) & (cycles) & (fJ) & area \\
+\midrule
+DRAM  & $\sim$10 & $\sim$6.4e$-2$ & $\ge 10^{16}$ & 10--100 & 6$F^2$ \\
+FeRAM & $\lesssim$10 & $\ge 10^{5}$ & $10^{12}$--$10^{13}$ & $10^{2}$--$10^{3}$ & 1T (FeFET) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\linewidth]{fig1_speed_vs_retention.png}
+\caption{Speed vs retention time map (log--log) for DRAM and FeRAM.}
+\label{fig:svr}
+\end{figure}
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\linewidth]{fig2_energy_vs_speed.png}
+\caption{Write energy per bit vs write speed (log--log) for DRAM and FeRAM.}
+\label{fig:evs}
+\end{figure}
+
+\section{Hybrid Perspectives and Future Memory Hierarchies}
+\input{sections/hybrid.tex}
+
+\section{Conclusion and Outlook}
+\input{sections/conclusion.tex}
+
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+
+\end{document}
