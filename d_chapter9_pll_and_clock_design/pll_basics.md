@@ -31,16 +31,6 @@ In this section, we explain the **basic structure of PLL**, the **role of each b
 | `VCO` | Voltage Controlled Oscillator | 電圧に応じて周波数変化 |
 | `Divider` | Frequency Divider    | VCO出力の分周（÷N） |
 
-```
-    +------+     +------+     +------+     +------+     +--------+
-    | Ref  | --> |  PFD | --> |  CP  | --> | LPF  | --> |  VCO   |
-    | Clock|     +------+     +------+     +------+     +---+----+
-     ↑                                                  |
-     |                                                  ↓
-    +--------------------------------------------------+
-    |                   Divider (÷N)                   |
-    +--------------------------------------------------+
-```
 ```mermaid
 flowchart TB
   %% ===== Nodes =====
