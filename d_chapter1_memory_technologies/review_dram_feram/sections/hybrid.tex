@@ -1,4 +1,4 @@
-% sections/hybrid.tex  (ASCII-only, safe for IEEEtran)
+% sections/hybrid.tex (修正版)
 
 Hybrid memory hierarchies aim to combine the high speed of DRAM with the non-volatility of FeRAM (including FeFET variants). By placing FeRAM close to DRAM or the memory controller, systems can reduce refresh energy, enable instant-on functionality, and support fast checkpointing and recovery.
 
@@ -30,7 +30,6 @@ Figure~\ref{fig:hybrid_hierarchy} sketches a conceptual arrangement: CPU registe
 \centering
 \begin{tikzpicture}[font=\footnotesize]
 
-% Blocks (monochrome to avoid xcolor name differences)
 \draw[fill=gray!15, rounded corners] (-2.3,3.0) rectangle (2.3,3.8);
 \node at (0,3.4) {CPU Registers / Cache};
 
@@ -43,14 +42,13 @@ Figure~\ref{fig:hybrid_hierarchy} sketches a conceptual arrangement: CPU registe
 \draw[fill=gray!10, rounded corners] (-2.3,-0.6) rectangle (2.3,0.2);
 \node at (0,-0.2) {SSD / HDD\\(Block storage)};
 
-% Arrows
 \draw[->] (0,3.0) -- (0,2.6);
 \draw[->] (0,1.8) -- (0,1.4);
 \draw[->] (0,0.6) -- (0,0.2);
 
-% Notes
 \node[align=left] at (4.2,2.2) {Refresh reduction\\Checkpoint/Recovery};
 \node[align=left] at (4.2,1.0) {Persistent buffers\\Wear mgmt.};
+
 \draw[->] (2.3,2.2) -- (3.4,2.2);
 \draw[->] (2.3,1.0) -- (3.4,1.0);
 
