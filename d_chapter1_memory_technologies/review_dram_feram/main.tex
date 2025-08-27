@@ -1,4 +1,3 @@
-
 \documentclass[journal]{IEEEtran}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
@@ -48,7 +47,7 @@ Table~\ref{tab:comparison} summarizes representative metrics collected from the 
 \caption{Representative metrics for DRAM and FeRAM (literature values).}
 \label{tab:comparison}
 \centering
-\begin{tabular}{@{}lcccccc@{}}
+\begin{tabular}{@{}lccccc@{}}   % ← 列数を修正
 \toprule
 \textbf{Tech.} & \textbf{Speed} & \textbf{Retention} & \textbf{Endurance} & \textbf{Energy/bit} & \textbf{Cell} \\
  & (ns) & (s) & (cycles) & (fJ) & area \\
@@ -79,6 +78,8 @@ FeRAM & $\lesssim$10 & $\ge 10^{5}$ & $10^{12}$--$10^{13}$ & $10^{2}$--$10^{3}$ 
 \section{Conclusion and Outlook}
 \input{sections/conclusion.tex}
 
+% --- 参考文献 ---
+\nocite{dummy2025}   % ← ダミー文献を強制出力
 \bibliographystyle{IEEEtran}
 \bibliography{references}
 
