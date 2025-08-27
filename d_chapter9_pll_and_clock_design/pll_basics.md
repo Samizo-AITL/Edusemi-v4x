@@ -41,6 +41,24 @@ In this section, we explain the **basic structure of PLL**, the **role of each b
     |                   Divider (÷N)                   |
     +--------------------------------------------------+
 ```
+```mermaid
+flowchart LR
+  %% ===== Nodes =====
+  Ref([Ref Clock<br/>基準クロック])
+  PFD([PFD<br/>Phase-Frequency Detector<br/>位相・周波数検出])
+  CP([CP<br/>Charge Pump<br/>電流出力])
+  LPF([LPF<br/>Loop Filter<br/>平滑・電圧変換])
+  VCO([VCO<br/>Voltage-Controlled Oscillator<br/>電圧制御発振器])
+  DIV([Divider ÷N<br/>分周器])
+
+  %% ===== Flow =====
+  Ref --> PFD --> CP --> LPF --> VCO
+  VCO -- f_out --> DIV -- feedback --> PFD
+
+  %% ===== Style =====
+  classDef blk fill:#f3f0ff,stroke:#6c4ccf,stroke-width:2px,rx:6;
+  class Ref,PFD,CP,LPF,VCO,DIV blk;
+```
 
 ---
 
