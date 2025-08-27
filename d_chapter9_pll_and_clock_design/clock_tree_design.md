@@ -39,6 +39,33 @@ The goal of CTS is to **minimize skew and latency**, ensuring proper setup/hold 
    │ FF1   │         │ FF2   │   ← 各フロップへ
    └───────┘         └───────┘
 ```
+```mermaid
+flowchart TB
+  %% ===== Top (PLL root) =====
+  ROOT([PLL Output<br/>クロック源])
+
+  %% ===== Level 1 Buffers =====
+  B1A([BUF]):::buf
+  B1B([BUF]):::buf
+
+  %% ===== Level 2 (Sinks: Flip-Flops) =====
+  FF1([FF1]):::ff
+  FF2([FF2]):::ff
+  FF3([FF3]):::ff
+  FF4([FF4]):::ff
+
+  %% ===== Edges =====
+  ROOT --> B1A --> FF1
+  B1A --> FF2
+  ROOT --> B1B --> FF3
+  B1B --> FF4
+
+  %% ===== Notes =====
+  linkStyle default stroke-width:2px
+  classDef buf fill:#eef5ff,stroke:#6b6bff,rx:6,ry:6
+  classDef ff fill:#ffffff,stroke:#999,rx:6,ry:6
+```
+
 
 ---
 
