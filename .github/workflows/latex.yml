@@ -3,29 +3,23 @@ name: Build LaTeX (review_dram_feram)
 on:
   push:
     branches: [ "main" ]
-    paths:
-      - "d_chapter1_memory_technologies/review_dram_feram/**"
   workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
       - name: Install Tectonic
-        uses: wtfjoke/setup-tectonic@v2
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}   # ★これを追加
+        uses: wtfjoke/setup-tectonic@v3
 
       - name: Compile main.tex
-        working-directory: d_chapter1_memory_technologies/review_dram_feram
         run: |
-          tectonic -X compile main.tex --keep-intermediates --keep-logs
+          tectonic -X compile main.tex --keep-logs
 
       - name: Upload PDF artifact
         uses: actions/upload-artifact@v4
         with:
           name: review_dram_feram_pdf
-          path: d_chapter1_memory_technologies/review_dram_feram/main.pdf
+          path: main.pdf
