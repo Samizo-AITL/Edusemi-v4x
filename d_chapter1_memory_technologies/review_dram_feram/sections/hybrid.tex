@@ -1,7 +1,5 @@
-Hybrid memory hierarchies have gained significant attention, aiming to exploit the high speed of DRAM together with the non-volatility of FeRAM and other emerging memories~\cite{itrs2022, samsung2021}. 
-System-level perspectives envision FeRAM as near-memory storage or NVDIMM-like solutions, reducing refresh energy and enabling instant-on functionality. 
-Such architectures may also support AI edge computing and in-memory acceleration, where FeFET-based devices provide low-power and non-volatile synaptic elements~\cite{schaller2021_ai}. 
-However, trade-offs in endurance, variability, and cost remain barriers to widespread adoption.
-Hybrid memory hierarchies may also integrate PCM, MRAM, and RRAM alongside FeRAM~\cite{itrs2022, samsung2021}. 
-These alternatives offer complementary trade-offs in endurance and scalability, 
-but none have yet matched the combined speed and CMOS-compatibility of FeFETs~\cite{schaller2021_ai}.
+Hybrid memory hierarchies have gained significant attention, aiming to exploit DRAM for high-speed operation together with FeRAM or other non-volatile memories \cite{samsung2021,itrs2022}. System-level perspectives envision FeRAM as near-memory storage or NVDIMM-like solutions, reducing refresh energy and enabling instant-on functionality. 
+
+Such architectures may also support AI edge computing and in-memory acceleration, where FeFET-based devices provide low-power and non-volatile synaptic elements \cite{schaller2021}. Trade-offs in endurance, variability, and cost remain barriers to widespread adoption. Hybrid hierarchies may also integrate PCM, MRAM, and RRAM alongside FeRAM \cite{itrs2022}. 
+
+Fig.~\ref{fig:hybrid_hierarchy} depicts a conceptual hierarchy integrating DRAM (working memory), FeRAM (near-memory storage), and SSD/HDD (bulk storage).
