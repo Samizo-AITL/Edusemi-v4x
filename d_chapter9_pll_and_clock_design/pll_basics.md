@@ -42,7 +42,7 @@ In this section, we explain the **basic structure of PLL**, the **role of each b
     +--------------------------------------------------+
 ```
 ```mermaid
-flowchart LR
+flowchart TB
   %% ===== Nodes =====
   Ref([Ref Clock<br/>基準クロック])
   PFD([PFD<br/>Phase-Frequency Detector<br/>位相・周波数検出])
