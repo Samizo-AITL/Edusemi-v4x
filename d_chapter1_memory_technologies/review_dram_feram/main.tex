@@ -1,7 +1,9 @@
-\documentclass[journal]{IEEEtran} 
+\documentclass[journal]{IEEEtran}
+
+% ==== Packages (ASCII only; no TikZ) ====
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
-\usepackage[utf8]{inputenc}
+\usepackage[utf8]{inputenc} % keep UTF-8, but write ASCII in text
 \usepackage{graphicx}
 \usepackage{amsmath,amssymb}
 \usepackage{booktabs}
@@ -9,15 +11,12 @@
 \usepackage{hyperref}
 \usepackage{cite}
 
-\usepackage{tikz}
-\usetikzlibrary{arrows.meta,positioning,fit}
-
 \graphicspath{{./}}
 
-\title{A Comparative Review of DRAM and FeRAM: The Boundary between Volatile and Non-Volatile Memory and Future Perspectives}
+\title{A Comparative Review of DRAM and FeRAM: Boundary and Perspectives}
 
 \author{Shinichi~Samizo%
-\thanks{S. Samizo is with Project Design Hub (Samizo-AITL), Japan. E-mail: \texttt{samizo-aitl@example.org}.}
+\thanks{S. Samizo is with Project Design Hub (Samizo-AITL), Japan. E-mail: samizo-aitl@example.org.}
 }
 
 \markboth{Draft for IEEE-style submission}{Samizo: DRAM vs FeRAM Comparative Review}
@@ -26,11 +25,11 @@
 \maketitle
 
 \begin{abstract}
-Dynamic Random-Access Memory (DRAM) has served as the workhorse of volatile memory technology for decades, while Ferroelectric Random-Access Memory (FeRAM), particularly HfO$_2$-based devices, has emerged as a promising non-volatile alternative. This review provides a comparative analysis of DRAM and FeRAM in terms of scaling trends, device reliability, and system-level implications. Key metrics such as access speed, retention time, endurance, and energy per bit are summarized in Table~\ref{tab:comparison}, while Figs.~\ref{fig:dram_evolution}--\ref{fig:hybrid_hierarchy} illustrate the trade-offs and perspectives. Finally, we highlight hybrid scenarios where DRAM and FeRAM may co-exist in future memory hierarchies, and discuss challenges for bridging the volatile--non-volatile boundary.
+This short review contrasts DRAM and FeRAM from device scaling to system use. We summarize speed, retention, endurance, energy per bit, and cell footprint, and outline how hybrid hierarchies can combine the strengths of both.
 \end{abstract}
 
 \begin{IEEEkeywords}
-DRAM, FeRAM, FeFET, HfO$_2$, reliability, retention, endurance, scaling, memory hierarchy, review.
+DRAM, FeRAM, FeFET, HfO2, retention, endurance, scaling, memory hierarchy.
 \end{IEEEkeywords}
 
 \section{Introduction}
@@ -42,21 +41,18 @@ DRAM, FeRAM, FeFET, HfO$_2$, reliability, retention, endurance, scaling, memory 
 \section{FeRAM Technology and Advances}
 \input{sections/feram.tex}
 
-\section{Comparative Analysis: DRAM vs FeRAM}
+\section{Comparative Analysis}
 \label{sec:comparison}
 \input{sections/comparison.tex}
 
-\section{Hybrid Perspectives and Future Memory Hierarchies}
+\section{Hybrid Perspectives}
 \input{sections/hybrid.tex}
 
-\section{Conclusion and Outlook}
+\section{Conclusion}
 \input{sections/conclusion.tex}
 
-% --- References ---
-\nocite{*}
+% References
 \bibliographystyle{IEEEtran}
 \bibliography{references}
 
 \end{document}
-
-% rebuild
