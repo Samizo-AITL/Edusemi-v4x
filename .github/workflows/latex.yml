@@ -1,0 +1,33 @@
+name: Build LaTeX (review_dram_feram)
+
+on:
+  push:
+    branches: [ "main" ]
+    paths:
+      - "d_chapter1_memory_technologies/review_dram_feram/**"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Tectonic (LaTeX engine)
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y curl
+          curl -L https://github.com/tectonic-typesetting/tectonic/releases/latest/download/tectonic-linux-amd64.tar.gz -o tectonic.tar.gz
+          sudo tar -xzf tectonic.tar.gz -C /usr/local/bin --strip-components=1
+
+      - name: Compile main.tex
+        working-directory: d_chapter1_memory_technologies/review_dram_feram
+        run: |
+          tectonic -X compile main.tex --keep-intermediates --keep-logs
+
+      - name: Upload PDF artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: review_dram_feram_pdf
+          path: d_chapter1_memory_technologies/review_dram_feram/main.pdf
