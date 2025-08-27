@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 応用編 第9章　PLLとクロック設計 
+title: 応用編 第9章　PLLとクロック設計  
 ---
 
 ---
