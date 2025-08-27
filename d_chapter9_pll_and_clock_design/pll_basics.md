@@ -77,6 +77,3 @@ f_out = N × f_ref
 ### ⏰ 応用編 第9章：PLLとクロック設計｜Applied Chapter 9: PLL and Clock Design  
 [➡️ 章の詳細へ進む｜Go to Chapter](./README.md)  
 
----
-
-© 2025 Shinichi Samizo / MIT License
