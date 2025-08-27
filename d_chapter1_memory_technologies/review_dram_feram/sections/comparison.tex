@@ -1,5 +1,30 @@
-Table~\ref{tab:comparison} summarizes representative metrics for DRAM and FeRAM, including speed, retention, endurance, energy per bit, and cell footprint. 
+Table~\ref{tab:comparison} summarizes representative metrics. Figures~\ref{fig:svr} and \ref{fig:evs} illustrate speed retention and energy speed trends.
 
-DRAM provides ultra-high endurance ($\geq 10^{16}$ cycles) and low energy per bit, but suffers from limited retention ($\sim$64 ms) and significant refresh overhead. In contrast, FeRAM offers non-volatility with retention exceeding $10^{5}$ s and endurance in the range of $10^{12}$--$10^{13}$ cycles, though its write energy is higher (hundreds of fJ/bit) \cite{noheda2023,martin2020}. 
+\begin{table}[!t]
+\caption{Representative metrics from literature (indicative order).}
+\label{tab:comparison}
+\centering
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+Tech. & Speed & Retention & Endurance & Energy/bit & Cell \\
+ & ns & s & cycles & fJ & area \\
+\midrule
+DRAM  & \(\sim 10\) & \(\sim 6.4\times 10^{-2}\) & \(\ge 10^{16}\) & 10--100 & \(6F^{2}\) \\
+FeRAM & \(\lesssim 10\) & \(\ge 10^{5}\) & \(10^{12}\)–\(10^{13}\) & \(10^{2}\)–\(10^{3}\) & 1T (FeFET) \\
+\bottomrule
+\end{tabular}
+\end{table}
 
-Fig.~\ref{fig:svr} shows the speed--retention trade-off, while Fig.~\ref{fig:evs} highlights the relationship between write energy and speed. These comparative plots illustrate that DRAM is optimal for working memory, whereas FeRAM is better suited for low-power non-volatile applications.
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\linewidth]{fig1_speed_vs_retention.png}
+\caption{Speed vs retention (illustrative).}
+\label{fig:svr}
+\end{figure}
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\linewidth]{fig2_energy_vs_speed.png}
+\caption{Write energy per bit vs write speed (illustrative).}
+\label{fig:evs}
+\end{figure}
