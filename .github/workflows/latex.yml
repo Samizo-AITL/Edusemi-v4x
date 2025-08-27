@@ -14,12 +14,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install Tectonic (LaTeX engine)
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y curl
-          curl -L https://github.com/tectonic-typesetting/tectonic/releases/latest/download/tectonic-linux-amd64.tar.gz -o tectonic.tar.gz
-          sudo tar -xzf tectonic.tar.gz -C /usr/local/bin --strip-components=1
+      - name: Install Tectonic
+        uses: wtfjoke/setup-tectonic@v2
 
       - name: Compile main.tex
         working-directory: d_chapter1_memory_technologies/review_dram_feram
