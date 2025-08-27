@@ -2,3 +2,22 @@ DRAM technology has continually advanced through cell capacitor scaling, high-k 
 Recent works highlight the difficulty of maintaining capacitance while suppressing leakage currents in deep sub-20 nm technologies \cite{choi2022}.
 Furthermore, the industry is exploring 3D DRAM architectures to extend scaling, analogous to NAND flash, by stacking capacitor arrays \cite{kim2021_dram}.
 Such approaches aim to overcome cell aspect ratio limits, though integration complexity and refresh overhead remain unresolved.
+
+\begin{figure}[!t]
+\centering
+\begin{tikzpicture}[font=\footnotesize, >=Latex]
+\node[draw, minimum width=1.8cm, minimum height=1.2cm] (planar) {Planar\\(1970s)};
+\node[draw, minimum width=1.8cm, minimum height=1.2cm, right=1.2cm of planar] (trench) {Trench\\(1990s)};
+\node[draw, minimum width=1.8cm, minimum height=1.2cm, right=1.2cm of trench] (hac) {High-Aspect\\(2000s)};
+\node[draw, minimum width=1.8cm, minimum height=1.2cm, right=1.2cm of hac] (ddram) {3D DRAM?\\(2020s+)};
+\draw[->] (planar) -- (trench);
+\draw[->] (trench) -- (hac);
+\draw[->] (hac) -- (ddram);
+\node[below=0.2cm of planar] {MOS cap on Si};
+\node[below=0.2cm of trench] {Deep trench cap};
+\node[below=0.2cm of hac] {Tall fin/stack cap};
+\node[below=0.2cm of ddram] {Stacked array concept};
+\end{tikzpicture}
+\caption{Evolution of DRAM cell structures and concepts.}
+\label{fig:dram_evolution}
+\end{figure}
