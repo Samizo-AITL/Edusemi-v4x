@@ -8,6 +8,12 @@
 \usepackage{hyperref}
 \usepackage{cite}
 
+% --- TikZ for vector figures ---
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usepackage{xcolor}
+\tikzset{>=latex}
+
 \graphicspath{{./}}
 
 \title{A Comparative Review of DRAM and FeRAM: The Boundary between Volatile and Non-Volatile Memory and Future Perspectives}
@@ -30,14 +36,61 @@ DRAM, FeRAM, FeFET, HfO$_2$, reliability, retention, endurance, scaling, memory 
 \end{IEEEkeywords}
 
 \section{Introduction}
-% Brief motivation and scope
 \input{sections/intro.tex}
 
 \section{DRAM Technology and Scaling}
 \input{sections/dram.tex}
 
+% ---- NEW FIG: DRAM cell evolution (TikZ) ----
+\begin{figure}[!t]
+\centering
+\begin{tikzpicture}[scale=0.85, every node/.style={font=\small}]
+  % Planar capacitor
+  \draw[thick] (0,0) rectangle (1,1);
+  \node at (0.5,-0.35) {Planar (1970s)};
+  % Trench capacitor
+  \draw[thick] (3,0) -- (3,-1.5) -- (4,-1.5) -- (4,0) -- cycle;
+  \node at (3.5,-1.8) {Trench (1990s)};
+  % High-aspect ratio capacitor
+  \draw[thick] (6,0) -- (6,-2.5) -- (7,-2.5) -- (7,0) -- cycle;
+  \node at (6.5,-2.8) {High-Aspect (2000s)};
+  % 3D stacked concept
+  \foreach \x in {0,0.3,0.6} {
+    \draw[thick] (9+\x,0) -- (9+\x,-2.0);
+  }
+  \node at (9.5,-2.3) {3D DRAM (2020s)};
+\end{tikzpicture}
+\caption{Evolution of DRAM cell structures: planar, trench, high-aspect ratio capacitors, and 3D-stacked DRAM concepts.}
+\label{fig:dram_evolution}
+\end{figure}
+
 \section{FeRAM Technology and Advances}
 \input{sections/feram.tex}
+
+% ---- NEW FIG: FeFET schematic (TikZ) ----
+\begin{figure}[!t]
+\centering
+\begin{tikzpicture}[scale=0.95, every node/.style={font=\small}]
+  % Substrate
+  \draw[fill=gray!20, draw=black] (0,0) rectangle (4,-0.5);
+  \node at (2,-0.8) {Si substrate};
+  % Channel
+  \draw[fill=blue!20, draw=black] (0,0) rectangle (4,0.5);
+  \node at (2,0.8) {Channel};
+  % HfO2 ferroelectric
+  \draw[fill=yellow!40, draw=black] (1,0.5) rectangle (3,0.9);
+  \node at (2,1.15) {HfO$_2$ ferroelectric};
+  % Metal gate
+  \draw[fill=orange!40, draw=black] (1,0.9) rectangle (3,1.2);
+  \node at (2,1.45) {Metal gate};
+  % Terminals
+  \draw[->,thick] (3.05,1.05) -- (4.6,1.05) node[right]{Gate};
+  \draw[->,thick] (-0.05,0.25) -- (-1.0,0.25) node[left]{Source};
+  \draw[->,thick] (4.05,0.25) -- (5.0,0.25) node[right]{Drain};
+\end{tikzpicture}
+\caption{Schematic of a FeFET: HfO$_2$ ferroelectric layer integrated into the MOSFET gate stack.}
+\label{fig:fefet_structure}
+\end{figure}
 
 \section{Comparative Analysis: DRAM vs FeRAM}
 \label{sec:comparison}
@@ -47,7 +100,7 @@ Table~\ref{tab:comparison} summarizes representative metrics collected from the 
 \caption{Representative metrics for DRAM and FeRAM (literature values).}
 \label{tab:comparison}
 \centering
-\begin{tabular}{@{}lccccc@{}}   % ← 列数を修正
+\begin{tabular}{@{}lccccc@{}}
 \toprule
 \textbf{Tech.} & \textbf{Speed} & \textbf{Retention} & \textbf{Endurance} & \textbf{Energy/bit} & \textbf{Cell} \\
  & (ns) & (s) & (cycles) & (fJ) & area \\
@@ -75,11 +128,28 @@ FeRAM & $\lesssim$10 & $\ge 10^{5}$ & $10^{12}$--$10^{13}$ & $10^{2}$--$10^{3}$ 
 \section{Hybrid Perspectives and Future Memory Hierarchies}
 \input{sections/hybrid.tex}
 
+% ---- NEW FIG: Hybrid hierarchy (TikZ) ----
+\begin{figure}[!t]
+\centering
+\begin{tikzpicture}[node distance=0.9cm,
+  every node/.style={font=\small, draw, thick, minimum width=4.2cm, minimum height=0.9cm, align=center}]
+  \node[fill=red!20]    (cpu)   {CPU Registers / Cache};
+  \node[fill=blue!20,  below=of cpu]   (dram)  {DRAM\\(High-speed working set)};
+  \node[fill=green!20, below=of dram]  (feram) {FeRAM / FeFET\\(Near-memory storage)};
+  \node[fill=yellow!30,below=of feram] (ssd)   {SSD / HDD\\(Bulk storage)};
+  \draw[->,thick] (cpu)  -- (dram);
+  \draw[->,thick] (dram) -- (feram);
+  \draw[->,thick] (feram)-- (ssd);
+\end{tikzpicture}
+\caption{Conceptual memory hierarchy integrating DRAM and FeRAM for near-memory computing.}
+\label{fig:hybrid_hierarchy}
+\end{figure}
+
 \section{Conclusion and Outlook}
 \input{sections/conclusion.tex}
 
 % --- 参考文献 ---
-\nocite{*}
+\nocite{*} % 全出力モード
 \bibliographystyle{IEEEtran}
 \bibliography{references}
 
