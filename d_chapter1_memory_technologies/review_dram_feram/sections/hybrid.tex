@@ -24,3 +24,38 @@ By placing FeRAM close to DRAM or the memory controller, systems can reduce refr
 \end{itemize}
 
 Figure~\ref{fig:hybrid_hierarchy} sketches a conceptual arrangement: CPU registers and caches feed a DRAM working set, while FeRAM acts as a near-memory store or NVDIMM-like extension.
+
+\begin{figure}[!t]
+\centering
+\begin{tikzpicture}[font=\footnotesize]
+
+% ブロック（座標配置・positioning未使用）
+\draw[fill=gray!15, rounded corners] (-2.3,3.0) rectangle (2.3,3.8);
+\node at (0,3.4) {CPU Registers / Cache};
+
+\draw[fill=blue!10, rounded corners] (-2.3,1.8) rectangle (2.3,2.6);
+\node at (0,2.2) {DRAM \\ (High-speed working set)};
+
+\draw[fill=green!12, rounded corners] (-2.3,0.6) rectangle (2.3,1.4);
+\node at (0,1.0) {FeRAM / FeFET \\ (Near-memory storage)};
+
+\draw[fill=yellow!18, rounded corners] (-2.3,-0.6) rectangle (2.3,0.2);
+\node at (0,-0.2) {SSD / HDD \\ (Block storage)};
+
+% 矢印
+\draw[->] (0,3.0) -- (0,2.6);
+\draw[->] (0,1.8) -- (0,1.4);
+\draw[->] (0,0.6) -- (0,0.2);
+
+% 右側メモ（任意）
+\node[align=left] at (4.2,2.2) {Refresh reduction\\Checkpoint/Recovery};
+\node[align=left] at (4.2,1.0) {Persistent buffers\\Wear mgmt.};
+
+% 補助線（矢印）
+\draw[->] (2.3,2.2) -- (3.4,2.2);
+\draw[->] (2.3,1.0) -- (3.4,1.0);
+
+\end{tikzpicture}
+\caption{Hybrid memory hierarchy integrating DRAM and FeRAM (near-memory).}
+\label{fig:hybrid_hierarchy}
+\end{figure}
