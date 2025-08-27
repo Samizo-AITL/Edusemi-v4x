@@ -65,6 +65,28 @@ flowchart TB
   classDef buf fill:#eef5ff,stroke:#6b6bff,rx:6,ry:6
   classDef ff fill:#ffffff,stroke:#999,rx:6,ry:6
 ```
+```mermaid
+flowchart TB
+  R([PLL / Root]):::root
+  H1([BUF]):::buf
+  H2([BUF]):::buf
+  L1([BUF]):::buf
+  L2([BUF]):::buf
+  F1([FF1]):::ff
+  F2([FF2]):::ff
+  F3([FF3]):::ff
+  F4([FF4]):::ff
+
+  R -->|t0| H1 -->|t1| L1 -->|t2| F1
+  H1 -->|t1| L2 -->|t2| F2
+  R -->|t0| H2 -->|t1| L1a[BUF]:::buf -->|t2| F3
+  H2 -->|t1| L2a[BUF]:::buf -->|t2| F4
+
+  %% styles
+  classDef root fill:#fff7ff,stroke:#6b4ccf,rx:6,ry:6
+  classDef buf fill:#eef5ff,stroke:#6b6bff,rx:6,ry:6
+  classDef ff fill:#ffffff,stroke:#999,rx:6,ry:6
+```
 
 
 ---
