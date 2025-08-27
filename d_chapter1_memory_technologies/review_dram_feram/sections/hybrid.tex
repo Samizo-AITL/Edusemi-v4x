@@ -27,7 +27,6 @@ Hybrid memory hierarchies aim to combine the high speed of DRAM with the non-vol
 \begin{figure}[!t]
 \centering
 \begin{tikzpicture}[font=\footnotesize]
-  % blocks
   \draw[fill=gray!15, rounded corners] (-2.3,3.0) rectangle (2.3,3.8);
   \node at (0,3.4) {CPU Registers / Cache};
 
@@ -40,12 +39,10 @@ Hybrid memory hierarchies aim to combine the high speed of DRAM with the non-vol
   \draw[fill=yellow!18, rounded corners] (-2.3,-0.6) rectangle (2.3,0.2);
   \node at (0,-0.2) {SSD / HDD\\(Block storage)};
 
-  % arrows
   \draw[->] (0,3.0) -- (0,2.6);
   \draw[->] (0,1.8) -- (0,1.4);
   \draw[->] (0,0.6) -- (0,0.2);
 
-  % notes
   \node[align=left] at (4.2,2.2) {Refresh reduction\\Checkpoint/Recovery};
   \node[align=left] at (4.2,1.0) {Persistent buffers\\Wear mgmt.};
   \draw[->] (2.3,2.2) -- (3.4,2.2);
