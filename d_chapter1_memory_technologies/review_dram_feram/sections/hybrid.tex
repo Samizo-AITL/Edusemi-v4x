@@ -1,27 +1,26 @@
-Hybrid memory hierarchies aim to combine the high speed of DRAM with the non--volatility of FeRAM (including FeFET variants). By placing FeRAM close to DRAM or the memory controller, systems can reduce refresh energy, enable instant--on functionality, and support fast checkpointing and recovery.
-
-Figure~\ref{fig:hybrid_hierarchy} sketches a conceptual arrangement: CPU registers and caches feed a DRAM working set, while FeRAM acts as a near--memory store or NVDIMM--like layer. Such designs can also back AI edge devices and in--memory acceleration, where FeFET--based arrays provide low--power non--volatile synaptic elements.
+Hybrid memory hierarchies aim to combine the high speed of DRAM with the non-volatility of FeRAM (including FeFET variants).  
+By placing FeRAM close to DRAM or the memory controller, systems can reduce refresh energy, enable instant-on functionality, and support fast checkpointing and recovery.
 
 \subsection*{Benefits}
 \begin{itemize}
-  \item Reduced refresh overhead: part of the dataset can be parked in FeRAM, cutting DRAM refresh traffic and standby power.
-  \item Fast persistence: system state can be checkpointed to FeRAM with microsecond--scale latency, enabling quick resume.
-  \item Data resilience: FeRAM provides crash consistency for critical metadata and write--back buffers.
+    \item \textbf{Reduced refresh overhead:} Part of the dataset can be parked in FeRAM, cutting DRAM refresh traffic and standby power.  
+    \item \textbf{Fast persistence:} System state can be checkpointed to FeRAM with microsecond-scale latency, enabling quick resume.  
+    \item \textbf{Data resilience:} FeRAM provides crash consistency for critical metadata and write-back buffers.  
 \end{itemize}
 
-\subsection*{Constraints and trade--offs}
+\subsection*{Constraints and trade-offs}
 \begin{itemize}
-  \item Endurance and variability: FeRAM endurance ($10^{12}$--$10^{13}$ cycles) is high but still below DRAM refresh activity; wear management and write traffic shaping are required.
-  \item Write energy and latency: FeRAM generally incurs higher write energy than DRAM; policies should bias read--mostly or cold data to FeRAM.
-  \item Integration cost: adopting FeFET or ferroelectric layers in advanced CMOS nodes introduces process complexity and reliability risks (e.g., TDDB under high fields).
+    \item \textbf{Endurance and variability:} FeRAM endurance ($10^{12}$–$10^{13}$ cycles) is high but still below DRAM refresh activity.  
+    \item \textbf{Write energy and latency:} FeRAM generally incurs higher write energy than DRAM; policies should bias read-mostly or cold data to FeRAM.  
+    \item \textbf{Integration cost:} Adopting FeFET or ferroelectric layers in advanced CMOS nodes introduces process compatibility and reliability risks (e.g., TDDB under high fields).  
 \end{itemize}
 
 \subsection*{System design directions}
 \begin{itemize}
-  \item Tiering policies that classify pages/objects by write intensity and retention needs, migrating cold or persistent data to FeRAM.
-  \item Refresh co--optimization: dynamically shrink DRAM refresh for regions shadowed or backed by FeRAM.
-  \item Checkpoint and logging primitives that exploit FeRAM bandwidth while limiting wear via compression, batching, and copy--on--write.
-  \item Controller support: metadata for wear leveling, retention--aware placement, and error monitoring (e.g., soft/hard failure counters).
+    \item \textbf{Tiering policies:} Classify pages/objects by write intensity and retention needs, migrating cold or persistent data to FeRAM.  
+    \item \textbf{Refresh co-optimization:} Dynamically shrink DRAM refresh for regions shadowed or backed by FeRAM.  
+    \item \textbf{Checkpoint and logging:} Exploit FeRAM bandwidth for low-latency state persistence.  
+    \item \textbf{Controller support:} Metadata for wear leveling, retention-aware placement, and error monitoring (e.g., soft/hard failure counters).  
 \end{itemize}
 
-Overall, hybrid hierarchies can reduce energy and improve resilience while keeping DRAM as the primary high--speed working set. Realizing these gains requires co--design across devices, controllers, and operating systems to navigate endurance, variability, and cost constraints.
+Figure~\ref{fig:hybrid_hierarchy} sketches a conceptual arrangement: CPU registers and caches feed a DRAM working set, while FeRAM acts as a near-memory store or NVDIMM-like extension.
