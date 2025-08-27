@@ -1,58 +1,59 @@
-% sections/hybrid.tex (修正版)
+% sections/hybrid.tex  ←この内容で全置換
+Hybrid memory hierarchies aim to combine the high speed of DRAM with the non-volatility of FeRAM (including FeFET variants). By placing FeRAM close to DRAM or to the memory controller, systems can reduce refresh energy, enable instant-on functionality, and support fast checkpointing and recovery. Compared with pure-DRAM systems, such hierarchies expose new tuning knobs at the device, controller, and OS layers.
 
-Hybrid memory hierarchies aim to combine the high speed of DRAM with the non-volatility of FeRAM (including FeFET variants). By placing FeRAM close to DRAM or the memory controller, systems can reduce refresh energy, enable instant-on functionality, and support fast checkpointing and recovery.
-
-\noindent\textbf{Benefits.}
+\subsection*{Benefits}
 \begin{itemize}
   \item \textbf{Reduced refresh overhead:} Part of the dataset can be parked in FeRAM, cutting DRAM refresh traffic and standby power.
   \item \textbf{Fast persistence:} System state can be checkpointed to FeRAM with microsecond-scale latency, enabling quick resume.
   \item \textbf{Data resilience:} FeRAM provides crash consistency for critical metadata and write-back buffers.
 \end{itemize}
 
-\noindent\textbf{Constraints and trade-offs.}
+\subsection*{Constraints and trade-offs}
 \begin{itemize}
   \item \textbf{Endurance and variability:} FeRAM endurance ($10^{12}$--$10^{13}$ cycles) is high but still below DRAM refresh activity.
   \item \textbf{Write energy and latency:} FeRAM generally incurs higher write energy than DRAM; policies should bias read-mostly or cold data to FeRAM.
-  \item \textbf{Integration cost:} Adopting FeFET or ferroelectric layers in advanced CMOS nodes introduces process-compatibility and reliability risks (e.g., TDDB under high fields).
+  \item \textbf{Integration cost:} Adding FeFET or ferroelectric layers in advanced CMOS nodes introduces process-compatibility and reliability risks (e.g., TDDB under high fields).
 \end{itemize}
 
-\noindent\textbf{System design directions.}
+\subsection*{System design directions}
 \begin{itemize}
   \item \textbf{Tiering policies:} Classify pages/objects by write intensity and retention needs, migrating cold or persistent data to FeRAM.
   \item \textbf{Refresh co-optimization:} Dynamically shrink DRAM refresh for regions shadowed or backed by FeRAM.
   \item \textbf{Checkpoint and logging:} Exploit FeRAM bandwidth for low-latency state persistence.
-  \item \textbf{Controller support:} Metadata for wear leveling, retention-aware placement, and error monitoring (e.g., soft/hard failure counters).
+  \item \textbf{Controller support:} Keep metadata for wear leveling, retention-aware placement, and error monitoring (e.g., soft/hard failure counters).
 \end{itemize}
 
 Figure~\ref{fig:hybrid_hierarchy} sketches a conceptual arrangement: CPU registers and caches feed a DRAM working set, while FeRAM acts as a near-memory store or NVDIMM-like extension.
 
 \begin{figure}[!t]
 \centering
-\begin{tikzpicture}[font=\footnotesize]
+\begin{tikzpicture}[font=\footnotesize,>=Latex]
+  % blocks
+  \draw[fill=gray!15, rounded corners] (-2.3,3.0) rectangle (2.3,3.8);
+  \node at (0,3.4) {CPU Registers / Cache};
 
-\draw[fill=gray!15, rounded corners] (-2.3,3.0) rectangle (2.3,3.8);
-\node at (0,3.4) {CPU Registers / Cache};
+  \draw[fill=blue!10, rounded corners] (-2.3,1.8) rectangle (2.3,2.6);
+  \node at (0,2.2) {DRAM\\(High-speed working set)};
 
-\draw[fill=gray!10, rounded corners] (-2.3,1.8) rectangle (2.3,2.6);
-\node at (0,2.2) {DRAM\\(High-speed working set)};
+  \draw[fill=green!12, rounded corners] (-2.3,0.6) rectangle (2.3,1.4);
+  \node at (0,1.0) {FeRAM / FeFET\\(Near-memory storage)};
 
-\draw[fill=gray!10, rounded corners] (-2.3,0.6) rectangle (2.3,1.4);
-\node at (0,1.0) {FeRAM / FeFET\\(Near-memory storage)};
+  \draw[fill=yellow!18, rounded corners] (-2.3,-0.6) rectangle (2.3,0.2);
+  \node at (0,-0.2) {SSD / HDD\\(Block storage)};
 
-\draw[fill=gray!10, rounded corners] (-2.3,-0.6) rectangle (2.3,0.2);
-\node at (0,-0.2) {SSD / HDD\\(Block storage)};
+  % arrows
+  \draw[->] (0,3.0) -- (0,2.6);
+  \draw[->] (0,1.8) -- (0,1.4);
+  \draw[->] (0,0.6) -- (0,0.2);
 
-\draw[->] (0,3.0) -- (0,2.6);
-\draw[->] (0,1.8) -- (0,1.4);
-\draw[->] (0,0.6) -- (0,0.2);
-
-\node[align=left] at (4.2,2.2) {Refresh reduction\\Checkpoint/Recovery};
-\node[align=left] at (4.2,1.0) {Persistent buffers\\Wear mgmt.};
-
-\draw[->] (2.3,2.2) -- (3.4,2.2);
-\draw[->] (2.3,1.0) -- (3.4,1.0);
-
+  % notes
+  \node[align=left] at (4.0,2.2) {Refresh reduction\\Checkpoint / Recovery};
+  \node[align=left] at (4.0,1.0) {Persistent buffers\\Wear mgmt.};
+  \draw[->] (2.3,2.2) -- (3.2,2.2);
+  \draw[->] (2.3,1.0) -- (3.2,1.0);
 \end{tikzpicture}
 \caption{Hybrid memory hierarchy integrating DRAM and FeRAM (near-memory).}
 \label{fig:hybrid_hierarchy}
 \end{figure}
+
+In summary, hybrid DRAM–FeRAM hierarchies can reduce refresh energy and enable fast persistence while keeping DRAM as the primary high-speed working set. Realizing these gains requires co-design across devices, controllers, and OS policies to navigate endurance, variability, and cost constraints.
