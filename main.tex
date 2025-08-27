@@ -13,8 +13,7 @@
 
 \title{A Comparative Review of DRAM and FeRAM: Boundary and Perspectives}
 \author{Shinichi~Samizo%
-\thanks{S. Samizo is with Project Design Hub (Samizo-AITL), Japan. 
-E-mail: \texttt{samizo-aitl@example.org}.}
+\thanks{S. Samizo is with Project Design Hub (Samizo-AITL), Japan. E-mail: \texttt{samizo-aitl@example.org}.}
 }
 \markboth{Draft for IEEE-style submission}{Samizo: DRAM vs FeRAM Comparative Review}
 
@@ -22,60 +21,42 @@ E-mail: \texttt{samizo-aitl@example.org}.}
 \maketitle
 
 \begin{abstract}
-This note contrasts DRAM and FeRAM from device scaling to system use. 
-We summarize speed, retention, endurance, energy per bit, and perspectives 
-for hybrid integration.
+This note contrasts DRAM and FeRAM from device scaling to system use. We summarize speed, retention, endurance, and energy/bit, and discuss hybrid perspectives that may reshape the volatile--non-volatile boundary.
 \end{abstract}
 
 \begin{IEEEkeywords}
-DRAM, FeRAM, FeFET, HfO2, retention, endurance, scaling, memory hierarchy.
+DRAM, FeRAM, FeFET, HfO$_2$, retention, endurance, scaling, memory hierarchy.
 \end{IEEEkeywords}
 
-% -------------------------------
+% ----------------------------
 \section{Introduction}
-Memory hierarchies remain central to computing. DRAM dominates volatile 
-memory owing to speed and density, but faces scaling challenges as cell 
-capacitors approach physical limits. FeRAM, based on ferroelectric hafnia, 
-provides non-volatile operation with CMOS compatibility. This review 
-compares DRAM and FeRAM, and discusses hybrid perspectives.
+Memory hierarchies remain central to computing. DRAM dominates volatile memory owing to speed and scalability, while ferroelectric HfO$_2$-based FeRAM/FeFET have emerged as CMOS-compatible non-volatile options. Recent work highlights hybrid use-cases spanning IEDM and VLSI results.
 
-% -------------------------------
+% ----------------------------
 \section{DRAM Technology and Scaling}
-DRAM scaling progressed via high-k dielectrics and deep trench or stacked 
-capacitors. Maintaining capacitance while reducing leakage in sub-20 nm 
-technology nodes is challenging \cite{choi2022}. 
-Recent directions explore 3D DRAM architectures, analogous to NAND flash, 
-by stacking capacitor arrays \cite{kim2021_dram}.
+DRAM scaling progressed via high-k dielectrics and deep trench or stacked capacitors. Maintaining capacitance while suppressing leakage is a key challenge in sub-20\,nm nodes. Industry explores 3D architectures analogous to NAND flash.
 
-% Example figure (replace with real image if available)
 \begin{figure}[!t]
 \centering
-\includegraphics[width=0.8\linewidth]{dram_example.png}
-\caption{Evolution of DRAM cell concepts: planar, trench, stacked, and 3D.}
-\label{fig:dram}
+\fbox{\parbox[c][4cm][c]{.9\linewidth}{\centering Placeholder for DRAM figure}}
+\caption{Evolution of DRAM cell concepts (placeholder).}
+\label{fig:dram_evolution}
 \end{figure}
 
-% -------------------------------
+% ----------------------------
 \section{FeRAM Technology and Advances}
-FeRAM based on HfO2 ferroelectricity enables fast, non-volatile switching 
-\cite{boscke2011,mueller2012}. FeFET devices combine ferroelectric layers 
-with MOS transistors, providing low-power non-volatile operation. 
-Key issues remain: variability, endurance, and retention.
+Ferroelectric memories were pioneered in the 1950s; hafnia-based ferroelectrics revived research in the 2010s. FeFETs promise fast switching but face variability and endurance limits.
 
 \begin{figure}[!t]
 \centering
-\includegraphics[width=0.8\linewidth]{feram_example.png}
-\caption{Schematic concept of FeRAM/FeFET device.}
+\fbox{\parbox[c][4cm][c]{.9\linewidth}{\centering Placeholder for FeRAM/FeFET figure}}
+\caption{FeRAM / FeFET schematic (placeholder).}
 \label{fig:feram}
 \end{figure}
 
-% -------------------------------
+% ----------------------------
 \section{Comparative Analysis: DRAM vs FeRAM}
-Table~\ref{tab:comparison} summarizes typical metrics. DRAM offers ultra-high 
-endurance ($\geq 10^{16}$ cycles) and low energy per bit, but limited 
-retention ($\sim$64 ms). FeRAM provides non-volatility with retention 
-$>10^{5}$ s and endurance $10^{12}$--$10^{13}$ cycles, but higher write 
-energy (hundreds of fJ/bit) \cite{noheda2023,martin2020}.
+Table~\ref{tab:comparison} summarizes representative metrics. DRAM provides ultra-high endurance ($\geq 10^{16}$ cycles) and low energy/bit, but retention is limited ($\sim$64 ms). FeRAM offers non-volatility ($>10^5$ s) and endurance of $10^{12}$--$10^{13}$ cycles, though with higher write energy.
 
 \begin{table}[!t]
 \centering
@@ -85,50 +66,33 @@ energy (hundreds of fJ/bit) \cite{noheda2023,martin2020}.
 \toprule
 Metric & DRAM & FeRAM \\
 \midrule
-Speed & ns & ns--us \\
-Retention & $\sim$64 ms & $>10^{5}$ s \\
+Speed & ns & ns--µs \\
+Retention & $\sim$64 ms & $>10^5$ s \\
 Endurance & $\geq 10^{16}$ & $10^{12}$--$10^{13}$ \\
-Energy/bit & tens of fJ & hundreds of fJ \\
-Cell size & 6--8F$^{2}$ & 6--10F$^{2}$ \\
+Energy/bit & fJ & 100s fJ \\
+Cell size & 6--8F$^2$ & 6--10F$^2$ \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-% -------------------------------
-\section{Hybrid Perspectives}
-Hybrid hierarchies aim to combine DRAM speed with FeRAM persistence. 
-Placing FeRAM close to DRAM or memory controllers can reduce refresh, 
-enable instant-on, and support fast checkpointing.
+% ----------------------------
+\section{Hybrid Perspectives and Future Memory Hierarchies}
+Hybrid designs combine DRAM speed with FeRAM persistence. Benefits: reduced refresh, fast checkpointing, crash consistency. Constraints: endurance gap, higher write energy, integration cost. System design: tiering, refresh co-optimization, FeRAM-backed logging.
 
 \begin{figure}[!t]
 \centering
-\includegraphics[width=0.85\linewidth]{hybrid_example.png}
-\caption{Hybrid hierarchy concept: DRAM as working memory, FeRAM as 
-near-memory store.}
-\label{fig:hybrid}
+\fbox{\parbox[c][4cm][c]{.9\linewidth}{\centering Placeholder for hybrid memory hierarchy}}
+\caption{Hybrid memory hierarchy integrating DRAM and FeRAM (placeholder).}
+\label{fig:hybrid_hierarchy}
 \end{figure}
 
-Benefits:
-\begin{itemize}
-\item Reduced refresh traffic and standby power.
-\item Fast persistence with microsecond checkpoint.
-\item Data resilience for metadata and buffers.
-\end{itemize}
+% ----------------------------
+\section{Conclusion and Outlook}
+DRAM will remain the backbone of volatile memory. FeRAM offers a CMOS-compatible non-volatile complement. Future work will bridge device-level improvements with system-level architecture for hybrid deployments.
 
-Constraints:
-\begin{itemize}
-\item Endurance and variability remain lower than DRAM refresh cycles.
-\item Write energy higher than DRAM.
-\item Integration cost at advanced CMOS nodes.
-\end{itemize}
-
-% -------------------------------
-\section{Conclusion}
-Comparative analysis suggests DRAM will continue as the high-speed volatile 
-memory, while FeRAM provides non-volatile options with CMOS compatibility. 
-Hybrid memory may redefine future system architectures.
-
-% -------------------------------
+% ----------------------------
+% References
+\nocite{*}
 \bibliographystyle{IEEEtran}
 \bibliography{references}
 
