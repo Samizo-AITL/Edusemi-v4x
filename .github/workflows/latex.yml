@@ -16,6 +16,8 @@ jobs:
 
       - name: Install Tectonic
         uses: wtfjoke/setup-tectonic@v2
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}   # ★これを追加
 
       - name: Compile main.tex
         working-directory: d_chapter1_memory_technologies/review_dram_feram
