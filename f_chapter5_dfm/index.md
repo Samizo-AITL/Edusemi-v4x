@@ -10,6 +10,14 @@ title: 特別編 第5章　PDKとレイアウト検証による物理整合とDF
 
 ---
 
+## 🔗 公式リンク / *Official Links*
+
+| 言語 / Language | GitHub Pages 🌐 | GitHub 💻 |
+|-----------------|----------------|-----------|
+| 🇯🇵 日本語 / *Japanese* | [![GitHub Pages JP](https://img.shields.io/badge/GitHub%20Pages-日本語版-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/f_chapter5_dfm/) | [![GitHub Repo JP](https://img.shields.io/badge/GitHub-日本語版-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/f_chapter5_dfm) |
+
+---
+
 本章では、Sky130 PDKを用いたレイアウト検証と、  
 GDSレベルでの物理整合・製造配慮（DFM）に関する設計指針を学びます。  
 This chapter explores physical verification using the Sky130 PDK and outlines layout design guidelines for manufacturability (DFM) at the GDS level.
