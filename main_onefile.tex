@@ -1,0 +1,75 @@
+\documentclass[journal]{IEEEtran}
+
+% ---- Safe, minimal packages (ASCII only) ----
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[utf8]{inputenc} % 入力はUTF-8だが本文はASCII推奨
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{siunitx}
+\usepackage[hidelinks]{hyperref}
+\usepackage{cite}
+
+\title{A Comparative Review of DRAM and FeRAM: Boundary and Perspectives}
+\author{Shinichi~Samizo%
+\thanks{S. Samizo is with Project Design Hub (Samizo-AITL), Japan. E-mail: \texttt{samizo-aitl@example.org}.}
+}
+\markboth{Draft for IEEE-style submission}{Samizo: DRAM vs FeRAM Comparative Review}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This note contrasts DRAM and FeRAM from device scaling to system use. We summarize speed, retention, endurance, and energy per bit, and sketch how hybrid hierarchies can combine the strengths of both.
+\end{abstract}
+
+\begin{IEEEkeywords}
+DRAM, FeRAM, FeFET, HfO2, retention, endurance, scaling, memory hierarchy.
+\end{IEEEkeywords}
+
+\section{Introduction}
+Memory hierarchies remain central to computing. DRAM dominates volatile memory owing to speed and density, but capacitor scaling is difficult at advanced nodes. In parallel, HfO2-based ferroelectric devices revived FeRAM and FeFET research as non-volatile options with CMOS compatibility.
+
+\section{DRAM Technology and Scaling}
+DRAM scaling progressed via high-k dielectrics and deep trench or stacked capacitors. Maintaining capacitance while suppressing leakage below 20 nm is hard. 3D DRAM-like concepts are explored, but integration complexity and refresh overhead remain open.
+
+\section{FeRAM Technology and Advances}
+Ferroelectric hafnia enables non-volatile switching compatible with logic processes. FeFET cells integrate a ferroelectric layer in the gate stack. Challenges include retention, variability, fatigue, and time-dependent dielectric breakdown; recent reports show endurance approaching 1e12 cycles with improved retention.
+
+\section{Comparative Analysis}
+Table~\ref{tab:comparison} summarizes representative metrics. % 図は後で戻す
+
+\begin{table}[!t]
+\caption{Representative metrics (indicative).}
+\label{tab:comparison}
+\centering
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+Tech. & Speed (ns) & Retention (s) & Endurance & Energy/bit (fJ) & Cell area \\
+\midrule
+DRAM  & $\sim 10$ & $\sim 6.4\times 10^{-2}$ & $\ge 10^{16}$ & 10--100    & $6F^2$ \\
+FeRAM & $\lesssim 10$ & $\ge 10^{5}$           & $10^{12}$--$10^{13}$ & $10^{2}$--$10^{3}$ & 1T (FeFET) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Hybrid Perspectives}
+Hybrid hierarchies pair DRAM as the high-speed working set with FeRAM for near-memory non-volatile storage. Benefits include reduced refresh traffic, fast checkpointing, and metadata durability. Constraints include higher write energy and limited endurance; policies should bias read-mostly or cold data to FeRAM.
+
+\section{Conclusion}
+DRAM will remain the primary volatile memory; FeRAM offers a credible path to embedded non-volatile tiers. The DRAM--FeRAM boundary can be exploited to reduce refresh, improve resilience, and enable new system behaviors.
+
+% ---- Inline bibliography (BibTeX不要) ----
+\begin{thebibliography}{9}
+\bibitem{choi2022}
+W. Choi \textit{et al.}, ``Challenges and Prospects of DRAM Cell Capacitor Scaling,'' \textit{IEEE TED}, vol. 69, no. 6, pp. 2771--2778, 2022.
+
+\bibitem{noheda2023}
+B. Noheda \textit{et al.}, ``Ferroelectric hafnia: Path to devices,'' \textit{Nature Reviews Materials}, vol. 8, pp. 653--672, 2023.
+
+\bibitem{martin2020}
+D. Martin \textit{et al.}, ``Review of FeRAM and FeFET Scaling Challenges,'' \textit{Adv. Electron. Mater.}, vol. 6, no. 9, 2000305, 2020.
+\end{thebibliography}
+
+\end{document}
