@@ -27,7 +27,7 @@ title: LDMOS
 
 ## 🏗️ 構造と特徴｜Structure and Features
 
-**図1. LDMOS構造断面図 | Cross-Section**
+### 図1. LDMOS構造断面図 | Cross-Section
 
 ```mermaid
 flowchart LR
@@ -40,7 +40,7 @@ flowchart LR
     Psub --- Drift
 ```
 
-**図2. リングゲート型LDMOSレイアウト | Ring-Gate Layout**
+### 図2. リングゲート型LDMOSレイアウト | Ring-Gate Layout
 
 ```mermaid
 flowchart TB
