@@ -65,6 +65,15 @@ flowchart TD
 
 ### 1.6.4 サイジング指針 / Sizing Guidelines
 
+（補足）  
+- **HBM帯域 ($B_{\mathrm{HBM}}$)**：HBMが提供できる理論メモリ転送速度。  
+  バス幅（1024bit = 128B）× 転送レート × スタック数で決まり、世代ごとに  
+  HBM2 ≈ 256–410 GB/s, HBM2E ≈ 410–460 GB/s, HBM3 ≈ 819 GB/s, HBM3E ≈ 1.2 TB/s（いずれも1スタックあたり）が目安となる。  
+- **p95**：95パーセンタイル値。全アクセスの95%がこの値以下に収まる境界値を指す。  
+  平均値よりも厳しく、p99よりは緩い設計指標で、安定したレイテンシ・帯域を保証するためによく用いられる。
+
+---
+
 - **HBM帯域**： $B_{\mathrm{HBM}} \ge \text{p95帯域}$（余裕係数1.1–1.3）。  
 - **FeRAM容量**： $C_{\mathrm{Fe}} \ge C_{\mathrm{ckpt}} + C_{\mathrm{meta}} + C_{\mathrm{cold}}$ （余裕20%推奨）。  
 - **Checkpoint間隔**：レジューム目標 $t_{\mathrm{resume}}$ と書込み帯域 $W_{\mathrm{Fe}}$ から  
