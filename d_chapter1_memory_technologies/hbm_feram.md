@@ -62,9 +62,10 @@ flowchart TD
 
 ### 1.6.4 サイジング指針 / Sizing Guidelines
 
-- **HBM帯域**：$B_{\mathrm{HBM}} \ge \text{p95帯域}$（余裕係数1.1–1.3）。  
-- **FeRAM容量**：$C_{\mathrm{Fe}} \ge C_{\mathrm{ckpt}} + C_{\mathrm{meta}} + C_{\mathrm{cold}}$（余裕20%推奨）。  
-- **Checkpoint間隔**：レジューム目標 $t_{\mathrm{resume}}$ と書込み帯域 $W_{\mathrm{Fe}}$ から  
+- **HBM帯域**： $B_{\mathrm{HBM}} \ge \text{p95帯域}$（余裕係数1.1–1.3） 。  
+- **FeRAM容量**： $C_{\mathrm{Fe}} \ge C_{\mathrm{ckpt}} + C_{\mathrm{meta}} + C_{\mathrm{cold}}$
+（余裕20%推奨）。  
+- **Checkpoint間隔**：レジューム目標  $t_{\mathrm{resume}}$ と書込み帯域 $W_{\mathrm{Fe}}$ から  
 
 $$
 T_{\mathrm{ckpt}} \approx \frac{C_{\mathrm{ckpt}}}{W_{\mathrm{Fe}}/k}
@@ -72,8 +73,8 @@ $$
 
 （$k$: 圧縮/差分係数）。  
 
-- **耐久チェック**：年間書換回数 $N_{\mathrm{year}}$ がデバイス耐久（10¹²–10¹³）内に収まるよう調整。  
-*HBM bandwidth: ≥p95 demand with 10–30% margin. FeRAM capacity: ckpt+metadata+cold (+20%). Checkpoint interval: $T_{\mathrm{ckpt}} \approx C_{\mathrm{ckpt}} / (W_{\mathrm{Fe}}/k)$. Endurance: ensure annual writes within 10¹²–10¹³ cycles.*
+- **耐久チェック**：年間書換回数  $N_{\mathrm{year}}$ がデバイス耐久（10¹²–10¹³）内に収まるよう調整。  
+*HBM bandwidth: ≥p95 demand with 10–30% margin. FeRAM capacity: ckpt+metadata+cold (+20%). Checkpoint interval:  $T_{\mathrm{ckpt}} \approx C_{\mathrm{ckpt}} / (W_{\mathrm{Fe}}/k)$ . Endurance: ensure annual writes within 10¹²–10¹³ cycles.*
 
 ---
 
