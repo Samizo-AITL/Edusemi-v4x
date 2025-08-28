@@ -58,14 +58,16 @@ flowchart TD
 - **テレメトリ**：帯域/遅延/書込み回数/温度を常時収集し動的最適化。  
 *Tiering: hot→HBM; warm/cold→FeRAM. Checkpoint: choose $T_{\mathrm{ckpt}}$ from resume targets; prefer delta writes. Refresh coupling: reduce HBM refresh for FeRAM-backed cold regions. Wear: throttle writes, wear-leveling, ECC. Telemetry: continuously collect bandwidth, latency, writes, and temperature.*
 
+> 補足：**Hot = 頻繁アクセス / Warm = 定期アクセス / Cold = ほぼ参照なし** と定義する。  
+> *Note: Hot = frequently accessed / Warm = periodic access / Cold = rarely accessed.*
+
 ---
 
 ### 1.6.4 サイジング指針 / Sizing Guidelines
 
-- **HBM帯域**： $B_{\mathrm{HBM}} \ge \text{p95帯域}$（余裕係数1.1–1.3） 。  
-- **FeRAM容量**： $C_{\mathrm{Fe}} \ge C_{\mathrm{ckpt}} + C_{\mathrm{meta}} + C_{\mathrm{cold}}$
-（余裕20%推奨）。  
-- **Checkpoint間隔**：レジューム目標  $t_{\mathrm{resume}}$ と書込み帯域 $W_{\mathrm{Fe}}$ から  
+- **HBM帯域**： $B_{\mathrm{HBM}} \ge \text{p95帯域}$（余裕係数1.1–1.3）。  
+- **FeRAM容量**： $C_{\mathrm{Fe}} \ge C_{\mathrm{ckpt}} + C_{\mathrm{meta}} + C_{\mathrm{cold}}$ （余裕20%推奨）。  
+- **Checkpoint間隔**：レジューム目標 $t_{\mathrm{resume}}$ と書込み帯域 $W_{\mathrm{Fe}}$ から  
 
 $$
 T_{\mathrm{ckpt}} \approx \frac{C_{\mathrm{ckpt}}}{W_{\mathrm{Fe}}/k}
@@ -73,8 +75,8 @@ $$
 
 （ $k$ : 圧縮/差分係数）。  
 
-- **耐久チェック**：年間書換回数  $N_{\mathrm{year}}$ がデバイス耐久（10¹²–10¹³）内に収まるよう調整。  
-*HBM bandwidth: ≥p95 demand with 10–30% margin. FeRAM capacity: ckpt+metadata+cold (+20%). Checkpoint interval:  $T_{\mathrm{ckpt}} \approx C_{\mathrm{ckpt}} / (W_{\mathrm{Fe}}/k)$  . Endurance: ensure annual writes within 10¹²–10¹³ cycles.*
+- **耐久チェック**：年間書換回数 $N_{\mathrm{year}}$ がデバイス耐久（10¹²–10¹³）内に収まるよう調整。  
+*HBM bandwidth: ≥p95 demand with 10–30% margin. FeRAM capacity: ckpt+metadata+cold (+20%). Checkpoint interval: $T_{\mathrm{ckpt}} \approx C_{\mathrm{ckpt}} / (W_{\mathrm{Fe}}/k)$. Endurance: ensure annual writes within 10¹²–10¹³ cycles.*
 
 ---
 
