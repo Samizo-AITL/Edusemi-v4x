@@ -19,23 +19,27 @@ title: "1.6 統合メモリ：HBM＋FeRAMによるモバイルエッジAI"
 
 ---
 
-### 1.6.1 目標と制約 / Goals & Constraints
+## 🎯 1.6.1 目標と制約 / Goals & Constraints
 
-本構成の目標は、(1) 推論ピーク時の帯域確保、(2) 常用レイテンシの安定化、(3) 待機電力の極小化、(4) インスタントレジュームの実現である。主要制約は、実装面積・BOM・熱設計・耐久性（FeRAM書換）である。  
-*The goals of this configuration are: (1) secure bandwidth at inference peaks, (2) stabilize working latency, (3) minimize standby power, and (4) enable instant resume. The main constraints are die area, BOM cost, thermal design, and FeRAM endurance.*
+- **目標**: 帯域確保・レイテンシ安定化・低待機電力・インスタントレジューム  
+- **制約**: 実装面積・BOMコスト・熱設計・FeRAM耐久性  
+
+*Goals: secure bandwidth, stabilize latency, minimize standby power, enable instant resume.*  
+*Constraints: die area, BOM, thermal design, endurance.*
 
 ---
 
-### 1.6.2 アーキテクチャ / Architecture
+## 🏗️ 1.6.2 アーキテクチャ / Architecture
 
-HBMはワークセットの主記憶として高帯域を提供し、FeRAMはチェックポイント／メタデータ／低頻度更新データを保持する不揮発層として機能する。両者はコントローラで統合し、階層ポリシーで運用する。  
-*HBM serves as the high-bandwidth working store, while FeRAM functions as a persistent tier for checkpoints, metadata, and low-update data. Both are integrated by a controller and managed via hierarchical policies.*
+- **HBM** = 高帯域ワーキングセット  
+- **FeRAM** = チェックポイント／メタデータ／低頻度データ用の不揮発層  
+- **統合** = コントローラ＋ポリシーエンジンによる階層管理  
 
 ```mermaid
 flowchart TD
-  CPU["CPU / Accelerator"]
-  HBM["HBM: high-bandwidth working set"]
-  NV["FeRAM: persistent tier (ckpt / metadata)"]
+  CPU["🖥️ CPU / Accelerator"]
+  HBM["⚡ HBM: high-bandwidth working set"]
+  NV["💾 FeRAM: persistent tier (ckpt / metadata)"]
 
   CPU --> HBM
   HBM <---> NV
@@ -46,103 +50,67 @@ flowchart TD
 
 ---
 
-### 1.6.3 ポリシー設計 / Policy Design
+## ⚙️ 1.6.3 ポリシー設計 / Policy Design
 
-ここではデータを **Hot / Warm / Cold** に分類し、アクセス頻度に応じて階層配置する。  
-*Data is categorized into **Hot / Warm / Cold**, and placed across tiers according to access frequency.*
+データを **Hot / Warm / Cold** に分類し、アクセス頻度に応じて階層配置する。  
+*Data is categorized into Hot / Warm / Cold, and placed across tiers according to access frequency.*
 
-- **Tiering**：HotはHBM、Warm/ColdはFeRAMへ段階配置。  
-- **Checkpoint**：中断復帰時間の目標から間隔 $T_{\mathrm{ckpt}}$ を決定。差分書込みを優先。  
-- **Refresh連携**：FeRAMで保護されたCold領域はHBMのリフレッシュを抑制。  
-- **Wear管理**：書込み頻度制限・ウェアレベリング・エラー訂正（ECC）を併用。  
-- **テレメトリ**：帯域/遅延/書込み回数/温度を常時収集し動的最適化。  
-*Tiering: hot→HBM; warm/cold→FeRAM. Checkpoint: choose $T_{\mathrm{ckpt}}$ from resume targets; prefer delta writes. Refresh coupling: reduce HBM refresh for FeRAM-backed cold regions. Wear: throttle writes, wear-leveling, ECC. Telemetry: continuously collect bandwidth, latency, writes, and temperature.*
-
-> 補足：**Hot = 頻繁アクセス / Warm = 定期アクセス / Cold = ほぼ参照なし** と定義する。  
-> *Note: Hot = frequently accessed / Warm = periodic access / Cold = rarely accessed.*
+- 🔥 **Tiering**: Hot=HBM、Warm/Cold=FeRAM  
+- ⏱️ **Checkpoint**: 間隔 $T_{\mathrm{ckpt}}$ を設定、差分書込み優先  
+- ♻️ **Refresh連携**: FeRAM保護領域のHBMリフレッシュ抑制  
+- 🛡️ **Wear管理**: 書込み制御・ウェアレベリング・ECC  
+- 📡 **テレメトリ**: 帯域/遅延/書込み/温度を常時収集  
 
 ---
 
-### 1.6.4 サイジング指針 / Sizing Guidelines
+## 📏 1.6.4 サイジング指針 / Sizing Guidelines
 
-（補足）  
-- **HBM帯域 ($B_{\mathrm{HBM}}$)**：HBMが提供できる理論メモリ転送速度。  
-  バス幅（1024bit = 128B）× 転送レート × スタック数で決まり、世代ごとに  
-  HBM2 ≈ 256–410 GB/s, HBM2E ≈ 410–460 GB/s, HBM3 ≈ 819 GB/s, HBM3E ≈ 1.2 TB/s（いずれも1スタックあたり）が目安となる。  
-- **p95**：95パーセンタイル値。全アクセスの95%がこの値以下に収まる境界値を指す。  
-  平均値よりも厳しく、p99よりは緩い設計指標で、安定したレイテンシ・帯域を保証するためによく用いられる。
+| 項目 / Item | 指針 / Guideline | 補足 / Note |
+|-------------|------------------|-------------|
+| **HBM帯域** | $B_{\mathrm{HBM}} \ge \text{p95帯域}$（余裕1.1–1.3） | p95 = 95パーセンタイル。ほとんどのアクセスをカバー |
+| **FeRAM容量** | $C_{\mathrm{Fe}} \ge C_{\mathrm{ckpt}} + C_{\mathrm{meta}} + C_{\mathrm{cold}}$ （+20%余裕推奨） | ckpt=チェックポイント, meta=メタデータ |
+| **Checkpoint間隔** | $T_{\mathrm{ckpt}} \approx \tfrac{C_{\mathrm{ckpt}}}{W_{\mathrm{Fe}}/k}$ | $k$=圧縮/差分係数 |
+| **耐久チェック** | 年間書換 $N_{\mathrm{year}}$ が 10¹²–10¹³ 内に収まること | FeRAM耐久性確保 |
 
----
-
-- **HBM帯域**： $B_{\mathrm{HBM}} \ge \text{p95帯域}$（余裕係数1.1–1.3）。  
-- **FeRAM容量**： $C_{\mathrm{Fe}} \ge C_{\mathrm{ckpt}} + C_{\mathrm{meta}} + C_{\mathrm{cold}}$ （余裕20%推奨）。  
-- **Checkpoint間隔**：レジューム目標 $t_{\mathrm{resume}}$ と書込み帯域 $W_{\mathrm{Fe}}$ から  
-
-$$
-T_{\mathrm{ckpt}} \approx \frac{C_{\mathrm{ckpt}}}{W_{\mathrm{Fe}}/k}
-$$
-
-（ $k$ : 圧縮/差分係数）。  
-
-- **耐久チェック**：年間書換回数 $N_{\mathrm{year}}$ がデバイス耐久（10¹²–10¹³）内に収まるよう調整。  
-*HBM bandwidth: ≥p95 demand with 10–30% margin. FeRAM capacity: ckpt+metadata+cold (+20%). Checkpoint interval: $T_{\mathrm{ckpt}} \approx C_{\mathrm{ckpt}} / (W_{\mathrm{Fe}}/k)$. Endurance: ensure annual writes within 10¹²–10¹³ cycles.*
+（補足: **HBM帯域** = バス幅×転送レート×スタック数。HBM2 ≈ 256–410 GB/s, HBM3 ≈ 819 GB/s, HBM3E ≈ 1.2 TB/s）  
 
 ---
 
-### 1.6.5 実装ノート / Implementation Notes
+## 🛠️ 1.6.5 実装ノート / Implementation Notes
 
-- **パッケージ**：CPU/アクセラレータ、HBM、FeRAMはいずれもシリコンインターポーザ上で統合。これにより、広帯域かつ低レイテンシな接続が可能となり、待機電力低減やインスタントレジューム機能の効果が最大化される。  
-*Package: CPU/accelerator, HBM, and FeRAM are all integrated on a silicon interposer, enabling wide-bandwidth, low-latency connections and maximizing the effectiveness of low standby power and instant resume.*
-
-- **インタフェース**：HBMは並列広帯域I/F、FeRAMはNVMバスでコントローラ直結。  
-*Interface: HBM via wide parallel I/F; FeRAM attached directly to the controller through an NVM bus.*
-
-- **CPU設計統合**：これらを前提としたCPU/SoC設計は、**SystemDK** によるトップダウン統合設計で行い、チップレット／パッケージ／OSレイヤまで一貫して最適化する。  
-*CPU/SoC design is performed under the assumption of this integration using **SystemDK**, enabling top-down co-design across chiplets, package, and OS layers.*
-
-- **信頼性**：ECC、リテンション監視、温度ガード、スクラブ。  
-*Reliability: ECC, retention monitors, thermal guard, scrubbing.*
-
-- **セキュリティ**：チェックポイント暗号化と改ざん検知。  
-*Security: encrypt and integrity-check checkpoints.*
+- 📦 **パッケージ**: CPU/HBM/FeRAM をインターポーザ統合 → 広帯域・低レイテンシ  
+- 🔌 **インタフェース**: HBM=広帯域I/F、FeRAM=NVMバス直結  
+- 🧩 **CPU設計統合**: **SystemDK** によるトップダウン設計で一貫最適化  
+- 🔒 **信頼性**: ECC, リテンション監視, 温度ガード, スクラブ  
+- 🔑 **セキュリティ**: チェックポイント暗号化＋改ざん検知  
 
 ---
 
-### 1.6.6 評価計画 / Evaluation Plan
+## 📊 1.6.6 評価計画 / Evaluation Plan
 
-代表ワークロードで (帯域, p95遅延, 待機電力, レジューム時間, 年間書換数) を測定し、導入前後を比較する。失敗基準（例：p95遅延悪化、耐久超過の兆候）も定義する。  
-*Measure bandwidth, p95 latency, standby power, resume time, and annual writes under workloads; compare against baseline and define failure criteria.*
-
----
-
-### 1.6.7 将来展開 / Path to HBM＋FeFET
-
-同じポリシーフレームでFeFETモデルに置き換える。非破壊リード・高密度の利点を活かし、FeRAMで調整したパラメータを継承して検証を短縮。  
-*Swap in FeFET models under the same policy framework. Leverage non-destructive reads and density; reuse FeRAM parameters to shorten validation.*
+- 帯域, p95遅延, 待機電力, レジューム時間, 年間書換数を測定  
+- 導入前後を比較し、失敗基準（例: p95悪化, 耐久超過）を定義  
 
 ---
 
-### 1.6.8 SystemDKによる統合設計 / SystemDK-based Integration
+## 🚀 1.6.7 将来展開 / Path to HBM＋FeFET
 
-CPU/アクセラレータ、HBM、FeRAMを含むメモリ階層の設計は、個別要素の積み上げではなく、**SystemDK** によるトップダウン設計で統合される。  
-この枠組みでは、以下を一貫して最適化できる：  
+- 同じポリシーでFeFETに置換可能  
+- **非破壊リード**と**高密度**の利点を活かし、検証期間短縮  
 
-- 全体アーキテクチャ定義（CPU–HBM–FeRAM–NANDの階層設計）  
-- インタフェース仕様（帯域、バス幅、クロックドメイン）  
-- パッケージ統合（インターポーザ、チップレット配置）  
-- OS/ミドルウェア連携（チェックポイント管理、電力制御、セキュリティ）  
+---
 
-*Design of the memory hierarchy—including CPU/accelerator, HBM, and FeRAM—is not an ad-hoc assembly but integrated via **SystemDK** in a top-down flow. This framework co-optimizes:  
-- System architecture (CPU–HBM–FeRAM–NAND hierarchy)  
-- Interface specs (bandwidth, bus width, clock domains)  
-- Package integration (interposer, chiplet placement)  
-- OS/middleware support (checkpointing, power, security).*
+## 🧭 1.6.8 SystemDKによる統合設計 / SystemDK-based Integration
 
-#### 統合イメージ（本文補足）
+SystemDKによるトップダウン設計で以下を統合最適化：  
+- 🖥️ 全体アーキ (CPU–HBM–FeRAM–NAND 階層)  
+- 🔌 I/F仕様 (帯域・バス幅・クロックドメイン)  
+- 📦 パッケージ (インターポーザ・チップレット配置)  
+- 🛠️ OS/ミドル (ckpt管理・電力制御・セキュリティ)  
 
 ```mermaid
 flowchart TB
-    subgraph Interposer["Silicon Interposer"]
+    subgraph Interposer["🧩 Silicon Interposer"]
         CPU["CPU / Accelerator"]
         HBM["HBM Stacks"]
         FeRAM["FeRAM Chiplet / NVM Layer"]
