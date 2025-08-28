@@ -160,9 +160,9 @@ flowchart TB
 ```
 ---
 
-# 📘 VSRAMアーカイブ (2001)
+## 関連文書　 📘 VSRAMアーカイブ (2001)
 
 2001年に量産された **VSRAM + Flash ハイブリッドメモリ** により、  
 世界初の **カメラ付き携帯電話** が実現した記録です。  
 
-👉 [こちらから参照](https://samizo-aitl.github.io/Edusemi-Plus/archive/in2001/VSRAM_2001.html)
+👉 [こちらから参照](https://samizo-aitl.github.io/Edusemi-Plus/archive/in2001/VSRAM_2001/)
