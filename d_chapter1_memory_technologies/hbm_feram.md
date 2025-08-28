@@ -71,10 +71,10 @@ $$
 T_{\mathrm{ckpt}} \approx \frac{C_{\mathrm{ckpt}}}{W_{\mathrm{Fe}}/k}
 $$
 
-（$k$: 圧縮/差分係数）。  
+（ $k$ : 圧縮/差分係数）。  
 
 - **耐久チェック**：年間書換回数  $N_{\mathrm{year}}$ がデバイス耐久（10¹²–10¹³）内に収まるよう調整。  
-*HBM bandwidth: ≥p95 demand with 10–30% margin. FeRAM capacity: ckpt+metadata+cold (+20%). Checkpoint interval:  $T_{\mathrm{ckpt}} \approx C_{\mathrm{ckpt}} / (W_{\mathrm{Fe}}/k)$ . Endurance: ensure annual writes within 10¹²–10¹³ cycles.*
+*HBM bandwidth: ≥p95 demand with 10–30% margin. FeRAM capacity: ckpt+metadata+cold (+20%). Checkpoint interval: $T_{\mathrm{ckpt}} \approx C_{\mathrm{ckpt}} / (W_{\mathrm{Fe}}/k)$ . Endurance: ensure annual writes within 10¹²–10¹³ cycles.*
 
 ---
 
