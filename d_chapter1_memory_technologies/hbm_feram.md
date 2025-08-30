@@ -170,8 +170,6 @@ which enabled the world’s first camera-equipped mobile phone in combination wi
 
 👉 [こちらから参照 / Access here](https://samizo-aitl.github.io/Edusemi-Plus/archive/in2001/VSRAM_2001/)
 
----
-
 💾 **Hybrid Memory (HBM+FeRAM)**  
 HBMは高帯域・大容量を提供し、FeRAMは不揮発・低電力・瞬時復帰を補完。  
 *HBM provides high bandwidth and capacity, while FeRAM complements with non-volatility,  
