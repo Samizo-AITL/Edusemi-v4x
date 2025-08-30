@@ -160,15 +160,26 @@ flowchart TB
 ```
 ---
 
-## 関連文書　 📘 VSRAMアーカイブ (2001)
+## 関連文書 / Related Documents
 
+📘 **VSRAMアーカイブ (2001)**  
 2001年に量産された **エプソン製モバイル用疑似SRAM（VSRAM）** が、  
-シャープの Flash と組み合わせられることで、世界初の **カメラ付き携帯電話** が実現した記録です。  
+シャープ製 Flash と組み合わせられることで、世界初の **カメラ付き携帯電話** が実現した記録です。  
+*This is a record of Epson’s pseudo-SRAM (VSRAM) for mobile devices, mass-produced in 2001,  
+which enabled the world’s first camera-equipped mobile phone in combination with Sharp’s Flash.*  
 
-👉 [こちらから参照](https://samizo-aitl.github.io/Edusemi-Plus/archive/in2001/VSRAM_2001/)
+👉 [こちらから参照 / Access here](https://samizo-aitl.github.io/Edusemi-Plus/archive/in2001/VSRAM_2001/)
 
-- **Hybrid Memory (HBM+FeRAM)**: HBMは高帯域・大容量を提供し、FeRAMは不揮発・低電力・瞬時復帰を補完。  
-  **SystemDK** によるトップダウン協調設計（チップレット／コントローラ／OS）で、  
-  スタンバイ電力と再起動時間を削減するハイブリッド構成を検討・教材化。  
-  [📄 HBM+FeRAM Chiplet Integration (PDF)](./HBM_FeRAM_Chiplet_MobileEdgeAI.pdf)
-  
+---
+
+💾 **Hybrid Memory (HBM+FeRAM)**  
+HBMは高帯域・大容量を提供し、FeRAMは不揮発・低電力・瞬時復帰を補完。  
+*HBM provides high bandwidth and capacity, while FeRAM complements with non-volatility,  
+low standby power, and instant resume.*  
+
+**SystemDK** によるトップダウン協調設計（チップレット／コントローラ／OS）で、  
+スタンバイ電力と再起動時間を削減するハイブリッド構成を検討・教材化。  
+*Using **SystemDK** top-down co-design (chiplets / controllers / OS),  
+we explore and document hybrid memory architectures that reduce standby power and reboot time.*  
+
+[📄 HBM+FeRAM Chiplet Integration (PDF)](./HBM_FeRAM_Chiplet_MobileEdgeAI.pdf)
