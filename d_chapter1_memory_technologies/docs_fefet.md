@@ -93,8 +93,11 @@ title: 0.18μm CMOS (1.8V/3.3V) + 1.8V FeFET Gate-Last Module
 
 ## 🎯 戦略ポイント / Strategic Notes
 
-- **日本語**：ALD導入とTiNスパッタの流用により、0.18 µm CMOSラインでのFeFET統合が可能。  
-  *English*: By adding ALD and reusing TiN sputter tools, FeFET integration on a 0.18 µm CMOS line is feasible.  
+- **日本語**：老朽化した 0.18 µm CMOS ラインを活用し、**最小限の追加投資（ALD導入）**で新しい補助NVM（FeFET）を統合できる。  
+  *English*: Legacy 0.18 µm CMOS lines can be revitalized by **minimal additional investment (ALD introduction)**, enabling integration of new auxiliary NVM (FeFET).  
+
+- **日本語**：ALD導入とTiNスパッタの流用により、既存設備を生かしたプロセス実装が可能。  
+  *English*: FeFET integration is feasible by adding ALD and reusing existing TiN sputter tools.  
 
 - **日本語**：FeFETは補助的用途に限定し、大容量化は狙わない。  
   *English*: FeFET is restricted to auxiliary use only, without pursuing large memory arrays.  
