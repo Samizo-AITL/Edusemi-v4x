@@ -166,3 +166,9 @@ flowchart TB
 シャープの Flash と組み合わせられることで、世界初の **カメラ付き携帯電話** が実現した記録です。  
 
 👉 [こちらから参照](https://samizo-aitl.github.io/Edusemi-Plus/archive/in2001/VSRAM_2001/)
+
+- **Hybrid Memory (HBM+FeRAM)**: HBMは高帯域・大容量を提供し、FeRAMは不揮発・低電力・瞬時復帰を補完。  
+  **SystemDK** によるトップダウン協調設計（チップレット／コントローラ／OS）で、  
+  スタンバイ電力と再起動時間を削減するハイブリッド構成を検討・教材化。  
+  [📄 HBM+FeRAM Chiplet Integration (PDF)](./HBM_FeRAM_Chiplet_MobileEdgeAI.pdf)
+  
