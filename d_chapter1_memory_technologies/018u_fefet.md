@@ -115,7 +115,7 @@ title: 0.18μm CMOS (1.8V/3.3V) + 1.8V FeFET Gate-Last Module
   [FeFET_CMOS018um_IntegrationStudy_Main.pdf](./FeFET_CMOS018um_IntegrationStudy_Main.pdf)
 
 - **FeFET CMOS 0.18µm Integration Study (Supplementary PDF)**  
-  [FeFET_CMOS018um_IntegrationStudy_Supplementary.pdf](./FeFET_CMOS018um_IntegrationStudy_Supplementary.pdf)
+  [FeFET_CMOS018um_IntegrationStudy_Supplementary.pdf](./FeFET_CMOS_018um_IntegrationStudy_Supplementary.pdf)
 
 - **FeFET Overview (HZO stack & reliability)** → `fefet_hzo_overview.md`  
 - **E-test Scripts & CSV Templates** → `etests_fefet_templates.md`
