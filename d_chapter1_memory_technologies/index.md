@@ -38,6 +38,7 @@ title: 応用編 第1章｜メモリ技術の構造と選定指針
 | 1.4 | MRAM：磁気RAM・不揮発・高耐久                        | Durable non-volatile memory (STT/SOT); eFlash replacement    | [📎](mram.md) |
 | 1.5 | 3D NAND：大容量・不揮発・ストレージ用途              | Large-capacity flash for storage (eMMC, SSD, UFS, etc.)     | [📎](3dnand.md) |
 | 1.6 | HBM＋FeRAM：ハイブリッドメモリによるモバイルAI応用   | Hybrid memory (HBM + FeRAM) for mobile/edge AI              | [📎](hbm_feram.md) |
+| 1.7  | FeFET（HfO₂/HZO, Gate-Last） | CMOS-compatible FeFET for auxiliary NVM (SRAM backup, Instant-On) | [018u_fefet.md](./018u_fefet.md) |
 
 ---
 
