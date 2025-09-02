@@ -38,6 +38,8 @@ gantt
     title 部門別 SystemDK 開発スケジュール
     dateFormat  YYYY-MM-DD
     axisFormat  %m/%d
+    %% 基準日を追加
+    todayMarker stroke-width:2px,stroke:red,opacity:0.5
 
     section 設計部
     仕様策定・ブロック図     :a1, 2025-09-01, 2w
@@ -78,5 +80,4 @@ gantt
     1st Silicon評価         :e5, 2026-01-19, 3w
     2nd Silicon評価         :e6, 2026-02-16, 3w
     最終評価・報告           :e7, 2026-03-23, 2w
-
 ```
