@@ -64,6 +64,22 @@ This chapter introduces the concept of the **System Design Kit (SystemDK)** and 
 
 ---
 
+## 📅 開発プロジェクト進行表｜Project Schedule
+
+SystemDKは、**設計・制御・CAD・製造・評価といった複数部門を跨ぐ統合開発**であるため、  
+単独の技術理解だけでなく、**週単位での全体進行管理**が極めて重要となります。  
+*Since SystemDK is an integrated development that spans across **design, control, CAD, fabrication, and evaluation divisions**,  
+not only technical understanding but also **weekly project management across divisions** is crucial.*
+
+そのため本章では、部門別に詳細化した **SystemDK 開発プロジェクト進行表** を用意しています。  
+これにより、読者は「制約理論」と「実務スケジュール」を結びつけて理解できます。  
+*Therefore, this chapter provides a **detailed SystemDK project schedule by division**,  
+allowing readers to connect **constraint theories** with **practical development timelines**.*
+
+📎 [➡️ **SystemDK 開発プロジェクト進行表（部門別詳細版）を見る / *View Detailed Project Schedule by Division***](./f2a_systemdk_schedule.md)
+
+---
+
 ## 🚀 SystemDK PoCマニュアル｜SystemDK PoC Manual
 
 📦 **SystemDKに基づくPoCマニュアル（GAA / AMS / MRAM統合設計）**  
