@@ -34,7 +34,6 @@ title: SystemDK 開発プロジェクト進行表（部門別詳細版）
 ## 🖼️ Mermaid ガントチャート
 
 ```mermaid
-```mermaid
 gantt
     title 部門別 SystemDK 開発スケジュール
     dateFormat  YYYY-MM-DD
