@@ -58,6 +58,7 @@ title: 基礎編 第6章：テスト・パッケージ・製品化
 | 6.1 | [6.1_etest_monitoring.md](6.1_etest_monitoring.md) | **ETEST**：TEG測定による素子特性のモニタリング<br>📐 *Monitor process condition via Vth, Id, etc.* |
 | 6.2 | [6.2_wafer_test.md](6.2_wafer_test.md) | **ウエハテスト**：製品品質検査とD値による工程評価<br>🧪 *Wafer-level defect screening with D-metric* |
 | 6.3 | [6.3_failure_analysis.md](6.3_failure_analysis.md) | **不良解析**：物理的原因の特定（FIB, OBIRCH, etc.）<br>🔍 *Root cause analysis using FA tools* |
+| 6.3a | [6.3a_process_feedback.md](6.3a_process_feedback.md) | **プロセス工程内のフィードバック**：欠陥解析・フォトQC・CDシフト制御<br>🔄 *In-line defect analysis, photolithography QC loop, and CD shift feedback* |
 | 6.4 | [6.4_packaging.md](6.4_packaging.md) | **パッケージング**：実装と歩留まり、信頼性の確保<br>📦 *COF and package methods for reliable delivery* |
 | 6.5 | [6.5_final_test.md](6.5_final_test.md) | **ファイナルテスト**：市場出荷前の最終判定<br>✅ *Final test as the gatekeeper for shipping* |
 | 6.6 | [6.6_reliability_and_shipping.md](6.6_reliability_and_shipping.md) | **信頼性試験と製品出荷**：バーンイン、寿命試験、出荷管理<br>⏳ *Burn-in, life tests, and shipping control* |
