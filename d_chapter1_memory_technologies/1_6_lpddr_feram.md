@@ -215,9 +215,23 @@ This section describes FEM workflows for Thermal, Mechanical Stress, and EM Fiel
 - 代表ケース：ピーク帯域動作、チェックポイント・オフロード時のBurst、低電力Standby  
 - モデル粒度：ダイ（熱は粗メッシュ→詳細局所化）、TSV/バンプ近傍は細分化  
 - 代表方程式 / Governing Eqs  
-  - Heat:  $ \dfrac{\partial T}{\partial t} = \alpha \nabla^2 T + \dfrac{q}{\rho c} $  
-  - Stress:  $ \nabla \cdot \boldsymbol{\sigma} + \mathbf{f} = 0,\ \ \boldsymbol{\sigma} = \mathbf{C}:\boldsymbol{\varepsilon} $  
-  - EM:  $ \nabla \times \mathbf{H} = \mathbf{J} + \dfrac{\partial \mathbf{D}}{\partial t},\ \ \nabla \times \mathbf{E} = -\dfrac{\partial \mathbf{B}}{\partial t} $
+
+Heat:
+$$
+\frac{\partial T}{\partial t} = \alpha \nabla^2 T + \frac{q}{\rho c}
+$$
+
+Stress:
+$$
+\nabla \cdot \boldsymbol{\sigma} + \mathbf{f} = 0, \quad 
+\boldsymbol{\sigma} = \mathbf{C} : \boldsymbol{\varepsilon}
+$$
+
+EM:
+$$
+\nabla \times \mathbf{H} = \mathbf{J} + \frac{\partial \mathbf{D}}{\partial t}, \quad 
+\nabla \times \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t}
+$$
 
 ---
 
