@@ -35,10 +35,10 @@ title: 応用編 第1章｜メモリ技術の構造と選定指針
 | 1.1 | SRAM（Static RAM）：高速・揮発                      | High-speed volatile memory for cache/registers              | [📎](sram.md) |
 | 1.2 | DRAM（Dynamic RAM）：大容量・リフレッシュ必要       | High-density memory requiring refresh (e.g., DDR, LPDDR)    | [📎](dram.md) |
 | 1.3 | FeRAM：強誘電体RAM・不揮発                          | Non-volatile memory for low-power / analog-mixed LSI        | [📎](feram.md) |
-| 1.4 | MRAM：磁気RAM・不揮発・高耐久                        | Durable non-volatile memory (STT/SOT); eFlash replacement    | [📎](mram.md) |
+| 1.4 | MRAM：磁気RAM・不揮発・高耐久                        | Durable non-volatile memory (STT/SOT); eFlash replacement   | [📎](mram.md) |
 | 1.5 | 3D NAND：大容量・不揮発・ストレージ用途              | Large-capacity flash for storage (eMMC, SSD, UFS, etc.)     | [📎](3dnand.md) |
 | 1.6 | HBM＋FeRAM：ハイブリッドメモリによるモバイルAI応用   | Hybrid memory (HBM + FeRAM) for mobile/edge AI              | [📎](hbm_feram.md) |
-| 1.7  | FeFET（HfO₂/HZO, Gate-Last） | CMOS-compatible FeFET for auxiliary NVM (SRAM backup, Instant-On) | [018u_fefet.md](./018u_fefet.md) |
+| 1.7 | FeFET（HfO₂/HZO, Gate-Last）                        | CMOS-compatible FeFET for auxiliary NVM (SRAM backup, Instant-On) | [📎](018u_fefet.md) |
 
 ---
 
