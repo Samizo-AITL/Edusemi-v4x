@@ -168,12 +168,16 @@ flowchart TD
 **スタンバイ電力 / Standby Power**  
 *Normalized (LPDDR only = 100). Lower is better.*  
 
-![Standby Power](./fig_lpddr_feram_standby_power.png)
+<p align="center">
+  <img src="./fig_lpddr_feram_standby_power.png" alt="Standby Power" width="80%">
+</p>
 
 **レジューム遅延 / Resume Latency**  
 *Milliseconds. Lower is better.*  
 
-![Resume Latency](./fig_lpddr_feram_resume_latency.png)
+<p align="center">
+  <img src="./fig_lpddr_feram_resume_latency.png" alt="Resume Latency" width="80%">
+</p>
 
 > 備考 / Notes: グラフは本章の代表値（10–20%低減、100–500 µs クラスの復帰）を視覚化した概略値です。*Illustrative values consistent with chapter figures.*
 
