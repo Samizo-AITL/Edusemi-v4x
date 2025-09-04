@@ -382,5 +382,5 @@ However, in today’s mobile SoC designs, LPDDR + FeRAM offers a more practical 
 
 👉 [📄 LPDDR+FeRAM Chiplet Integration (PDF)](./LPDDR_FeRAM.pdf)  
 👉 [📄 HBM+FeRAM Chiplet Integration (PDF)](./HBM_FeRAM_Chiplet_MobileEdgeAI.pdf)  
-- [第2a章：SystemDK](https://samizo-aitl.github.io/Edusemi-v4x/d_chapter2a_systemdk/)
+- [第2a章：SystemDK](https://samizo-aitl.github.io/Edusemi-v4x/f_chapter2a_systemdk/)
 
