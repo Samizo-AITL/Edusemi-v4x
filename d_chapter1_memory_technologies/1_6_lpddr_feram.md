@@ -201,6 +201,9 @@ flowchart LR
   RESULT2 --> SYS
   RESULT3 --> SYS
 ```
+
+---
+
 ### 1.6.10 🔍 FEM解析 / FEM Analysis
 
 本節では **熱解析 / Thermal**, **応力解析 / Mechanical Stress**, **電磁界解析 / EM Field** の3観点で  
@@ -212,26 +215,20 @@ This section describes FEM workflows for Thermal, Mechanical Stress, and EM Fiel
 - 代表ケース：ピーク帯域動作、チェックポイント・オフロード時のBurst、低電力Standby  
 - モデル粒度：ダイ（熱は粗メッシュ→詳細局所化）、TSV/バンプ近傍は細分化  
 - 代表方程式 / Governing Eqs  
-  - Heat: \\(\partial T/\partial t = \alpha \nabla^2 T + q/(\rho c)\\)  
-  - Stress: \\(\nabla \cdot \boldsymbol{\sigma} + \mathbf{f} = 0,\ \boldsymbol{\sigma} = \mathbf{C}:\boldsymbol{\varepsilon}\\)  
-  - EM: \\(\nabla \times \mathbf{H} = \mathbf{J} + \partial \mathbf{D}/\partial t,\ \nabla \times \mathbf{E} = -\partial \mathbf{B}/\partial t\\)
+  - Heat: $ \dfrac{\partial T}{\partial t} = \alpha \nabla^2 T + \dfrac{q}{\rho c} $  
+  - Stress: $ \nabla \cdot \boldsymbol{\sigma} + \mathbf{f} = 0,\ \ \boldsymbol{\sigma} = \mathbf{C}:\boldsymbol{\varepsilon} $  
+  - EM: $ \nabla \times \mathbf{H} = \mathbf{J} + \dfrac{\partial \mathbf{D}}{\partial t},\ \ \nabla \times \mathbf{E} = -\dfrac{\partial \mathbf{B}}{\partial t} $
 
 ---
 
 #### 1.6.10.1 熱解析 / Thermal Analysis
 **目的 / Objective**  
 - LPDDR・FeRAMの同時発熱時における温度分布、ホットスポット、冷却設計の最適化  
-**代表入力 / Inputs**  
-- 消費電力マップ（LPDDR: アクティブ/スタンバイ、FeRAM: 書込パルス時）  
-- パッケージ/ヒートスプレッダ/ヒートシンク/TIMの熱パラメータ（k, ρ, c, Rθ）  
-- 環境境界条件（自然/強制対流、放射）  
-**評価指標 / Metrics**  
-- 最高温度 \\(T_{max}\\)、温度勾配 \\(|\nabla T|\\)、熱時定数、Rθ_jc・Rθ_ja  
-**合否の目安 / Pass-Fail**  
-- \\(T_{max} < T_{spec}\\)、勾配が応力閾値を誘発しないこと
 
 **結果例 / Example**  
-![Thermal](./images/fig_1_6_fem_thermal_example.png)  
+<p align="center">
+  <img src="./images/fig_1_6_fem_thermal_example.png" alt="Thermal" width="80%">
+</p>  
 *温度分布の一例（ダミー図）。ホットスポットとスプレッダ効果の比較に使用。*
 
 ---
@@ -239,17 +236,11 @@ This section describes FEM workflows for Thermal, Mechanical Stress, and EM Fiel
 #### 1.6.10.2 応力解析 / Mechanical Stress
 **目的 / Objective**  
 - TSV/バンプ/接着層界面の応力集中、サーマルサイクル信頼性、はんだクラック起点の特定  
-**代表入力 / Inputs**  
-- CTE・ヤング率・ポアソン比、接着層の粘弾性モデル  
-- 熱サイクル条件（JEDEC相当）と実動作温度プロファイル  
-- 幾何（TSV径/ピッチ、UBM厚、Underfill有無）  
-**評価指標 / Metrics**  
-- 等価ミーゼス応力、界面せん断、塑性ひずみ蓄積、ΔCTE起因の損傷指標  
-**合否の目安 / Pass-Fail**  
-- クリティカル界面での安全率 > 規定値、塑性累積 < 閾値
 
 **結果例 / Example**  
-![Stress](./images/fig_1_6_fem_stress_example.png)  
+<p align="center">
+  <img src="./images/fig_1_6_fem_stress_example.png" alt="Stress" width="80%">
+</p>  
 *TSV周りの応力コンター（ダミー図）。半径方向の集中と界面付近のピークを可視化。*
 
 ---
@@ -257,16 +248,11 @@ This section describes FEM workflows for Thermal, Mechanical Stress, and EM Fiel
 #### 1.6.10.3 電磁界解析 / EM Field (SI/PI/EMI)
 **目的 / Objective**  
 - LPDDR高速I/O と FeRAM制御パルスの**相互干渉**（クロストーク）および電源インテグリティを確認  
-**代表入力 / Inputs**  
-- パッケージ/基板配線幾何、誘電率/損失、PDNスタック（デカップ値・配置）  
-- ドライバ/レシーバモデル（IBIS/Spice）、アクティビティパターン  
-**評価指標 / Metrics**  
-- 波形オーバー/アンダーシュート、ジッタ、アイ開口、Sパラメータ、PDNインピーダンスピーク  
-**合否の目安 / Pass-Fail**  
-- 受信閾値マージン確保、EMI規格内、PDN Z(ω) ピーク < 目標
 
 **結果例 / Example**  
-![EM](./images/fig_1_6_fem_em_example.png)  
+<p align="center">
+  <img src="./images/fig_1_6_fem_em_example.png" alt="EM Crosstalk" width="80%">
+</p>  
 *隣接配線のクロストーク波形（ダミー図）。アグレッサとビクティムの振る舞い比較。*
 
 ---
