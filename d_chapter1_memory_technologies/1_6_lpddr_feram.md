@@ -281,6 +281,35 @@ flowchart LR
 
 ---
 
+#### 1.6.10.5 解析セットアップ表 / Setup Tables
+
+**(A) 条件・目的・評価指標 / Objective–Inputs–Metrics**
+
+| Domain   | Objective (JP/EN)                     | Key Inputs                 | Metrics                          | Pass-Fail               |
+|----------|---------------------------------------|----------------------------|----------------------------------|-------------------------|
+| Thermal  | 発熱分布の把握と冷却最適化 / Hotspot & Cooling | Power map, k/ρ/c, BCs      | Tmax, ∇T, Rθ                     | Tmax < Tspec            |
+| Stress   | 界面応力と信頼性 / Interface Reliability | CTE, E, ν, geometry        | σvM, τiface, plastic strain      | Safety margin > target  |
+| EM       | SI/PI/EMI健全性 / Signal Integrity     | Stack-up, IBIS/Spice       | Overshoot, Eye, Z(ω), S-params   | Margin/EMI within spec  |
+
+---
+
+**(B) 入力チェックリスト / Input Checklist**
+
+- 単位系一貫性（SI）を確認すること  
+- メッシュ収束確認（refinement study）を行うこと  
+- 境界条件の物理妥当性をレビューすること  
+- 熱 → 応力 → EM の **連成一方向** を考慮（温度依存物性の反映）  
+- Worst / Typical / Best の 3 コーナーで評価すること  
+
+---
+
+**メモ / Notes**
+
+- 表や図は教材用デモ。実務ではツール出力（カラー/スケール/凡例）を整形して用いること  
+- 解析条件（電力、幾何、材料データ）は `data/ch1/fem_inputs/` ディレクトリで管理し、再現性を確保すること
+  
+---
+
 ## 🧭 1.6.11 時系列シーケンス / Sequence of Operations
 
 *Power state transitions with checkpoint offload and instant resume.*
