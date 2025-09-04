@@ -380,7 +380,9 @@ However, in today’s mobile SoC designs, LPDDR + FeRAM offers a more practical 
 
 ## 📄 1.6.15 関連文書 / References
 
-👉 [📄 LPDDR+FeRAM Chiplet Integration (PDF)](./LPDDR_FeRAM.pdf)  
-👉 [📄 HBM+FeRAM Chiplet Integration (PDF)](./HBM_FeRAM_Chiplet_MobileEdgeAI.pdf)  
-- [第2a章：SystemDK](https://samizo-aitl.github.io/Edusemi-v4x/f_chapter2a_systemdk/)
-
+| 項目 / Item | 説明 / Description | Links |
+|-------------|-------------------|-------|
+| 📄 LPDDR+FeRAM Chiplet Integration | LPDDRとFeRAMを統合したモバイル/エッジAI向けチップレット構想。<br>*LPDDR + FeRAM integration concept for Mobile/Edge AI* | [![PDF](https://img.shields.io/badge/View-PDF-red?style=for-the-badge&logo=adobeacrobatreader)](./LPDDR_FeRAM.pdf) |
+| 📄 HBM+FeRAM Chiplet Integration | HBMとFeRAMを組み合わせたチップレット統合方式の検討。<br>*HBM + FeRAM chiplet integration approach for Mobile/Edge AI* | [![PDF](https://img.shields.io/badge/View-PDF-red?style=for-the-badge&logo=adobeacrobatreader)](./HBM_FeRAM_Chiplet_MobileEdgeAI.pdf) |
+| 📘 VSRAMアーカイブ (2001) | 2001年に量産されたエプソン製モバイル用VSRAMとシャープ製Flashの組合せにより、世界初のカメラ付き携帯電話を実現。<br>*Epson’s pseudo-SRAM enabled the first camera-equipped mobile phone in 2001.* | [![Site](https://img.shields.io/badge/View-Site-brightgreen?style=for-the-badge&logo=githubpages)](https://samizo-aitl.github.io/Edusemi-Plus/archive/in2001/VSRAM_2001/) |
+| 🔧 第2a章：SystemDK | 熱・応力・ノイズ制約を体系的に整理した設計キット章。<br>*System Design Kit for thermal/stress/EMI constraints* | [![Site](https://img.shields.io/badge/View-Site-brightgreen?style=for-the-badge&logo=githubpages)](https://samizo-aitl.github.io/Edusemi-v4x/f_chapter2a_systemdk/) [![Repo](https://img.shields.io/badge/View-Repo-blue?style=for-the-badge&logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/f_chapter2a_systemdk) |
