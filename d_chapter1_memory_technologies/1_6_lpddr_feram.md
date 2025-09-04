@@ -3,6 +3,8 @@ layout: default
 title: "1.6 統合メモリ：LPDDR＋FeRAMによるモバイルエッジAI"
 ---
 
+---
+
 # 1.6 統合メモリ：LPDDR＋FeRAMによるモバイルエッジAI  
 *Hybrid Memory (LPDDR + FeRAM) for Mobile/Edge AI*  
 
