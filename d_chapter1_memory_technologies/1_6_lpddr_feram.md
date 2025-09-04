@@ -196,6 +196,52 @@ flowchart LR
 
 ---
 
+## 🧭 1.6.13 時系列シーケンス / Sequence of Operations
+
+*Power state transitions with checkpoint offload and instant resume.*
+
+```mermaid
+sequenceDiagram
+    autonumber
+    participant App as 🧠 App/AI Runtime
+    participant OS as 🧩 OS / SystemDK
+    participant DRAM as 📗 LPDDR (volatile)
+    participant NVM as 💾 FeRAM (non-volatile)
+
+    Note over App,OS: 推論中 / Inference
+    App->>DRAM: Read/Write activations & weights
+    OS-->>NVM: Background checkpoint (periodic)
+
+    Note over OS,NVM: スリープ移行 / Enter Sleep
+    OS->>NVM: Final checkpoint (OS state, app state)
+    OS->>DRAM: Quiesce & flush working set
+    OS->>DRAM: Power-down / self-refresh minimization
+    DRAM-->>OS: Acknowledge
+
+    Note over OS,NVM: 復帰 / Resume
+    OS->>NVM: Restore OS/app state
+    OS->>DRAM: Rapid re-init
+    App->>DRAM: Resume execution (instant)
+```
+
+---
+
+## 📈 1.6.14 比較グラフ / Comparison Charts
+
+**スタンバイ電力 / Standby Power**  
+*Normalized (LPDDR only = 100). Lower is better.*  
+
+![Standby Power](./fig_lpddr_feram_standby_power.png)
+
+**レジューム遅延 / Resume Latency**  
+*Milliseconds. Lower is better.*  
+
+![Resume Latency](./fig_lpddr_feram_resume_latency.png)
+
+> 備考 / Notes: グラフは本章の代表値（10–20%低減、100–500 µs クラスの復帰）を視覚化した概略値です。*Illustrative values consistent with chapter figures.*
+> 
+---
+
 ## 📄 関連文書 / Related Documents
 
 👉 [📄 LPDDR+FeRAM Chiplet Integration (PDF)](./LPDDR_FeRAM.pdf)  
