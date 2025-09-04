@@ -217,17 +217,20 @@ This section describes FEM workflows for Thermal, Mechanical Stress, and EM Fiel
 - 代表方程式 / Governing Eqs  
 
 Heat:
+
 $$
 \frac{\partial T}{\partial t} = \alpha \nabla^2 T + \frac{q}{\rho c}
 $$
 
 Stress:
+
 $$
 \nabla \cdot \boldsymbol{\sigma} + \mathbf{f} = 0, \quad 
 \boldsymbol{\sigma} = \mathbf{C} : \boldsymbol{\varepsilon}
 $$
 
 EM:
+
 $$
 \nabla \times \mathbf{H} = \mathbf{J} + \frac{\partial \mathbf{D}}{\partial t}, \quad 
 \nabla \times \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t}
