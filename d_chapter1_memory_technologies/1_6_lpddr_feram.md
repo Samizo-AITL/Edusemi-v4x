@@ -142,6 +142,60 @@ However, in today’s mobile SoC designs, LPDDR + FeRAM offers a more practical 
 
 ---
 
+## 🛠️ 1.6.11 開発フロー / Development Flow
+
+| **工程 / Step** | **内容 (日本語)** | *Description (English)* |
+|-----------------|------------------|-------------------------|
+| **CPU仕様策定 / CPU Specification** | アプリ要件に基づき演算性能・低消費電力・メモリ帯域を定義 | *Define compute, power, and memory requirements* |
+| **モジュール選定 / Module Selection** | LPDDR・FeRAM容量・インタフェースを決定 | *Select LPDDR, FeRAM, interfaces* |
+| **FPGA設計検証 / FPGA Prototype** | FPGA上でプロトタイプ構築・FeRAM連携検証 | *Prototype on FPGA, verify FeRAM integration* |
+| **RTL設計 / RTL Design** | メモリコントローラ・チェックポイント制御をRTL化 | *Implement memory controller & checkpoint logic* |
+| **物理設計検証 / Physical Design** | 配線遅延・電力・面積を解析 | *Verify layout timing, power, area* |
+| **GDS / GDSII** | マスクデータ生成 | *Generate GDSII mask layout* |
+| **IC製造 / Fabrication** | CMOS＋NVMプロセスでチップ製造 | *Fabricate IC with CMOS + NVM* |
+| **ウエハテスト / Wafer Test** | BIST・プローブカードで特性確認 | *Wafer-level test with probe cards* |
+| **BR/IPDK・PKGDK** | プロセス・パッケージ設計キットで実装最適化 | *Optimize design using BR/IPDK, PKGDK* |
+| **SystemDK** | アーキテクチャ／パッケージ／OSの協調制御 | *System-level co-design with SystemDK* |
+
+```mermaid
+flowchart TD
+  SPEC["📝 CPU仕様策定"]
+  MOD["📦 モジュール選定<br/>(LPDDR, FeRAM)"]
+  FPGA["🔧 FPGA設計検証"]
+  RTL["💻 RTL設計"]
+  PHY["📐 物理設計検証"]
+  GDS["📂 GDSII"]
+  FAB["🏭 IC製造"]
+  WAF["🔬 ウエハテスト"]
+  PKG["📦 BR/IPDK・PKGDK"]
+  SYS["🧩 SystemDK"]
+
+  SPEC --> MOD --> FPGA --> RTL --> PHY --> GDS --> FAB --> WAF --> PKG --> SYS
+```
+
+---
+
+## 🔍 1.6.12 FEM解析 / FEM Analysis
+
+| **解析領域 / Domain** | **内容 (日本語)** | *Description (English)* |
+|-----------------------|------------------|-------------------------|
+| **熱解析 / Thermal** | LPDDRとFeRAMの発熱分布をシミュレーションし、冷却設計を最適化 | *Simulate heat distribution and optimize cooling* |
+| **応力解析 / Mechanical Stress** | TSV・バンプ・接着層での応力集中を評価し、パッケージ信頼性を確認 | *Evaluate stress at TSVs, bumps, adhesives for reliability* |
+| **電磁界解析 / EM Field** | LPDDR高速I/OとFeRAM制御配線のクロストーク、SI/PIを検証 | *Verify crosstalk, SI/PI, EMI between LPDDR and FeRAM interconnects* |
+
+```mermaid
+flowchart LR
+  THERM["🌡️ Thermal Analysis"] --> RESULT1["最適冷却設計<br/>Optimized cooling"]
+  STRESS["🔧 Stress Analysis"] --> RESULT2["高信頼パッケージ<br/>Reliable packaging"]
+  EM["📡 EM Field Analysis"] --> RESULT3["SI/PI・EMI対策<br/>Signal & Power Integrity"]
+
+  RESULT1 --> SYS
+  RESULT2 --> SYS
+  RESULT3 --> SYS
+```
+
+---
+
 ## 📄 関連文書 / Related Documents
 
 👉 [📄 LPDDR+FeRAM Chiplet Integration (PDF)](./LPDDR_FeRAM.pdf)  
