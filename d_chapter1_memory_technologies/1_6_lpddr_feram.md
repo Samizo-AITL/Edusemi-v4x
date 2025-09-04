@@ -3,14 +3,32 @@ layout: default
 title: "1.6 統合メモリ：LPDDR＋FeRAMによるモバイルエッジAI"
 ---
 
----
-
 # 1.6 統合メモリ：LPDDR＋FeRAMによるモバイルエッジAI  
 *Hybrid Memory (LPDDR + FeRAM) for Mobile/Edge AI*  
 
 ---
 
-📌 **概要 / Overview**  
+## 📑 Table of Contents
+- [1.6.1 概要 / Overview](#-161-概要--overview)
+- [1.6.2 目標と制約 / Goals & Constraints](#-162-目標と制約--goals--constraints)
+- [1.6.3 アーキテクチャ / Architecture ＋ プロセスノード対応](#-163-アーキテクチャ--architecture--プロセスノード対応)
+- [1.6.4 動作シナリオ / Operation Scenarios](#-164-動作シナリオ--operation-scenarios)
+- [1.6.5 実装方式 / Implementation Options](#-165-実装方式--implementation-options)
+- [1.6.6 技術比較 / Technology Parameters](#-166-技術比較--technology-parameters)
+- [1.6.7 システム効果 / System-Level Impact](#-167-システム効果--system-level-impact)
+- [1.6.8 開発フロー / Development Flow](#-168-開発フロー--development-flow)
+- [1.6.9 比較グラフ / Comparison Charts](#-169-比較グラフ--comparison-charts)
+- [1.6.10 FEM解析 / FEM Analysis](#-1610-fem解析--fem-analysis)
+- [1.6.11 時系列シーケンス / Sequence of Operations](#-1611-時系列シーケンス--sequence-of-operations)
+- [1.6.12 応用ユースケース / Mobile Edge AI Use Cases](#-1612-応用ユースケース--mobile-edge-ai-use-cases)
+- [1.6.13 広範な含意 / Broader Implications](#-1613-広範な含意--broader-implications)
+- [1.6.14 将来展開 / Future Path](#-1614-将来展開--future-path)
+- [1.6.15 関連文書 / References](#-1615-関連文書--references)
+
+---
+
+## 📌 1.6.1 概要 / Overview
+
 現在、モバイルエッジAI向けの標準メインメモリは **LPDDR** である。  
 我々は **FeRAM** をチップレットとして実装し、不揮発機能を付与することで、低待機電力と  
 **インスタントレジューム（電源断後も状態を保持し、即時復帰できる機能）** を実現する。  
@@ -24,7 +42,7 @@ offering a balanced hybrid memory architecture.*
 
 ---
 
-## 🎯 1.6.1 目標と制約 / Goals & Constraints
+## 🎯 1.6.2 目標と制約 / Goals & Constraints
 
 | **項目** | **内容 (日本語)** | *Description (English)* |
 |----------|------------------|-------------------------|
@@ -33,7 +51,7 @@ offering a balanced hybrid memory architecture.*
 
 ---
 
-## 🏗️ 1.6.2 アーキテクチャ / Architecture
+## 🏗️ 1.6.3 アーキテクチャ / Architecture ＋ プロセスノード対応
 
 - **LPDDR** = メインワーキングメモリ  
   *LPDDR = main working memory*  
@@ -46,20 +64,29 @@ offering a balanced hybrid memory architecture.*
 
 ```mermaid
 flowchart TD
-  CPU["🖥️ CPU / Accelerator"]
-  LPDDR["📗 LPDDR: working memory"]
-  NV["💾 FeRAM: persistent tier (ckpt / OS state)"]
+  CPU["🖥️ CPU / Accelerator (5–3nm FinFET/GAAFET)"]
+  LPDDR["📗 LPDDR: working memory (14–10nm DRAM nodes)"]
+  NV["💾 FeRAM: persistent tier (22–28nm CMOS)"]
 
   CPU --> LPDDR
   LPDDR <---> NV
-  note1{{SystemDK<br/>checkpoint / refresh offload}}
+  note1{SystemDK<br/>checkpoint / refresh offload}
   NV -.-> note1
   LPDDR -.-> note1
 ```
 
+### 🔬 プロセスノード対応 / Process Node Mapping
+
+| **対象 / Target** | **ノード (日本語)** | *Process Node (English)* | **備考 / Notes** |
+|-------------------|---------------------|--------------------------|------------------|
+| **SoC ロジック** | 5〜3nm FinFET/GAAFET | *5–3nm FinFET/GAAFET* | モバイル/エッジSoC世代 |
+| **LPDDR** | 1α〜1γ世代 (14〜10nm DRAM) | *1α–1γ DRAM nodes (14–10nm)* | LPDDR5/5X対応 |
+| **FeRAM** | 22〜28nm CMOS | *22–28nm CMOS nodes* | MCU/IoTで量産済、チップレット実装が現実的 |
+| **将来FeFET** | <10nm CMOS互換 | *sub-10nm CMOS compatible* | Monolithic統合シナリオ |
+
 ---
 
-## 🔄 1.6.3 動作シナリオ / Operation Scenarios
+## 🔄 1.6.4 動作シナリオ / Operation Scenarios
 
 | **フェーズ** | **日本語説明** | *English Description* |
 |--------------|----------------|-----------------------|
@@ -69,7 +96,7 @@ flowchart TD
 
 ---
 
-## 🏗️ 1.6.4 実装方式 / Implementation Options
+## 🏗️ 1.6.5 実装方式 / Implementation Options
 
 | **方式** | **日本語説明** | *English Description* |
 |----------|----------------|-----------------------|
@@ -78,7 +105,7 @@ flowchart TD
 
 ---
 
-## 📊 1.6.5 技術パラメータ比較 / Technology Parameters
+## 📊 1.6.6 技術比較 / Technology Parameters
 
 | **項目** | **LPDDR (typ.)** | **FeRAM (typ.)** |
 |----------|------------------|------------------|
@@ -91,7 +118,7 @@ flowchart TD
 
 ---
 
-## ⚡ 1.6.6 システムレベル効果 / System-Level Impact
+## ⚡ 1.6.7 システム効果 / System-Level Impact
 
 | **指標** | **LPDDRのみ** | **LPDDR+FeRAM** |
 |----------|----------------|-----------------|
@@ -101,48 +128,7 @@ flowchart TD
 
 ---
 
-## 🚀 1.6.7 ロードマップ / Roadmap
-
-| **期間** | **日本語説明** | *English Description* |
-|----------|----------------|-----------------------|
-| **短期 / Short-term** | LPDDR + FeRAM チップレット統合 (スマホ／ウェアラブル) | *LPDDR + FeRAM chiplet integration (smartphones/wearables)* |
-| **中期 / Mid-term** | HBM + FeRAM (エッジAIサーバ、AI Box) | *HBM + FeRAM for edge AI servers and AI boxes* |
-| **長期 / Long-term** | HBM + FeFET/ReRAM、Compute-in-Memory併用 | *HBM + FeFET/ReRAM, hybrid with Compute-in-Memory* |
-
----
-
-## 📱 1.6.8 応用ユースケース / Mobile Edge AI Use Cases
-
-- 🔋 **On-device inference**: アイドル時のスタンバイ電力削減  
-  *Reduce standby energy during idle periods*  
-
-- 🔄 **Federated / continual learning**: 頻繁なモデル更新のチェックポイントをFeRAMに退避  
-  *Enable frequent model update checkpoints without DRAM refresh overhead*  
-
-- 🎮 **Interactive AR/VR & Sensor Fusion**: サブms復帰でUX改善  
-  *Support instant resume for AR/VR and sensor fusion*  
-
----
-
-## 🌐 1.6.9 広範な含意 / Broader Implications
-
-- ✅ **DRAMを主メモリとして維持**しつつ、FeRAMを補助層として導入  
-- 📏 **小容量FeRAM**（数MB〜数十MB）で十分効果を発揮  
-- 🛠️ **SystemDKによる協調最適化**: アーキテクチャ・パッケージ・OSを統合制御  
-
----
-
-## 🚀 1.6.10 将来展開 / Path to HBM＋FeFET
-
-将来の高帯域用途では **HBM＋FeFET** への置換が可能である。  
-ただし、現行のモバイルSoC設計においては **LPDDR＋FeRAM** がより現実的かつ低コストであり、  
-実装性と効率のバランスが取れている。  
-*For future high-bandwidth use cases, HBM + FeFET can replace this scheme.  
-However, in today’s mobile SoC designs, LPDDR + FeRAM offers a more practical and cost-efficient balance.*  
-
----
-
-## 🛠️ 1.6.11 開発フロー / Development Flow
+## 🛠️ 1.6.8 開発フロー / Development Flow
 
 | **工程 / Step** | **内容 (日本語)** | *Description (English)* |
 |-----------------|------------------|-------------------------|
@@ -175,7 +161,23 @@ flowchart TD
 
 ---
 
-## 🔍 1.6.12 FEM解析 / FEM Analysis
+## 📈 1.6.9 比較グラフ / Comparison Charts
+
+**スタンバイ電力 / Standby Power**  
+*Normalized (LPDDR only = 100). Lower is better.*  
+
+![Standby Power](./fig_lpddr_feram_standby_power.png)
+
+**レジューム遅延 / Resume Latency**  
+*Milliseconds. Lower is better.*  
+
+![Resume Latency](./fig_lpddr_feram_resume_latency.png)
+
+> 備考 / Notes: グラフは本章の代表値（10–20%低減、100–500 µs クラスの復帰）を視覚化した概略値です。*Illustrative values consistent with chapter figures.*
+
+---
+
+## 🔍 1.6.10 FEM解析 / FEM Analysis
 
 | **解析領域 / Domain** | **内容 (日本語)** | *Description (English)* |
 |-----------------------|------------------|-------------------------|
@@ -196,7 +198,7 @@ flowchart LR
 
 ---
 
-## 🧭 1.6.13 時系列シーケンス / Sequence of Operations
+## 🧭 1.6.11 時系列シーケンス / Sequence of Operations
 
 *Power state transitions with checkpoint offload and instant resume.*
 
@@ -226,23 +228,38 @@ sequenceDiagram
 
 ---
 
-## 📈 1.6.14 比較グラフ / Comparison Charts
+## 📱 1.6.12 応用ユースケース / Mobile Edge AI Use Cases
 
-**スタンバイ電力 / Standby Power**  
-*Normalized (LPDDR only = 100). Lower is better.*  
+- 🔋 **On-device inference**: アイドル時のスタンバイ電力削減  
+  *Reduce standby energy during idle periods*  
 
-![Standby Power](./fig_lpddr_feram_standby_power.png)
+- 🔄 **Federated / continual learning**: 頻繁なモデル更新のチェックポイントをFeRAMに退避  
+  *Enable frequent model update checkpoints without DRAM refresh overhead*  
 
-**レジューム遅延 / Resume Latency**  
-*Milliseconds. Lower is better.*  
+- 🎮 **Interactive AR/VR & Sensor Fusion**: サブms復帰でUX改善  
+  *Support instant resume for AR/VR and sensor fusion*  
 
-![Resume Latency](./fig_lpddr_feram_resume_latency.png)
-
-> 備考 / Notes: グラフは本章の代表値（10–20%低減、100–500 µs クラスの復帰）を視覚化した概略値です。*Illustrative values consistent with chapter figures.*
-> 
 ---
 
-## 📄 関連文書 / Related Documents
+## 🌐 1.6.13 広範な含意 / Broader Implications
+
+- ✅ **DRAMを主メモリとして維持**しつつ、FeRAMを補助層として導入  
+- 📏 **小容量FeRAM**（数MB〜数十MB）で十分効果を発揮  
+- 🛠️ **SystemDKによる協調最適化**: アーキテクチャ・パッケージ・OSを統合制御  
+
+---
+
+## 🚀 1.6.14 将来展開 / Future Path
+
+将来の高帯域用途では **HBM＋FeFET** への置換が可能である。  
+ただし、現行のモバイルSoC設計においては **LPDDR＋FeRAM** がより現実的かつ低コストであり、  
+実装性と効率のバランスが取れている。  
+*For future high-bandwidth use cases, HBM + FeFET can replace this scheme.  
+However, in today’s mobile SoC designs, LPDDR + FeRAM offers a more practical and cost-efficient balance.*  
+
+---
+
+## 📄 1.6.15 関連文書 / References
 
 👉 [📄 LPDDR+FeRAM Chiplet Integration (PDF)](./LPDDR_FeRAM.pdf)  
 👉 [📄 HBM+FeRAM Chiplet Integration (PDF)](./HBM_FeRAM_Chiplet_MobileEdgeAI.pdf)  
