@@ -227,7 +227,7 @@ This section describes FEM workflows for Thermal, Mechanical Stress, and EM Fiel
 - \\(T_{max} < T_{spec}\\)、勾配が応力閾値を誘発しないこと
 
 **結果例 / Example**  
-![Thermal](assets/img/ch1/fig_1_6_fem_thermal_example.png)  
+![Thermal](./images/fig_1_6_fem_thermal_example.png)  
 *温度分布の一例（ダミー図）。ホットスポットとスプレッダ効果の比較に使用。*
 
 ---
@@ -245,7 +245,7 @@ This section describes FEM workflows for Thermal, Mechanical Stress, and EM Fiel
 - クリティカル界面での安全率 > 規定値、塑性累積 < 閾値
 
 **結果例 / Example**  
-![Stress](assets/img/ch1/fig_1_6_fem_stress_example.png)  
+![Stress](./images/fig_1_6_fem_stress_example.png)  
 *TSV周りの応力コンター（ダミー図）。半径方向の集中と界面付近のピークを可視化。*
 
 ---
@@ -262,7 +262,7 @@ This section describes FEM workflows for Thermal, Mechanical Stress, and EM Fiel
 - 受信閾値マージン確保、EMI規格内、PDN Z(ω) ピーク < 目標
 
 **結果例 / Example**  
-![EM](assets/img/ch1/fig_1_6_fem_em_example.png)  
+![EM](./images/fig_1_6_fem_em_example.png)  
 *隣接配線のクロストーク波形（ダミー図）。アグレッサとビクティムの振る舞い比較。*
 
 ---
