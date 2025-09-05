@@ -50,6 +50,21 @@ layout: default
 
 ---
 
+## ⚙️ 前提条件 | Assumptions
+
+- **プロセスノード / Process Nodes**
+  - Sky130 MOS (教育用) → VDD=1.8 V, L=0.15 µm
+  - FinFET (16 nm 相当, 教材用) → VDD=0.8 V, L=15 nm, W=120 nm
+  - GAA (5 nm 相当, 教材用) → VDD=0.7 V, L=12 nm, W=120 nm
+  - SiC/GaN パワーデバイス → VDD=400 V (Half-Bridgeスイッチング例)
+
+- **回路条件 / Circuit Conditions**
+  - CMOS Inverter → 負荷容量 Cload=2 fF
+  - NMOS DC特性 → Id–Vds (Vgs sweep), Id–Vgs (Vds sweep)
+  - Power Switching → 負荷 L=10 µH, R=50 mΩ, 周波数=10 MHz 相当
+
+---
+
 ## 🖼️ 結果画像（GitHub / GitHub Pages 両対応）
 
 ### NMOS Id–Vds
@@ -104,7 +119,6 @@ M1 d g 0 0 NMOS_L1 L=1u W=10u
 
 .end
 ```
-
 ---
 
 ## 👤 **著者・ライセンス | Author & License**
