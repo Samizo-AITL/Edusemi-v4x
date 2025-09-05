@@ -1,0 +1,16 @@
+* ============================================================
+* CMOS Inverter – FinFET-like parameters
+* Observe VTC and delay
+* ============================================================
+.include inv_common_models.inc
+
+VDD vdd 0 0.8
+Vin in 0 PULSE(0 0.8 0 10p 10p 100p 200p)
+
+Mn out in 0 0 NFIN L=15n W=120n
+Mp out in vdd vdd vdd PFIN L=15n W=120n
+
+Cload out 0 2f
+
+.tran 1p 400p
+.end
