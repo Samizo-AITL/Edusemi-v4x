@@ -1,0 +1,27 @@
+* ============================================================
+* NMOS Id–Vds / Id–Vgs Characteristics (Educational Example)
+* ============================================================
+.option numdgt=6
+.temp 25
+
+* --- Bias sources ---
+Vgs g 0 0
+Vds d 0 0
+
+* --- NMOS Device Under Test ---
+M1 d g 0 0 NMOS_L1 L=1u W=10u
+
+* --- Simple Level-1 MOS model (教育用) ---
+.model NMOS_L1 NMOS(Level=1 VTO=0.6 KP=150e-6 LAMBDA=0.02)
+
+* --- Sweep 1: Id–Vds for multiple Vgs values ---
+.dc Vds 0 2.5 0.05 sweep Vgs 0.5 2.0 0.5
+.print dc V(d) I(Vds)
+
+* --- Sweep 2: Id–Vgs at fixed Vds (オプション) ---
+*.param VDS_FIX=1.0
+*Vds d 0 {VDS_FIX}
+*.dc Vgs 0 2.5 0.01
+*.print dc V(g) I(Vds)
+
+.end
