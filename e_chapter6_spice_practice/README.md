@@ -50,10 +50,19 @@ layout: default
 
 ---
 
-## 🖼️ 結果画像の埋め込み（GitHub Pages対応）
+## 🖼️ 結果画像（GitHub / GitHub Pages 両対応）
 
-<img src="{{ '/e_chapter6_spice_practice/images/spice_results/nmos_id_vds.png' | relative_url }}" alt="NMOS Id–Vds" style="max-width:80%;">
-<img src="{{ '/e_chapter6_spice_practice/images/spice_results/nmos_id_vgs.png' | relative_url }}" alt="NMOS Id–Vgs" style="max-width:80%;">
+### NMOS Id–Vds
+<picture>
+  <source srcset="{{ '/e_chapter6_spice_practice/images/spice_results/nmos_id_vds.png' | relative_url }}">
+  <img src="./images/spice_results/nmos_id_vds.png" alt="NMOS Id–Vds" width="80%">
+</picture>
+
+### NMOS Id–Vgs
+<picture>
+  <source srcset="{{ '/e_chapter6_spice_practice/images/spice_results/nmos_id_vgs.png' | relative_url }}">
+  <img src="./images/spice_results/nmos_id_vgs.png" alt="NMOS Id–Vgs" width="80%">
+</picture>
 
 ---
 
