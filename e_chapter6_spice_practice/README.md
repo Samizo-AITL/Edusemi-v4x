@@ -94,6 +94,15 @@ layout: default
 
 *FinFET shows slower transitions, while GAA achieves faster switching due to higher gm.*
 
+### GaN vs SiC Switching
+
+<picture>
+  <source srcset="{{ '/e_chapter6_spice_practice/images/spice_results/gan_vs_sic_switching.png' | relative_url }}">
+  <img src="./images/spice_results/gan_vs_sic_switching.png" alt="GaN vs SiC Switching" width="80%">
+</picture>
+
+*GaN shows faster switching transitions, while SiC provides more stable high-voltage handling.*
+
 ---
 
 ## ✅ 注意事項 | Notes
