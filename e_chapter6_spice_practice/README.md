@@ -13,7 +13,7 @@ layout: default
 
 ---
 
-## 🔗 公式リンク / *Official Links*
+## 🔗 公式リンク | *Official Links*
 
 | 言語 / Language | GitHub Pages 🌐 | GitHub 💻 |
 |-----------------|----------------|-----------|
@@ -23,7 +23,9 @@ layout: default
 
 ## 📑 演習内容 | Exercises
 
-### 1) デバイス特性 | Device Characteristics
+### 1️⃣ デバイス特性 | Device Characteristics  
+[📄 View File](./devices/nmos_iv_characteristics.spice) ｜ [🌐 Pages](https://samizo-aitl.github.io/Edusemi-v4x/e_chapter6_spice_practice/#1-デバイス特性--device-characteristics)  
+
 - **File**: `devices/nmos_iv_characteristics.spice`  
 - **Run**: `.dc` で Id–Vds、Id–Vgs カーブを描画  
 - **学びのポイント**: Vth 抽出、飽和領域・線形領域の境界  
@@ -31,7 +33,9 @@ layout: default
 
 ---
 
-### 2) CMOSインバータ | CMOS Inverter (FinFET vs GAA)
+### 2️⃣ CMOSインバータ | CMOS Inverter (FinFET vs GAA)  
+[📄 View Files](./circuits/) ｜ [🌐 Pages](https://samizo-aitl.github.io/Edusemi-v4x/e_chapter6_spice_practice/#2-cmosインバータ--cmos-inverter-finfet-vs-gaa)  
+
 - **Files**:  
   - `circuits/inv_cmos_finfet.spice`  
   - `circuits/inv_cmos_gaa.spice`  
@@ -42,7 +46,9 @@ layout: default
 
 ---
 
-### 3) GaN vs SiC スイッチング | GaN vs SiC Switching
+### 3️⃣ GaN vs SiC スイッチング | GaN vs SiC Switching  
+[📄 View File](./power/gan_vs_sic_switching.spice) ｜ [🌐 Pages](https://samizo-aitl.github.io/Edusemi-v4x/e_chapter6_spice_practice/#3-gan-vs-sic-スイッチング--gan-vs-sic-switching)  
+
 - **File**: `power/gan_vs_sic_switching.spice`  
 - **Run**: `.tran` で出力電圧、負荷電流、ゲート波形を比較  
 - **学びのポイント**: 高速スイッチング (GaN) vs 高耐圧・安定性 (SiC) の違い  
@@ -53,19 +59,19 @@ layout: default
 ## ⚙️ 前提条件 | Assumptions
 
 - **プロセスノード / Process Nodes**
-  - Sky130 MOS (教育用) → VDD=1.8 V, L=0.15 µm
-  - FinFET (16 nm 相当, 教材用) → VDD=0.8 V, L=15 nm, W=120 nm
-  - GAA (5 nm 相当, 教材用) → VDD=0.7 V, L=12 nm, W=120 nm
-  - SiC/GaN パワーデバイス → VDD=400 V (Half-Bridgeスイッチング例)
+  - Sky130 MOS → VDD=1.8 V, L=0.15 µm  
+  - FinFET (16 nm 相当, 教材用) → VDD=0.8 V, L=15 nm, W=120 nm  
+  - GAA (5 nm 相当, 教材用) → VDD=0.7 V, L=12 nm, W=120 nm  
+  - SiC/GaN → VDD=400 V (Half-Bridgeスイッチング例)  
 
 - **回路条件 / Circuit Conditions**
-  - CMOS Inverter → 負荷容量 Cload=2 fF
-  - NMOS DC特性 → Id–Vds (Vgs sweep), Id–Vgs (Vds sweep)
-  - Power Switching → 負荷 L=10 µH, R=50 mΩ, 周波数=10 MHz 相当
+  - CMOS Inverter → 負荷容量 Cload=2 fF  
+  - NMOS DC特性 → Id–Vds (Vgs sweep), Id–Vgs (Vds sweep)  
+  - Power Switching → 負荷 L=10 µH, R=50 mΩ, 周波数=10 MHz 相当  
 
 ---
 
-## 🖼️ 結果画像（GitHub / GitHub Pages 両対応）
+## 🖼️ 結果画像 | Results (GitHub / GitHub Pages 両対応)
 
 ### NMOS Id–Vds
 <picture>
@@ -82,9 +88,9 @@ layout: default
 ---
 
 ## ✅ 注意事項 | Notes
-	•	モデルは教育用の簡易パラメータ（Level=1 MOS, VSWITCH）。
-	•	厳密な設計には BSIM-CMG, ASM-HEMT, PDKモデル への置換が必要。
-	•	実行環境: NGSpice / LTspice で動作確認済み。
+- モデルは教育用の簡易パラメータ（Level=1 MOS, VSWITCH）。  
+- 厳密な設計には **BSIM-CMG, ASM-HEMT, PDKモデル** への置換が必要。  
+- 実行環境: **NGSpice / LTspice** で動作確認可能。  
 
 ---
 
