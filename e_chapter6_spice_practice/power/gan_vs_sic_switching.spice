@@ -1,0 +1,29 @@
+* ============================================================
+* GaN vs SiC Half-Bridge Switching – Educational
+* Compare switching waveforms under identical conditions
+* ============================================================
+.option numdgt=6
+.temp 25
+
+VDC vdc 0 400
+
+Lload out 0 10u
+Rload out 0 50m
+
+Vg_hi g_hi 0 PULSE(0 10 0 2n 2n 50n 100n)
+Vg_lo g_lo 0 PULSE(10 0 0 2n 2n 50n 100n)
+
+S_HI out vdc g_hi 0 swGAN
+S_LO out 0 g_lo 0 swSiC
+
+D_HI out vdc DGAN
+D_LO 0 out DSIC
+
+.model swGAN VSWITCH Ron=20m Roff=1Meg Von=5 Voff=2
+.model swSiC VSWITCH Ron=40m Roff=1Meg Von=5 Voff=2
+.model DGAN D Is=1e-12 N=1.5 TT=10n
+.model DSIC D Is=1e-12 N=1.2 TT=50n
+
+.tran 0.2n 300n
+.probe v(out) i(Lload) v(g_hi) v(g_lo)
+.end
