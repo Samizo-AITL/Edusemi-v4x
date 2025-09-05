@@ -143,6 +143,30 @@ M1 d g 0 0 NMOS_L1 L=1u W=10u
 
 .end
 ```
+
+## 📘 `circuits/inv_cmos_finfet.spice`
+
+```spice
+* ============================================================
+* CMOS Inverter - FinFET Example
+* ============================================================
+.option numdgt=6
+.temp 25
+Vdd vdd 0 0.8
+Vin in  0 PULSE(0 0.8 0 5p 5p 50p 100p)
+Cload out 0 2f
+
+M1 out in 0   0   NFIN L=15n W=120n
+M2 out in vdd vdd PFIN L=15n W=120n
+
+.model NFIN NMOS (Level=1 VTO=0.25 KP=300e-6 LAMBDA=0.05)
+.model PFIN PMOS (Level=1 VTO=-0.25 KP=150e-6 LAMBDA=0.05)
+
+.tran 1p 400p
+.probe v(in) v(out)
+.end
+```
+
 ---
 
 ## 👤 **著者・ライセンス | Author & License**
