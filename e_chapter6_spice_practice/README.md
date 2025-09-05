@@ -94,6 +94,8 @@ layout: default
 
 *FinFET shows slower transitions, while GAA achieves faster switching due to higher gm.*
 
+➡️ [inv_cmos_gaa.spice](./circuits/inv_cmos_gaa.spice) を実行
+
 ### GaN vs SiC Switching
 
 <picture>
@@ -102,6 +104,8 @@ layout: default
 </picture>
 
 *GaN shows faster switching transitions, while SiC provides more stable high-voltage handling.*
+
+➡️ [gan_vs_sic_switching.spice](./power/gan_vs_sic_switching.spice) を実行
 
 ---
 
