@@ -1,0 +1,16 @@
+* ============================================================
+* CMOS Inverter – GAA-like parameters
+* Slightly lower Vth / higher gm than FinFET example
+* ============================================================
+.include inv_common_models.inc
+
+VDD vdd 0 0.7
+Vin in 0 PULSE(0 0.7 0 10p 10p 100p 200p)
+
+Mn out in 0 0 NGAA L=12n W=120n
+Mp out in vdd vdd vdd PGAA L=12n W=120n
+
+Cload out 0 2f
+
+.tran 1p 400p
+.end
