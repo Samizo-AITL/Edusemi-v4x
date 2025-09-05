@@ -5,7 +5,7 @@ layout: default
 
 ---
 
-# 🛠 第6章: SPICE実践演習 | SPICE Practice for Devices and Circuits
+# 🛠 実践編　第6章: SPICE実践演習 | SPICE Practice for Devices and Circuits
 
 本章では、**Edusemi-v4x 基礎編**で学んだ FinFET / GAA / CFET の概念や  
 **Wide Bandgap (SiC / GaN)** の特徴を、SPICEシミュレーションで再現して確認します。  
