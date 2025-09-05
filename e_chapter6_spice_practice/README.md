@@ -3,6 +3,8 @@ title: "🛠 第6章: SPICE実践演習"
 layout: default
 ---
 
+---
+
 # 🛠 第6章: SPICE実践演習 | SPICE Practice for Devices and Circuits
 
 本章では、**Edusemi-v4x 基礎編**で学んだ FinFET / GAA / CFET の概念や  
@@ -52,6 +54,7 @@ layout: default
 
 ```html
 <img src="{{ '/e_chapter6_spice_practice/images/spice_results/inverter_vtc.png' | relative_url }}" alt="inverter_vtc" style="max-width:80%;">
+```
 
 ---
 
