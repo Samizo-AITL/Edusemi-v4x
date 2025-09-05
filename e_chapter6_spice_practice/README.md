@@ -85,6 +85,15 @@ layout: default
   <img src="./images/spice_results/nmos_id_vgs.png" alt="NMOS Id–Vgs" width="80%">
 </picture>
 
+### CMOS Inverter (FinFET vs GAA)
+
+<picture>
+  <source srcset="{{ '/e_chapter6_spice_practice/images/spice_results/inverter_finfet_vs_gaa.png' | relative_url }}">
+  <img src="./images/spice_results/inverter_finfet_vs_gaa.png" alt="CMOS Inverter FinFET vs GAA" width="80%">
+</picture>
+
+*FinFET shows slower transitions, while GAA achieves faster switching due to higher gm.*
+
 ---
 
 ## ✅ 注意事項 | Notes
