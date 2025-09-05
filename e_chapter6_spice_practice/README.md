@@ -58,6 +58,47 @@ layout: default
 
 ---
 
+## ✅ 注意事項 | Notes
+	•	モデルは教育用の簡易パラメータ（Level=1 MOS, VSWITCH）。
+	•	厳密な設計には BSIM-CMG, ASM-HEMT, PDKモデル への置換が必要。
+	•	実行環境: NGSpice / LTspice で動作確認済み。
+
+---
+
+## 📘 `devices/nmos_iv_characteristics.spice`
+
+```spice
+* ============================================================
+* NMOS Id–Vds / Id–Vgs Characteristics (Educational Example)
+* Compatible: NGSpice / LTspice
+* ============================================================
+.option numdgt=6
+.temp 25
+
+* Bias sources
+Vgs g 0 0
+Vds d 0 0
+
+* Device under test (simple Level-1 MOS for clarity)
+M1 d g 0 0 NMOS_L1 L=1u W=10u
+
+.model NMOS_L1 NMOS(Level=1 VTO=0.6 KP=150e-6 LAMBDA=0.02)
+
+* ---- Sweep 1: Id–Vds at multiple Vgs
+.dc Vds 0 2.5 0.01 sweep Vgs 0.8 2.0 0.4
+.print dc V(d) I(Vds) V(g)
+
+* ---- Sweep 2: (optional) Id–Vgs at fixed Vds
+*.dc Vgs 0 2.5 0.01
+*.param VDS_FIX=1.0
+*Vds d 0 {VDS_FIX}
+*.print dc V(g) I(Vds)
+
+.end
+```
+
+---
+
 ## 👤 **著者・ライセンス | Author & License**
 
 | 📌 項目 / Item | 📄 内容 / Details |
