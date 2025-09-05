@@ -52,9 +52,8 @@ layout: default
 
 ## 🖼️ 結果画像の埋め込み（GitHub Pages対応）
 
-```html
-<img src="{{ '/e_chapter6_spice_practice/images/spice_results/inverter_vtc.png' | relative_url }}" alt="inverter_vtc" style="max-width:80%;">
-```
+<img src="{{ '/e_chapter6_spice_practice/images/spice_results/nmos_id_vds.png' | relative_url }}" alt="NMOS Id–Vds" style="max-width:80%;">
+<img src="{{ '/e_chapter6_spice_practice/images/spice_results/nmos_id_vgs.png' | relative_url }}" alt="NMOS Id–Vgs" style="max-width:80%;">
 
 ---
 
