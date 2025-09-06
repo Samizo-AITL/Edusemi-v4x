@@ -24,7 +24,7 @@ layout: default
 ## 📑 演習内容 | Exercises
 
 ### 1️⃣ デバイス特性 | Device Characteristics  
-[📄 View File](./devices/nmos_iv_characteristics.spice) ｜ [🌐 Pages](https://samizo-aitl.github.io/Edusemi-v4x/e_chapter6_spice_practice/#1-デバイス特性--device-characteristics)  
+[📄 View File (Repo)](./devices/nmos_iv_characteristics.spice)
 
 - **File**: `devices/nmos_iv_characteristics.spice`  
 - **Run**: `.dc` で Id–Vds、Id–Vgs カーブを描画  
@@ -34,7 +34,7 @@ layout: default
 ---
 
 ### 2️⃣ CMOSインバータ | CMOS Inverter (FinFET vs GAA)  
-[📄 View Files](./circuits/) ｜ [🌐 Pages](https://samizo-aitl.github.io/Edusemi-v4x/e_chapter6_spice_practice/#2-cmosインバータ--cmos-inverter-finfet-vs-gaa)  
+[📂 View Folder (Repo)](./circuits/)
 
 - **Files**:  
   - `circuits/inv_cmos_finfet.spice`  
@@ -47,13 +47,13 @@ layout: default
 ---
 
 ### 3️⃣ GaN vs SiC スイッチング | GaN vs SiC Switching  
-[📄 View File](./power/gan_vs_sic_switching.spice) ｜ [🌐 Pages](https://samizo-aitl.github.io/Edusemi-v4x/e_chapter6_spice_practice/#3-gan-vs-sic-スイッチング--gan-vs-sic-switching)  
+[📄 View File (Repo)](./power/gan_vs_sic_switching.spice)
 
 - **File**: `power/gan_vs_sic_switching.spice`  
 - **Run**: `.tran` で出力電圧、負荷電流、ゲート波形を比較  
 - **学びのポイント**: 高速スイッチング (GaN) vs 高耐圧・安定性 (SiC) の違い  
 - *Contrast fast switching of GaN vs high-voltage stability of SiC*
-
+  
 ---
 
 ## ⚙️ 前提条件 | Assumptions
