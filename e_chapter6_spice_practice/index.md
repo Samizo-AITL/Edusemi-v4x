@@ -7,7 +7,7 @@ layout: default
 
 # 🛠 実践編　第6章: SPICE実践演習 | SPICE Practice for Devices and Circuits
 
-本章では、**Edusemi-v4x 基礎編**で学んだ FinFET / GAA / CFET の概念や  
+本章では、**Edusemi-v4x 特別編**で学んだ FinFET / GAA / CFET の概念や  
 **Wide Bandgap (SiC / GaN)** の特徴を、SPICEシミュレーションで再現して確認します。  
 *This chapter reinforces concepts from the basics through hands-on SPICE simulations.*
 
@@ -34,7 +34,7 @@ layout: default
 ---
 
 ### 2️⃣ CMOSインバータ | CMOS Inverter (FinFET vs GAA)  
-[📂 View Folder (Repo)](./circuits/)
+[📂 View Folder (Repo)](./circuits)
 
 - **Files**:  
   - `circuits/inv_cmos_finfet.spice`  
