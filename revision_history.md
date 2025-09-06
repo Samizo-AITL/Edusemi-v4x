@@ -14,6 +14,30 @@ From version 4.0 onward, updates are maintained in the new repository `Edusemi-v
 
 ---
 
+## 🆕 v4.5（2025年9月6日 / September 6, 2025）  
+**実践編に第6章「SPICE実践演習」を追加し、デバイス特性・CMOSインバータ・WBG比較を教材化**  
+**Added Practice Chapter 6: SPICE Exercises, covering device I–V, CMOS inverter, and WBG switching comparisons**
+
+🔹 実践編 第6章「SPICE実践演習」を新設  
+  - `devices/nmos_iv_characteristics.spice` による Id–Vds / Id–Vgs 特性  
+  - `circuits/inv_cmos_finfet.spice` / `inv_cmos_gaa.spice` による FinFET vs GAA インバータ比較  
+  - `power/gan_vs_sic_switching.spice` による GaN vs SiC スイッチング特性評価  
+  - 結果グラフを PNG 出力し、教材ページに統合  
+Established Practice Chapter 6: SPICE Exercises  
+  - Id–Vds / Id–Vgs via `devices/nmos_iv_characteristics.spice`  
+  - FinFET vs GAA inverter comparison (`inv_cmos_finfet.spice` / `inv_cmos_gaa.spice`)  
+  - GaN vs SiC switching analysis (`gan_vs_sic_switching.spice`)  
+  - Generated PNG plots and embedded them in the materials
+
+🔹 実践編 README の章一覧を更新し、第6章を追加  
+  - 「Practice」表に SPICE 実習リンクを追加  
+  - GitHub Pages / Repo 双方のバッジリンクを整備  
+Updated Practice README  
+  - Added Chapter 6 to Practice table  
+  - Linked GitHub Pages and Repo with badges
+
+---
+
 ## 🆕 v4.4（2025年8月14日 / August 14, 2025）  
 **関連プロジェクト・著者情報・フィードバック部分のUI改善と英語版整備**  
 **Improved UI for Related Projects, Author Info, and Feedback sections; added English version**
