@@ -13,9 +13,9 @@ title: 1.5 CFET構造とスタック型MOSの展望
 ## 📘 概要｜Overview
 
 **CFET（Complementary FET）** は、**nFETとpFETを垂直方向に積層**する次世代トランジスタ構造です。  
-FinFET → GAA の進化を引き継ぎながら、**セル面積の大幅削減**と**配線自由度の拡大**を可能にします。
+FinFET → GAA の進化を継承しながら、**セル面積の大幅削減**と**配線短縮による遅延改善**を可能にします。  
 
-> CFET vertically stacks nFET and pFET, aiming for denser standard cells and improved routing flexibility beyond GAA.
+> CFET vertically stacks nFET and pFET, realizing CMOS inverters **within a single cross-section**, thereby doubling density and reducing delay.
 
 ---
 
@@ -34,8 +34,9 @@ graph TB
 
     PFET --> OX --> NFET --> SUB
 ```
-> **GAA**: n/p を同一層に並列配置  
-> **CFET**: n/p を垂直積層し、レイアウト面積を縮小
+
+- **GAA**: n/p を同一層に横並び配置  
+- **CFET**: n/p を上下積層 → **1断面でインバータ形成**
 
 ---
 
@@ -43,32 +44,43 @@ graph TB
 
 | 🔍 項目 / Item | 💡 CFETの特性 / CFET Features |
 |----------------|--------------------------------|
-| ゲート制御 | GAAと同等の4面制御 / Same as GAA |
-| n/p対称性 | 垂直構造でレイアウト対称性向上 |
+| ゲート制御 | GAAと同等の全周制御 / Same as GAA |
+| インバータ形成 | **断面そのものがCMOSインバータ** |
+| 配線距離 | n/p上下直結 → RC低減・遅延減少 |
+| 面積効率 | 標準セル密度 ≈ 2倍（理論値） |
 | クロストーク | 層間干渉に対策必要 |
-| 配線自由度 | BEOL空間の有効利用 |
 | 設計難易度 | 高度PDK・抽象化必須 |
+
+---
+
+## 📐 ソース／ドレイン配置｜Source/Drain Arrangement
+
+- **平行型（Sequential CFET）**  
+  - n/p チャネルは同方向。  
+  - S/Dは上下に揃えて配置し、**垂直ビアで接続**。  
+- **直交型（Forksheet-CFET構想）**  
+  - nMOSが水平、pMOSが垂直に配置される例も研究中。  
+  - 配線距離短縮やセル密度最適化が狙い。  
+
+👉 いずれも「**インバータを1セル内で完結**」する点が共通。  
 
 ---
 
 ## 🏭 製造課題｜Manufacturing Challenges
 
-- **チャネルごとのドーピング独立性**：nFETとpFETのドーピング分離が難しい  
-- **熱処理ステップ分離**：下層が熱予算を超えやすい  
-- **選択エピ成長とエッチング精度**：複数工程の整合が必須  
-- **BEOL統合**：金属層高さやIRドロップの調整
-
-> Independent doping, thermal budget control, selective epitaxy, and BEOL integration are critical for CFET fabrication.
+- **ドーピング独立性**：上下でn/pを分離する制御の困難さ  
+- **熱処理**：下層nMOSの熱影響が上層pMOSへ伝播  
+- **エピ成長・エッチング**：多層構造の高精度プロセスが必要  
+- **BEOL統合**：VDD/GND配線の分離とIRドロップ対策  
 
 ---
 
 ## 🧩 モジュール統合効果｜Module-Level Integration Advantage
 
-- **インバータモジュールを1セルで完結**  
-- n/pの物理的分離が不要、**セル面積半減**  
-- 標準セル密度が実質**2倍**
-
-> CFET enables the tightest inverter integration, halving cell area and doubling density.
+- **インバータが断面単位で完成**  
+- n/p分離が不要 → セル面積**半減**  
+- 配線削減でRCが低減 → **遅延なし / 高速化**  
+- 標準セルライブラリを再定義することで、**設計密度が実質2倍**  
 
 ---
 
@@ -83,9 +95,9 @@ timeline
     2032 : CFET standard cell libraries emerge
 ```
 
-- **2030年代前半**：IntelやIMEが試作段階へ  
+- **2030年代前半**：Intel, IMECなどで試作段階へ  
 - **EDA/PDK整備**と**設計者教育**が必須  
-- **システム・オン・スタック（SoS）**時代の中核技術へ
+- 「**断面＝インバータ**」という新しい設計概念が、SoS (System-on-Stack) 時代の中核に  
 
 ---
 
@@ -98,7 +110,3 @@ timeline
 ---
 
 [← 戻る / Back to Special Chapter 1 Top](../f_chapter1_finfet_gaa/README.md)
-
-
-
----
