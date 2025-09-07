@@ -104,6 +104,21 @@ Structure diagrams, gate coverage illustrations, and scaling roadmaps will be in
 
 ---
 
+## 📄 関連教材論文 / Related Tutorial Paper
+
+- **CFET 教材論文公開** / *Educational Tutorial Paper on CFET*  
+  [📘 Educational Perspectives on Complementary FETs (CFET): Evolution Beyond GAA and Open Challenges (PDF)](./cfet_tutorial_main.pdf)  
+
+  教育的観点から CFET 技術の概要を整理したチュートリアル論文。  
+  Planar → FinFET → GAA → CFET への進化、構造概念、設計インパクト、製造課題、EDA 限界、教育的価値をまとめ、  
+  2030 年代に向けた半導体教育・研究への活用を提案。  
+
+  *This tutorial paper provides an educational overview of CFET technology.  
+  It reviews the evolution from Planar → FinFET → GAA → CFET, structural concepts, design impacts,  
+  manufacturing challenges, EDA limitations, and educational value, proposing its role in semiconductor education and research toward the 2030s.*
+  
+---
+
 ## 👤 **著者・ライセンス | Author & License**
 
 | 📌 項目 / Item | 📄 内容 / Details |
