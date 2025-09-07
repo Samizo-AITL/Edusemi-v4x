@@ -65,6 +65,7 @@ This chapter builds upon the process knowledge from Chapter 3 and extends it to 
 | [`appendixf1_02_gaaflow.md`](appendixf1_02_gaaflow.md)           | GAA Multi-Nanosheet FETプロセス<br>GAA Multi-Nanosheet Process |
 | [`appendixf1_03_finfet_vs_gaa.md`](appendixf1_03_finfet_vs_gaa.md) | FinFETとGAAの工程・特性・設計比較<br>Comparison of FinFET vs GAA |
 | [`appendixf1_04_cfet.md`](appendixf1_04_cfet.md)                 | CFETの構造進化と技術的課題<br>CFET Structure Evolution and Technical Challenges |
+| [`appendixf1_04a_cfet_flow.md`](appendixf1_04a_cfet_flow.md)     | CFET製造プロセスフロー（Sequential stacked n/p）<br>CFET Process Flow (Sequential stacked n/p) |
 | [`appendixf1_05_node_params.md`](appendixf1_05_node_params.md)   | FinFET / GAA 各ノード世代の構造・電気パラメータ一覧<br>Node-wise Parameters for FinFET and GAA |
 | [`appendixf1_05a_cfet_params.md`](appendixf1_05a_cfet_params.md) | CFETのパラメータと設計特性（05の拡張資料）<br>CFET Parameters and Design Characteristics (Extension of 05) |
 | [`appendixf1_06_node_params_structural.md`](appendixf1_06_node_params_structural.md) | ノード構造パラメータ比較（ $n$ , $H$ , $W$ ）<br>Node Structural Parameters Comparison ( $n$ , $H$ , $W$ ) |
