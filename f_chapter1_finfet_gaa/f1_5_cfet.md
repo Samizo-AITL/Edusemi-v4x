@@ -3,6 +3,8 @@ layout: default
 title: 1.5 CFET構造とスタック型MOSの展望
 ---
 
+---
+
 # 1.5 CFET構造とスタック型MOSの展望  
 # 1.5 CFET Structure and Outlook for Stacked MOS
 
