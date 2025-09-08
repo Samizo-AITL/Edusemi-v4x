@@ -116,7 +116,12 @@ Structure diagrams, gate coverage illustrations, and scaling roadmaps will be in
   *This tutorial paper provides an educational overview of CFET technology.  
   It reviews the evolution from Planar → FinFET → GAA → CFET, structural concepts, design impacts,  
   manufacturing challenges, EDA limitations, and educational value, proposing its role in semiconductor education and research toward the 2030s.*
-  
+
+- **研究論文公開 / Research Paper on CFET Control**  
+  📄 [Cross-Layer Control of CFET Interconnect Delay and Thermal Coupling via PID+FSM+LLM Supervision (PDF)](cfet_ctrl2025.pdf)  
+  CFET 縦型統合における配線遅延と熱結合を制御するための制御理論的アプローチを提案。PID+FSM+LLM に基づく実証シミュレーションを含む。  
+  *This research paper proposes a control-theoretic approach to mitigate interconnect delay and thermal coupling in CFET integration, with validation using SystemDK simulations.*
+
 ---
 
 ## 👤 **著者・ライセンス | Author & License**
