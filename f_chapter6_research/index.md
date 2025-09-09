@@ -34,7 +34,6 @@ Cross-layer runtime adaptation enables **guardband reduction** and **improved re
 
 ## 🔗 論文ダウンロード｜*Download*
 - 📑 [Main Paper (PDF)](systemdk_aitl2025.pdf)  
-- 📚 [BibTeX Reference](systemdk_aitl2025_refs.bib)
 
 ---
 
