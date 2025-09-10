@@ -29,7 +29,8 @@ Real-time cross-layer control is required.*
 
 *SystemDK with AITL introduces a three-layer control loop (PID + FSM + LLM) directly integrated into the EDA design flow.*  
 
-📊 **Fig.1**: Supervisory PID+FSM+LLM Control Architecture
+### 📊 Fig.1: Supervisory PID+FSM+LLM Control Architecture
+<img src="./figures/fig1_architecture.svg" alt="Fig.1: Supervisory PID+FSM+LLM Control Architecture" width="80%">
 
 ---
 
@@ -50,9 +51,14 @@ Real-time cross-layer control is required.*
 - **熱結合抑制**：バースト電力下での温度上昇ヒートマップ  
 - **EMIジッタ抑制**：制御有無でのタイムシーケンス比較  
 
-📊 **Fig.2**: Delay suppression heatmap vs. thermal coupling and power burst  
-📊 **Fig.3**: Time-series comparison (Uncontrolled vs PID vs PID+FSM+LLM)  
-📊 **Fig.4**: EMI-induced jitter suppression under AITL control  
+### 📊 Fig.2: Delay suppression heatmap vs. thermal coupling and power burst
+<img src="./figures/fig2_delay_heatmap.png" alt="Fig.2: Delay suppression heatmap" width="80%">
+
+### 📊 Fig.3: Time-series comparison (Uncontrolled vs PID vs PID+FSM+LLM)
+<img src="./figures/fig3_time_series.png" alt="Fig.3: Time-series comparison" width="80%">
+
+### 📊 Fig.4: EMI-induced jitter suppression under AITL control
+<img src="./figures/fig4_emi_jitter.png" alt="Fig.4: EMI-induced jitter suppression" width="80%"> 
 
 | Metric / 指標 | Conventional | PID only | PID+FSM+LLM |
 |---------------|--------------|----------|-------------|
