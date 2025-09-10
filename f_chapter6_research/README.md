@@ -30,7 +30,17 @@ Real-time cross-layer control is required.*
 *SystemDK with AITL introduces a three-layer control loop (PID + FSM + LLM) directly integrated into the EDA design flow.*  
 
 ### 📊 Fig.1: Supervisory PID+FSM+LLM Control Architecture
-<img src="./figures/fig1_architecture.svg" alt="Fig.1: Supervisory PID+FSM+LLM Control Architecture" width="80%">
+
+```mermaid
+flowchart LR
+    A[EDA Flow Input] --> B[PID<br/>(Real-time Control)]
+    B --> C[FSM<br/>(Supervisory Control)]
+    C --> D[LLM<br/>(Knowledge / Redesign)]
+    D --> E[Compensated Output]
+
+    %% Feedback loop
+    E -.->|Runtime Metrics<br/>(Delay/Thermal/EMI)| B
+```
 
 ---
 
