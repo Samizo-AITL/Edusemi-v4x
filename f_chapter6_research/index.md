@@ -365,7 +365,7 @@ telemetry:
   *CSRs via APB/AXI-Lite; emergency IRQ.*
 
 ```mermaid
-flowchart LR
+flowchart TB
   MON["On-chip Monitors (delay/temp/jitter)"] --> PIDFSM["PID+FSM IP"]
   PIDFSM --> ACT["Actuators (DVFS/PMIC/FAN)"]
   CPU["FW (YAML Loader)"] -->|APB/AXI-Lite| PIDFSM
