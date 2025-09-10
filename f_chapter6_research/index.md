@@ -23,9 +23,12 @@ Real-time cross-layer control is required.*
 
 ## 2. ⚙️ 提案枠組み / *Proposed Framework: SystemDK with AITL*
 - **PID**：リアルタイム安定化制御 / *Real-time stabilization*  
+  → MATLAB/Simulink による制御応答設計・ゲイン調整に対応  
 - **FSM**：モード遷移・状態監督 / *Supervisory mode/state control*  
+  → Simulink の拡張機能 **Stateflow** を用いた有限状態機械モデル化に対応  
 - **LLM**：ゲイン再設計・知識統合 / *Knowledge-driven redesign with LLM*  
-- **アーキテクチャ**：三層構造でEDA設計フローに直接統合  
+  → Python/EDA フローと連携し、設計ルールや補償アルゴリズムを動的再構築  
+- **アーキテクチャ**：三層構造（PID + FSM + LLM）を通じて **EDA設計フローに直接統合**
 
 *SystemDK with AITL introduces a three-layer control loop (PID + FSM + LLM) directly integrated into the EDA design flow.*  
 
