@@ -47,7 +47,9 @@ that directly bridges control modeling and the EDA implementation flow.*
 ### 📊 Fig.1: SystemDK with AITL — From Control to GDS
 
 Fig.1 shows how control modeling (**PID in Simulink**, **FSM in Stateflow**, **LLM for knowledge-driven redesign**)  
-can be transformed into **Verilog RTL** and carried through the standard **EDA flow** down to **GDS II**.
+can be transformed into **Verilog RTL** and carried through the standard **EDA flow** down to **GDS II**.  
+In addition, **FEM解析** (thermal / stress / EM) and **Network Analyzer results** (S-parameters)  
+are injected into synthesis, P&R, and STA to ensure realistic, physics-aware design closure.
 
 ```mermaid
 flowchart TB
@@ -69,12 +71,20 @@ flowchart TB
     %% Feedback loop via Metrics
     STA -.-> M[Runtime Metrics : Delay / Thermal / EMI]
     M -.-> B
+    LLM_FEED[LLM Feedback to RTL] -.-> RTL
 
     %% PDK supports downstream
     PDK[(PDK : Process Design Kit)] --> Synth
     PDK --> PnR
     PDK --> LVS
     PDK --> STA
+
+    %% FEM + Network Analyzer
+    FEM[FEM : Thermal / Stress / EM] --> Synth
+    FEM --> PnR
+    FEM --> STA
+    NA[Network Analyzer : S-parameters] --> PnR
+    NA --> STA
 ```
 
 ---
