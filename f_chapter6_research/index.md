@@ -366,9 +366,9 @@ telemetry:
 
 ```mermaid
 flowchart LR
-  MON[On-chip Monitors\n(delay/temp/jitter)] --> PIDFSM[PID+FSM IP]
-  PIDFSM --> ACT[Actuators\n(DVFS/PMIC/FAN)]
-  CPU[FW (YAML Loader)] -->|APB/AXI-Lite| PIDFSM
+  MON["On-chip Monitors (delay/temp/jitter)"] --> PIDFSM["PID+FSM IP"]
+  PIDFSM --> ACT["Actuators (DVFS/PMIC/FAN)"]
+  CPU["FW (YAML Loader)"] -->|APB/AXI-Lite| PIDFSM
   PIDFSM -->|irq_emerg| CPU
 ```
 
