@@ -50,24 +50,24 @@ Real-time cross-layer control is required.*
 ## 3. 🧮 数式モデル / *Analytical Models*
 
 - **RC遅延モデル / RC Delay Model**  
-$begin:math:display$
-t_{pd}(T, \\sigma, f) = R_0 \\cdot \\big(1 + \\alpha_T (T-T_0) + \\alpha_\\sigma \\sigma \\big) \\cdot C(f) + \\Delta_{EMI}(f)
-$end:math:display$
+$$
+t_{pd}(T, \sigma, f) = R_0 \cdot \big(1 + \alpha_T (T-T_0) + \alpha_\sigma \sigma \big)\,C(f) + \Delta_{EMI}(f)
+$$
 
 - **熱結合モデル / Thermal Coupling**  
-$begin:math:display$
-C_{th}\\frac{dT}{dt} + \\frac{T - T_{amb}}{R_{th}} = P_{chip}(t)
-$end:math:display$
+$$
+C_{th}\frac{dT}{dt} + \frac{T - T_{amb}}{R_{th}} = P_{chip}(t)
+$$
 
 - **応力によるVthシフト / Stress-induced Vth Shift**  
-$begin:math:display$
-\\Delta V_{th}(\\sigma) = \\kappa \\cdot \\sigma
-$end:math:display$
+$$
+\Delta V_{th}(\sigma) = \kappa \cdot \sigma
+$$
 
 - **EMI注入モデル / EMI Injection**  
-$begin:math:display$
-v_{emi}(t) = A \\sin(2\\pi f_{emi} t)
-$end:math:display$
+$$
+v_{emi}(t) = A \sin(2\pi f_{emi} t)
+$$
 
 ---
 
