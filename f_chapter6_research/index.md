@@ -90,6 +90,7 @@ flowchart TB
 $$
 t_{pd}(T, \sigma, f) = R_0 \cdot \big(1 + \alpha_T (T-T_0) + \alpha_\sigma \sigma \big)\,C(f) + \Delta_{EMI}(f)
 $$
+
 → STAにおける **パス遅延制約** として反映  
 
 - **熱結合モデル / Thermal Coupling**
@@ -97,6 +98,7 @@ $$
 $$
 C_{th}\frac{dT}{dt} + \frac{T - T_{amb}}{R_{th}} = P_{chip}(t)
 $$
+
 → P&Rでの **配置温度制約** に対応  
 
 - **応力によるVthシフト / Stress-induced Vth Shift**
@@ -104,6 +106,7 @@ $$
 $$
 \Delta V_{th}(\sigma) = \kappa \cdot \sigma
 $$
+
 → PDKパラメータ補正やSPICEモデル更新に対応  
 
 - **EMI注入モデル / EMI Injection**
@@ -111,6 +114,7 @@ $$
 $$
 v_{emi}(t) = A \sin(2\pi f_{emi} t)
 $$
+
 → SI/EMC解析における **クロックジッタ制約** として導入  
 
 ---
