@@ -32,7 +32,7 @@ Real-time cross-layer control is required.*
 ### 📊 Fig.1: Supervisory PID+FSM+LLM Control Architecture
 
 ```mermaid
-flowchart LR
+flowchart TB
     A[EDA Flow Input] --> B[PID : Real-time Control]
     B --> C[FSM : Supervisory Control]
     C --> D[LLM : Knowledge & Redesign]
