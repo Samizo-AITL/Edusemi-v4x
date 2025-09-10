@@ -168,11 +168,217 @@ flowchart TB
 
 ## 5. 💻 実装PoC / *Implementation PoC*
 
-- **PID RTL実装 / *PID RTL Implementation***  
-- **FSM遷移図 / *FSM Transition Diagram***  
-- **YAML設定例 / *YAML Example***  
+### 5.1 PID RTL実装 / *PID RTL Implementation*
 
-（※ここは既存のコードブロックを維持）
+**ねらい**：固定小数点で軽量・合成可能なPID。飽和・アンチワインドアップ・出力レート制限を内蔵。  
+*Goal: Lightweight, synthesizable fixed-point PID with saturation, anti-windup, and slew-rate limiting.*
+
+**固定小数点の取り決め（例） / *Fixed-point convention (example)*  
+- データ幅 **W=16**, 小数部 **FRAC=8**（Q7.8）  
+  *Width W=16, fractional bits FRAC=8 (Q7.8)*  
+- すべて符号付き2の補数  
+  *All signed two’s complement.*
+
+```verilog
+// pid_ctrl.v : Synthesizable fixed-point PID with anti-windup & slew-limit
+module pid_ctrl #(
+  parameter int W    = 16,   // data width
+  parameter int FRAC = 8,    // fractional bits (Q format)
+  parameter int UMAX = 16'sh7FFF, // max |u| (after scaling)
+  parameter int SLEW = 16'sh0100   // max delta u per cycle (Q)
+)(
+  input  logic                   clk,
+  input  logic                   rst_n,
+  // 誤差 e[k] = 目標 - 実測 / *error = setpoint - measurement*
+  input  logic signed [W-1:0]    e,
+  // ゲイン / *gains*
+  input  logic signed [W-1:0]    Kp, Ki, Kd,
+  // 出力 u[k] / *control output*
+  output logic signed [W-1:0]    u_out
+);
+  // 内部レジスタ
+  logic signed [W-1:0] i_acc, e_prev, de;
+  logic signed [W-1:0] p_term, i_term, d_term;
+  logic signed [W-1:0] u_raw, u_sat, u_next;
+  logic signed [W-1:0] slew_delta;
+
+  // 差分・PI積分
+  always_ff @(posedge clk or negedge rst_n) begin
+    if (!rst_n) begin
+      e_prev <= '0;
+      de     <= '0;
+      i_acc  <= '0;
+    end else begin
+      de     <= e - e_prev;
+      e_prev <= e;
+      // アンチワインドアップ：出力が飽和時は積分をフリーズ / *freeze I when saturated*
+      if (u_raw != u_sat) i_acc <= i_acc; else i_acc <= i_acc + e;
+    end
+  end
+
+  // 固定小数点の積算（>>> FRAC でスケール回復） / *fixed-point multiply*
+  always_comb begin
+    p_term = (Kp * e)    >>> FRAC;
+    i_term = (Ki * i_acc)>>> FRAC;
+    d_term = (Kd * de)   >>> FRAC;
+    u_raw  = p_term + i_term + d_term;
+  end
+
+  // 飽和 / *saturation*
+  always_comb begin
+    if (u_raw >  $signed(UMAX)) u_sat =  $signed(UMAX);
+    else if (u_raw < -$signed(UMAX)) u_sat = -$signed(UMAX);
+    else u_sat = u_raw;
+  end
+
+  // スルーレート制限 / *slew-rate limiting*
+  always_comb begin
+    slew_delta = u_sat - u_out;
+    if (slew_delta >  $signed(SLEW)) u_next = u_out + $signed(SLEW);
+    else if (slew_delta < -$signed(SLEW)) u_next = u_out - $signed(SLEW);
+    else u_next = u_sat;
+  end
+
+  always_ff @(posedge clk or negedge rst_n) begin
+    if (!rst_n) u_out <= '0;
+    else        u_out <= u_next;
+  end
+endmodule
+```
+
+**合成ノート / *Synthesis notes***  
+- 乗算器は **DSPブロック** にマップ（FPGA）／**Booth 乗算器**（ASIC）推奨。  
+  *Map to DSP slices (FPGA) or Booth multipliers (ASIC).*  
+- タイミング目標例：**500 MHz @ 5 nm** を想定しパイプライン段の挿入を許容。  
+  *Allow optional pipelining to hit 500 MHz @ 5 nm (example target).*
+
+**簡易テストベンチ（抜粋） / *Mini testbench (excerpt)***  
+```verilog
+initial begin
+  rst_n=0; #(20); rst_n=1;
+  Kp=16'sd256; Ki=16'sd16; Kd=16'sd64; // 1.0, 0.0625, 0.25 in Q8
+  repeat(1000) begin
+    // ステップ誤差の模擬 / *step error*
+    e <= (time<5000) ? 16'sd256 : 16'sd0;
+    @(posedge clk);
+  end
+end
+```
+
+---
+
+### 5.2 FSM遷移図と仕様 / *FSM Transitions & Spec*
+
+**状態と役割 / *States & roles***  
+
+| **State** | 日本語説明 | *English* | 主なアクション / *Actions* |
+|---|---|---|---|
+| **NOM** | 通常運転 | *Nominal* | PID有効、平常制限 |
+| **THROTTLE** | 温度・遅延が閾値超過 | *Throttle* | 周波数/電圧を緩やかに下げる |
+| **COOL** | クリティカル手前の冷却 | *Cool* | ファン/冷却強化、DVFS強 |
+| **EMERG** | 緊急停止レベル | *Emergency* | 出力遮断、リセット要求 |
+
+*The FSM supervises PID behavior and enforces safety envelopes.*
+
+**遷移図 / *Transition diagram***  
+```mermaid
+stateDiagram-v2
+    [*] --> NOM
+    NOM --> THROTTLE: temp > T_MAX || delay_slack < S_MIN
+    THROTTLE --> COOL: temp > T_CRIT
+    COOL --> EMERG: temp > T_SHDN
+    THROTTLE --> NOM: temp < T_HYST && slack_ok
+    COOL --> THROTTLE: temp < T_COOL_OK
+    EMERG --> EMERG
+```
+
+**出力信号 / *Outputs***  
+- `dvfs_level[2:0]`：0=HighPerf, 1=Nom, 2=Throt, 3=Cool  
+  *DVFS performance bin.*  
+- `cooler_pwm[7:0]`：冷却制御  
+  *Cooling PWM.*  
+- `trip_emerg`：緊急停止要求  
+  *Emergency trip.*
+
+---
+
+### 5.3 YAML設定 & CSRマップ / *YAML Config & CSR Map*
+
+**YAMLスキーマ（抜粋） / *Schema (excerpt)***  
+```yaml
+targets:
+  delay_ps: 1200    # 目標遅延 [ps] / target path delay
+  temp_C:   80      # 目標温度 [°C] / target temperature
+limits:
+  T_MAX:   90       # throttle開始
+  T_CRIT:  95       # cool移行
+  T_SHDN: 105       # emergency
+  S_MIN:   50       # slack最小 [ps]
+pid:
+  Kp: 0.80
+  Ki: 0.05
+  Kd: 0.10
+actuator_bounds:
+  freq_mhz: [800, 3200]
+  vcore_mv: [700, 1100]
+  fan_pwm:  [0, 255]
+telemetry:
+  avg_window: 64    # フィルタ窓 / moving average window
+```
+
+**レジスタ（APB/AXI-Lite想定） / *Registers (APB/AXI-Lite)***  
+
+| Addr | **名前** | *Name* | 説明 / *Description* |
+|---:|---|---|---|
+| 0x00 | `CTRL` | *Control* | bit0: enable, bit1: reset_iacc |
+| 0x04 | `KP` | *Kp (Q format)* | PID比例ゲイン |
+| 0x08 | `KI` | *Ki (Q)* | PID積分ゲイン |
+| 0x0C | `KD` | *Kd (Q)* | PID微分ゲイン |
+| 0x10 | `T_MAX` | *Throttle threshold* | 温度上限開始 |
+| 0x14 | `T_CRIT` | *Critical threshold* | 冷却強化 |
+| 0x18 | `T_SHDN` | *Shutdown threshold* | 緊急停止 |
+| 0x1C | `S_MIN` | *Min slack* | STAスラック下限 |
+| 0x20 | `U_MAX` | *Output saturation* | 飽和上限 |
+| 0x24 | `SLEW` | *Slew rate* | 1cycleの最大変化 |
+| 0x28 | `STATUS` | *Status* | [3:0] state, [8] emerg, [9] slack_ok |
+
+*CSR values are Q-format where applicable and map one-to-one from YAML at boot or via firmware.*
+
+**初期化フロー / *Init flow***  
+1. ブート時にYAML→CSRへロード（ファーム or ROM）。  
+   *Load YAML→CSRs at boot (FW/ROM).*  
+2. `enable=1` で制御開始。  
+   *Assert `enable` to start control.*  
+3. テレメトリ平均窓 `avg_window` をSoC内フィルタに設定。  
+   *Program moving-average window for telemetry filters.*
+
+---
+
+### 5.4 トップレベル接続 / *Top-level Hook-up*
+
+**I/F概要 / *Interfaces***  
+- **モニタ入力**：`meas_delay_ps`, `temp_C`, `emi_jitter_ps`  
+  *Monitored signals from on-chip monitors (TDC, thermal diodes, PLL jitter).*  
+- **アクチュエータ出力**：`dvfs_req`, `vcore_set`, `fan_pwm`  
+  *Actuators to PLL/PMIC/cooling.*  
+- **バス**：APB/AXI-Lite CSR、割り込み `irq_emerg`  
+  *CSRs via APB/AXI-Lite; emergency IRQ.*
+
+```mermaid
+flowchart LR
+  MON[On-chip Monitors\n(delay/temp/jitter)] --> PIDFSM[PID+FSM IP]
+  PIDFSM --> ACT[Actuators\n(DVFS/PMIC/FAN)]
+  CPU[FW (YAML Loader)] -->|APB/AXI-Lite| PIDFSM
+  PIDFSM -->|irq_emerg| CPU
+```
+
+**EDA連携メモ / *EDA integration notes***  
+- STA：`meas_delay_ps` 生成経路には **MCMM** セットを適用。  
+  *Apply MCMM views to monitor paths.*  
+- P&R：温度分布の高いブロック近傍に **センサー/アクチュエータ** を配置。  
+  *Place sensors/actuators near thermal hotspots.*  
+- DFT：PID内部レジスタは **スキャン** 対応。  
+  *Make internal regs scannable for DFT.*
 
 ---
 
