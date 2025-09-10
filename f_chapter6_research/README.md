@@ -44,13 +44,30 @@ Real-time cross-layer control is required.*
 
 ```mermaid
 flowchart TB
-    A[EDA Flow Input] --> B[PID : Real-time Control]
-    B --> C[FSM : Supervisory Control]
-    C --> D[LLM : Knowledge & Redesign]
-    D --> E[Compensated Output]
+    subgraph Modeling [Control Modeling]
+        A[EDA Flow Input] --> B[PID : Closed-loop Control]
+        B --> C[FSM : Supervisory Control]
+        F[LLM : Knowledge & Redesign] --> C
+        C --> RTL[Verilog RTL]
+    end
 
-    %% Feedback loop
-    E -.->|Runtime Metrics : Delay / Thermal / EMI| B
+    subgraph EDA [EDA Implementation Flow]
+        RTL --> Synth[Logic Synthesis]
+        Synth --> PnR[Place & Route]
+        PnR --> LVS[LVS/DRC]
+        LVS --> STA[Static Timing Analysis]
+        STA --> GDS[GDS II]
+    end
+
+    %% Feedback loop via Metrics
+    STA -.-> M[Runtime Metrics : Delay / Thermal / EMI]
+    M -.-> B
+
+    %% PDK supports downstream
+    PDK[(PDK : Process Design Kit)] --> Synth
+    PDK --> PnR
+    PDK --> LVS
+    PDK --> STA
 ```
 
 ---
