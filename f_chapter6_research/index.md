@@ -129,7 +129,7 @@ PID+FSM: ~10ps*
 ```verilog
 module pid_ctrl #(parameter W=16, FRAC=8)(
   input  logic clk, rst_n,
-  input  logic signed [W-1:0] e,      // 誤差 = 目標 - 実測
+  input  logic signed [W-1:0] e,
   input  logic signed [W-1:0] Kp, Ki, Kd,
   output logic signed [W-1:0] u_out
 );
@@ -184,7 +184,50 @@ actuator_bounds:
 
 ---
 
-## 6. 🚀 今後の展望 / *Future Work*
+## 6. 🏭 EDAとの連携 / *EDA Integration*
+- 制御モデル（PID＋FSM）は **Verilog RTL化** され、通常のEDAフロー（論理合成 → 配置配線 → STA → GDS II）に統合される。  
+- **FEM解析（熱・応力・電磁界）** の結果を物理設計制約としてP&RやSTAに反映。  
+- **ネットワークアナライザによるSパラ測定** を取り込み、インターコネクトの伝送特性をEDAツールで考慮。  
+- 将来的には **LLM（AITL Next）** がEDAログやPVTシミュレーションを解析し、ゲイン再調整・FSMルール修正を自動生成 → RTLへフィードバック。  
+
+*Control models (PID+FSM) are converted to Verilog RTL and integrated into standard EDA flows (Synthesis → P&R → STA → GDS II).  
+FEM analysis (thermal/stress/EM) feeds back constraints to P&R and STA.  
+S-parameter measurements are included in EDA to capture interconnect transmission effects.  
+In the future, LLM (AITL Next) will analyze EDA logs and PVT simulations to automatically redesign gains and FSM rules, feeding them back to RTL.*  
+
+---
+
+```mermaid
+flowchart TB
+    subgraph Modeling [Control Modeling]
+        PID[PID Controller] --> FSM[FSM Supervisor]
+        FSM --> RTL[Verilog RTL]
+        LLM[LLM (Next)] -.-> FSM
+    end
+
+    subgraph EDA [EDA Flow]
+        RTL --> Synth[Logic Synthesis]
+        Synth --> PnR[Place & Route]
+        PnR --> LVS[LVS/DRC]
+        LVS --> STA[Static Timing Analysis]
+        STA --> GDS[GDS II]
+    end
+
+    STA -.-> Metrics[Runtime Metrics: Delay/Thermal/EMI]
+    Metrics -.-> PID
+    FEM[FEM Analysis] --> PnR
+    FEM --> STA
+    NA[S-parameter Measurement] --> STA
+    NA --> PnR
+
+    PDK[(Process Design Kit)] --> Synth
+    PDK --> PnR
+    PDK --> STA
+```
+
+---
+
+## 7. 🚀 今後の展望 / *Future Work*
 - **AITL Base**：PID＋FSM による安定制御の確立  
 - **AITL Next**：軽量化LLMを用いたリアルタイム制御、EDAフローへの統合  
 - **PoC**：実チップ試作と産業応用での実証  
@@ -195,12 +238,12 @@ PoC: Prototype chips and industrial validation*
 
 ---
 
-## 7. 📄 論文・関連リンク / *Downloads & Related Links*
+## 8. 📄 論文・関連リンク / *Downloads & Related Links*
 - 📑 [Main Paper (PDF)](systemdk_aitl2025.pdf)  
 
 ---
 
-## 8. 👤 著者・ライセンス / *Author & License*
+## 9. 👤 著者・ライセンス / *Author & License*
 
 | 📌 Item | 📄 Details |
 |------|------|
