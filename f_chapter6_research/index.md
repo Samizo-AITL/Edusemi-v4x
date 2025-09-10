@@ -166,6 +166,55 @@ flowchart TB
 
 ---
 
+### 4.5 FEM解析 / *FEM Analysis*
+
+<img src="./figures/fem_thermal_map.png" width="70%">
+
+- **熱分布 / Thermal distribution**  
+  - 制御なし：ホットスポット 120℃超え → 設計制約逸脱  
+    *Uncontrolled: hotspot exceeds 120 °C → violates thermal constraints*  
+  - PID制御：100℃程度 → 許容範囲  
+    *PID: ~100 °C → within acceptable range*  
+  - PID＋FSM制御：90℃以下 → P&R温度制約に適合  
+    *PID+FSM: ≤90 °C → fits P&R thermal constraints*  
+
+<img src="./figures/fem_stress_map.png" width="70%">
+
+- **応力分布 / Stress distribution**  
+  - TSV近傍で応力集中 → Vthシフト 40 mV  
+    *Stress concentration near TSV → Vth shift ~40 mV*  
+  - PID制御：20 mVに緩和  
+    *PID: reduced to ~20 mV*  
+  - PID＋FSM制御：10 mV未満に抑制 → PDK補正可能範囲  
+    *PID+FSM: <10 mV → within PDK correction range*  
+
+---
+
+### 4.6 Sパラ解析 / *S-parameter Analysis*
+
+<img src="./figures/sparam_s11s21.png" width="75%">
+
+**条件 / Conditions**  
+- 周波数帯域: 1–10 GHz  
+- 伝送路: 10 mm 配線チャネル, 50Ω終端  
+
+**結果 / Results**  
+
+| 周波数 / Freq (GHz) | **S11 (dB)** Uncontrolled | **S21 (dB)** Uncontrolled | **S11 (dB)** PID | **S21 (dB)** PID | **S11 (dB)** PID+FSM | **S21 (dB)** PID+FSM |
+|---------------------|----------------------------|----------------------------|------------------|------------------|----------------------|----------------------|
+| **1.0** | -12 | -1.0 | -15 | -0.5 | -18 | -0.2 |
+| **5.0** | -6  | -6.5 | -10 | -4.0 | -15 | -2.0 |
+| **10.0**| -3  | -12  | -7  | -8.0 | -12 | -5.0 |
+
+- **制御なし**：高周波で反射悪化・減衰増大 → 通信不可  
+  *Uncontrolled: severe reflection & attenuation at high freq → transmission failure*  
+- **PID**：ロス緩和・反射抑制 → 一部改善  
+  *PID: mitigated loss & reflection → partial improvement*  
+- **PID＋FSM**：ロス大幅低減・反射抑制 → SI/EMC適合  
+  *PID+FSM: strong loss reduction & reflection suppression → SI/EMC compliant*
+  
+---
+
 ## 5. 💻 実装PoC / *Implementation PoC*
 
 ### 5.1 PID RTL実装 / *PID RTL Implementation*
