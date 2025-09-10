@@ -190,17 +190,24 @@ flowchart TB
 ## 7. 📄 論文・関連リンク / *Downloads & Related Links*
 - 📑 [Main Paper (PDF)](systemdk_aitl2025.pdf)  
 
+🔗 **Related Chapters**  
+- [特別編 第2a章：SystemDK設計対応](../f_chapter2a_systemdk/)  
+- [特別編 第3章：AITL-H統合制御SoC実装](../f_chapter3_socsystem/)  
+- [特別編 第4章：OpenLane実装](../f_chapter4_openlane/)  
+- [特別編 第5章：PDKとDFM設計指針](../f_chapter5_dfm/)  
+
 ---
 
 ## 8. 👤 著者・ライセンス / *Author & License*
 
-| 📌 項目 / Item | 詳細 / Details |
-|----------------|----------------|
+| 📌 Item | 📄 Details |
+|------|------|
 | **Author** | **三溝 真一 / Shinichi Samizo** |
-| **GitHub** | [![GitHub](https://img.shields.io/badge/GitHub-Samizo--AITL-blue?logo=github)](https://github.com/Samizo-AITL) |
-| **License** | Code: [MIT](https://opensource.org/licenses/MIT) ・ Text: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) ・ Figures: [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) |
+| **💻 GitHub** | [![GitHub](https://img.shields.io/badge/GitHub-Samizo--AITL-blue?style=for-the-badge&logo=github)](https://github.com/Samizo-AITL) |
+| **📜 License** | [![Hybrid License](https://img.shields.io/badge/License-Hybrid-blueviolet?style=for-the-badge)](https://samizo-aitl.github.io/Edusemi-v4x/#-ライセンス--license)<br>Code: [MIT](https://opensource.org/licenses/MIT)<br>Text: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)<br>Figures: [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) |
 
 ---
 
 ## 🔙 戻る / *Back to Top*
-🏠 [Edusemi-v4x](../) ｜ 📂 [GitHub Repo](https://github.com/Samizo-AITL/Edusemi-v4x)
+🏠 [![Site](https://img.shields.io/badge/Site-Edusemi--v4x-lightgrey?style=for-the-badge&logo=githubpages&labelColor=555&color=brightgreen)](../)  
+📂 [![Repo](https://img.shields.io/badge/Repo-Edusemi--v4x-lightgrey?style=for-the-badge&logo=github&labelColor=555&color=blue)](https://github.com/Samizo-AITL/Edusemi-v4x)
