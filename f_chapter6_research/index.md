@@ -49,22 +49,26 @@ Real-time cross-layer control is required.*
 
 ## 3. 🧮 数式モデル / *Analytical Models*
 
-- **RC遅延モデル / RC Delay Model**  
+- **RC遅延モデル / RC Delay Model**
+  
 $$
 t_{pd}(T, \sigma, f) = R_0 \cdot \big(1 + \alpha_T (T-T_0) + \alpha_\sigma \sigma \big)\,C(f) + \Delta_{EMI}(f)
 $$
 
-- **熱結合モデル / Thermal Coupling**  
+- **熱結合モデル / Thermal Coupling**
+    
 $$
 C_{th}\frac{dT}{dt} + \frac{T - T_{amb}}{R_{th}} = P_{chip}(t)
 $$
 
-- **応力によるVthシフト / Stress-induced Vth Shift**  
+- **応力によるVthシフト / Stress-induced Vth Shift**
+   
 $$
 \Delta V_{th}(\sigma) = \kappa \cdot \sigma
 $$
 
-- **EMI注入モデル / EMI Injection**  
+- **EMI注入モデル / EMI Injection**
+  
 $$
 v_{emi}(t) = A \sin(2\pi f_{emi} t)
 $$
