@@ -103,10 +103,10 @@ flowchart TB
 
 | モデル / Model | 数式 / Equation | EDA対応 / *EDA Mapping* |
 |----------------|-----------------|-------------------------|
-| **RC遅延** | $$t_{pd}(T, \sigma, f) = R_0 (1+\alpha_T (T-T_0)+\alpha_\sigma \sigma)C(f)+\Delta_{EMI}(f)$$ | STAでのパス遅延制約 / *STA path delay constraints* |
-| **熱結合** | $$C_{th}\frac{dT}{dt} + \frac{T-T_{amb}}{R_{th}} = P_{chip}(t)$$ | P&R配置温度制約 / *P&R thermal placement constraints* |
-| **Vthシフト** | $$\Delta V_{th}(\sigma)=\kappa\sigma$$ | PDK/SPICEパラメータ補正 / *PDK & SPICE updates* |
-| **EMI注入** | $$v_{emi}(t)=A\sin(2\pi f_{emi}t)$$ | SI/EMCクロックジッタ制約 / *SI/EMC jitter constraints* |
+| **RC遅延**<br>*RC Delay* | $$t_{pd}(T, \sigma, f) = R_0 (1+\alpha_T (T-T_0)+\alpha_\sigma \sigma)C(f)+\Delta_{EMI}(f)$$ | STAでのパス遅延制約<br>*STA path delay constraints* |
+| **熱結合**<br>*Thermal Coupling* | $$C_{th}\frac{dT}{dt} + \frac{T-T_{amb}}{R_{th}} = P_{chip}(t)$$ | P&R配置温度制約<br>*P&R thermal placement constraints* |
+| **Vthシフト**<br>*Vth Shift* | $$\Delta V_{th}(\sigma)=\kappa\sigma$$ | PDK/SPICEパラメータ補正<br>*PDK & SPICE updates* |
+| **EMI注入**<br>*EMI Injection* | $$v_{emi}(t)=A\sin(2\pi f_{emi}t)$$ | SI/EMCクロックジッタ制約<br>*SI/EMC jitter constraints* |
 
 ---
 
@@ -116,8 +116,11 @@ flowchart TB
 <img src="./figures/sim_delay_rc.png" width="70%">
 
 - **制御なし**：大きなばらつき → STAクロージャ困難  
+  *Uncontrolled: large variation → STA closure difficult*  
 - **PID**：±20%に収束 → STAパス余裕改善  
+  *PID: converges within ±20% → improves STA path margin*  
 - **PID＋FSM**：±10%以内 → STAスラック安定化  
+  *PID+FSM: within ±10% → stabilizes STA slack*  
 
 ---
 
@@ -125,8 +128,11 @@ flowchart TB
 <img src="./figures/sim_thermal_response.png" width="70%">
 
 - **制御なし**：+12Kオーバーシュート → P&R制約逸脱  
+  *Uncontrolled: +12K overshoot → violates P&R thermal constraints*  
 - **PID**：+4K → 設計範囲内  
+  *PID: +4K rise → within design range*  
 - **PID＋FSM**：+2K以下 → 3D-IC設計制約に適合  
+  *PID+FSM: ≤+2K → fits 3D-IC thermal design constraints*  
 
 ---
 
@@ -134,9 +140,12 @@ flowchart TB
 <img src="./figures/sim_emi_jitter.png" width="70%">
 
 - **制御なし**：100ps → EMC不合格  
+  *Uncontrolled: 100ps jitter → EMC test failed*  
 - **PID**：20ps → 一部合格  
+  *PID: ~20ps → partial compliance*  
 - **PID＋FSM**：10ps → EMC設計規格適合  
-
+  *PID+FSM: ~10ps → meets EMC design standards*
+  
 ---
 
 ### 4.4 総合比較表 / *Summary Table*
