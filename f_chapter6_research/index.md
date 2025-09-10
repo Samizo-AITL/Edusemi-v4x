@@ -46,6 +46,9 @@ that directly bridges control modeling and the EDA implementation flow.*
 
 ### 📊 Fig.1: SystemDK with AITL — From Control to GDS
 
+Fig.1 shows how control modeling (**PID in Simulink**, **FSM in Stateflow**, **LLM for knowledge-driven redesign**)  
+can be transformed into **Verilog RTL** and carried through the standard **EDA flow** down to **GDS II**.
+
 ```mermaid
 flowchart TB
     subgraph Modeling [Control Modeling]
@@ -71,6 +74,27 @@ flowchart TB
     PDK --> PnR
     PDK --> LVS
     PDK --> STA
+
+    %% ---- Style / Colors ----
+    %% Blue arrows for control modeling
+    A --> B:::ctrl
+    B --> C:::ctrl
+    C --> RTL:::ctrl
+
+    %% Green arrows for EDA flow
+    RTL --> Synth:::eda
+    Synth --> PnR:::eda
+    PnR --> LVS:::eda
+    LVS --> STA:::eda
+    STA --> GDS:::eda
+
+    %% Red arrows for LLM feedback
+    F --> C:::llm
+    STA -.-> B:::llm
+
+    classDef ctrl stroke:#1f77b4,stroke-width:2px,color:#1f77b4;
+    classDef eda stroke:#2ca02c,stroke-width:2px,color:#2ca02c;
+    classDef llm stroke:#d62728,stroke-width:2px,color:#d62728,stroke-dasharray: 5 5;
 ```
 
 ---
