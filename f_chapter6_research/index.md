@@ -107,6 +107,97 @@ flowchart TB
 
 ---
 
+### 🗺️ 総合システム図 / *System Overview*
+
+下図は、本章で扱う **制御層（PID＋FSM）—EDAフロー—物理解析（FEM/Sパラ）—テレメトリ—アクチュエータ—AITL Next** の**全体接続**を示す。  
+*The diagram aggregates connections across the control layer (PID+FSM), EDA flow, physics (FEM/S-parameters), telemetry, actuators, and AITL Next.*
+
+```mermaid
+flowchart TB
+  %% ========== LAYERS ==========
+  subgraph CTRL["Control Layer"]
+    YAML["YAML Config"] --> FW["FW Loader<br>(YAML→CSR)"]
+    FW --> CSR["CSR/Registers"]
+    CSR --> PID["PID Controller (RTL)"]
+    PID --> FSM["FSM Supervisor (RTL)"]
+    FSM --> CTRL_OUT["Control Outputs"]
+  end
+
+  subgraph MON["On-Chip Telemetry"]
+    M_DELAY["Delay Monitor<br>(TDC/Path)"]
+    M_THERM["Thermal Sensors"]
+    M_EMI["Jitter Monitor"]
+  end
+
+  subgraph EDA["EDA Flow"]
+    RTL["Verilog RTL (Control IP)"] --> SYNTH["Logic Synthesis"]
+    SYNTH --> PNR["Place and Route"]
+    PNR --> LVS["LVS/DRC"]
+    LVS --> STA["Static Timing Analysis"]
+    STA --> GDS["GDS II"]
+  end
+
+  subgraph PHY["Physics & Measurements"]
+    FEM["FEM Analysis<br>(Thermal/Stress/EM)"]
+    SPARAM["S-Parameters<br>(S11/S21)"]
+    PDK["Process Design Kit"]
+  end
+
+  subgraph ACT["Actuators"]
+    DVFS["DVFS Request"]
+    VCORE["Vcore Set"]
+    COOL["Cooling PWM"]
+  end
+
+  subgraph AI["AITL Next (Future)"]
+    LLM["LLM Analyzer<br>(EDA Logs / PVT)"]
+  end
+
+  %% ========== CONNECTIONS ==========
+  %% Control path
+  CSR --> RTL
+  CTRL_OUT --> DVFS
+  CTRL_OUT --> VCORE
+  CTRL_OUT --> COOL
+
+  %% Monitors feed PID/FSM
+  M_DELAY --> PID
+  M_THERM --> PID
+  M_EMI --> PID
+
+  %% Telemetry also to CSR (status)
+  M_DELAY --> CSR
+  M_THERM --> CSR
+  M_EMI --> CSR
+
+  %% EDA feedback to Control via metrics
+  STA -. metrics .-> PID
+  PNR -. placement hints .-> FSM
+
+  %% Physics to EDA
+  FEM --> PNR
+  FEM --> STA
+  SPARAM --> PNR
+  SPARAM --> STA
+
+  %% PDK supports EDA
+  PDK --> SYNTH
+  PDK --> PNR
+  PDK --> STA
+
+  %% LLM Next loop
+  LLM -. analyze logs .-> FSM
+  STA -. reports .-> LLM
+  PNR -. reports .-> LLM
+
+  %% Actuator plant influences monitors (closed loop)
+  DVFS -->|affects| M_DELAY
+  VCORE -->|affects| M_DELAY
+  COOL -->|affects| M_THERM
+```
+
+---
+
 ## 3. 🧮 数式モデルとEDA対応 / *Analytical Models and EDA Mapping*
 
 | モデル / Model | 数式 / Equation | EDA対応 / *EDA Mapping* |
