@@ -30,17 +30,24 @@ Real-time cross-layer control is required.*
 ---
 
 ## 2. ⚙️ 提案枠組み / *Proposed Framework: SystemDK with AITL*
-- **PID**：リアルタイム安定化制御 / *Real-time stabilization*  
+- **PID**：リアルタイム安定化制御（閉ループ） / *Real-time closed-loop stabilization*  
   → MATLAB/Simulink による制御応答設計・ゲイン調整に対応  
 - **FSM**：モード遷移・状態監督 / *Supervisory mode/state control*  
-  → Simulink の拡張機能 **Stateflow** を用いた有限状態機械モデル化に対応  
+  → Simulink の拡張機能 **Stateflow** により有限状態機械をモデル化  
 - **LLM**：ゲイン再設計・知識統合 / *Knowledge-driven redesign with LLM*  
-  → Python/EDA フローと連携し、設計ルールや補償アルゴリズムを動的再構築  
-- **アーキテクチャ**：三層構造（PID + FSM + LLM）を通じて **EDA設計フローに直接統合**
+  → FSM に合流し、設計ルールや補償アルゴリズムを動的に強化  
+- **EDAフロー統合**：PID+FSM+LLM の制御ロジックを Verilog RTL に変換し、  
+  **論理合成 → P&R → LVS → STA → GDS** へ流し込むことで、半導体実装フローと直結  
 
-*SystemDK with AITL introduces a three-layer control loop (PID + FSM + LLM) directly integrated into the EDA design flow.*  
+*SystemDK with AITL introduces a three-layer control loop (PID + FSM + LLM)  
+that directly bridges control modeling and the EDA implementation flow.*  
 
-### 📊 Fig.1: Supervisory PID+FSM+LLM Control Architecture
+---
+
+### 📊 Fig.1: SystemDK with AITL — From Control to GDS
+
+Fig.1 shows how control modeling (**PID in Simulink**, **FSM in Stateflow**, **LLM for knowledge-driven redesign**)  
+can be transformed into **Verilog RTL** and carried through the standard **EDA flow** down to **GDS II**.
 
 ```mermaid
 flowchart TB
