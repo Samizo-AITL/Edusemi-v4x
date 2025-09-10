@@ -33,13 +33,13 @@ Real-time cross-layer control is required.*
 
 ```mermaid
 flowchart LR
-    A[EDA Flow Input] --> B[PID<br/>(Real-time Control)]
-    B --> C[FSM<br/>(Supervisory Control)]
-    C --> D[LLM<br/>(Knowledge / Redesign)]
+    A[EDA Flow Input] --> B[PID (Real-time Control)]
+    B --> C[FSM (Supervisory Control)]
+    C --> D[LLM (Knowledge/Redesign)]
     D --> E[Compensated Output]
 
     %% Feedback loop
-    E -.->|Runtime Metrics<br/>(Delay/Thermal/EMI)| B
+    E -.->|Runtime Metrics (Delay/Thermal/EMI)| B
 ```
 
 ---
