@@ -66,7 +66,7 @@ flowchart TB
         STA --> GDS[GDS II]
     end
 
-    %% Feedback loop
+    %% Feedback loop (only one arrow, from STA back to PID)
     STA -.->|Runtime Metrics : Delay / Thermal / EMI| B
 
     %% PDK supports downstream
@@ -75,26 +75,24 @@ flowchart TB
     PDK --> LVS
     PDK --> STA
 
-    %% ---- Style / Colors ----
-    %% Blue arrows for control modeling
+    %% ---- Styles ----
+    classDef ctrl stroke:#1f77b4,stroke-width:2px,color:#1f77b4;
+    classDef eda stroke:#2ca02c,stroke-width:2px,color:#2ca02c;
+    classDef llm stroke:#d62728,stroke-width:2px,color:#d62728,stroke-dasharray: 5 5;
+
+    %% Assign colors
     A --> B:::ctrl
     B --> C:::ctrl
     C --> RTL:::ctrl
 
-    %% Green arrows for EDA flow
     RTL --> Synth:::eda
     Synth --> PnR:::eda
     PnR --> LVS:::eda
     LVS --> STA:::eda
     STA --> GDS:::eda
 
-    %% Red arrows for LLM feedback
     F --> C:::llm
     STA -.-> B:::llm
-
-    classDef ctrl stroke:#1f77b4,stroke-width:2px,color:#1f77b4;
-    classDef eda stroke:#2ca02c,stroke-width:2px,color:#2ca02c;
-    classDef llm stroke:#d62728,stroke-width:2px,color:#d62728,stroke-dasharray: 5 5;
 ```
 
 ---
