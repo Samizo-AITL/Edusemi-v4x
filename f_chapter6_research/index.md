@@ -30,17 +30,24 @@ Real-time cross-layer control is required.*
 ---
 
 ## 2. ⚙️ 提案枠組み / *Proposed Framework: SystemDK with AITL*
-- **PID**：リアルタイム安定化制御（閉ループ） / *Real-time closed-loop stabilization*  
-  → MATLAB/Simulink による制御応答設計・ゲイン調整に対応  
-- **FSM**：モード遷移・状態監督 / *Supervisory mode/state control*  
-  → Simulink の拡張機能 **Stateflow** により有限状態機械をモデル化  
-- **LLM**：ゲイン再設計・知識統合 / *Knowledge-driven redesign with LLM*  
-  → FSM に合流し、設計ルールや補償アルゴリズムを動的に強化  
-- **EDAフロー統合**：PID+FSM+LLM の制御ロジックを Verilog RTL に変換し、  
-  **論理合成 → P&R → LVS → STA → GDS** へ流し込むことで、半導体実装フローと直結  
+- **PID**：リアルタイム安定化制御（閉ループ）  
+  *Real-time closed-loop stabilization*  
+  → MATLAB/Simulink による制御応答設計・ゲイン調整に対応し、EDA設計フローで発生する **遅延・熱・EMI変動を実時間補償**。  
+
+- **FSM**：モード遷移・状態監督  
+  *Supervisory mode/state control*  
+  → Simulink の拡張機能 **Stateflow** により有限状態機械をモデル化し、PIDの挙動を監督。  
+
+- **LLM**：ゲイン再設計・知識統合  
+  *Knowledge-driven redesign with LLM*  
+  → FSM に合流し、**モード遷移ルールや補償アルゴリズムを知識的に強化・再設計**。  
+
+- **EDAフロー統合**：PID+FSM+LLM の制御ロジックを **Verilog RTL** に変換し、  
+  **論理合成 → 配置配線 (P&R) → LVS → STA → GDS** に流し込むことで、**PDK・FEM解析・Sパラ解析のフィードバックを含む物理設計フロー**と直結。  
 
 *SystemDK with AITL introduces a three-layer control loop (PID + FSM + LLM)  
-that directly bridges control modeling and the EDA implementation flow.*  
+that compensates runtime delay/thermal/EMI variations and directly bridges  
+control modeling with the full EDA implementation flow down to GDS II.*  
 
 ---
 
