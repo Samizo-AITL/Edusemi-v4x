@@ -18,18 +18,10 @@ title: 特別編 第6章　SystemDK with AITL 論文公開（Final Chapter）
 
 ---
 
-## 🔗 公式リンク / *Official Links*
-
-| 言語 / Language | GitHub Pages 🌐 | GitHub 💻 |
-|-----------------|----------------|-----------|
-| 🇯🇵 日本語 / *Japanese* | [![GitHub Pages JP](https://img.shields.io/badge/GitHub%20Pages-日本語版-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/f_chapter6_research/) | [![GitHub Repo JP](https://img.shields.io/badge/GitHub-日本語版-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/f_chapter6_research) |
-
----
-
 ## 1. 📝 背景と課題 / *Introduction*
-- 従来のDTCO（Design-Technology Co-Optimization）は **静的補償・過大ガードバンド依存** が課題。  
+- 従来のDTCOは **静的補償・過大ガードバンド依存** が課題。  
 - サブ2nm以降では **RC遅延、熱結合、EMI/EMC変動** が深刻化。  
-- これらに対して **実時間でのクロスレイヤー制御** が必要。  
+- **実時間クロスレイヤー制御** の必要性が増大。  
 
 *Traditional DTCO relies on static compensation and large guardbands.  
 At sub-2nm nodes, RC delay, thermal coupling, and EMI/EMC variations become critical.  
@@ -39,130 +31,167 @@ Real-time cross-layer control is required.*
 
 ## 2. ⚙️ 提案枠組み / *Proposed Framework: SystemDK with AITL*
 
-### **現行実装（AITL Base）**  
-- **PID**：リアルタイム安定化制御（閉ループ）  
-  → MATLAB/Simulink を用いた設計。遅延・熱・EMI変動を補償。  
-- **FSM**：モード遷移・状態監督  
-  → Stateflow による有限状態機械で、PIDの挙動を監督・安全制約を保証。  
+### 現行実装（AITL Base） / *Current Implementation (AITL Base)*
+- **PID**：リアルタイム安定化制御（遅延・温度・電圧補償）  
+- **FSM**：安全監督（上限制約、緊急停止）  
 
-**Current Implementation (AITL Base)**  
-- **PID**: Real-time stabilization control (closed-loop)  
-  → Designed with MATLAB/Simulink. Compensates delay, thermal, and EMI variations.  
-- **FSM**: Mode transition and supervisory control  
-  → Modeled with Stateflow to monitor PID behavior and ensure safety constraints.  
+**PID**: Real-time stabilization (delay, temperature, voltage compensation)  
+**FSM**: Supervisory safety control (limits, emergency stop)  
 
----
+### 将来拡張（AITL Next） / *Future Extension (AITL Next)*
+- **LLM**：将来、計算性能向上と軽量化により **リアルタイム制御層に参入**  
+- **役割**：PIDゲイン再調整、FSMルール自動更新、故障・未知外乱への即応  
 
-### **将来拡張（AITL Next）**  
-- **LLM**：リアルタイム統合（Nextステージ）  
-  - 現状：設計支援・オフライン解析（EDAレポート解析、ゲイン最適化、FSMルール提案）  
-  - 将来：計算性能向上と軽量化により、**リアルタイム制御層に参入**  
-  - 役割：  
-    - 劣化・故障時に即時補償則を再設計  
-    - 未知の外乱に対して動的適応  
-
-**Future Extension (AITL Next)**  
-- **LLM**: Real-time integration (Next stage)  
-  - Current role: design support & offline analysis (EDA report parsing, PID gain tuning, FSM rule generation)  
-  - Future role: with improved computational performance and lightweighting, **LLM joins the real-time control layer**  
-  - Functions:  
-    - Redesign control laws in case of degradation/failure  
-    - Adapt dynamically to unknown disturbances  
+**LLM**: Future entry into real-time control with enhanced compute & lightweight models  
+**Roles**: PID gain redesign, FSM rule regeneration, fast adaptation to failures/unknown disturbances  
 
 ---
 
-### 📊 Fig.1: SystemDK with AITL — From Control to GDS
+## 3. 🧮 数式モデル / *Analytical Models*
 
-```mermaid
-flowchart TB
-    subgraph Base [AITL Base]
-        B[PID : Closed-loop Control] --> C[FSM : Supervisory Control]
+- **RC遅延モデル / RC Delay Model**  
+$begin:math:display$
+t_{pd}(T, \\sigma, f) = R_0 \\cdot \\big(1 + \\alpha_T (T-T_0) + \\alpha_\\sigma \\sigma \\big) \\cdot C(f) + \\Delta_{EMI}(f)
+$end:math:display$
+
+- **熱結合モデル / Thermal Coupling**  
+$begin:math:display$
+C_{th}\\frac{dT}{dt} + \\frac{T - T_{amb}}{R_{th}} = P_{chip}(t)
+$end:math:display$
+
+- **応力によるVthシフト / Stress-induced Vth Shift**  
+$begin:math:display$
+\\Delta V_{th}(\\sigma) = \\kappa \\cdot \\sigma
+$end:math:display$
+
+- **EMI注入モデル / EMI Injection**  
+$begin:math:display$
+v_{emi}(t) = A \\sin(2\\pi f_{emi} t)
+$end:math:display$
+
+---
+
+## 4. 🔬 シミュレーション結果 / *Simulation Results*
+※ 以下は **理想化モデルによるシミュレーション結果**。実チップとは異なる可能性があります。  
+*The following are simulation results from idealized models; real chip values may differ.*  
+
+### 4.1 RC遅延補償 / RC Delay Compensation
+<img src="./figures/sim_delay_rc.png" alt="RC Delay Compensation" width="70%">
+
+- 制御なし：大きなばらつき  
+- PID：±20%に収束  
+- PID＋FSM：±10%以内に収束  
+
+*Uncontrolled: large variations  
+PID: converges within ±20%  
+PID+FSM: converges within ±10%*  
+
+---
+
+### 4.2 熱応答制御 / Thermal Response Control
+<img src="./figures/sim_thermal_response.png" alt="Thermal Response Control" width="70%">
+
+- 制御なし：+12Kオーバーシュート  
+- PID：+4K程度  
+- PID＋FSM：+2K以下  
+
+*Uncontrolled: +12K overshoot  
+PID: ~+4K  
+PID+FSM: ≤+2K*  
+
+---
+
+### 4.3 EMIジッタ抑制 / EMI Jitter Suppression
+<img src="./figures/sim_emi_jitter.png" alt="EMI Jitter Suppression" width="70%">
+
+- 制御なし：100psジッタ  
+- PID：20ps程度  
+- PID＋FSM：10ps程度  
+
+*Uncontrolled: 100ps jitter  
+PID: ~20ps  
+PID+FSM: ~10ps*  
+
+---
+
+### 4.4 総合比較表 / Summary Table
+| 指標 / Metric | 制御なし / Uncontrolled | PIDのみ / PID only | PID＋FSM | LLM (Next, 理想値 / Ideal) |
+|---------------|-------------------------|--------------------|-----------|--------------------------|
+| RC Delay Variation | 1.0 (norm.) | 0.2 | 0.15 | ≪0.1 |
+| Thermal Rise ΔT | +12 K | +4 K | +2 K | ≪1 K |
+| EMI Jitter | 100 ps | 20 ps | 10 ps | ≪5 ps |
+
+---
+
+## 5. 💻 実装PoC / *Implementation PoC*
+
+### 5.1 PID Verilog RTL
+```verilog
+module pid_ctrl #(parameter W=16, FRAC=8)(
+  input  logic clk, rst_n,
+  input  logic signed [W-1:0] e,      // 誤差 = 目標 - 実測
+  input  logic signed [W-1:0] Kp, Ki, Kd,
+  output logic signed [W-1:0] u_out
+);
+  logic signed [W-1:0] i_acc, e_prev, de;
+  always_ff @(posedge clk or negedge rst_n) begin
+    if(!rst_n) begin i_acc<=0; e_prev<=0; u_out<=0; end
+    else begin
+      de    <= e - e_prev;
+      i_acc <= i_acc + e;
+      u_out <= (Kp*e >>> FRAC) + (Ki*i_acc >>> FRAC) + (Kd*de >>> FRAC);
+      e_prev<= e;
     end
-    C --> RTL[Verilog RTL]
-
-    subgraph EDA [EDA Implementation Flow]
-        RTL --> Synth[Logic Synthesis]
-        Synth --> PnR[Place & Route]
-        PnR --> LVS[LVS/DRC]
-        LVS --> STA[Static Timing Analysis]
-        STA --> GDS[GDS II]
-    end
-
-    STA -.-> M[Runtime Metrics : Delay / Thermal / EMI]
-    M -.-> B
-
-    subgraph Next [AITL Next]
-        LLM[LLM : Future Real-time Control] -.-> B
-        LLM -.-> C
-    end
-
-    %% PDK & Physical Feedback
-    PDK[(PDK)] --> Synth
-    PDK --> PnR
-    PDK --> STA
-    FEM[FEM : Thermal/Stress/EM] --> PnR
-    FEM --> STA
-    NA[Network Analyzer : S-parameters] --> PnR
-    NA --> STA
+  end
+endmodule
 ```
 
 ---
 
-## 3. 🧩 技術的ポイント / *Key Technical Points*
-- **RC遅延変動補償 / RC Delay Compensation**  
-  → PID＋FSMで安定化  
-
-*Stabilization of RC delay variation using PID + FSM*  
-
-- **熱結合制御 / Thermal Coupling Control**  
-  → シミュレーション上で大幅に抑制（理想値）  
-
-*Significant suppression in simulation (ideal values)*  
-
-- **応力・Vthシフト補償 / Stress & Vth Shift Compensation**  
-  → 将来はLLMを含めた動的再設計で対応  
-
-*Future dynamic redesign including LLM*  
-
-- **EMI/EMC耐性向上 / EMI/EMC Robustness**  
-  → PID＋FSMによりジッタを抑制、LLM参入後は更なる適応性向上  
-
-*PID + FSM reduce jitter; LLM enhances adaptability in the future*  
+### 5.2 FSM 状態遷移図 / FSM State Transitions
+```mermaid
+stateDiagram-v2
+    [*] --> NOM
+    NOM --> THROTTLE: temp > T_MAX
+    THROTTLE --> COOL: temp > T_CRIT
+    COOL --> EMERG: temp > T_SHDN
+    THROTTLE --> NOM: temp < T_HYST
+    COOL --> THROTTLE: temp < T_COOL_OK
+    EMERG --> EMERG
+```
 
 ---
 
-## 4. 🔬 検証結果 / *Simulation Results*
-※ 以下は **シミュレーション理想値**。実装値は異なる可能性があります。  
-
-*The following are **simulation ideal values**. Actual implementation may differ.*  
-
-| Metric / 指標 | Conventional | PID only | PID+FSM | PID+FSM+LLM (Next) |
-|---------------|--------------|----------|---------|--------------------|
-| RC Delay Variation | 1.0 (norm.) | 0.2 | 0.15 | **≪0.1 (ideal)** |
-| Thermal Rise (ΔT) | +12 K | +4 K | +2 K | **≪1 K (ideal)** |
-| EMI Jitter | 100 ps | 20 ps | 10 ps | **≪5 ps (ideal)** |
-
----
-
-## 5. 🌍 意義と応用 / *Significance & Applications*
-- **ガードバンド削減 / Guardband Reduction** → 消費電力・性能最適化  
-- **信頼性向上 / Reliability Improvement** → 熱暴走・EMI不良の抑制  
-- **産業応用 / Industrial Application** → 教材・PoCとしての価値、将来はEDAフロー統合  
-
-*Guardband reduction → Power/performance optimization  
-Reliability improvement → Suppression of thermal runaway and EMI failures  
-Industrial application → Educational/PoC value, future EDA flow integration*  
+### 5.3 YAML 設定例 / YAML Example
+```yaml
+targets:
+  delay_ps: 1200
+  temp_C:   80
+limits:
+  T_MAX: 90
+  T_CRIT: 95
+  T_SHDN: 105
+  EMI_MAX: 0.6
+pid:
+  Kp: 0.8
+  Ki: 0.05
+  Kd: 0.1
+actuator_bounds:
+  freq_mhz: [800, 3200]
+  vcore_mv: [700, 1100]
+  fan_pwm:  [0, 255]
+```
 
 ---
 
 ## 6. 🚀 今後の展望 / *Future Work*
-- **AITL Base**：PID＋FSMによる実用的制御の確立  
-- **AITL Next**：軽量化LLMのリアルタイム実装、EDAフローとのAI統合  
-- **PoC**：実チップ試作・産業応用に向けた検証  
+- **AITL Base**：PID＋FSM による安定制御の確立  
+- **AITL Next**：軽量化LLMを用いたリアルタイム制御、EDAフローへの統合  
+- **PoC**：実チップ試作と産業応用での実証  
 
-*AITL Base: Establish practical control with PID + FSM  
-AITL Next: Real-time implementation of lightweight LLM, AI-EDA integration  
-PoC: Prototype chips & industrial validation*  
+*AITL Base: Establish stable control with PID + FSM  
+AITL Next: Real-time LLM (lightweight) integration into EDA flows  
+PoC: Prototype chips and industrial validation*  
 
 ---
 
