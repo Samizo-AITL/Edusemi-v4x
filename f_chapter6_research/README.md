@@ -29,6 +29,77 @@ Real-time cross-layer control is required.*
 
 ---
 
+## 2. ⚙️ 提案枠組み / *Proposed Framework: SystemDK with AITL*
+- **PID**：リアルタイム安定化制御（閉ループ）  
+  *Real-time closed-loop stabilization*  
+  → MATLAB/Simulink による制御応答設計・ゲイン調整に対応し、EDA設計フローで発生する **遅延・熱・EMI変動を実時間補償**。  
+
+- **FSM**：モード遷移・状態監督  
+  *Supervisory mode/state control*  
+  → Simulink の拡張機能 **Stateflow** により有限状態機械をモデル化し、PIDの挙動を監督。  
+
+- **LLM**：ゲイン再設計・知識統合  
+  *Knowledge-driven redesign with LLM*  
+  → FSM に合流し、**モード遷移ルールや補償アルゴリズムを知識的に強化・再設計**。  
+
+- **EDAフロー統合**：PID+FSM+LLM の制御ロジックを **Verilog RTL** に変換し、  
+  **論理合成 → 配置配線 (P&R) → LVS → STA → GDS** に流し込むことで、**PDK・FEM解析・Sパラ解析のフィードバックを含む物理設計フロー**と直結。  
+
+*SystemDK with AITL introduces a three-layer control loop (PID + FSM + LLM)  
+that compensates runtime delay/thermal/EMI variations and directly bridges  
+control modeling with the full EDA implementation flow down to GDS II.*  
+
+---
+
+### 📊 Fig.1: SystemDK with AITL — From Control to GDS
+
+**日本語解説:**  
+Fig.1は、**制御モデル（PIDはSimulink、FSMはStateflow、LLMは知識再設計）** が  
+**Verilog RTL** に変換され、標準的な **EDAフロー** を経て **GDS II** に至るまでの流れを示しています。  
+さらに、**FEM解析（熱・応力・電磁場）** および **ネットワークアナライザ結果（Sパラメータ）** を  
+**論理合成・配置配線・STA** に反映することで、物理的に現実的な設計クロージャを実現します。 
+
+**English Explanation:**  
+Fig.1 shows how control modeling (**PID in Simulink**, **FSM in Stateflow**, **LLM for knowledge-driven redesign**)  
+can be transformed into **Verilog RTL** and carried through the standard **EDA flow** down to **GDS II**.  
+In addition, **FEM analysis** (thermal / stress / EM) and **Network Analyzer results** (S-parameters)  
+are injected into synthesis, P&R, and STA to ensure realistic, physics-aware design closure.
+
+```mermaid
+flowchart TB
+    subgraph Modeling [Control Modeling]
+        A[EDA Flow Input] --> B[PID : Closed-loop Control]
+        B --> C[FSM : Supervisory Control]
+        F[LLM : Knowledge & Redesign] --> C
+        C --> RTL[Verilog RTL]
+    end
+
+    subgraph EDA [EDA Implementation Flow]
+        RTL --> Synth[Logic Synthesis]
+        Synth --> PnR[Place & Route]
+        PnR --> LVS[LVS/DRC]
+        LVS --> STA[Static Timing Analysis]
+        STA --> GDS[GDS II]
+    end
+
+    %% Feedback loop via Metrics
+    STA -.-> M[Runtime Metrics : Delay / Thermal / EMI]
+    M -.-> B
+    LLM_FEED[LLM Feedback to RTL] -.-> RTL
+
+    %% PDK supports downstream
+    PDK[(PDK : Process Design Kit)] --> Synth
+    PDK --> PnR
+    PDK --> LVS
+    PDK --> STA
+
+    %% FEM + Network Analyzer
+    FEM[FEM : Thermal / Stress / EM] --> Synth
+    FEM --> PnR
+    FEM --> STA
+    NA[Network Analyzer : S-parameters] --> PnR
+    NA --> STA
+```
 
 ---
 
