@@ -46,9 +46,16 @@ that directly bridges control modeling and the EDA implementation flow.*
 
 ### 📊 Fig.1: SystemDK with AITL — From Control to GDS
 
+**日本語解説:**  
+Fig.1は、**制御モデル（PIDはSimulink、FSMはStateflow、LLMは知識再設計）** が  
+**Verilog RTL** に変換され、標準的な **EDAフロー** を経て **GDS II** に至るまでの流れを示しています。  
+さらに、**FEM解析（熱・応力・電磁場）** および **ネットワークアナライザ結果（Sパラメータ）** を  
+**論理合成・配置配線・STA** に反映することで、物理的に現実的な設計クロージャを実現します。 
+
+**English Explanation:**  
 Fig.1 shows how control modeling (**PID in Simulink**, **FSM in Stateflow**, **LLM for knowledge-driven redesign**)  
 can be transformed into **Verilog RTL** and carried through the standard **EDA flow** down to **GDS II**.  
-In addition, **FEM解析** (thermal / stress / EM) and **Network Analyzer results** (S-parameters)  
+In addition, **FEM analysis** (thermal / stress / EM) and **Network Analyzer results** (S-parameters)  
 are injected into synthesis, P&R, and STA to ensure realistic, physics-aware design closure.
 
 ```mermaid
