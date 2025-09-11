@@ -149,12 +149,25 @@ sequenceDiagram
 
 ---
 
-## 10b. ⏱📈 タイミング波形 / Timing Waveforms
-下図は **VSYNC, Gate(Y), Source(X), Pixel node** の概略波形である。  
-*Illustrative timing waveforms for VSYNC, Gate(Y), Source(X), and pixel node.*
+## 10b. ⏱📈 タイミング波形 / Timing Waveforms (Clear)
 
-![LCD Timing](./lcd_timing.png)
+下の3図は、**Gate(Y)** → **Source(X)** → **Pixel** の順に分けて表示し、
+サンプル＆ホールドの関係を明確に示しています。薄い帯は「行選択（Gate ON）」区間です。
 
+### Gate (Y) select pulses
+<img src="./lcd_gate_timing.png" alt="Gate timing" width="80%">
+
+### Source (X) analog data
+<img src="./lcd_source_timing.png" alt="Source timing" width="80%">
+
+### Pixel node (sample & hold)
+<img src="./lcd_pixel_timing.png" alt="Pixel timing" width="80%">
+
+**読み方 / How to read**
+- Gate の帯が ON の間だけ、Pixel は Source をトラックし、その直後は **保持 (Hold)** に入ります。
+- 各行の選択（Line 1, Line 2 ...）は、Gate の帯で示されています。
+- Source は行ごとに異なるアナログ値になり、Pixel はその時点の値を保持します。
+  
 ---
 
 ## 11. 🔲 1画素の等価回路 / Equivalent Pixel Circuit
