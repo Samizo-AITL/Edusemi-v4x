@@ -104,22 +104,22 @@ It generates the required 5 V analog and gate high-voltage rails internally, pro
 
 ```mermaid
 flowchart LR
-    subgraph Input[入力 / Inputs]
-        A1[VDDIO 1.8V]
-        A2[HVIN 30V]
-        A3[CLK]
-        A4[映像データ / DIN]
+    subgraph Input["入力 / Inputs"]
+        A1["VDDIO 1.8V"]
+        A2["HVIN 30V"]
+        A3["CLK"]
+        A4["映像データ / DIN"]
     end
 
-    subgraph DriverIC[液晶ドライバーIC / Driver IC]
-        D1[ロジック & TCON]
-        D2[ソースドライバ (X方向)]
-        D3[ゲートドライバ (Y方向)]
+    subgraph DriverIC["液晶ドライバーIC / Driver IC"]
+        D1["ロジック & TCON"]
+        D2["ソースドライバ (X方向)"]
+        D3["ゲートドライバ (Y方向)"]
     end
 
-    subgraph Panel[液晶パネル / LCD Panel]
-        X[X方向: 列 / Columns]
-        Y[Y方向: 行 / Rows]
+    subgraph Panel["液晶パネル / LCD Panel"]
+        X["X方向: 列 / Columns"]
+        Y["Y方向: 行 / Rows"]
     end
 
     A1 --> DriverIC
