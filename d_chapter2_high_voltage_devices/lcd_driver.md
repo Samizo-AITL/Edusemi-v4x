@@ -166,12 +166,13 @@ sequenceDiagram
 
 ```mermaid
 graph LR
-    Source[ソースライン<br/>(X方向データ電圧)] -->|ON時| TFT[薄膜トランジスタ<br/>(TFTスイッチ)]
-    Gate[ゲートライン<br/>(Y方向選択パルス)] -->|制御| TFT
-    TFT --> NodeQ[画素電極]
-    NodeQ -->|液晶容量| CLCD[(C_LCD)]
-    NodeQ -->|ストレージ容量| CST[(C_ST)]
-    VCOM[VCOM (共通電極)] --- CLCD
+    Source["ソースライン (X方向データ電圧)"] --> TFT["薄膜トランジスタ (TFTスイッチ)"]
+    Gate["ゲートライン (Y方向選択パルス)"] --> TFT
+    TFT --> NodeQ["画素電極"]
+
+    NodeQ --> CLCD["C_LCD (液晶容量)"]
+    NodeQ --> CST["C_ST (ストレージ容量)"]
+    VCOM["VCOM (共通電極)"] --- CLCD
     VCOM --- CST
 ```
 
