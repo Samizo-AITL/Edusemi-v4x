@@ -37,12 +37,22 @@ To integrate the SystemDK with AITL control model (PID + FSM + future LLM) into 
 ---
 
 ### ❌ 従来DTCOの課題 / *Limitations of Conventional DTCO*
-| 課題 / Issue | 日本語解説 | *English Explanation* |
-|--------------|------------|-----------------------|
-| **RC遅延変動** | 配線スケーリングでSTAが不安定化 | *RC delay variation destabilizes STA* |
-| **熱結合** | 3D積層で温度上昇、P&R制約逸脱 | *Thermal coupling from 3D stacking violates P&R constraints* |
-| **EMI/EMC変動** | 高速伝送でジッタがSI/EMC解析に影響 | *EMI/EMC variations induce jitter, affecting SI/EMC analysis* |
-| **信頼性低下** | 応力やVthシフトがPDK反映困難 | *Stress and Vth shifts poorly reflected in PDK models* |
+
+- **RC遅延変動**  
+  配線スケーリングで **STAが不安定化**  
+  *RC delay variation destabilizes STA*
+
+- **熱結合**  
+  3D積層で **温度上昇、P&R制約逸脱**  
+  *Thermal coupling from 3D stacking violates P&R constraints*
+
+- **EMI/EMC変動**  
+  高速伝送で **ジッタがSI/EMC解析に影響**  
+  *EMI/EMC variations induce jitter, affecting SI/EMC analysis*
+
+- **信頼性低下**  
+  **応力やVthシフト** がPDK反映困難  
+  *Stress and Vth shifts poorly reflected in PDK models*
 
 ---
 
