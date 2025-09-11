@@ -41,13 +41,13 @@ title: 応用編  第2章　高耐圧デバイス
 
 | 📄 ファイル名｜Filename | 📘 内容概要｜Description | ⚡ 耐圧範囲｜Voltage Rating |
 |----------------------------|-------------------------------------------------------------|---------------------------|
-| [`hvcmos.md`](./hvcmos.md) | **HV-CMOS設計**：標準CMOSとの互換性を維持した高耐圧技術<br>**HV-CMOS Design** – CMOS-compatible high-voltage integration | 約10V〜40V<br>~10V to 40V |
-| [`ldmos.md`](./ldmos.md) | **LDMOS構造と動作**：高電圧・高電流用途の基本構造とドリフト領域設計<br>**LDMOS Devices** – High-voltage/high-current MOS with lateral drift extension | 約20V〜100V以上<br>~20V to 100V+ |
-| [`junction_isolation.md`](./junction_isolation.md) | **接合絶縁技術**：寄生トランジスタとリーク防止のための絶縁構造<br>**Junction Isolation** – Structure and biasing against latch-up and leakage | ― |
-| [`dvdt.md`](./dvdt.md) | **dv/dt耐性とデバイス破壊**：急峻な電圧変化による電界破壊とその対策<br>**dv/dt Immunity** – Prevention of avalanche breakdown by transient voltage | ― |
-| [`layout_rules.md`](./layout_rules.md) | **高耐圧デバイスのレイアウト工夫**：ガードリングやCMPダミーの配置ルール<br>**Layout Guidelines** – Guard rings, dummy fills, and reliability-aware layout | ― |
-| driver_ic.md | ドライバーIC / Driver IC | Fundamental roles of driver ICs, process/device options, protections (UVLO, OCP, OTP), system-level safety | — |
-| lcd_driver.md | 液晶パネル用ドライバーIC仕様書 / LCD Panel Driver IC Specification | LCD panel driver IC concept model: power rails, inputs/outputs, gamma reference, temperature compensation, timing, and pixel circuit | — |
+| [`hvcmos.md`](./hvcmos.md) | **HV-CMOS設計**：標準CMOSとの互換性を維持した高耐圧技術<br>*HV-CMOS Design – CMOS-compatible high-voltage integration* | 約10V〜40V<br>*~10V to 40V* |
+| [`ldmos.md`](./ldmos.md) | **LDMOS構造と動作**：高電圧・高電流用途の基本構造とドリフト領域設計<br>*LDMOS Devices – High-voltage/high-current MOS with lateral drift extension* | 約20V〜100V以上<br>*~20V to 100V+* |
+| [`junction_isolation.md`](./junction_isolation.md) | **接合絶縁技術**：寄生トランジスタとリーク防止のための絶縁構造<br>*Junction Isolation – Structure and biasing against latch-up and leakage* | ― |
+| [`dvdt.md`](./dvdt.md) | **dv/dt耐性とデバイス破壊**：急峻な電圧変化による電界破壊とその対策<br>*dv/dt Immunity – Prevention of avalanche breakdown by transient voltage* | ― |
+| [`layout_rules.md`](./layout_rules.md) | **高耐圧デバイスのレイアウト工夫**：ガードリングやCMPダミーの配置ルール<br>*Layout Guidelines – Guard rings, dummy fills, and reliability-aware layout* | ― |
+| [`driver_ic.md`](./driver_ic.md) | **ドライバーIC**：高耐圧デバイス駆動の役割、プロセス/デバイス選択、各種保護機能<br>*Driver IC – Roles, process & device options, protections (UVLO, OCP, OTP), system-level safety* | ― |
+| [`lcd_driver.md`](./lcd_driver.md) | **液晶パネル用ドライバーIC仕様書**：電源・入出力・γ補正・温度補償・タイミング・画素回路<br>*LCD Panel Driver IC – Concept model: power rails, I/Os, gamma reference, temp compensation, timing, pixel circuit* | ― |
 
 ---
 
