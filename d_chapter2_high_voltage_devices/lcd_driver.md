@@ -151,22 +151,47 @@ sequenceDiagram
 
 ## 10b. ⏱📈 タイミング波形 / Timing Waveforms (Clear)
 
-下の3図は、**Gate(Y)** → **Source(X)** → **Pixel** の順に分けて表示し、
-サンプル＆ホールドの関係を明確に示しています。薄い帯は「行選択（Gate ON）」区間です。
+下の3図は、**Gate(Y)** → **Source(X)** → **Pixel** の順に分けて表示し、  
+サンプル＆ホールドの関係を明確に示しています。薄い帯は「行選択（Gate ON）」区間です。  
+*The following three figures show Gate (Y) → Source (X) → Pixel in sequence,  
+highlighting the sample-and-hold relationship. Shaded areas represent line selection (Gate ON) periods.*
 
-### Gate (Y) select pulses
+---
+
+### Gate (Y) select pulses  
 <img src="./lcd_gate_timing.png" alt="Gate timing" width="80%">
 
-### Source (X) analog data
+**説明 / Description**  
+- Gate が High (VGH) の間、その行の TFT がオンになる。  
+- *When the Gate is High (VGH), the TFTs in that row are turned on.*
+
+---
+
+### Source (X) analog data  
 <img src="./lcd_source_timing.png" alt="Source timing" width="80%">
 
-### Pixel node (sample & hold)
+**説明 / Description**  
+- Source は各列に画素データ電圧を出力する。行ごとに異なるアナログ値が設定される。  
+- *The Source driver outputs pixel data voltages to each column, with different analog values per line.*
+
+---
+
+### Pixel node (sample & hold)  
 <img src="./lcd_pixel_timing.png" alt="Pixel timing" width="80%">
 
-**読み方 / How to read**
-- Gate の帯が ON の間だけ、Pixel は Source をトラックし、その直後は **保持 (Hold)** に入ります。
-- 各行の選択（Line 1, Line 2 ...）は、Gate の帯で示されています。
-- Source は行ごとに異なるアナログ値になり、Pixel はその時点の値を保持します。
+**説明 / Description**  
+- Gate が ON の間だけ Pixel は Source をトラックし、その後は保持 (Hold) に入る。  
+- *The Pixel tracks the Source only while the Gate is ON, and then enters Hold mode afterward.*
+
+---
+
+**読み方 / How to read**  
+- Gate の帯が ON の間だけ Pixel は Source をトラックし、その直後は **保持 (Hold)** に入る。  
+  *The Pixel tracks the Source only during Gate ON, and then holds the value.*  
+- 各行の選択（Line 1, Line 2 ...）は Gate の帯で示される。  
+  *Line selection (Line 1, Line 2, ...) is indicated by the Gate shading.*  
+- Source は行ごとに異なるアナログ値を供給し、Pixel はその時点の値を保持する。  
+  *The Source provides different analog values for each line, which the Pixel then holds.*
   
 ---
 
