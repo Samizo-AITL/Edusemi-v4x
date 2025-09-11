@@ -3,6 +3,8 @@ layout: default
 title: ドライバーIC / Driver IC
 ---
 
+---
+
 # ⚡ ドライバーIC | Driver IC
 高耐圧デバイス（LDMOS, HV-CMOS, SOI, さらにはGaN/SiC）を実際のシステムで動作させるためには、それらを駆動・保護する **ドライバーIC** が不可欠である。  
 *Driver ICs are indispensable for operating high-voltage devices such as LDMOS, HV-CMOS, SOI, and next-generation GaN/SiC in real systems, providing both drive capability and protection.*
