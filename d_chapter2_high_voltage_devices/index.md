@@ -46,6 +46,8 @@ title: 応用編  第2章　高耐圧デバイス
 | [`junction_isolation.md`](./junction_isolation.md) | **接合絶縁技術**：寄生トランジスタとリーク防止のための絶縁構造<br>**Junction Isolation** – Structure and biasing against latch-up and leakage | ― |
 | [`dvdt.md`](./dvdt.md) | **dv/dt耐性とデバイス破壊**：急峻な電圧変化による電界破壊とその対策<br>**dv/dt Immunity** – Prevention of avalanche breakdown by transient voltage | ― |
 | [`layout_rules.md`](./layout_rules.md) | **高耐圧デバイスのレイアウト工夫**：ガードリングやCMPダミーの配置ルール<br>**Layout Guidelines** – Guard rings, dummy fills, and reliability-aware layout | ― |
+| driver_ic.md | ドライバーIC / Driver IC | Fundamental roles of driver ICs, process/device options, protections (UVLO, OCP, OTP), system-level safety | — |
+| lcd_driver.md | 液晶パネル用ドライバーIC仕様書 / LCD Panel Driver IC Specification | LCD panel driver IC concept model: power rails, inputs/outputs, gamma reference, temperature compensation, timing, and pixel circuit | — |
 
 ---
 
