@@ -8,19 +8,19 @@
 
 ```mermaid
 flowchart TB
-    subgraph Core["Core 1.8 V"]
+    subgraph Core["Core 1.8V"]
         L[Logic]
         S[SRAM]
-        F[FeFET (補助NVM)]
-        P[チャージポンプ<br/>±2.5 V生成]
+        F[FeFET NVM]
+        P[Charge Pump\n±2.5V]
     end
 
-    subgraph Periphery["3.3 V I/O / AMS (Option)"]
+    subgraph Periphery["3.3V I/O & AMS (Option)"]
         IO[I/O PAD]
         AMS[ADC/DAC, LDO]
     end
 
-    %% 接続
+    %% connections
     L --> S
     S <--> F
     P --> F
@@ -28,8 +28,10 @@ flowchart TB
     Core --> Periphery
 ```
 
+**図6-2**: バックアップ／リストア経路
+
 ```mermaid
-flowchart LR
+flowchart TB
     S[SRAM] -->|電断検知→バックアップ| C[バックアップコントローラ]
     C --> F[FeFET NVM]
 
