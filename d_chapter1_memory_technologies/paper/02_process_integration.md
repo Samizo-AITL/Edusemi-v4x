@@ -15,15 +15,8 @@ flowchart TD
 ```
 
 ```mermaid
-flowchart TB
-    TiN["TiN 30–50 nm (SP)"] --> HZO["HZO 8–12 nm (ALD)"]
-    HZO --> IL["Al₂O₃ 1–2 nm (ALD)"]
-    IL --> PSi["p-Si 基板"]
-```
-
-```mermaid
-flowchart TB
-    TiN["⑤ TiN 30–50 nm (SP)"] --> HZO["④ HZO 8–12 nm (ALD)"]
-    HZO --> IL["③ Al₂O₃ 1–2 nm (ALD)"]
-    IL --> PSi["② p-Si 基板"]
+flowchart BT
+    PSi["p-Si 基板"] --> IL["Al₂O₃ 1–2 nm (ALD)"]
+    IL --> HZO["HZO 8–12 nm (ALD)"]
+    HZO --> TiN["TiN 30–50 nm (SP)"]
 ```
