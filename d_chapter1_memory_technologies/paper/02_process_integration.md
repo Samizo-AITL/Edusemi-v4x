@@ -16,9 +16,7 @@ flowchart TD
 
 ```mermaid
 flowchart TB
-    subgraph Device_Stack["FeFET スタック断面（模式）"]
-        PSi["p-Si 基板"] --> IL["Al₂O₃ 1–2 nm (ALD)"]
-        IL --> HZO["HZO 8–12 nm (ALD)"]
-        HZO --> TiN["TiN 30–50 nm (SP)"]
-    end
+    TiN["TiN 30–50 nm (SP)"] --> HZO["HZO 8–12 nm (ALD)"]
+    HZO --> IL["Al₂O₃ 1–2 nm (ALD)"]
+    IL --> PSi["p-Si 基板"]
 ```
