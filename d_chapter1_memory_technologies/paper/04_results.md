@@ -93,4 +93,4 @@ $$
 - **意義**: 高温保持データに基づき、長期データ保持信頼性を定量的に証明。  
 
 **図6**: 保持特性（Arrhenius プロット、外挿式と $E_{\mathrm{a}}$ を明示）  
-<img src="figures/fig6_retention_withEa.png" alt="Retention" width="80%">
+<img src="figures/fig6_retention.png" alt="Retention" width="80%">
