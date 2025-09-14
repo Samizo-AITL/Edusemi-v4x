@@ -17,10 +17,12 @@
 
 ### Weibull解析
 - **結果**: Weibull フィットにより、形状パラメータ $\beta \approx 1.3$、特性寿命 $\eta$ を各条件で抽出。  
-- **解析式**:  
-  $$
-  \ln[-\ln(1-F)] = \beta \cdot \ln(t) - \beta \cdot \ln(\eta)
-  $$  
+- **解析式**:
+
+$$
+\ln[-\ln(1-F)] = \beta \cdot \ln(t) - \beta \cdot \ln(\eta)
+$$  
+
 - **意義**: 初期欠陥の寄与を分離しつつ、真性破壊モードを定量化可能。  
 
 **図4a**: TDDB CDFプロット  
@@ -34,9 +36,9 @@
 ### Arrhenius外挿
 - **外挿式**:
   
-  $$
-  \ln(\eta) = \ln(\eta_0) + \frac{E_a}{kT}
-  $$  
+$$
+\ln(\eta) = \ln(\eta_0) + \frac{E_a}{kT}
+$$  
 
 - **抽出結果 (代表値)**:  
   - 2.3 V: $E_a \approx 0.78\ \mathrm{eV}$  
