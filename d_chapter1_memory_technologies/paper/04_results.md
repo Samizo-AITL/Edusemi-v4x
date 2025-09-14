@@ -12,18 +12,37 @@
 ---
 
 ## 4.2 TDDB特性
-- **測定条件**: ゲート電圧ストレス $\pm 2.7\ \mathrm{V}$、温度 85 ℃  
+- **測定条件**: ゲート電圧ストレス $\pm 2.3 / 2.5 / 2.7\ \mathrm{V}$、温度 85 ℃・125 ℃  
 - **評価構造**: FeCAP (MIM)  
-- **結果**: Weibull 解析により形状パラメータ $\beta \approx 1.3$、特性寿命 $\eta \approx 1200\ \mathrm{s}$ を抽出。  
+
+### Weibull解析
+- **結果**: Weibull フィットにより、形状パラメータ $\beta \approx 1.3$、特性寿命 $\eta$ を各条件で抽出。  
 - **解析式**:  
-  $\ln[-\ln(1-F)] = \beta \cdot \ln(t) - \beta \cdot \ln(\eta)$  
-- **意義**: 酸素空孔由来のリークを、Al₂O₃ インターフェース層 (1–2 nm) が有効に抑制していることを確認。  
+  $$
+  \ln[-\ln(1-F)] = \beta \cdot \ln(t) - \beta \cdot \ln(\eta)
+  $$  
+- **意義**: 初期欠陥の寄与を分離しつつ、真性破壊モードを定量化可能。  
 
-**図4**: TDDB 
-<img src="figures/fig4_tddb_cdf.png" alt="TDDB Weibull" width="80%">
+**図4a**: TDDB CDFプロット  
+<img src="figures/fig4_tddb_cdf.png" alt="TDDB CDF" width="80%">
 
-**図4**: TDDB ワイブルプロット（外挿式・$\beta$・$\eta$ を明示）  
+**図4b**: TDDB ワイブルプロット（フィット直線と $\beta$, $\eta$ を明示）  
 <img src="figures/fig4_tddb_weibull.png" alt="TDDB Weibull" width="80%">
+
+---
+
+### Arrhenius外挿
+- **外挿式**:  
+  $$
+  \ln(\eta) = \ln(\eta_0) + \frac{E_a}{kT}
+  $$  
+
+- **抽出結果 (代表値)**:  
+  - 2.3 V: $E_a \approx 0.78\ \mathrm{eV}$  
+  - 2.5 V: $E_a \approx 0.84\ \mathrm{eV}$  
+  - 2.7 V: $E_a \approx 0.88\ \mathrm{eV}$  
+
+- **意義**: 活性化エネルギー $E_a \sim 0.8–0.9\ \mathrm{eV}$ は、**酸素空孔拡散律速モデル**と整合。125 ℃動作寿命の外挿に利用可能。  
 
 ---
 
