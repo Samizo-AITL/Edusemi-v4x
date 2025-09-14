@@ -89,10 +89,12 @@ $$
 - **評価構造**: FeFETセル  
 
 ### Weibull/Arrhenius解析
-- **解析式 (Arrhenius)**:  
-  \[
-  \ln(\tau) = \ln(\tau_0) + \frac{E_a}{kT}
-  \]
+- **解析式 (Arrhenius)**:
+  
+$$
+\ln(\tau) = \ln(\tau_0) + \frac{E_a}{kT}
+$$
+
 - **抽出結果**: 活性化エネルギー $E_a \approx 1.1\ \mathrm{eV}$  
 
 ### 寿命外挿（実測 η 値に基づく）
