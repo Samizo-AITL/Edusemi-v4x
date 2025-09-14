@@ -7,7 +7,7 @@
 - **意義**: 後述の TDDB 結果と組み合わせることで、**初期故障 (infant mortality)／偶発故障 (random)／真性破壊 (intrinsic)** を分離して評価可能。  
 
 **図3**: TZDB分布（破壊電圧ヒストグラムまたは CDF）  
-<img src="./figures/fig3_tzdb_Eox.png" alt="TZDB" width="80%">
+<img src="./figures/fig3_tzdb.png" alt="TZDB" width="80%">
 
 ---
 
