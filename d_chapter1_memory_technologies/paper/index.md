@@ -1,1 +1,24 @@
+---
+title: FeFET統合NVMレポート
+layout: default
+lang: ja
+---
 
+# FeFET 統合 NVM レポート  
+*0.18 µm CMOS における低コスト実装と信頼性評価*
+
+> 本ページは各章の Markdown を結合して1本の論文として公開するための **index.md** です。  
+> 章ファイルは同一ディレクトリに配置し、`include_relative` で順番に取り込みます。
+
+---
+
+{% include_relative 00_abstract.md %}
+{% include_relative 01_introduction.md %}
+{% include_relative 02_process_integration.md %}
+{% include_relative 03_device_fabrication.md %}
+{% include_relative 04_results.md %}
+{% include_relative 05_system_architecture.md %}
+{% include_relative 06_discussion.md %}
+{% include_relative 07_conclusion.md %}
+{% include_relative 08_references.md %}
+{% include_relative 09_biography.md %}
