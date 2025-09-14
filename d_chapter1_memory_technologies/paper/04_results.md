@@ -64,14 +64,21 @@ $$
 ---
 
 ## 4.3 Endurance特性（Fatigueを含む）
-- **測定条件**: 書込/消去電圧 $\pm 2.5\ \mathrm{V}$、パルス幅 10 µs、繰返し周波数 10 kHz  
-- **評価構造**: FeFETセル ($100 \times 100\ \mu\mathrm{m}^2$)  
-- **結果**: $10^5$ サイクル以上の動作を確認。しきい値窓 $\Delta V_{\mathrm{th}}$ は約 20–30% 縮小。  
-- **フィット式**:  
-  $\Delta V_{\mathrm{th}} = 1.12 - 0.05 \cdot \log(\text{cycles})$  
-- **意義**: 分極疲労 (Fatigue) の影響を Endurance データに包含し、実使用レベルでの耐久性を定量的に裏付け。  
 
-**図5**: 書換耐久性カーブ（実測点＋外挿線）  
+- **測定条件**: 書込/消去電圧 $\pm 2.5\ \mathrm{V}$、パルス幅 10 µs、繰返し周波数 10 kHz  
+- **評価構造**: FeFET セル（$100 \times 100\ \mu\mathrm{m}^2$）  
+- **結果**: $10^5$ サイクルまで動作。しきい値窓 $\Delta V_{\mathrm{th}}$ はおおむね **20–30% 縮小**。  
+- **フィット式（常用対数）**:
+   
+$$
+\Delta V_{\mathrm{th}}(N)= 1.12 - 0.05\ \log_{10} N
+$$
+
+  - サニティチェック: $N=10^2 \Rightarrow \Delta V_{\mathrm{th}}\approx 1.02\ \mathrm{V}$、  
+    $N=10^5 \Rightarrow \Delta V_{\mathrm{th}}\approx 0.87\ \mathrm{V}$（図と整合）。
+- **意義**: 分極疲労 (Fatigue) を含む劣化傾向を単純式で表現でき、実使用寿命の評価に利用可能。
+
+**図5**: 書換耐久性カーブ（薄色=各セル、太線=25℃/85℃の平均）
 <img src="figures/fig5_endurance.png" alt="Endurance" width="80%">
 
 ---
