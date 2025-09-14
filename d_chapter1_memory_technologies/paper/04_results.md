@@ -22,6 +22,9 @@
 **図4**: TDDB ワイブルプロット（外挿式・$\beta$・$\eta$ を明示）  
 <img src="figures/fig4_tddb_withFit_clear.png" alt="TDDB Weibull" width="80%">
 
+**図4**: TDDB ワイブルプロット（外挿式・$\beta$・$\eta$ を明示）  
+<img src="figures/fig4_tddb_withFit_clear.png" alt="TDDB Weibull" width="80%">
+
 ---
 
 ## 4.3 Endurance特性（Fatigueを含む）
