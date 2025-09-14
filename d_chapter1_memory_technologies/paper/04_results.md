@@ -72,7 +72,7 @@ $$
 - **意義**: 分極疲労 (Fatigue) の影響を Endurance データに包含し、実使用レベルでの耐久性を定量的に裏付け。  
 
 **図5**: 書換耐久性カーブ（実測点＋外挿線）  
-<img src="figures/fig5_endurance_corrected.png" alt="Endurance" width="80%">
+<img src="figures/fig5_endurance.png" alt="Endurance" width="80%">
 
 ---
 
