@@ -31,21 +31,33 @@ $$
 **図4b**: TDDB ワイブルプロット（フィット直線と $\beta$, $\eta$ を明示）  
 <img src="figures/fig4_tddb_weibull.png" alt="TDDB Weibull" width="80%">
 
----
-
 ### Arrhenius外挿
-- **外挿式**:
+
+- **外挿式**
   
 $$
 \ln(\eta) = \ln(\eta_0) + \frac{E_a}{kT}
-$$  
+$$
 
-- **抽出結果 (代表値)**:  
-  - 2.3 V: $E_a \approx 0.78\ \mathrm{eV}$  
-  - 2.5 V: $E_a \approx 0.84\ \mathrm{eV}$  
-  - 2.7 V: $E_a \approx 0.88\ \mathrm{eV}$  
+- **抽出結果**
+  - ストレス電圧 2.3 V: $E_a \approx 0.78\ \mathrm{eV}$
+  - ストレス電圧 2.5 V: $E_a \approx 0.84\ \mathrm{eV}$
+  - ストレス電圧 2.7 V: $E_a \approx 0.88\ \mathrm{eV}$
 
-- **意義**: 活性化エネルギー $E_a \sim 0.8–0.9\ \mathrm{eV}$ は、**酸素空孔拡散律速モデル**と整合。125 ℃動作寿命の外挿に利用可能。  
+- **寿命外挿（Weibullフィットから抽出 η 値）**
+  | Stress V | Temp | η (scale) [s] |
+  |----------|------|---------------|
+  | 2.3 V    | 85 ℃  | $2.7 \times 10^3$ |
+  | 2.3 V    | 125 ℃ | $5.1 \times 10^4$ |
+  | 2.5 V    | 85 ℃  | $1.5 \times 10^3$ |
+  | 2.5 V    | 125 ℃ | $2.8 \times 10^4$ |
+  | 2.7 V    | 85 ℃  | $8.2 \times 10^2$ |
+  | 2.7 V    | 125 ℃ | $1.5 \times 10^4$ |
+
+- **意義**
+  - 実測 η（85 ℃・125 ℃）から Arrhenius プロットを構築。  
+  - 活性化エネルギー $E_a \sim 0.8–0.9\ \mathrm{eV}$ は酸素空孔拡散律速モデルと一致。  
+  - 任意の動作温度（例: 105 ℃, 150 ℃）での寿命を外挿可能。  
 
 ---
 
