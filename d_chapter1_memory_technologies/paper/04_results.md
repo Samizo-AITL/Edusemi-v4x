@@ -20,7 +20,7 @@
 - **意義**: 酸素空孔由来のリークを、Al₂O₃ インターフェース層 (1–2 nm) が有効に抑制していることを確認。  
 
 **図4**: TDDB ワイブルプロット（外挿式・$\beta$・$\eta$ を明示）  
-<img src="figures/fig4_tddb_withFit_clear.png" alt="TDDB Weibull" width="80%">
+<img src="figures/fig4_tddb_cdf.png" alt="TDDB Weibull" width="80%">
 
 **図4**: TDDB ワイブルプロット（外挿式・$\beta$・$\eta$ を明示）  
 <img src="figures/fig4_tddb_withFit_clear.png" alt="TDDB Weibull" width="80%">
