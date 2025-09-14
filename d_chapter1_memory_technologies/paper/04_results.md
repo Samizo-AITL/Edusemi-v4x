@@ -8,7 +8,7 @@
 - 意義：TDDB結果と組み合わせ、**初期故障／偶発故障／真性破壊**を分離評価可能  
 
 **図3**: TZDB分布（破壊電圧ヒストグラムまたはCDF）  
-<img src="figures/fig3_tzdb.png" alt="TZDB" width="80%">
+<img src="./figures/fig3_tzdb.png" alt="TZDB" width="80%">
 
 ---
 
