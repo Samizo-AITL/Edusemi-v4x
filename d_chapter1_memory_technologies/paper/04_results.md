@@ -16,14 +16,14 @@
 - **評価構造**: FeCAP (MIM)  
 
 ### Weibull解析
-- **結果**: Weibull フィットにより、形状パラメータ $\beta \approx 1.3$、特性寿命 $\eta$ を各条件で抽出。  
+- **結果**: 各ストレス条件について Weibull フィットを実施し、形状パラメータ $\beta \approx 1.3$、特性寿命 $\eta$ を抽出。  
 - **解析式**:
 
 $$
 \ln[-\ln(1-F)] = \beta \cdot \ln(t) - \beta \cdot \ln(\eta)
 $$  
 
-- **意義**: 初期欠陥の寄与を分離しつつ、真性破壊モードを定量化可能。  
+- **意義**: 初期欠陥モードと真性破壊モードを分離しつつ、酸化膜の時間依存劣化を定量化可能。  
 
 **図4a**: TDDB CDFプロット  
 <img src="figures/fig4_tddb_cdf.png" alt="TDDB CDF" width="80%">
@@ -31,34 +31,36 @@ $$
 **図4b**: TDDB ワイブルプロット（フィット直線と $\beta$, $\eta$ を明示）  
 <img src="figures/fig4_tddb_weibull.png" alt="TDDB Weibull" width="80%">
 
-### Arrhenius外挿
+---
 
+### Arrhenius外挿
 - **外挿式**
-  
+
 $$
 \ln(\eta) = \ln(\eta_0) + \frac{E_a}{kT}
 $$
 
-- **抽出結果**
-  - ストレス電圧 2.3 V: $E_a \approx 0.78\ \mathrm{eV}$
-  - ストレス電圧 2.5 V: $E_a \approx 0.84\ \mathrm{eV}$
-  - ストレス電圧 2.7 V: $E_a \approx 0.88\ \mathrm{eV}$
+- **活性化エネルギー (抽出結果)**  
+  - 2.3 V: $E_a \approx 0.78\ \mathrm{eV}$  
+  - 2.5 V: $E_a \approx 0.84\ \mathrm{eV}$  
+  - 2.7 V: $E_a \approx 0.88\ \mathrm{eV}$  
 
-- **寿命外挿（Weibullフィットから抽出 η 値）**
-  | Stress V | Temp | η (scale) [s] |
-  |----------|------|---------------|
-  | 2.3 V    | 85 ℃  | $2.7 \times 10^3$ |
-  | 2.3 V    | 125 ℃ | $5.1 \times 10^4$ |
-  | 2.5 V    | 85 ℃  | $1.5 \times 10^3$ |
-  | 2.5 V    | 125 ℃ | $2.8 \times 10^4$ |
-  | 2.7 V    | 85 ℃  | $8.2 \times 10^2$ |
-  | 2.7 V    | 125 ℃ | $1.5 \times 10^4$ |
+- **寿命値（Weibullフィットから抽出した $\eta$）**  
 
-- **意義**
-  - 実測 η（85 ℃・125 ℃）から Arrhenius プロットを構築。  
-  - 活性化エネルギー $E_a \sim 0.8–0.9\ \mathrm{eV}$ は酸素空孔拡散律速モデルと一致。  
-  - 任意の動作温度（例: 105 ℃, 150 ℃）での寿命を外挿可能。  
+| Stress V | Temp | $\eta$ (scale) [s] |
+|----------|------|---------------------|
+| 2.3 V    | 85 ℃  | $2.7 \times 10^3$  |
+| 2.3 V    | 125 ℃ | $5.1 \times 10^4$  |
+| 2.5 V    | 85 ℃  | $1.5 \times 10^3$  |
+| 2.5 V    | 125 ℃ | $2.8 \times 10^4$  |
+| 2.7 V    | 85 ℃  | $8.2 \times 10^2$  |
+| 2.7 V    | 125 ℃ | $1.5 \times 10^4$  |
 
+- **考察**  
+  - 実測 η（85 ℃・125 ℃）を Arrhenius プロットによりフィット。  
+  - 活性化エネルギー $E_a \sim 0.8–0.9\ \mathrm{eV}$ は酸素空孔拡散律速モデルと整合。  
+  - 得られた外挿式を用いて、任意の動作温度（例: 105 ℃, 150 ℃）での寿命予測が可能。
+    
 ---
 
 ## 4.3 Endurance特性（Fatigueを含む）
