@@ -1,15 +1,7 @@
 flowchart LR
   VIN["Vin"]
-  BUCK["Buck Converter\n(磁性オンチップL)"]
-  LDO["LDO Regulator\n(リップル<1 mV, PSRR>60 dB)"]
+  BUCK["Buck Converter\n(磁性オンチップL)\n効率: 80–85%"]
+  LDO["LDO Regulator\n(リップル<1 mV, PSRR>60 dB)\n高速応答: ns–µs"]
   VOUT["Vout"]
 
   VIN --> BUCK --> LDO --> VOUT
-
-  note right of BUCK
-    効率: 80–85%
-  end
-
-  note right of LDO
-    高速応答: ns–µs
-  end
