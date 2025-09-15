@@ -1,22 +1,45 @@
-- name: Render Mermaid to PNG/SVG
-  shell: bash
-  run: |
-    BASE="d_chapter5a_analog_mixed_signal/paper/figures"
-    SRC="$BASE/src"
-    PNG="$BASE/png"
-    SVG="$BASE/svg"
-    mkdir -p "$PNG" "$SVG"
-    echo "Listing Mermaid sources in $SRC"
-    ls -la "$SRC" || true
-    shopt -s nullglob
-    n=0
-    for f in "$SRC"/*.mmd; do
-      base=$(basename "$f" .mmd)
-      echo "Rendering $f"
-      # PNG 出力
-      mmdc -i "$f" -o "$PNG/${base}.png" -b transparent -w 1600 --no-sandbox
-      # SVG 出力
-      mmdc -i "$f" -o "$SVG/${base}.svg" --no-sandbox
-      n=$((n+1))
-    done
-    echo "Rendered $n files."
+name: Build Figures (Mermaid -> PNG/SVG)
+
+on:
+  push:
+    paths:
+      - "d_chapter5a_analog_mixed_signal/paper/figures/src/*.mmd"
+      - ".github/workflows/figures.yml"
+  workflow_dispatch:
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install mermaid-cli
+        run: npm install -g @mermaid-js/mermaid-cli
+
+      - name: Render Mermaid to PNG/SVG
+        shell: bash
+        run: |
+          set -euo pipefail
+          BASE="d_chapter5a_analog_mixed_signal/paper/figures"
+          SRC="$BASE/src"; PNG="$BASE/png"; SVG="$BASE/svg"
+          mkdir -p "$PNG" "$SVG"
+          shopt -s nullglob
+          n=0
+          for f in "$SRC"/*.mmd; do
+            b=$(basename "$f" .mmd)
+            mmdc -i "$f" -o "$PNG/${b}.png" -b transparent -w 1600 --no-sandbox
+            mmdc -i "$f" -o "$SVG/${b}.svg" --no-sandbox
+            n=$((n+1))
+          done
+          echo "Rendered $n files."
+
+      - name: Commit figures
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions"
+          git config user.email "actions@users.noreply.github.com"
+          git add d_chapter5a_analog_mixed_signal/paper/figures/png/*.png 2>/dev/null || true
+          git add d_chapter5a_analog_mixed_signal/paper/figures/svg/*.svg 2>/dev/null || true
+          git commit -m "Render Mermaid figures (PNG+SVG)" || echo "No changes"
+          git push || true
