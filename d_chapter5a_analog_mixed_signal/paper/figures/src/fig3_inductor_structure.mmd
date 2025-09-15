@@ -1,0 +1,10 @@
+flowchart TB
+  subgraph Stack["磁性ラミネーション断面（×6）"]
+    MAG["磁性膜 200 nm"] --> SIN["SiN 40 nm"] --> MAG2["磁性膜 200 nm"] --> DOTS["..."]
+  end
+  TOP["Al スパイラル (Top層)"] --> VIA["Viaアレイ"] --> TOPM1["Al (Top-1)"]
+  PGS["PGS: 放射状ストライプ\n(開口率≈40%)"]:::dim
+  SUB["Si基板"]:::dim
+  Stack --> TOP
+  TOPM1 --- PGS --- SUB
+  classDef dim fill:#eee,stroke:#999,color:#555;
