@@ -42,6 +42,7 @@ These 3D transistor technologies are essential for pushing beyond the limits of 
 | 1.3              | [`f1_3_gaa.md`](f1_3_gaa.md)                         | GAA構造とMulti-Nanosheet技術<br>GAA and Nanosheet Technology |
 | 1.4              | [`f1_4_comparison.md`](f1_4_comparison.md)           | プレーナ vs FinFET vs GAAの特性比較<br>Comparison of Planar / FinFET / GAA |
 | 1.5              | [`f1_5_cfet.md`](f1_5_cfet.md)                       | CFET構造とスタック型MOSの展望<br>CFET Structure and Outlook for Stacked MOS |
+| 1.6              | [`f1_6_bsim_models.md`](f1_6_bsim_models.md)         | BSIM4 → BSIM-CMG → CFET版構想<br>*BSIM4 → BSIM-CMG → Toward CFET Compact Model* |
 
 ---
 
