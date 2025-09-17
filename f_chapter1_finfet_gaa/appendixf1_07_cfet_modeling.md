@@ -119,27 +119,28 @@ importance of **EDA–device integration** in future semiconductor design.*
 
 ## 📊 5. 実行結果例 / *Example Simulation Results*
 
+以下の図は **教育用の概念図** であり、実際のCFETデバイスやBSIM-CMGモデルのシミュレーション結果ではありません。  
+**熱結合（Rth）や寄生容量（Cnp）の影響を直感的に理解するためのイメージ図**として利用してください。  
+
+---
+
 ### 🔀 VTCシフト（熱結合パラメータ Rth の影響）
-熱結合抵抗 `Rth` を変化させたときの CMOSインバータ VTC を比較。  
-低Rthでは熱結合が強まり、閾値電圧シフトや出力スイング低下が見られる。  
 
 <p align="center">
   <img src="./images/cfet_vtc_shift.png" alt="CFET VTC Shift" width="80%">
 </p>  
 
-*Effect of varying thermal resistance (Rth) on CFET inverter VTC.*
+*Conceptual illustration of how thermal resistance (Rth) affects the CFET inverter’s voltage transfer characteristic.*
 
 ---
 
 ### ⏱️ 遅延比較（寄生容量 Cnp の影響）
-寄生容量 `Cnp` を有効化すると、出力波形に遅延が生じ、スイッチング特性が劣化する。  
-無効化した場合に比べて、**立ち上がり/立ち下がり遅延**が大きくなることが観察できる。  
 
 <p align="center">
   <img src="./images/cfet_delay_comparison.png" alt="CFET Delay Comparison" width="80%">
 </p>  
 
-*Impact of parasitic coupling capacitance (Cnp) on delay in CFET inverter.*
+*Conceptual illustration of how parasitic coupling capacitance (Cnp) impacts the delay in CFET inverter switching.*
 
 ---
 
