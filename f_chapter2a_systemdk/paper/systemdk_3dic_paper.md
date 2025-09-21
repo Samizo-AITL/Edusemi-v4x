@@ -42,6 +42,11 @@ flowchart TB
     SysDK --> EDA[EDAフロー: STA / P&R / CTS / Floorplan]
 ```
 
+<p align="center">
+  <img src="./figures/systemdk_framework.png" alt="SystemDK Framework Concept" width="80%">
+</p>
+<p align="center"><em>Fig.1 SystemDKフレームワーク概念図（評価→制約翻訳→EDA）</em></p>
+
 ---
 
 ## 4. Case Studies
@@ -51,17 +56,32 @@ flowchart TB
 ### 4.1 熱解析（Thermal Analysis）
 - FEMにより積層構造の温度分布をシミュレーション。  
 - 最大で25℃以上のホットスポット上昇を確認。  
-- SystemDKを通じて、このホットスポット領域を**配置禁止領域（keep-out zone）**としてEDAフローに反映。  
+- SystemDKを通じて、このホットスポット領域を**配置禁止領域（keep-out zone）**としてEDAフローに反映。
+
+<p align="center">
+  <img src="./figures/thermal_map.png" alt="Thermal Distribution (4-die TSV Stack)" width="80%">
+</p>
+<p align="center"><em>Fig.2 4層TSV積層における熱分布シミュレーション（ホットスポットの例）</em></p> 
 
 ### 4.2 応力解析（Stress Analysis）
 - TSV近傍に発生する機械的応力を解析。  
 - デバイスしきい値電圧（Vth）が約20〜30 mVシフトすることを確認。  
 - SystemDKにより、このVthシフトモデルを**STAのderate制約**として組み込み、タイミング解析に反映。  
 
+<p align="center">
+  <img src="./figures/stress_map.png" alt="Stress Map & Vth Shift Near TSV" width="80%">
+</p>
+<p align="center"><em>Fig.3 TSV近傍の応力分布とVthシフト推定</em></p>
+
 ### 4.3 EMI/クロストーク解析（EMI/Crosstalk Analysis）
 - Sパラメータ抽出によるEMIノイズ解析を実施。  
 - EMI環境下でのクロックジッタにより、アイダイアグラムが閉塞する現象を確認。  
 - SystemDKを介して、クロックツリー合成（CTS）に**シールド配線やDuty制御制約**を追加。  
+
+<p align="center">
+  <img src="./figures/eye_diagram.png" alt="Eye Diagram Under EMI (Before/After SystemDK Constraints)" width="80%">
+</p>
+<p align="center"><em>Fig.4 EMI環境下のアイダイアグラム比較（SystemDK制約導入前後）</em></p>
 
 ---
 
