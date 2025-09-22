@@ -63,6 +63,19 @@ Post-CFET デバイスは、構造スケーリングから材料・システム�
 
 ---
 
+## 7. 図・表
+
+### 図1：CMOS → CFET → Post-CFET 進化ツリー
+`figures/evolution_tree.mmd` を参照
+
+### 図2：2030–2040年代ロードマップ（概略）
+`figures/roadmap.mmd` を参照
+
+### 表1：Post-CFET 候補技術の比較マトリクス（要約）
+詳細は `figures/comparison_full.md` を参照
+
+---
+
 ## 参考文献（例）
 1. IRDS, 2024 Edition  
 2. 高木聡一郎ほか, “2D材料FETのCMOS限界突破可能性,” *IEDM Tech Digest*, 2023  
