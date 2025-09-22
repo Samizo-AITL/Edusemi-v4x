@@ -66,13 +66,13 @@ Post-CFET デバイスは、構造スケーリングから材料・システム�
 ## 7. 図・表
 
 ### 図1：CMOS → CFET → Post-CFET 進化ツリー
-`figures/evolution_tree.mmd` を参照
+➡ [evolution_tree.mmd](./figures/evolution_tree.mmd)
 
 ### 図2：2030–2040年代ロードマップ（概略）
-`figures/roadmap.mmd` を参照
+➡ [roadmap.mmd](./figures/roadmap.mmd)
 
 ### 表1：Post-CFET 候補技術の比較マトリクス（要約）
-詳細は `figures/comparison_full.md` を参照
+➡ [comparison_full.md](./figures/comparison_full.md)
 
 ---
 
