@@ -1,0 +1,16 @@
+%% figures/evolution_tree.mmd
+graph TD
+  A[Planar MOSFET] --> B[FinFET]
+  B --> C[GAA (Nanosheet/Nanowire)]
+  C --> D[CFET]
+  D --> E[Post-CFET 候補群]
+
+  E --> E1[2D材料FET (MoS2, WS2, BP, vdW)]
+  E --> E2[モノリシック3D (M3D)]
+  E --> E3[スピントロニクス/量子]
+  E --> E4[異種原子スケール集積]
+
+  E1 -. 課題 .-> E1C[成膜均一性/接触抵抗/変動]
+  E2 -. 課題 .-> E2C[低温プロセス/熱制御/層間ばらつき]
+  E3 -. 課題 .-> E3C[室温動作/互換性/書込エネルギー]
+  E4 -. 課題 .-> E4C[界面安定/熱バジェット]
