@@ -1,0 +1,18 @@
+%% post_cfet_block_diagrams.mmd
+flowchart LR
+  subgraph 2D_FET["2D材料FET"]
+    A1[Source/Drain] --> A2[MoS₂ Channel\n1L-3L] --> A3[Gate]
+  end
+
+  subgraph M3D["Monolithic 3D Integration"]
+    B1[Logic Layer] -->|ILV| B2[Memory Layer]
+  end
+
+  subgraph Spintronics["Spintronics / Quantum"]
+    C1[Spin-Polarized Source] --> C2[Channel\n(Topological Insulator)] --> C3[Spin Detector]
+  end
+
+  subgraph Hetero["Heterogeneous Integration"]
+    D1[Si CMOS Logic] --> D2[2D Photodetector] --> D3[Optical I/O]
+    D1 --> D4[MEMS Sensor]
+  end
