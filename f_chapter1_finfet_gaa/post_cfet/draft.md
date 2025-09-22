@@ -165,20 +165,20 @@ graph TD
 ```mermaid
 flowchart LR
   %% 二次元材料FET
-  subgraph 2D_FET["2D材料FET (例: MoS₂, WSe₂)"]
+  subgraph 2D_FET["2D材料FET (MoS₂, WSe₂)"]
     A1["Source"] --> A2["1L–3L vdW Channel"] --> A3["Drain"]
     A2 -->|Gate Control| A4["High-κ Gate Dielectric"]
   end
 
   %% モノリシック3D
-  subgraph M3D["Monolithic 3D Integration (Sequential)"]
-    B1["Logic Layer (CPU/GPU)"] -->|Inter-Layer Via (ILV)| B2["Memory Layer (SRAM/DRAM)"]
+  subgraph M3D["Monolithic 3D Integration - Sequential"]
+    B1["Logic Layer (CPU/GPU)"] -->|ILV| B2["Memory Layer (SRAM/DRAM)"]
     B2 -->|Feedback| B1
   end
 
   %% スピントロニクス・量子
   subgraph Spintronics["Spintronics / Quantum Devices"]
-    C1["Spin-Polarized Source"] --> C2["Channel (Topological Insulator / FM)"] --> C3["Spin Detector"]
+    C1["Spin-Polarized Source"] --> C2["Channel - Topological Insulator / FM"] --> C3["Spin Detector"]
     C2 -->|Spin-Orbit Torque| C4["MTJ / SOT-MRAM"]
   end
 
