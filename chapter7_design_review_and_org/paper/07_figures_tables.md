@@ -53,7 +53,7 @@ flowchart LR
 
 - 欠陥数 $N \sim \text{Poisson}(\lambda)$  
 - 歩留まり $Y_k = e^{-\lambda}\sum_{i=0}^{k}\frac{\lambda^i}{i!}$  
-  （$k$ = 冗長セル数）
+  （ $k$ = 冗長セル数）
 
 | ケース | $\lambda$ | 冗長数 $k$ | 歩留まり $Y$ |
 |---|---:|---:|---:|
