@@ -1,3 +1,10 @@
+---
+layout: default
+title: 06_openlane_first_run
+---
+
+---
+
 # 🛠️ 06_openlane_first_run  
 **OpenLane 初回実行ガイド（中厚版・最小フロー）**  
 *OpenLane First Run Guide (Mid-Level / Minimal Flow)*
