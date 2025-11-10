@@ -58,6 +58,7 @@ including Python automation, Sky130 experiments, SPICE simulations, and OpenLane
 
 ```
 e_chapter0_environment_setup/
+　├── 00_machine_spec.md 
  ├── 01_python_setup.md
  ├── 02_sky130_pdk_setup.md
  ├── 03_ngspice_setup.md
@@ -75,6 +76,7 @@ e_chapter0_environment_setup/
 
 | 節 / Section | 内容 / Description | リンク |
 |-------------|-------------------|--------|
+| ✅ 00 Machine Spec | 使用マシン仕様（検証環境） | [📄 Open](00_machine_spec.md) |
 | ✅ 01 Python Setup | Python / VS Code 構築 | [📄 Open](01_python_setup.md) |
 | ✅ 02 Sky130 PDK Setup | volare・PDK導入 | [📄 Open](02_sky130_pdk_setup.md) |
 | ✅ 03 ngspice Setup | SPICE シミュレータ | [📄 Open](03_ngspice_setup.md) |
