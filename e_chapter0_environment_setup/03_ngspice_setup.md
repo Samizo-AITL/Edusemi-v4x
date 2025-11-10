@@ -3,6 +3,8 @@ layout: default
 title: 03 ngspice Setup
 ---
 
+---
+
 # 🛠️ 03_ngspice_setup  
 **ngspice セットアップ（詳細版）**  
 *ngspice Setup for Circuit Simulation (Enhanced Version)*
