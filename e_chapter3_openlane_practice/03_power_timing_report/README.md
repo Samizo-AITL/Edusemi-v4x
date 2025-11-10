@@ -1,74 +1,103 @@
 ---
 layout: default
-title: 設計レポート解析：面積・タイミング・電力の可視化 
+title: 設計レポート解析：面積・タイミング・電力の可視化（OpenLane v2 完全版）
 ---
 
 ---
 
-# 📊 設計レポート解析：面積・タイミング・電力の可視化  
-**Analysis of Area, Timing, and Power Reports in OpenLane Flow**
+# 📊 設計レポート解析：面積・タイミング・電力の可視化（OpenLane v2 完全版）  
+**Analysis of Area, Timing, and Power Reports in OpenLane v2 Flow**
 
 ---
 
 ## 📘 概要｜Overview
 
-この章では、OpenLaneフローで生成された各種レポートを **Pythonで自動解析・CSV化・グラフ表示** する方法を紹介します。  
-**面積・セル数・遅延・電力** などの設計指標を読み解き、設計改善や比較検証に役立てます。
+この章では **OpenLane v2** が生成するレポート群を  
+**Python により解析・CSV化・可視化**する方法を解説します。
 
-This section demonstrates how to parse OpenLane reports using Python  
-to extract key metrics like **area, timing slack, and power consumption** and visualize them.
+扱う指標は：
+
+- ✅ **面積（Area）**
+- ✅ **タイミング（WNS/TNS/遅延）**
+- ✅ **電力（Power）**
+- ✅ **配置・配線のQoR**
+
+OpenLane v2 の出力構造に完全準拠した **最新版教材** です。
 
 ---
 
 ## 🎯 学習目的｜Objectives
 
-- ✅ **OpenLaneが出力するレポートログを構造的に解析できる**  
-  *You can structurally analyze report logs output by OpenLane.*
-
-- ✅ **面積・消費電力・タイミング情報をCSV化・視覚化できる**  
-  *You can convert and visualize area, power, and timing information as CSV.*
-
-- ✅ **複数Runの結果を比較・分析する基盤を習得できる**  
-  *You can learn how to compare and analyze results across multiple runs.*
+- ✅ OpenLane v2 のレポート形式を理解する  
+- ✅ Python による数値抽出 → CSV → グラフ化の流れを身に付ける  
+- ✅ 複数の Run を比較・検証する仕組みを構築する  
 
 ---
 
-## 📁 対象レポート例｜Target Directories (Example: `run1`)
+# 🗂️ レポートディレクトリ構成（OpenLane v2 正式構造）
 
-```text
-designs/inverter/runs/run1/reports/
-├── synthesis/
-│   └── synthesis.log
-├── placement/
-│   └── placement.log
-├── routing/
-│   └── routing.log
-├── power/
-│   └── power_report.log
-└── timing/
-    └── final_summary.csv
+以下は **designs/inverter/runs/run1/** の出力例：
+
+```
+runs/run1/
+├── logs/                   
+├── reports/               
+│   ├── synthesis/          ← yosys 合成ログ
+│   ├── floorplan/
+│   ├── placement/
+│   ├── cts/
+│   ├── routing/
+│   ├── parasitics/         ← SPEF, R/C 抽出
+│   ├── timing/             ← metrics.csv / slack rpt
+│   ├── power/              ← total_power.rpt
+│   └── signoff/            ← drc / lvs
+└── results/
+    └── final/
+        └── gds/inverter.gds
 ```
 
----
-
-## 🧰 Pythonスクリプト構成｜Scripts for Parsing & Visualization
-
-| ファイル名 | 説明（Description） |
-|------------|----------------------|
-| [`parse_synthesis_log.py`](./parse_synthesis_log.py) | 面積・セル数などの論理合成ログを抽出 |
-| [`parse_power_report.py`](./parse_power_report.py) | 電力内訳を解析（静的 / 動的 / 総電力） |
-| [`parse_timing_summary.py`](./parse_timing_summary.py) | タイミングSlack情報を抽出・ヒストグラム化 |
-| [`plot_metric_trend.py`](./plot_metric_trend.py) | 複数Run間の比較可視化（横棒・折れ線など） |
+✅ **v2 では timing, power, parasitics, signoff が独立ディレクトリに整理される。**  
+✅ **“log” ではなく “rpt (report)” 形式が多い点が v1 と異なる。**
 
 ---
 
-## 🚀 実行例｜Usage Example
+# 🧰 Python 解析スクリプト構成（最新版）
+
+以下は v2 レポートを正しく解析するための公式対応ファイル例：
+
+| スクリプト名 | 解析対象 |
+|--------------|----------|
+| `parse_synthesis_log.py` | `reports/synthesis/1-yosys.log` |
+| `parse_power_report.py` | `reports/power/total_power.rpt` |
+| `parse_timing_summary.py` | `reports/timing/metrics.csv` |
+| `plot_metric_trend.py` | `runs/*/reports/` を横断解析 |
+
+---
+
+# ✅ 解析対象ファイル一覧（OpenLane v2）
+
+| 項目 | ファイル例 | 内容 |
+|------|------------|------|
+| 合成 | `1-yosys.log` | セル数・ゲート数・面積 |
+| タイミング | `metrics.csv` | WNS/TNS/遅延/ルート特性 |
+| 電力 | `total_power.rpt` | static / dynamic / internal / switching |
+| 配線 | `route.rpt` | ワイヤ長・ビア数 |
+| 抽出 | `parasitics/*.spef` | RC情報（STAに利用） |
+| サインオフ | `drc.rpt`, `lvs.rpt` | DRC/LVS結果 |
+
+---
+
+# 🚀 Python 解析例｜Usage Example
+
+## ✅ 電力レポート → CSV
 
 ```bash
 python3 parse_power_report.py \
-  --input ./designs/inverter/runs/run1/reports/power/power_report.log \
+  --input ./designs/inverter/runs/run1/reports/power/total_power.rpt \
   --output ./output/power_metrics.csv
 ```
+
+## ✅ 複数Run比較
 
 ```bash
 python3 plot_metric_trend.py \
@@ -77,45 +106,47 @@ python3 plot_metric_trend.py \
 
 ---
 
-## 📈 可視化例（想定）｜Expected Graphs
+# 📈 可視化例（想定）
 
-- ✅ 面積 vs Run 名（横棒グラフ）
-- ✅ 消費電力の内訳（Pie Chart）
-- ✅ タイミングSlackの分布（ヒストグラム）
-- ✅ 複数Run間での面積・遅延・電力の傾向分析
-
----
-
-## 🔗 関連リンク｜Related Links
-
-- [🧩 OpenLane Report Format Spec (公式)](https://openlane.readthedocs.io/en/latest/)
-- [📘 第2節：RTLからGDSへのフロー](../02_rtl_to_gds_flow/README.md)
-- [🏠 第3章トップへ戻る](../README.md)
+- ✅ Run毎の面積比較（Bar Chart）
+- ✅ WNS/TNS の Slack 分布（Histogram）
+- ✅ 総電力の推移（Line Chart）
+- ✅ ルーティングQoR（ワイヤ長・ビア数）の比較グラフ
 
 ---
 
-## 🧠 教育的意義｜Educational Significance
+# 🧠 教育的意義｜Educational Significance
 
 | 観点 | 内容 |
 |------|------|
-| 📊 データ解析力 | 数値だけでなく傾向・相関として理解できる力を育む |
-| 🔁 改善サイクル | 改善 → 評価 → 検証の反復で設計品質向上を体験 |
-| 🐍 実務対応 | Pythonによるログ解析・データ整形を実践できる |
+| 📊 データ解析 | 数値変化を俯瞰し、設計品質の変化を理解 |
+| 🔁 改善サイクル | design → run → analyze → optimize の流れを体験 |
+| 🐍 実務力 | Python によるレポート処理は企業でも必須スキル |
 
 ---
 
-## 📦 必要パッケージ｜Required Python Packages
+# 📦 必要パッケージ（軽量構成）｜Required Python Packages
 
 ```bash
-pip install pandas matplotlib seaborn
+pip install pandas matplotlib
 ```
 
----
-
-## 📝 備考｜Notes
-
-- OpenLaneのバージョンによりログ構造が一部異なる可能性があります。
-- スクリプトは `output/` フォルダにCSVやグラフファイルを出力します。
-- スクリプトは順次 [`GitHub - Samizo-AITL`](https://github.com/Samizo-AITL) にて公開予定です。
+✅ seaborn は **必須ではない**（教育・再現性の観点で非推奨）。  
+必要なら optional として追加してもよい。
 
 ---
+
+# 📝 Notes（補足）
+
+- OpenLane のバージョンごとにレポート構造が微細に変わることがあります。  
+- power/ 以下は `total_power.rpt` や `power.rpt` など名称が異なる場合があります。  
+- 出力先として `output/` フォルダを作成して CSV や PNG を保存する想定です。  
+- 解析スクリプトは順次 GitHub に公開予定です。
+
+---
+
+# 🔗 関連リンク
+
+- [OpenLane Documentation](https://openlane.readthedocs.io/en/latest/)
+- [第2節：RTL→GDSフロー](../02_rtl_to_gds_flow/README.md)
+- [第3章トップ](../README.md)
