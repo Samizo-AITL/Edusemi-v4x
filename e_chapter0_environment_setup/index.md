@@ -3,6 +3,8 @@ layout: default
 title: 実践編 第0章 環境構築とツールセットの準備
 ---
 
+---
+
 # 🛠️ 実践編 第0章：環境構築とツールセットの準備  
 **Practical Chapter 0: Environment Setup and Toolchain Preparation**
 
@@ -10,9 +12,9 @@ title: 実践編 第0章 環境構築とツールセットの準備
 
 ## 🔗 公式リンク / *Official Links*
 
-| 言語 / Language | GitHub Pages 🌐 | GitHub Repository 💻 |
-|-----------------|----------------|-----------------------|
-| 🇯🇵 日本語 / *Japanese* | https://samizo-aitl.github.io/Edusemi-v4x/e_chapter0_environment_setup/ | https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/e_chapter0_environment_setup |
+| 言語 / Language | GitHub Pages 🌐 | GitHub 💻 |
+|-----------------|----------------|-----------|
+| 🇯🇵 日本語 / *Japanese* | [![GitHub Pages JP](https://img.shields.io/badge/GitHub%20Pages-日本語版-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4/e_chapter0_environment_setup/) | [![GitHub Repo JP](https://img.shields.io/badge/GitHub-日本語版-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/e_chapter0_environment_setup) |
 
 ---
 
