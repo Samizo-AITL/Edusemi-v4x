@@ -1,43 +1,35 @@
-# plot_vgid.py - SPICEログから Vg-Id 特性を描画
-
+#!/usr/bin/env python3
+import argparse
+import pandas as pd
 import matplotlib.pyplot as plt
 
-def parse_log(filename):
-    vg_list = []
-    id_list = []
+def main():
+    parser = argparse.ArgumentParser(description="Plot Vg–Id curve from CSV")
+    parser.add_argument("csv", help="input CSV (nfet_vgid.csv / pfet_vgid.csv)")
+    parser.add_argument("--out", default="vgid.png", help="output PNG")
+    args = parser.parse_args()
 
-    with open(filename, 'r') as f:
-        for line in f:
-            if line.strip().startswith("Index"):
-                continue
-            tokens = line.strip().split()
-            if len(tokens) >= 4:
-                try:
-                    vg = float(tokens[2])
-                    id_val = float(tokens[1]) * -1e6  # µA に変換（符号反転）
-                    vg_list.append(vg)
-                    id_list.append(id_val)
-                except ValueError:
-                    continue
-    return vg_list, id_list
+    # CSV 読み込み
+    df = pd.read_csv(args.csv, sep=r"\s+", comment="#", names=["Vg", "Id"])
 
-# --- ファイル指定（必要に応じて変更）
-nfet_log = "output/nfet_vgid.log"
-pfet_log = "output/pfet_vgid.log"
+    # グラフ
+    plt.figure(figsize=(6,4))
+    plt.plot(df["Vg"], df["Id"])
+    plt.xlabel("Gate Voltage Vg (V)")
+    plt.ylabel("Drain Current Id (A)")
+    plt.grid(True)
 
-# --- データ読み込み
-vg_n, id_n = parse_log(nfet_log)
-vg_p, id_p = parse_log(pfet_log)
+    # タイトルは CSV 名から自動生成
+    if "nfet" in args.csv.lower():
+        plt.title("NFET Vg–Id")
+    elif "pfet" in args.csv.lower():
+        plt.title("PFET Vg–Id")
+    else:
+        plt.title("Vg–Id Curve")
 
-# --- プロット
-plt.figure(figsize=(8, 5))
-plt.plot(vg_n, id_n, label='nMOS (nfet_01v8)', marker='o')
-plt.plot(vg_p, id_p, label='pMOS (pfet_01v8)', marker='x')
-plt.axhline(0, color='gray', linestyle='--', linewidth=0.5)
-plt.xlabel('Gate Voltage Vg [V]')
-plt.ylabel('Drain Current Id [μA]')
-plt.title('Vg–Id Characteristics of Sky130 MOSFETs')
-plt.grid(True)
-plt.legend()
-plt.tight_layout()
-plt.show()
+    plt.tight_layout()
+    plt.savefig(args.out, dpi=300)
+    print(f"Saved: {args.out}")
+
+if __name__ == "__main__":
+    main()
