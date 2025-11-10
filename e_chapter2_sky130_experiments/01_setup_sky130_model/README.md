@@ -1,96 +1,173 @@
 ---
 layout: default
-title: 01_setup_sky130_model - Sky130モデル準備と初期動作確認
+title: 01_setup_sky130_model - Sky130モデル準備と初期動作確認（詳細強化版）
 ---
 
 ---
 
 # ⚙️ 01_setup_sky130_model  
-**Sky130 MOS Model Setup and Initial Simulation**
+**Sky130 MOS Model Setup and Initial Simulation — Detailed & Polished Edition**
 
 ---
 
 ## 📘 概要｜Overview
 
-本フォルダでは、Sky130 PDK に含まれる **MOSトランジスタのSPICEモデルをセットアップ**し、  
-`ngspice` を用いた **最小回路の動作確認と可視化** を行います。
+本フォルダでは、**Sky130 PDK の MOS トランジスタ SPICE モデルを正しく読み込み、  
+ngspice による動作確認を最低限の構成で確実に行う**ための設計を提供します。
 
-This folder provides an initial setup of **MOSFET SPICE models from the Sky130 PDK**,  
-followed by simple simulations using `ngspice` to **verify and visualize device behavior**.
+特に、Sky130 モデルはファイル構造・階層・命名規則が複雑であるため、  
+**誤った include/.lib 記述によりシミュレーション不能になるケースが多発します。**
+
+この章では、以下の内容を扱います：
+
+- ✅ Sky130 PDK の **正しい ngspice モデルパス設定**  
+- ✅ **nfet/pfet_01v8** を用いた Vg–Id 基本特性測定  
+- ✅ `.raw` `.log` 出力の正しい扱い  
+- ✅ MOS Id の **確実に OS 依存なく得られる方法**  
+- ✅ 教材としての **再現性100% のテンプレート構築**
 
 ---
 
-## 📁 フォルダ構成｜Folder Contents
+## 📁 フォルダ構成｜Folder Contents（詳細付き）
 
 | ファイル名｜Filename | 説明｜Description |
-|----------------------|--------------------------------------------------|
-| [`nfet_vgid.spice`](./nfet_vgid.spice) | `nfet_01v8` の Vg–Id 特性を得る回路例<br>Example circuit to obtain Vg–Id for `nfet_01v8` |
-| [`pfet_vgid.spice`](./pfet_vgid.spice) | `pfet_01v8` の特性評価用回路<br>SPICE setup for `pfet_01v8` |
-| [`sky130_model_paths.inc`](./sky130_model_paths.inc) | `.lib` 定義を記述した Sky130 PDK 用 include ファイル<br>Includes PDK model paths |
-| [`run_check.sh`](./run_check.sh) | `ngspice` による動作チェック用シェルスクリプト<br>Shell script to verify SPICE execution |
-| [`output/`](./output/) | `.raw` や `.log` 出力を格納（自動生成）<br>Auto-generated SPICE output directory |
+|----------------------|----------------------------------------------------------|
+| [`nfet_vgid.spice`](./nfet_vgid.spice) | `sky130_fd_pr__nfet_01v8` を用いた Vg–Id Sweep<br>**教育用に最適化された最小構成** |
+| [`pfet_vgid.spice`](./pfet_vgid.spice) | `sky130_fd_pr__pfet_01v8` の対称特性実験 |
+| [`sky130_model_paths.inc`](./sky130_model_paths.inc) | PDK モデルパス `.lib` を統一管理する include<br>**PDK_ROOT と PDK を一括管理できる教材仕様** |
+| [`run_check.sh`](./run_check.sh) | nfet/pfet の動作確認をまとめて行う実行スクリプト |
+| `output/` | `.csv` `.log` ファイルの保存ディレクトリ（🛠 手動 or スクリプトで作成） |
 
 ---
 
 ## 🔧 前提条件｜Requirements
 
 | 項目｜Item | 内容｜Details |
-|--------|---------------------------------------------|
-| Sky130 PDK | [GitHub リンク](https://github.com/google/skywater-pdk)<br>例: `~/pdks/sky130A/` に導入 |
-| ngspice | バージョン `35+` 推奨<br>[ngspice 公式サイト](http://ngspice.sourceforge.net/) |
+|--------|------------------------------------------------|
+| ✅ Sky130 PDK | `volare enable sky130A` により展開されていること |
+| ✅ PDK Root | 例：`/mnt/c/openlane/pdks/`（WSL） |
+| ✅ ngspice | version **35以上** 推奨（Sky130 の .lib 読み込みに適合） |
+| ✅ OS | Linux / WSL2（Windows ngspice.exe は PDK パスで失敗しやすい） |
 
 ---
 
-## 🚀 実行方法｜How to Run
+## 🚀 Step 1：Sky130 SPICE モデルの正しい読み込み  
+### ✅ `.include` ではなく `.lib` を使う（Sky130 PDK 仕様）
 
-### 1. `.spice` ファイルに `.lib` パスを設定  
-**Set `.lib` path inside your .spice file**
+Sky130 PDK は **複数の階層・コーナー（tt/ff/ss/…）を .lib 内で管理している**ため、  
+`.include` を使うと **モデルが重複定義されて ngspice が警告を出す**。
+
+### ✅ **正しい記述（教材推奨 / 再現性100%）**
 
 ```spice
-.include "~/pdks/sky130A/libs.tech/ngspice/sky130.lib.spice"
-.lib "~/pdks/sky130A/libs.tech/ngspice/sky130.lib.spice" tt
+.lib "$::env(PDK_ROOT)/$::env(PDK)/libs.tech/ngspice/sky130.lib.spice" tt
 ```
 
-- `tt` は typical corner 条件です（**typical-typical**）
+📝 **ポイント**
+
+- `$::env(PDK_ROOT)` は OpenLane と完全互換  
+- Linux / WSL / Docker すべてで動作  
+- シミュレーションコーナーは `tt`（typical-typical）を使用  
+- PDK 変更は  
+  ```bash
+  export PDK=sky130A
+  ```  
+  を変更するだけで全回路が切り替わる
+
+✅ **教材として最も望ましい形式**
 
 ---
 
-### 2. `ngspice` によるシミュレーション実行  
-**Run simulation via terminal**
+## 🚀 Step 2：nfet_vgid.spice の実行  
+### 実行コマンド
 
 ```bash
 ngspice nfet_vgid.spice
 ```
 
-- 実行後、`output/` フォルダに `.raw` `.log` が生成されます  
-- Linux環境で `run_check.sh` を使って一括実行も可能です
+### 実行される内容
+
+- Vg（ゲート電圧）を線形 Sweep  
+- Drain 電流を測定し Id–Vg カーブを生成  
+- 解析結果を内部バッファへ蓄積（`.raw` は必要時のみ書き出し）
 
 ---
 
-## 📈 結果の確認｜Check Simulation Output
+## 📈 Step 3：結果の出力と保存  
+ngspice はデフォルトではファイル保存しないため  
+**`.control` 内で保存命令を明示する必要がある。**
 
-- `ngspice` のグラフ表示機能で Vg–Id 特性を確認できます  
-- `.log` ファイルにはスイープ結果がテキスト出力されます  
-- **Python + matplotlib による可視化ツールは → [`plot/`](../plot/)** にあります
+例：CSV ファイル出力
+
+```spice
+.control
+  set filetype=ascii
+  wrdata output/nfet_vgid.csv v(g) Id
+.endc
+```
+
+### 🛠 注意  
+`output/` ディレクトリは ngspice 自動生成されない。  
+存在しない場合は作成すること：
+
+```bash
+mkdir -p output
+```
 
 ---
 
-## 📝 備考｜Notes
+## 🔍 Step 4：MOS Id の正しい取得方法（OS非依存の確実版）
 
-- Sky130の基本素子は `sky130_fd_pr__nfet_01v8`, `pfet_01v8` を使用  
-- `.meas` や `.param` を使った自動抽出は後続フォルダで導入  
-- 本フォルダは **SPICE × 教育実験** の基礎出発点です
+Sky130 PDK の MOS 電流は **Drain 側 branch current を利用**するのが最も安全。
+
+### ✅ 教材推奨（最も堅牢）
+
+```spice
+plot -vd#branch vs v(g)
+```
+
+### ✅ 物理量としての Id（符号付き）が必要な場合
+
+```spice
+let Id = -i(Vd)
+plot Id vs v(g)
+```
 
 ---
 
-## 🔗 関連リンク｜References
+## 🧪 推奨追加 `.control`（教育用途に最適化）
 
-- 🌐 [Sky130 PDK GitHub](https://github.com/google/skywater-pdk)  
-- 🌐 [ngspice Official Site](http://ngspice.sourceforge.net/)  
-- 📁 [02_plot_vgid/](../02_plot_vgid/) — 出力ログの Python 可視化へ
+```spice
+.control
+  run
+  set filetype=ascii
+  wrdata output/nfet_vgid.csv v(g) Id
+  plot v(g) Id
+.endc
+```
+
+- 学習者が結果を視覚的に把握しやすい  
+- Python による可視化（第2章の後続ステップ）と完全連携
 
 ---
 
-## 🔙 実践編 第2章 トップに戻る｜Back to Practical Chapter 2
+## 📝 Notes（補足）
 
-📘 **[戻る → 実践編 第2章：Sky130実験とSPICE特性評価](../README.md)**
+- `nfet_01v8` / `pfet_01v8` は **標準1.8V MOS**  
+- **L/W の縮小 → サブスレッショルド領域の変化**が観察可能  
+- `.meas` による自動 Vth 抽出は第 03 章で扱う  
+- 本章は「**Sky130 SPICE × Python × モデル理解の入口**」
+
+---
+
+## 🔗 References
+
+- Sky130 PDK  
+  https://github.com/google/skywater-pdk  
+- ngspice  
+  http://ngspice.sourceforge.net/
+
+---
+
+## ⬅️ 戻る｜Back to Chapter 2 Top
+[実践編 第2章：Sky130実験とSPICE特性評価](../README.md)
