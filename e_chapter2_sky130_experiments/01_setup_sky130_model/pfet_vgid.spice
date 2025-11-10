@@ -1,27 +1,36 @@
-* pfet_vgid.spice - Vg-Id sweep for sky130_fd_pr__pfet_01v8
+* pfet_vgid.spice — Vg–Id sweep for sky130_fd_pr__pfet_01v8
+* Requires environment variables:
+*   export PDK_ROOT=/mnt/c/openlane/pdks
+*   export PDK=sky130A
+.lib "$::env(PDK_ROOT)/$::env(PDK)/libs.tech/ngspice/sky130.lib.spice" tt
 
-.include "sky130_model_paths.inc"
-.lib "~/pdks/sky130A/libs.tech/ngspice/sky130.lib.spice" tt
-
-.options TEMP = 25
+.options TEMP=25
 .options METHOD=trap
 
-* ノード定義
-* M1: Drain, Gate, Source, Bulk
-VDS D 0 0.8
-VGS G 0 0
+.param W=1u
+.param L=0.15u
+.param VDD=0.9
 
-* トランジスタ定義 (W=1µm, L=0.15µm)
-* pMOS の場合、ソースを VDD 側、バルクも VDD に接続
-M1 D G VDD VDD sky130_fd_pr__pfet_01v8 w=1u l=0.15u
+* Node order: D G S B
+* PFET in p-well: Source/Bulk at VDD, Drain at 0
+Vd  D  0   0
+Vg  G  0   0
+Vs  S  0   {VDD}
+Vb  B  0   {VDD}
 
-* VDD バイアス
-VDD VDD 0 0.8
+M1  D  G  S  B  sky130_fd_pr__pfet_01v8  w={W}  l={L}
 
-* DC スイープ設定: VGS 0V → -0.8V（0.01Vステップ）
-.dc VGS 0 -0.8 -0.01
+* Sweep gate from 1.8 → 0 V (more conductive as gate lowers)
+.dc Vg 1.8 0 -0.01
 
-* 結果出力（端子電流など）
-.print DC i(VDS) V(G) V(D)
+.control
+  set wr_singlescale
+  set wr_vecnames
+  run
+  * Use magnitude so output is positive
+  let Id = abs(i(Vd))
+  wrdata pfet_vgid.csv v(g) Id
+  quit
+.endc
 
 .end
