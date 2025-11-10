@@ -1,6 +1,6 @@
 ---
 layout: default
-title: OpenLane導入とフローの全体像
+title: OpenLane導入とフローの全体像（最新版）
 ---
 
 ---
@@ -11,97 +11,97 @@ title: OpenLane導入とフローの全体像
 ---
 
 ## 📘 概要｜Overview
+本節では、オープンソースEDAフロー **OpenLane v2** を利用した、  
+**RTL（Verilog）→ GDS（物理レイアウト）** までの ASIC 実装プロセス全体を解説します。
 
-本節では、オープンソースEDAフロー「**OpenLane**」の導入方法と、  
-**RTL（Verilog）からGDS（物理レイアウト）までの全体ステップ**を解説します。
-
-This section explains how to set up **OpenLane** and provides an overview of  
-the **digital design flow from RTL to GDS**, using open-source EDA tools.
+This section explains how to set up **OpenLane** and provides a clear overview  
+of the **digital design flow from RTL to GDS**, using open-source tools and the **Sky130A PDK**.
 
 ---
 
 ## 📦 OpenLaneとは｜What is OpenLane?
+OpenLane は、The-OpenROAD Project が開発する  
+**自動デジタルLSI実装フロー（RTL→GDS 自動化）**です。
 
-OpenLaneは、The-OpenROAD Projectが開発する **自動デジタルLSI設計フロー**です。  
-**Sky130 PDK**と組み合わせることで、Verilog RTLからGDSファイルの生成まで一貫して実行できます。
-
-| 項目｜Component | 説明｜Description |
-|----------------|------------------|
-| 🧠 ベースツール | OpenROAD（配置・配線・解析） |
-| ⚙️ 論理合成 | `yosys` |
-| 📐 物理検証 | `Magic`, `Netgen` |
-| 📦 実行環境 | Dockerベース or ローカル環境（Python + Make） |
-
----
-
-## 🔧 導入手順｜Installation Steps
-
-### 1. リポジトリのクローン
-
-```bash
-git clone https://github.com/The-OpenROAD-Project/OpenLane.git
-cd OpenLane
-```
-
-### 2. OpenLane本体とSky130 PDKを取得
-
-```bash
-make pull-openlane
-make pull-sky130-pdk
-```
-
-> ⚠️ 初回ダウンロードには 1 時間以上かかる場合があります。
+| Component | Description |
+|-----------|-------------|
+| 🧠 **OpenROAD** | Floorplan / Placement / CTS / Routing / STA |
+| ⚙️ **Yosys** | RTL → Gate-Level 論理合成 |
+| 📐 **Magic** | DRC（物理ルールチェック） |
+| 🔎 **Netgen** | LVS（回路一致チェック） |
+| 📦 **Docker** | OpenLane v2 の実行環境 |
+| 🧱 **volare** | Sky130 PDK の取得・切替 |
 
 ---
 
-## 🗂️ ディレクトリ構成（抜粋）｜Directory Structure
+## 🔧 導入手順｜Installation Steps（最新版）
+最新 OpenLane v2 では **Docker + volare** 方式が標準です。
 
-```text
-OpenLane/
-├── flow/                   # 実行スクリプト類（Makefile, Python）
-├── designs/                # ユーザーデザイン（例: picorv32, gcd）
-├── PDK_ROOT/               # Sky130 PDK保存ディレクトリ（自動生成）
-└── config.tcl              # グローバル設定ファイル
+### ✅ 1. Sky130 PDK の取得（volare）
+```
+pip install --upgrade pip volare
+volare enable sky130A
+```
+
+### ✅ 2. OpenLane v2（Dockerイメージ）
+```
+docker pull efabless/openlane:2024.09.11
+```
+
+### ✅ 3. OpenLane コンテナの起動
+```
+docker run --rm -it \
+  -v $HOME/openlane/designs:/openlane/designs \
+  -v $HOME/openlane/pdks:/pdks \
+  -e PDK_ROOT=/pdks \
+  -e PDK=sky130A \
+  efabless/openlane:2024.09.11
+```
+
+---
+
+## 🗂️ ディレクトリ構成｜Directory Structure
+```
+openlane/
+├── designs/
+│    └── inverter/
+│        ├── config.tcl
+│        └── src/inverter.v
+└── pdks/
+     └── sky130A/
 ```
 
 ---
 
 ## 📈 設計フロー全体像｜Full Flow Overview
-
-OpenLaneは以下のフローを一括実行する構成になっています：
-
-| ステップ | 説明｜Description | 使用ツール｜Tool |
-|---------|------------------|------------------|
-| 1️⃣ Synthesis | RTLをゲートレベルに論理合成 | `yosys` |
-| 2️⃣ Floorplan | コア領域やピン位置を定義 | `init_floorplan` |
-| 3️⃣ Placement | 論理セルの初期・詳細配置 | `OpenROAD` |
-| 4️⃣ CTS | クロックツリーの合成 | `OpenROAD` |
-| 5️⃣ Routing | 自動配線処理 | `OpenROAD` |
-| 6️⃣ DRC/LVS | 物理検証（設計ルール・接続） | `Magic`, `Netgen` |
-| 7️⃣ GDS Output | レイアウトGDSの出力 | `KLayout`, `Magic` |
+| Step | Description | Tool |
+|------|-------------|------|
+| 1️⃣ **Synthesis** | RTL → Gate-Level Netlist | `Yosys` |
+| 2️⃣ **Floorplan** | コア領域・ピン配置 | `OpenROAD` |
+| 3️⃣ **Placement** | セル配置 | `OpenROAD` |
+| 4️⃣ **CTS** | クロックツリー合成 | `OpenROAD` |
+| 5️⃣ **Routing** | 自動配線 | `OpenROAD` |
+| 6️⃣ **Signoff (DRC/LVS)** | Magic DRC / Netgen LVS | `Magic`, `Netgen` |
+| 7️⃣ **GDS Output** | 製造用 GDSII | `Magic`, `KLayout` |
 
 ---
 
 ## ✅ 教育的意義｜Why It Matters for Education
-
-- 🔓 **商用EDAと同等の設計フロー**を無償で体験できる  
-- 🔍 **PDK連携や制約記述（floorplan, SDC）**を実装を通じて学べる  
-- 📊 実設計に近い **ログ・レポート・GDS出力**を生成でき、分析に活用可能  
+- OSSで **商用EDA同等のフロー** が学べる  
+- RTL〜GDS まで **バックエンド実装全体**を理解可能  
+- Sky130A PDK は教育・研究用途で広く採用  
+- 実際に **GDSが生成できる実践教材**になる  
 
 ---
 
-## 📎 関連教材リンク｜Related Chapter Links
-
-- [📘 02_rtl_to_gds_flow - 実設計フロー実習](../02_rtl_to_gds_flow/README.md)  
+## 📎 関連教材リンク
+- [📘 02_rtl_to_gds_flow – 実設計フロー実習](../02_rtl_to_gds_flow/README.md)  
 - [🏠 第3章トップへ戻る](../README.md)  
-- [🏗️ OpenLane公式GitHub](https://github.com/The-OpenROAD-Project/OpenLane)  
+- [🏗️ OpenLane公式GitHub](https://github.com/The-OpenROAD-Project/OpenLane)
 
 ---
 
-## 📝 備考｜Notes
-
-- 本教材では `gcd` や `inverter` など最小設計から学習を開始します  
-- 実務では SoCや複雑なIPマクロへ応用が可能です  
-- 今後の章で各フローの実行手順・設定ファイルの編集方法も学習します
-
----
+## 📝 備考
+- 本教材では **inverter / gcd / picorv32** などを順に扱う  
+- Docker＋volare は環境差異ゼロで再現性が高い  
+- 次章で **config.tcl の詳細設定**を扱う
