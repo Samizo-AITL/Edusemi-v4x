@@ -1,13 +1,22 @@
+---
+layout: default
+title: 04 VS Code Setup
+---
+
+---
+
 # 🛠️ 04_vscode_setup  
-**VS Code セットアップ（中厚版）**  
-*VS Code Setup for Python / SPICE / OpenLane Workflows (Mid-Level Version)*
+**VS Code セットアップ（詳細版）**  
+*VS Code Setup for Python / SPICE / OpenLane Workflows (Enhanced Version)*
 
 ---
 
 ## 📘 概要｜Overview
-本節では、Python 自動化・ngspice シミュレーション・Sky130 PDK 実験・OpenLane 解析を  
-**VS Code 一つで完結させるための開発環境構築**を行います。  
-*This section explains how to configure VS Code for fully integrated workflows: Python automation, ngspice simulations, Sky130 experiments, and OpenLane analysis.*
+Python 自動化・ngspice シミュレーション・Sky130 PDK 実験・OpenLane 解析を  
+**VS Code 一つで完結させるための最適開発環境構築**を行います。
+
+This section explains how to configure **VS Code** for fully integrated workflows:
+Python automation, ngspice simulations, Sky130 experiments, and OpenLane analysis.
 
 ---
 
@@ -17,29 +26,29 @@
 
 🔗 https://code.visualstudio.com/
 
-Windows / macOS / Linux 共通です。  
+Windows / macOS / Linux 共通  
 *Available for all major platforms.*
 
 ---
 
 ## ✅ 2. 必須拡張機能｜*Required Extensions*
 
-以下は Sky130 × Python × OpenLane で必須：
+Sky130 × Python × OpenLane の統合環境に必須：
 
 | Extension | 用途 / Purpose |
 |-----------|----------------|
-| **Python** | 実行・デバッグ |
+| **Python** | 実行・Lint・デバッグ |
 | **Pylance** | 高速インテリセンス |
 | **Jupyter** | Notebook 実行 |
-| **Remote - WSL** | WSL2 連携（OpenLane 用） |
-| **Markdown Preview Enhanced** | 教材編集 |
-| **GitHub Pull Requests** | GitHub 操作 |
+| **Remote - WSL** | WSL2 で OpenLane を使う |
+| **Markdown Preview Enhanced** | 教材制作 |
+| **GitHub Pull Requests** | GitHub 管理 |
 
 ---
 
-## ✅ 3. WSL2 との連携（重要）｜*VS Code + WSL Integration*
+## ✅ 3. WSL2 との統合（重要）｜*VS Code + WSL Integration*
 
-OpenLane・Magic・Netgen は Linux で動作するため：
+OpenLane・Magic・Netgen は Linux 環境で動作するため：
 
 ```
 VS Code → Remote-WSL → Ubuntu → Docker → OpenLane
@@ -54,46 +63,48 @@ VS Code → Remote-WSL → Ubuntu → Docker → OpenLane
 Remote-WSL: New Window
 ```
 
+WSL 内で VS Code が開き、Linux の Python/Docker が直接利用可能。
+
 ---
 
 ## ✅ 4. Python 実行設定｜*Python Execution Setup*
 
 ### ✅ ターミナルを開く  
-```
+```text
 Ctrl + `
 ```
 
-### ✅ 実行方法  
-```
+### ✅ Python スクリプト実行  
+```bash
 python main.py
 ```
 
-### ✅ または右上 ▶️  
+### ✅ または VS Code の右上 ▶️  
 
 ---
 
-## ✅ 5. Notebook 実行｜*Run Jupyter Notebooks*
+## ✅ 5. Jupyter Notebook の利用｜*Run Jupyter Notebooks*
 
-- `.ipynb` を開くと Notebook モードに切り替わる  
-- Sky130 実験ログのプロット、SPICE 解析に便利  
-*Ideal for plotting SPICE results and Sky130 measurements.*
+- `.ipynb` を開くだけで Notebook モードへ  
+- SPICE 波形解析、Sky130 デバイス特性可視化に最適  
+*Ideal for waveform analysis and Sky130 measurements.*
 
 ---
 
-## ✅ 6. VS Code での GitHub 使用｜*GitHub Integration*
+## ✅ 6. VS Code で GitHub を使う｜*GitHub Integration*
 
-### ✅ リポジトリのクローン
-```
+### ✅ クローン  
+```bash
 git clone https://github.com/<user>/<repo>.git
 ```
 
-### ✅ ソース管理メニュー  
-- 変更ファイル表示  
+### ✅ VS Code のソース管理  
+- 変更ファイル一覧  
 - コミットメッセージ入力  
 - ✅ を押してコミット  
-- Push をクリック  
+- Push ボタンで GitHub へ同期  
 
-教材編集の反映もこれで OK。
+教材編集の更新管理にも最適。
 
 ---
 
@@ -104,7 +115,7 @@ graph TD
     A[📝 VS Code] --> B[🐍 Python Scripts]
     A --> C[Jupyter Notebooks]
     A --> D[🧪 ngspice Output Analysis]
-    A --> E[🐧 Remote-WSL]
+    A --> E[🐧 Remote-WSL Integration]
     E --> F[🧱 OpenLane / Magic / Netgen]
 
     style A fill:#e3f2fd,stroke:#1565c0,stroke-width:2px
@@ -128,7 +139,7 @@ project_root/
  └── notebooks/
 ```
 
-Sky130 実験・OpenLane・Python 自動化を全て一つにまとめられる。
+Sky130・OpenLane・Python 自動化を一つのワークスペースで管理可能。
 
 ---
 
@@ -138,10 +149,27 @@ Sky130 実験・OpenLane・Python 自動化を全て一つにまとめられる�
 |-------------|-----|
 | VS Code インストール | ✅ |
 | Python / Jupyter 拡張有効 | ✅ |
-| Remote-WSL 起動 | ✅ |
-| GitHub 連携 | ✅ |
+| Remote-WSL が動作 | ✅ |
+| GitHub コミットと Push | ✅ |
 | Python / Notebook 実行 | ✅ |
 | OpenLane 用フォルダ構成 | ✅ |
+
+---
+
+## ✅ 10. トラブルシューティング｜*Troubleshooting*
+
+### ⚠️ Remote-WSL が開かない  
+→ WSL2 が起動していない可能性  
+```bash
+wsl --status
+```
+
+### ⚠️ Notebook が遅い  
+→ Python カーネルを WSL 側に切り替える。
+
+### ⚠️ Docker が認識されない  
+→ WSL 統合設定を確認：  
+Docker Desktop → Settings → WSL → ✅ Enable integration
 
 ---
 
