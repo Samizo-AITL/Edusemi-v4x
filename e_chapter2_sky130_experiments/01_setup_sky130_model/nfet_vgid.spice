@@ -1,23 +1,35 @@
-* nfet_vgid.spice - Vg-Id sweep for sky130_fd_pr__nfet_01v8
+* nfet_vgid.spice — Vg–Id sweep for sky130_fd_pr__nfet_01v8 (WSL/Linux/Windows ngspice 35+)
+* Requires environment variables:
+*   export PDK_ROOT=/mnt/c/openlane/pdks
+*   export PDK=sky130A
+.lib "$::env(PDK_ROOT)/$::env(PDK)/libs.tech/ngspice/sky130.lib.spice" tt
 
-.include "sky130_model_paths.inc"
-.lib "~/pdks/sky130A/libs.tech/ngspice/sky130.lib.spice" tt
-
-.options TEMP = 25
+.options TEMP=25
 .options METHOD=trap
 
-* ノード定義
-* M1: Drain, Gate, Source, Bulk
-VDS D 0 0.8
-VGS G 0 0
+.param W=1u
+.param L=0.15u
+.param VDS_BIAS=0.8
 
-* トランジスタ定義 (W=1µm, L=0.15µm)
-M1 D G 0 0 sky130_fd_pr__nfet_01v8 w=1u l=0.15u
+* Node order: D G S B
+Vd  D  0  {VDS_BIAS}
+Vg  G  0  0
+Vs  S  0  0
+Vb  B  0  0
 
-* DC スイープ設定: VGS 0V → 0.8V（0.01Vステップ）
-.dc VGS 0 0.8 0.01
+M1  D  G  S  B  sky130_fd_pr__nfet_01v8  w={W}  l={L}
 
-* 結果出力（端子電流など）
-.print DC i(VDS) V(G) V(D)
+* Sweep gate from 0 → 1.8 V (typical 01v8 device)
+.dc Vg 0 1.8 0.01
+
+.control
+  set wr_singlescale
+  set wr_vecnames
+  run
+  * Drain current flowing D→S (positive): minus branch of Vd source
+  let Id = -i(Vd)
+  wrdata nfet_vgid.csv v(g) Id
+  quit
+.endc
 
 .end
