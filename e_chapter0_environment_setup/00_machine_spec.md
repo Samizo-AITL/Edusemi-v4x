@@ -135,10 +135,10 @@ flowchart TD
     A[Windows 11 Pro<br>ThinkPad X1 Carbon Gen10] --> B[WSL2 Ubuntu 22.04]
     B --> C[Docker Desktop Engine]
     C --> D[OpenLane Container]
-    B --> E[Sky130 PDK (volare)]
+    B --> E[Sky130A PDK via volare]
     B --> F[ngspice / Python3]
     B --> G[Magic / Netgen]
-    B --> H[KLayout GDS Viewer]
+    B --> H[KLayout Viewer]
 
     style A fill:#bbdefb,stroke:#0d47a1
     style B fill:#c8e6c9,stroke:#1b5e20
