@@ -1,20 +1,29 @@
+---
+layout: default
+title: 02 Sky130 PDK Setup
+---
+
+---
+
 # 🛠️ 02_sky130_pdk_setup  
-**Sky130 PDK セットアップ（中厚版）**  
-*Sky130 PDK Setup with volare (Mid-Level Version)*
+**Sky130 PDK セットアップ（詳細版）**  
+*Sky130 PDK Setup with volare (Enhanced Version)*
 
 ---
 
 ## 📘 概要｜Overview
-本節では、OpenLane・ngspice・Magic/Netgen で利用する **SkyWater Sky130 PDK** を  
-`volare` を用いて確実にセットアップします。  
-*This section explains how to install and enable the SkyWater Sky130 PDK using `volare` for OpenLane, ngspice, and Magic/Netgen.*
+本節では、OpenLane・ngspice・Magic/Netgen 向けに  
+**SkyWater Sky130 PDK を volare で完全セットアップする手順**をまとめます。
+
+This section explains how to fully install and enable the **SkyWater Sky130 PDK**  
+using `volare` for OpenLane, ngspice, and Magic/Netgen workflows.
 
 ---
 
 ## ✅ 1. volare のインストール｜*Install volare*
 
-`volare` は PDK の取得・管理ツールです。  
-*`volare` is a tool for fetching and managing PDK versions.*
+`volare` は Sky130 PDK の **取得・バージョン管理ツール**です。  
+*`volare` manages PDK fetching and version control.*
 
 ### ✅ pip でインストール  
 ```bash
@@ -25,15 +34,15 @@ pip install volare
 
 ## ✅ 2. Sky130A PDK の取得｜*Download Sky130A PDK*
 
-OpenLane 2024 以降の標準推奨は **volare の使用一択**。  
-*Using `volare` is the recommended method for OpenLane (2024+).*
+OpenLane 2024 以降は **volare の使用が事実上の標準**。  
+*For OpenLane 2024+, `volare` is the recommended method.*
 
 ### ✅ 最新安定版の取得  
 ```bash
 volare enable sky130A
 ```
 
-### ✅ 特定バージョンを取得したい場合  
+### ✅ 特定バージョンを取得する場合  
 ```bash
 volare enable sky130A <commit_hash>
 ```
@@ -47,12 +56,12 @@ volare enable sky130A <commit_hash>
 $HOME/.volare/sky130A/
 ```
 
-### OpenLane 使用時：
+### OpenLane が参照する場所：
 ```
 /pdks/sky130A/
 ```
 
-必要に応じてコピーする：
+必要に応じてコピー：
 
 ```bash
 mkdir -p ~/openlane/pdks
@@ -63,10 +72,10 @@ cp -r ~/.volare/sky130A ~/openlane/pdks/
 
 ## ✅ 4. PDK 内容の確認｜*Check PDK Contents*
 
-以下のファイルが存在すること：
+以下の重要ファイルが存在すること：
 
 | 種類 / Type | パス例 / Example Path |
-|------------|------------------------|
+|-------------|------------------------|
 | Magic Tech | `libs.tech/magic/sky130A.tech` |
 | SPICE models | `libs.tech/ngspice/*.spice` |
 | Netgen setup | `libs.tech/netgen/sky130A_setup.tcl` |
@@ -82,7 +91,7 @@ ls ~/openlane/pdks/sky130A/libs.tech/magic
 
 ## ✅ 5. ngspice でモデル読み込み｜*Using SPICE Models*
 
-SPICE ファイルで以下を include：
+SPICE ファイルで以下を追加：
 
 ```spice
 .include "/pdks/sky130A/libs.tech/ngspice/sky130.lib.spice"
@@ -98,17 +107,22 @@ FET モデル例：
 
 ## ✅ 6. OpenLane での利用｜*Use with OpenLane*
 
-OpenLane 実行時に環境変数を指定：
+OpenLane 実行時の環境設定：
 
 ```bash
 export PDK=sky130A
 export PDK_ROOT=/pdks
 ```
 
-Docker 版実行例：
+Docker 版の例：
 
 ```bash
-docker run --rm -it   -v "$HOME/openlane/pdks":/pdks   -v "$HOME/openlane/designs":/openlane/designs   -e PDK=sky130A   -e PDK_ROOT=/pdks   efabless/openlane:2024.09.11 bash
+docker run --rm -it \
+  -v "$HOME/openlane/pdks":/pdks \
+  -v "$HOME/openlane/designs":/openlane/designs \
+  -e PDK=sky130A \
+  -e PDK_ROOT=/pdks \
+  efabless/openlane:2024.09.11 bash
 ```
 
 ---
@@ -117,10 +131,10 @@ docker run --rm -it   -v "$HOME/openlane/pdks":/pdks   -v "$HOME/openlane/design
 
 ```mermaid
 graph TD
-    A[📦 volare] --> B[⬇️ sky130A PDK]
-    B --> C[🧱 OpenLane]
-    B --> D[🧪 ngspice Models]
-    B --> E[📏 Magic/Netgen Files]
+    A[📦 volare<br>PDK Manager] --> B[⬇️ sky130A PDK Download]
+    B --> C[🧱 OpenLane<br>Digital Flow]
+    B --> D[🧪 ngspice Models<br>SPICE Simulation]
+    B --> E[📏 Magic/Netgen<br>DRC/LVS Libraries]
 
     style A fill:#e3f2fd,stroke:#1565c0,stroke-width:2px
     style B fill:#f1f8e9,stroke:#2e7d32,stroke-width:2px
@@ -135,11 +149,28 @@ graph TD
 
 | チェック項目 / Item | OK? |
 |---------------------|-----|
-| volare が動く | ✅ |
+| volare が正常動作 | ✅ |
 | sky130A PDK が enable 済み | ✅ |
-| Magic tech ファイル存在 | ✅ |
-| ngspice モデル読み込み可 | ✅ |
-| OpenLane で認識される | ✅ |
+| Magic tech ファイルが存在 | ✅ |
+| ngspice モデルが読み込み可 | ✅ |
+| OpenLane で PDK が認識される | ✅ |
+
+---
+
+## ✅ 9. トラブル対処｜*Troubleshooting*
+
+### ⚠️ PDK が見つからない（OpenLane 内）
+→ `-e PDK_ROOT=/pdks` の指定忘れ。
+
+### ⚠️ Magic が minimum.tech を読み込んでしまう  
+→ tech を明示する：
+
+```bash
+magic -T /pdks/sky130A/libs.tech/magic/sky130A.tech
+```
+
+### ⚠️ ngspice がモデルを読まない  
+→ `.include` の絶対パスを使う。
 
 ---
 
