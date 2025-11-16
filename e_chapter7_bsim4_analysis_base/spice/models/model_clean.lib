@@ -1,0 +1,21 @@
+* =====================================================
+*  Simple Level-3 MOS Models for Vg-Id curve demo
+* =====================================================
+
+* NMOS model
+.model NMOS NMOS level=3 \
++ VTO=0.50     ; Threshold voltage [V] (approx)
++ KP=200e-6    ; Transconductance parameter [A/V^2]
++ GAMMA=0.6    ; Body effect coefficient
++ PHI=0.7      ; Surface potential
++ LAMBDA=0.05  ; Channel length modulation
+
+* PMOS model
+.model PMOS PMOS level=3 \
++ VTO=-0.50    ; Threshold voltage [V]
++ KP=100e-6    ; Transconductance parameter [A/V^2]
++ GAMMA=0.6
++ PHI=0.7
++ LAMBDA=0.05
+
+.end

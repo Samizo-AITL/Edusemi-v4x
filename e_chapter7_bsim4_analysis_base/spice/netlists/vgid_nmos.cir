@@ -1,0 +1,19 @@
+*==========================================================
+*  nMOS Vg–Id  (BSIM4, Vd = 1.0 V)
+*==========================================================
+.include "../models/model_bsim4.lib"
+
+.param W = 1u
+.param L = 30n
+
+Vd  d  0  1.0
+Vg  g  0  0
+Vs  s  0  0
+Vb  b  0  0
+
+M1  d g s b  NMOS_B4  W={W} L={L}
+
+.dc Vg 0 1.2 0.01
+wrdata "vgid_nmos.log" V(g) I(M1)
+
+.end

@@ -1,0 +1,20 @@
+*==========================================================
+*  pMOS Vg–Id  (BSIM4, |Vd| = 0.05 V)
+*  Vd = -0.05 V, Vg を 0 → -1.2 V へ掃引
+*==========================================================
+.include "../models/model_bsim4.lib"
+
+.param W = 1u
+.param L = 30n
+
+Vd  d  0  -0.05
+Vg  g  0   0
+Vs  s  0   0
+Vb  b  0   0
+
+M1  d g s b  PMOS_B4  W={W} L={L}
+
+.dc Vg 0 -1.2 -0.01
+wrdata "vgid_pmos_vd05.log" V(g) I(M1)
+
+.end

@@ -1,0 +1,4 @@
+* --- Simple Level-3 MOS models ---
+
+.model NMOS NMOS level=3 +VTO=0.5  +KP=200e-6 +GAMMA=0.6 +PHI=0.7 +LAMBDA=0.05
+.model PMOS PMOS level=3 +VTO=-0.5 +KP=100e-6 +GAMMA=0.6 +PHI=0.7 +LAMBDA=0.05
