@@ -1,3 +1,10 @@
+---
+title: "🛠 第7章: BSIM4 MOS特性解析基盤 "
+layout: default
+---
+
+
+
 # 🛠 第7章：BSIM4 MOS特性解析基盤  
 BSIM4モデルを対象に、MOSFET の Vg–Id、Vth、gm/Id、SS、DIBL を Python 自動解析するための教材です。
 
