@@ -6,7 +6,12 @@ layout: default
 ---
 
 # 🛠 第7章：BSIM4 MOS特性解析基盤  
-BSIM4モデルを対象に、MOSFET の Vg–Id、Vth、gm/Id、SS、DIBL を Python 自動解析するための教材です。
+**🛠 Chapter 7: BSIM4 MOS Characteristics Analysis Base**
+
+BSIM4 モデルを対象に、MOSFET の Vg–Id、Vth、gm/Id、SS、DIBL を  
+Python により **自動解析** するための実践教材です。  
+This chapter provides a practical training module to **automatically analyze** MOSFET Vg–Id, Vth, gm/Id, SS, and DIBL  
+for the BSIM4 model using Python.
 
 ---
 
@@ -17,7 +22,6 @@ BSIM4モデルを対象に、MOSFET の Vg–Id、Vth、gm/Id、SS、DIBL を Py
 | 🇯🇵 日本語 / *Japanese* | [![GitHub Pages JP](https://img.shields.io/badge/GitHub%20Pages-日本語版-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/e_chapter7_bsim4_analysis_base/) | [![GitHub Repo JP](https://img.shields.io/badge/GitHub-日本語版-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/e_chapter7_bsim4_analysis_base) |
 
 ---
-
 
 ## 📂 フォルダ構成
 - `spice/` — ngspice 用ネットリスト
