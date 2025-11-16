@@ -14,6 +14,48 @@ From version 4.0 onward, updates are maintained in the new repository `Edusemi-v
 
 ---
 
+## 🆕 v4.7（2025年11月16日 / November 16, 2025）  
+**実践編 第7章「BSIM4 MOS特性解析基盤」を追加し、BSIM4ベースのMOS解析環境を教材化**  
+**Added Practice Chapter 7 “BSIM4 MOSFET Characteristics Analysis Base” and formalized a BSIM4-based MOS analysis environment**
+
+🔹 **実践編 第7章「BSIM4 MOS特性解析基盤」を新規追加**  
+  - ngspice + BSIM4 モデルを用いた MOSFET 特性解析環境を構築  
+  - Vg–Id、Vth（const-Id / sqrt(Id)）、gm/Id、Subthreshold Swing、DIBL を Python で自動抽出  
+  - 図版（`vgid_all.png`、`gm_id.png`、`ss.png`、`dibl.png` など）を自動生成して `figs/` に保存  
+  - 対応ディレクトリ：`e_chapter7_bsim4_analysis_base/`  
+Added Practice Chapter 7 “BSIM4 MOSFET Characteristics Analysis Base”  
+  - Built a MOSFET analysis environment using ngspice with BSIM4 models  
+  - Automated extraction of Vg–Id, Vth (const-Id / sqrt(Id)), gm/Id, Subthreshold Swing, and DIBL via Python  
+  - Auto-generates plots (e.g., `vgid_all.png`, `gm_id.png`, `ss.png`, `dibl.png`) into the `figs/` directory  
+  - Directory: `e_chapter7_bsim4_analysis_base/`
+
+🔹 **フォルダ構成とスクリプト群を教材向けに整備**  
+  - `spice/netlists/`：BSIM4用ネットリスト（nMOS / pMOS、Vd=0.05V / 1.0V）  
+  - `data/raw/`：`wrdata` 出力ログ（`vgid_*.log`）を格納  
+  - `src/`：`plot_vgid.py`、`gm_id.py`、`ss_extract.py`、`dibl_extract.py` などの解析スクリプト  
+  - `figs/`：全自動生成図版を集約  
+Organized folder structure and scripts for educational use  
+  - `spice/netlists/`: BSIM4 netlists (nMOS / pMOS, Vd=0.05V / 1.0V)  
+  - `data/raw/`: `wrdata` output logs (e.g., `vgid_*.log`)  
+  - `src/`: analysis scripts such as `plot_vgid.py`, `gm_id.py`, `ss_extract.py`, and `dibl_extract.py`  
+  - `figs/`: collection of all auto-generated plots
+
+🔹 **実践編「Practice」目次に第7章を追加し、リンク構造を更新**  
+  - 第0〜6章と同形式のバッジリンク（View Site / View Repo）を第7章にも適用  
+  - 日本語タイトル＋英語サブタイトル併記で、他章と構成を統一  
+Updated the Practice table of contents to include Chapter 7  
+  - Added Chapter 7 with the same badge-style links (View Site / View Repo) as Chapters 0–6  
+  - Unified structure with Japanese title plus English subtitle
+
+🔹 **教材ページ `e_chapter7_bsim4_analysis_base` の README を整備**  
+  - 目的・フォルダ構成・使用手順（ngspice → Python）・生成図一覧を明記  
+  - 「環境構築（第0章）→ Sky130/SPICE実験（第2章・第6章）→ BSIM4解析（第7章）」の学習接続を提示  
+Refined the README for `e_chapter7_bsim4_analysis_base`  
+  - Documented objectives, folder structure, usage flow (ngspice → Python), and generated figures  
+  - Clarified the learning path from environment setup (Chapter 0) and Sky130/SPICE practice (Chapters 2 & 6) to BSIM4 analysis (Chapter 7)
+
+---
+
 ## 🆕 v4.6（2025年11月10日 / November 10, 2025）  
 **実践編 第0章〜第6章の完全統合と、環境構築ドキュメント（第0章）を全面整備**  
 **Integrated all Practice Chapters (0–6) and fully rebuilt the Environment Setup documentation**
