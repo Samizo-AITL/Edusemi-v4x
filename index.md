@@ -14,7 +14,7 @@ title: Edusemi-v4x/index.md
 > *Check the latest updates in the [ChangeLog](revision_history.md).*
 
 <p align="right">
-  <img src="https://img.shields.io/badge/Last%20Update-2025--08--15-orange" alt="Last Update">
+  <img src="https://img.shields.io/badge/Last%20Update-2025--11--16-orange" alt="Last Update">
   <a href="revision_history.md">
     <img src="https://img.shields.io/badge/View-ChangeLog-blue?logo=markdown" alt="View ChangeLog">
   </a>
