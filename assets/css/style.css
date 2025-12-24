@@ -203,3 +203,16 @@ mjx-container[display="true"] {
     font-size: 0.9em;
   }
 }
+
+/* ==============================
+   Layout width control (GitHub Pages / minima)
+   ============================== */
+.wrapper,
+.page-content,
+main {
+  max-width: 1100px;      /* ← 教材用途の最適値 */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
