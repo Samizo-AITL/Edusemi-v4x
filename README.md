@@ -146,8 +146,8 @@
 
 ## 🌐 関連プロジェクト一覧 | Related Projects
 
-本教材体系と連動する拡張・応用プロジェクトの一覧です。  
-*A list of extension and application projects linked to this educational framework.*
+> 本教材体系と連動する拡張・応用プロジェクトの一覧です。  
+> *A list of extension and application projects linked to this educational framework.*
 
 | 🌐 プロジェクト / Project | 概要 / Overview | 主な特徴・内容 / Key Features |
 |---|---|---|
