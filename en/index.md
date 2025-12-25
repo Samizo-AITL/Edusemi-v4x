@@ -107,49 +107,49 @@ In practice, these are closely connected—**circuits depend on device physics, 
 
 ---
 
-## 🛠 **Practice**  
+## 🛠 **Practice**
 > Hands-on exercises with Python automation, Sky130 experiments, and OpenLane design to solidify skills.
 
 | 📖 Chapter | 📚 Title | 📝 Summary |
 |----|--------|---------|
-| 🛠 **Chapter 0**<br>[![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/e_chapter0_environment_setup/)<br>[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/e_chapter0_environment_setup) | *Environment Setup and Toolchain Preparation* | Prepare the complete toolchain used throughout Chapters 1–6, including Python, VS Code, Git, ngspice, Sky130 PDK (volare), Magic, Netgen, KLayout, Docker, and WSL2. Ensure a fully functional environment for SPICE experiments, OpenLane design, and Python automation workflows. |
-| 🛠 **Chapter 1**<br>[![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/e_chapter1_python_automation_tools/)<br>[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/e_chapter1_python_automation_tools) | *Python-Based Automation Tools for Semiconductor Design* | Develop Python scripts to automate SPICE simulations, reliability model evaluations, and report analysis in conjunction with the Sky130 PDK and OpenLane flow. |
-| 🛠 **Chapter 2**<br>[![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/e_chapter2_sky130_experiments/)<br>[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/e_chapter2_sky130_experiments) | *Sky130 Experiments and SPICE-Based Characterization* | Use the SkyWater Sky130 PDK to evaluate MOS characteristics (Vg–Id curves, Vth extraction) and predict BTI/TDBB, performing SPICE-based design verification. |
-| 🛠 **Chapter 3**<br>[![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/e_chapter3_openlane_practice/)<br>[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/e_chapter3_openlane_practice) | *Digital Design Practice Using OpenLane* | Experience the LSI design flow from Verilog RTL to GDS generation, understanding the objectives and tools for synthesis, placement, routing, and DRC. |
+| 🛠 **Chapter 0**<br>[![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/e_chapter0_environment_setup/)<br>[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/e_chapter0_environment_setup) | *Environment Setup and Toolchain Preparation* | **Complete toolchain setup** for Chapters 1–6, including **Python, VS Code, Git, ngspice, Sky130 PDK (volare), Magic, Netgen, KLayout, Docker, and WSL2**, ensuring a **fully functional environment** for **SPICE experiments, OpenLane design, and Python automation workflows**. |
+| 🛠 **Chapter 1**<br>[![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/e_chapter1_python_automation_tools/)<br>[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/e_chapter1_python_automation_tools) | *Python-Based Automation Tools for Semiconductor Design* | **Python automation scripts** for **SPICE simulations, reliability model evaluation, and report analysis**, integrated with the **Sky130 PDK and OpenLane flow**. |
+| 🛠 **Chapter 2**<br>[![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/e_chapter2_sky130_experiments/)<br>[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/e_chapter2_sky130_experiments) | *Sky130 Experiments and SPICE-Based Characterization* | **MOS characterization (Vg–Id curves, Vth extraction)** and **BTI/TDBB prediction** using the **SkyWater Sky130 PDK**, enabling **SPICE-based design verification**. |
+| 🛠 **Chapter 3**<br>[![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/e_chapter3_openlane_practice/)<br>[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/e_chapter3_openlane_practice) | *Digital Design Practice Using OpenLane* | **End-to-end LSI design flow**, from **Verilog RTL to GDS generation**, covering **synthesis, placement, routing, and DRC** with OpenLane. |
 
 ---
 
-## 📦 **Special Topics**  
+## 📦 **Special Topics**
 > Focuses on cutting-edge topics such as advanced nodes, chiplets, and integrated control SoCs.
 
 | 📖 Chapter | 📚 Title | 📝 Summary |
 |----|--------|---------|
-| 📦 **Chapter 1**<br>[![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/f_chapter1_finfet_gaa/)<br>[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/f_chapter1_finfet_gaa) | *Advanced Node Technologies – FinFET, GAA & CFET* | Comprehensively explains the physical and electrical characteristics and design impacts of FinFET, GAA, and CFET structures, introducing advanced CMOS technologies beyond planar MOS limits. |
-| 📦 **Chapter 2**<br>[![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/f_chapter2_chiplet_pkg/)<br>[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/f_chapter2_chiplet_pkg) | *Chiplets and Advanced Packaging* | Covers 2.5D/3D integration, TSV, and heterogeneous integration for chiplet architecture design, implementation, and reliability, enabling flexible design and scalability. |
-| 📦 **Chapter 2a**<br>[![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/f_chapter2a_systemdk/)<br>[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/f_chapter2a_systemdk) | *Design Handling of Thermal, Stress, and Noise Constraints in SystemDK* | Explains the concept of SystemDK and methods for addressing physical constraints such as SI/PI, thermal, stress, and EMI/EMC in design. |
+| 📦 **Chapter 1**<br>[![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/f_chapter1_finfet_gaa/)<br>[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/f_chapter1_finfet_gaa) | *Advanced Node Technologies – FinFET, GAA & CFET* | **Physical and electrical characteristics** and **design impacts** of **FinFET, GAA, and CFET**, introducing **advanced CMOS technologies beyond planar MOS limits**. |
+| 📦 **Chapter 2**<br>[![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/f_chapter2_chiplet_pkg/)<br>[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/f_chapter2_chiplet_pkg) | *Chiplets and Advanced Packaging* | **2.5D/3D integration, TSV, and heterogeneous integration** for **chiplet architecture design, implementation, and reliability**, enabling **flexible design and scalability**. |
+| 📦 **Chapter 2a**<br>[![View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/f_chapter2a_systemdk/)<br>[![View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/tree/main/f_chapter2a_systemdk) | *Design Handling of Thermal, Stress, and Noise Constraints in SystemDK* | **SystemDK concepts** and **design methodologies** for handling **SI/PI, thermal, stress, and EMI/EMC constraints** at the **SoC–system integration level**. |
 
 ---
 
 ## 🔗 **Related Projects**
-> Sister projects linked with Edusemi, covering control theory, socio-industrial structures, and advanced technologies.
+> Sister projects linked with Edusemi, covering **control theory, socio-industrial structures, and advanced technologies**.
 
 | 🌐 Project | Overview | Key Features |
 |---|---|---|
-| ➕ **Edusemi-Plus**<br>[![🌐 View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-Plus/en/) [![💻 View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-Plus) | Applied learning materials analyzing geopolitics, product strategy, AI, quantum, and investment. | - In-depth analysis of Apple Silicon, CHIPS Act, and Cryo-CMOS<br>- Explores not only technology but also its societal context and background |
-| 🎛️ **EduController**<br>[![🌐 View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/EduController/en/) [![💻 View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/EduController) | Covers control theory (PID, state-space) to AI control (NN, RL, LLM). | - Linked with PoC design and OpenLane control implementation<br>- Design exercises in Python, RTL verification, FSM generation support |
+| ➕ **Edusemi-Plus**<br>[![🌐 View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-Plus/en/) [![💻 View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-Plus) | **Applied learning materials** analyzing **geopolitics, product strategy, AI, quantum technologies, and investment**. | - **In-depth analysis of Apple Silicon, the CHIPS Act, and Cryo-CMOS**<br>- **Explores technology within its societal, policy, and industrial context** |
+| 🎛️ **EduController**<br>[![🌐 View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/EduController/en/) [![💻 View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/EduController) | **Comprehensive coverage from control theory (PID, state-space) to AI control (NN, RL, LLM)**. | - **Linked with PoC design and OpenLane-based control implementation**<br>- **Design exercises in Python, RTL verification, and FSM generation support** |
 
 ---
 
 ## 👤 **Author**
-> Author with professional background in semiconductors and inkjet actuators, creating materials integrating theory and practice.
+> Author with professional background in semiconductors and inkjet actuators, creating **materials that integrate theory and practice**.
 
 | 📌 Item | Details |
 |------|------|
-| **Name** | Shinichi Samizo |
-| **Education** | M.Eng., Electrical and Electronic Engineering, Shinshu University |
-| **Career** | Former engineer at Seiko Epson Corporation (1997–) |
-| **Expertise** | Semiconductor devices (logic, memory, high-voltage mixed)<br>Thin-film piezoelectric actuators for inkjet<br>PrecisionCore printhead productization, BOM management, ISO training |
-| **💻 GitHub** | [![GitHub](https://img.shields.io/badge/GitHub-Samizo--AITL-blue?style=for-the-badge&logo=github)](https://github.com/Samizo-AITL) |
+| **Name** | **Shinichi Samizo** |
+| **Education** | **M.Eng. in Electrical and Electronic Engineering, Shinshu University** |
+| **Career** | **Former engineer at Seiko Epson Corporation (1997–)** |
+| **Expertise** | **Semiconductor devices** (logic, memory, high-voltage mixed integration)<br>**Thin-film piezoelectric actuators for inkjet applications**<br>**PrecisionCore printhead productization, BOM management, and ISO training** |
+| **💻 GitHub** | **Samizo-AITL**<br>[![GitHub](https://img.shields.io/badge/GitHub-Samizo--AITL-blue?style=for-the-badge&logo=github)](https://github.com/Samizo-AITL) |
 
 ---
 
