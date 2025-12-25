@@ -151,6 +151,11 @@ title: Edusemi-v4x/index.md
 
 ---
 
+## 🌐 関連プロジェクト一覧 | Related Projects
+
+本教材体系と連動する拡張・応用プロジェクトの一覧です。  
+*A list of extension and application projects linked to this educational framework.*
+
 | 🌐 プロジェクト / Project | 概要 / Overview | 主な特徴・内容 / Key Features |
 |---|---|---|
 | ➕ **Edusemi-Plus**<br>[![🌐 View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-Plus/) [![💻 View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-Plus) | **地政学・製品戦略・AI・量子・投資**などを通じて、**半導体産業構造を読み解く応用教材**。<br>*Applied learning materials analyzing geopolitics, product strategy, AI, quantum, and investment.* | - **Apple Silicon・CHIPS法・Cryo-CMOS**の実例解説<br>- **技術と社会・政策・市場の接点**を多角的に探究 |
