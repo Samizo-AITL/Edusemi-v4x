@@ -151,7 +151,7 @@ title: Edusemi-v4x/index.md
 
 ---
 
-## 🌐 関連プロジェクト一覧 | Related Projects
+## 🔗 関連プロジェクト一覧 | Related Projects
 
 > 本教材体系と連動する拡張・応用プロジェクトの一覧です。  
 > *A list of extension and application projects linked to this educational framework.*
