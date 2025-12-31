@@ -108,14 +108,6 @@ Integrated with cache hierarchy to hide latency.
 
 ---
 
-## 📦 技術アーカイブ（Edusemi-Plus） | Archive References
-
-- [📄 1998年DRAM立ち上げ｜64M DRAM ramp-up](https://github.com/Samizo-AITL/Edusemi-Plus/blob/main/archive/in1998/DRAM_Startup_64M_1998.md)
-- [📄 擬似SRAM開発｜pseudo-SRAM development](https://github.com/Samizo-AITL/Edusemi-Plus/blob/main/archive/in2001/VSRAM_2001.md)
-- [🔗 1T-SRAM参考リンク｜1T-SRAM links](https://github.com/Samizo-AITL/Edusemi-Plus/blob/main/archive/in2001/MoSys_1T_SRAM_Links.md)
-
----
-
 🏘 [応用編 第1章：メモリ技術｜Applied Chapter 1: Memory Technologies](../d_chapter1_memory_technologies/README.md)
 
 ---
