@@ -103,7 +103,7 @@ graph TD
 FeRAMのプロセス実装に関心がある方は、以下の教材をご参照ください：
 
 📘 **0.18μm FeRAM構想プロセスフロー（構造・条件・膜厚付き）**  
-👉 [0.18um_FeRAM_ProcessFlow.md](./doc_FeRAM/0.18um_FeRAM_ProcessFlow.md)
+👉 [0.18um_FeRAM_ProcessFlow.md]()
 
 - Pt/PZT/Ti構造による強誘電体キャパシタ形成工程を含む  
 - AlOx保護膜、Wプラグ、Coサリサイドなどを網羅  
@@ -116,7 +116,7 @@ FeRAMのプロセス実装に関心がある方は、以下の教材をご参照
 - FeRAMキャパシタの(111)配向確認や結晶性評価に直結する教材
 
 📘 **FeRAM / 薄膜ピエゾ特性評価原理（ヒステリシス・変位・DBLI測定）**  
-👉 [feram_piezo_evaluation_principles.md](./doc_FeRAM/feram_piezo_evaluation_principles.md)
+👉 [feram_piezo_evaluation_principles.md]()
 
 - FeRAMのヒステリシスループ（Pm, Pr, Vc）とPUND法の原理解説  
 - PZTアクチュエータのバタフライカーブ、DBLIによる変位評価手法を収録  
