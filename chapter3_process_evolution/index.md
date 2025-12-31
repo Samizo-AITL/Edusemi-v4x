@@ -79,13 +79,13 @@ These appendices provide detailed process flows, equipment lists, and structural
 
 | リファレンス | ファイル名 / Filename                                                                 | 内容概要 / Description |
 |--------------|------------------------------------------------------------------------------------------|-------------------------|
-| A-1          | [`0.18um_Logic_ProcessFlow.md`](./docs/0.18um_Logic_ProcessFlow.md)                     | 🧪 0.18µm CMOSプロセス（基本フロー）<br>Standard 0.18µm CMOS process flow |
-| A-1b         | [`0.18um_1.8V_3.3V_5V.md`](./docs/0.18um_1.8V_3.3V_5V.md)                                | ⚡ 1.8V〜5V対応の多電圧CMOSプロセス<br>Multi-V CMOS process |
-| A-1c         | [`0.18um_etests_summary_unified.md`](./docs/0.18um_etests_summary_unified.md)          | 📐 E-Test特性まとめ（電圧・構造別）<br>Unified E-test characteristics |
-| A-2          | [`0.18um_Logic_ProcessFlow_en.md`](./docs/0.18um_Logic_ProcessFlow_en.md)               | 🧪 0.18µm CMOS Process Flow (English version) |
+| A-1          | [`0.18um_Logic_ProcessFlow.md`]()                     | 🧪 0.18µm CMOSプロセス（基本フロー）<br>Standard 0.18µm CMOS process flow |
+| A-1b         | [`0.18um_1.8V_3.3V_5V.md`]()                                | ⚡ 1.8V〜5V対応の多電圧CMOSプロセス<br>Multi-V CMOS process |
+| A-1c         | [`0.18um_etests_summary_unified.md`]()          | 📐 E-Test特性まとめ（電圧・構造別）<br>Unified E-test characteristics |
+| A-2          | [`0.18um_Logic_ProcessFlow_en.md`]()               | 🧪 0.18µm CMOS Process Flow (English version) |
 | A-3          | [`0.13um_Logic_ProcessFlow.md`](./docs/0.13um_Logic_ProcessFlow.md)                     | 🧪 0.13µm CMOSプロセス（Cu/Low-k導入）<br>Cu & Low-k interconnect process |
 | A-4          | [`0.09um_Logic_ProcessFlow.md`](./docs/0.09um_Logic_ProcessFlow.md)                     | 🧪 90nm CMOSプロセス（NiSi, strained-Si）<br>Advanced strain & silicide integration |
-| A-5          | [`process_node_comparison.md`](./docs/process_node_comparison.md)                       | 📊 ノード比較：寸法・材料・構造遷移表<br>Comparison of node scaling and materials |
+| A-5          | [`process_node_comparison.md`]()                       | 📊 ノード比較：寸法・材料・構造遷移表<br>Comparison of node scaling and materials |
 | A-6          | [`equipment_list_by_node.md`](./docs/equipment_list_by_node.md)                         | 🛠️ ノード別装置一覧（工程別）<br>Tool list by node and step |
 | A-7          | [`dual_damascene_comparison.md`](./docs/dual_damascene_comparison.md)                   | 🧵 デュアルダマシン配線プロセス詳細と比較<br>Cu dual damascene vs Al/W plug flow |
 
