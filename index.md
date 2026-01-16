@@ -8,18 +8,6 @@ title: Edusemi-v4x/index.md
 # 🎓 **Edusemi-v4x｜半導体プロダクト開発のための基礎教育教材**  
 🇺🇸 *Foundational Educational Materials for Semiconductor Product Development*
 
-[![Samizo-AITLポータルサイトに戻る](https://img.shields.io/badge/Samizo--AITL%20ポータルサイトに戻る-brightgreen)](https://samizo-aitl.github.io/)<br>[![Hybrid License](https://img.shields.io/badge/license-Hybrid-blueviolet)](https://samizo-aitl.github.io/Edusemi-v4x/#-ライセンス--license)
-
-> 🆕 **最新の改訂内容は [改訂履歴 / ChangeLog](revision_history.md) から確認できます。**  
-> *Check the latest updates in the [ChangeLog](revision_history.md).*
-
-<p align="right">
-  <img src="https://img.shields.io/badge/Last%20Update-2025--11--16-orange" alt="Last Update">
-  <a href="revision_history.md">
-    <img src="https://img.shields.io/badge/View-ChangeLog-blue?logo=markdown" alt="View ChangeLog">
-  </a>
-</p>
-  
 ---
 
 ## 🔗 公式リンク | Official Links
