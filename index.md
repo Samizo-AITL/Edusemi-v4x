@@ -3,7 +3,7 @@ layout: default
 title: Edusemi-v4x/index.md
 ---
 
-# 🎓 **Edusemi-v4x｜半導体プロダクト開発のための基礎教育教材**  
+# 🎓 Edusemi-v4x｜半導体プロダクト開発のための基礎教育教材 
 🇺🇸 *Foundational Educational Materials for Semiconductor Product Development*
 
 ---
@@ -17,7 +17,7 @@ title: Edusemi-v4x/index.md
 
 ---
 
-## 📑 **目次 | Table of Contents**
+## 📑 目次 | Table of Contents
 
 1. [✍️ はじめに / Introduction](#-はじめに--introduction)
 2. [📘 プロジェクト概要 / Project Overview](#-プロジェクト概要--project-overview)
@@ -32,7 +32,7 @@ title: Edusemi-v4x/index.md
 
 ---
 
-## ✍️ **はじめに | Introduction**
+## ✍️ はじめに | Introduction
 
 半導体技術は **トランジスタの発明** に始まり、**MOS構造** によって飛躍的に発展しました。  
 *Semiconductor technology began with the **invention of the transistor** and advanced rapidly with the **MOS structure**.*
@@ -56,7 +56,7 @@ title: Edusemi-v4x/index.md
 
 ---
 
-## 📘 **プロジェクト概要 | Project Overview**
+## 📘 プロジェクト概要 | Project Overview
 
 **Edusemi-v4x** は、**設計・製造・検査・品質保証** を一貫して学ぶための **オープン教材** です。  
 ***Edusemi-v4x** is an *open educational resource* for integrated learning of **design, manufacturing, testing, and quality assurance**.*
@@ -75,7 +75,7 @@ title: Edusemi-v4x/index.md
   
 ---
 
-## 🧭 **基礎編 | Fundamentals**
+## 🧭 基礎編 | Fundamentals
 > 半導体の**物性・論理回路・プロセス技術**など、すべての応用の土台となる基礎領域を体系的に学びます。  
 > *Covers semiconductor physics, logic design, and process fundamentals essential for all applications.*
 
@@ -92,7 +92,7 @@ title: Edusemi-v4x/index.md
 
 ---
 
-## 🧩 **応用編 | Applications**
+## 🧩 応用編 | Applications
 > 半導体の応用技術や特殊設計領域を深く掘り下げ、実用レベルの設計力を養います。  
 > *Delves into applied semiconductor technologies and specialized design fields to develop practical design skills.*
 
@@ -112,7 +112,7 @@ title: Edusemi-v4x/index.md
 
 ---
 
-## 🛠 **実践編 | Practice**
+## 🛠 実践編 | Practice
 > Python自動化・Sky130実験・OpenLane設計など、実務に近い演習を通じてスキルを定着させます。  
 > *Hands-on exercises with Python automation, Sky130 experiments, and OpenLane design to solidify skills.*
 
@@ -125,7 +125,7 @@ title: Edusemi-v4x/index.md
 
 ---
 
-## 📦 **特別編 | Special Topics**
+## 📦 特別編 | Special Topics
 > 先端ノード・チップレット・統合制御SoCなど、最先端テーマを扱います。  
 > *Focuses on cutting-edge topics such as advanced nodes, chiplets, and integrated control SoCs.*
 
@@ -149,7 +149,7 @@ title: Edusemi-v4x/index.md
 
 ---
 
-## 👤 **執筆者情報 | Author**
+## 👤 執筆者情報 | Author
 > 本教材の企画・執筆者。半導体・インクジェット分野での実務経験を持ち、**教育と実装を融合した教材開発**を行う。  
 > *Author with professional background in semiconductors and inkjet actuators, creating materials integrating theory and practice.*
 
@@ -161,7 +161,7 @@ title: Edusemi-v4x/index.md
 
 ---
 
-## 📄 **ライセンス | License**
+## 📄 ライセンス | License
 [![Hybrid License](https://img.shields.io/badge/license-Hybrid-blueviolet)](https://samizo-aitl.github.io/Edusemi-v4x/#-ライセンス--license)
 > 教材・コード・図表の性質に応じたハイブリッドライセンスを採用。  
 > *Hybrid licensing based on the nature of the materials, code, and diagrams.*
@@ -175,7 +175,7 @@ title: Edusemi-v4x/index.md
 
 ---
 
-## 💬 **フィードバック | Feedback**
+## 💬 フィードバック | Feedback
 > 改善提案や議論はGitHub Discussionsからお願いします。  
 > *Propose improvements or start discussions via GitHub Discussions.*
 
