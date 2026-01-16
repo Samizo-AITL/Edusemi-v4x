@@ -3,23 +3,7 @@ layout: default
 title: Edusemi-v4x/en/index.md 
 --- 
 
----
-
 # 🎓 **Edusemi-v4x | Foundational Educational Materials for Semiconductor Product Development**  
-
-[![Back to Samizo-AITL Portal](https://img.shields.io/badge/Back%20to%20Samizo--AITL%20Portal-brightgreen)](https://samizo-aitl.github.io/en) 
-
-[![Hybrid License](https://img.shields.io/badge/license-Hybrid-blueviolet)](https://samizo-aitl.github.io/Edusemi-v4x/#-ライセンス--license)
-
-> 🆕 **Check the latest updates in the [ChangeLog](../revision_history.md).**  
-> *Review all recent modifications in the [ChangeLog](../revision_history.md).*
-
-<p align="right">
-  <img src="https://img.shields.io/badge/Last%20Update-2025--11--16-orange" alt="Last Update">
-  <a href="../revision_history.md">
-    <img src="https://img.shields.io/badge/View-ChangeLog-blue?logo=markdown" alt="View ChangeLog">
-  </a>
-</p>
 
 ---
 
