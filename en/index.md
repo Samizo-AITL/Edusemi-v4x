@@ -3,7 +3,7 @@ layout: default
 title: Edusemi-v4x/en/index.md 
 --- 
 
-# 🎓 **Edusemi-v4x | Foundational Educational Materials for Semiconductor Product Development**  
+# 🎓 Edusemi-v4x | Foundational Educational Materials for Semiconductor Product Development 
 
 ---
 
@@ -16,7 +16,7 @@ title: Edusemi-v4x/en/index.md
 
 ---
 
-## 📑 **Table of Contents**
+## 📑 Table of Contents
 
 1. [✍️ Introduction](#️-introduction)
 2. [📘 Project Overview](#-project-overview)
@@ -31,7 +31,7 @@ title: Edusemi-v4x/en/index.md
 
 ---
 
-## ✍️ **Introduction**
+## ✍️ Introduction
 
 Semiconductor technology began with the **invention of the transistor** and rapidly evolved with the advent of the **MOS structure**.  
 **Miniaturization and integration** have progressed in line with Moore’s Law, and LSIs have penetrated all fields.
@@ -46,7 +46,7 @@ In practice, these are closely connected—**circuits depend on device physics, 
 
 ---
 
-## 📘 **Project Overview**
+## 📘 Project Overview
 
 **Edusemi-v4x** is an **open educational resource** covering the full range from **design to manufacturing, testing, and quality assurance**.
 
@@ -56,7 +56,7 @@ In practice, these are closely connected—**circuits depend on device physics, 
 
 ---
 
-## 🧭 **Fundamentals**
+## 🧭 Fundamentals
 > Covers **semiconductor physics, logic design, and process fundamentals** essential for all applications.
 
 | 📖 Chapter | 📚 Title | 📝 Summary |
@@ -72,7 +72,7 @@ In practice, these are closely connected—**circuits depend on device physics, 
 
 ---
 
-## 🧩 **Applications**
+## 🧩 Applications
 > Delves into **applied semiconductor technologies** and specialized design fields to develop practical design skills.
 
 | 📖 Chapter | 📚 Title | 📝 Summary |
@@ -91,7 +91,7 @@ In practice, these are closely connected—**circuits depend on device physics, 
 
 ---
 
-## 🛠 **Practice**
+## 🛠 Practice
 > Hands-on exercises with Python automation, Sky130 experiments, and OpenLane design to solidify skills.
 
 | 📖 Chapter | 📚 Title | 📝 Summary |
@@ -103,7 +103,7 @@ In practice, these are closely connected—**circuits depend on device physics, 
 
 ---
 
-## 📦 **Special Topics**
+## 📦 Special Topics
 > Focuses on cutting-edge topics such as advanced nodes, chiplets, and integrated control SoCs.
 
 | 📖 Chapter | 📚 Title | 📝 Summary |
@@ -114,7 +114,7 @@ In practice, these are closely connected—**circuits depend on device physics, 
 
 ---
 
-## 🔗 **Related Projects**
+## 🔗 Related Projects
 > Sister projects linked with Edusemi, covering **control theory, socio-industrial structures, and advanced technologies**.
 
 | 🌐 Project | Overview | Key Features |
@@ -124,7 +124,7 @@ In practice, these are closely connected—**circuits depend on device physics, 
 
 ---
 
-## 👤 **Author**
+## 👤 Author
 > Author with professional background in semiconductors and inkjet actuators, creating **materials that integrate theory and practice**.
 
 | 📌 Item | Details |
@@ -135,7 +135,7 @@ In practice, these are closely connected—**circuits depend on device physics, 
 
 ---
 
-## 📄 **License**
+## 📄 License
 [![Hybrid License](https://img.shields.io/badge/license-Hybrid-blueviolet)](https://samizo-aitl.github.io/Edusemi-v4x/#-ライセンス--license)
 > Adopts a hybrid licensing model according to the nature of the materials, code, and diagrams.  
 > *Hybrid licensing based on the nature of the materials, code, and diagrams.*
@@ -149,7 +149,7 @@ In practice, these are closely connected—**circuits depend on device physics, 
 
 ---
 
-## 💬 **Feedback**
+## 💬 Feedback
 > Propose improvements or start discussions via GitHub Discussions.
 
 [![💬 GitHub Discussions](https://img.shields.io/badge/💬%20GitHub-Discussions-brightgreen?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x/discussions)
