@@ -3,8 +3,6 @@ layout: default
 title: 特別編 第2a章　SystemDKにおける熱・応力・ノイズ制約の設計対応　
 ---
 
----
-
 # 📦 特別編 第2a章：SystemDKにおける熱・応力・ノイズ制約の設計対応  
 **Special Chapter 2a: Design Handling of Thermal, Stress, and Noise Constraints in SystemDK**
 
