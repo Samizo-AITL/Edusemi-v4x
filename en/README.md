@@ -127,7 +127,7 @@ In practice, these are closely connected—**circuits depend on device physics, 
 | 📌 Item | Details |
 |------|------|
 | **Name** | **Shinichi Samizo** |
-| **Expertise** | **Semiconductor devices** (logic, memory, high-voltage mixed integration)<br>**Thin-film piezoelectric actuators for inkjet applications**<br>**PrecisionCore printhead productization, BOM management, and ISO training** |
+| **Expertise** | **Semiconductor devices** (logic, memory, high-voltage mixed integration)<br>**Thin-film piezoelectric actuators for inkjet applications**<br>**printhead productization, BOM management, and ISO training** |
 | **💻 GitHub** | **Samizo-AITL**<br>[![GitHub](https://img.shields.io/badge/GitHub-Samizo--AITL-black?logo=github)](https://github.com/Samizo-AITL) |
 
 ---
